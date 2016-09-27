@@ -2,8 +2,6 @@
 # 適用於 Office 的 JavaScript API 中的變更項目
 適用於 Office 的 JavaScript API 會定期以新的或更新的物件、方法、屬性、事件和列舉型別更新，來擴充您 Office 增益集的功能。請使用下列連結來查看全新及更新的 API 成員。
 
- _**適用於：**適用於 SharePoint 的 Access 應用程式 | Office 相關應用程式 | Excel | Office 增益集 | Outlook | PowerPoint | Project | Word_
-
 若要使用新的 API 成員開發增益集，您必須[更新專案中的 JavaScript API for Office 檔案](../docs/develop/update-your-javascript-api-for-office-and-manifest-schema-version.md)。
 
 若要檢視所有 API 成員，包括先前更新後未變更的成員，請參閱 [JavaScript API for Office](../reference/javascript-api-for-office.md)。
@@ -14,7 +12,7 @@
  **新增及更新的物件**
 
 
-|**物件**|**說明**|**新增或更新的版本 **|
+|**物件**|**說明**|**新增或更新的版本**|
 |:-----|:-----|:-----|
 |[項目](../reference/outlook/Office.context.mailbox.item.md)|更新和加入的項目︰<br><ul><li><p><a href="../reference/outlook/Office.context.mailbox.item.md#getSelectedDataAsync" target="_blank">GetSelectedDataAsync</a> 和 <a href="../reference/outlook/Office.context.mailbox.item.md#setSelectedDataAsync" target="_blank">setSelectedDataAsync</a> 方法可支援取得使用者的選取範圍，並覆寫在主旨和郵件或約會的本文。</p></li><li><p><a href="../reference/outlook/Office.context.mailbox.item.md#displayReplyAllForm" target="_blank">DisplayReplyAllForm</a> 和 <a href="../reference/outlook/Office.context.mailbox.item.md#displayReplyForm" target="_blank">displayReplyForm</a> 方法可支援將附件新增至約會的回覆表單。</p></li></ul>|Mailbox 1.2|
 |[項目](../reference/outlook/Office.context.mailbox.item.md)|更新以包含方法和欄位，以建立撰寫模式 Outlook 增益集。 |1.1|

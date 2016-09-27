@@ -14,9 +14,6 @@ Office.context
 
 ## 成員
 
-
-**屬性**
-
 |||
 |:-----|:-----|
 |名稱|說明|
@@ -25,7 +22,8 @@ Office.context
 |[displayLanguage](../../reference/shared/office.context.displaylanguage.md)|取得主控應用程式 UI 的地區設定 (語言)。|
 |[文件](../../reference/shared/office.context.document.md)|取得代表與內容或工作窗格增益集互動之文件的物件。|
 |[信箱](../../reference/shared/office.context.mailbox.md)|取得提供特別針對 Outlook 增益集 API 成員存取的**信箱**物件。|
-|[officeTheme](../../reference/shared/office.context.officetheme.md)|提供 Office 佈景主題色彩屬性之存取。|
+|[officeTheme](../../reference/shared/office.context.officetheme.md)|提供 Office 佈景主題色彩屬性的存取。|
+|[UI](../../reference/shared/officeui)|提供物件和方法，您可以用來建立和操作 UI 元件，例如對話方塊。|
 |[roamingSettings](../../reference/shared/office.context.roamingsettings.md)|取得代表增益集已儲存自訂設定的物件。|
 |[touchEnabled](../../reference/shared/office.context.touchenabled.md)|取得關於增益集是否在具有觸控功能的 Office 主應用程式中執行的資訊。|
 

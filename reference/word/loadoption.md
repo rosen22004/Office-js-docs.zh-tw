@@ -2,7 +2,7 @@
 
 一個物件，指定當呼叫 context.sync() 時要載入的分頁資訊和屬性。
 
-_適用於：Word 2016、Word for iPad、Word for Mac_
+_適用版本：Word 2016、Word for iPad、Word for Mac_
 
 ## 屬性
 | 屬性	     | 類型	   |說明|
@@ -55,7 +55,7 @@ _適用於：Word 2016、Word for iPad、Word for Mac_
             return context.sync().then(function () {
 
             // Insert code that works with the paragraphs loaded by context.load().
-
+           })
         })
         .catch(function (error) {
             console.log('Error: ' + JSON.stringify(error));

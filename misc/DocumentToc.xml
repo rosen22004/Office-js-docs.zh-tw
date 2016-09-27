@@ -42,7 +42,7 @@
 		<Item text="Office 增益集中的非同步程式設計" url="develop/asynchronous-programming-in-office-add-ins" SEODescription="使用巢狀的回呼和適用於 Office 的 JavaScript API 所支援的承諾模式非同步程式設計模式來開發 Office 增益集。" />
 		<Item text="保存狀態和設定" url="develop/persisting-add-in-state-and-settings" SEODescription="了解保存增益集狀態的選項以及內容資料、工作窗格及 Outlook 增益集的設定。" />
 	</Item>
-	<Item text="在 Office 增益集中使用 OAuth" url="develop/use-the-oauth-authorization-framework-in-an-office-add-in" SEODescription="在您的 Office 增益集中使用 OAuth 2.0 的授權架構。" />
+	<Item text="授權外部服務" url="develop/auth-external-add-ins" SEODescription="在您的 Office 增益集中使用 OAuth 2.0 的授權架構。" />
 	<Item text="隱私權和安全性" url="develop/privacy-and-security" SEODescription="Office 增益集會受到執行階段架構、多層的權限模型，以及控制使用 CPU、記憶體和網路資源等能力的保護。" />
 	<Item text="處理相同來源的原則限制" url="develop/addressing-same-origin-policy-limitations" SEODescription="提供解決相同來源的原則限制方法的簡要概觀，以避免從一個網域載入的指令碼取得或操作來自 Office 增益集的另一個網域中的文件內容。" />
 	<Item text="當地語系化" url="develop/localization" SEODescription="提供 Office 增益集的地區特定內容，包括 UI 字串、增益集名稱、描述、圖示、來源檔案和日期/時間格式。" />
@@ -119,13 +119,13 @@
 		<Item text="使用 PHP 來驗證識別權杖" url="outlook/use-php-to-validate-an-identity-token" SEODescription="了解如何使用 PHP 來驗證可將您 Outlook 增益集客戶的電子郵件帳戶連結至您的服務所提供資訊的 Exchange 2013 識別權杖。" Scope="outlook" />
 		<Item text="使用識別權杖來驗證使用者" url="outlook/authenticate-a-user-with-an-identity-token" SEODescription="請參閱程式碼範例，其顯示驗證物件如何符合由具有一組服務憑證的識別權杖所表示的唯一識別。" Scope="outlook" />    
     	 </Item>
-	</Item>
 	<Item text="測試及秘訣" url="outlook/testing-and-tips" FriendlyUrl="outlook/testingtesting-and-tips" Scope="outlook">
 		<Item text="比較 Outlook 增益集在 Mac 版 Outlook 中的支援" url="outlook/compare-outlook-add-in-support-in-outlook-for-mac" SEOKeyword="移至 dev.office.com 的連結不正確。 我已修復資料表中的項目符號清單。" Scope="outlook" />
 		<Item text="處理 Outlook 增益集中日期值的秘訣" url="outlook/tips-for-handling-date-values-in-outlook-add-ins" Scope="outlook" SEODescription="使用 Date 物件在 Outlook 增益集中處理日期值。" />
 		<Item text="適用於 Outlook 增益集的 JavaScript API 和啟動的限制" url="outlook/limits-for-activation-and-javascript-api-for-outlook-add-ins" Scope="outlook" SEODescription="請確定 Outlook 增益集能夠一直符合啟動和 API 使用方針。" />
 		<Item text="Outlook 增益集啟動的疑難排解" url="outlook/troubleshoot-outlook-add-in-activation" SEODescription="Outlook 增益集啟動是內容相關且根據增益集資訊清單中的規則。探索已安裝的增益集可能無法在 Outlook 中啟動的原因。" Scope="outlook" />
-	</Item>    
+	 </Item>  
+	</Item>
   <Item text="PowerPoint" url="powerpoint/powerpoint-add-ins" Scope="powerpoint">
 	<Item text="使用您 PowerPoint 增益集的文件佈景主題" url="powerpoint/use-document-themes-in-your-powerpoint-add-ins" Scope="powerpoint" SEODescription="將佈景主題套用至您的 PowerPoint 增益集" />
 	<Item text="從 PowerPoint 或 Word 增益集中，取得整份文件" url="develop/get-the-whole-document-from-an-add-in-for-powerpoint-or-word" SEODescription="建立發佈到遠端位置的 PowerPoint 或 Word 增益集。" />   
@@ -141,9 +141,9 @@
   </Item>
   
   <Item text="OneNote" url="onenote" Scope="onenote">
-	<Item text="OneNote JavaScript API 程式設計的概觀 (預覽)" url="onenote/onenote-add-ins-programming-overview" SEODescription="使用 JavaScript API 來建置 OneNote 的增益集。" Scope="onenote" />
-	<Item text="建立第一個 OneNote 增益集 (預覽)" url="onenote/onenote-add-ins-getting-started" SEODescription="建立 OneNote 的簡單工作窗格增益集。" Scope="onenote" />
-	<Item text="使用 OneNote 頁面內容 (預覽)" url="onenote/onenote-add-ins-page-content" SEODescription="搭配使用 OneNote JavaScript API 與頁面上的內容。" Scope="onenote" />
+	<Item text="OneNote JavaScript API 程式設計的概觀" url="onenote/onenote-add-ins-programming-overview" SEODescription="使用 JavaScript API 來建置 OneNote 的增益集。" Scope="onenote" />
+	<Item text="建立第一個 OneNote 增益集" url="onenote/onenote-add-ins-getting-started" SEODescription="建立 OneNote 的簡單工作窗格增益集。" Scope="onenote" />
+	<Item text="使用 OneNote 頁面內容" url="onenote/onenote-add-ins-page-content" SEODescription="搭配使用 OneNote JavaScript API 與頁面上的內容。" Scope="onenote" />
   </Item>
   
   <Item text="Project" url="project" Scope="project">

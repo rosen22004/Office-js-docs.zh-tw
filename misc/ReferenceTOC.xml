@@ -24,7 +24,7 @@
 	
 	<Item text="HighResolutionIconUrl" url="manifest/highresolutioniconurl" SEODescription="指定在高 DPI 的螢幕上，插入 UX 和 Office 市集中，用來表示您 Office 增益集的影像 URL。" />
     <Item text="主應用程式" url="manifest/host" SEODescription="指定您 Office 增益集所支援的 Office 主應用程式類型。" />
-    
+    <Item text="主機" url="manifest/hosts" SEODescription="指定啟動 Office 增益集的 Office 用戶端應用程式。" />
 	<Item text="IconUrl" url="manifest/iconurl" SEODescription="指定在插入 UX 和 Office 市集中，用來表示您 Office 增益集的影像 URL。" />
     <Item text="Id" url="manifest/id" SEODescription="將您 Office 增益集的唯一識別碼指定為 GUID。" />
     <Item text="方法 " url="manifest/method" Scope="excel, word, powerpoint, access, project" SEODescription="指定適用於 Office 的 JavaScript API 中，為了啟用您的 Office 增益集所需的個別方法。" />
@@ -395,23 +395,23 @@
   </Item>
   
   <Item text="OneNote" url="onenote/onenote-add-ins-javascript-reference" Scope="onenote">
-    <Item text="應用程式" url="onenote/application" SEODescription="OneNote 的增益集預覽參考。" />
-    <Item text="錯誤" url="onenote/error" SEODescription="OneNote 的增益集預覽參考。" />
-	<Item text="筆記本" url="onenote/notebook" SEODescription="OneNote 的增益集預覽參考。" />
-    <Item text="Notebookcollection" url="onenote/notebookcollection" SEODescription="OneNote 的增益集預覽參考。" />
-    <Item text="Page" url="onenote/page" SEODescription="OneNote 的增益集預覽參考。" />
-    <Item text="Pagecollection" url="onenote/pagecollection" SEODescription="OneNote 的增益集預覽參考。" />
-    <Item text="Pagecontent" url="onenote/pagecontent" SEODescription="OneNote 的增益集預覽參考。" />
-    <Item text="Pagecontentcollection" url="onenote/pagecontentcollection" SEODescription="OneNote 的增益集預覽參考。" />
-    <Item text="段落" url="onenote/paragraph" SEODescription="OneNote 的增益集預覽參考。" />
-    <Item text="Paragraphcollection" url="onenote/paragraphcollection" SEODescription="OneNote 的增益集預覽參考。" />
-    <Item text="Richtext" url="onenote/richtext" SEODescription="OneNote 的增益集預覽參考。" />
-    <Item text="章節" url="onenote/section" SEODescription="OneNote 的增益集預覽參考。" />
-    <Item text="Sectioncollection" url="onenote/sectioncollection" SEODescription="OneNote 的增益集預覽參考。" />
-    <Item text="Sectiongroup" url="onenote/sectiongroup" SEODescription="OneNote 的增益集預覽參考。" />
-    <Item text="Sectiongroupcollection" url="onenote/sectiongroupcollection" SEODescription="OneNote 的增益集預覽參考。" />
-    <Item text="大綱" url="onenote/outline" SEODescription="OneNote 的增益集預覽參考。" />
-    <Item text="影像" url="onenote/image" SEODescription="OneNote 的增益集預覽參考。" />
+    <Item text="應用程式" url="onenote/application" SEODescription="OneNote 的增益集參考。" />
+    <Item text="錯誤" url="onenote/error" SEODescription="OneNote 的增益集參考。" />
+	<Item text="筆記本" url="onenote/notebook" SEODescription="OneNote 的增益集參考。" />
+    <Item text="Notebookcollection" url="onenote/notebookcollection" SEODescription="OneNote 的增益集參考。" />
+    <Item text="頁面" url="onenote/page" SEODescription="OneNote 的增益集參考。" />
+    <Item text="Pagecollection" url="onenote/pagecollection" SEODescription="OneNote 的增益集參考。" />
+    <Item text="Pagecontent" url="onenote/pagecontent" SEODescription="OneNote 的增益集參考。" />
+    <Item text="Pagecontentcollection" url="onenote/pagecontentcollection" SEODescription="OneNote 的增益集參考。" />
+    <Item text="段落" url="onenote/paragraph" SEODescription="OneNote 的增益集參考。" />
+    <Item text="Paragraphcollection" url="onenote/paragraphcollection" SEODescription="OneNote 的增益集參考。" />
+    <Item text="Richtext" url="onenote/richtext" SEODescription="OneNote 的增益集參考。" />
+    <Item text="章節" url="onenote/section" SEODescription="OneNote 的增益集參考。" />
+    <Item text="Sectioncollection" url="onenote/sectioncollection" SEODescription="OneNote 的增益集參考。" />
+    <Item text="Sectiongroup" url="onenote/sectiongroup" SEODescription="OneNote 的增益集參考。" />
+    <Item text="Sectiongroupcollection" url="onenote/sectiongroupcollection" SEODescription="OneNote 的增益集參考。" />
+    <Item text="大綱" url="onenote/outline" SEODescription="OneNote 的增益集參考。" />
+    <Item text="影像" url="onenote/image" SEODescription="OneNote 的增益集參考。" />
   </Item>  
   <Item text="共用 API" url="shared/shared-api">
     <Item text="JavaScript API for Office" url="javascript-api-for-office" SEODescription="適用於 Office 的 JavaScript API 包括物件、方法、屬性、事件和列舉型別，您可以用於您的 Office 增益集程式碼中。" />
@@ -444,7 +444,8 @@
       <Item text="AsyncResult.status" url="shared/asyncresult.status" SEODescription="取得非同步作業的狀態。" />
       <Item text="AsyncResult.value" url="shared/asyncresult.value" SEODescription="如果有的話，請取得這個非同步作業的裝載或內容。" />
     </Item>
-    <Item text="內文 " url="shared/office.context" FriendlyUrl="reference/common/officeoffice.context">
+    <Item text="內文 " url="shared/context">
+      <Item text="office.context" url="shared/office.context" SEODescription="取得內容物件，表示增益集的執行階段環境 " />
       <Item text="office.context.commerceAllowed " url="shared/office.context.commerceallowed" FriendlyUrl="reference/common/contextoffice.context.commerceallowed" SEODescription="取得關於增益集是否在允許連結到外部付款系統的平台上執行的資訊。" />
       <Item text="office.context.contentLanguage" url="shared/office.context.contentlanguage" SEODescription="取得使用者指定用於編輯文件或項目的地區設定 (語言)。" />
       <Item text="office.context.displaylanguage" url="shared/office.context.displaylanguage" SEODescription="取得使用者為 Office 主應用程式 UI 指定的地區設定 (語言)。" />

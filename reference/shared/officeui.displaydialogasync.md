@@ -1,4 +1,4 @@
-﻿# UI.displayDialogAsync 方法
+# UI.displayDialogAsync 方法
 
 在 Office 主應用程式中顯示對話方塊。 
 
@@ -23,7 +23,7 @@
 若要在執行階段偵測這個 API，請使用下列程式碼。
 
 ```js
- if (Office.context.requirements.isSetSupported('DialogAPI', '1.1')) 
+ if (Office.context.requirements.isSetSupported('DialogAPI', 1.1)) 
     {  
          // Use Office UI methods; 
     } 
@@ -60,7 +60,7 @@ office.context.ui.displayDialogAsync(startAddress, options, callback);
 
 | 參數	    | 類型	   |說明|
 |:---------------|:--------|:----------|
-|startAddress|string|接受在對話方塊中開啟的初始 HTTPS(TLS) URL。 <ul><li>初始頁面必須位於與父系頁面相同的網域。 初始頁面載入之後，您可以移至其他網域。</li><li>任何呼叫 [office.context.ui.messageParent](officeui.messageparent.md) 的頁面必須位於與父系頁面相同的網域。</li></ul>|
+|startAddress|字串|接受在對話方塊中開啟的初始 HTTPS(TLS) URL。 <ul><li>初始頁面必須位於與父系頁面相同的網域。 初始頁面載入之後，您可以移至其他網域。</li><li>任何呼叫 [office.context.ui.messageParent](officeui.messageparent.md) 的頁面必須位於與父系頁面相同的網域。</li></ul>|
 |選項|物件|選擇性。接受 options 物件，以定義對話方塊的行為。|
 |callback|object|接受 callback 方法，以處理建立對話方塊的嘗試。|
     

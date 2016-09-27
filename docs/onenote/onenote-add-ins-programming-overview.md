@@ -113,5 +113,5 @@ OneNote 增益集只支援下列的一般 API：
 
 - [建立第一個 OneNote 增益集](onenote-add-ins-getting-started.md)
 - [OneNote JavaScript API 參考](../../reference/onenote/onenote-add-ins-javascript-reference.md)
-- [Rubric Grader 範例](https://github.com/OfficeDev/OneNote-Add-in-Rubric-Grader-Preview)
+- [Rubric Grader 範例](https://github.com/OfficeDev/OneNote-Add-in-Rubric-Grader)
 - [Office 增益集平台概觀](https://dev.office.com/docs/add-ins/overview/office-add-ins)

@@ -1,19 +1,13 @@
-﻿# 建立第一個 OneNote 增益集
+# 建立第一個 OneNote 增益集
 
 此文章會引導您建置簡單的工作窗格增益集，可將某些文字加入到 OneNote 頁面中。
-
-- [設定開發環境](#設定開發環境)
-- [建立增益集專案](#建立增益集專案)
-- [設定增益集資訊清單](#設定增益集資訊清單)
-- [開發增益集](#開發增益集)
-- [測試增益集](#測試增益集)
 
 下列影像會顯示您要建立的增益集。
 
    ![這個逐步解說中所建置的 OneNote 增益集](../../images/onenote-first-add-in.png)
 
 <a name="setup"></a>
-### 步驟 1：設定開發環境
+## 步驟 1：設定開發環境
 1- 藉由遵循這些 [安裝指示](https://dev.office.com/docs/add-ins/get-started/create-an-office-add-in-using-any-editor)，安裝 Yeoman Office 產生器及其必要條件。
 
    在您沒有 Visual Studio，或是您想要使用純 HTML、CSS 及 JavaScript 以外的技術時；Yeoman Office 產生器可讓您易於建立增益集專案。它也提供本機 Gulp Web 伺服器的快速存取，以便進行測試。 
@@ -21,7 +15,7 @@
    >您可以選擇性地 [使用 Visual Studio ](https://dev.office.com/docs/add-ins/get-started/create-and-debug-office-add-ins-in-visual-studio) 來建立您的專案檔案，但就無法獲得內建的 Gulp 伺服器支援。
 
 <a name="create-project"></a>
-### 步驟 2：建立增益集專案 
+## 步驟 2：建立增益集專案 
 1- 建立名為 *onenote add-in*的本機資料夾。
 
 2- 開啟 **cmd** 命令提示字元，並巡覽至 **onenote add-in** 資料夾。執行 `yo office` 命令，如下所示。
@@ -42,8 +36,8 @@ C:\your-local-path\onenote add-in\> yo office
 | 要使用的技術 | HTML、CSS 及 JavaScript |
 
 <a name="manifest"></a>
-### 步驟 3：設定增益集資訊清單 
-1- 開啟專案檔中的 **manifest-onenote-add-in.xml**。 在 [主應用程式]**** 區段中新增下列幾行。 這會指定增益集支援 OneNote 主應用程式。
+## 步驟 3：設定增益集資訊清單 
+1- 開啟專案檔中的 **manifest-onenote-add-in.xml**。 在 [主應用程式 區段中新增下列幾行。 這會指定增益集支援 OneNote 主應用程式。
 
 ```
 <Host Name="Notebook" />
@@ -56,7 +50,7 @@ C:\your-local-path\onenote add-in\> yo office
 ```
 
 <a name="develop"></a>
-### 步驟 4：開發增益集
+## 步驟 4：開發增益集
 您可以使用任何文字編輯器或 IDE 來開發增益集。如果您尚未嘗試使用 Visual Studio 程式碼，您可以在 Linux、Mac OSX 和 Windows 上[免費下載](https://code.visualstudio.com/)。
 
 1- 開啟 **app/home** 資料夾中的 *home.html*。 
@@ -117,7 +111,7 @@ C:\your-local-path\onenote add-in\> yo office
 </body>
 ```
 
-4- 開啟 *app/home* 資料夾中的 **home.js**。 編輯 **Office.initialize** 函數，以便將 Click 事件加入到 [新增大綱]**** 按鈕，如下所示。 
+4- 開啟 *app/home* 資料夾中的 **home.js**。 編輯 **Office.initialize** 函數，以便將 Click 事件加入到 [新增大綱 按鈕，如下所示。 
 
 ```
 // The initialize function is run each time the page is loaded.
@@ -165,7 +159,7 @@ function addOutlineToPage() {
 ```
 
 <a name="test"></a>
-### 步驟 5：在 OneNote Online 上測試增益集
+## 步驟 5：在 OneNote Online 上測試增益集
 1- 執行 Gulp Web 伺服器。  
 
    a. 在 **onenote add-in**開啟 **cmd** 命令提示字元。 
@@ -188,13 +182,21 @@ https://localhost:8443/app/home/home.html
 
 3- 在 OneNote Online 上，開啟筆記本。
 
-4- 選擇**插入 > 上傳增益集**。
+4- 選擇**插入 > Office 增益集**。 這樣會開啟 [Office 增益集] 對話方塊。
+  - 如果您登入您的家庭用戶帳戶，選擇 [我的增益集 索引標籤，然後選擇 [上傳我的增益集。
+  - 如果您登入您的工作或學校帳戶，選擇 [我的組織 索引標籤，然後選擇 [上傳我的增益集。 
+  
+  下列影像顯示家庭用戶筆記本的 [我的增益集 索引標籤。
 
-5- 在 [上傳增益集] 對話方塊中，瀏覽至專案檔中的 **manifest-onenote-add-in.xml**，然後選擇 [上傳]****。 測試時可以在本機儲存您的資訊清單檔。
+  ![[Office 增益集] 對話方塊，該對話方塊顯示 [我的增益集] 索引標籤](../../images/onenote-office-add-ins-dialog.png)
+  
+  >**附註**：若要啟用 [Office 增益集 按鈕，請在 OneNote 頁面內按一下。
 
-6- 增益集會在 OneNote 頁面旁的 iFrame 中開啟。 在文字區域中輸入一些文字，然後選擇 [新增大綱]****。 您輸入的文字會加入至頁面。 
+5- 在 [上傳增益集] 對話方塊中，瀏覽至專案檔中的 **manifest-onenote-add-in.xml**，然後選擇 [上傳。 測試時可以在本機儲存您的資訊清單檔。
 
-### 疑難排解及秘訣：
+6- 增益集會在 OneNote 頁面旁的 iFrame 中開啟。 在文字區域中輸入一些文字，然後選擇 [新增大綱。 您輸入的文字會加入至頁面。 
+
+## 疑難排解及秘訣：
 - 您可以使用瀏覽器的開發人員工具，來偵錯增益集。當您使用 Gulp Web 伺服器，並在 Internet Explorer 或 Chrome 中偵錯時，您可以本機儲存您的變更，然後只要重新整理增益集 iFrame 即可。
 
 - 當您檢查 OneNote 物件時，目前可用的屬性會顯示實際值。需要載入的屬性會顯示 *undefined*。展開 `_proto_` 節點來檢視已在物件上定義，但尚未載入的屬性。
@@ -207,5 +209,5 @@ https://localhost:8443/app/home/home.html
 
 - [OneNote JavaScript API 程式設計的概觀](onenote-add-ins-programming-overview.md)
 - [OneNote JavaScript API 參考](../../reference/onenote/onenote-add-ins-javascript-reference.md)
-- [Rubric Grader 範例](https://github.com/OfficeDev/OneNote-Add-in-Rubric-Grader-Preview)
+- [Rubric Grader 範例](https://github.com/OfficeDev/OneNote-Add-in-Rubric-Grader)
 - [Office 增益集平台概觀](https://dev.office.com/docs/add-ins/overview/office-add-ins)

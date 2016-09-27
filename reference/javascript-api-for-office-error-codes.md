@@ -2,7 +2,7 @@
 # 適用於 Office 的 JavaScript API 錯誤代碼
 本文記錄您使用適用於 Office 的 JavaScript API (Office.js) 時可能遇到的錯誤訊息。
 
- _**適用於：**適用於 SharePoint 的 Access 應用程式 | Office 相關應用程式 | Excel | Office 增益集 | Outlook | PowerPoint | Project | Word_
+ _**適用於：**Office 增益集 |SharePoint 增益集 |Excel |Outlook |PowerPoint | Project |Word_
 
 
 ## 錯誤碼

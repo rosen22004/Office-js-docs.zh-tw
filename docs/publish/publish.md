@@ -30,6 +30,8 @@
 
 若要擴大增益集的可及範圍，請確認它能跨越平台運作。 Windows、Mac、Web、iOS 及 Android 支援 Office 增益集。 如需各平台支援之功能的概觀，請參閱 [Office 增益集主應用程式和平台可用性]。   
 
+如需授權您的 Office 市集增益集的詳細資訊，請參閱[授權您的增益集](https://msdn.microsoft.com/EN-US/library/office/jj163257.aspx)。
+
 如需使用者如何取得、插入及執行增益集的相關資訊，請參閱[開始試用 Office 增益集](https://support.office.com/en-ie/article/Start-using-your-Office-Add-in-82e665c4-6700-4b56-a3f3-ef5441996862?ui=en-US&rs=en-IE&ad=IE)。
 
 ## 其他資源

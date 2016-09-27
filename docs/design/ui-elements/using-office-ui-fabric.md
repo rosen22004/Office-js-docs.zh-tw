@@ -26,15 +26,15 @@ Fabric 隨附不同 UI 項目的樣式，例如按鈕和核取方塊。只需參
     </button>
 
 ##4.使用範例行為的元件
-Fabric 包含的某些元件支援行為 (例如，按一下會發生的情況)。為了引導您開始使用，Fabric 包含一些您可以使用的 JQuery UI 外掛程式形式的**範例程式碼**。您也可以使用任何其他您想用的架構。如果您選擇使用範例，請注意其程式碼不會隨 CDN 而散發，所以您必須從最新版[Fabric GitHub 專案](https://github.com/OfficeDev/Office-UI-Fabric/releases)下載、加以參考，然後在您的程式碼中予以初始化。 
+Fabric 包含的某些元件支援行為 (例如，按一下會發生的情況)。 為了引導您開始使用，Fabric 2.6.1 包含一些您可以使用的 JQuery UI 外掛程式形式的**範例程式碼**。 您也可以使用任何其他您想用的架構。 如果您選擇使用範例，請注意其程式碼不會隨 CDN 而散發，所以您必須從 2.6.1 版 [Fabric GitHub 專案](https://github.com/OfficeDev/office-ui-fabric-core/tree/release/2.6.1)下載、加以參考，然後在您的程式碼中予以初始化。 
 
 例如，若要使用 SearchBox 元件：
 
-1. 請從 [GitHub](https://github.com/OfficeDev/Office-UI-Fabric/tree/master/src/components/SearchBox) 下載 SearchBox 元件。
+1. 請從 [GitHub](https://github.com/OfficeDev/office-ui-fabric-core/tree/release/2.6.1/src/components/SearchBox) 下載 SearchBox 元件。
 2. 將下列參考加入您的程式碼中：`<script src="SearchBox/Jquery.SearchBox.js"></script>`
 3. 確認載入您的網頁時會執行這一行，以初始化元件：`$(".ms-SearchBox").SearchBox();`。建議您將這一行加入增益集的 `Office.Initialize` 區塊中。     
 
-**附註：**如果您不想使用 Fabric 的所有元件，則可改為選擇裝載每個元件的個別 CSS 檔案，以減少下載資源的大小。您可從 [Fabric GitHub 存放庫](https://github.com/OfficeDev/Office-UI-Fabric)的元件資料夾取得 CSS 檔案。 
+**附註：**如果您不想使用 Fabric 的所有元件，則可改為選擇裝載每個元件的個別 CSS 檔案，以減少下載資源的大小。 您可從 [Fabric 2.6.1 GitHub 存放庫](https://github.com/OfficeDev/office-ui-fabric-core/tree/release/2.6.1)的元件資料夾取得 CSS 檔案。 
 
 
 ##後續步驟

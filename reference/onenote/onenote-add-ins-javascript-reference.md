@@ -1,6 +1,6 @@
 # OneNote 增益集 JavaScript API 參考
 
-*適用於：OneNote Online*
+**適用版本：OneNote Online*
 
 以下連結會顯示 API 中可用的高階 OneNote 物件。每個物件頁面連結都會說明物件可用的屬性、關聯性和方法。請瀏覽下列連結，了解詳細資訊。 
     
@@ -50,5 +50,5 @@
 
 - [OneNote JavaScript API 程式設計的概觀](../../docs/onenote/onenote-add-ins-programming-overview.md)
 - [建立第一個 OneNote 增益集](../../docs/onenote/onenote-add-ins-getting-started.md)
-- [Rubric Grader 範例](https://github.com/OfficeDev/OneNote-Add-in-Rubric-Grader-Preview)
+- [Rubric Grader 範例](https://github.com/OfficeDev/OneNote-Add-in-Rubric-Grader)
 - [Office 增益集平台概觀](https://dev.office.com/docs/add-ins/overview/office-add-ins)
