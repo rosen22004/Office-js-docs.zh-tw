@@ -1,10 +1,10 @@
 
-# File.size 屬性
+# <a name="file.size-property"></a>File.size 屬性
 取得文件的檔案大小 (位元組)。
 
 |||
 |:-----|:-----|
-|**主機︰**|PowerPoint,Word|
+|**主應用程式︰**|PowerPoint,Word|
 |**已新增於**|1.1|
 
 ```
@@ -12,12 +12,12 @@ var fileSize = file.size;
 ```
 
 
-## 傳回值
+## <a name="return-value"></a>傳回值
 
 檔案大小 (位元組)。
 
 
-## 支援詳細資料
+## <a name="support-details"></a>支援詳細資料
 
 
 下列矩陣中的大寫 Y，表示在相對應的 Office 主應用程式中支援此方法。空白儲存格表示 Office 主應用程式不支援此方法。
@@ -36,7 +36,7 @@ var fileSize = file.size;
 |**文件庫**|Office.js|
 |**命名空間**|Office|
 
-## 支援歷程記錄
+## <a name="support-history"></a>支援歷程記錄
 
 
 

@@ -1,5 +1,5 @@
 
-# Labs.Command
+# <a name="labs.command"></a>Labs.Command
 
  _**適用於︰**Office 的應用程式 | Office 增益集 | Office Mix | PowerPoint_
 
@@ -10,24 +10,24 @@ class Command
 ```
 
 
-## 屬性
+## <a name="properties"></a>屬性
 
 
-|**名稱**|**說明**|
+|**名稱**|**描述**|
 |:-----|:-----|
 | `public var type: string`|命令的類型。|
 | `public var commandData: any`|與命令關聯的選擇性資料。|
 
-## 方法
+## <a name="methods"></a>方法
 
 
 
 
-### 建構函式
+### <a name="constructor"></a>建構函式
 
  `function constructor(type: string, commandData?: any)`
 
-說明
+描述
 
  **參數**
 

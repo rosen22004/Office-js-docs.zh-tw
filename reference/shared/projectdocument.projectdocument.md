@@ -1,11 +1,11 @@
 
 
-# ProjectDocument 物件
+# <a name="projectdocument-object"></a>ProjectDocument 物件
 抽象類別，代表與 Office 增益集互動的專案文件 (使用中的專案)。
 
 |||
 |:-----|:-----|
-|**主機︰**|Project|
+|**主應用程式︰**|Project|
 |**已新增於**|1.0|
 
 ```js
@@ -13,13 +13,13 @@ Office.context.document
 ```
 
 
-## 成員
+## <a name="members"></a>成員
 
 
 **方法**
 
 
-|**名稱**|**說明**|
+|**名稱**|**描述**|
 |:-----|:-----|
 |[addHandlerAsync 方法](../../reference/shared/projectdocument.addhandlerasync.md)|針對 **ProjectDocument** 物件中的事件，以非同步方式加入事件處理常式。|
 |[getMaxResourceIndexAsync 方法](../../reference/shared/projectdocument.getmaxresourceindexasync.md)|以非同步方式取得目前專案中資源集合的最大索引。|
@@ -42,18 +42,18 @@ Office.context.document
 **事件**
 
 
-|**名稱**|**說明**|
+|**名稱**|**描述**|
 |:-----|:-----|
-|[ResourceSelectionChanged event](../../reference/shared/projectdocument.resourceselectionchanged.event.md)|使用中專案的資源選取項目變更時，就會發生。|
-|[TaskSelectionChanged event](../../reference/shared/projectdocument.taskselectionchanged.event.md)|使用中專案的工作選取項目變更時，就會發生。|
+|[ResourceSelectionChanged 事件](../../reference/shared/projectdocument.resourceselectionchanged.event.md)|使用中專案的資源選取項目變更時，就會發生。|
+|[TaskSelectionChanged 事件](../../reference/shared/projectdocument.taskselectionchanged.event.md)|使用中專案的工作選取項目變更時，就會發生。|
 |[ViewSelectionChanged 事件](../../reference/shared/projectdocument.viewselectionchanged.event.md)|使用中專案的使用中檢視變更時，就會發生。|
 
-## 備註
+## <a name="remarks"></a>備註
 
 請勿直接呼叫或具現化指令碼中的 **ProjectDocument** 物件。
 
 
-## 範例
+## <a name="example"></a>範例
 
 下列範例會初始化增益集，然後取得可從 Project 文件內容取得的 [Document](../../reference/shared/document.md) 物件屬性。Project 文件是開啟的使用中專案。若要存取 **ProjectDocument** 物件的成員，請使用 **Office.context.document** 物件，如 **ProjectDocument** 方法和事件的程式碼範例所示。
 
@@ -94,7 +94,7 @@ Office.context.document
 ```
 
 
-## 支援詳細資料
+## <a name="support-details"></a>支援詳細資料
 
 
 下列矩陣中的大寫 Y，表示在相對應的 Office 主應用程式中支援此物件。空白儲存格表示 Office 主應用程式不支援此物件。
@@ -112,18 +112,18 @@ Office.context.document
 |**文件庫**|Office.js|
 |**命名空間**|Office|
 
-## 支援歷程記錄
+## <a name="support-history"></a>支援歷程記錄
 
 
 |**版本**|**變更**|
 |:-----|:-----|
 |1.0|已導入|
 
-## 請參閱
+## <a name="see-also"></a>請參閱
 
 
 
-#### 其他資源
+#### <a name="other-resources"></a>其他資源
 
 
 [Project 的工作窗格增益集](../../docs/project/project-add-ins.md)

@@ -1,5 +1,5 @@
 
-# 在 Outlook 中撰寫約會或郵件時，在本文中插入資料
+# <a name="insert-data-in-the-body-when-composing-an-appointment-or-message-in-outlook"></a>在 Outlook 中撰寫約會或郵件時，在本文中插入資料
 
 您可以使用非同步方法 ([Body.getAsync](../../reference/outlook/Body.md)、[Body.getTypeAsync](../../reference/outlook/Body.md)、[Body.prependAsync](../../reference/outlook/Body.md)、[Body.setAsync](../../reference/outlook/Body.md) 和 [Body.setSelectedDataAsync](../../reference/outlook/Body.md)) 來取得本文類型，並在使用者正在撰寫的約會或郵件項目的本文中插入資料。這些非同步方法僅供撰寫增益集使用。若要使用這些方法，請確定您已正確設定增益集資訊清單，以便 Outlook 在撰寫表單中啟動您的增益集，如[建立撰寫格式的 Outlook 增益集](../outlook/compose-scenario.md)中所述。
 
@@ -21,7 +21,7 @@
 除了 _coercionType_ 之外，如同適用於 Office 的 JavaScript API 中大部分的非同步方法，**getTypeAsync**、**prependAsync** 及 **setSelectedDataAsync** 會取得其他選擇性的輸入參數。如需有關指定這些選擇性輸入參數的詳細資訊，請參閱 [Office 增益集中的非同步程式設計](../../docs/develop/asynchronous-programming-in-office-add-ins.md#passing-optional-parameters-inline)中的[將選擇性參數傳遞至非同步方法](../../docs/develop/asynchronous-programming-in-office-add-ins.md)。
 
 
-## 若要在目前的游標位置插入資料
+## <a name="to-insert-data-at-the-current-cursor-position"></a>若要在目前的游標位置插入資料
 
 
 本章節會顯示使用 **getTypeAsync** 的程式碼範例來驗證所撰寫的項目主體類型，然後使用 **setSelectedDataAsync** 在目前的游標位置中插入資料。
@@ -123,7 +123,7 @@ function write(message){
 ```
 
 
-## 若要在項目本文的開頭插入資料
+## <a name="to-insert-data-at-the-beginning-of-the-item-body"></a>若要在項目本文的開頭插入資料
 
 
 或者，您可以使用 **prependAsync** 在項目本文的開頭插入資料，並忽略目前的游標位置。除了插入的點之外，**prependAsync** 和 **setSelectedDataAsync** 的行為類似︰
@@ -215,7 +215,7 @@ function write(message){
 ```
 
 
-## 其他資源
+## <a name="additional-resources"></a>其他資源
 
 
 

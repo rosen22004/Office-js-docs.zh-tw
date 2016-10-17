@@ -1,52 +1,52 @@
  
 
-# MailboxEnums
+# <a name="mailboxenums"></a>MailboxEnums
 
 ## [Office](Office.md).MailboxEnums
 
-##### 需求
+##### <a name="requirements"></a>需求
 
 |需求| 值|
 |---|---|
 |[最低信箱需求集合版本](./tutorial-api-requirement-sets.md)| 1.0|
 |適用的 Outlook 模式| 撰寫或讀取|
 
-### 成員
+### <a name="members"></a>成員
 
-#### AttachmentType︰字串
+#### <a name="attachmenttype-:string"></a>AttachmentType︰字串
 
 指定附件的類型。
 
 AttachmentType
 
-##### 類型：
+##### <a name="type:"></a>類型：
 
 *   字串
 
-##### 屬性：
+##### <a name="properties:"></a>屬性：
 
 |名稱| 類型	| 值 | 描述|
 |---|---|---|---|
 |`File`| String|`file`|附件為檔案。|
 |`Item`| String|`item`|附件為 Exchange 項目。|
 
-##### 需求
+##### <a name="requirements"></a>需求
 
 |需求| 值|
 |---|---|
 |[最低信箱需求集合版本](./tutorial-api-requirement-sets.md)| 1.0|
 |適用的 Outlook 模式| 撰寫或讀取|
-#### EntityType︰字串
+#### <a name="entitytype-:string"></a>EntityType︰字串
 
 指定實體的類型。
 
 EntityType
 
-##### 類型：
+##### <a name="type:"></a>類型：
 
 *   字串
 
-##### 屬性：
+##### <a name="properties:"></a>屬性：
 
 |名稱| 類型	| 值 | 描述|
 |---|---|---|---|
@@ -58,23 +58,23 @@ EntityType
 |`TaskSuggestion`| 字串|`taskSuggestion`|指定實體為工作建議。|
 |`URL`| String|`url`|指定實體為網際網路 URL。|
 
-##### 需求
+##### <a name="requirements"></a>需求
 
 |需求| 值|
 |---|---|
 |[最低信箱需求集合版本](./tutorial-api-requirement-sets.md)| 1.0|
 |適用的 Outlook 模式| 撰寫或讀取|
-#### ItemNotificationMessageType︰字串
+#### <a name="itemnotificationmessagetype-:string"></a>ItemNotificationMessageType︰字串
 
 指定約會或郵件的通知訊息類型。
 
 ItemNotificationMessageType
 
-##### 類型：
+##### <a name="type:"></a>類型：
 
 *   字串
 
-##### 屬性：
+##### <a name="properties:"></a>屬性：
 
 |名稱| 類型	| 值 | 描述|
 |---|---|---|---|
@@ -82,46 +82,46 @@ ItemNotificationMessageType
 |`InformationalMessage`| String|`informationalMessage`|NotificationMessage 為資訊訊息。|
 |`ErrorMessage`| String|`errorMessage`|NotificationMessage 為錯誤訊息。|
 
-##### 需求
+##### <a name="requirements"></a>需求
 
 |需求| 值|
 |---|---|
 |[最低信箱需求集合版本](./tutorial-api-requirement-sets.md)| 1.3|
 |適用的 Outlook 模式| 撰寫或讀取|
-#### ItemType：字串
+#### <a name="itemtype-:string"></a>ItemType：字串
 
 指定項目的類型。
 
 ItemType
 
-##### 類型：
+##### <a name="type:"></a>類型：
 
 *   字串
 
-##### 屬性：
+##### <a name="properties:"></a>屬性：
 
 |名稱| 類型	| 值 | 描述|
 |---|---|---|---|
 |`Message`| String|`message`|電子郵件、會議邀請，會議回覆或會議取消。|
 |`Appointment`| 字串|`appointment`|約會項目。|
 
-##### 需求
+##### <a name="requirements"></a>需求
 
 |需求| 值|
 |---|---|
 |[最低信箱需求集合版本](./tutorial-api-requirement-sets.md)| 1.0|
 |適用的 Outlook 模式| 撰寫或讀取|
-#### RecipientType：字串
+#### <a name="recipienttype-:string"></a>RecipientType：字串
 
 指定約會的收件者類型。
 
 RecipientType
 
-##### 類型：
+##### <a name="type:"></a>類型：
 
 *   字串
 
-##### 屬性：
+##### <a name="properties:"></a>屬性：
 
 |名稱| 類型	| 值 | 描述|
 |---|---|---|---|
@@ -130,23 +130,23 @@ RecipientType
 |`User`| String|`user`|收件者是在 Exchange Server 上的 SMTP 電子郵件地址。|
 |`ExternalUser`| String|`externalUser`|收件者不是在 Exchange Server 上的 SMTP 電子郵件地址。|
 
-##### 需求
+##### <a name="requirements"></a>需求
 
 |需求| 值|
 |---|---|
 |[最低信箱需求集合版本](./tutorial-api-requirement-sets.md)| 1.1|
 |適用的 Outlook 模式| 撰寫或讀取|
-#### ResponseType︰字串
+#### <a name="responsetype-:string"></a>ResponseType︰字串
 
 指定會議邀請的回應類型。
 
 ResponseType
 
-##### 類型：
+##### <a name="type:"></a>類型：
 
 *   字串
 
-##### 屬性：
+##### <a name="properties:"></a>屬性：
 
 |名稱| 類型	| 值 | 描述|
 |---|---|---|---|
@@ -156,24 +156,24 @@ ResponseType
 |`Accepted`| String|`accepted`|出席者已接受會議邀請。|
 |`Declined`| String|`declined`|出席者已拒絕會議邀請。|
 
-##### 需求
+##### <a name="requirements"></a>需求
 
 |需求| 值|
 |---|---|
 |[最低信箱需求集合版本](./tutorial-api-requirement-sets.md)| 1.0|
 |適用的 Outlook 模式| 撰寫或讀取|
 
-#### RestVersion：字串
+#### <a name="restversion-:string"></a>RestVersion：字串
 
 指定對應到 REST 格式的項目 ID 的 REST API 的版本。 
 
 RestVersion
 
-##### 類型：
+##### <a name="type:"></a>類型：
 
 *   字串
 
-##### 屬性：
+##### <a name="properties:"></a>屬性：
 
 |名稱| 類型	| 值 | 描述|
 |---|---|---|---|
@@ -181,7 +181,7 @@ RestVersion
 |`v2_0`| 字串|`v2.0`|2.0 版。|
 |`Beta`| 字串|`beta`|Beta 版。|
 
-##### 需求
+##### <a name="requirements"></a>需求
 
 |需求| 值|
 |---|---|

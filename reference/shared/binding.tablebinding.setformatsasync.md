@@ -1,10 +1,10 @@
 
-# TableBinding.setFormatsAsync 方法
+# <a name="tablebinding.setformatsasync-method"></a>TableBinding.setFormatsAsync 方法
 設定或更新指定項目和繫結表格中資料的格式設定。
 
 |||
 |:-----|:-----|
-|**主機︰**|Excel|
+|**主應用程式︰**|Excel|
 |**可用於[需求集合](../../docs/overview/specify-office-hosts-and-api-requirements.md)**|不在集合中|
 |**已新增於**|1.1|
 
@@ -13,18 +13,18 @@ bindingObj.setFormatsAsync(cellFormat [,options] , callback);
 ```
 
 
-## 參數
+## <a name="parameters"></a>參數
 
 
 
-|**名稱**|**類型	**|**說明**|**支援附註**|
+|**名稱**|**類型**|**描述**|**支援附註**|
 |:-----|:-----|:-----|:-----|
-| _cellFormat_|**陣列**|包含一或多個 JavaScript 物件的陣列，該物件指定要鎖定目標之儲存格與套用至這些儲存格的格式設定。必要。||
-| _options_|**物件**|指定下列任何一項[選擇性參數](../../docs/develop/asynchronous-programming-in-office-add-ins.md#passing-optional-parameters-to-asynchronous-methods)||
+| _cellFormat_|**array**|包含一或多個 JavaScript 物件的陣列，該物件指定要鎖定目標之儲存格與套用至這些儲存格的格式設定。必要。||
+| _options_|**object**|指定下列任何一項[選擇性參數](../../docs/develop/asynchronous-programming-in-office-add-ins.md#passing-optional-parameters-to-asynchronous-methods)||
 | _asyncContext_|**陣列**、**布林值**、**null**、**數字**、**物件**、**字串**或**未定義**|無變更的情況下，於 **AsyncResult** 物件中傳回的任一類型使用者定義項目。||
-| _callback_|**物件**|回呼傳回時所叫用的函數，其唯一的參數為 **AsyncResult** 類型。||
+| _callback_|**object**|回呼傳回時所叫用的函數，其唯一的參數為 **AsyncResult** 類型。||
 
-## 回呼值
+## <a name="callback-value"></a>回呼值
 
 傳遞至 _callback_ 參數的函數執行時，該函數會收到 [AsyncResult](../../reference/shared/asyncresult.md) 物件，您可以從回呼函數的唯一參數存取該物件。
 
@@ -32,14 +32,14 @@ bindingObj.setFormatsAsync(cellFormat [,options] , callback);
 
 
 
-|**屬性**|**用途**|
+|**屬性**|**用於...**|
 |:-----|:-----|
 |[AsyncResult.value](../../reference/shared/asyncresult.value.md)|設定格式時，因為沒有可擷取的資料或物件，所以一律傳回 **undefined**。|
 |[AsyncResult.status](../../reference/shared/asyncresult.status.md)|判定作業成功或失敗。|
 |[AsyncResult.error](../../reference/shared/asyncresult.error.md)|作業失敗時，存取提供錯誤資訊的 [Error](../../reference/shared/error.md) 物件。|
 |[AsyncResult.asyncContext](../../reference/shared/asyncresult.asynccontext.md)|存取您的使用者定義**物件**或值 (如果您傳遞了其中一項做為 _asyncContext_ 參數)。|
 
-## 備註
+## <a name="remarks"></a>備註
 
  **指定 cellFormat 參數**
 
@@ -55,7 +55,7 @@ _cellFormat_ 陣列中的每個 JavaScript 物件具有此形式：
 **儲存格屬性中的支援範圍**
 
 
-|**儲存格範圍設定**|**說明**|
+|**儲存格範圍設定**|**描述**|
 |:-----|:-----|
 | `{row: i}`|指定延伸至表格中第 i 列資料的範圍。|
 | `{column: i}`|指定延伸至表格中第 i 欄資料的範圍。|
@@ -162,7 +162,7 @@ Office.select("bindings#myBinding).setFormatsAsync(
 如需詳細資訊和範例，請參閱[如何格式化 Excel 增益集中的表格](../../docs/excel/format-tables-in-add-ins-for-excel.md)。
 
 
-## 支援詳細資料
+## <a name="support-details"></a>支援詳細資料
 
 
 下列矩陣中的大寫 Y，表示在相對應的 Office 主應用程式中支援此方法。空白儲存格表示 Office 主應用程式不支援此方法。
@@ -185,7 +185,7 @@ Office.select("bindings#myBinding).setFormatsAsync(
 |**文件庫**|Office.js|
 |**命名空間**|Office|
 
-## 支援歷程記錄
+## <a name="support-history"></a>支援歷程記錄
 
 
 

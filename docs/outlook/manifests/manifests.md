@@ -1,5 +1,5 @@
 
-# Outlook 增益集資訊清單
+# <a name="outlook-add-in-manifests"></a>Outlook 增益集資訊清單
 
 Outlook 增益集包含兩個元件︰XML 增益集清單和網頁，由 Office 的 JavaScript 程式庫增益集 (office.js) 所支援。資訊清單描述如何跨 Outlook 用戶端整合增益集。目前有三個版本的資訊清單結構描述，包括 **VersionOverrides**。我們建議您使用資訊清單結構描述 1.1 版和 **VersionOverrides** 1.0 以建置增益集。以下為範例。
 
@@ -605,7 +605,7 @@ Outlook 增益集包含兩個元件︰XML 增益集清單和網頁，由 Office 
 ```
 
 
-## 結構描述版本
+## <a name="schema-versions"></a>結構描述版本
 
 並非所有的 Outlook 用戶端會立即支援最新功能，因為某些 Outlook 使用者將擁有較舊版本的 Outlook。有結構描述版本可讓開發人員建置回溯相容的增益集，使用仍在較舊版本運作的最新可用功能。
 
@@ -625,7 +625,7 @@ Outlook 增益集包含兩個元件︰XML 增益集清單和網頁，由 Office 
 本文將討論 1.1 資訊清單的需求。即使您的增益集資訊清單使用  **VersionOverrides** 元素，請務必仍包含 1.1 資訊清單元素，以允許增益集使用不支援 **VersionOverrides** 的較舊用戶端。
 
 
-## 根元素
+## <a name="root-element"></a>根元素
 
 Outlook 增益集資訊清單的根元素是 **OfficeApp**。這個元素也會宣告預設命名空間、結構描述版本和增益集的類型。將資訊清單的所有其他元素放在其左和右標記中。下列是根元素的範例︰
 
@@ -644,21 +644,21 @@ Outlook 增益集資訊清單的根元素是 **OfficeApp**。這個元素也會�
 ```
 
 
-## 版本
+## <a name="version"></a>版本
 
-這是特定增益集的版本。 如果開發人員更新資訊清單中的項目，就必須也遞增版本。 如此一來，當安裝新的資訊清單時，它會覆寫現有的值，且使用者會得到新的功能。 如果這個增益集已提交至存放區，就必須重新提交和重新驗證新的資訊清單。 然後，此增益集的使用者會在它受到核准的幾個小時後，自動收到新的更新資訊清單。
+這是特定增益集的版本。如果開發人員更新資訊清單中的項目，就必須也遞增版本。如此一來，當安裝新的資訊清單時，它會覆寫現有的值，且使用者會得到新的功能。如果這個增益集已提交至存放區，就必須重新提交和重新驗證新的資訊清單。然後，此增益集的使用者會在它受到核准的幾個小時後，自動收到新的更新資訊清單。
 
-如果增益集要求的權限變更時，系統將提示使用者升級，並重新同意該增益集。 如果原本是由系統管理員為整個組織安裝這個增益集，則必須先經由系統管理員重新同意。 使用者仍可同時看到舊的功能。
-
-
-## VersionOverrides
-
-**VersionOverrides** 元素是增益集命令的資訊位置。 如需此元素的詳細資訊，請參閱[定義 Outlook 增益集資訊清單中的增益集命令](../../outlook/manifests/define-add-in-commands.md)。
+如果增益集要求的權限變更時，系統將提示使用者升級，並重新同意該增益集。如果原本是由系統管理員為整個組織安裝這個增益集，則必須先經由系統管理員重新同意。使用者仍可同時看到舊的功能。
 
 
-## 當地語系化
+## <a name="versionoverrides"></a>VersionOverrides
 
-增益集的某些方面需要根據不同的地區設定加以當地語系化，例如名稱、描述和載入的 URL。 將這些元素當地語系化很簡單，方法是指定預設值，然後地區設定會覆寫 **VersionOverrides** 元素內的 **Resources** 元素。 以下範例顯示如何覆寫影像、URL 和字串︰
+**VersionOverrides** 元素是增益集命令的資訊位置。如需此元素的詳細資訊，請參閱[定義 Outlook 增益集資訊清單中的增益集命令](../../outlook/manifests/define-add-in-commands.md)。
+
+
+## <a name="localization"></a>當地語系化
+
+增益集的某些方面需要根據不同的地區設定加以當地語系化，例如名稱、描述和載入的 URL。將這些元素當地語系化很簡單，方法是指定預設值，然後地區設定會覆寫 **VersionOverrides** 元素內的 **Resources** 元素。以下範例顯示如何覆寫影像、URL 和字串︰
 
 
 ```XML
@@ -686,7 +686,7 @@ Outlook 增益集資訊清單的根元素是 **OfficeApp**。這個元素也會�
 結構描述參考包含可當地語系化之元素的完整資訊。
 
 
-## Hosts
+## <a name="hosts"></a>Hosts
 
 Outlook 增益集指定  **主機** 元素 (與下方類型)。
 
@@ -704,7 +704,7 @@ Outlook 增益集指定  **主機** 元素 (與下方類型)。
 這不同於 **VersionOverrides** 元素中的 **Hosts** 元素 (在[定義 Outlook 增益集資訊清單中的增益集命令](../../outlook/manifests/define-add-in-commands.md)中討論)。
 
 
-## 需求
+## <a name="requirements"></a>需求
 
 **Requirements** 元素指定增益集的可用的 API 集。若為 Outlook 增益集，需求集必須是信箱及 1.1 或以上的值。請參閱 API 參考以取得最新的需求集版本。如需需求集的詳細資訊，請參閱 [Outlook 增益集 API](../../outlook/apis.md)。
 
@@ -728,7 +728,7 @@ Outlook 增益集指定  **主機** 元素 (與下方類型)。
 ```
 
 
-## 表單設定
+## <a name="form-settings"></a>表單設定
 
 **FormSettings** 元素由較舊的 Outlook 用戶端使用，如此僅支援結構描述 1.1 而非 **VersionOverrides**。使用這個元素，開發人員定義如何在此類用戶端中顯示增益集。有兩個組件 - **ItemRead** 和 **ItemEdit**。**ItemRead** 用來指定當使用者閱讀郵件和約會時如何顯示增益集。**ItemEdit** 說明當身為召集人的使用者撰寫回覆、新郵件、新約會或編輯約會時，如何顯示增益集。
 
@@ -736,7 +736,7 @@ Outlook 增益集指定  **主機** 元素 (與下方類型)。
 
 如需詳細資訊，請參閱 [Office 增益集資訊清單的結構描述參考 (v1.1)](../../overview/add-in-manifests.md)
 
-## 應用程式網域
+## <a name="app-domains"></a>應用程式網域
 
 您在 **SourceLocation** 元素中指定的增益集起始頁面的網頁是增益集的預設網域。若未使用 **Appdomain** 和 **AppDomain** 元素，則在增益集嘗試瀏覽到另一個網域時，瀏覽器會開啟增益集窗格以外的新視窗。若要允許增益集瀏覽到增益集窗格中的另一個網域，請加入 **Appdomain** 元素，並在其位於增益集資訊清單的 **AppDomain** 子元素中加入每個其他網域。
 
@@ -758,7 +758,7 @@ Outlook 增益集指定  **主機** 元素 (與下方類型)。
 應用程式網域也需要在快顯視窗，與豐富型用戶端中執行的增益集之間啟用 cookie 共用。
 
 
-## 權限
+## <a name="permissions"></a>權限
 
 **Permissions** 元素包含增益集的必要權限。一般情況下，您應該視您打算使用的確切方法，指定增益集需要的最小權限。例如，在撰寫表單中啟動、只有唯讀權限、不會寫入項目屬性 (如 [item.requiredAttendees](../../../reference/outlook/Office.context.mailbox.item.md))，且不會呼叫 [mailbox.makeEwsRequestAsync](../../../reference/outlook/Office.context.mailbox.md) 來存取任何 Exchange Web Services 作業的郵件增益集，應該指定 **ReadItem** 權限。如需可用的使用權限的詳細資訊，請參閱[了解 Outlook 增益集的權限](../../outlook/understanding-outlook-add-in-permissions.md)。
 
@@ -776,7 +776,7 @@ Outlook 增益集指定  **主機** 元素 (與下方類型)。
 ```
 
 
-## 啟動規則
+## <a name="activation-rules"></a>啟動規則
 
 啟動規則是在 **Rule** 元素中指定。**Rule** 元素可在 1.1 資訊清單中顯示為 **OfficeApp** 元素的子系，及另外顯示為 **VersionOverrides** 中 **ExtensionPoint** 元素的子系。請參閱[定義 Outlook 增益集資訊清單中的增益集命令](../../outlook/manifests/define-add-in-commands.md)，取得在 **VersionOverrides** 中使用此元素的詳細資訊。
 
@@ -794,13 +794,13 @@ Outlook 增益集指定  **主機** 元素 (與下方類型)。
 如需啟動規則的詳細資料及範例，請參閱 [Outlook 增益集的啟動規則](../../outlook/manifests/activation-rules.md)。
 
 
-## 後續步驟：增益集命令
+## <a name="next-steps:-add-in-commands"></a>後續步驟：增益集命令
 
 
 定義基本資訊清單後，[定義增益集的增益集命令](../../outlook/manifests/define-add-in-commands.md)。增益集命令會在功能區顯示按鈕，讓使用者可以簡單、直覺的方式啟動增益集。如需詳細資訊，請參閱 [Outlook 的增益集命令](../../outlook/add-in-commands-for-outlook.md)。
 
 
-## 其他資源
+## <a name="additional-resources"></a>其他資源
 
 
 
@@ -810,7 +810,8 @@ Outlook 增益集指定  **主機** 元素 (與下方類型)。
     
 - [Office 增益集的當地語系化](../../develop/localization.md)
     
-- [為桌上型電腦、平板電腦及行動裝置上執行的 Outlook 建立郵件增益集 (結構描述 v1.1)](http://msdn.microsoft.com/library/8d425fb3-8a7c-429d-87b3-8046e964b153%28Office.15%29.aspx)
+- 
+  [為桌上型電腦、平板電腦及行動裝置上執行的 Outlook 建立郵件增益集 (結構描述 v1.1)](http://msdn.microsoft.com/library/8d425fb3-8a7c-429d-87b3-8046e964b153%28Office.15%29.aspx)
     
 - [Outlook 增益集的隱私權、權限和安全性](../../outlook/privacy-and-security.md)
     
@@ -820,7 +821,8 @@ Outlook 增益集指定  **主機** 元素 (與下方類型)。
     
 - [Office 增益集資訊清單的結構描述參考 (v1.1)](../../overview/add-in-manifests.md)
     
-- [項目類型和郵件類別](http://msdn.microsoft.com/library/15b709cc-7486-b6c7-88a3-4a4d8e0ab292%28Office.15%29.aspx)
+- 
+  [項目類型和郵件類別](http://msdn.microsoft.com/library/15b709cc-7486-b6c7-88a3-4a4d8e0ab292%28Office.15%29.aspx)
     
 - [Office 增益集的設計指導方針](../../design/add-in-design.md)
     

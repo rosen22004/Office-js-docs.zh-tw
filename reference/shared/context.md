@@ -1,10 +1,10 @@
 
-# 內容物件
+# <a name="context-object"></a>內容物件
 代表增益集的執行階段環境，並且提供 API 的主要物件之存取。
 
 |||
 |:-----|:-----|
-|**主機︰**|Access、Excel、Outlook、PowerPoint、Project、Word|
+|**主應用程式︰**|Access、Excel、Outlook、PowerPoint、Project、Word|
 |**上次變更於**|1.1|
 
 ```
@@ -12,27 +12,27 @@ Office.context
 ```
 
 
-## 成員
+## <a name="members"></a>成員
 
 |||
 |:-----|:-----|
-|名稱|說明|
+|名稱|描述|
 |[commerceAllowed](../../reference/shared/office.context.commerceallowed.md)|取得關於增益集是否在允許連結到外部付款系統的平台上執行的資訊。|
 |[contentLanguage](../../reference/shared/office.context.contentlanguage.md)|取得當資料儲存在文件或項目中時的地區設定 (語言)。|
 |[displayLanguage](../../reference/shared/office.context.displaylanguage.md)|取得主控應用程式 UI 的地區設定 (語言)。|
-|[文件](../../reference/shared/office.context.document.md)|取得代表與內容或工作窗格增益集互動之文件的物件。|
-|[信箱](../../reference/shared/office.context.mailbox.md)|取得提供特別針對 Outlook 增益集 API 成員存取的**信箱**物件。|
+|[document](../../reference/shared/office.context.document.md)|取得代表與內容或工作窗格增益集互動之文件的物件。|
+|[mailbox](../../reference/shared/office.context.mailbox.md)|取得提供特別針對 Outlook 增益集 API 成員存取的**信箱**物件。|
 |[officeTheme](../../reference/shared/office.context.officetheme.md)|提供 Office 佈景主題色彩屬性的存取。|
-|[UI](../../reference/shared/officeui)|提供物件和方法，您可以用來建立和操作 UI 元件，例如對話方塊。|
+|[ui](../../reference/shared/officeui)|提供物件和方法，您可以用來建立和操作 UI 元件，例如對話方塊。|
 |[roamingSettings](../../reference/shared/office.context.roamingsettings.md)|取得代表增益集已儲存自訂設定的物件。|
 |[touchEnabled](../../reference/shared/office.context.touchenabled.md)|取得關於增益集是否在具有觸控功能的 Office 主應用程式中執行的資訊。|
 
-## 備註
+## <a name="remarks"></a>備註
 
 **Context** 物件提供適用於 Office 的 JavaScript API 中索引鍵物件的存取。
 
 
-## 支援詳細資料
+## <a name="support-details"></a>支援詳細資料
 
 
 
@@ -43,7 +43,7 @@ Office.context
 |**文件庫**|Office.js|
 |**命名空間**|Office|
 
-## 支援歷程記錄
+## <a name="support-history"></a>支援歷程記錄
 
 
 

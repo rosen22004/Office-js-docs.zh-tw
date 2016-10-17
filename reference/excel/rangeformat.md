@@ -1,10 +1,10 @@
-﻿# RangeFormat 物件 (適用於 Excel 的 JavaScript API)
+# <a name="rangeformat-object-(javascript-api-for-excel)"></a>RangeFormat 物件 (適用於 Excel 的 JavaScript API)
 
 格式物件，其中封裝了範圍的字型、填滿、框線、對齊方式及其他屬性。
 
-## 屬性
+## <a name="properties"></a>屬性
 
-| 屬性	     | 類型	   |說明
+| 屬性	     | 類型	   |描述
 |:---------------|:--------|:----------|
 |columnWidth|雙精確度|取得或設定範圍內所有資料行寬度。如果資料行寬度不一致，則會傳回 null。|
 |horizontalAlignment|string|代表所指定物件的水平對齊方式。可能的值為：General、Left、Center、Right、Fill、Justify、CenterAcrossSelection、Distributed。|
@@ -12,71 +12,71 @@
 |verticalAlignment|string|代表所指定物件的垂直對齊方式。可能的值為：Top、Center、Bottom、Justify、Distributed。|
 |wrapText|bool|指出 Excel 文字控制項已設定為在物件中自動換行。Null 值表示整個範圍不使用統一的自動換行文字設定。|
 
-_請參閱屬性存取[範例。](#範例)_
+_請參閱屬性存取[範例。](#property-access-examples)_
 
-## 關聯性
-| 關聯性 | 類型	   |說明|
+## <a name="relationships"></a>關聯性
+| 關聯性 | 類型	   |描述|
 |:---------------|:--------|:----------|
 |borders|[RangeBorderCollection](rangebordercollection.md)|套用至選定之整體範圍的 border 物件集合。唯讀。|
 |fill|[RangeFill](rangefill.md)|傳回整體範圍中定義的 fill 物件。唯讀。|
 |font|[RangeFont](rangefont.md)|傳回選定之整體範圍中定義的 font 物件。唯讀。|
-|保護|[FormatProtection](formatprotection.md)|傳回範圍的格式保護物件。唯讀。|
+|protection|[FormatProtection](formatprotection.md)|傳回範圍的格式保護物件。唯讀。|
 
-## 方法
+## <a name="methods"></a>方法
 
-| 方法           | 傳回類型    |說明|
+| 方法           | 傳回類型    |描述|
 |:---------------|:--------|:----------|
 |[autofitColumns()](#autofitcolumns)|void|根據資料行中的目前資料，變更目前範圍的資料行寬度來調整為最適寬度。|
 |[autofitRows()](#autofitrows)|void|根據資料行中的目前資料，變更目前範圍的資料列高度來調整為最適高度。|
 |[load(param: object)](#loadparam-object)|void|以參數中指定的屬性和物件值填滿 JavaScript 層中建立的 Proxy 物件。|
 
-## 方法詳細資料
+## <a name="method-details"></a>方法詳細資料
 
 
-### autofitColumns()
+### <a name="autofitcolumns()"></a>autofitColumns()
 根據資料行中的目前資料，變更目前範圍的資料行寬度來調整為最適寬度。
 
-#### 語法
+#### <a name="syntax"></a>語法
 ```js
 rangeFormatObject.autofitColumns();
 ```
 
-#### 參數
+#### <a name="parameters"></a>參數
 無
 
-#### 傳回
+#### <a name="returns"></a>傳回
 void
 
-### autofitRows()
+### <a name="autofitrows()"></a>autofitRows()
 根據資料行中的目前資料，變更目前範圍的資料列高度來調整為最適高度。
 
-#### 語法
+#### <a name="syntax"></a>語法
 ```js
 rangeFormatObject.autofitRows();
 ```
 
-#### 參數
+#### <a name="parameters"></a>參數
 無
 
-#### 傳回
+#### <a name="returns"></a>傳回
 void
 
-### load(param: object)
+### <a name="load(param:-object)"></a>load(param: object)
 以參數中指定的屬性和物件值填滿 JavaScript 層中建立的 Proxy 物件。
 
-#### 語法
+#### <a name="syntax"></a>語法
 ```js
 object.load(param);
 ```
 
-#### 參數
-| 參數	    | 類型	   |說明|
+#### <a name="parameters"></a>參數
+| 參數	    | 類型	   |描述|
 |:---------------|:--------|:----------|
 |param|物件|選用。接受參數與關聯性名稱，做為分隔字串或陣列。或者提供 [loadOption](loadoption.md) 物件。|
 
-#### 傳回
+#### <a name="returns"></a>傳回
 void
-### 屬性存取範例
+### <a name="property-access-examples"></a>屬性存取範例
 
 此範例將列印一個範圍的所有格式屬性。 
 

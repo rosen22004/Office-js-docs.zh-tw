@@ -1,54 +1,54 @@
-﻿# 影像物件 (適用於 OneNote 的 JavaScript API)
+# <a name="image-object-(javascript-api-for-onenote)"></a>影像物件 (適用於 OneNote 的 JavaScript API)
 
 _適用於：OneNote Online_  
 
 
-代表影像。 影像可以是 PageContent 物件或 Paragraph 物件的直接子項。
+代表影像。影像可以是 PageContent 物件或 Paragraph 物件的直接子項。
 
-## 屬性
+## <a name="properties"></a>屬性
 
-| 屬性	     | 類型	   |說明|意見反應|
+| 屬性	     | 類型	   |描述|意見反應|
 |:---------------|:--------|:----------|:-------|
-|Description|string|取得或設定影像的描述。|[執行](https://github.com/OfficeDev/office-js-docs/issues/new?title=OneNote-image-description)|
-|Height|double|取得或設定影像配置的高度。|[執行](https://github.com/OfficeDev/office-js-docs/issues/new?title=OneNote-image-height)|
-|hyperlink|string|取得或設定影像的超連結。|[執行](https://github.com/OfficeDev/office-js-docs/issues/new?title=OneNote-image-hyperlink)|
-|id|string|取得影像物件的識別碼。 唯讀。|[執行](https://github.com/OfficeDev/office-js-docs/issues/new?title=OneNote-image-id)|
-|width|double|取得或設定影像配置的寬度。|[執行](https://github.com/OfficeDev/office-js-docs/issues/new?title=OneNote-image-width)|
+|Description|string|取得或設定影像的描述。|[移至](https://github.com/OfficeDev/office-js-docs/issues/new?title=OneNote-image-description)|
+|height|double|取得或設定影像配置的高度。|[移至](https://github.com/OfficeDev/office-js-docs/issues/new?title=OneNote-image-height)|
+|hyperlink|string|取得或設定影像的超連結。|[移至](https://github.com/OfficeDev/office-js-docs/issues/new?title=OneNote-image-hyperlink)|
+|id|字串|取得影像物件的識別碼。唯讀。|[移至](https://github.com/OfficeDev/office-js-docs/issues/new?title=OneNote-image-id)|
+|width|double|取得或設定影像配置的寬度。|[移至](https://github.com/OfficeDev/office-js-docs/issues/new?title=OneNote-image-width)|
 
-_請參閱屬性存取[範例。](#範例)_
+_請參閱屬性存取[範例。](#property-access-examples)_
 
-## 關聯性
-| 關聯性 | 類型	   |說明| 意見反應|
+## <a name="relationships"></a>關聯性
+| 關聯性 | 類型	   |描述| 意見反應|
 |:---------------|:--------|:----------|:-------|
-|ocrData|[ImageOcrData](imageocrdata.md)|取得 OCR (光學字元辨識) 取得的此影像的資料，例如 OCR 文字和語言。 唯讀。|[移至](https://github.com/OfficeDev/office-js-docs/issues/new?title=OneNote-image-ocrData)|
-|pageContent|[PageContent](pagecontent.md)|取得包含影像的 PageContent 物件。 如果影像不是 PageContent 的直接子項，則擲回。 這個物件會定義在頁面上影像的位置。 唯讀。|[移至](https://github.com/OfficeDev/office-js-docs/issues/new?title=OneNote-image-pageContent)|
-|paragraph|[段落](paragraph.md)|取得包含影像的 Paragraph 物件。 如果影像不是 Paragraph 的直接子項，則擲回。 唯讀。|[執行](https://github.com/OfficeDev/office-js-docs/issues/new?title=OneNote-image-paragraph)|
+|ocrData|[ImageOcrData](imageocrdata.md)|取得 OCR (光學字元辨識) 取得的此影像的資料，例如 OCR 文字和語言。唯讀。|[移至](https://github.com/OfficeDev/office-js-docs/issues/new?title=OneNote-image-ocrData)|
+|pageContent|[PageContent](pagecontent.md)|取得包含影像的 PageContent 物件。如果影像不是 PageContent 的直接子項，則擲回。這個物件會定義在頁面上影像的位置。唯讀。|[移至](https://github.com/OfficeDev/office-js-docs/issues/new?title=OneNote-image-pageContent)|
+|paragraph|[Paragraph](paragraph.md)|取得包含影像的 Paragraph 物件。如果影像不是 Paragraph 的直接子項，則擲回。唯讀。|[移至](https://github.com/OfficeDev/office-js-docs/issues/new?title=OneNote-image-paragraph)|
 
-## 方法
+## <a name="methods"></a>方法
 
-| 方法           | 傳回類型    |說明| 意見反應|
+| 方法           | 傳回類型    |描述| 意見反應|
 |:---------------|:--------|:----------|:-------|
-|[getBase64Image()](#getbase64image)|string|取得影像的 Base64 編碼二進位表示法。|[執行](https://github.com/OfficeDev/office-js-docs/issues/new?title=OneNote-image-getBase64Image)|
-|[load(param: object)](#loadparam-object)|void|以參數中指定的屬性和物件值填滿 JavaScript 層中建立的 Proxy 物件。|[執行](https://github.com/OfficeDev/office-js-docs/issues/new?title=OneNote-image-load)|
+|[getBase64Image()](#getbase64image)|string|取得影像的 Base64 編碼二進位表示法。|[移至](https://github.com/OfficeDev/office-js-docs/issues/new?title=OneNote-image-getBase64Image)|
+|[load(param: object)](#loadparam-object)|void|以參數中指定的屬性和物件值填滿 JavaScript 層中建立的 Proxy 物件。|[移至](https://github.com/OfficeDev/office-js-docs/issues/new?title=OneNote-image-load)|
 
-## 方法詳細資料
+## <a name="method-details"></a>方法詳細資料
 
 
-### getBase64Image()
+### <a name="getbase64image()"></a>getBase64Image()
 取得影像的 Base64 編碼二進位表示法。
 
-#### 語法
+#### <a name="syntax"></a>語法
 ```js
 imageObject.getBase64Image();
 ```
 
-#### 參數
+#### <a name="parameters"></a>參數
 無
 
-#### 會傳回
+#### <a name="returns"></a>會傳回
 字串
 
-#### 範例
+#### <a name="examples"></a>範例
 ```js
 
 var image = null;
@@ -83,22 +83,22 @@ OneNote.run(function(ctx){
         });
 });
 ```
-### load(param: object)
+### <a name="load(param:-object)"></a>load(param: object)
 以參數中指定的屬性和物件值填滿 JavaScript 層中建立的 Proxy 物件。
 
-#### 語法
+#### <a name="syntax"></a>語法
 ```js
 object.load(param);
 ```
 
-#### 參數
-| 參數	    | 類型	   |說明|
+#### <a name="parameters"></a>參數
+| 參數	    | 類型	   |描述|
 |:---------------|:--------|:----------|
 |param|物件|選用。接受參數與關聯性名稱，做為分隔字串或陣列。或者提供 [loadOption](loadoption.md) 物件。|
 
-#### 傳回
+#### <a name="returns"></a>傳回
 void
-### 屬性存取範例
+### <a name="property-access-examples"></a>屬性存取範例
 **id、width、height、description 及 hyperlink**
 ```js
 OneNote.run(function(ctx){

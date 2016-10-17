@@ -1,5 +1,5 @@
 
-# Labs.Core.Actions.ICreateAttemptResult
+# <a name="labs.core.actions.icreateattemptresult"></a>Labs.Core.Actions.ICreateAttemptResult
 
  _**適用於︰**Office 的應用程式 | Office 增益集 | Office Mix | PowerPoint_
 
@@ -10,9 +10,9 @@ interface ICreateAttemptResult extends Core.IActionResult
 ```
 
 
-## 屬性
+## <a name="properties"></a>屬性
 
 
-|**名稱**|**說明**|
+|**名稱**|**描述**|
 |:-----|:-----|
 | `attemptId: string`|建立的嘗試 ID|

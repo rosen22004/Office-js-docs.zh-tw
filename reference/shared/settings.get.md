@@ -1,11 +1,11 @@
 
-# Settings.get 方法
+# <a name="settings.get-method"></a>Settings.get 方法
 擷取指定的設定。
 
 |||
 |:-----|:-----|
-|**主機︰**|Access、Excel、PowerPoint、Word|
-|**可用於[需求集合](../../docs/overview/specify-office-hosts-and-api-requirements.md)**|Settings|
+|**主應用程式︰**|Access、Excel、PowerPoint、Word|
+|**可用於[需求集合](../../docs/overview/specify-office-hosts-and-api-requirements.md)**|設定|
 |**上次變更於**|1.1|
 
 ```js
@@ -13,7 +13,7 @@ var mySetting = Office.context.document.settings.get(name);
 ```
 
 
-## 參數
+## <a name="parameters"></a>參數
 
 
 
@@ -26,12 +26,12 @@ _name_<br/>
 
 
 
-## 傳回值
+## <a name="return-value"></a>傳回值
 
 屬性名稱對應至 JSON 序列化值的**物件**。
 
 
-## 範例
+## <a name="example"></a>範例
 
 
 
@@ -49,7 +49,7 @@ function write(message){
 
 
 
-## 支援詳細資料
+## <a name="support-details"></a>支援詳細資料
 
 
 下列矩陣中的大寫 Y，表示在相對應的 Office 主應用程式中支援此屬性。空白儲存格表示 Office 主應用程式不支援此屬性。
@@ -73,7 +73,7 @@ function write(message){
 |**文件庫**|Office.js|
 |**命名空間**|Office|
 
-## 支援歷程記錄
+## <a name="support-history"></a>支援歷程記錄
 
 
 

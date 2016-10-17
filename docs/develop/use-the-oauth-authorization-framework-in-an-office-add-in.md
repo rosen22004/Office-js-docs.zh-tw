@@ -1,5 +1,5 @@
 
-# 在 Office 增益集中使用 OAuth 授權架構
+# <a name="use-the-oauth-authorization-framework-in-an-office-add-in"></a>在 Office 增益集中使用 OAuth 授權架構
 
 OAuth 是用於授權的開放標準，線上服務提供者 (例如 Office 365、Facebook、Google、SalesForce、LinkedIn 及其他廠商) 會用這個標準來執行使用者驗證。OAuth 授權架構是用於 Azure 和 Office 365 的預設授權通訊協定。OAuth 授權架構同時用於企業 (公司) 和消費者案例。
 
@@ -27,7 +27,7 @@ OAuth 是用於授權的開放標準，線上服務提供者 (例如 Office 365�
  **重要事項**  無法將存取權杖傳回至工作窗格，但是可以在伺服器上使用它們。在這個程式碼範例中，存取權杖會儲存在資料庫中 2 分鐘的時間。2 分鐘後，會將權杖從資料庫清除，並會提示使用者重新驗證。在變更實作的此時間間隔前，請考慮在資料庫中存取權杖的儲存時間超過 2 分鐘的相關安全性風險。
 
 
-## 步驟 1 - 開始通訊端並開啟快顯視窗
+## <a name="step-1---start-socket-and-open-a-pop-up-window"></a>步驟 1 - 開始通訊端並開啟快顯視窗
 
 執行此程式碼範例時，工作窗格增益集會顯示在 Office 中。當使用者選擇登入的 OAuth 提供者時，增益集會先建立通訊端。這個範例會使用通訊端，來提供良好的增益集使用者經驗。增益集使用通訊端，與使用者通訊驗證成功或失敗。藉由使用通訊端，可輕鬆更新增益集主頁面的驗證狀態，而且不需使用者互動或輪詢。下列取自 routes/connect.js 的程式碼區段，會示範如何啟動通訊端。通訊端使用  **decodedNodeCookie** 來命名，這是增益集的工作階段 ID。這個程式碼範例會使用 [socket.io](http://socket.io/) 來建立通訊端。
 
@@ -70,7 +70,7 @@ onclick="window.open('/connect/azure/#{sessionID}', 'AuthPopup', 'width=500,heig
 ```
 
 
-## 步驟 2 和 3 - 啟動驗證流程並顯示登入頁面
+## <a name="steps-2-&amp;-3---start-the-authentication-flow-and-show-the-sign-in-page"></a>步驟 2 和 3 - 啟動驗證流程並顯示登入頁面
 
 增益集必須啟動驗證流程。下列程式碼區段使用 Passport OAuth 程式庫。啟動驗證流程時，請確定您傳遞 OAuth 提供者的授權 URL 和增益集的工作階段 ID。增益集的工作階段 ID 必須使用狀態參數傳遞。快顯視窗現在會顯示 OAuth 提供者的登入頁面，讓使用者可以登入。
 
@@ -84,7 +84,7 @@ router.get('/azure/:sessionID', function(req, res, next) {
 ```
 
 
-## 步驟 4、5 和 6 - 使用者登入和 web 伺服器收到權杖
+## <a name="steps-4,-5-&amp;-6---user-signs-in-and-web-server-receives-tokens"></a>步驟 4、5 和 6 - 使用者登入和 web 伺服器收到權杖
 
  成功登入後，存取權杖、重新整理權杖和狀態參數會傳回至增益集。狀態參數包含的工作階段 ID，是用來將驗證狀態資訊傳送至步驟 7 中的通訊端。下列取自 app.js 的程式碼區段可儲存資料庫中的存取權杖。
 
@@ -101,7 +101,7 @@ router.get('/azure/:sessionID', function(req, res, next) {
 ```
 
 
-## 步驟 7 - 顯示增益集 UI 中的驗證資訊
+## <a name="step-7---show-authentication-information-in-the-add-in's-ui"></a>步驟 7 - 顯示增益集 UI 中的驗證資訊
 
 下列取自 connect.js 的程式碼區段可將增益集 UI 更新為驗證狀態資訊。增益集 UI 會使用步驟 1 中建立的通訊端進行更新。
 
@@ -114,7 +114,7 @@ router.get('/azure/:sessionID', function(req, res, next) {
 ```
 
 
-## 其他資源
+## <a name="additional-resources"></a>其他資源
 <a name="bk_addresources"> </a>
 
 

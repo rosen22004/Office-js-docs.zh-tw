@@ -1,5 +1,5 @@
 
-# 在 Outlook 中新增及移除撰寫格式項目的附件
+# <a name="add-and-remove-attachments-to-an-item-in-a-compose-form-in-outlook"></a>在 Outlook 中新增及移除撰寫格式項目的附件
 
 您可以使用 [addFileAttachmentAsync](../../reference/outlook/Office.context.mailbox.item.md) 和 [addItemAttachmentAsync](../../reference/outlook/Office.context.mailbox.item.md) 方法，分別將檔案和 Outlook 項目附加到使用者撰寫的項目。兩者都是非同步方法，這表示不需等到新增附件動作完成，便可以繼續執行。根據原始位置以及要新增的附件大小，新增附件非同步呼叫可能需要一段時間才能完成。如果有仰賴動作完成的工作，您應該在回撥方法中執行這些工作。這個回撥方法是選擇性的，並且是在附件上載完成時叫用。回撥方法需要 [AsyncResult](http://dev.outlook.com/reference/add-ins/simple-types.md) 物件當做輸出參數，從新增附件動作提供任何狀態、錯誤和傳回值。如果回撥需要任何額外的參數，您可以在選擇性的 _options.aysncContext_ 參數中指定這些字元。_options.asyncContext_ 可以是回撥方法所預期的任何類型。
 
@@ -18,7 +18,7 @@
  >**附註：**最佳作法是，唯有當相同增益集已在相同的工作階段中新增該附件時，您才應該使用附件識別碼來移除附件。在 Outlook Web App 和 OWA for Devices 中，附件識別碼只有在相同工作階段內才會有效。當使用者關閉增益集時，工作階段會結束，或如果使用者開始在內嵌表單進行撰寫，接下來會跳出內嵌表單，以便在個別視窗中繼續。
 
 
-## 附加檔案
+## <a name="attaching-a-file"></a>附加檔案
 
 您可以透過使用 **addFileAttachmentAsync** 方法並指定檔案的 URI，在撰寫表單中將檔案附加到郵件或約會。如果檔案受到保護，則您可以併入適當的識別或驗證權杖，作為 URI 查詢字串參數。Exchange 會對 URI 進行呼叫以取得附件，而保護檔案的 Web 服務將需要使用權杖作為驗證方法。
 
@@ -68,7 +68,7 @@ function write(message){
 ```
 
 
-## 附加 Outlook 項目
+## <a name="attaching-an-outlook-item"></a>附加 Outlook 項目
 
 您可以藉由指定項目的 Exchange Web 服務 (EWS) 識別碼，並使用 **addItemAttachmentAsync** 方法，將 Outlook 項目 (例如，電子郵件、行事曆或連絡人項目) 附加到撰寫表單的郵件或約會中。您也可以使用 [mailbox.makeEwsRequestAsync](../../reference/outlook/Office.context.mailbox.md) 方法，並存取 EWS 作業 [FindItem](http://msdn.microsoft.com/en-us/library/ebad6aae-16e7-44de-ae63-a95b24539729%28Office.15%29.aspx)，來取得使用者信箱中電子郵件、行事曆、連絡人或工作項目的 EWS 識別碼。[Item.itemId](http://dev.outlook.com/reference/add-ins/Office.context.mailbox.item.md) 屬性也會在讀取表單中提供現有項目的 EWS 識別碼。
 
@@ -108,7 +108,7 @@ function addItemAttachment(ID) {
  >**附註：**您可以使用撰寫增益集，在 Outlook Web App 或裝置用 OWA 中附加週期性約會的執行個體。不過，在支援的 Outlook 豐富型用戶端中，嘗試附加執行個體會造成附加週期性序列 (主要約會)。
 
 
-## 移除附件
+## <a name="removing-an-attachment"></a>移除附件
 
 
 您可以藉由指定相對應的附件識別碼，並使用 [removeAttachmentAsync](../../reference/outlook/Office.context.mailbox.item.md) 方法，從撰寫表單的郵件或約會項目中移除檔案或項目附件。您僅應該移除相同增益集在相同工作階段中加入的附件。您應該要確定附件識別碼對應到有效的附件，否則方法會傳回錯誤。類似於 **addFileAttachmentAsync** 和 **addItemAttachmentAsync** 方法，**removeAttachmentAsync** 是非同步方法。您應該提供回撥方法，以使用 **AsyncResult** 輸出參數物件來檢查狀態和任何錯誤。您也可以利用選擇性 **asyncContext** 參數 (也就是機碼值組的 JSON 物件) 傳遞任何其他參數至回撥方法。
@@ -146,7 +146,7 @@ function removeAttachment(ID) {
 ```
 
 
-## 加入和移除附件的提示
+## <a name="tips-for-adding-and-removing-attachments"></a>加入和移除附件的提示
 
 
 如果您的撰寫增益集會加入和移除附件，請建構程式碼，以便將有效的附件識別碼傳遞給 remove-attachment 呼叫，並處理 **AsyncResult.error** 傳回 **InvalidAttachmentId** 時的情況。根據附件的位置及大小，附加檔案或項目可能需要一些時間才能完成。下列範例包含對 **addFileAttachmentAsync**、`write` 和 **removeAttachmentAsync** 的呼叫。您可能會認為呼叫會依序一個接著一個執行。
@@ -288,7 +288,7 @@ function write(message){
 請注意，**removeAttachmentAsync** 的回撥會為 **addFileAttachmentAsync** 回撥內形成巢狀。因為 **addFileAttachmentAsync** 和 **removeAttachmentAsync** 為非同步，**addFileAttachmentAsync** 的回撥中的最後一行可以在 **removeAttachmentAsync** 的回撥完成之前便執行。
 
 
-## 其他資源
+## <a name="additional-resources"></a>其他資源
 
 
 

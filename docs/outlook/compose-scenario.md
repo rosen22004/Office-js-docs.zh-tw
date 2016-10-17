@@ -1,5 +1,5 @@
 
-# 建立撰寫格式的 Outlook 增益集
+# <a name="create-outlook-add-ins-for-compose-forms"></a>建立撰寫格式的 Outlook 增益集
 
 自 Office 增益集資訊清單的 1.1 版結構描述和 1.1 版的 office.js 起，您可以建立撰寫增益集，也就是撰寫表單中啟動的 Outlook 增益集。相對於讀取增益集 (當使用者在檢視郵件或約會時，在讀取模式中啟動的 Outlook 增益集)，撰寫增益集在下列使用者案例中可供使用︰
 
@@ -8,7 +8,7 @@
     
 - 檢視或編輯現有的約會，或使用者為其是召集人的會議項目。
     
-     >**附註**  如果使用者環境為 Outlook 2013 和 Exchange 2013 RTM 版本，並且正在檢視由使用者安排的會議項目，使用者可以使用讀取增益集。 在相同的案例中，從 Office 2013 SP1 版本開始已變更為，僅撰寫增益集可以啟動且可以使用。
+     >**附註**  如果使用者環境為 Outlook 2013 和 Exchange 2013 RTM 版本，並且正在檢視由使用者安排的會議項目，使用者可以使用讀取增益集。在相同的案例中，從 Office 2013 SP1 版本開始已變更為，僅撰寫增益集可以啟動且可以使用。
 - 撰寫內嵌回應郵件，或在個別撰寫表單中回覆郵件。
     
 - 編輯會議要求或會議項目的回覆 (**接受**、**暫訂**，或**拒絕**)。
@@ -27,13 +27,13 @@
 ![已針對撰寫項目啟用範本郵件應用程式](../../images/mod_off15_MailApps_TemplatesAppSelectionPane.png)
 
 
-## 可在撰寫模式中使用的增益集類型
+## <a name="types-of-add-ins-available-in-compose-mode"></a>可在撰寫模式中使用的增益集類型
 
 
 撰寫增益集實做為 [Outlook 的增益集命令](../outlook/add-in-commands-for-outlook.md)。
 
 
-## 可用來撰寫增益集的 API 功能
+## <a name="api-features-available-to-compose-add-ins"></a>可用來撰寫增益集的 API 功能
 
 
 
@@ -56,7 +56,7 @@
 - [Outlook-Power-Hour_Code-Samples](https://github.com/OfficeDev/Outlook-Power-Hour-Code-Samples):  `ComposeAppDemo`
     
 
-## 其他資源
+## <a name="additional-resources"></a>其他資源
 
 
 

@@ -1,10 +1,10 @@
 
-# EventType 列舉
-指定引發的事件種類。由 an **EventName**_EventArgs_ 物件的  **type** 屬性所傳回。
+# <a name="eventtype-enumeration"></a>EventType 列舉
+指定引發的事件種類。由 _EventName_**EventArgs** 物件的 **type** 屬性所傳回。
 
 |||
 |:-----|:-----|
-|**主機︰**|Access、Excel、PowerPoint、Project、Word|
+|**主應用程式︰**|Access、Excel、PowerPoint、Project、Word|
 |**上次變更於 Selection**|1.1|
 
 ```js
@@ -12,7 +12,7 @@ Office.EventType
 ```
 
 
-## 成員
+## <a name="members"></a>成員
 
 
 **值**
@@ -29,13 +29,13 @@ Office.EventType
 |Office.EventType.DataNodeReplaced|"nodeReplaced"|已引發 [CustomXmlPart.dataNodeReplaced](../../reference/shared/customxmlpart.datanodereplaced.event.md) 事件。|
 |Office.EventType.SettingsChanged|"settingsChanged"|已引發 [Settings.settingsChanged](../../reference/shared/settings.settingschangedevent.md) 事件。|
 
-## 備註
+## <a name="remarks"></a>備註
 
 
  >**附註**：Project 的增益集支援  **Office.EventType.ResourceSelectionChanged**、 **Office.EventType.TaskSelectionChanged** 和  **Office.EventType.ViewSelectionChanged** 事件類型。
 
 
-## 支援詳細資料
+## <a name="support-details"></a>支援詳細資料
 
 
 下列矩陣中的大寫 Y，表示在相對應的 Office 主應用程式中支援此列舉。空白儲存格表示 Office 主應用程式不支援此列舉。
@@ -59,7 +59,7 @@ Office.EventType
 |**文件庫**|Office.js|
 |**命名空間**|Office|
 
-## 支援歷程記錄
+## <a name="support-history"></a>支援歷程記錄
 
 
 

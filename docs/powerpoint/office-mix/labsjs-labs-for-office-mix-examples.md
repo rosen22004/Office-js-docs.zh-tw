@@ -1,11 +1,11 @@
 
-# Office Mix 的 LabsJS 實驗室範例
+# <a name="labsjs-labs-for-office-mix-examples"></a>Office Mix 的 LabsJS 實驗室範例
 
 
 
 若要了解一般情況下 Office Mix 的能力，以及 LabsJS 實驗室的特殊實作，[Office Mix 組件庫](https://mix.office.com/Gallery)是重要的資源。組件庫包含數個在 Office Mix 範例中實作的實驗室。
 
-## 探索 LabsJS 範例
+## <a name="explore-the-labsjs-examples"></a>探索 LabsJS 範例
 
 [Office Mixf 組件庫](https://mix.office.com/Gallery)的下列 Office Mix 執行個體包含實驗室︰
 
@@ -17,7 +17,7 @@
 - [程式碼搜尋](https://mix.office.com/watch/q4tnp5au9mbo)
     
 
-## 其他資源
+## <a name="additional-resources"></a>其他資源
 
 
 

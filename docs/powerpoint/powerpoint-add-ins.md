@@ -1,12 +1,12 @@
 
-# 建立 PowerPoint 的內容和工作窗格增益集
+# <a name="create-content-and-task-pane-add-ins-for-powerpoint"></a>建立 PowerPoint 的內容和工作窗格增益集
 
 文章中的程式碼範例會顯示開發 PowerPoint 內容增益集的一些基本工作。為了顯示資訊，這些範例取決於 Visual StudioOffice 增益集專案範本包含的 `app.showNotification` 函式。如果您不使用 Visual Studio 開發增益集，您將需要使用自己的程式碼取代 `showNotification` 函式。其中幾個範例也取決於這個 `globals` 物件 (在這些函式的範圍外部宣告)︰`var globals = {activeViewHandler:0, firstSlideId:0};`
 
 這些程式碼範例需要您的專案[參考 Office.js 1.1 版程式庫或更新版本](../../docs/develop/referencing-the-javascript-api-for-office-library-from-its-cdn.md)。
 
 
-## 偵測簡報的使用中檢視並處理 ActiveViewChanged 事件
+## <a name="detect-the-presentation's-active-view-and-handle-the-activeviewchanged-event"></a>偵測簡報的使用中檢視並處理 ActiveViewChanged 事件
 
 `getFileView` 函式呼叫 [Document.getActiveViewAsync](../../reference/shared/document.getactiveviewasync.md) 方法以傳回簡報的目前檢視為「編輯」(您可在其中編輯投影片的任何檢視，例如**標準**或**大綱模式**) 或「讀取」(**投影片放映**或**讀取檢視**) 檢視。
 
@@ -49,7 +49,7 @@ function registerActiveViewChanged() {
 ```
 
 
-## 取得簡報的 URL
+## <a name="get-the-url-of-the-presentation"></a>取得簡報的 URL
 
 `getFileUrl` 函式呼叫 [Document.getFileProperties](../../reference/shared/document.getfilepropertiesasync.md) 方法來取得簡報檔案的 URL。
 
@@ -70,7 +70,7 @@ function getFileUrl() {
 ```
 
 
-## 導覽至簡報中的特定投影片
+## <a name="navigate-to-a-particular-slide-in-the-presentation"></a>導覽至簡報中的特定投影片
 
 `getSelectedRange` 函式呼叫 [Document.getSelectedDataAsync](../../reference/shared/document.getselecteddataasync.md) 方法來取得 `asyncResult.value` 傳回的 JSON 物件，其包含名為「投影片」的陣列，其中包含投影片選定範圍的識別碼、標題和索引 (或只是目前的投影片)。它也會將選取範圍中第一張投影片的識別碼儲存至全域變數。
 
@@ -111,7 +111,7 @@ function goToFirstSlide() {
 ```
 
 
-## 在簡報中的投影片之間導覽
+## <a name="navigate-between-slides-in-the-presentation"></a>在簡報中的投影片之間導覽
 
 `goToSlideByIndex` 函式呼叫 **Document.goToByIdAsync** 方法以導覽至簡報中的下一張投影片。
 
@@ -137,11 +137,11 @@ function goToSlideByIndex() {
 
 
 
-## 其他資源
+## <a name="additional-resources"></a>其他資源
 
 - [如何依據內容和工作窗格增益集的文件來儲存增益集狀態和設定](../../docs/develop/persisting-add-in-state-and-settings.md#how-to-save-add-in-state-and-settings-per-document-for-content-and-task-pane-add-ins)
 
-- [在文件或試算表中的作用選取範圍內讀取和寫入資料。](../../docs/develop/read-and-write-data-to-the-active-selection-in-a-document-or-spreadsheet.md)
+- [在文件或試算表中的作用選取範圍內讀取和寫入資料](../../docs/develop/read-and-write-data-to-the-active-selection-in-a-document-or-spreadsheet.md)
     
 - [從 PowerPoint 或 Word 增益集中，取得整份文件](../../docs/develop/get-the-whole-document-from-an-add-in-for-powerpoint-or-word.md)
     

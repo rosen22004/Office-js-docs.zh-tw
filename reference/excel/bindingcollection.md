@@ -1,48 +1,48 @@
-﻿# BindingCollection 物件 (適用於 Excel 的 JavaScript API)
+# <a name="bindingcollection-object-(javascript-api-for-excel)"></a>BindingCollection 物件 (適用於 Excel 的 JavaScript API)
 
 代表屬於活頁簿一部份的所有 binding 物件集合。
 
-## 屬性
+## <a name="properties"></a>屬性
 
-| 屬性	     | 類型	   |說明
+| 屬性	     | 類型	   |描述
 |:---------------|:--------|:----------|
 |Count|int|傳回集合中的繫結數目。唯讀。|
-|項目|[Binding[]](binding.md)|Binding 物件的集合。唯讀。|
+|items|[Binding[]](binding.md)|Binding 物件的集合。唯讀。|
 
-_請參閱屬性存取[範例。](#範例)_
+_請參閱屬性存取[範例。](#property-access-examples)_
 
-## 關聯性
+## <a name="relationships"></a>關聯性
 無
 
 
-## 方法
+## <a name="methods"></a>方法
 
-| 方法           | 傳回類型    |說明|
+| 方法           | 傳回類型    |描述|
 |:---------------|:--------|:----------|
 |[getItem(id: string)](#getitemid-string)|[Binding](binding.md)|依 ID 取得 binding 物件。|
 |[getItemAt(index: number)](#getitematindex-number)|[Binding](binding.md)|根據繫結在項目陣列中的位置，取得 binding 物件。|
 |[load(param: object)](#loadparam-object)|void|以參數中指定的屬性和物件值填滿 JavaScript 層中建立的 Proxy 物件。|
 
-## 方法詳細資料
+## <a name="method-details"></a>方法詳細資料
 
 
-### getItem(id: string)
+### <a name="getitem(id:-string)"></a>getItem(id: string)
 依 ID 取得 binding 物件。
 
-#### 語法
+#### <a name="syntax"></a>語法
 ```js
 bindingCollectionObject.getItem(id);
 ```
 
-#### 參數
-| 參數	    | 類型	   |說明|
+#### <a name="parameters"></a>參數
+| 參數	    | 類型	   |描述|
 |:---------------|:--------|:----------|
 |id|string|要擷取之 binding 物件的 ID。|
 
-#### 傳回
+#### <a name="returns"></a>傳回
 [Binding](binding.md)
 
-#### 範例
+#### <a name="examples"></a>範例
 
 建立表格繫結，以監視表格中的資料變更。當資料變更時，表格的背景色彩會變更為橙色。
 
@@ -100,7 +100,7 @@ bindingCollectionObject.getItem(id);
 
 
 
-#### 範例
+#### <a name="examples"></a>範例
 ```js
 Excel.run(function (ctx) { 
     var lastPosition = ctx.workbook.bindings.count - 1;
@@ -118,23 +118,23 @@ Excel.run(function (ctx) {
 ```
 
 
-### getItemAt(index: number)
+### <a name="getitemat(index:-number)"></a>getItemAt(index: number)
 根據繫結在項目陣列中的位置，取得 binding 物件。
 
-#### 語法
+#### <a name="syntax"></a>語法
 ```js
 bindingCollectionObject.getItemAt(index);
 ```
 
-#### 參數
-| 參數	    | 類型	   |說明|
+#### <a name="parameters"></a>參數
+| 參數	    | 類型	   |描述|
 |:---------------|:--------|:----------|
 |index|number|要擷取之物件的索引值。以 0 開始編製索引。|
 
-#### 傳回
+#### <a name="returns"></a>傳回
 [Binding](binding.md)
 
-#### 範例
+#### <a name="examples"></a>範例
 ```js
 Excel.run(function (ctx) { 
     var lastPosition = ctx.workbook.bindings.count - 1;
@@ -152,22 +152,22 @@ Excel.run(function (ctx) {
 ```
 
 
-### load(param: object)
+### <a name="load(param:-object)"></a>load(param: object)
 以參數中指定的屬性和物件值填滿 JavaScript 層中建立的 Proxy 物件。
 
-#### 語法
+#### <a name="syntax"></a>語法
 ```js
 object.load(param);
 ```
 
-#### 參數
-| 參數	    | 類型	   |說明|
+#### <a name="parameters"></a>參數
+| 參數	    | 類型	   |描述|
 |:---------------|:--------|:----------|
 |param|物件|選用。接受參數與關係名稱，做為分隔字串或陣列。或者接受 [loadOption](loadoption.md) 物件。|
 
-#### 傳回
+#### <a name="returns"></a>傳回
 void
-### 屬性存取範例
+### <a name="property-access-examples"></a>屬性存取範例
 
 ```js
 Excel.run(function (ctx) { 

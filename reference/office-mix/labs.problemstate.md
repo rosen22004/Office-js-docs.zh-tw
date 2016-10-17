@@ -1,5 +1,5 @@
 
-# Labs.ProblemState
+# <a name="labs.problemstate"></a>Labs.ProblemState
 
  _**適用於︰**Office 的應用程式 | Office 增益集 | Office Mix | PowerPoint_
 
@@ -10,7 +10,7 @@ enum ProblemState
 ```
 
 
-## 列舉值
+## <a name="enumeration-values"></a>列舉值
 
 
 |||

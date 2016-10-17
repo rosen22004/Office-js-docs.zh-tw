@@ -1,46 +1,46 @@
-﻿# ContentControlCollection 物件 (適用於 Word 的 JavaScript API)
+# <a name="contentcontrolcollection-object-(javascript-api-for-word)"></a>ContentControlCollection 物件 (適用於 Word 的 JavaScript API)
 
 包含 ContentControl 物件的集合。內容控制項是指文件中具有界限且可能具有標籤的區域，這些區域會做為特定內容類型的容器。個別的內容控制項可能含有內容，例如影像、表格或格式化文字的段落。目前僅支援 RTF 內容控制項。
 
-_適用版本：Word 2016、Word for iPad、Word for Mac_
+_適用於：Word 2016、Word for iPad、Word for Mac、Word Online_
 
-## 屬性
-| 屬性	     | 類型	   |說明
+## <a name="properties"></a>屬性
+| 屬性	     | 類型	   |描述
 |:---------------|:--------|:----------|
 |項目|[ContentControl[]](contentcontrol.md)|ContentControl 物件的集合。唯讀。|
 
-## 關聯性
+## <a name="relationships"></a>關聯性
 無
 
 
-## 方法
+## <a name="methods"></a>方法
 
-| 方法           | 傳回類型    |說明|
+| 方法           | 傳回類型    |描述|
 |:---------------|:--------|:----------|
 |[getById(id: number)](#getbyidid-number)|[ContentControl](contentcontrol.md)|依識別碼取得內容控制項。|
 |[getByTag(tag: string)](#getbytagtag-string)|[ContentControlCollection](contentcontrolcollection.md)|取得具有指定之標記的內容控制項。|
 |[getByTitle(title: string)](#getbytitletitle-string)|[ContentControlCollection](contentcontrolcollection.md)|取得具有指定之標題的內容控制項。|
 |[load(param: object)](#loadparam-object)|void|以參數中指定的屬性和物件值填滿 JavaScript 層中建立的 Proxy 物件。|
 
-## 方法詳細資料
+## <a name="method-details"></a>方法詳細資料
 
-### getById(id: number)
+### <a name="getbyid(id:-number)"></a>getById(id: number)
 依識別碼取得內容控制項。
 
-#### 語法
+#### <a name="syntax"></a>語法
 ```js
 contentControlCollectionObject.getById(id);
 ```
 
-#### 參數
-| 參數	    | 類型	   |說明|
+#### <a name="parameters"></a>參數
+| 參數	    | 類型	   |描述|
 |:---------------|:--------|:----------|
 |id|number|必要。內容控制項識別碼。|
 
-#### 傳回
+#### <a name="returns"></a>傳回
 [ContentControl](contentcontrol.md)
 
-#### 範例
+#### <a name="examples"></a>範例
 ```js
 // Run a batch operation against the Word object model.
 Word.run(function (context) {
@@ -65,23 +65,23 @@ Word.run(function (context) {
 });
 ```
 
-### getByTag(tag: string)
+### <a name="getbytag(tag:-string)"></a>getByTag(tag: string)
 取得具有指定之標記的內容控制項。
 
-#### 語法
+#### <a name="syntax"></a>語法
 ```js
 contentControlCollectionObject.getByTag(tag);
 ```
 
-#### 參數
-| 參數	    | 類型	   |說明|
+#### <a name="parameters"></a>參數
+| 參數	    | 類型	   |描述|
 |:---------------|:--------|:----------|
 |Tag|string|必要。內容控制項的標記設定。|
 
-#### 傳回
+#### <a name="returns"></a>傳回
 [ContentControlCollection](contentcontrolcollection.md)
 
-#### 範例
+#### <a name="examples"></a>範例
 ```js
 // Run a batch operation against the Word object model.
 Word.run(function (context) {
@@ -111,27 +111,27 @@ Word.run(function (context) {
 });
 ```
 
-#### 其他資訊
+#### <a name="additional-information"></a>其他資訊
 The [Word-Add-in-DocumentAssembly][contentControls.getByTag] 範例提供使用 getByTag 方法的另一個範例。
 
 
-### getByTitle(title: string)
+### <a name="getbytitle(title:-string)"></a>getByTitle(title: string)
 取得具有指定之標題的內容控制項。
 
-#### 語法
+#### <a name="syntax"></a>語法
 ```js
 contentControlCollectionObject.getByTitle(title);
 ```
 
-#### 參數
-| 參數	    | 類型	   |說明|
+#### <a name="parameters"></a>參數
+| 參數	    | 類型	   |描述|
 |:---------------|:--------|:----------|
 |標題|string|必要。內容控制項的標題。|
 
-#### 傳回
+#### <a name="returns"></a>傳回
 [ContentControlCollection](contentcontrolcollection.md)
 
-#### 範例
+#### <a name="examples"></a>範例
 ```js
 // Run a batch operation against the Word object model.
 Word.run(function (context) {
@@ -161,26 +161,26 @@ Word.run(function (context) {
 });
 ```
 
-#### 其他資訊
+#### <a name="additional-information"></a>其他資訊
 [Word-Add-in-DocumentAssembly][contentControls.getByTitle] 範例提供使用 getByTitle 方法的另一個範例。
 
-### load(param: object)
+### <a name="load(param:-object)"></a>load(param: object)
 以參數中指定的屬性和物件值填滿 JavaScript 層中建立的 Proxy 物件。
 
-#### 語法
+#### <a name="syntax"></a>語法
 ```js
 object.load(param);
 ```
 
-#### 參數
-| 參數	    | 類型	   |說明|
+#### <a name="parameters"></a>參數
+| 參數	    | 類型	   |描述|
 |:---------------|:--------|:----------|
 |param|物件|選用。接受參數與關聯性名稱，做為分隔字串或陣列。或者提供 [loadOption](loadoption.md) 物件。|
 
-#### 傳回
+#### <a name="returns"></a>傳回
 void
 
-#### 範例
+#### <a name="examples"></a>範例
 ```js
 // Run a batch operation against the Word object model.
 Word.run(function (context) {
@@ -248,7 +248,7 @@ Word.run(function (context) {
 
 [Silly stories](https://aka.ms/sillystorywordaddin) 增益集範例示範如何使用 **load** 方法，搭配 **tag** 和 **title** 屬性，載入內容控制項集合。
 
-## 支援詳細資料
+## <a name="support-details"></a>支援詳細資料
 在執行階段檢查使用[需求集](../office-add-in-requirement-sets.md)以確認您的應用程式受到 Word 主應用程式版本的支援。如需有關 Office 主應用程式及伺服器需求的詳細資訊，請參閱[執行 Office 增益集的需求](../../docs/overview/requirements-for-running-office-add-ins.md)。
 
 

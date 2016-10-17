@@ -1,5 +1,5 @@
 
-# Labs.getConnectionInfo
+# <a name="labs.getconnectioninfo"></a>Labs.getConnectionInfo
 
  _**適用於︰**Office 的應用程式 | Office 增益集 | Office Mix | PowerPoint_
 
@@ -10,12 +10,12 @@ function getConnectionInfo(): Core.IConnectionResponse
 ```
 
 
-## 參數
+## <a name="parameters"></a>參數
 
 無
 
 
-## 備註
+## <a name="remarks"></a>備註
 
 在 [Labs.Core.IConnectionResponse](../../reference/office-mix/labs.core.iconnectionresponse.md) 介面上使用初始化資訊可提供組態資訊。
 

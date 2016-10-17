@@ -1,5 +1,5 @@
 
-# Labs.Core.GetActions.IGetComponentActionsOptions
+# <a name="labs.core.getactions.igetcomponentactionsoptions"></a>Labs.Core.GetActions.IGetComponentActionsOptions
 
  _**適用於︰**Office 的應用程式 | Office 增益集 | Office Mix | PowerPoint_
 
@@ -10,7 +10,7 @@ interface IGetComponentActionsOptions extends Core.IGetActionOptions
 ```
 
 
-## 屬性
+## <a name="properties"></a>屬性
 
 
 |||

@@ -1,10 +1,10 @@
 
-# Office.cast.item 屬性
+# <a name="office.cast.item-property"></a>Office.cast.item 屬性
 提供撰寫或讀取模式訊息和約會專用的 IntelliSense。
 
 |||
 |:-----|:-----|
-|**主機︰**|Outlook|
+|**主應用程式︰**|Outlook|
 |**可用於[需求集合](../../docs/overview/specify-office-hosts-and-api-requirements.md)**|信箱|
 |**上次變更於**|1.0|
 
@@ -47,12 +47,12 @@ Office.cast.item.toMessage(Office.context.mailbox.item);
 ```
 
 
-## 傳回值
+## <a name="return-value"></a>傳回值
 
 一組方法，可讓您為 Outlook 增益集選取適當的 IntelliSense。
 
 
-## 備註
+## <a name="remarks"></a>備註
 
 這個屬性及其方法僅支援 IntelliSense 在 Visual Studio 上開發 Outlook 增益集。對於其他開發工具沒有任何會效用。
 
@@ -61,7 +61,7 @@ Office.cast.item.toMessage(Office.context.mailbox.item);
 在執行階段，**Office.cast.item** 方法對 Outlook 增益集沒有任何效用。
 
 
-## 範例
+## <a name="example"></a>範例
 
 下列範例會使用  **toMessageCompose** 方法來轉換 **Office.context.mailbox.item** 屬性，因此它只會針對撰寫模式的 **Message** 物件顯示 IntelliSense。轉換之後，`message` 變數只會針對可以在撰寫模式中使用的方法和屬性顯示 IntelliSense。
 
@@ -72,14 +72,14 @@ var message = Office.cast.item.toMessageCompose(Office.context.mailbox.item);
 ```
 
 
-## 支援詳細資料
+## <a name="support-details"></a>支援詳細資料
 
 
 下列矩陣中的大寫 Y，表示在相對應的 Office 主應用程式中支援此方法。空白儲存格表示 Office 主應用程式不支援此方法。
 
 如需有關 Office 主應用程式與伺服器需求的詳細資訊，請參閱[執行 Office 增益集的需求](../../docs/overview/requirements-for-running-office-add-ins.md)。
 
-||Office for Windows desktop|Office Online (在瀏覽器中)|Mac 版 Outlook|
+||Office for Windows desktop|Office Online (在瀏覽器中)|Outlook for Mac|
 |:-----|:-----|:-----|:-----|
 |**Outlook**|Y|Y|Y|
 
@@ -91,7 +91,7 @@ var message = Office.cast.item.toMessageCompose(Office.context.mailbox.item);
 |**文件庫**|Office.js|
 |**命名空間**|Office|
 
-## 支援歷程記錄
+## <a name="support-history"></a>支援歷程記錄
 
 
 

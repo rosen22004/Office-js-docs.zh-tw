@@ -1,5 +1,5 @@
 
-# Labs.Components.IActivityComponent
+# <a name="labs.components.iactivitycomponent"></a>Labs.Components.IActivityComponent
 
  _**適用於︰**Office 的應用程式 | Office 增益集 | Office Mix | PowerPoint_
 
@@ -10,9 +10,9 @@ interface IActivityComponent extends Labs.Core.IComponent
 ```
 
 
-## 屬性
+## <a name="properties"></a>屬性
 
 
-|名稱|說明|
+|名稱|描述|
 |:-----|:-----|
 | `secure: boolean`|表示輸入元件是否安全。|

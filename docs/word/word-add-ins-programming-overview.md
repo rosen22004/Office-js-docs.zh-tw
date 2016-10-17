@@ -1,5 +1,5 @@
 
-# Word 增益集概觀
+# <a name="word-add-ins-overview"></a>Word 增益集概觀
 
 您是否要建立一個解決方案，擴充 Word 功能 - 例如，牽涉到自動化文件組件，或將 Word 文件中的資料繫結至其他資料來源以及從中存取？您可以使用 Office 增益集平台，包括 Word JavaScript API 和適用於 Office 的 JavaScript API，來擴充在 Windows 桌上型電腦、Mac 或是在雲端中執行的 Word 用戶端。
 
@@ -35,7 +35,7 @@ Word JavaScript API 可讓您的應用程式存取在 Word 文件中找到的的
 
 撰寫增益集一次，它會跨多個平台在所有版本的 Word 中執行。如需詳細資訊，請參閱 [Office 增益集主應用程式和平台可用性](https://dev.office.com/add-in-availability)。
 
-## 適用於 Word 的 JavaScript API
+## <a name="javascript-apis-for-word"></a>適用於 Word 的 JavaScript API
 
 您可以使用兩個 JavaScript API 集合與 Word 文件中的物件和中繼資料進行互動︰第一個是[適用於 Office 的 JavaScript API](https://dev.office.com/reference/add-ins/javascript-api-for-office?product=word)，它在 Office 2013 中推出。這是共用的 API - 許多物件可以在兩個或多個 Office 用戶端所裝載的增益集中使用。此 API 會廣泛地使用回呼。 
 
@@ -57,7 +57,7 @@ Word JavaScript API 可讓您的應用程式存取在 Word 文件中找到的的
 * 使用自訂 XML 組件。
 * 開啟對話方塊。
 
-## 後續步驟
+## <a name="next-steps"></a>後續步驟
 
 準備建立第一個 Word 增益集？請參閱[建立第一個 Word 增益集](word-add-ins.md)。您也可以嘗試我們的互動式[開始使用經驗](http://dev.office.com/getting-started/addins?product=Word)。使用[增益集資訊清單](../overview/add-in-manifests.md)以說明您的增益集裝載的位置以及顯示方式，並且定義權限和其他資訊。
 
@@ -65,13 +65,13 @@ Word JavaScript API 可讓您的應用程式存取在 Word 文件中找到的的
 
 開發您的增益集之後，您可以將其[發佈](../publish/publish.md)至網路共用、應用程式目錄或 Office 市集。
 
-## Word 增益集接下來是什麼？
+## <a name="what's-coming-up-for-word-add-ins?"></a>Word 增益集接下來是什麼？
 
 我們設計和開發新的 Word 增益集 API 時，我們會將其放在[開放式 API 規格](../../reference/openspec.md)頁面中，可供您提出意見反應。了解 Word JavaScript API 即將推出的新功能，並對我們的設計規格提出意見反應。
 
 您也可以在[變更記錄檔](http://dev.office.com/changelog)頁面上查看 Word JavaScript API 的新功能。
 
-## 其他資源
+## <a name="additional-resources"></a>其他資源
 
 * [Office 增益集平台概觀](../overview/office-add-ins.md)
 * [Word JavaScript API 參考資料](../../reference/word/word-add-ins-reference-overview.md)

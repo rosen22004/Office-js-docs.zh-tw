@@ -1,12 +1,12 @@
 
-# 使用任何編輯器建立 Office 增益集
+# <a name="create-an-office-add-in-using-any-editor"></a>使用任何編輯器建立 Office 增益集
 
 Office 增益集是您在 Office 應用程式內主控的 Web 應用程式。本文說明如何使用 Yeoman 產生器來提供專案建構和建置管理。`manifest.xml` 檔案會告訴 Office 應用程式增益集的所在位置與您想要顯示它的方式。Office 應用程式負責在 Office 內主控它。
 
  >**附註：**這些指示包含使用 Windows 命令提示字元的步驟，但也同樣適用於其他的 Shell 環境。 
 
 
-## Yeoman 產生器的必要條件
+## <a name="prerequisites-for-yeoman-generator"></a>Yeoman 產生器的必要條件
 
 若要執行 Yeoman Office 產生器，您需要下列項目︰
 
@@ -42,7 +42,7 @@ npm install -g bower yo generator-office gulp tsd
 ```
 
 
-## 為增益集建立預設檔案
+## <a name="create-the-default-files-for-your-add-in"></a>為增益集建立預設檔案
 
 開發 Office 增益集之前，應該先為您的專案建立資料夾，並從該處執行產生器。Yeoman 產生器會在您想要建構專案的目錄中執行。 
 
@@ -86,12 +86,12 @@ yo office
 這會為您的增益集建立結構和基本檔案。
 
 
-## 主控 Office 增益集
+## <a name="hosting-your-office-add-in"></a>主控 Office 增益集
 
 必須透過 HTTPS 提供 Office 增益集；如果是 HTTP，Office 應用程式將不會以增益集形式載入 Web 應用程式。若要在本機開發、偵錯和主控增益集，您需要一個方式在本機使用 HTTPS 建立並提供 Web 應用程式。您可以透過 gulp (在下一節說明) 建立自我主控的 HTTPS 站台，或者也可以使用 Azure。 
 
 
-### 使用自我主控的 HTTPS 站台
+### <a name="using-a-self-hosted-https-site"></a>使用自我主控的 HTTPS 站台
 
 gulp-webserver 外掛程式會建立自我主控的 HTTPS 站台。針對所產生的專案，Office 產生器會以名為 serve-static 的工作形式，將這加入 gulpfile.js。使用下列陳述式啟動自我主控的 Web 伺服器︰ 
 
@@ -103,19 +103,19 @@ gulp serve-static
 這會在 https://localhost:8443 啟動 HTTPS 伺服器。
 
 
-## 開發 Office 增益集
+## <a name="develop-your-office-add-in"></a>開發 Office 增益集
 
 您可以使用任何文字編輯器為自訂的 Office 增益集開發檔案。
 
 
-### JavaScript 專案支援
+### <a name="javascript-project-support"></a>JavaScript 專案支援
 
 建立您的專案時，Office 產生器會建立 jsconfig.json 檔案。這個檔案可供您用來推斷專案內的所有 JavaScript 檔案，並讓您不須併入重複的 /// <reference path="../App.js" /> 程式碼區塊。
 
 在 [JavaScript 語言](https://code.visualstudio.com/docs/languages/javascript#_javascript-projects-jsconfigjson) 頁面上深入了解 jsconfig.json 檔案。
 
 
-### JavaScript Intellisense 支援
+### <a name="javascript-intellisense-support"></a>JavaScript Intellisense 支援
 
 此外，即使是撰寫一般 JavaScript，您可以使用 TypeScript 類型定義檔案 (`*.d.ts`) 來提供額外的 IntelliSense 支援。Office 產生器會加入 `tsd.json` 檔案至建立的檔案，其中包含您所選取之專案類型所使用的所有協力廠商程式庫的參考。
 
@@ -129,13 +129,13 @@ tsd install
 ```
 
 
-### 建立 Hello World Office 增益集
+### <a name="create-a-hello-world-office-add-in"></a>建立 Hello World Office 增益集
 
 
 本範例中，我們要建立 Hello World 增益集。增益集的 UI 是透過可選擇性地提供 JavaScript 程式設計邏輯的 HTML 檔案提供。 
 
 
-### 為 Hello World 增益集建立檔案
+### <a name="to-create-the-files-for-a-hello-world-add-in"></a>為 Hello World 增益集建立檔案
 
 
 - 在您的專案資料夾，移至 _[專案資料夾]/app/home_ (在本範例中，它是 myHelloWorldaddin/app/home)，開啟 home.html，並將現有程式碼以下列程式碼取代，這可提供顯示增益集 UI 所需最基本的一組 HTML 標籤。
@@ -179,7 +179,7 @@ tsd install
     
 - 然後，回到父專案資料夾，並確定名為 manifest-myHelloWorldaddin.xml 的 XML 檔案包含下列 XML 程式碼。
     
-     >**重要事項**  `<id>` 標記中的值是 yeoman 產生器產生專案時所建立的 GUID。 請勿變更 Yeoman 產生器為您增益集所建立的 GUID。如果主應用程式是 Azure，`SourceLocation` 值會是類似 _https:// [name-of-your-web-app].azurewebsites.net/[path-to-add-in]_ 的 URL。 如果您使用自我主控的選項，如下列範例所示，就會是 _https://localhost:8443 / [path-to-add-in]_。
+     >**重要事項**  `<id>` 標記中的值是 yeoman 產生器產生專案時所建立的 GUID。請勿變更 Yeoman 產生器為您增益集所建立的 GUID。如果主應用程式是 Azure，`SourceLocation` 值會是類似 _https:// [name-of-your-web-app].azurewebsites.net/[path-to-add-in]_ 的 URL。如果您使用自我主控的選項，如下列範例所示，就會是 _https://localhost:8443 / [path-to-add-in]_。
 
 ```XML
      <?xml version="1.0" encoding="utf-8"?> 
@@ -208,7 +208,7 @@ tsd install
 ```
 
 
-### 在本機執行增益集
+### <a name="running-the-add-in-locally"></a>在本機執行增益集
 
 
 若要在本機測試增益集，請開啟您的瀏覽器，並輸入您的 home.html 檔案的 URL。這可以是在 Web 伺服器或自我主控的 HTTPS 站台上。如果您在本機主控它，只需在您的瀏覽器輸入該 URL。在我們的範例中，它是 `https://localhost:8443/app/home/home.html`。 
@@ -219,7 +219,7 @@ tsd install
  >**附註：**產生的增益集隨附自我簽署的憑證及金鑰；請將它們新增到您的憑證信任授權單位清單，使得瀏覽器不會發出憑證警告。如果您想要使用自己的自我簽署憑證，請參閱 [gulp-webserver](https://www.npmjs.com/package/gulp-webserver) 文件。如需如何信任 OS X Yosemite 中的憑證的指示，請參閱[此 KB 文章 #PH18677](https://support.apple.com/kb/PH18677?locale=en_US)。
 
 
-## 安裝增益集進行測試
+## <a name="install-the-add-in-for-testing"></a>安裝增益集進行測試
 
 您可以使用側載來安裝增益集以進行測試︰
 
@@ -228,10 +228,10 @@ tsd install
     
 - [側載 Outlook 增益集來進行測試](../outlook/testing-and-tips.md)
     
-或者，您可以發佈增益集至目錄或網路共用，並以一般使用者的方式安裝它。 如需詳細資訊，請參閱[建立工作窗格和內容增益集的網路共用資料夾目錄](https://technet.microsoft.com/en-us/browser/fp123503(v=office.14))。
+或者，您可以發佈增益集至目錄或網路共用，並以一般使用者的方式安裝它。如需詳細資訊，請參閱[建立工作窗格和內容增益集的網路共用資料夾目錄](https://technet.microsoft.com/en-us/browser/fp123503(v=office.14))。
 
 
-## 偵錯 Office 增益集
+## <a name="debugging-your-office-add-in"></a>偵錯 Office 增益集
 
 偵錯增益集有不同的方式︰
 
@@ -243,7 +243,7 @@ tsd install
 
 
 
-## 其他資源
+## <a name="additional-resources"></a>其他資源
 
 
 

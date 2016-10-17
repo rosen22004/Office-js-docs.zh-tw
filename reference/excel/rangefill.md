@@ -1,46 +1,46 @@
-﻿# RangeFill 物件 (適用於 Excel 的 JavaScript API)
+# <a name="rangefill-object-(javascript-api-for-excel)"></a>RangeFill 物件 (適用於 Excel 的 JavaScript API)
 
-_適用版本：Excel 2016、Excel Online、Excel for iOS、Office 2016_
+_適用於：Excel 2016、Excel Online、Excel for iOS、Office 2016_
 
 代表 range 物件的背景。
 
-## 屬性
+## <a name="properties"></a>屬性
 
-| 屬性	     | 類型	   |說明
+| 屬性	     | 類型	   |描述
 |:---------------|:--------|:----------|
 |Color|string|代表框線色彩的 HTML 色彩代碼，顯示為 #RRGGBB 格式 (例如 "FFA500") 或具名 HTML 色彩 (例如 "orange")|
 
-_請參閱屬性存取[範例。](#範例)_
+_請參閱屬性存取[範例。](#property-access-examples)_
 
-## 關聯性
+## <a name="relationships"></a>關聯性
 無
 
 
-## 方法
+## <a name="methods"></a>方法
 
-| 方法           | 傳回類型    |說明|
+| 方法           | 傳回類型    |描述|
 |:---------------|:--------|:----------|
 |[clear()](#clear)|void|重設範圍背景。|
 |[load(param: object)](#loadparam-object)|void|以參數中指定的屬性和物件值填滿 JavaScript 層中建立的 Proxy 物件。|
 
-## 方法詳細資料
+## <a name="method-details"></a>方法詳細資料
 
 
-### clear()
+### <a name="clear()"></a>clear()
 重設範圍背景。
 
-#### 語法
+#### <a name="syntax"></a>語法
 ```js
 rangeFillObject.clear();
 ```
 
-#### 參數
+#### <a name="parameters"></a>參數
 無
 
-#### 傳回
+#### <a name="returns"></a>傳回
 void
 
-#### 範例
+#### <a name="examples"></a>範例
 
 此範例會重設範圍背景。
 
@@ -62,22 +62,22 @@ Excel.run(function (ctx) {
 ```
 
 
-### load(param: object)
+### <a name="load(param:-object)"></a>load(param: object)
 以參數中指定的屬性和物件值填滿 JavaScript 層中建立的 Proxy 物件。
 
-#### 語法
+#### <a name="syntax"></a>語法
 ```js
 object.load(param);
 ```
 
-#### 參數
-| 參數	    | 類型	   |說明|
+#### <a name="parameters"></a>參數
+| 參數	    | 類型	   |描述|
 |:---------------|:--------|:----------|
 |param|物件|選用。接受參數與關聯性名稱，做為分隔字串或陣列。或者提供 [loadOption](loadoption.md) 物件。|
 
-#### 傳回
+#### <a name="returns"></a>傳回
 void
-### 屬性存取範例
+### <a name="property-access-examples"></a>屬性存取範例
 ```js
 Excel.run(function (ctx) { 
     var sheetName = "Sheet1";

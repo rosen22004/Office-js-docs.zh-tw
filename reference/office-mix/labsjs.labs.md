@@ -1,23 +1,23 @@
 
-# LabsJS.Labs
+# <a name="labsjs.labs"></a>LabsJS.Labs
 
  _**適用於︰**Office 的應用程式 | Office 增益集 | Office Mix | PowerPoint_
 
 LabsJS.Labs 模組包含可用來建立 Office 增益集 (實驗室) 的機碼 JavaScript API 集。API 會提供實驗室開發的進入點。
 
-## LabsJS.Labs API 模組
+## <a name="labsjs.labs-api-module"></a>LabsJS.Labs API 模組
 
 Labs 模組包含下列類型︰
 
 
-### 變數
+### <a name="variables"></a>變數
 
 
 |||
 |:-----|:-----|
 |[Labs.DefaultHostBuilder](../../reference/office-mix/labs.defaulthostbuilder.md)|使用這個物件來建構預設的 [Labs.Core.ILabHost](../../reference/office-mix/labs.core.ilabhost.md) 執行個體。|
 
-### 函數
+### <a name="functions"></a>函數
 
 
 |||
@@ -34,7 +34,7 @@ Labs 模組包含下列類型︰
 |[Labs.getTimeline](../../reference/office-mix/labs.gettimeline.md)|擷取您可以用來控制主機播放程式控制項的 [Labs.Timeline](../../reference/office-mix/labs.timeline.md) 物件執行個體。|
 |[Labs.registerDeserializer](../../reference/office-mix/labs.registerdeserializer.md)|將指定的 JSON 物件還原序列化到物件。只應由元件作者使用。|
 
-### 類別
+### <a name="classes"></a>類別
 
 
 |||
@@ -47,7 +47,7 @@ Labs 模組包含下列類型︰
 |[Labs.Timeline](../../reference/office-mix/labs.timeline.md)|提供 labs.js 時刻表功能的存取。|
 |[Labs.ValueHolder](../../reference/office-mix/labs.valueholder.md)|保留和追蹤指定的實驗室值的容器物件。值可儲存在本機或伺服器上。|
 
-### 介面
+### <a name="interfaces"></a>介面
 
 
 |||
@@ -59,7 +59,7 @@ Labs 模組包含下列類型︰
   [Labs.CommandType.TakeAction](https://msdn.microsoft.com/library/office/mt599680.aspx) 命令的相關資料。|
 |[Labs.TakeActionCommandData](../../reference/office-mix/labs.takeactioncommanddata.md)|採取動作命令的相關資料。|
 
-### 列舉
+### <a name="enumerations"></a>列舉
 
 
 |||

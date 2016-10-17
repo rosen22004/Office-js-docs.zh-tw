@@ -1,57 +1,57 @@
-﻿# SectionGroup 物件 (適用於 OneNote 的 JavaScript API)
+# <a name="sectiongroup-object-(javascript-api-for-onenote)"></a>SectionGroup 物件 (適用於 OneNote 的 JavaScript API)
 
 _適用於：OneNote Online_   
 
 
-代表 OneNote 節群組。 節群組可以包含節和其他節群組。
+代表 OneNote 節群組。節群組可以包含節和其他節群組。
 
-## 屬性
+## <a name="properties"></a>屬性
 
-| 屬性	     | 類型	   |說明|意見反應|
+| 屬性	     | 類型	   |描述|意見反應|
 |:---------------|:--------|:----------|:-------|
-|clientUrl{|string|區段群組的用戶端 URL。 唯讀。|[執行](https://github.com/OfficeDev/office-js-docs/issues/new?title=OneNote-sectionGroup-clientUrl{)|
-|id|string|取得節群組的識別碼。 唯讀。|[執行](https://github.com/OfficeDev/office-js-docs/issues/new?title=OneNote-sectionGroup-id)|
-|name|string|取得節群組的名稱。 唯讀。|[執行](https://github.com/OfficeDev/office-js-docs/issues/new?title=OneNote-sectionGroup-name)|
+|clientUrl{|字串|區段群組的用戶端 URL。唯讀。|[移至](https://github.com/OfficeDev/office-js-docs/issues/new?title=OneNote-sectionGroup-clientUrl{)|
+|id|string|取得節群組的識別碼。唯讀。|[移至](https://github.com/OfficeDev/office-js-docs/issues/new?title=OneNote-sectionGroup-id)|
+|name|字串|取得節群組的名稱。唯讀。|[移至](https://github.com/OfficeDev/office-js-docs/issues/new?title=OneNote-sectionGroup-name)|
 
-_請參閱屬性存取[範例。](#範例)_
+_請參閱屬性存取[範例。](#property-access-examples)_
 
-## 關聯性
-| 關聯性 | 類型	   |說明| 意見反應|
+## <a name="relationships"></a>關聯性
+| 關聯性 | 類型	   |描述| 意見反應|
 |:---------------|:--------|:----------|:-------|
-|Notebook|[筆記本](notebook.md)|取得包含節群組的筆記本。 唯讀。|[執行](https://github.com/OfficeDev/office-js-docs/issues/new?title=OneNote-sectionGroup-notebook)|
-|parentSectionGroup|[SectionGroup](sectiongroup.md)|取得包含節群組的節群組。 如果節群組是筆記本的直接子項，則擲回 ItemNotFound。 唯讀。|[執行](https://github.com/OfficeDev/office-js-docs/issues/new?title=OneNote-sectionGroup-parentSectionGroup)|
-|parentSectionGroupOrNull|[SectionGroup](sectiongroup.md)|取得包含節群組的節群組。 如果節群組是筆記本的直接子項，則傳回 null。 唯讀。|[執行](https://github.com/OfficeDev/office-js-docs/issues/new?title=OneNote-sectionGroup-parentSectionGroupOrNull)|
-|sectionGroups|[SectionGroupCollection](sectiongroupcollection.md)|節群組中的節群組集合。 唯讀。|[執行](https://github.com/OfficeDev/office-js-docs/issues/new?title=OneNote-sectionGroup-sectionGroups)|
-|sections|[SectionCollection](sectioncollection.md)|節群組中的節集合。 唯讀。|[執行](https://github.com/OfficeDev/office-js-docs/issues/new?title=OneNote-sectionGroup-sections)|
+|notebook|[Notebook](notebook.md)|取得包含節群組的筆記本。唯讀。|[移至](https://github.com/OfficeDev/office-js-docs/issues/new?title=OneNote-sectionGroup-notebook)|
+|parentSectionGroup|[SectionGroup](sectiongroup.md)|取得包含節群組的節群組。如果節群組是筆記本的直接子項，則擲回 ItemNotFound。唯讀。|[移至](https://github.com/OfficeDev/office-js-docs/issues/new?title=OneNote-sectionGroup-parentSectionGroup)|
+|parentSectionGroupOrNull|[SectionGroup](sectiongroup.md)|取得包含節群組的節群組。如果節群組是筆記本的直接子項，則傳回 null。唯讀。|[移至](https://github.com/OfficeDev/office-js-docs/issues/new?title=OneNote-sectionGroup-parentSectionGroupOrNull)|
+|sectionGroups|[SectionGroupCollection](sectiongroupcollection.md)|節群組中的節群組集合。唯讀。|[移至](https://github.com/OfficeDev/office-js-docs/issues/new?title=OneNote-sectionGroup-sectionGroups)|
+|sections|[SectionCollection](sectioncollection.md)|節群組中的節集合。唯讀。|[移至](https://github.com/OfficeDev/office-js-docs/issues/new?title=OneNote-sectionGroup-sections)|
 
-## 方法
+## <a name="methods"></a>方法
 
-| 方法           | 傳回類型    |說明| 意見反應|
+| 方法           | 傳回類型    |描述| 意見反應|
 |:---------------|:--------|:----------|:-------|
-|[addSection(title:String)](#addsectiontitle-string)|[章節](section.md)|在節群組的結尾加入新節。|[移至](https://github.com/OfficeDev/office-js-docs/issues/new?title=OneNote-sectionGroup-addSection)|
+|[addSection(title:String)](#addsectiontitle-string)|[Section](section.md)|在節群組的結尾加入新節。|[移至](https://github.com/OfficeDev/office-js-docs/issues/new?title=OneNote-sectionGroup-addSection)|
 |[addSectionGroup(name:String)](#addsectiongroupname-string)|[SectionGroup](sectiongroup.md)|將新的區段群組新增至此 sectionGroup 的結尾。|[移至](https://github.com/OfficeDev/office-js-docs/issues/new?title=OneNote-sectionGroup-addSectionGroup)|
-|[load(param: object)](#loadparam-object)|void|以參數中指定的屬性和物件值填滿 JavaScript 層中建立的 Proxy 物件。|[執行](https://github.com/OfficeDev/office-js-docs/issues/new?title=OneNote-sectionGroup-load)|
+|[load(param: object)](#loadparam-object)|void|以參數中指定的屬性和物件值填滿 JavaScript 層中建立的 Proxy 物件。|[移至](https://github.com/OfficeDev/office-js-docs/issues/new?title=OneNote-sectionGroup-load)|
 
-## 方法詳細資料
+## <a name="method-details"></a>方法詳細資料
 
 
-### addSection(title:String)
+### <a name="addsection(title:-string)"></a>addSection(title:String)
 在節群組的結尾加入新節。
 
-#### 語法
+#### <a name="syntax"></a>語法
 ```js
 sectionGroupObject.addSection(title);
 ```
 
-#### 參數
-| 參數	    | 類型	   |說明|
+#### <a name="parameters"></a>參數
+| 參數	    | 類型	   |描述|
 |:---------------|:--------|:----------|
 |標題|String|新區段的名稱。|
 
-#### 傳回
-[章節](section.md)
+#### <a name="returns"></a>傳回
+[Section](section.md)
 
-#### 範例
+#### <a name="examples"></a>範例
 ```js
 OneNote.run(function (context) {
 
@@ -84,23 +84,23 @@ OneNote.run(function (context) {
 ```
 
 
-### addSectionGroup(name:String)
+### <a name="addsectiongroup(name:-string)"></a>addSectionGroup(name:String)
 將新的區段群組新增至此 sectionGroup 的結尾。
 
-#### 語法
+#### <a name="syntax"></a>語法
 ```js
 sectionGroupObject.addSectionGroup(name);
 ```
 
-#### 參數
-| 參數	    | 類型	   |說明|
+#### <a name="parameters"></a>參數
+| 參數	    | 類型	   |描述|
 |:---------------|:--------|:----------|
 |Name|String|新區段的名稱。|
 
-#### 傳回
+#### <a name="returns"></a>傳回
 [SectionGroup](sectiongroup.md)
 
-#### 範例
+#### <a name="examples"></a>範例
 ```js          
 OneNote.run(function (context) {
     var sectionGroup;
@@ -139,22 +139,22 @@ OneNote.run(function (context) {
 }); 
 ```
 
-### load(param: object)
+### <a name="load(param:-object)"></a>load(param: object)
 以參數中指定的屬性和物件值填滿 JavaScript 層中建立的 Proxy 物件。
 
-#### 語法
+#### <a name="syntax"></a>語法
 ```js
 object.load(param);
 ```
 
-#### 參數
-| 參數	    | 類型	   |說明|
+#### <a name="parameters"></a>參數
+| 參數	    | 類型	   |描述|
 |:---------------|:--------|:----------|
 |param|物件|選用。接受參數與關聯性名稱，做為分隔字串或陣列。或者提供 [loadOption](loadoption.md) 物件。|
 
-#### 傳回
+#### <a name="returns"></a>傳回
 void
-### 屬性存取範例
+### <a name="property-access-examples"></a>屬性存取範例
 
 **id**
 ```js

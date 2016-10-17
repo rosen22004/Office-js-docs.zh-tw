@@ -1,23 +1,23 @@
 
-# 要求用於內容和工作窗格增益集的 API 權限
+# <a name="requesting-permissions-for-api-use-in-content-and-task-pane-add-ins"></a>要求用於內容和工作窗格增益集的 API 權限
 本文章說明可以在您的內容中宣告的不同權限層級，或工作窗格增益集的資訊清單，以指定您的增益集功能所需要的 JavaScript API 存取的層級。 
 
 
 
 
-## 權限模型
+## <a name="permissions-model"></a>權限模型
 
 
 五個層級的 JavaScript API 存取權限模型，可為您的內容和工作窗格增益集的使用者提供隱私權和安全性的基礎。圖 1 顯示您可以在增益集的資訊清單中宣告的五個層級 API 權限。
 
 
-**圖 1. 內容和工作窗格增益集的五個層級權限模型**
+**圖 1.內容和工作窗格增益集的五個層級權限模型**
 
 ![工作窗格應用程式的權限層級](../../images/off15appsdk_TaskPaneAppPermission.gif)
 
 
 
-這些權限可指定增益集執行階段將在使用者插入項目然後啟動 (信任) 增益集時，允許您的內容或工作窗格增益集使用的 API 的子集。 若要宣告您的內容或工作窗格增益集需要的權限層級，請在增益集資訊清單的 [Permissions](http://msdn.microsoft.com/en-us/library/d4cfe645-353d-8240-8495-f76fb36602fe%28Office.15%29.aspx) 元素中指定其中一個權限文字值。 下列範例要求 **WriteDocument** 權限，它僅允許可以寫入 (但無法讀取) 文件的方法。
+這些權限可指定增益集執行階段將在使用者插入項目然後啟動 (信任) 增益集時，允許您的內容或工作窗格增益集使用的 API 的子集。若要宣告您的內容或工作窗格增益集需要的權限層級，請在增益集資訊清單的 [Permissions](http://msdn.microsoft.com/en-us/library/d4cfe645-353d-8240-8495-f76fb36602fe%28Office.15%29.aspx) 元素中指定其中一個權限文字值。下列範例要求 **WriteDocument** 權限，它僅允許可以寫入 (但無法讀取) 文件的方法。
 
 
 
@@ -26,7 +26,7 @@
 <Permissions>WriteDocument</Permissions>
 ```
 
-作為最佳作法，您應該根據 _least privilege_ 的原則要求權限。 也就是說，您應該要求只能存取增益集正常運作所需的 API 最基本子集合的權限。 例如，如果您的增益集的功能只需要讀取使用者文件中的資料，您應該不要求超過 **ReadDocument** 的權限。
+作為最佳作法，您應該根據 _least privilege_ 的原則要求權限。也就是說，您應該要求只能存取增益集正常運作所需的 API 最基本子集合的權限。例如，如果您的增益集的功能只需要讀取使用者文件中的資料，您應該不要求超過 **ReadDocument** 的權限。
 
 下表說明每個權限層級啟用的 JavaScript API 的子集。
 
@@ -34,7 +34,7 @@
 
 |**權限**|**已啟用的 API 子集合**|
 |:-----|:-----|
-|**限制**|[Settings](../../reference/shared/settings.md) 物件的方法，以及 [Document.getActiveViewAsync](../../reference/shared/document.getactiveviewasync.md) 方法。這是內容或工作窗格增益集可以要求的最小權限層級。|
+|**Restricted**|[Settings](../../reference/shared/settings.md) 物件的方法，以及 [Document.getActiveViewAsync](../../reference/shared/document.getactiveviewasync.md) 方法。這是內容或工作窗格增益集可以要求的最小權限層級。|
 |**ReadDocument**|除了 **Restricted** 權限所允許的 API 之外，新增閱讀文件及管理繫結所需之 API 成員的存取權限。這包括使用︰<br/><ul><li>
   <a href="http://msdn.microsoft.com/en-us/library/f85ad02c-64f0-4b73-87f6-7f521b3afd69(Office.15).aspx" target="_blank">Document.getSelectedDataAsync</a> 方法來取得選取的文字、HTML (僅限 Word) 或表格式資料，但不是包含文件中所有資料的基礎 Open Office XML (OOXML) 程式碼。</p></li><li><p>
   <a href="http://msdn.microsoft.com/en-us/library/78047418-89c4-4c7d-9427-4735b8559518(Office.15).aspx" target="_blank">Document.getFileAsync</a> 方法來取得文件中的所有文字，但不是文件的基礎 OOXML 二進位複本。</p></li><li><p>
@@ -55,7 +55,7 @@
   <span class="keyword">TableBinding</span> 物件的 <a href="http://msdn.microsoft.com/en-us/library/49712906-f582-4055-9ef8-6edde6e97679(Office.15).aspx" target="_blank">SetFormatsAsync</a>、<a href="http://msdn.microsoft.com/en-us/library/cc56e9c0-b33c-4d9b-b676-a7e50f757c10(Office.15).aspx" target="_blank">clearFormatsAsync</a> 和 <a href="http://msdn.microsoft.com/en-us/library/2885fc57-4527-4ca4-a43d-9ee447ec27d3(Office.15).aspx" target="_blank">setTableOptionsAsync</a> 方法，可用來在繫結資料表上設定格式和選項。</p></li><li><p>
   <a href="http://msdn.microsoft.com/en-us/library/dc1518de-47fa-4108-aab7-04a022724b04(Office.15).aspx" target="_blank">CustomXmlNode</a>、<a href="http://msdn.microsoft.com/en-us/library/83f0e668-8236-4f2f-a20f-b173a9e3f65f(Office.15).aspx" target="_blank">CustomXmlPart</a>、<a href="http://msdn.microsoft.com/en-us/library/ba40cd4c-29bb-4f31-875d-6f1382fd1ee8(Office.15).aspx" target="_blank">CustomXmlParts</a> 和 <a href="http://msdn.microsoft.com/en-us/library/18b9aa8c-83e7-4c2f-8530-6a0ac8ce5535(Office.15).aspx" target="_blank">CustomXmlPrefixMappings</a> 物件的所有成員。</p></li><li><p>用來訂閱內容和工作窗格增益集支援之事件的所有方法，特別是 <a href="http://msdn.microsoft.com/en-us/library/42882642-d22b-47d2-a8d3-3aa8c6a4435e(Office.15).aspx" target="_blank">Binding</a>、<a href="http://msdn.microsoft.com/en-us/library/83f0e668-8236-4f2f-a20f-b173a9e3f65f(Office.15).aspx" target="_blank">CustomXmlPart</a>、<a href="http://msdn.microsoft.com/en-us/library/f8859516-cc1f-4b20-a8f3-cee37a983e70(Office.15).aspx" target="_blank">Document</a>、<a href="http://msdn.microsoft.com/en-us/library/1908af4f-93b9-4859-87e3-06942014fae1(Office.15).aspx" target="_blank">ProjectDocument</a> 及 <a href="http://msdn.microsoft.com/en-us/library/ad733387-a58c-4514-8fc2-53e64fad468d(Office.15).aspx" target="_blank">Settings</a> 物件的 <span class="keyword">addHandlerAsync</span> 和 <span class="keyword">removeHandlerAsync</span> 的方法。</p></li></ul>|
 
-## 其他資源
+## <a name="additional-resources"></a>其他資源
 
     
 - [Office 增益集的隱私權和安全性](../../docs/develop/privacy-and-security.md)

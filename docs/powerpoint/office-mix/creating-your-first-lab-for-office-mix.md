@@ -1,5 +1,5 @@
 
-# 逐步解說︰建立第一個 Office Mix 實驗室
+# <a name="walkthrough:-creating-your-first-lab-for-office-mix"></a>逐步解說︰建立第一個 Office Mix 實驗室
 使用逐步解說建置您的第一個 LabsJS 實驗室。
 
 
@@ -15,8 +15,7 @@
     
 - TrueFalse.css
     
-您可以使用您想要用來編輯這些檔案的任何程式碼編輯器，因為我們不會開始使用 Visual Studio 範本。 事實上，HTML 檔案有點簡單，如果您只希望從教學課程檔案複製/貼上 HTML 標記則很適用。 不過請注意，它必須是 HTML5，所以務必確定 doctype 宣告是 `<!DOCTYPE html>`。 CSS 檔案是選擇性的。 繁重的工作都是在 JavaScript (.js) 檔案中完成，即 TrueFalse.js。
-逐步解說將涵蓋四個主要的實驗室功能︰
+您可以使用您想要用來編輯這些檔案的任何程式碼編輯器，因為我們不會開始使用 Visual Studio 範本。事實上，HTML 檔案有點簡單，如果您只希望從教學課程檔案複製/貼上 HTML 標記則很適用。不過請注意，它必須是 HTML5，所以務必確定 doctype 宣告是 `<!DOCTYPE html>`。CSS 檔案是選擇性的。繁重的工作都是在 JavaScript (.js) 檔案中完成，即 TrueFalse.js。逐步解說將涵蓋四個主要的實驗室功能︰
 
 - 設定 (連線至主機)
     
@@ -27,13 +26,13 @@
 - 取得 (或執行) 實驗室
     
 
- **注意**  
+ **附註**  
  ---
  labhost.html 檔在 Web 伺服器上執行，並提供實驗室開發和測試的裝載環境。這可以大幅簡化實驗室開發。如需有關設定開發環境的詳細資訊，請參閱[開始使用 Office Mix 的 LabsJS](get-started-with-labsjs-for-office-mix.md)。<br/><br/>
 
 最後，您可以檢視使用此 SDK 散發的檔案之間已完成的 JavaScript 檔案 (TrueFalse.js)。以下是程式碼撰寫程序的逐步解說。
 
-## 連線至實驗室主機
+## <a name="connecting-to-the-lab-host"></a>連線至實驗室主機
 
 可使用我們的實驗室主機 (適用於開發和測試) 或使用 Office.js 主機提供的預設執行階段主機，在這種環境中執行實驗室。開啟函式，然後使用簡單的 if/else 運算式來測試其中適用的裝載內容。
 
@@ -102,7 +101,7 @@ function getConfiguration(question, answer) {
 ```
 
 
-## 模式變更
+## <a name="mode-changes"></a>模式變更
 
 實驗室永遠是在兩個狀態或模式的其中之一︰**檢視**和**編輯**。因此，我們要需要一種方法來擷取並保留測驗的狀態和行為；我們將為此目的建立類別。
 
@@ -431,7 +430,7 @@ $(document).ready(function () {
 ```
 
 
-## 其他資源
+## <a name="additional-resources"></a>其他資源
 <a name="bk_addresources"> </a>
 
 

@@ -1,12 +1,12 @@
 
 
-# SettingsChangedEventArgs.settings 屬性
+# <a name="settingschangedeventargs.settings-property"></a>SettingsChangedEventArgs.settings 屬性
 取得代表引發 **settingsChanged** 事件之設定的 **Settings** 物件。
 
 |||
 |:-----|:-----|
-|**主機︰**|Excel|
-|**可用於[需求集合](../../docs/overview/specify-office-hosts-and-api-requirements.md)**|Settings|
+|**主應用程式︰**|Excel|
+|**可用於[需求集合](../../docs/overview/specify-office-hosts-and-api-requirements.md)**|設定|
 |**上次變更於**|1.0|
 
 ```js
@@ -14,12 +14,12 @@ var mySettings = eventArgsObj.settings;
 ```
 
 
-## 傳回值
+## <a name="return-value"></a>傳回值
 
 代表引發 [settingsChanged](../../reference/shared/document.settings.md) 事件之設定的 [Settings](../../reference/shared/settings.settingschangedevent.md) 物件。
 
 
-## 支援詳細資料
+## <a name="support-details"></a>支援詳細資料
 
 
 下列矩陣中的大寫 Y，表示在相對應的 Office 主應用程式中支援此屬性。空白儲存格表示 Office 主應用程式不支援此屬性。
@@ -40,7 +40,7 @@ var mySettings = eventArgsObj.settings;
 |**文件庫**|Office.js|
 |**命名空間**|Office|
 
-## 支援歷程記錄
+## <a name="support-history"></a>支援歷程記錄
 
 
 

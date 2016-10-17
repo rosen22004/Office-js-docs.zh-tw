@@ -1,21 +1,21 @@
-﻿# Resources 元素
+# <a name="resources-element"></a>Resources 元素
 
-包含圖示、字串，和 [VersionOverrides](./versionoverrides.md) 節點的 URL。 資訊清單元素可使用資源的 **id** 來指定資源。 這可協助保護可管理的資訊清單大小，特別是在資源具有不同地區設定的版本時。 **id** 在資訊清單內必須唯一，且最多有 32 個字元。
+包含圖示、字串，和 [VersionOverrides](./versionoverrides.md) 節點的 URL。資訊清單元素可使用資源的 **id** 來指定資源。這可協助保護可管理的資訊清單大小，特別是在資源具有不同地區設定的版本時。**id** 在資訊清單內必須唯一，且最多有 32 個字元。
 
 每個資源都可以具有一或多個 **Override** 子元素，為特定地區設定定義不同的資源。
 
-## 子元素
+## <a name="child-elements"></a>子元素
 
-|  元素 |  類型	  |  說明  |
+|  元素 |  類型	  |  描述  |
 |:-----|:-----|:-----|
-|  [影像](#影像)            |  Image   |  提供圖示之影像的 HTTPS URL。 |
-|  **URL**                |  URL     |  提供 HTTPS URL 位置。 URL 最多可以有 2048 個字元。 |
-|  **ShortStrings** |  字串  |  **Label** 和 **Title** 元素的文字。 每個 **String** 包含最多 125 個字元。|
-|  **LongStrings**  |  字串  | **Description** 屬性的文字。 每個 **String** 包含最多 250 個字元。|
+|  [Images](#images)            |  影像   |  提供圖示之影像的 HTTPS URL。 |
+|  **Urls**                |  URL     |  提供 HTTPS URL 位置。URL 最多可以有 2048 個字元。 |
+|  **ShortStrings** |  string  |  **Label** 和 **Title** 元素的文字。每個 **String** 包含最多 125 個字元。|
+|  **LongStrings**  |  string  | **Description** 屬性的文字。每個 **String** 包含最多 250 個字元。|
 
 >**附註**  您必須在 **Image** 和 **Url** 元素中，為所有 URL 使用安全通訊端層 (SSL)。
 
-### 影像
+### <a name="images"></a>影像
 每個圖示必須要有三個 **Images** 元素，三種必要大小各一個︰
 - 16x16
 - 32x32
@@ -28,10 +28,10 @@
 - 48x48
 - 64x64
 
-> **重要事項：** Outlook 需要針對效能目的的快取影像資源的能力。 基於這個理由，裝載影像資源的伺服器不能將任何 CACHE-CONTROL 指示詞新增至回應標頭。 這會導致 Outlook 自動取代一般或預設影像。    
+> **重要事項：** Outlook 需要針對效能目的的快取影像資源的能力。基於這個理由，裝載影像資源的伺服器不能將任何 CACHE-CONTROL 指示詞新增至回應標頭。這會導致 Outlook 自動取代一般或預設影像。    
 
 
-## 資源範例 
+## <a name="resources-examples"></a>資源範例 
 
 ```XML
 <Resources>

@@ -1,5 +1,5 @@
-﻿
-# 從 Outlook 項目擷取實體字串
+
+# <a name="extract-entity-strings-from-an-outlook-item"></a>從 Outlook 項目擷取實體字串
 
 本文說明如何建立**顯示實體** Outlook 增益集，其可擷取選取的 Outlook 項目的主旨及本文中的受支援已知實體的字串執行個體。這個項目可以是約會、電子郵件或會議邀請、回應或取消。支援的實體包括︰
 
@@ -21,7 +21,7 @@
 
 增益集為使用者提供可選擇實體類型的按鈕。當使用者選取實體時，增益集會在增益集窗格中顯示已選取實體的執行個體。下列章節列出 XML 資訊清單，以及實體增益集的 HTML 和 JavaScript 檔案，並反白顯示支援個別實體擷取的程式碼。
 
-## XML 資訊清單
+## <a name="xml-manifest"></a>XML 資訊清單
 
 
 實體增益集有兩個由邏輯 OR 運算加入的啟用規則。 
@@ -85,10 +85,10 @@ xsi:type="MailApp">
 ```
 
 
-## HTML 實作
+## <a name="html-implementation"></a>HTML 實作
 
 
-實體增益集的 HTML 檔案會指定供使用者選取每一種類型實體的按鈕，以及清除執行個體的所顯示實體的另一個按鈕。它包含 JavaScript 檔案 (default_entities.js)，其會在 [JavaScript 實作](#javascript-實作)的下一節中說明。JavaScript 檔案包括每個按鈕的事件處理常式。
+實體增益集的 HTML 檔案會指定供使用者選取每一種類型實體的按鈕，以及清除執行個體的所顯示實體的另一個按鈕。它包含 JavaScript 檔案 (default_entities.js)，其會在 [JavaScript 實作](#javascript-implementation)的下一節中說明。JavaScript 檔案包括每個按鈕的事件處理常式。
 
 請注意，所有的 Outlook 增益集都必須包含 office.js。隨後的 HTML 檔案包含 CDN 上的 1.1 版 office.js 。 
 
@@ -132,7 +132,7 @@ xsi:type="MailApp">
 ```
 
 
-## 樣式表
+## <a name="style-sheet"></a>樣式表
 
 
 實體增益集使用選擇性的 CSS 檔案 (default_entities.css) 來指定輸出的版面配置。以下是 CSS 檔案的清單。
@@ -190,13 +190,13 @@ div#meeting_suggestions
 ```
 
 
-## JavaScript 實作
+## <a name="javascript-implementation"></a>JavaScript 實作
 
 
 其餘章節會說明這個範例 (default_entities.js 檔) 如何從使用者正在檢視的郵件或約會的主旨及本文擷取已知實體。 
 
 
-## 在初始化時擷取實體
+## <a name="extracting-entities-upon-initialization"></a>在初始化時擷取實體
 
 
 在 [Office.initialize](../../reference/shared/office.initialize.md) 事件時，實體增益集會目前項目的呼叫 [getEntities](../../reference/outlook/Office.context.mailbox.item.md) 方法。**getEntities** 方法會傳回全域變數 `_MyEntities` 支援實體的執行個體陣列。以下是相關的 JavaScript 程式碼。
@@ -225,10 +225,10 @@ Office.initialize = function () {
 ```
 
 
-## 擷取位址
+## <a name="extracting-addresses"></a>擷取位址
 
 
-當使用者按一下 [取得位址]**** 按鈕時，如果擷取任何位址，`myGetAddresses` 事件處理常式會從 `_MyEntities` 物件的 [addresses](../../reference/outlook/simple-types.md) 屬性取得位址陣列。 每一個擷取的地址會在陣列中儲存為字串。 `myGetAddresses` 在 .mdText` 中形成本機的 HTML 字串以顯示解壓縮地址的清單。 以下是相關的 JavaScript 程式碼。
+當使用者按一下 [取得位址] 按鈕時，如果擷取任何位址，`myGetAddresses` 事件處理常式會從 `_MyEntities` 物件的 [addresses](../../reference/outlook/simple-types.md) 屬性取得位址陣列。每一個擷取的位址會在陣列中儲存為字串。`myGetAddresses` 會在 .mdText` 中形成本機 HTML 字串來顯示已擷取位址的清單。以下是相關的 JavaScript 程式碼。
 
 
 ```js
@@ -249,10 +249,10 @@ function myGetAddresses()
 ```
 
 
-## 擷取連絡人資訊
+## <a name="extracting-contact-information"></a>擷取連絡人資訊
 
 
-當使用者按一下 [取得連絡人資訊]**** 按鈕時，`myGetContacts` 事件處理常式會取得一個連絡人的陣列，以及 (若擷取任何項目) 從 `_MyEntities` 物件的 [contacts](../../reference/outlook/simple-types.md) 屬性取得其資訊。 每個截取的連絡人會在陣列中儲存為 [Contact](../../reference/outlook/simple-types.md) 物件。 `myGetContacts` 取得關於每個連絡人的進一步資料。 請注意，內容會決定 Outlook 是否可以從項目 - 電子郵件結尾的簽章擷取連絡人，或至少部分的下列資訊必須存在連絡人的鄰近位置︰
+當使用者按一下 [取得連絡人資訊] 按鈕時，`myGetContacts` 事件處理常式會取得一個連絡人的陣列，以及 (若擷取任何項目) 從 `_MyEntities` 物件的 [contacts](../../reference/outlook/simple-types.md) 屬性取得其資訊。每個截取的連絡人會在陣列中儲存為 [Contact](../../reference/outlook/simple-types.md) 物件。`myGetContacts` 取得關於每個連絡人的進一步資料。請注意，內容會決定 Outlook 是否可以從項目 - 電子郵件結尾的簽章擷取連絡人，或至少部分的下列資訊必須存在連絡人的鄰近位置︰
 
 
 - [Contact.personName](../../reference/outlook/simple-types.md) 屬性中代表連絡人名稱的字串。
@@ -337,10 +337,10 @@ function myGetContacts()
 ```
 
 
-## 截取電子郵件地址
+## <a name="extracting-email-addresses"></a>截取電子郵件地址
 
 
-當使用者按一下 [取得電子郵件地址]**** 按鈕時，如果擷取任何位址，`myGetEmailAddresses` 事件處理常式會從 `_MyEntities` 物件的 [emailAddresses](../../reference/outlook/simple-types.md) 屬性取得 SMTP 電子郵件地址陣列。 每一個擷取的電子郵件地址會在陣列中儲存為字串。 `myGetEmailAddresses` 在 `htmlText` 中形成本機的 HTML 字串以顯示解壓縮的電子郵件地址清單。 以下是相關的 JavaScript 程式碼。
+當使用者按一下 [取得電子郵件地址] 按鈕時，如果擷取任何位址，`myGetEmailAddresses` 事件處理常式會從 `_MyEntities` 物件的 [emailAddresses](../../reference/outlook/simple-types.md) 屬性取得 SMTP 電子郵件地址陣列。每一個擷取的電子郵件地址會在陣列中儲存為字串。`myGetEmailAddresses` 會在 `htmlText` 中形成本機 HTML 字串來顯示已擷取電子郵件地址的清單。以下是相關的 JavaScript 程式碼。
 
 
 ```js
@@ -360,10 +360,10 @@ function myGetEmailAddresses() {
 ```
 
 
-## 擷取會議建議
+## <a name="extracting-meeting-suggestions"></a>擷取會議建議
 
 
-當使用者按一下 [取得會議建議]**** 按鈕時，如果擷取任何位址，`myGetMeetingSuggestions` 事件處理常式會從 `_MyEntities` 物件的 [meetingSuggestions](../../reference/outlook/simple-types.md) 屬性取得會議建議的陣列。
+當使用者按一下 [取得會議建議] 按鈕時，如果擷取任何位址，`myGetMeetingSuggestions` 事件處理常式會從 `_MyEntities` 物件的 [meetingSuggestions](../../reference/outlook/simple-types.md) 屬性取得會議建議的陣列。
 
 
  >**附註** 只有郵件 (而非約會) 支援 **MeetingSuggestion** 實體類型。
@@ -445,10 +445,10 @@ function myGetMeetingSuggestions() {
 ```
 
 
-## 擷取電話號碼
+## <a name="extracting-phone-numbers"></a>擷取電話號碼
 
 
-當使用者按一下 [取得電話號碼]**** 按鈕時，如果擷取任何項目，`myGetPhoneNumbers` 事件處理常式會從 `_MyEntities` 物件的 [phoneNumbers](../../reference/outlook/simple-types.md) 屬性取得電話號碼的陣列。 每個截取的電話號碼會在陣列中儲存為 [PhoneNumber](../../reference/outlook/simple-types.md) 物件。 `myGetPhoneNumbers` 取得關於每個電話號碼的進一步資料。
+當使用者按一下 [取得電話號碼] 按鈕時，如果擷取任何項目，`myGetPhoneNumbers` 事件處理常式會從 `_MyEntities` 物件的 [phoneNumbers](../../reference/outlook/simple-types.md) 屬性取得電話號碼的陣列。每個截取的電話號碼會在陣列中儲存為 [PhoneNumber](../../reference/outlook/simple-types.md) 物件。`myGetPhoneNumbers` 取得關於每個電話號碼的進一步資料。
 
 
 - [PhoneNumber.type](../../reference/outlook/simple-types.md) 屬性中代表電話號碼類型的字串 (例如住家電話號碼)。
@@ -496,10 +496,10 @@ function myGetPhoneNumbers()
 ```
 
 
-## 擷取工作建議
+## <a name="extracting-task-suggestions"></a>擷取工作建議
 
 
-當使用者按一下 [取得工作建議]**** 按鈕時，如果擷取任何位址，`myGetTaskSuggestions` 事件處理常式會從 `_MyEntities` 物件的 [taskSuggestions](../../reference/outlook/simple-types.md) 屬性取得工作建議的陣列。 每個已擷取的工作建議會在陣列中儲存為 [TaskSuggestion](../../reference/outlook/simple-types.md) 物件。 `myGetTaskSuggestions` 會取得關於每個工作建議的進一步資料：
+當使用者按一下 [取得工作建議] 按鈕時，如果擷取任何位址，`myGetTaskSuggestions` 事件處理常式會從 `_MyEntities` 物件的 [taskSuggestions](../../reference/outlook/simple-types.md) 屬性取得工作建議的陣列。每個已擷取的工作建議會在陣列中儲存為 [TaskSuggestion](../../reference/outlook/simple-types.md) 物件。`myGetTaskSuggestions` 會取得關於每個工作建議的進一步資料：
 
 
 - [TaskSuggestion.taskString](../../reference/outlook/simple-types.md) 屬性中原先識別為工作建議的字串。
@@ -561,10 +561,10 @@ function myGetTaskSuggestions()
 ```
 
 
-## 擷取 URL
+## <a name="extracting-urls"></a>擷取 URL
 
 
-當使用者按一下 [取得 URL]**** 按鈕時，如果擷取任何項目，`myGetUrls` 事件處理常式會從 `_MyEntities` 物件的 [urls](../../reference/outlook/simple-types.md) 屬性取得 URL 的陣列。 每一個擷取的 URL 會在陣列中儲存為字串。 `myGetUrls` 在 `htmlText` 中形成本機的 HTML 字串以顯示解壓縮的 URL 清單。
+當使用者按一下 [取得 URL] 按鈕時，如果擷取任何項目，`myGetUrls` 事件處理常式會從 `_MyEntities` 物件的 [urls](../../reference/outlook/simple-types.md) 屬性取得 URL 的陣列。每一個擷取的 URL 會在陣列中儲存為字串。`myGetUrls` 會在 `htmlText` 中形成本機 HTML 字串來顯示已擷取 URL 的清單。
 
 
 ```js
@@ -586,7 +586,7 @@ function myGetUrls()
 ```
 
 
-## 清除顯示的實體字串
+## <a name="clearing-displayed-entity-strings"></a>清除顯示的實體字串
 
 
 最後，實體增益集會指定清除任何顯示字串的 `myClearEntitiesBox` 事件處理常式。以下是相關的程式碼。
@@ -601,7 +601,7 @@ function myClearEntitiesBox()
 ```
 
 
-## JavaScript 清單
+## <a name="javascript-listing"></a>JavaScript 清單
 
 
 以下是 JavaScript 實作的完整清單。
@@ -819,7 +819,7 @@ function myGetUrls()
 ```
 
 
-## 其他資源
+## <a name="additional-resources"></a>其他資源
 
 
 

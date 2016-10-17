@@ -1,5 +1,5 @@
 
-# Labs.registerDeserializer
+# <a name="labs.registerdeserializer"></a>Labs.registerDeserializer
 
  _**適用於︰**Office 的應用程式 | Office 增益集 | Office Mix | PowerPoint_
 
@@ -10,14 +10,14 @@ function registerDeserializer(type: string, deserialize: (json: Core.ILabObject)
 ```
 
 
-## 參數
+## <a name="parameters"></a>參數
 
 
-|**名稱**|**說明**|
+|**名稱**|**描述**|
 |:-----|:-----|
 |json|要還原序列化的 [Labs.Core.ILabObject](../../reference/office-mix/labs.core.ilabobject.md)。|
 
-## 傳回值
+## <a name="return-value"></a>傳回值
 
 傳回 [Labs.Core.ILabObject](../../reference/office-mix/labs.core.ilabobject.md) 執行個體。
 

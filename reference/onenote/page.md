@@ -1,60 +1,60 @@
-﻿# Page 物件 (適用於 OneNote 的 JavaScript API)
+# <a name="page-object-(javascript-api-for-onenote)"></a>Page 物件 (適用於 OneNote 的 JavaScript API)
 
 _適用於：OneNote Online_   
 
 
 代表 OneNote 頁面。
 
-## 屬性
+## <a name="properties"></a>屬性
 
-| 屬性	     | 類型	   |說明|意見反應|
+| 屬性	     | 類型	   |描述|意見反應|
 |:---------------|:--------|:----------|:-------|
-|clientUrl|string|頁面的用戶端 URL。 唯讀。|[執行](https://github.com/OfficeDev/office-js-docs/issues/new?title=OneNote-page-clientUrl)|
-|id|string|取得頁面的識別碼。 唯讀。|[執行](https://github.com/OfficeDev/office-js-docs/issues/new?title=OneNote-page-id)|
-|pageLevel|int|取得或設定頁面的縮排層次。|[執行](https://github.com/OfficeDev/office-js-docs/issues/new?title=OneNote-page-pageLevel)|
-|標題|string|取得或設定頁面的標題。|[移至](https://github.com/OfficeDev/office-js-docs/issues/new?title=OneNote-page-title)|
-|webUrl|string|頁面的網頁 URL。 唯讀。|[移至](https://github.com/OfficeDev/office-js-docs/issues/new?title=OneNote-page-webUrl)|
+|clientUrl|字串|頁面的用戶端 URL。唯讀。|[移至](https://github.com/OfficeDev/office-js-docs/issues/new?title=OneNote-page-clientUrl)|
+|id|字串|取得頁面的識別碼。唯讀。|[移至](https://github.com/OfficeDev/office-js-docs/issues/new?title=OneNote-page-id)|
+|pageLevel|int|取得或設定頁面的縮排層次。|[移至](https://github.com/OfficeDev/office-js-docs/issues/new?title=OneNote-page-pageLevel)|
+|title|string|取得或設定頁面的標題。|[移至](https://github.com/OfficeDev/office-js-docs/issues/new?title=OneNote-page-title)|
+|webUrl|字串|頁面的網頁 URL。唯讀。|[移至](https://github.com/OfficeDev/office-js-docs/issues/new?title=OneNote-page-webUrl)|
 
-_請參閱屬性存取[範例。](#範例)_
+_請參閱屬性存取[範例。](#property-access-examples)_
 
-## 關聯性
-| 關聯性 | 類型	   |說明| 意見反應|
+## <a name="relationships"></a>關聯性
+| 關聯性 | 類型	   |描述| 意見反應|
 |:---------------|:--------|:----------|:-------|
-|內容|[Pagecontentcollection](pagecontentcollection.md)|頁面上 PageContent 物件的集合。 唯讀。|[移至](https://github.com/OfficeDev/office-js-docs/issues/new?title=OneNote-page-contents)|
-|inkAnalysisOrNull|[InkAnalysis](inkanalysis.md)|頁面上筆跡的文字解譯。 如果沒有筆跡分析資訊，則傳回 null。 唯讀。 唯讀。|[移至](https://github.com/OfficeDev/office-js-docs/issues/new?title=OneNote-page-inkAnalysisOrNull)|
-|parentSection|[章節](section.md)|取得包含頁面的節。 唯讀。|[執行](https://github.com/OfficeDev/office-js-docs/issues/new?title=OneNote-page-parentSection)|
+|contents|[PageContentCollection](pagecontentcollection.md)|頁面上 PageContent 物件的集合。唯讀。|[移至](https://github.com/OfficeDev/office-js-docs/issues/new?title=OneNote-page-contents)|
+|inkAnalysisOrNull|[InkAnalysis](inkanalysis.md)|頁面上筆跡的文字解譯。如果沒有筆跡分析資訊，則傳回 null。唯讀。唯讀。|[移至](https://github.com/OfficeDev/office-js-docs/issues/new?title=OneNote-page-inkAnalysisOrNull)|
+|parentSection|[Section](section.md)|取得包含頁面的節。唯讀。|[移至](https://github.com/OfficeDev/office-js-docs/issues/new?title=OneNote-page-parentSection)|
 
-## 方法
+## <a name="methods"></a>方法
 
-| 方法           | 傳回類型    |說明| 意見反應|
+| 方法           | 傳回類型    |描述| 意見反應|
 |:---------------|:--------|:----------|:-------|
-|[addOutline(left: double, top: double, html:String)](#addoutlineleft-double-top-double-html-string)|[大綱](outline.md)|將大綱加入至頁面中的指定位置。|[移至](https://github.com/OfficeDev/office-js-docs/issues/new?title=OneNote-page-addOutline)|
-|[copyToSection(destinationSection:Section)](#copytosectiondestinationsection-section)|[頁面](page.md)|將此頁面複製到指定區段。|[移至](https://github.com/OfficeDev/office-js-docs/issues/new?title=OneNote-page-copyToSection)|
-|[insertPageAsSibling(location: string, title: string)](#insertpageassiblinglocation-string-title-string)|[Page](page.md)|在目前頁面的前或後，插入新頁面。|[執行](https://github.com/OfficeDev/office-js-docs/issues/new?title=OneNote-page-insertPageAsSibling)|
-|[load(param: object)](#loadparam-object)|void|以參數中指定的屬性和物件值填滿 JavaScript 層中建立的 Proxy 物件。|[執行](https://github.com/OfficeDev/office-js-docs/issues/new?title=OneNote-page-load)|
+|[addOutline(left: double, top: double, html:String)](#addoutlineleft-double-top-double-html-string)|[Outline](outline.md)|將大綱加入至頁面中的指定位置。|[移至](https://github.com/OfficeDev/office-js-docs/issues/new?title=OneNote-page-addOutline)|
+|[copyToSection(destinationSection:Section)](#copytosectiondestinationsection-section)|[Page](page.md)|將此頁面複製到指定區段。|[移至](https://github.com/OfficeDev/office-js-docs/issues/new?title=OneNote-page-copyToSection)|
+|[insertPageAsSibling(location: string, title: string)](#insertpageassiblinglocation-string-title-string)|[Page](page.md)|在目前頁面的前或後，插入新頁面。|[移至](https://github.com/OfficeDev/office-js-docs/issues/new?title=OneNote-page-insertPageAsSibling)|
+|[load(param: object)](#loadparam-object)|void|以參數中指定的屬性和物件值填滿 JavaScript 層中建立的 Proxy 物件。|[移至](https://github.com/OfficeDev/office-js-docs/issues/new?title=OneNote-page-load)|
 
-## 方法詳細資料
+## <a name="method-details"></a>方法詳細資料
 
 
-### addOutline(left: double, top: double, html:String)
+### <a name="addoutline(left:-double,-top:-double,-html:-string)"></a>addOutline(left: double, top: double, html:String)
 將大綱加入至頁面中的指定位置。
 
-#### 語法
+#### <a name="syntax"></a>語法
 ```js
 pageObject.addOutline(left, top, html);
 ```
 
-#### 參數
-| 參數	    | 類型	   |說明|
+#### <a name="parameters"></a>參數
+| 參數	    | 類型	   |描述|
 |:---------------|:--------|:----------|
 |left|double|大綱左上方邊角中的左側位置。|
 |top|double|大綱左上方邊角中的頂端位置。|
 |HTML|String|HTML 字串，描述大綱的視覺化呈現。請參閱 OneNote 增益集 JavaScript API 的[支援的 HTML](../../docs/onenote/onenote-add-ins-page-content.md#supported-html)。|
 
-#### 傳回
-[大綱](outline.md)
+#### <a name="returns"></a>傳回
+[Outline](outline.md)
 
-#### 範例
+#### <a name="examples"></a>範例
 ```js
 OneNote.run(function (context) {
 
@@ -92,23 +92,23 @@ OneNote.run(function (context) {
 ```
 
 
-### copyToSection(destinationSection:Section)
+### <a name="copytosection(destinationsection:-section)"></a>copyToSection(destinationSection:Section)
 將此頁面複製到指定區段。
 
-#### 語法
+#### <a name="syntax"></a>語法
 ```js
 pageObject.copyToSection(destinationSection);
 ```
 
-#### 參數
-| 參數	    | 類型	   |說明|
+#### <a name="parameters"></a>參數
+| 參數	    | 類型	   |描述|
 |:---------------|:--------|:----------|
 |destinationSection|區段|要複製此頁面的區段。|
 
-#### 傳回
+#### <a name="returns"></a>傳回
 [Page](page.md)
 
-#### 範例
+#### <a name="examples"></a>範例
 ```js
 OneNote.run(function(ctx) {
     var app = ctx.application;
@@ -146,24 +146,24 @@ OneNote.run(function(ctx) {
 });
 ```
 
-### insertPageAsSibling(location: string, title: string)
+### <a name="insertpageassibling(location:-string,-title:-string)"></a>insertPageAsSibling(location: string, title: string)
 在目前頁面的前或後，插入新頁面。
 
-#### 語法
+#### <a name="syntax"></a>語法
 ```js
 pageObject.insertPageAsSibling(location, title);
 ```
 
-#### 參數
-| 參數	    | 類型	   |說明|
+#### <a name="parameters"></a>參數
+| 參數	    | 類型	   |描述|
 |:---------------|:--------|:----------|
-|Location|string|新頁面與目前頁面的相對位置。可能的值為：之前、之後|
+|Location|字串|新頁面與目前頁面的相對位置。可能的值為：之前、之後|
 |標題|string|新頁面的標題。|
 
-#### 傳回
+#### <a name="returns"></a>傳回
 [Page](page.md)
 
-#### 範例
+#### <a name="examples"></a>範例
 ```js
 OneNote.run(function (context) {
 
@@ -191,24 +191,24 @@ OneNote.run(function (context) {
 ```
 
 
-### load(param: object)
+### <a name="load(param:-object)"></a>load(param: object)
 以參數中指定的屬性和物件值填滿 JavaScript 層中建立的 Proxy 物件。
 
-#### 語法
+#### <a name="syntax"></a>語法
 ```js
 object.load(param);
 ```
 
-#### 參數
-| 參數	    | 類型	   |說明|
+#### <a name="parameters"></a>參數
+| 參數	    | 類型	   |描述|
 |:---------------|:--------|:----------|
 |param|物件|選用。接受參數與關聯性名稱，做為分隔字串或陣列。或者提供 [loadOption](loadoption.md) 物件。|
 
-#### 傳回
+#### <a name="returns"></a>傳回
 void
-### 屬性存取範例
+### <a name="property-access-examples"></a>屬性存取範例
 
-**內容**
+**contents**
 ```js
 OneNote.run(function (context) {
 

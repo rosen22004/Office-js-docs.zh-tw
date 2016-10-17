@@ -1,5 +1,5 @@
 
-# Labs.getTimeline
+# <a name="labs.gettimeline"></a>Labs.getTimeline
 
  _**適用於︰**Office 的應用程式 | Office 增益集 | Office Mix | PowerPoint_
 
@@ -10,7 +10,7 @@ function getTimeline(): Timeline
 ```
 
 
-## 傳回值
+## <a name="return-value"></a>傳回值
 
 傳回 [Labs.Timeline](../../reference/office-mix/labs.timeline.md) 物件。
 

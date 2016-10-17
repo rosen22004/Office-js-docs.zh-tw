@@ -1,10 +1,10 @@
 
-# Document.getSelectedDataAsync 方法
+# <a name="document.getselecteddataasync-method"></a>Document.getSelectedDataAsync 方法
 讀取文件目前的選取範圍中所包含的資料。
 
 |||
 |:-----|:-----|
-|**主機︰**|Access、Excel、PowerPoint、Project、Word|
+|**主應用程式︰**|Access、Excel、PowerPoint、Project、Word|
 |**可用於需求集合**|Selection|
 |**上次變更於 Selection**|1.1|
 
@@ -13,17 +13,17 @@ Office.context.document.getSelectedDataAsync(coercionType [, options], callback)
 ```
 
 
-## 參數
+## <a name="parameters"></a>參數
 
 
 
-|**名稱**|**類型	**|**說明**|**支援附註**|
+|**名稱**|**類型**|**描述**|**支援附註**|
 |:-----|:-----|:-----|:-----|
-| _coercionType_|[CoercionType](../../reference/shared/coerciontype-enumeration.md)<br/><table><tr><td></td><td><b>主機支援</b></td></tr><tr><td><b>Office.CoercionType.Text</b> (字串)</td><td>僅限 Excel、Excel Online、PowerPoint、PowerPoint Online、Word 和 Word Online</td></tr><tr><td><b>Office.CoercionType.Matrix</b> (陣列的陣列)</td><td>僅限 Excel、Word 和 Word Online</td></tr><tr><td><b>Office.CoercionType.Table</b> ([TableData](../../reference/shared/tabledata.md) 物件)</td><td>僅限 Access、Excel、Word 和 Word Online</td></tr><tr><td><b>Office.CoercionType.Html</b></td><td>僅限 Word。</td></tr><tr><td><b>Office.CoercionType.Ooxml</b> (Office Open XML)</td><td>僅限 Word 和 Word Online</td></tr><tr><td><b>Office.CoercionType.SlideRange</b></td><td>僅限 PowerPoint 和 PowerPoint Online</td></tr></table>|要傳回的資料結構類型。必要。||
-| _options_|**物件**<br/><table><tr><td><i>valueFormat</i></td><td><b>[ValueFormat](../../reference/shared/valueformat-enumeration.md)</b></td><td>指定是否要傳回結果，包含其已格式化或未格式化的數字或日期值。</td><td></td></tr><tr><td><i>filterType</i></td><td>[FilterType](../../reference/shared/filtertype-enumeration.md)</td><td>指定擷取資料時是否要套用篩選。選擇性。</td><td>此參數在 Word 文件中會予以忽略。</td></tr><tr><td><i>asyncContext</i></td><td><b>array</b>、<b>boolean</b>、<b>null</b><b>number</b>,  <b>object</b>、<b>string</b> 或 <b>undefined</b></td><td>在 <b>AsyncResult</b> 物件中傳回之任何類型的使用者定義項目不會有任何改變。</td><td></td></tr></table>|指定下列任何一項[選擇性參數](../../docs/develop/asynchronous-programming-in-office-add-ins.md#passing-optional-parameters-to-asynchronous-methods)||
-| _callback_|**物件**|回呼傳回時所叫用的函數，其唯一的參數為 **AsyncResult** 類型。||
+| _coercionType_|[CoercionType](../../reference/shared/coerciontype-enumeration.md)<br/><table><tr><td></td><td><b>主應用程式支援</b></td></tr><tr><td><b>Office.CoercionType.Text</b> (字串)</td><td>僅限 Excel、Excel Online、PowerPoint、PowerPoint Online、Word 和 Word Online</td></tr><tr><td><b>Office.CoercionType.Matrix</b> (陣列的陣列)</td><td>僅限 Excel、Word 和 Word Online</td></tr><tr><td><b>Office.CoercionType.Table</b> ([TableData](../../reference/shared/tabledata.md) 物件)</td><td>僅限 Access、Excel、Word 和 Word Online</td></tr><tr><td><b>Office.CoercionType.Html</b></td><td>僅限 Word。</td></tr><tr><td><b>Office.CoercionType.Ooxml</b> (Office Open XML)</td><td>僅限 Word 和 Word Online</td></tr><tr><td><b>Office.CoercionType.SlideRange</b></td><td>僅限 PowerPoint 和 PowerPoint Online</td></tr></table>|要傳回的資料結構類型。必要。||
+| _options_|**object**<br/><table><tr><td><i>valueFormat</i></td><td><b>[ValueFormat](../../reference/shared/valueformat-enumeration.md)</b></td><td>指定是否要傳回結果，包含其已格式化或未格式化的數字或日期值。</td><td></td></tr><tr><td><i>filterType</i></td><td>[FilterType](../../reference/shared/filtertype-enumeration.md)</td><td>指定擷取資料時是否要套用篩選。選用。</td><td>此參數在 Word 文件中會予以忽略。</td></tr><tr><td><i>asyncContext</i></td><td><b>array</b>、<b>boolean</b>、<b>null</b><b>number</b>,  <b>object</b>、<b>string</b> 或 <b>undefined</b></td><td>在 <b>AsyncResult</b> 物件中傳回之任何類型的使用者定義項目不會有任何改變。</td><td></td></tr></table>|指定下列任何一項[選擇性參數](../../docs/develop/asynchronous-programming-in-office-add-ins.md#passing-optional-parameters-to-asynchronous-methods)||
+| _callback_|**object**|回呼傳回時所叫用的函數，其唯一的參數為 **AsyncResult** 類型。||
 
-## 回呼值
+## <a name="callback-value"></a>回呼值
 
 傳遞至 _callback_ 參數的函數執行時，該函數會收到 [AsyncResult](../../reference/shared/asyncresult.md) 物件，您可以從回呼函數的唯一參數存取該物件。
 
@@ -31,14 +31,14 @@ Office.context.document.getSelectedDataAsync(coercionType [, options], callback)
 
 
 
-|**屬性**|**用途**|
+|**屬性**|**用於...**|
 |:-----|:-----|
 |[AsyncResult.value](../../reference/shared/asyncresult.value.md)|存取目前選擇中的值，其會透過您使用 _coercionType_ 參數指定的資料結構或格式傳回。(如需有關資料強制型轉的詳細資訊，請參閱**註解**。)|
 |[AsyncResult.status](../../reference/shared/asyncresult.status.md)|判定作業成功或失敗。|
 |[AsyncResult.error](../../reference/shared/asyncresult.error.md)|作業失敗時，存取提供錯誤資訊的 [Error](../../reference/shared/error.md) 物件。|
 |[AsyncResult.asyncContext](../../reference/shared/asyncresult.asynccontext.md)|存取您的使用者定義**物件**或值 (如果您傳遞了其中一項做為 _asyncContext_ 參數)。|
 
-## 備註
+## <a name="remarks"></a>備註
 
 在工作窗格或內容增益集，使用 **getSelectedDataAsync** 方法撰寫指令碼，以從使用者在文件、試算表、簡報或專案中的選擇讀取資料。例如，使用者在 Word 文件中選取內容之後，您可以使用 **getSelectedDataAsync** 方法以讀取該選擇，然後將其提交至 Web 服務，做為查詢或一些其他作業。
 
@@ -61,7 +61,7 @@ Office.context.document.getSelectedDataAsync(coercionType [, options], callback)
 如果選擇範圍的資料結構不符合指定的 _coercionType_，則 **getSelectedDataAsync** 方法將嘗試強制轉型資料至該類型或結構。如果選擇範圍無法強制轉型至您指定的 **Office.CoercionType**，則 **AsyncResult.status** 屬性會傳回 `"failed"`。
 
 
-## 範例
+## <a name="example"></a>範例
 
 若要讀取目前選擇範圍的值，您需要寫入讀取選擇範圍的回呼函數。下列範例顯示作法：
 
@@ -99,7 +99,7 @@ function write(message){
 
 
 
-## 支援詳細資料
+## <a name="support-details"></a>支援詳細資料
 
 
 下列矩陣中的大寫 Y，表示在相對應的 Office 主應用程式中支援此方法。空白儲存格表示 Office 主應用程式不支援此方法。
@@ -126,7 +126,7 @@ function write(message){
 |**文件庫**|Office.js|
 |**命名空間**|Office|
 
-## 支援歷程記錄
+## <a name="support-history"></a>支援歷程記錄
 
 
 

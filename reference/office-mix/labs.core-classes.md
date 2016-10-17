@@ -1,5 +1,5 @@
 
-# Labs.Core 類別
+# <a name="labs.core-classes"></a>Labs.Core 類別
 **LabsJS.Labs.Core** 模組中的類別
 
  _**適用於︰**Office 的應用程式 | Office 增益集 | Office Mix | PowerPoint_

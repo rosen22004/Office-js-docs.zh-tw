@@ -1,5 +1,5 @@
 
-# Labs.Components.ActivityComponentInstance
+# <a name="labs.components.activitycomponentinstance"></a>Labs.Components.ActivityComponentInstance
 
  _**適用於︰**Office 的應用程式 | Office 增益集 | Office Mix | PowerPoint_
 
@@ -10,19 +10,19 @@ class ActivityComponentInstance extends Labs.ComponentInstance<Components.Activi
 ```
 
 
-## 屬性
+## <a name="properties"></a>屬性
 
 
-|**名稱**|**說明**|
+|**名稱**|**描述**|
 |:-----|:-----|
 | `public var component: Components.IActivityComponentInstance`|這個類別表示的基礎 [Labs.Components.IActivityComponentInstance](../../reference/office-mix/labs.components.iactivitycomponentinstance.md)|
 
-## 方法
+## <a name="methods"></a>方法
 
 
 
 
-### 建構函式
+### <a name="constructor"></a>建構函式
 
  `function constructor(component: Components.IActivityComponentInstance)`
 
@@ -31,11 +31,11 @@ class ActivityComponentInstance extends Labs.ComponentInstance<Components.Activi
  **參數**
 
 
-|**名稱**|**說明**|
+|**名稱**|**描述**|
 |:-----|:-----|
 | _component_|**IActivityComponentInstance**，用來從這個類別建立這個類別。|
 
-### buildAttempt
+### <a name="buildattempt"></a>buildAttempt
 
  `public function buildAttempt(createAttemptAction: Labs.Core.IAction): Components.ActivityComponentAttempt`
 
@@ -44,6 +44,6 @@ class ActivityComponentInstance extends Labs.ComponentInstance<Components.Activi
  **參數**
 
 
-|**名稱**|**說明**|
+|**名稱**|**描述**|
 |:-----|:-----|
 | _createAttemptResult_|建立嘗試動作的結果。|

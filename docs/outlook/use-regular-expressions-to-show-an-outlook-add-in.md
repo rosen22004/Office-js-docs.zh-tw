@@ -1,5 +1,5 @@
 
-# 使用規則運算式的啟用規則來顯示 Outlook 增益集
+# <a name="use-regular-expression-activation-rules-to-show-an-outlook-add-in"></a>使用規則運算式的啟用規則來顯示 Outlook 增益集
 
 您可以指定規則運算式規則讓 Outlook 增益集在讀取案例中啟動 - 當使用者在讀取窗格或檢查程式中檢視郵件或約會時，Outlook 會評估規則運算式規則，來決定它是否應該啟動增益集。使用者在撰寫項目時，Outlook 不會評估這些規則。另外還有其他 Outlook 不會啟動增益集的案例，例如，受資訊版權管理 (IRM) 保護或在 [垃圾郵件] 資料夾中的項目。如需詳細資訊，請參閱 [Outlook 增益集的啟用規則](../outlook/manifests/activation-rules.md)。
 
@@ -7,7 +7,7 @@
 
 
 
-|**字元**|**說明**|**要使用的逸出序列**|
+|**字元**|**描述**|**要使用的逸出序列**|
 |:-----|:-----|:-----|
 |"|雙引號|&amp;quot;|
 |&amp;|& 符號|&amp;amp;|
@@ -15,21 +15,21 @@
 |<|小於符號|&amp;lt;|
 |>|大於符號|&amp;gt;|
 
-## ItemHasRegularExpressionMatch 規則
+## <a name="itemhasregularexpressionmatch-rule"></a>ItemHasRegularExpressionMatch 規則
 
 
 根據受支援屬性的特定值，**ItemHasRegularExpressionMatch** 規則對於控制增益集啟動很有幫助。**ItemHasRegularExpressionMatch** 規則具有下列屬性。
 
 
 
-|**屬性名稱**|**說明**|
+|**屬性名稱**|**描述**|
 |:-----|:-----|
 |**RegExName**|指定規則運算式篩選的名稱，如此還可以在增益集的程式碼中參考此運算式。|
 |**RegExValue**|指定要評估的規則運算式，評估後會決定是否應顯示增益集。|
 |**PropertyName**|指定規則運算式會評估的屬性名稱。允許的值為 **BodyAsHTML**、**BodyAsPlaintext**、**SenderSMTPAddress** 和 **Subject**。如果您指定 **BodyAsHTML**，則只要項目本文是 HTML，Outlook 會套用規則運算式，否則 Outlook 不會傳回該規則運算式任何符項目。因為約會永遠會以 RTF 格式儲存，指定 **BodyAsHTML** 的規則運算式不會符合約會項目本文中的任何字串。如果您指定 **BodyAsPlaintext**，則 Outlook 會一律在項目本文上套用規則運算式。|
 |**IgnoreCase**|指定當比對由 **RegExName**所指定的規則運算式時，是否要忽略大小寫。|
 
-### 在規則中使用規則運算式的最佳做法
+### <a name="best-practices-for-using-regular-expressions-in-rules"></a>在規則中使用規則運算式的最佳做法
 
 當您使用規則運算式時，請特別注意下列項目︰
 
@@ -38,7 +38,7 @@
     
 - 一個瀏覽器上傳回的純文字本文可能會與另一個瀏覽器上的有細微差異。如果您使用 [ItemHasRegularExpressionMatch](http://msdn.microsoft.com/en-us/library/bfb726cd-81b0-a8d5-644f-2ca90a5273fc%28Office.15%29.aspx) 規則與 **BodyAsPlaintext** 做為 **PropertyName** 屬性，請測試您的增益集支援的所有瀏覽器上的規則運算式。
     
-    由於不同瀏覽器會使用不同的方式，以取得所選項目的文字內文，請務必確定您的規則運算式支援這些內文文字間可能出現的細微差別。 例如，某些瀏覽器 (例如 Internet Explorer 9) 使用 DOM 屬性 **innerText**，而其他瀏覽器 (例如 Firefox) 使用 **.textContent()** 方法取得項目文字內文。 此外，不同的瀏覽器可能會以不同方式傳回換行︰Internet Explorer 用 "\r\n"，而 Firefox 和 Chrome 用 "\n"。 如需詳細資訊，請參閱 [W3C DOM 相容性 - HTML](http://www.quirksmode.org/dom/w3c_html.mdl#t07)。
+    由於不同瀏覽器會使用不同的方式，以取得所選項目的文字內文，請務必確定您的規則運算式支援這些內文文字間可能出現的細微差別。例如，某些瀏覽器 (例如 Internet Explorer 9) 使用 DOM 屬性 **innerText**，而其他瀏覽器 (例如 Firefox) 使用 **.textContent()** 方法取得項目文字內文。此外，不同的瀏覽器可能會以不同方式傳回換行︰Internet Explorer 用 "\r\n"，而 Firefox 和 Chrome 用 "\n"。如需詳細資訊，請參閱 [W3C DOM 相容性 - HTML](http://www.quirksmode.org/dom/w3c_html.mdl#t07)。
     
 - 項目的 HTML 本文在 Outlook 豐富型用戶端與 Outlook Web App 或裝置用 OWA 之間稍有不同。仔細定義您的規則運算式。舉例來說，請考慮下列使用於 **ItemHasRegularExpressionMatch** 規則與 **BodyAsHTML** 中做為 **PropertyName** 屬性值的規則運算式：
     
@@ -65,7 +65,7 @@
 - 依據套用規則運算式的主應用程式、裝置類型或屬性，當設計規則運算式做為啟用規則時，您需要注意每一個主機的其他最佳做法與限制。如需詳細資訊，請參閱[適用於 Outlook 增益集的 JavaScript API 和啟動的限制](../outlook/limits-for-activation-and-javascript-api-for-outlook-add-ins.md)
     
 
-### 範例
+### <a name="examples"></a>範例
 
 只要寄件者的 SMTP 電子郵件地址符合「@contoso」，無論大寫或小寫字元，下列 **ItemHasRegularExpressionMatch** 規則就會啟用增益集。
 
@@ -106,7 +106,7 @@
 ```
 
 
-## ItemHasKnownEntity 規則
+## <a name="itemhasknownentity-rule"></a>ItemHasKnownEntity 規則
 
 
 
@@ -120,14 +120,14 @@
 
 
 
-|**屬性名稱**|**說明**|
+|**屬性名稱**|**描述**|
 |:-----|:-----|
 |**EntityType**|指定規則若要評估為 **true**，所必須找到的實體類型。使用多個規則來指定多個實體類型。|
 |**RegExFilter**|指定規則運算式，它會進一步篩選由 **EntityType** 所指定之實體的執行個體。|
 |**FilterName**|指定由 **RegExFilter** 所指定的規則運算式篩選的名稱，如此之後還可以由程式碼參考此篩選。|
 |**IgnoreCase**|指定當比對由 **RegExFilter** 所指定的規則運算式時，是否要忽略大小寫。|
 
-### 範例
+### <a name="examples"></a>範例
 
 每當目前項目的主旨或本文中有 URL，且 URL 包含字串「youtube」(無論字串的大小寫) 時，下列 **ItemHasKnownEntity** 規則會啟動增益集。
 
@@ -141,7 +141,7 @@
 ```
 
 
-## 在程式碼中使用規則運算式的結果
+## <a name="using-regular-expression-results-in-code"></a>在程式碼中使用規則運算式的結果
 
 
 您可以在目前的項目上使用下列方法取得規則運算式的相符項目︰
@@ -159,7 +159,7 @@
  >**附註**  Outlook 豐富型用戶端不會在陣列中以任何特定順序傳回相符項目。此外，您不應該假設 Outlook 豐富型用戶端在此陣列中會以與 Outlook Web App 或裝置用 OWA 相同的順序傳回相符項目，即使當您在相同信箱中的相同項目的每個用戶端上執行相同的增益集。如需了解在 Outlook 豐富型用戶端與 Outlook Web App 或裝置用 OWA 之間處理規則運算式的其他差異，請參閱[適用於 Outlook 增益集的 JavaScript API 和啟動的限制](../outlook/limits-for-activation-and-javascript-api-for-outlook-add-ins.md)。
 
 
-### 範例
+### <a name="examples"></a>範例
 
 下列是規則集合的範例，其中包含 **ItemHasRegularExpressionMatch** 規則與名為 `videoURL`的規則運算式。
 
@@ -227,7 +227,7 @@ var suggestions = Office.context.mailbox.item.getFilteredEntitiesByName(CampSugg
 ```
 
 
-## 其他資源
+## <a name="additional-resources"></a>其他資源
 
 
 
@@ -239,5 +239,6 @@ var suggestions = Office.context.mailbox.item.getFilteredEntitiesByName(CampSugg
     
 - [使 Outlook 項目中的字串與已知的實體相符](../outlook/match-strings-in-an-item-as-well-known-entities.md)
     
-- [在 .NET Framework 中使用規則運算式的最佳做法](http://msdn.microsoft.com/en-us/library/618e5afb-3a97-440d-831a-70e4c526a51c%28Office.15%29.aspx)
+- 
+  [在 .NET Framework 中使用規則運算式的最佳做法](http://msdn.microsoft.com/en-us/library/618e5afb-3a97-440d-831a-70e4c526a51c%28Office.15%29.aspx)
     

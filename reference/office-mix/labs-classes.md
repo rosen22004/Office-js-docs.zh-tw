@@ -1,5 +1,5 @@
 
-# 實驗室類別
+# <a name="labs-classes"></a>實驗室類別
 實驗室模組中的 JavaScript 類別。
 
  _**適用於︰**Office 的應用程式 | Office 增益集 | Office Mix | PowerPoint_
@@ -9,7 +9,7 @@
 ## 
 
 
-|**名稱**|**說明**|
+|**名稱**|**描述**|
 |:-----|:-----|
 |[Labs.ComponentInstanceBase](../../reference/office-mix/labs.componentinstancebase.md)|元件執行個體初始化的基底類別。|
 |[Labs.ComponentInstance](../../reference/office-mix/labs.componentinstance.md)|代表元件的執行個體，為使用者在執行階段的指定元件具現化。物件包含實驗室的特定執行之元件的轉譯檢視。|

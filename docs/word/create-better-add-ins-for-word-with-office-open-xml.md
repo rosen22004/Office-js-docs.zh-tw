@@ -1,12 +1,11 @@
 
-# 使用 Office Open XML 為 Word 建立更佳的增益集
+# <a name="create-better-add-ins-for-word-with-office-open-xml"></a>使用 Office Open XML 為 Word 建立更佳的增益集
 
  **提供者：**Stephanie Krieger，Microsoft Corporation | Juan Balmori Labra，Microsoft Corporation
 
 如果您建置 Office 增益集以在 Word 中執行，您可能已知道 JavaScript API for Office (Office.js) 提供數種格式來讀取及寫入文件內容。這些稱為強制型轉類型，它們包含純文字、表格、HTML 及 Office Open XML。
 
-因此當您要新增豐富內容至文件時，例如影像、格式化表格、圖表或甚至只是格式化文字，您的選擇是什麼？ 您可以使用 HTML 來插入某些類型的豐富內容，例如圖片。 根據您的情況，HTML 強制型轉可能有缺點，例如限制內容可用的格式化和定位選項。
-由於 Office Open XML 是撰寫 Word 文件 (例如.docx 和.dotx) 的語言，您可以使用使用者可以套用的幾乎任何類型的格式設定，插入使用者可新增至 Word 文件之幾乎任何類型的內容。 判斷您需要完成的 Office Open XML 標記比您想像的更容易。
+因此當您要新增豐富內容至文件時，例如影像、格式化表格、圖表或甚至只是格式化文字，您的選擇是什麼？您可以使用 HTML 來插入某些類型的豐富內容，例如圖片。根據您的情況，HTML 強制型轉可能有缺點，例如限制內容可用的格式化和定位選項。由於 Office Open XML 是撰寫 Word 文件 (例如.docx 和.dotx) 的語言，您可以使用使用者可以套用的幾乎任何類型的格式設定，插入使用者可新增至 Word 文件之幾乎任何類型的內容。判斷您需要完成的 Office Open XML 標記比您想像的更容易。
 
  >**附註**  Office Open XML 也是 PowerPoint 與 Excel (以及 Office 2013、Visio) 文件所使用的語言。不過，目前您只能在針對 Word 建立的 Office 增益集中將內容強制轉型為 Office Open XML。如需有關 Office Open XML 的詳細資訊，包括完整語言參考文件，請參閱[其他資源](../../docs/word/create-better-add-ins-for-word-with-office-open-xml.md#additional-resources)。
 
@@ -15,28 +14,28 @@
  >**備註**  在本文中，字詞**內容類型**和**豐富內容**是指您可以插入 Word 文件的豐富內容類型。
 
 
-**圖 1. 具有直接格式設定的文字。**
+**圖 1.具有直接格式設定的文字。**
 
 
 ![套用直接格式設定的文字。](../../images/off15app_CreateWdAppUsingOOXML_fig01.png)
 
 您可以使用直接格式設定，準確指定文字的外觀，不論使用者文件中的現有格式。
 
-**圖 2. 使用樣式格式化的文字。**
+**圖 2.使用樣式格式化的文字。**
 
 
 ![以段落樣式格式化文字。](../../images/off15app_CreateWdAppUsingOOXML_fig02.png)
 
 您可以使用樣式來自動調整您插入使用者文件中之文字的外觀。
 
-**圖 3. 簡單的影像。**
+**圖 3.簡單的影像。**
 
 
 ![標誌影像。](../../images/off15app_CreateWdAppUsingOOXML_fig03.png)
 
 您可以使用相同的方法來插入任何 Office 支援的影像格式。
 
-**圖 4. 使用圖片樣式及效果格式化的影像。**
+**圖 4.使用圖片樣式及效果格式化的影像。**
 
 
 ![Word 2013 中格式化的影像。](../../images/off15app_CreateWdAppUsingOOXML_fig04.png)
@@ -44,67 +43,61 @@
 
 將高品質格式設定和效果新增至您的影像需要的標記比您預期的還要少。
 
-**圖 5. 內容控制項。**
+** 圖 5.內容控制項。**
 
 
-![Text within a bound content control.](../../images/off15app_CreateWdAppUsingOOXML_fig05.png)
+![繫結的內容控制項內的文字。](../../images/off15app_CreateWdAppUsingOOXML_fig05.png)
 
 您可以對您的增益集使用內容控制項，以在指定 (繫結) 的位置新增內容，而不是在選取範圍新增內容。
 
-**圖 6. 使用文字藝術師格式設定的文字方塊。**
+**圖 6.使用文字藝術師格式設定的文字方塊。**
 
 
 ![以文字藝術師文字效果格式化文字。](../../images/off15app_CreateWdAppUsingOOXML_fig06.png)
 
 文字效果可用於 Word 中文字方塊內的文字 (如下所示)，或用於一般本文文字。
 
-**圖 7. 圖形。**
+**圖 7.圖形。**
 
 
 ![Word 2013 中的 Office 2013 繪製圖形。](../../images/off15app_CreateWdAppUsingOOXML_fig07.png)
 
 您可以插入內建或自訂繪圖圖形，包含或不含文字和格式設定效果。
 
-**圖 8. 表格與直接格式設定。**
+**圖 8.具有直接格式設定的表格。**
 
 
 ![Word 2013 中的格式化表格。](../../images/off15app_CreateWdAppUsingOOXML_fig08.png)
 
 您可以包含文字格式設定、框線、網底、儲存格大小，或您需要的任何表格格式設定。
 
-**圖 9. 使用表格樣式格式化的表格。**
+**圖 9.使用表格樣式格式化的表格。**
 
 
 ![Word 2013 中的格式化表格。](../../images/off15app_CreateWdAppUsingOOXML_fig09.png)
 
 您可以使用內建或自訂表格樣式，就像對文字使用段落樣式一樣簡單。
 
-**圖 10. SmartArt 圖表。**
+**圖 10.SmartArt 圖表。**
 
 
 ![Word 2013 中的動態 SmartArt 圖表。](../../images/off15app_CreateWdAppUsingOOXML_fig10.png)
 
 Office 2013 提供各種 SmartArt 圖表版面配置 (您可以使用 Office Open XML 建立您自己的圖表)。
 
-**圖 11. 圖表。**
+**圖 11.圖表。**
 
 
 ![Word 2013 中的圖表。](../../images/off15app_CreateWdAppUsingOOXML_fig11.png)
 
-您可以插入 Excel 圖表做為 Word 文件中的即時圖表，這也表示您可以在 Word 的增益集中使用它們。
-如之前範例所示，您可以使用 Office Open XML 強制型轉來插入基本上是任何類型的內容，使用者可以將該內容插入自己的文件。
-有兩個簡單的方法可取得您所需要的 Office Open XML 標記。 在空白的 Word 2013 文件中加入豐富內容，然後以 Word XML 文件格式儲存檔案，或是搭配使用測試增益集與 [getSelectedDataAsync](http://msdn.microsoft.com/en-us/library/fp142294.aspx) 方法來抓取標記。 這兩種方法基本上提供相同的結果。
+您可以插入 Excel 圖表做為 Word 文件中的即時圖表，這也表示您可以在 Word 的增益集中使用它們。如之前範例所示，您可以使用 Office Open XML 強制型轉來插入基本上是任何類型的內容，使用者可以將該內容插入自己的文件。有兩個簡單的方法可取得您所需要的 Office Open XML 標記。在空白的 Word 2013 文件中加入豐富內容，然後以 Word XML 文件格式儲存檔案，或是搭配使用測試增益集與 [getSelectedDataAsync](http://msdn.microsoft.com/en-us/library/fp142294.aspx) 方法來抓取標記。這兩種方法基本上提供相同的結果。
 
     
  >**備註**  Office Open XML 文件實際上是檔案的壓縮封裝，代表文件內容。將檔案儲存為 Word XML 文件格式可讓您將整個 Office Open XML 封裝扁平化至一個 XML 檔案，這個檔案也就是當您使用 **getSelectedDataAsync** 擷取 Office Open XML 標記時所取得的檔案。
 
-如果您從 Word 將檔案儲存至 XML 格式，請注意，在 [另存新檔] 對話方塊的 [另存類型] 清單下有 .xml 格式檔案的兩個選項。 務必選擇 **Word XML 文件** 而不是 Word 2003 選項。
-下載名為 [Word-Add-in-Get-Set-EditOpen-XML](https://github.com/OfficeDev/Word-Add-in-Get-Set-EditOpen-XML) 的程式碼範例，您可以做為工具來擷取和測試您的標記。
-這是它的所有功能？ 嗯，不完全正確。 是的，對於許多案例，您可以使用上述任一方法來使用完整、簡維的 Office Open XML 結果，且其可運作。 好消息是，您可能不需要使用該標記的大部分。
-如果您是第一次看到 Office Open XML 標記的眾多增益集開發人員之一，嘗試理解大量的標記的最簡單內容似乎很困難，但不一定如此。
-在這個主題中，我們將使用從 Office 增益集開發人員社群中聽到的一些常見案例，告訴您簡化 Office Open XML 以便在增益集中使用的技巧。 我們將探討稍早顯示的某些類型的內容之標記，以及最小化 Office Open XML 承載所需要的資訊。 也會介紹您將豐富內容插入使用中選取範圍上文件所需要的程式碼，以及如何使用 Office Open XML 與繫結物件來新增或取代指定位置上的內容。
+如果您從 Word 將檔案儲存至 XML 格式，請注意，在 [另存新檔] 對話方塊的 [另存類型] 清單下有 .xml 格式檔案的兩個選項。務必選擇 **Word XML 文件** 而不是 Word 2003 選項。下載名為 [Word-Add-in-Get-Set-EditOpen-XML](https://github.com/OfficeDev/Word-Add-in-Get-Set-EditOpen-XML) 的程式碼範例，您可以做為工具來擷取和測試您的標記。這是它的所有功能？嗯，不完全正確。是的，對於許多案例，您可以使用上述任一方法來使用完整、簡維的 Office Open XML 結果，且其可運作。好消息是，您可能不需要使用該標記的大部分。如果您是第一次看到 Office Open XML 標記的眾多增益集開發人員之一，嘗試理解大量的標記的最簡單內容似乎很困難，但不一定如此。在這個主題中，我們將使用從 Office 增益集開發人員社群中聽到的一些常見案例，告訴您簡化 Office Open XML 以便在增益集中使用的技巧。我們將探討稍早顯示的某些類型的內容之標記，以及最小化 Office Open XML 承載所需要的資訊。也會介紹您將豐富內容插入使用中選取範圍上文件所需要的程式碼，以及如何使用 Office Open XML 與繫結物件來新增或取代指定位置上的內容。
 
-## 瀏覽 Office Open XML 文件封裝
+## <a name="exploring-the-office-open-xml-document-package"></a>瀏覽 Office Open XML 文件封裝
 
 
 當您使用[getSelectedDataAsync](http://msdn.microsoft.com/en-us/library/fp142294.aspx) 以針對內容的選取範圍擷取 Office Open XML (或當您將文件儲存為 Word XML 文件格式時)，您所取得的不只是描述您選取內容的標記；它是整份文件，具有您幾乎完全不需要的許多選項和設定。事實上，如果您從包含工作窗格增益集的文件使用該方法，您取得的標記甚至會包含工作窗格。
@@ -114,14 +107,14 @@ Office 2013 提供各種 SmartArt 圖表版面配置 (您可以使用 Office Ope
 例如，假設您想插入具有直接格式設定的文字段落，如先前的「圖 1.」中所示。當您使用 **getSelectedDataAsync** 針對格式化文字取得 Office Open XML 時，您會看到大量的標記。該標記包括代表整個文件的封裝元素，其中包含數個組件 (一般是指文件組件，或者在 Office Open XML 中，是指封裝組件)，如「圖 13.」中所示。每個組件代表封裝中的個別檔案。
 
 
- >**提示**  您可以在 [記事本] 之類的文字編輯器中編輯 Office Open XML 標記。 如果您在 Visual Studio 2015 中開啟它，您可以使用 [編輯 >進階> 格式文件]**** (Ctrl+K、Ctrl+D) 以格式化封裝，進行更簡易的編輯。 然後您可以摺疊或展開它們的文件組件或區段，如「圖 12.」中所示，以更簡易地檢閱和編輯 Office Open XML 封裝的內容。 每個文件組件是以 **pkg:part** 標記開頭。
+ >**提示**  您可以在 [記事本] 之類的文字編輯器中編輯 Office Open XML 標記。如果您在 Visual Studio 2015 中開啟它，您可以使用 [編輯 >進階 >格式文件] (Ctrl+K、Ctrl+D) 以格式化封裝，進行更簡易的編輯。然後您可以摺疊或展開它們的文件組件或區段，如「圖 12.」中所示，以更簡易地檢閱和編輯 Office Open XML 封裝的內容。每個文件組件是以 **pkg:part** 標記開頭。
 
 
-**圖 12. 摺疊及展開封裝組件以在 Visual Studio 2015 中更輕鬆地編輯**
+**圖 12.摺疊及展開封裝組件以在 Visual Studio 2015 中更輕鬆地編輯**
 
 ![套件部分的 Office Open XML 程式碼片段。](../../images/off15app_CreateWdAppUsingOOXML_fig12.png)
 
-**圖 13. 基本 Word Office Open XML 文件封裝中包含的組件**
+**圖 13.基本 Word Office Open XML 文件封裝中包含的組件**
 
 ![套件部分的 Office Open XML 程式碼片段。](../../images/off15app_CreateWdAppUsingOOXML_fig13.png)
 
@@ -152,13 +145,13 @@ Office 2013 提供各種 SmartArt 圖表版面配置 (您可以使用 Office Ope
 - 在「圖 1」範例中，文字格式設定是直接套用 (也就是每個字型及段落格式設定會分別套用)。但是，如果您使用如先前「圖 2」所示的樣式 (例如，如果您想要讓文字自動採用目的文件的 [標題 1] 樣式的格式設定)，則需要 styles.xml 組件部分以及其關係定義。如需詳細資訊，請參閱主題章節＜[新增使用其他 Office Open XML 組件的物件](../../docs/word/create-better-add-ins-for-word-with-office-open-xml.md#adding-objects-that-use-additional-office-open-xml-parts)＞。
     
 
-## 在選取範圍插入文件內容
+## <a name="inserting-document-content-at-the-selection"></a>在選取範圍插入文件內容
 
 
 讓我們看看對於「圖 1」中所示的格式化文字範例所需的最小 Office Open XML 標記，和在文件中的作用選取範圍插入它所需的 JavaScript。
 
 
-### 簡化的 Office Open XML 標記
+### <a name="simplified-office-open-xml-markup"></a>簡化的 Office Open XML 標記
 
 我們已編輯如下所示的 Office Open XML 範例，如先前的章節所述，只留下必要的文件組件和每個組件內的必要元素。我們會在主題的下一節中逐步解說如何自行編輯標記 (以及多加說明其餘的片段)。
 
@@ -200,10 +193,10 @@ Office 2013 提供各種 SmartArt 圖表版面配置 (您可以使用 Office Ope
 ```
 
 
- >**附註**  如果您將這裡顯示的標記以及檔案頂端的版本和 mso-application 的 XML 宣告標記 (如「圖 13」所示) 新增至 XML 檔案，您可以在 Word 中將其開啟為 Word 文件。 或者，不使用這些標記，您仍然可以使用 Word 中的 [檔案 > 開啟] ****開啟。 您會在 Word 2013 的標題列上看到 [相容模式]****，因為您已移除設定，該設定會告知 Word 這是 2013 文件。 因為您是將此標記新增至現有 Word 2013 文件，所以完全不會影響您的內容。
+ >**附註**  如果您將這裡顯示的標記以及檔案頂端的版本和 mso-application 的 XML 宣告標記 (如「圖 13」所示) 新增至 XML 檔案，您可以在 Word 中將其開啟為 Word 文件。或者，不使用這些標記，您仍然可以使用 Word 中的 [檔案 > 開啟] 開啟。您會在 Word 2013 的標題列上看到 [相容模式]，因為您已移除設定，該設定會告知 Word 這是 2013 文件。因為您是將此標記新增至現有 Word 2013 文件，所以完全不會影響您的內容。
 
 
-### 用於使用 setSelectedDataAsync 的 JavaScript
+### <a name="javascript-for-using-setselecteddataasync"></a>用於使用 setSelectedDataAsync 的 JavaScript
 
 
 一旦您將前述的 Office Open XML 儲存為可以從您的解決方案存取的 XML 檔案，您可以使用下列函數，使用 Office Open XML 強制型轉在文件中設定格式化文字內容。 
@@ -230,7 +223,7 @@ function writeContent() {
 ```
 
 
-## 建立自己的標記：最佳作法
+## <a name="creating-your-own-markup:-best-practices"></a>建立自己的標記：最佳作法
 
 
 讓我們更進一步來看看您插入先前格式化文字範例所需的標記。
@@ -306,7 +299,7 @@ function writeContent() {
 
 - 開頭的 **w:document** 標記包含數個命名空間 (**xmlns**) 清單。許多此類命名空間是指特定類型的內容，您只有在它們與您的內容相關時才需要它們。
     
-    請注意，在整個文件部分的標記前置詞是參照命名空間。 在這個範例中，在 document.xml 組件標記中唯一使用的前置詞是 **w:**，因此開頭 **w:document** 標記中唯一需要保留的命名空間是 **xmlns:w**。
+    請注意，在整個文件部分的標記前置詞是參照命名空間。在這個範例中，在 document.xml 組件標記中唯一使用的前置詞是 **w:**，因此開頭 **w:document** 標記中唯一需要保留的命名空間是 **xmlns:w**。
     
 
  >**提示**  如果您正在 Visual Studio 2015 中編輯標記，在您於任何組件中刪除命名空間之後，尋找該組件的所有標記。如果您已經移除標記所需的命名空間，您會在受影響標記的相關前置詞上看到紅色彎曲底線。如果您移除 **xmlns:mc** 命名空間，您也必須移除命名空間清單前面的 **mc:Ignorable** 屬性。
@@ -329,11 +322,11 @@ function writeContent() {
 - 文件本文的最後一項是 **w:sectPr** 標記或區段屬性。此標記包含邊界和頁面方向等設定。您使用 **setSelectedDataAsync** 插入的內容預設需要目的文件中的作用中區段屬性。因此，除非您的內容包含分節符號 (在此情況下您會看到多個 **w:sectPr** 標記)，您可以刪除此標記。
     
 
-**圖 14. document.xml 中的常見標記如何與 Word 文件的內容和版面配置相關聯。**
+**圖 14.document.xml 中的常見標記如何與 Word 文件的內容和版面配置相關聯。**
 
 ![Word 文件中的 Office Open XML 元素。](../../images/off15app_CreateWdAppUsingOOXML_fig14.png)
     
-**提示：**在您所建立的標記中，您可能會在數個標記中看到包括 **w:rsid** 的其他屬性，而在本主題使用的範例中看不到。 這些是修訂版識別碼。 它們使用於合併文件的 Word 功能中，而且預設會開啟。 您在使用增益集插入的標記中永遠不會用到它們，且關閉它們可得到更簡潔的標記。 您可以輕易地移除現有的 RSID 標記或停用功能 (如下列程序所述)，讓它們不會加入至新內容的標記。
+**提示：**在您所建立的標記中，您可能會在數個標記中看到包括 **w:rsid** 的其他屬性，而在本主題使用的範例中看不到。這些是修訂版識別碼。它們使用於合併文件的 Word 功能中，而且預設會開啟。您在使用增益集插入的標記中永遠不會用到它們，且關閉它們可得到更簡潔的標記。您可以輕易地移除現有的 RSID 標記或停用功能 (如下列程序所述)，讓它們不會加入至新內容的標記。
  
 請注意，如果您在 Word 中使用共同撰寫功能 (例如同時與其他人編輯文件的能力)，當完成產生您的增益集的標記時，您應該再次啟用此功能。
    
@@ -347,12 +340,12 @@ function writeContent() {
 
 
 1. 在文件主體中使用插入點，按 **Ctrl+Home** 以移至文件頂端。
-2. 在鍵盤上，按**空白鍵**、**Delete** 鍵、**空白鍵**。 然後，儲存文件。
+2. 在鍵盤上，按**空白鍵**、**Delete** 鍵、**空白鍵**。然後，儲存文件。
 
 從此封裝中移除大部分的標記之後，我們留下插入範例所需的最少標記，如前一節中所示。
 
 
-## 針對不同的內容類型使用同一個 Office Open XML 結構
+## <a name="using-the-same-office-open-xml-structure-for-different-content-types"></a>針對不同的內容類型使用同一個 Office Open XML 結構
 
 
 豐富內容的數個類型只需要先前範例所示的 .rels 和 document.xml 元件，包括內容控制項、Office 繪圖圖形和文字方塊以及表格 (除非樣式套用至表格)。事實上，您可以重複使用相同的已編輯封裝組件，只是針對內容標記更換 document.xml 中的 **body** 內容。
@@ -362,7 +355,7 @@ function writeContent() {
 在繼續之前，讓我們看看這些內容類型的一些要注意的差異，以及如何換成您需要的部分。
 
 
-### 了解 Word 中的 drawingML 標記 (Office 圖形)：後援為何？
+### <a name="understanding-drawingml-markup-(office-graphics)-in-word:-what-are-fallbacks?"></a>了解 Word 中的 drawingML 標記 (Office 圖形)：後援為何？
 
 如果圖案或文字方塊方塊的標記看起來遠比預期的更複雜，這是有原因的。在 Office 2007 版中，我們看到 Office Open XML 格式的引進，以及 PowerPoint 和 Excel 完全採用的新 Office 圖形引擎的引進。在 2007 版本中，Word 只包含該圖形引擎的一部分，採用已更新的 Excel 圖表引擎、SmartArt 圖形和進階的圖片工具。對於圖案和文字方塊，Word 2007 繼續使用舊版的繪圖物件 (VML)。在 2010 版本中，Word 對圖形引擎採取其他步驟，以包含更新的圖形和繪圖工具
 
@@ -376,21 +369,21 @@ function writeContent() {
  >**重要**  當使用文字方塊與繪製圖形時，務必在從 document.xml 移除之前，先仔細檢查命名空間。(或者，如果您要從另一個物件類型重複使用標記，請務必將您先前可能已從 document.xml 移除的任何必要命名空間新增回來)。預設包含在 document.xml 的大部分命名空間是繪圖物件的必要項目。
 
 
-#### 關於圖形位置
+#### <a name="about-graphic-positioning"></a>關於圖形位置
 
 在程式碼範例 [Word-Add-in-Load-and-write-Open-XML](https://github.com/OfficeDev/Word-Add-in-Load-and-write-Open-XML) 和 [Word-Add-in-Get-Set-EditOpen-XML](https://github.com/OfficeDev/Word-Add-in-Get-Set-EditOpen-XML) 中，文字方塊和圖形使用不同類型的文字換行及位置設定。(另請注意這些程式碼範例中的影像範例是使用文字格式設定，將圖形物件放在文字基線上。)
 
 這些程式碼範例中的圖形的位置與頁面的右邊和下方邊界相對。相對位置可讓您更輕鬆地協調使用者未知的文件設定，因為它會調整至使用者的邊界，並且讓因為紙張大小、方向或邊界設定而造成外觀怪異的風險較小。若要在您插入圖形物件時保留相對位置設定，您必須保留段落標記 (w:p)，在該處儲存位置 (在 Word 中稱為錨點)。如果您將內容插入現有段落標記而非納入您自己的標記，您可以保留相同的初始視覺，但是讓位置可以自動調整至使用者的版面配置的許多類型的相對參照可能會遺失。
 
 
-### 使用內容控制項
+### <a name="working-with-content-controls"></a>使用內容控制項
 
 內容控制項是 Word 2013 中的一項重要功能，可以用多種方式大幅提高 Word 中您的增益集的能力，包括讓您能夠在文件的指定位置插入內容而不只是在選取範圍。
 
 在 Word 中，在功能區的 [開發人員] 索引標籤上尋找內容控制項，如「圖 15」中所示。
 
 
-**圖 15. 在 Word 中的 [開發人員] 索引標籤上的 [控制項] 群組。**
+**圖 15.在 Word 中的 [開發人員] 索引標籤上的 [控制項] 群組。**
 
 ![Word 2013 功能區上的內容控制項群組。](../../images/off15app_CreateWdAppUsingOOXML_fig15.png)
 
@@ -398,11 +391,11 @@ Word 中的內容控制項類型包含 RTF 文字、純文字、圖片、建置�
 
 
 
-- 使用 [屬性]**** 命令，如「圖 15」所示，以編輯控制項的標題及設定如隱藏控制項容器的喜好設定。
+- 使用 [屬性] 命令，如「圖 15」所示，以編輯控制項的標題及設定如隱藏控制項容器的喜好設定。
     
-- 啟用 [設計模式]**** 以在控制項中編輯預留位置內容。
+- 啟用 [設計模式] 以在控制項中編輯預留位置內容。
     
-如果您的增益集是與 Word 範本搭配使用，您可以在該範本納入控制項以增強內容的行為。 您也可以在 Word 文件中使用 XML 資料繫結以將內容控制項繫結至資料，例如文件屬性，以輕易完成表單或類似工作。 (在 [快速組件]**** 底下的 [插入]**** 索引標籤上尋找已繫結至 Word 中內建文件屬性的控制項。)
+如果您的增益集是與 Word 範本搭配使用，您可以在該範本納入控制項以增強內容的行為。您也可以在 Word 文件中使用 XML 資料繫結以將內容控制項繫結至資料，例如文件屬性，以輕易完成表單或類似工作。(在 [快速組件] 底下的 [插入] 索引標籤上尋找已繫結至 Word 中內建文件屬性的控制項。)
 
 當您搭配使用內容控制項與您的增益集時，您也會使用不同類型的繫結，大幅擴展您的增益集可以執行的選項。您可以繫結至增益集內的內容控制項，然後將內容寫入繫結而非作用選取範圍。
 
@@ -482,7 +475,7 @@ Word 中的內容控制項類型包含 RTF 文字、純文字、圖片、建置�
 下一節將討論如何在您的 Word 增益集中建立和使用繫結。
 
 
-## 在指定的位置插入內容
+## <a name="inserting-content-at-a-designated-location"></a>在指定的位置插入內容
 
 
 我們剛才看到如何在 Word 文件中的作用選取範圍插入內容。如果您繫結至文件中的具名內容控制項，您可以將相同內容類型的任何項目插入該控制項。 
@@ -499,7 +492,7 @@ Word 中的內容控制項類型包含 RTF 文字、純文字、圖片、建置�
 下載程式碼範例 [Word-Add-in-JavaScript-AddPopulateBindings](https://github.com/OfficeDev/Word-Add-in-JavaScript-AddPopulateBindings)，該範例提供如何插入並繫結至內容控制項，以及如何填入繫結的工作範例。
 
 
-### 新增並繫結至具名內容控制項
+### <a name="add-and-bind-to-a-named-content-control"></a>新增並繫結至具名內容控制項
 
 
 檢查後續的 JavaScript 時，請考慮這些需求：
@@ -507,7 +500,7 @@ Word 中的內容控制項類型包含 RTF 文字、純文字、圖片、建置�
 
 - 如先前所述，您必須使用 RTF 文字內容控制項以繫結至 Word 增益集的控制項。
     
-- 內容控制項必須有名稱 (這是 [內容控制項屬性] 對話方塊中的 [標題]**** 欄位，對應至 Office Open XML 標記中的 **Alias** 標記)。 這是程式碼識別放置繫結位置的方式。
+- 內容控制項必須有名稱 (這是 [內容控制項屬性] 對話方塊中的 [標題] 欄位，對應至 Office Open XML 標記中的 **Alias** 標記)。這是程式碼識別放置繫結位置的方式。
     
 - 您可以有數個具名控制項，並且視需要繫結。使用唯一的內容控制項名稱、唯一的內容控制項識別碼和唯一的繫結識別碼。
     
@@ -537,7 +530,7 @@ function addAndBindControl() {
 
 - 嘗試使用 [addFromNamedItemAsync](http://msdn.microsoft.com/en-us/library/fp123590.aspx)繫結至具名內容控制項。 
     
-    如果程式碼執行時，增益集的文件中可能已存在具名的控制項，請先執行此步驟。 例如，如果增益集已插入，並與設計來使用增益集的範本一起儲存，而該增益集中已事先放置控制項，則您會要執行這個動作。 如果需要繫結至增益集事先放置的控制項時，您也需要執行此動作。
+    如果程式碼執行時，增益集的文件中可能已存在具名的控制項，請先執行此步驟。例如，如果增益集已插入，並與設計來使用增益集的範本一起儲存，而該增益集中已事先放置控制項，則您會要執行這個動作。如果需要繫結至增益集事先放置的控制項時，您也需要執行此動作。
     
 - 第一次呼叫 **addFromNamedItemAsync** 方法的回呼會檢查結果狀態以查看繫結是否失敗，因為具名項目不存在於文件中 (也就是此範例中名為 MyContentControlTitle 的內容控制項)。若是如此， 程式碼會在作用選取範圍點新增控制項 (使用 **setSelectedDataAsync**)，然後繫結它。
     
@@ -546,13 +539,13 @@ function addAndBindControl() {
 
 程式碼執行之後，如果您檢查增益集建立之繫結所在的文件中的標記，您會看到每個繫結有兩個組件。在已新增繫結之內容控制項的標記中 (在 document.xml)，您會看到屬性 **w15:webExtensionLinked/**。
 
-在名為 webExtensions1.xml 的文件組件中，您會看到您已建立的繫結的清單。 每一個項目是使用繫結識別碼和適用控制項的識別碼屬性來識別，如下所示，其中 **appref** 屬性是內容控制項識別碼：** **we:binding id="myBinding" type="text" appref="1382295294"/**。
+在名為 webExtensions1.xml 的文件組件中，您會看到您已建立的繫結的清單。每一個項目是使用繫結識別碼和適用控制項的識別碼屬性來識別，如下所示，其中 **appref** 屬性是內容控制項識別碼：** **we:binding id="myBinding" type="text" appref="1382295294"/**。
 
 
  >**重要**  您必須在您想要對其執行動作時新增繫結。請勿在用來插入內容控制項的 Office Open XML 中包含繫結的標記，因為插入該標記的處理程序會刪除繫結。
 
 
-### 填入繫結
+### <a name="populate-a-binding"></a>填入繫結
 
 
 將內容寫入繫結的程式碼類似於將內容寫入選取範圍的程式碼。
@@ -577,7 +570,7 @@ function populateBinding(filename) {
  >**附註**  無論您是初次填入或是取代繫結中的內容，您所需要的就是上述的程式碼。當您在繫結的位置插入一段新內容，該繫結中的現有內容會自動被取代。請參閱先前所參照的程式碼範例 [Word-Add-in-JavaScript-AddPopulateBindings](https://github.com/OfficeDev/Word-Add-in-JavaScript-AddPopulateBindings) 的此類範例，其中提供兩個不同的內容範例，讓您可以交替使用以填入相同的繫結。
 
 
-## 加入使用其他 Office Open XML 組件的物件
+## <a name="adding-objects-that-use-additional-office-open-xml-parts"></a>加入使用其他 Office Open XML 組件的物件
 
 
 許多類型的內容需要 Office Open XML 封裝中的其他文件組件，這表示它們會參照另一個組件中的資訊，或內容本身是儲存在一或多個其他組件並且在 document.xml 中參照。
@@ -601,12 +594,12 @@ function populateBinding(filename) {
  >**重要**  請記住，如果您要保留 document.xml 中參照的任何其他組件，您必須針對您保留的適用組件保留 document.xml.rels 和關係定義，例如 styles.xml 或影像檔案。
 
 
-### 使用樣式
+### <a name="working-with-styles"></a>使用樣式
 
 用於編輯我們在具有直接格式化文字的上述範例中看到的標記的相同方法，適用於當使用段落樣式或表格樣式以格式化您的內容時。不過，使用段落樣式的標記相當簡單，所以這裡用它做為範例說明。
 
 
-#### 使用段落樣式編輯內容的標記
+#### <a name="editing-the-markup-for-content-using-paragraph-styles"></a>使用段落樣式編輯內容的標記
 
 下列標記代表「圖 2」中顯示之樣式化文字範例的本文內容。
 
@@ -646,7 +639,7 @@ function populateBinding(filename) {
 
 - 如果您對內容使用內建樣式，您不需要包含完整的定義。您只須包含樣式名稱、樣式識別碼和至少一個格式設定屬性，讓強制型轉 Office Open XML 在插入內容時將樣式套用到內容。
     
-    不過，最佳作法是包括完整的樣式定義 (即使它是內建樣式的預設值)。 如果目的地文件中已有正在使用的樣式，您的內容會採用該樣式的現存定義，而忽略您在 styles.xml 中所包含的項目。 如果目的地文件中沒有使用樣式，您的內容將使用在標記中提供的樣式定義。
+    不過，最佳作法是包括完整的樣式定義 (即使它是內建樣式的預設值)。如果目的地文件中已有正在使用的樣式，您的內容會採用該樣式的現存定義，而忽略您在 styles.xml 中所包含的項目。如果目的地文件中沒有使用樣式，您的內容將使用在標記中提供的樣式定義。
     
 因此，舉例來說，我們唯一需要針對如「圖 2」所示之範例文字 (使用 [標題 1] 樣式格式化) 從 styles.xml 組件保留的內容，是下列項目。 
 
@@ -686,7 +679,7 @@ function populateBinding(filename) {
 ```
 
 
-#### 編輯使用表格樣式之內容的標記
+#### <a name="editing-the-markup-for-content-using-table-styles"></a>編輯使用表格樣式之內容的標記
 
 
 當您的內容使用表格樣式時，您需要如針對使用段落樣式所述的相同相對 styles.xml 組件。也就是說，您只需要保留在您的內容中使用的樣式的資訊，且您必須包含名稱、識別碼及至少一個格式設定屬性，但是最好能夠包括完整樣式定義，以解決所有潛在的使用者案例。
@@ -699,7 +692,7 @@ function populateBinding(filename) {
 - 在 styles.xml 中，對於單一表格樣式您也會看到大量標記，因為表格樣式對於每個表格區域包含數個類型的可能格式設定屬性，例如整張表格、標題列、奇數和偶數帶狀資料列和資料行 (分別)、第一個資料行等等。 
     
 
-### 使用影像
+### <a name="working-with-images"></a>使用影像
 
 
 影像的標記包含至少一個組件的參考，該組件包含說明您的影像的二進位資料。對於複雜的影像，可能會有數百頁的標記，且您無法編輯。因為您未曾觸控二進位組件，如果您使用如 Visual Studio 的結構化編輯器，您可以摺疊它，如此您仍可以輕鬆檢閱和編輯封裝的其餘部分。
@@ -719,7 +712,7 @@ function populateBinding(filename) {
  >**附註**  當您檢閱標記時，請注意 a:blip 標記中使用的其他命名空間。您會在 document.xml 中看到 **xlmns:a** 命名空間 (主要 drawingML 命名空間) 是動態地放置在使用 drawingML 參考的開頭，而不是 document.xml 組件的頂端。不過，在關係命名空間 (r) 出現在 document.xml 開頭的位置，必須保留它。請檢查您的圖片標記以取得其他命名空間需求。請記住，您不必記憶哪種類型的內容需要哪個命名空間，您可以藉由檢閱整個 document.xml 的標記前置詞，輕易地分辨。
 
 
-### 了解其他影像組件和格式設定
+### <a name="understanding-additional-image-parts-and-formatting"></a>了解其他影像組件和格式設定
 
 
 當您在您的影像上使用某些 Office 圖片格式設定效果，例如針對「圖 4」所示的影像，使用調整的亮度與對比設定 (除了圖片樣式之外)，可能需要影像資料的 HD 格式複本的第二個二進位資料組件。需要此額外的 HD 格式，才能進行視為分層效果的格式設定，且其參考會出現在如下所示的 document.xml 中：
@@ -732,7 +725,7 @@ function populateBinding(filename) {
 在 [Word-Add-in-Load-and-write-Open-XML](https://github.com/OfficeDev/Word-Add-in-Load-and-write-Open-XML) 程式碼範例中查看「圖 4」中顯示之格式化影像的必要標記 (使用分層效果)。
 
 
-### 使用 SmartArt 圖表
+### <a name="working-with-smartart-diagrams"></a>使用 SmartArt 圖表
 
 
 SmartArt 圖表有四個相關聯的組件，但是只有兩個組件永遠必要。您可以檢查 [Word-Add-in-Load-and-write-Open-XML](https://github.com/OfficeDev/Word-Add-in-Load-and-write-Open-XML) 程式碼範例中的 SmartArt 標記的範例。首先，查看每個組件的簡短描述，以及為何該組件是必要或不必要：
@@ -757,7 +750,7 @@ SmartArt 圖表有四個相關聯的組件，但是只有兩個組件永遠必�
 請注意，document.xml 中 SmartArt 圖表的標記包含版面配置、資料、色彩和快速樣式組件的關係識別碼參考。當您刪除這些組件和其關係定義時，您可以刪除 document.xml 中色彩和樣式組件的參考 (這當然是最佳作法，因為您會刪除這些關係)，但是如果您保留，也不會收到錯誤，因為它們不是要插入文件之圖表的必要項目。在 document.xml 中的 **dgm:relIds** 標記中找到這些參考。不論您是否採取這個步驟，保留必要版面配置和資料組件的關係識別碼參考。
 
 
-### 使用圖表
+### <a name="working-with-charts"></a>使用圖表
 
 
 與 SmartArt 圖表類似，圖表包含幾個額外組件。不過，圖表的設定與 SmartArt 有點不同，該設定中圖表具有自己的關係檔案。以下是圖表的必要和可移除文件組件的說明：
@@ -779,7 +772,7 @@ SmartArt 圖表有四個相關聯的組件，但是只有兩個組件永遠必�
 請參閱 [Word-Add-in-Load-and-write-Open-XML](https://github.com/OfficeDev/Word-Add-in-Load-and-write-Open-XML) 程式碼範例中，如「圖 11」所示之範例圖表的已編輯標記。
 
 
-## 編輯 Office Open XML 以用於您的工作窗格增益集
+## <a name="editing-the-office-open-xml-for-use-in-your-task-pane-add-in"></a>編輯 Office Open XML 以用於您的工作窗格增益集
 
 
 您已經看到如何識別並編輯標記中的內容。如果當您查看針對文件產生的大量 Office Open XML 封裝時工作看起來仍然相當困難，下列是建議步驟的簡短摘要，協助您快速編輯該封裝：
@@ -807,10 +800,10 @@ SmartArt 圖表有四個相關聯的組件，但是只有兩個組件永遠必�
 不論您是保留或選擇進一步深入內容以尋找可以剪下的標記的每個最後一行，請記住，您可以使用先前參考的程式碼範例 [Word-Add-in-Get-Set-EditOpen-XML](https://github.com/OfficeDev/Word-Add-in-Get-Set-EditOpen-XML) 做為草稿區，以快速且輕鬆地測試已編輯的標記。
 
 
- >**提示**  如果您在開發時更新現有解決方案中的 Office Open XML 程式碼片段，請先清除網際網路暫存檔，再重新執行解決方案以更新程式碼所使用的 Office Open XML。 XML 檔中解決方案所包含的標記是在您的電腦上快取。 當然您可以從預設的網頁瀏覽器清除網際網路暫存檔。 若要存取網際網路選項，並從 Visual Studio 2015 刪除這些設定，請在 [偵錯]**** 功能表上選擇 [選項和設定]****。 然後在 [環境]**** 下，依序選擇 [網頁瀏覽器]**** 和 [Internet Explorer 選項]****。
+ >**提示**  如果您在開發時更新現有解決方案中的 Office Open XML 程式碼片段，請先清除網際網路暫存檔，再重新執行解決方案以更新程式碼所使用的 Office Open XML。XML 檔中解決方案所包含的標記是在您的電腦上快取。當然您可以從預設的網頁瀏覽器清除網際網路暫存檔。若要存取網際網路選項，並從 Visual Studio 2015 刪除這些設定，請在 [偵錯] 功能表上選擇 [選項和設定]。然後在 [環境] 下，依序選擇 [網頁瀏覽器] 和 [Internet Explorer 選項]。
 
 
-## 針對範本與獨立用途建立增益集
+## <a name="creating-an-add-in-for-both-template-and-stand-alone-use"></a>針對範本與獨立用途建立增益集
 
 
 在本主題中，您已看到可在增益集中使用 Office Open XML 執行哪些操作的數個範例。我們已看過廣泛的豐富內容類型範例，您可以藉由使用 Office Open XML 強制型轉類型插入文件，以及 JavaScript 方法，以在選取範圍或指定 (繫結) 位置插入該內容。
@@ -822,15 +815,16 @@ SmartArt 圖表有四個相關聯的組件，但是只有兩個組件永遠必�
 當搭配使用範本與您的應用程式時，不論增益集會在使用者建立文件時駐留在範本中，或者增益集會插入範本，您可能也想要合併 API 的其他元素，以協助建立更強大的互動式體驗。例如，您可能想要在自訂 XML 組件中包含可以用來判斷範本類型的識別資料，以提供範本特定選項給使用者。若要深入了解如何在您的增益集中使用自訂 XML，請參閱後續的其他資源。
 
 
-## 其他資源
+## <a name="additional-resources"></a>其他資源
 
 
 
-- [JavaScript API for Office ](http://msdn.microsoft.com/en-us/library/fp142185.aspx)
+- 
+  [適用於 Office 的 JavaScript API ](http://msdn.microsoft.com/en-us/library/fp142185.aspx)
     
-- [標準 ECMA-376：Office Open XML 檔案格式](http://www.ecma-international.org/publications/standards/Ecma-376.md) (在這裡的 Open XML 上存取完整的語言參考和相關文件)
+- [ 標準 ECMA-376：Office Open XML 檔案格式](http://www.ecma-international.org/publications/standards/Ecma-376.md) (在這裡的 Open XML 上存取完整的語言參考和相關文件)
     
 - [OpenXMLDeveloper.org](http://www.openxmldeveloper.org)
     
-- [探索 JavaScript API for Office：資料繫結和自訂 XML 組件](http://msdn.microsoft.com/en-us/magazine/dn166930.aspx)
+- [探索適用於 Office 的 JavaScript API：資料繫結和自訂 XML 組件](http://msdn.microsoft.com/en-us/magazine/dn166930.aspx)
     

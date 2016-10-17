@@ -1,12 +1,12 @@
 
-# CustomXMLNodeType 列舉
+# <a name="customxmlnodetype-enumeration"></a>CustomXMLNodeType 列舉
 指定節點類型。
 
 
 
 |||
 |:-----|:-----|
-|**主機︰**|Word|
+|**主應用程式︰**|Word|
 |**上次變更於**|1.1|
 
 
@@ -16,13 +16,13 @@ Office.CustomXMLNodeType
 ```
 
 
-## 成員
+## <a name="members"></a>成員
 
 
 **值**
 
 
-|**列舉**|**值**|**說明**|
+|**列舉**|**值**|**描述**|
 |:-----|:-----|:-----|
 |Office.CustomXMLNodeType.Attribute|"attribute"|節點為屬性。|
 |Office.CustomXMLNodeType.CData|"CData"|節點為 CData 類型。|
@@ -32,7 +32,7 @@ Office.CustomXMLNodeType
 |Office.CustomXMLNodeType.ProcessingInstruction|"processingInstruction"|節點為處理指示。|
 |Office.CustomXMLNodeType.Text|"text"|節點為文字節點。|
 
-## 支援詳細資料
+## <a name="support-details"></a>支援詳細資料
 
 
 下列矩陣中的大寫 Y，表示在相對應的 Office 主應用程式中支援此列舉。空白儲存格表示 Office 主應用程式不支援此列舉。
@@ -45,7 +45,7 @@ Office.CustomXMLNodeType
 
 ||**Office for Windows desktop**|**Office Online (在瀏覽器中)**|**Office for iPad**|
 |:-----|:-----|:-----|:-----|
-|**Word**|Y||Y|
+|**Word**|Y|Y|Y|
 
 
 
@@ -55,7 +55,7 @@ Office.CustomXMLNodeType
 |**文件庫**|Office.js|
 |**命名空間**|Office|
 
-## 支援歷程記錄
+## <a name="support-history"></a>支援歷程記錄
 
 
 |**版本**|**變更**|

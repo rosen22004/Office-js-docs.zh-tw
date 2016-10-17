@@ -1,10 +1,10 @@
 
-# TextBinding 物件
+# <a name="textbinding-object"></a>TextBinding 物件
 表示文件中的繫結文字選取。
 
 |||
 |:-----|:-----|
-|**主機︰**|Access、Excel、PowerPoint、Project、Word|
+|**主應用程式︰**|Access、Excel、PowerPoint、Project、Word|
 |**可用於[需求集合](../../docs/overview/specify-office-hosts-and-api-requirements.md)**|TextBindings|
 |**已新增於**|1.0|
 
@@ -13,12 +13,12 @@ TextBinding
 ```
 
 
-## 備註
+## <a name="remarks"></a>備註
 
 **TextBinding** 物件從 [Binding](../../reference/shared/binding.id.md) 物件繼承 [id](../../reference/shared/binding.type.md) 屬性、[type](../../reference/shared/binding.getdataasync.md) 屬性、[getDataAsync](../../reference/shared/binding.setdataasync.md) 方法，以及 [setDataAsync](../../reference/shared/binding.md) 方法。其未實作任何其他屬性或本身的方法。
 
 
-## 支援詳細資料
+## <a name="support-details"></a>支援詳細資料
 
 
 下列矩陣中的大寫 Y，表示在相對應的 Office 主應用程式中支援此物件。空白儲存格表示 Office 主應用程式不支援此物件。
@@ -32,7 +32,7 @@ TextBinding
 ||**Office for Windows desktop**|**Office Online (在瀏覽器中)**|**Office for iPad**|
 |:-----|:-----|:-----|:-----|
 |**Excel**|Y|Y|Y|
-|**Word**|Y||Y|
+|**Word**|Y|Y|Y|
 
 |||
 |:-----|:-----|
@@ -42,7 +42,7 @@ TextBinding
 |**文件庫**|Office.js|
 |**命名空間**|Office|
 
-## 支援歷程記錄
+## <a name="support-history"></a>支援歷程記錄
 
 
 

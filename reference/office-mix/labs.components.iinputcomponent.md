@@ -1,5 +1,5 @@
 
-# Labs.Components.IInputComponent
+# <a name="labs.components.iinputcomponent"></a>Labs.Components.IInputComponent
 
  _**適用於︰**Office 的應用程式 | Office 增益集 | Office Mix | PowerPoint_
 
@@ -10,10 +10,10 @@ interface IInputComponent extends Labs.Core.IComponent
 ```
 
 
-## 屬性
+## <a name="properties"></a>屬性
 
 
-|名稱|說明|
+|名稱|描述|
 |:-----|:-----|
 | `maxScore: number`|輸入元件的最大允許分數。|
 | `timeLimit: number`|輸入問題的時間限制。|

@@ -1,48 +1,48 @@
-﻿# RangeBorderCollection 物件 (適用於 Excel 的 JavaScript API)
+# <a name="rangebordercollection-object-(javascript-api-for-excel)"></a>RangeBorderCollection 物件 (適用於 Excel 的 JavaScript API)
 
 代表構成範圍框線的 border 物件。
 
-## 屬性
+## <a name="properties"></a>屬性
 
-| 屬性	     | 類型	   |說明
+| 屬性	     | 類型	   |描述
 |:---------------|:--------|:----------|
 |Count|int|集合中的 border 物件數目。唯讀。|
-|項目|[RangeBorder[]](rangeborder.md)|RangeBorder 物件的集合。唯讀。|
+|items|[RangeBorder[]](rangeborder.md)|RangeBorder 物件的集合。唯讀。|
 
-_請參閱屬性存取[範例。](#範例)_
+_請參閱屬性存取[範例。](#property-access-examples)_
 
-## 關聯性
+## <a name="relationships"></a>關聯性
 無
 
 
-## 方法
+## <a name="methods"></a>方法
 
-| 方法           | 傳回類型    |說明|
+| 方法           | 傳回類型    |描述|
 |:---------------|:--------|:----------|
 |[getItem(index: string)](#getitemindex-string)|[RangeBorder](rangeborder.md)|使用名稱取得 border 物件。|
 |[getItemAt(index: number)](#getitematindex-number)|[RangeBorder](rangeborder.md)|使用索引取得 border 物件。|
 |[load(param: object)](#loadparam-object)|void|以參數中指定的屬性和物件值填滿 JavaScript 層中建立的 Proxy 物件。|
 
-## 方法詳細資料
+## <a name="method-details"></a>方法詳細資料
 
 
-### getItem(index: string)
+### <a name="getitem(index:-string)"></a>getItem(index: string)
 使用名稱取得 border 物件。 
 
-#### 語法
+#### <a name="syntax"></a>語法
 ```js
 rangeBorderCollectionObject.getItem(index);
 ```
 
-#### 參數
-| 參數	    | 類型	   |說明|
+#### <a name="parameters"></a>參數
+| 參數	    | 類型	   |描述|
 |:---------------|:--------|:----------|
 |index|string|要擷取之 border 物件的索引值。可能的值為：EdgeTop、EdgeBottom、EdgeLeft、EdgeRight、InsideVertical、InsideHorizontal、DiagonalDown、DiagonalUp。|
 
-#### 傳回
+#### <a name="returns"></a>傳回
 [RangeBorder](rangeborder.md)
 
-#### 範例
+#### <a name="examples"></a>範例
 ```js
 Excel.run(function (ctx) { 
     var sheetName = "Sheet1";
@@ -64,7 +64,7 @@ Excel.run(function (ctx) {
 ```
 
 
-#### 範例
+#### <a name="examples"></a>範例
 ```js
 
 Excel.run(function (ctx) { 
@@ -86,23 +86,23 @@ Excel.run(function (ctx) {
 ```
 
 
-### getItemAt(index: number)
+### <a name="getitemat(index:-number)"></a>getItemAt(index: number)
 使用索引取得 border 物件。
 
-#### 語法
+#### <a name="syntax"></a>語法
 ```js
 rangeBorderCollectionObject.getItemAt(index);
 ```
 
-#### 參數
-| 參數	    | 類型	   |說明|
+#### <a name="parameters"></a>參數
+| 參數	    | 類型	   |描述|
 |:---------------|:--------|:----------|
 |index|number|要擷取之物件的索引值。以 0 開始編製索引。|
 
-#### 傳回
+#### <a name="returns"></a>傳回
 [RangeBorder](rangeborder.md)
 
-#### 範例
+#### <a name="examples"></a>範例
 ```js
 
 Excel.run(function (ctx) { 
@@ -124,22 +124,22 @@ Excel.run(function (ctx) {
 ```
 
 
-### load(param: object)
+### <a name="load(param:-object)"></a>load(param: object)
 以參數中指定的屬性和物件值填滿 JavaScript 層中建立的 Proxy 物件。
 
-#### 語法
+#### <a name="syntax"></a>語法
 ```js
 object.load(param);
 ```
 
-#### 參數
-| 參數	    | 類型	   |說明|
+#### <a name="parameters"></a>參數
+| 參數	    | 類型	   |描述|
 |:---------------|:--------|:----------|
 |param|物件|選用。接受參數與關聯性名稱，做為分隔字串或陣列。或者提供 [loadOption](loadoption.md) 物件。|
 
-#### 傳回
+#### <a name="returns"></a>傳回
 void
-### 屬性存取範例
+### <a name="property-access-examples"></a>屬性存取範例
 
 ```js
 Excel.run(function (ctx) { 

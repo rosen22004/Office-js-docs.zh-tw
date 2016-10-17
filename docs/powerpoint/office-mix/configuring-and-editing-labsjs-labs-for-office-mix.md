@@ -1,11 +1,11 @@
 
-# 設定及編輯 Office Mix LabsJS 實驗室
+# <a name="configuring-and-editing-labsjs-labs-for-office-mix"></a>設定及編輯 Office Mix LabsJS 實驗室
 
 
 
 Office Mix 提供 office.js 方法來取得及設定實驗室組態。組態表示 Office Mix 您正在建立的實驗室類型，以及實驗室會傳回的資料類型。此資訊是用來收集和視覺化分析。
 
-## 取得實驗室編輯器
+## <a name="getting-the-lab-editor"></a>取得實驗室編輯器
 
 實驗室編輯器 [Labs.LabEditor](../../../reference/office-mix/labs.labeditor.md) 物件可讓您編輯實驗室，及取得和設定您的實驗室組態。當您完成實驗室編輯時，您必須呼叫 **Done** 方法。不過，除非您正在嘗試取得或執行您正在編輯的實驗室，否則不需要呼叫 **Done** 方法。請注意，一次只能開啟實驗室的一個執行個體。
 
@@ -67,17 +67,17 @@ labEditor.getConfiguration((err, configuration) => {
 ```
 
 
-## 關閉編輯器
+## <a name="closing-the-editor"></a>關閉編輯器
 
 若要關閉編輯器，在完成編輯實驗室時，在編輯器上呼叫 **Done** 方法。請注意，您無法同時取得和編輯實驗室。但在呼叫 **Done** 後，您可以接著編輯或執行實驗室。
 
 
-## 與實驗室互動
+## <a name="interacting-with-a-lab"></a>與實驗室互動
 
 設定實驗室組態之後，即準備好開始與實驗室互動。在 PowerPoint 內執行實驗室時會模擬互動。不過，在 Office Mix 課程播放程式內執行實驗室時，資料是儲存在 Office Mix 資料庫並用於分析。
 
 
-### 取得實驗室執行個體
+### <a name="getting-the-lab-instance"></a>取得實驗室執行個體
 
 您使用 [Labs.LabInstance](../../../reference/office-mix/labs.labinstance.md) 物件 (也就是為目前使用者設定之實驗室的執行個體) 與實驗室互動。若要執行 (或「取得」) 實驗室，請呼叫 [Labs.takeLab](../../../reference/office-mix/labs.takelab.md) 函式。
 
@@ -93,7 +93,7 @@ Labs.takeLab((err, labInstance) => {
 執行個體物件包含對應到組態中指定之元件的元件執行個體 ([Labs.ComponentInstanceBase](../../../reference/office-mix/labs.componentinstancebase.md)、[Labs.ComponentInstance](../../../reference/office-mix/labs.componentinstance.md)) 陣列。事實上，執行個體只是轉換的組態版本，用來將伺服器端 ID 附加到執行個體物件，以及向使用者隱藏適用的特定欄位 (例如，提示、解答等等)。
 
 
-### 管理狀態
+### <a name="managing-state"></a>管理狀態
 
 狀態是執行指定實驗室的使用者所相關聯的暫時儲存區。您可以使用存放區來保存實驗室的後續引動過程之間的資訊。例如，程式設計的實驗室無法儲存使用者目前正在進行的工作。
 
@@ -120,7 +120,7 @@ labInstance.getState((err, state) => {
 ```
 
 
-## 元件執行個體和結果
+## <a name="component-instances-and-results"></a>元件執行個體和結果
 
 以下是如何實作四種元件類型之執行個體的概觀，以及元件方法的簡短範例。 
 
@@ -178,7 +178,7 @@ hints[0].getValue((err, hint) => {
 ```
 
 
-### ActivityComponentInstance
+### <a name="activitycomponentinstance"></a>ActivityComponentInstance
 
 
 使用 **ActivityComponentInstace** 物件來追蹤使用者與活動元件的互動。這個類別會提供 **complete** 方法來表示使用者已完成與活動的互動。此方法可指出使用者已完成分派的任務、已完成讀取，或與活動關聯的任何其他端點。下列程式碼示範如何使用 **complete** 方法。
@@ -191,7 +191,7 @@ attempt.complete((err, unused) => {
 ```
 
 
-### ChoiceComponentInstance
+### <a name="choicecomponentinstance"></a>ChoiceComponentInstance
 
 
 使用 **ChoiceComponentInstance** 物件來追蹤使用者與選擇元件的互動。選擇元件是問題，可向使用者呈現他們需要從中選取的選擇清單。可能或可能沒有正確的答案。此類別提供兩種主要方法︰**getSubmissions** 和 **submit**。**getSubmissions** 方法可讓您擷取先前儲存的提交；**submit** 方法可儲存新提交。下列程式碼範例說明方法的使用。
@@ -214,7 +214,7 @@ this._attempt.submit(
 ```
 
 
-### InputComponentInstance
+### <a name="inputcomponentinstance"></a>InputComponentInstance
 
 
 使用 **InputComponentInstance** 物件來追蹤使用者與輸入元件的互動。此類別提供兩種主要方法︰**getSubmission** 和 **submit**。**getSubmissions** 方法可讓您擷取先前儲存的提交；**submit** 方法可讓您儲存新提交。下列程式碼片段說明 **getSubmissions** 方法的使用。
@@ -239,7 +239,7 @@ this._attempt.submit(
 ```
 
 
-### DynamicComponentInstance
+### <a name="dynamiccomponentinstance"></a>DynamicComponentInstance
 
 
 使用 **DynamicComponentInstance** 物件來追蹤使用者與動態元件的互動。這個類別中的主要方法是 **getComponents**、**createComponent** 和 **close**。
@@ -297,7 +297,7 @@ dynamicComponentInstance.close((err, unused) => {
 ```
 
 
-## 其他資源
+## <a name="additional-resources"></a>其他資源
 
 
 

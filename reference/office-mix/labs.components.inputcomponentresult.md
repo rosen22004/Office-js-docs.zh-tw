@@ -1,5 +1,5 @@
 
-# Labs.Components.InputComponentResult
+# <a name="labs.components.inputcomponentresult"></a>Labs.Components.InputComponentResult
 
  _**適用於︰**Office 的應用程式 | Office 增益集 | Office Mix | PowerPoint_
 
@@ -10,20 +10,20 @@ class InputComponentResult
 ```
 
 
-## 屬性
+## <a name="properties"></a>屬性
 
 
-|屬性	|說明|
+|屬性	|描述|
 |:-----|:-----|
 | `public var score: any`|提交的相關分數。|
 | `public var complete: boolean`|表示提交的結果是否導致嘗試完成。如果嘗試完成則為 **True**。|
 
-## 方法
+## <a name="methods"></a>方法
 
 
 
 
-### 建構函式
+### <a name="constructor"></a>建構函式
 
  `function constructor(score: any, complete: boolean)`
 
@@ -32,7 +32,7 @@ class InputComponentResult
  **參數**
 
 
-|參數|說明|
+|參數|描述|
 |:-----|:-----|
 | _score_|結果的關聯分數。|
-| _完成_|如果結果完成嘗試，則為布林值 **true**。|
+| _complete_|如果結果完成嘗試，則為布林值 **true**。|

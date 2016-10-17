@@ -1,10 +1,10 @@
 
-# Context.document 屬性
+# <a name="context.document-property"></a>Context.document 屬性
 取得代表與增益集互動之文件的物件。
 
 |||
 |:-----|:-----|
-|**主機︰**|Access、Excel、PowerPoint、Project、Word|
+|**主應用程式︰**|Access、Excel、PowerPoint、Project、Word|
 |**上次變更於**|1.1|
 
 ```js
@@ -12,17 +12,17 @@ var _document = Office.context.document;
 ```
 
 
-## 傳回值
+## <a name="return-value"></a>傳回值
 
 [Document](../../reference/shared/document.md) 物件。
 
 
-## 備註
+## <a name="remarks"></a>備註
 
 增益集可以使用  **document** 屬性存取 API，和文件、活頁簿、簡報、專案和資料庫 (在 Access web 應用程式中) 的內容互動。
 
 
-## 範例
+## <a name="example"></a>範例
 
 
 
@@ -44,7 +44,7 @@ Office.initialize = function () {
 ```
 
 
-## 支援詳細資料
+## <a name="support-details"></a>支援詳細資料
 
 
 下列矩陣中的大寫 Y，表示在相對應的 Office 主應用程式中支援此屬性。空白儲存格表示 Office 主應用程式不支援此屬性。
@@ -67,7 +67,7 @@ Office.initialize = function () {
 |**文件庫**|Office.js|
 |**命名空間**|Office|
 
-## 支援歷程記錄
+## <a name="support-history"></a>支援歷程記錄
 
 
 

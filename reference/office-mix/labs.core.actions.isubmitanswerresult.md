@@ -1,5 +1,5 @@
 
-# Labs.Core.Actions.ISubmitAnswerResult
+# <a name="labs.core.actions.isubmitanswerresult"></a>Labs.Core.Actions.ISubmitAnswerResult
 
  _**適用於︰**Office 的應用程式 | Office 增益集 | Office Mix | PowerPoint_
 
@@ -10,7 +10,7 @@ interface ISubmitAnswerResult extends Core.IActionResult
 ```
 
 
-## 屬性
+## <a name="properties"></a>屬性
 
 
 |||

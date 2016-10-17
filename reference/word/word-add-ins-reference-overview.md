@@ -1,4 +1,4 @@
-# Word JavaScript API 參考資料
+# <a name="word-javascript-api-reference"></a>Word JavaScript API 參考資料
 
 Word 會提供一組豐富的 API 可供您用來建立增益集，而該增益集可與文件內容和中繼資料進行互動。使用這些 API 來建立可與 Word 整合並將其擴充的吸引人的體驗。您可以匯入和匯出內容、從不同的資料來源組合新文件，並與文件工作流程整合，來建立自訂的文件解決方案。
 
@@ -7,11 +7,11 @@ Word 會提供一組豐富的 API 可供您用來建立增益集，而該增益�
 - Word JavaScript API - 在 Office 2016 中推出。
 - [適用於 Office 的 JavaScript API](../javascript-api-for-office.md) (Office.js) - 在 Office 2013 中推出。
 
-## Word JavaScript API
+## <a name="word-javascript-api"></a>Word JavaScript API
 
 Word JavaScript API 由 Office.js 載入。Word JavaScript API 改變了您與文件、段落等物件互動的方式。Word JavaScript API 不是提供個別非同步 API 來擷取和更新各物件，而是提供對應到 Word 中執行之實際物件的「代理」("proxy") JavaScript 物件。您可以與這些 proxy 物件互動，方法是同步讀取和寫入其屬性，以及呼叫同步方法以在其上執行作業。與 proxy 物件的互動不會在執行中指令碼內立即實現。此 **context.sync** 方法會透過執行佇列的指示以及擷取已載入供指令碼使用之 Word 物件的屬性，來同步處理執行中 JavaScript 和 Office 中實際物件之間的狀態。
 
-## JavaScript API for Office
+## <a name="javascript-api-for-office"></a>JavaScript API for Office
 
 您可以從下列位置參考 Office.js︰
 
@@ -22,7 +22,7 @@ Word JavaScript API 由 Office.js 載入。Word JavaScript API 改變了您與�
 
 如果您使用 TypeScript 並有 npm，您可以在命令列介面中輸入下列命令以取得 TypeScript 定義︰```typings install office-js --ambient```。
 
-## 執行 Word 增益集
+## <a name="running-word-add-ins"></a>執行 Word 增益集
 
 若要執行增益集，請使用 Office.initialize 事件控制碼。如需增益集初始化的詳細資訊，請參閱[了解 API](../../docs/develop/understanding-the-javascript-api-for-office.md)。
 
@@ -58,7 +58,7 @@ Word JavaScript API 由 Office.js 載入。Word JavaScript API 改變了您與�
     })();
 ```
 
-### 使用 Word JavaScript API proxy 物件同步處理 Word 文件
+### <a name="synchronizing-word-documents-with-word-javascript-api-proxy-objects"></a>使用 Word JavaScript API proxy 物件同步處理 Word 文件
 
 Word JavaScript API 物件模型與 Word 中的物件鬆散結合。Word JavaScript API 物件是 Word 文件中物件的 proxy。除非同步處理文件狀態，否則對 proxy 物件採取的動作都不會在 Word 中實現。相反地，除非同步處理文件狀態，否則 Word 文件的狀態不會在 proxy 物件中實現。若要同步處理文件狀態，您需執行 **context.sync()** 方法。下列範例建立 proxy body 物件與佇列命令，以載入 proxy body 物件上的 text 屬性，並且使用 **context.sync()** 方法將 Word 文件的內文與 body proxy 物件同步處理。
 
@@ -81,7 +81,7 @@ Word JavaScript API 物件模型與 Word 中的物件鬆散結合。Word JavaScr
     })
 ```
 
-### 執行命令批次
+### <a name="executing-a-batch-of-commands"></a>執行命令批次
 
 Word proxy 物件具有可以存取和更新物件模型的方法。系統會依照批次中方法的佇列順序，循序執行這些方法。呼叫 context.sync() 時，便會執行批次中所有排入佇列的命令。
 
@@ -110,11 +110,11 @@ Word proxy 物件具有可以存取和更新物件模型的方法。系統會依
     })
 ```
 
-## 開放式 Word API 規格
+## <a name="open-word-api-specifications"></a>開放式 Word API 規格
 
 我們設計和開發新的 Word 增益集 API 時，我們會將其放在[開放式 API 規格](../../reference/openspec.md)頁面中，可供您提出意見反應。了解 Word JavaScript API 即將推出的新功能，並對我們的設計規格提出意見反應。
 
-## 其他資源
+## <a name="additional-resources"></a>其他資源
 
 * [Word 增益集概觀](../../docs/word/word-add-ins-programming-overview.md )
 * [Office 增益集平台概觀](../../docs/overview/office-add-ins.md)

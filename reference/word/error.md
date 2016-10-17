@@ -1,43 +1,43 @@
-﻿# OfficeExtension.Error 物件 (適用於 Word 的 JavaScript API)
+# <a name="officeextension.error-object-(javascript-api-for-word)"></a>OfficeExtension.Error 物件 (適用於 Word 的 JavaScript API)
 
 表示當您使用 Word JavaScript API 時發生的錯誤。
 
-_適用版本：Word 2016、Word for iPad、Word for Mac_
+_適用於：Word 2016、Word for iPad、Word for Mac、Word Online_
 
-## 屬性
-| 屬性	     | 類型	   |說明
+## <a name="properties"></a>屬性
+| 屬性	     | 類型	   |描述
 |:---------------|:--------|:----------|
-|code|string|取得指出錯誤類型的值。 值可以是 "AccessDenied"、"GeneralException"、"ActivityLimitReached"、"InvalidArgument"、"ItemNotFound" 或 "NotImplemented"。 <!-- Values come from OfficeExtension.Error and Word.ErrorCodes. -->|
-|debugInfo|string|取得指出當錯誤發生時，會發生什麼事的值。這個值只適用於在開發/偵錯期間。  |
+|code|string|取得指出錯誤類型的值。值可以是 "AccessDenied"、"GeneralException"、"ActivityLimitReached"、"InvalidArgument"、"ItemNotFound" 或 "NotImplemented"。<!-- Values come from OfficeExtension.Error and Word.ErrorCodes. -->|
+|debugInfo|字串|取得指出當錯誤發生時，會發生什麼事的值。這個值只適用於在開發/偵錯期間。  |
 |訊息 |string| 取得對應於錯誤程式碼之當地人們可以讀取的字串。|
 |name |string| 取得永遠是 "OfficeExtension.Error" 的值。 |
 |traceMessages |string[]| 取得對應於 context.trace(); 設定之檢測訊息的值陣列 |
 
-_請參閱屬性存取[範例。](#範例)_
+_請參閱屬性存取[範例。](#property-access-examples)_
 
-## 方法
+## <a name="methods"></a>方法
 
-| 方法           | 傳回類型    |說明|
+| 方法           | 傳回類型    |描述|
 |:---------------|:--------|:----------|
 |[toString()](#tostring)|string|以下列格式傳回錯誤碼和訊息值："{0}: {1}", code, message。|
 
-## 方法詳細資料
+## <a name="method-details"></a>方法詳細資料
 
-### toString()
+### <a name="tostring()"></a>toString()
 以下列格式傳回錯誤碼和訊息值："{0}: {1}", code, message。
 
-#### 語法
+#### <a name="syntax"></a>語法
 ```js
 error.toString()
 ```
 
-#### 參數
+#### <a name="parameters"></a>參數
 無
 
-#### 會傳回
+#### <a name="returns"></a>會傳回
 字串
 
-#### 範例
+#### <a name="examples"></a>範例
 ```js
 // Run a batch operation against the Word object model.
 Word.run(function (context) {
@@ -61,9 +61,9 @@ Word.run(function (context) {
 
 ```
 
-## 屬性存取範例
+## <a name="property-access-examples"></a>屬性存取範例
 
-### 追蹤訊息檢測
+### <a name="trace-message-instrumentation"></a>追蹤訊息檢測
 
 下列範例會顯示如何檢測命令批次檔以判斷發生錯誤的位置。第一批次順利插入文件中的前兩個段落，沒有發生任何錯誤。第二批次順利插入第三個和第四個段落，但在插入第五段落的呼叫時失敗。在批次中失敗的命令之後的所有其他命令都不會執行，包括新增第五個追蹤訊息的命令。在此情況下，可以判斷錯誤是發生於插入第四個段落之後，而在新增第五個追蹤訊息之前。
 

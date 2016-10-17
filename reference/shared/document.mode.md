@@ -1,10 +1,10 @@
 
-# Document.mode 屬性
+# <a name="document.mode-property"></a>Document.mode 屬性
 取得文件所在的模式。
 
 |||
 |:-----|:-----|
-|**主機︰**|Access、PowerPoint、Excel、Word|
+|**主應用程式︰**|Access、PowerPoint、Excel、Word|
 |**上次變更於**|1.1|
 
 ```
@@ -12,12 +12,12 @@ var docMode = Office.context.document.mode;
 ```
 
 
-## 傳回值
+## <a name="return-value"></a>傳回值
 
 [DocumentMode](../../reference/shared/documentmode-enumeration.md)。
 
 
-## 範例
+## <a name="example"></a>範例
 
 
 
@@ -36,7 +36,7 @@ function write(message){
 
 
 
-## 支援詳細資料
+## <a name="support-details"></a>支援詳細資料
 
 
 下列矩陣中的大寫 Y，表示在相對應的 Office 主應用程式中支援此方法。空白儲存格表示 Office 主應用程式不支援此方法。
@@ -61,7 +61,7 @@ function write(message){
 |**文件庫**|Office.js|
 |**命名空間**|Office|
 
-## 支援歷程記錄
+## <a name="support-history"></a>支援歷程記錄
 
 
 

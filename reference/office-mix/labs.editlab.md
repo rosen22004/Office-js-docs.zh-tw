@@ -1,5 +1,5 @@
 
-# Labs.editLab
+# <a name="labs.editlab"></a>Labs.editLab
 
  _**適用於︰**Office 的應用程式 | Office 增益集 | Office Mix | PowerPoint_
 
@@ -10,9 +10,9 @@ function editLab(callback: Core.ILabCallback<LabEditor>): void
 ```
 
 
-## 參數
+## <a name="parameters"></a>參數
 
 
-|**名稱**|**說明**|
+|**名稱**|**描述**|
 |:-----|:-----|
 | _callback_|建立 [Labs.LabInstance](../../reference/office-mix/labs.labinstance.md) 物件後所引發的回呼方法。|

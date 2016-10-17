@@ -1,9 +1,9 @@
 
-# 從 PowerPoint 或 Word 增益集中，取得整份文件
+# <a name="get-the-whole-document-from-an-add-in-for-powerpoint-or-word"></a>從 PowerPoint 或 Word 增益集中，取得整份文件
 
 您可以建立 Office 增益集，按一下即可將 Word 2013 或 PowerPoint 2013 文件傳送或發佈到遠端位置。本文示範如何建置 PowerPoint 2013 的簡單工作窗格增益集，將所有簡報當成一個資料物件，並透過 HTTP 要求將該資料傳送到網頁伺服器。
 
-## 建立 PowerPoint 或 Word 增益集的必要條件
+## <a name="prerequisites-for-creating-an-add-in-for-powerpoint-or-word"></a>建立 PowerPoint 或 Word 增益集的必要條件
 
 
 本文假設您使用文字編輯器來建立 PowerPoint 或 Word 的工作窗格增益集。若要建立工作窗格增益集，您必須建立下列檔案︰
@@ -11,7 +11,7 @@
 
 - 在共用網路資料夾或網頁伺服器上，您需要下列檔案︰
     
-      - An HTML file (GetDoc_App.html) that contains the user interface plus links to the JavaScript files (including office.js and host-specific .js files) and Cascading Style Sheet (CSS) files.
+      - HTML 檔案 (GetDoc_App.html)，包含使用者介面加上 JavaScript 檔案 (包括 office.js 和主機特定的 .js 檔案) 和階層式樣式表 (CSS) 檔案的連結。
     
   - JavaScript 檔案 (GetDoc_App.js)，以包含增益集的程式設計邏輯。
     
@@ -22,12 +22,12 @@
 您也可以使用 Visual Studio 2015 或 Napa Office 365 Development Tools 來建立 PowerPoint 或 Word 的增益集。如需有關如何建立 Office 增益集的詳細資訊，請參閱表 1。
 
 
-### 建立工作窗格增益集需要了解的核心概念
+### <a name="core-concepts-to-know-for-creating-a-task-pane-add-in"></a>建立工作窗格增益集需要了解的核心概念
 
 開始為 PowerPoint 或 Word 建立此增益集之前，您應該熟悉建置 Office 增益集及使用 HTTP 要求。本文不討論如何從網頁伺服器的 HTTP 要求中解碼 Base64 編碼的文字。 
 
 
-## 建立增益集的資訊清單
+## <a name="create-the-manifest-for-the-add-in"></a>建立增益集的資訊清單
 
 
 PowerPoint 增益集的 XML 資訊清單檔案提供增益集的重要資訊︰有哪些應用程式可以裝載它、HTML 檔案的位置、增益集標題和描述，以及許多其他特性。
@@ -62,7 +62,7 @@ PowerPoint 增益集的 XML 資訊清單檔案提供增益集的重要資訊︰�
 - 將使用 UTF-8 編碼的 GetDoc_App.xml 檔案儲存至網路位置或增益集目錄。
     
 
-## 建立增益集的使用者介面
+## <a name="create-the-user-interface-for-the-add-in"></a>建立增益集的使用者介面
 
 
 對於增益集的使用者介面，您可以使用 HTML，直接寫入至 GetDoc_App.html 檔案。增益集的程式設計邏輯和功能必須包含在 JavaScript 檔案中 (例如，GetDoc_App.js)。
@@ -132,10 +132,10 @@ input [type="submit"], input[type="button"]
 - 使用 UTF-8 編碼將檔案儲存為 Program.css 至網路位置或 GetDoc_App.html 檔案所在的網頁伺服器。
     
 
-## 加入 JavaScript 以取得文件
+## <a name="add-the-javascript-to-get-the-document"></a>加入 JavaScript 以取得文件
 
 
-在增益集的程式碼中，[Office.initialize](../../reference/shared/office.initialize.md) 事件的處理常式會將處理常式加入至表單上 [提交]**** 按鈕的 click 事件，並通知使用者增益集已就緒。
+在增益集的程式碼中，[Office.initialize](../../reference/shared/office.initialize.md) 事件的處理常式會將處理常式加入至表單上 [提交] 按鈕的 click 事件，並通知使用者增益集已就緒。
 
 下列程式碼範例示範 **Office.initialize** 事件的事件處理常式以及 helper 函式 `updateStatus`，用於寫入至狀態 div。
 
@@ -166,13 +166,13 @@ function updateStatus(message) {
 
 
 
-當您在 UI 中選擇 [提交]**** 按鈕時，增益集會呼叫 `sendFile` 函式，其包含對 [Document.getFileAsync](../../reference/shared/document.getfileasync.md) 方法的呼叫。 **getFileAsync** 方法會使用非同步模式，類似於適用於 Office 的 JavaScript API 中的其他方法。 它有一個必要參數 _fileType_，和兩個選擇性參數，_options_ 和 _callback_。 
+當您在 UI 中選擇 [提交] 按鈕時，增益集會呼叫 `sendFile` 函式，其包含對 [Document.getFileAsync](../../reference/shared/document.getfileasync.md) 方法的呼叫。**getFileAsync** 方法會使用非同步模式，類似於適用於 Office 的 JavaScript API 中的其他方法。它有一個必要參數 _fileType_，和兩個選擇性參數，_options_ 和 _callback_。 
 
 _fileType_ 參數預期 [FileType](../../reference/shared/filetype-enumeration.md) 列舉的三個常數之一：**Office.FileType.Compressed** ("compressed")、**Office.FileType.PDF** ("pdf") 或 **Office.FileType.Text** ("text")。PowerPoint 只支援 **Compressed** 作為引數；Word 支援全部三個。當您傳入 **fileType** 參數的 _Compressed_ 時，**getFileAsync** 方法會在本機電腦上建立檔案的暫存副本，傳回文件作為 PowerPoint 2013 簡報檔案 (*.pptx) 或 Word 2013 文件檔案 (*.docx)。
 
 **getFileAsync** 方法會傳回檔案參考來作為 [File](../../reference/shared/file.md) 物件。**File** 物件公開四個成員︰[size](../../reference/shared/file.size.md) 屬性、[sliceCount](../../reference/shared/file.slicecount.md) 屬性、[getSliceAsync](../../reference/shared/file.getsliceasync.md) 方法和 [closeAsync](../../reference/shared/file.closeasync.md) 方法。**size** 屬性傳回檔案中的位元組數目。**SliceCount** 傳回檔案中的 [Slice](../../reference/shared/document.md) 物件數目 (本文稍後討論)。
 
-下列程式碼使用 **document.getFileAsync()** 方法擷取 PowerPoint 或 Word 文件做為 **File** 物件。 然後封裝所產生的 **File** 物件、清空的計數器以及 [sliceCount](../../reference/shared/file.slicecount.md) 到匿名的物件。 這個物件為後續傳遞給本機定義的 `getSlice` 函式。 
+下列程式碼使用 **document.getFileAsync()** 方法擷取 PowerPoint 或 Word 文件做為 **File** 物件。然後封裝所產生的 **File** 物件、清空的計數器以及 [sliceCount](../../reference/shared/file.slicecount.md) 到匿名的物件。這個物件為後續傳遞給本機定義的 `getSlice` 函式。 
 
 ```js
 // Get all the content from a PowerPoint or Word document in 100-KB chunks of text.

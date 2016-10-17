@@ -1,7 +1,7 @@
 
-# Labs.Components.ComponentAttempt
+# <a name="labs.components.componentattempt"></a>Labs.Components.ComponentAttempt
 
- _**適用於︰**Office 相關應用程式 | Office 增益集 | Office Mix | PowerPoint_
+ _**適用於︰**Office 的應用程式 | Office 增益集 | Office Mix | PowerPoint_
 
 元件上嘗試的基底類別。
 
@@ -10,10 +10,10 @@ class ComponentAttempt
 ```
 
 
-## 屬性
+## <a name="properties"></a>屬性
 
 
-|**名稱**|**說明**|
+|**名稱**|**描述**|
 |:-----|:-----|
 | `public var _componentId: string`|指定元件的 ID。|
 | `public var _id: string`|相關聯的實驗室 ID。|
@@ -22,12 +22,12 @@ class ComponentAttempt
 | `public var _state: Labs.ProblemState`|enum [Labs.ProblemState](../../reference/office-mix/labs.problemstate.md) 所提供之嘗試的目前狀態。|
 | `public var _values: { [type:string]: Labs.ValueHolder<any>[]}`|[Labs.ValueHolder](../../reference/office-mix/labs.valueholder.md) 物件包含的嘗試相關值 (如果有的話)。|
 
-## 方法
+## <a name="methods"></a>方法
 
 
 
 
-### 建構函式
+### <a name="constructor"></a>建構函式
 
  `(labs: Labs.LabsInternal, componentId: string, attemptId: string, values: {[type:string]: Labs.Core.IValueInstance[]})`
 
@@ -36,13 +36,13 @@ class ComponentAttempt
  **參數**
 
 
-|**名稱**|**說明**|
+|**名稱**|**描述**|
 |:-----|:-----|
 | _labs_|用於使用嘗試的 [Labs.LabsInternal](http://msdn.microsoft.com/library/599fb2c4-bb16-4422-84ad-10ed85a14018.aspx) 執行個體。|
 | _attemptId_|與嘗試關聯的 ID。|
 | _values_|嘗試的關聯值陣列 ([Labs.Core.IValueInstance](../../reference/office-mix/labs.core.ivalueinstance.md))。|
 
-### isResumed
+### <a name="isresumed"></a>isResumed
 
  `public function isResumed(): boolean`
 
@@ -53,7 +53,7 @@ class ComponentAttempt
 無。
 
 
-### 繼續
+### <a name="resume"></a>繼續
 
  `public function resume(callback: Labs.Core.ILabCallback<void>): void`
 
@@ -62,11 +62,11 @@ class ComponentAttempt
  **參數**
 
 
-|**名稱**|**說明**|
+|**名稱**|**描述**|
 |:-----|:-----|
 | _callback_|恢復嘗試後所引發的回呼函式。|
 
-### getState
+### <a name="getstate"></a>getState
 
  `public function getState(): Labs.ProblemState`
 
@@ -77,7 +77,7 @@ class ComponentAttempt
 無。
 
 
-### processAction
+### <a name="processaction"></a>processAction
 
  `public function processAction(action: Labs.Core.IAction): void`
 
@@ -88,7 +88,7 @@ class ComponentAttempt
 無。
 
 
-### getValues
+### <a name="getvalues"></a>getValues
 
  `public function getValues(key: string): Labs.ValueHolder<any>[]`
 
@@ -97,6 +97,6 @@ class ComponentAttempt
  **參數**
 
 
-|**名稱**|**說明**|
+|**名稱**|**描述**|
 |:-----|:-----|
 | _key_|與值對應中的值相關聯的機碼。|

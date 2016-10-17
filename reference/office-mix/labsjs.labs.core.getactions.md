@@ -1,17 +1,17 @@
 
-# LabsJS.Labs.Core.GetActions
+# <a name="labsjs.labs.core.getactions"></a>LabsJS.Labs.Core.GetActions
 提供 LabsJS.Labs.Core.GetActions JavaScript 的高階檢視。
 
  _**適用於︰**Office 的應用程式 | Office 增益集 | Office Mix | PowerPoint_
 
 這些 API 可讓您查詢先前已在伺服器上發生的動作。 
 
-## Labs.Core.GetActions 模組
+## <a name="labs.core.getactions-module"></a>Labs.Core.GetActions 模組
 
 Labs.Core.GetActions 模組包含下列類型︰
 
 
-### 介面
+### <a name="interfaces"></a>介面
 
 
 |||

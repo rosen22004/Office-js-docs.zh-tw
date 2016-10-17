@@ -1,5 +1,5 @@
 
-# Office 增益集平台概觀
+# <a name="office-add-ins-platform-overview"></a>Office 增益集平台概觀
 
 Office 增益集使用 HTML、CSS 及 JavaScript 之類的 web 技術，讓您能夠擴充 Office 用戶端 (例如 Word、Excel、PowerPoint 及 Outlook)。 
 
@@ -14,7 +14,7 @@ Office 增益集使用 HTML、CSS 及 JavaScript 之類的 web 技術，讓您�
 
 >**附註︰**如需目前 Office 增益集受支援所在的高階檢視，請參閱 [Office 增益集主應用程式和平台可用性](http://dev.office.com/add-in-availability)頁面。 
 
-## Office 增益集可以做什麼？
+## <a name="what-can-an-office-add-in-do?"></a>Office 增益集可以做什麼？
 
 網頁能在瀏覽器中做的，Office 增益集幾乎都可以辦到，例如以下功能：
 
@@ -34,7 +34,7 @@ Office 增益集使用 HTML、CSS 及 JavaScript 之類的 web 技術，讓您�
 
 
 
-## Office 增益集的類型
+## <a name="types-of-office-add-ins"></a>Office 增益集的類型
 
 您可以建立下列類型的 Office 增益集：
  
@@ -42,13 +42,13 @@ Office 增益集使用 HTML、CSS 及 JavaScript 之類的 web 技術，讓您�
 - 可建立新物件的 Excel 及 PowerPoint 增益集
 - 可擴充功能的 Outlook 增益集
 
-### 可擴充功能的 Word、Excel 及 PowerPoint 增益集 
+### <a name="word,-excel,-and-powerpoint-add-ins-that-extend-functionality"></a>可擴充功能的 Word、Excel 及 PowerPoint 增益集 
 您可以**將新功能新增至** Word、Excel 或 PowerPoint，方法是使用[工作窗格增益集資訊清單](../design/add-in-commands.md)來登錄您的增益集。此資訊清單支援**兩種整合模式**：
 
 - 增益集命令
 - 可插入的工作窗格
 
-####增益集命令
+####<a name="add-in-commands"></a>增益集命令
 使用增益集命令來擴充 Office for Windows Desktop 與 Office Online 的 UI。例如，您可以在功能區或選取的操作功能表上新增**增益集的按鈕**，讓使用者能夠輕鬆地在 Office 中存取他們的增益集。命令按鈕可以啟動不同的動作，如**顯示具有自訂 HTML 的窗格 (或多個窗格)** 或**執行 JavaScript 函式**。我們建議您[觀賞這部 Channel9 影片](https://channel9.msdn.com/events/Build/2016/P551)，便可了解此功能更深入的概觀。
 
 **內含在 Excel Desktop 中執行之命令的增益集**
@@ -59,12 +59,12 @@ Office 增益集使用 HTML、CSS 及 JavaScript 之類的 web 技術，讓您�
 
 您也可以使用 **VersionOverrides** 在增益集資訊清單中定義您的命令。Office 平台負責將它們解譯至原生 UI。若要開始使用，請檢查在 GitHub 上的這些[範例](https://github.com/OfficeDev/Office-Add-in-Commands-Samples/)，並查看 [Excel、Word，和 PowerPoint 的增益集命令](../design/add-in-commands.md)
 
-####可插入的工作窗格
+####<a name="insertable-taskpanes"></a>可插入的工作窗格
 尚未支援增益集命令的用戶端 (Office 2013、Office for Mac 和 Office for iPad) 會使用資訊清單中提供的 **DefaultUrl** 執行增益集作為**工作窗格**。可透過 [插入] 索引標籤的**我的增益集**功能表啟動增益集。 
 
 >**重要事項︰**單一資訊清單可同時擁有兩種工作窗格增益集，一種可在不支援命令的用戶端中執行，以及可使用命令執行的版本。這可讓您擁有的單一增益集可在支援 Office 增益集的所有用戶端上運作。
  
-###可建立新物件的 Excel 及 PowerPoint 增益集 
+###<a name="excel-and-powerpoint-add-ins-that-create-new-objects"></a>可建立新物件的 Excel 及 PowerPoint 增益集 
 
 使用內容增益集資訊清單來整合**可在文件中嵌入的 web 型物件**。內容增益集讓您整合豐富、web 型資料視覺效果、嵌入媒體 (像是 YouTube 影片播放器或圖像藝廊) 和其他外部內容。
 
@@ -74,7 +74,7 @@ Office 增益集使用 HTML、CSS 及 JavaScript 之類的 web 技術，讓您�
 
 若要在 Excel 2013 或 Excel Online 中嘗試內容增益集，請安裝 [Bing 地圖服務](https://store.office.com/bing-maps-WA102957661.aspx?assetid=WA102957661)增益集。
 
-### 可擴充功能的 Outlook 增益集
+### <a name="outlook-add-ins-that-extend-functionality"></a>可擴充功能的 Outlook 增益集
 
 Outlook 增益集可擴充 Office 功能區，在您檢視或撰寫時也會在 Outlook 項目旁顯示內容。在讀取案例中 (使用者檢視收到的項目) 或在撰寫案例中 (使用者回覆或建立新項目)，這些增益集可以用在電子郵件訊息、會議邀請、會議回覆、會議取消或預約。 
 
@@ -94,7 +94,7 @@ Outlook 增益集可以存取項目的內容資訊，例如地址或追蹤識別
 
 若要在 Outlook、Outlook for Mac，或 Outlook Web App 中嘗試 Outlook 增益集，請安裝 [Package Tracker](https://store.office.com/package-tracker-WA104162083.aspx?assetid=WA104162083) 增益集。
 
-## Office 增益集的解析
+## <a name="anatomy-of-an-office-add-in"></a>Office 增益集的解析
 
 
 Office 增益集的基本元件是 XML 資訊清單檔案和您自己的 web 應用程式。資訊清單會定義各種設定，包括如何將增益集與 Office 用戶端整合。您的 web 應用程式需要在 web 伺服器或 web 主控服務 (例如 [Microsoft Azure](../publish/host-an-office-add-in-on-microsoft-azure.md)) 上受到主控。
@@ -103,15 +103,14 @@ Office 增益集的基本元件是 XML 資訊清單檔案和您自己的 web 應
 **資訊清單 + 網頁 = Office 增益集**
 ![資訊清單加上網頁等於 Office 增益集](../../images/DK2_AgaveOverview01.png)
 
-###資訊清單
+###<a name="manifest"></a>資訊清單
 
 
 資訊清單可指定增益集的設定及功能，例如下列：
     
 - 增益集的顯示名稱、描述、識別碼、版本及預設地區設定。
     
-- 增益集如何與 Office 整合：若為可擴充 Word/Excel/PowerPoint/Outlook 的增益集：增益集用來公開功能 (例如功能區上的按鈕) 的原生擴充點。 
-      - 若為可新建可嵌入物件的增益集︰載入之預設網頁的物件 URL。
+- 增益集如何與 Office 整合：     - 若為可擴充 Word/Excel/PowerPoint/Outlook 的增益集：增益集用來公開功能 (例如功能區上的按鈕) 的原生擴充點。     - 若為可新增可嵌入物件的增益集：載入之預設網頁的物件 URL。
        
     
 - 增益集的權限層級和資料存取需求。
@@ -119,7 +118,7 @@ Office 增益集的基本元件是 XML 資訊清單檔案和您自己的 web 應
 如需詳細資訊，請參閱 [Office 增益集 XML 資訊清單](../../docs/overview/add-in-manifests.md)。
 
 
-###Web 應用程式
+###<a name="web-app"></a>Web 應用程式
 
 相容 web 應用程式的版本至少為靜態的 HTML 網頁。頁面可在任何 web 伺服器或 web 主控服務 (例如 [Microsoft Azure](../publish/host-an-office-add-in-on-microsoft-azure.md)) 上受到主控。您可以在選擇的服務上主控您的 web 應用程式。  
 
@@ -130,7 +129,7 @@ Office 增益集的基本元件是 XML 資訊清單檔案和您自己的 web 應
 
 ![Hello World 增益集的元件](../../images/DK2_AgaveOverview07.png)
 
-### JavaScript API
+### <a name="javascript-apis"></a>JavaScript API
 
 Word 和 Excel JavaScript API 提供您可在 Office 增益集中使用之主應用程式特定的物件模型。這些 API 提供已知物件 (如段落和活頁簿) 的存取權，如此可讓您更輕鬆地建立 Word 或 Excel 的增益集。若要深入了解這些 API，請參閱 [Word 增益集](../word/word-add-ins-programming-overview.md)和 [Excel 增益集](../excel/excel-add-ins-javascript-programming-overview.md)。
 
@@ -138,7 +137,7 @@ Word 和 Excel JavaScript API 提供您可在 Office 增益集中使用之主應
 
 如需有關適用於 Office 的 JavaScript API 的詳細資訊，請參閱[了解適用於 Office 的 JavaScript API](../../docs/develop/understanding-the-javascript-api-for-office.md) 和[適用於 Office 的 JavaScript API](../../reference/javascript-api-for-office.md) 參考。
     
-## 其他資源
+## <a name="additional-resources"></a>其他資源
 
 - [Office 增益集的設計指導方針](../../docs/design/add-in-design.md)
     

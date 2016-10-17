@@ -1,11 +1,11 @@
 
-# RequestedHeight 項目
+# <a name="requestedheight-element"></a>RequestedHeight 項目
 以像素為單位，指定內容增益集的初始高度，可介於 32 到 1000 像素之間。
 
  **增益集類型︰**內容
 
 
-## 語法：
+## <a name="syntax:"></a>語法：
 
 
 ```XML
@@ -13,7 +13,7 @@
 ```
 
 
-## 內含於：
+## <a name="contained-in:"></a>內含於：
 
 [DefaultSettings](../../reference/manifest/defaultsettings.md) (內容增益集)
 

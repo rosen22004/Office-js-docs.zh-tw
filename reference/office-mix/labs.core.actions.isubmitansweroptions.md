@@ -1,5 +1,5 @@
 
-# Labs.Core.Actions.ISubmitAnswerOptions
+# <a name="labs.core.actions.isubmitansweroptions"></a>Labs.Core.Actions.ISubmitAnswerOptions
 
  _**適用於︰**Office 的應用程式 | Office 增益集 | Office Mix | PowerPoint_
 
@@ -10,7 +10,7 @@ interface ISubmitAnswerOptions extends Core.IActionOptions
 ```
 
 
-## 屬性
+## <a name="properties"></a>屬性
 
 
 |||

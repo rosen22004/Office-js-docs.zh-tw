@@ -1,5 +1,5 @@
 
-# Labs.Core.IUserInfo
+# <a name="labs.core.iuserinfo"></a>Labs.Core.IUserInfo
 
  _**適用於︰**Office 的應用程式 | Office 增益集 | Office Mix | PowerPoint_
 
@@ -10,7 +10,7 @@ interface IUserInfo
 ```
 
 
-## 屬性
+## <a name="properties"></a>屬性
 
 
 |||

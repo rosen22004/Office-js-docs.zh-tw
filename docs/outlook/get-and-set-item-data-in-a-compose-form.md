@@ -1,11 +1,11 @@
 
-# 在 Outlook 中取得並設定撰寫格式的項目資料
+# <a name="get-and-set-item-data-in-a-compose-form-in-outlook"></a>在 Outlook 中取得並設定撰寫格式的項目資料
 了解如何在撰寫案例中取得或設定 Outlook 增益集項目的各種屬性，包括其收件者、主旨、本文和約會位置和時間。
 
 
 
 
-## 取得並設定撰寫增益集的項目屬性
+## <a name="getting-and-setting-item-properties-for-a-compose-add-in"></a>取得並設定撰寫增益集的項目屬性
 
 
 在撰寫表單中，您可以取得大部分與讀取表單 (例如出席者、收件者、主旨和本文等) 中相同類型項目上公開的屬性，並且可以取得幾個僅在撰寫表單而非讀取表單中 (本文、密件副本) 相關的額外屬性。 
@@ -20,20 +20,20 @@
 
 |**屬性**|**屬性類型**|**取得的非同步方法**|**設定的非同步方法**|
 |:-----|:-----|:-----|:-----|
-|[密件副本](../../reference/outlook/Office.context.mailbox.item.md)|[收件者](../../reference/outlook/Recipients.md)|[Recipients.getAsync](../../reference/outlook/Recipients.md)|[Recipients.addAsync](../../reference/outlook/Recipients.md)[Recipients.setAsync](../../reference/outlook/Recipients.md)|
-|[body](../../reference/outlook/Office.context.mailbox.item.md)|[本文](../../reference/outlook/Body.md)|[Body.getAsync](../../reference/outlook/Body.md)|[Body.prependAsync](../../reference/outlook/Body.md)[Body.setAsync](../../reference/outlook/Body.md)[Body.setSelectedDataAsync](../../reference/outlook/Body.md)|
-|[副本](../../reference/outlook/Office.context.mailbox.item.md)|收件者|Recipients.getAsync|Recipients.addAsync Recipients.setAsync|
-|[end](../../reference/outlook/Office.context.mailbox.item.md)|[時間](../../reference/outlook/Time.md)|[Time.getAsync](../../reference/outlook/Time.md)|[Time.setAsync](../../reference/outlook/Time.md)|
-|[Location](../../reference/outlook/Office.context.mailbox.item.md)|[位置](../../reference/outlook/Location.md)|[Location.getAsync](../../reference/outlook/Location.md)|[Location.setAsync](../../reference/outlook/Location.md)|
-|[optionalAttendees](../../reference/outlook/Office.context.mailbox.item.md)|收件者|Recipients.getAsync|Recipients.addAsync Recipients.setAsync|
-|[requiredAttendees](../../reference/outlook/Office.context.mailbox.item.md)|收件者|Recipients.getAsync|Recipients.addAsync Recipients.setAsync|
-|[開始](../../reference/outlook/Office.context.mailbox.item.md)|時間|Time.getAsync|Time.setAsync|
-|[主旨](../../reference/outlook/Office.context.mailbox.item.md)|[主旨](../../reference/outlook/Subject.md)|[Subject.getAsync](../../reference/outlook/Subject.md)|[Subject.setAsync](../../reference/outlook/Subject.md)|
-|[至](../../reference/outlook/Office.context.mailbox.item.md)|收件者|Recipients.getAsync|Recipients.addAsync Recipients.setAsync|
+|[bcc](../../reference/outlook/Office.context.mailbox.item.md)|[Recipients](../../reference/outlook/Recipients.md)|[Recipients.getAsync](../../reference/outlook/Recipients.md)|[Recipients.addAsync](../../reference/outlook/Recipients.md)[Recipients.setAsync](../../reference/outlook/Recipients.md)|
+|[body](../../reference/outlook/Office.context.mailbox.item.md)|[Body](../../reference/outlook/Body.md)|[Body.getAsync](../../reference/outlook/Body.md)|[Body.prependAsync](../../reference/outlook/Body.md)[Body.setAsync](../../reference/outlook/Body.md)[Body.setSelectedDataAsync](../../reference/outlook/Body.md)|
+|[cc](../../reference/outlook/Office.context.mailbox.item.md)|Recipients|Recipients.getAsync|Recipients.addAsync Recipients.setAsync|
+|[end](../../reference/outlook/Office.context.mailbox.item.md)|[Time](../../reference/outlook/Time.md)|[Time.getAsync](../../reference/outlook/Time.md)|[Time.setAsync](../../reference/outlook/Time.md)|
+|[location](../../reference/outlook/Office.context.mailbox.item.md)|[Location](../../reference/outlook/Location.md)|[Location.getAsync](../../reference/outlook/Location.md)|[Location.setAsync](../../reference/outlook/Location.md)|
+|[optionalAttendees](../../reference/outlook/Office.context.mailbox.item.md)|Recipients|Recipients.getAsync|Recipients.addAsync Recipients.setAsync|
+|[requiredAttendees](../../reference/outlook/Office.context.mailbox.item.md)|Recipients|Recipients.getAsync|Recipients.addAsync Recipients.setAsync|
+|[start](../../reference/outlook/Office.context.mailbox.item.md)|Time|Time.getAsync|Time.setAsync|
+|[subject](../../reference/outlook/Office.context.mailbox.item.md)|[Subject](../../reference/outlook/Subject.md)|[Subject.getAsync](../../reference/outlook/Subject.md)|[Subject.setAsync](../../reference/outlook/Subject.md)|
+|[to](../../reference/outlook/Office.context.mailbox.item.md)|Recipients|Recipients.getAsync|Recipients.addAsync Recipients.setAsync|
 
 
 
-## 其他資源
+## <a name="additional-resources"></a>其他資源
 
 
 

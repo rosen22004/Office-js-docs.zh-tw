@@ -1,13 +1,13 @@
 
-# 使用文字編輯器來建立第一個 Project 2013 的工作窗格增益集
+# <a name="create-your-first-task-pane-add-in-for-project-2013-by-using-a-text-editor"></a>使用文字編輯器來建立第一個 Project 2013 的工作窗格增益集
 
-您可以使用 Visual Studio 2015 來建立複雜的 Web 應用程式，或使用文字編輯器來建立本機增益集的檔案，藉此建立 Project Standard 2013 或 Project Professional 2013 的工作窗格增益集。 本文說明如何建立簡單增益集，以使用指向檔案共用上 HTML 檔案的 XML 資訊清單。 專案 OM 測試範例增益集會測試使用增益集之物件模型的部分 JavaScript 函式。 在 Project 2013 中使用 [信任中心]**** 來註冊包含資訊清單檔案的檔案共用時，您可以從功能區的 [專案]**** 索引標籤中開啟工作窗格增益集。 (本文中的程式碼範例是根據 Arvind Iyer, Microsoft Corporation 的測試應用程式。)
+您可以使用 Visual Studio 2015 來建立複雜的 Web 應用程式，或使用文字編輯器來建立本機增益集的檔案，藉此建立 Project Standard 2013 或 Project Professional 2013 的工作窗格增益集。本文說明如何建立簡單增益集，以使用指向檔案共用上 HTML 檔案的 XML 資訊清單。專案 OM 測試範例增益集會測試使用增益集之物件模型的部分 JavaScript 函式。在 Project 2013 中使用 [信任中心] 來註冊包含資訊清單檔案的檔案共用時，您可以從功能區的 [專案] 索引標籤中開啟工作窗格增益集。(本文中的程式碼範例是根據 Arvind Iyer, Microsoft Corporation 的測試應用程式。)
 
 Project 2013 使用其他 Microsoft Office 2013 用戶端所使用的相同增益集資訊清單結構描述，且幾乎使用相同的 JavaScript API。本文所述增益集的完整程式碼可從 Project 2013 SDK 的 `Samples\Apps` 子目錄取得。
 
 專案 OM 測試範例增益集可以取得工作的 GUID，及應用程式和使用中專案的屬性。如果 Project Professional 2013 開啟 SharePoint 程式庫中的專案，增益集可顯示專案的 URL。[Project 2013 SDK 下載](https://www.microsoft.com/en-us/download/details.aspx?id=30435%20)包含完整的原始程式碼。當您解壓縮及安裝 Project2013SDK.msi 檔案中的 SDK 和範例時，請參閱資訊清單檔的 `\Samples\Apps\Copy_to_AppManifests_FileShare` 子目錄和原始程式碼的 `\Samples\Apps\Copy_to_AppSource_FileShare` 子目錄。JSOMCall.html 範例會使用隨附的 office.js 檔和 project-15.js 檔中的 JavaScript 函式。您可以使用對應的偵錯檔案 (office.debug.js 和 project-15.debug.js) 來檢查函式。如需在 Office 增益集中使用 JavaScript 的介紹，請參閱[了解適用於 Office 的 JavaScript API](../../docs/develop/understanding-the-javascript-api-for-office.md)。
 
-## 程序 1.建立增益集資訊清單檔案
+## <a name="procedure-1.-to-create-the-add-in-manifest-file"></a>程序 1.建立增益集資訊清單檔案
 
 
 
@@ -51,7 +51,7 @@ Project 2013 使用其他 Microsoft Office 2013 用戶端所使用的相同增�
     
 程序 2 會顯示如何建立 JSOM_SimpleOMCalls.xml 資訊清單為 Project 測試增益集所指定的 HTML 檔案。HTML 檔案中指定的按鈕會呼叫相關的 JavaScript 函式。您可在 HTML 檔案中加入 JavaScript 函式，或將它們放在獨立的 .js 檔案中。
 
-## 程序 2.建立專案 OM 測試增益集的來源檔案
+## <a name="procedure-2.-to-create-the-source-files-for-the-project-om-test-add-in"></a>程序 2.建立專案 OM 測試增益集的來源檔案
 
 
 
@@ -93,7 +93,7 @@ Project 2013 使用其他 Microsoft Office 2013 用戶端所使用的相同增�
     
 2. 在 JSOMCall.html 檔案的相同目錄中建立名為 JSOM_Sample.js 的 JavaScript 檔案。下列程式碼會藉由使用 Office.js 檔案中的函式來取得應用程式的內容和文件資訊。**text** 物件是 HTML 檔案中 **textarea** 控制項的識別碼。
     
-    **_projDoc** 變數以 **ProjectDocument** 物件初始化。 程式碼包含一些簡單的錯誤處理函式，以及取得應用程式內容和專案文件內容屬性的 **getContextValues** 函式。 如需專案 JavaScript 物件模型的詳細資訊，請參閱 [JavaScript API for Office](../../reference/javascript-api-for-office.md)。
+    **_projDoc** 變數以 **ProjectDocument** 物件初始化。程式碼包含一些簡單的錯誤處理函式，以及取得應用程式內容和專案文件內容屬性的 **getContextValues** 函式。如需專案 JavaScript 物件模型的詳細資訊，請參閱[適用於 Office 的 JavaScript API](../../reference/javascript-api-for-office.md)。
     
 
 
@@ -168,7 +168,7 @@ function getApplicationDisplayLanguage() {
     
   - **getTaskAsync** 函式會取得工作名稱和分派資源的名稱。如果工作位於同步的 SharePoint 工作清單中，**getTaskAsync** 會取得 SharePoint 清單中的工作識別碼；否則 SharePoint 工作識別碼為 0。
     
-     >**附註**  供示範之用，範例程式碼會包含錯誤。 如果 **taskGuid** 並未定義，**getTaskAsync** 功能錯誤關閉。 如果您取得有效的工作 GUID，然後選取不同的工作，**getTaskAsync** 函式會取得 **getSelectedTaskAsync** 函式最近作業的工作資料。
+     >**附註**  供示範之用，範例程式碼會包含錯誤。如果 **taskGuid** 並未定義，**getTaskAsync** 功能錯誤關閉。如果您取得有效的工作 GUID，然後選取不同的工作，**getTaskAsync** 函式會取得 **getSelectedTaskAsync** 函式最近作業的工作資料。
   -  **getTaskFields**、**getResourceFields** 和 **getProjectFields** 都是本機函式，可呼叫 **getTaskFieldAsync**、**getResourceFieldAsync** 或 **getProjectFieldAsync** 多次來取得工作或資源的指定欄位。在 project-15.debug.js 檔中，**ProjectTaskFields** 列舉和 **ProjectResourceFields** 列舉會顯示支援哪些欄位。
     
   - **getSelectedViewAsync** 函式會取得檢視的類型 (定義在 project-15.debug.js 中的 **ProjectViewTypes** 列舉) 和檢視的名稱。
@@ -177,7 +177,7 @@ function getApplicationDisplayLanguage() {
     
      >**附註**  若要取得工作清單的名稱與 SharePoint URL，我們建議您使用 **getProjectFieldAsync** 函式搭配 [ProjectProjectFields](../../reference/shared/projectprojectfields-enumeration.md) 列舉中的 **WSSUrl** 和 **WSSList** 常數。
 
-    下列程式碼中的每一個函式都包含 `function (asyncResult)` 所指定的匿名函式，也就是取得非同步結果的回呼。 除了匿名函式之外，您可以使用已命名函式，協助進行複雜增益集的維護。
+    下列程式碼中的每一個函式都包含 `function (asyncResult)` 所指定的匿名函式，也就是取得非同步結果的回呼。除了匿名函式之外，您可以使用已命名函式，協助進行複雜增益集的維護。
     
 
 
@@ -697,7 +697,7 @@ function manageViewEventHandler(docMethod) {
      >**Note**  The  **Task Pane Add-in (Project)** template in Visual Studio 2015 includes default .css files for a common look and feel of add-ins.
 程序 3 顯示如何安裝及使用專案 OM 測試增益集功能。
 
-## 程序 3.安裝與使用專案 OM 測試增益集
+## <a name="procedure-3.-to-install-and-use-the-project-om-test-add-in"></a>程序 3.安裝與使用專案 OM 測試增益集
 
 
 
@@ -714,43 +714,43 @@ function manageViewEventHandler(docMethod) {
   net share AppSource=C:\Project\AppSource
 ```
 
-3. 在 [專案] 中，開啟 [專案選項]**** 對話方塊，選擇 [信任中心]****，然後選擇 [信任中心設定]****。
+3. 在 [專案] 中，開啟 [專案選項] 對話方塊，選擇 [信任中心]，然後選擇 [信任中心設定]。
     
     [Project 的工作窗格增益集](../project/project-add-ins.md) 中也說明註冊增益集的程序，以及其他資訊。
     
-4. 在 [信任中心]**** 對話方塊的左窗格中，選擇 [受信任的增益集目錄]****。
+4. 在 [信任中心] 對話方塊的左窗格中，選擇 [受信任的增益集目錄]。
     
-5. 如果您已經新增 Bing 搜尋增益集的 `\\ServerName\AppManifests` 路徑，請跳過這個步驟。 否則在 [受信任的增益集目錄]**** 窗格中，於 [目錄 URL]**** 文字方塊中加入 `\\ServerName\AppManifests` 路徑，選擇 [新增目錄]****，啟用網路共用做為預設來源 (見圖 1)，然後選擇 [確定]****。
+5. 如果您已經新增 Bing 搜尋增益集的 `\\ServerName\AppManifests` 路徑，請跳過這個步驟。否則在 [受信任的增益集目錄] 窗格中，於 [目錄 URL] 文字方塊中加入 `\\ServerName\AppManifests` 路徑，選擇 [新增目錄]，啟用網路共用做為預設來源 (見圖 1)，然後選擇 [確定]。
     
-    **圖 1. 新增增益集資訊清單的網路檔案共用**
+    **圖 1.新增增益集資訊清單的網路檔案共用**
 
     ![新增應用程式資訊清單的網路檔案共用](../../images/pj15_CreateSimpleAgave_ManageCatalogs.png)
 
-6. 新增增益集或變更原始程式碼後，重新啟動專案。 在 [專案]**** 功能區中，選擇 [Office 增益集]**** 下拉功能表，然後選擇 [全部查看]****。 在 [插入增益集]**** 對話方塊方塊中，選擇 [共用資料夾]**** (見圖 2)，選取 [專案 OM 測試]****，然後選擇 [插入]****。 專案 OM 測試增益集在工作窗格中啟動。
+6. 新增增益集或變更原始程式碼後，重新啟動專案。在 [專案] 功能區中，選擇 [Office 增益集] 下拉功能表，然後選擇 [全部查看]。在 [插入增益集] 對話方塊方塊中，選擇 [共用資料夾] (見圖 2)，選取 [專案 OM 測試]，然後選擇 [插入]。專案 OM 測試增益集在工作窗格中啟動。
     
-    **圖 2. 啟動檔案共用上的專案 OM 測試增益集**
+    **圖 2.啟動檔案共用上的專案 OM 測試增益集**
 
     ![插入應用程式](../../images/pj15_CreateSimpleAgave_StartAgaveApp.png)
 
-7. 在 [專案] 中，建立並儲存一個至少有兩個工作的簡單專案。 例如，建立名為 T1、T2 的工作，以及名為 M1 的里程碑，再將工作持續時間與前置者設為與圖 3 中的設定類似。 選擇功能區上的 [專案]**** 索引標籤，選取工作 T2 的整個資料列，然後在工作窗格中選擇 [getSelectedDataAsync]**** 按鈕。 圖 3 顯示在 [專案 OM 測試]**** 增益集的文字方塊中選取的資料。
+7. 在 [專案] 中，建立並儲存一個至少有兩個工作的簡單專案。例如，建立名為 T1、T2 的工作，以及名為 M1 的里程碑，再將工作持續時間與前置者設為與圖 3 中的設定類似。選擇功能區上的 [專案] 索引標籤，選取工作 T2 的整個資料列，然後在工作窗格中選擇 [getSelectedDataAsync] 按鈕。圖 3 顯示在 [專案 OM 測試] 增益集的文字方塊中選取的資料。
     
-    **圖 3. 使用專案 OM 測試增益集**
+    **圖 3.使用專案 OM 測試增益集**
 
     ![使用專案 OM 測試應用程式](../../images/pj15_CreateSimpleAgave_ProjectOMTest.gif)
 
-8. 在第一件工作的 [持續時間]**** 資料行中選取儲存格，然後選擇 [專案 OM 測試]**** 增益集的 [getSelectedDataAsync]**** 按鈕。 **getSelectedDataAsync** 函式會設定文字方塊值來顯示 `2 days`。 
+8. 在第一件工作的 [持續時間] 資料行中選取儲存格，然後選擇 [專案 OM 測試] 增益集的 [getSelectedDataAsync] 按鈕。**getSelectedDataAsync** 函式會設定文字方塊值來顯示 `2 days`。 
     
-9. 選取全部三個工作的三個 [持續時間]**** 儲存格。 **getSelectedDataAsync** 函式會針對不同資料列中選取的儲存格，傳回以分號分隔的文字值，例如，`2 days;4 days;0 days`。
+9. 選取全部三個工作的三個 [持續時間] 儲存格。**getSelectedDataAsync** 函式會針對不同資料列中選取的儲存格，傳回以分號分隔的文字值，例如，`2 days;4 days;0 days`。
     
-    **getSelectedDataAsync** 函式會針對單一資料列中選取的儲存格，傳回以逗號分隔的文字值。 例如在圖 3 中，已選取工作 T2 的整個資料列。 當您選擇 **getSelectedDataAsync**，文字方塊會顯示下列︰`,Auto Scheduled,T2,4 days,Thu 6/14/12,Tue 6/19/12,1,,<NA>`
+    **getSelectedDataAsync** 函式會針對單一資料列中選取的儲存格，傳回以逗號分隔的文字值。例如在圖 3 中，已選取工作 T2 的整個資料列。當您選擇 **getSelectedDataAsync**，文字方塊會顯示下列︰`,Auto Scheduled,T2,4 days,Thu 6/14/12,Tue 6/19/12,1,,<NA>`
     
-    **Indicators** 資料行和 **Resource Names** 資料行皆是空的，所以這些資料行會在文字陣列中顯示為空值。 **Add New Column** 儲存格的值為 `<NA>`。
+    **Indicators** 資料行和 **Resource Names** 資料行皆是空的，所以這些資料行會在文字陣列中顯示為空值。**Add New Column** 儲存格的值為 `<NA>`。
     
-10. 選取工作 T2 資料列中任一儲存格，或選取工作 T2 的整個資料列，然後選擇 **getSelectedTaskAsync**。 文字方塊顯示工作 GUID 值，例如 `{25D3E03B-9A7D-E111-92FC-00155D3BA208}`。 專案會將該值儲存在 [專案 OM 測試]**** 增益集的全域 **taskGuid** 變數。
+10. 選取工作 T2 資料列中任一儲存格，或選取工作 T2 的整個資料列，然後選擇 **getSelectedTaskAsync**。文字方塊顯示工作 GUID 值，例如 `{25D3E03B-9A7D-E111-92FC-00155D3BA208}`。專案會將該值儲存在 [專案 OM 測試] 增益集的全域 **taskGuid** 變數。
     
-11. 選擇 [getTaskAsync]****。 如果 **taskGuid** 變數包含工作 T2 的 GUID，文字方塊會顯示工作資訊。 **ResourceNames** 值是空的。
+11. 選擇 [getTaskAsync]。如果 **taskGuid** 變數包含工作 T2 的 GUID，文字方塊會顯示工作資訊。**ResourceNames** 值是空的。
     
-    建立兩個本機資源 R1 和 R2，將它們各以 50% 指派給工作 T2，然後再次選擇 **getTaskAsync**。 在文字方塊中的結果會包含資源資訊。 如果工作位於同步的 SharePoint 工作清單中，結果也會包含 SharePoint 工作識別碼。
+    建立兩個本機資源 R1 和 R2，將它們各以 50% 指派給工作 T2，然後再次選擇 **getTaskAsync**。在文字方塊中的結果會包含資源資訊。如果工作位於同步的 SharePoint 工作清單中，結果也會包含 SharePoint 工作識別碼。
     
 
 
@@ -761,7 +761,7 @@ WSS Id: 0
 ResourceNames: R1[50%],R2[50%]
 ```
 
-12. 選擇 [取得工作欄位]**** 按鈕。 **getTaskFields** 函式會針對工作名稱、索引、開始日期、持續時間、優先順序及工作附註呼叫 **getTaskfieldAsync** 函式多次。
+12. 選擇 [取得工作欄位] 按鈕。**getTaskFields** 函式會針對工作名稱、索引、開始日期、持續時間、優先順序及工作附註呼叫 **getTaskfieldAsync** 函式多次。
     
 ```
   Name: T2
@@ -772,7 +772,7 @@ Priority: 500
 Notes: This is a note for task T2. It is only a test note. If it had been a real note, there would be some real information.
 ```
 
-13. 選擇 [getWSSUrlAsync]**** 按鈕。 如果專案是下列類型之一，結果會顯示工作清單 URL 和名稱。
+13. 選擇 [getWSSUrlAsync] 按鈕。如果專案是下列類型之一，結果會顯示工作清單 URL 和名稱。
     
       - 匯入至 Project Server 的 SharePoint 工作清單。
     
@@ -789,9 +789,9 @@ Notes: This is a note for task T2. It is only a test note. If it had been a real
 List name: Test task list
 ```
 
-14. 在 [TaskSelectionChanged 事件]**** 區段中選擇 [新增]**** 按鈕，呼叫 **manageTaskEventHandler** 函式以註冊工作選取範圍變更的事件，並在文字方塊中傳回 `In onComplete function for addHandlerAsync Status: succeeded`。 選取不同的工作；文字方塊會顯示 `In task selection changed event handler`，也就是工作選取範圍變更的事件之回呼函式輸出。 選擇 [移除]**Remove** 按鈕來取消登錄事件處理常式。
+14. 在 [TaskSelectionChanged 事件] 區段中選擇 [新增] 按鈕，呼叫 **manageTaskEventHandler** 函式以註冊工作選取範圍變更的事件，並在文字方塊中傳回 `In onComplete function for addHandlerAsync Status: succeeded`。選取不同的工作；文字方塊會顯示 `In task selection changed event handler`，也就是工作選取範圍變更的事件之回呼函式輸出。選擇 [移除] 按鈕來取消登錄事件處理常式。
     
-15. 若要使用資源方法，請先選取檢視，如 [資源工作表]****、[資源使用量]**** 或 [資源表單]****，然後選取該檢視中的資源。 選擇 [getSelectedResourceAsync]**** 來初始化 **resourceGuid** 變數，然後選擇 [取得資源欄位]****，為資源屬性呼叫 **getResourceFieldAsync** 多次。 您也可以新增或移除資源選取範圍變更的事件處理常式。
+15. 若要使用資源方法，請先選取檢視，如 [資源工作表]、[資源使用量] 或 [資源表單]，然後選取該檢視中的資源。選擇 **getSelectedResourceAsync** 來初始化 **resourceGuid** 變數，然後選擇 [取得資源欄位]，為資源屬性呼叫 **getResourceFieldAsync** 多次。您也可以新增或移除資源選取範圍變更的事件處理常式。
     
 ```
   Resource name: R1
@@ -802,14 +802,14 @@ Actual Work: 0h
 Units: 100%
 ```
 
-16. 選擇 [getSelectedViewAsync]**** 以顯示使用中檢視的類型和名稱。 您也可以新增或移除檢視選取範圍變更的事件處理常式。 例如，如果 [資源表單]**** 是作用中檢視，**getSelectedViewAsync** 函式會在文字方塊中顯示下列資訊︰
+16. 選擇 [getSelectedViewAsync] 以顯示使用中檢視的類型和名稱。您也可以新增或移除檢視選取範圍變更的事件處理常式。例如，如果 [資源表單] 是作用中檢視，**getSelectedViewAsync** 函式會在文字方塊中顯示下列資訊︰
     
 ```
   View type: 6
 Name: Resource Form
 ```
 
-17. 選擇 [取得專案欄位]****，為使用中專案的不同屬性呼叫 **getProjectFieldAsync** 函式多次。 若是從 Project Web App 開啟專案，**getProjectFieldAsync** 函式可以取得 Project Web App 執行個體的 URL。
+17. 選擇 [取得專案欄位]，為使用中專案的不同屬性呼叫 **getProjectFieldAsync** 函式多次。若是從 Project Web App 開啟專案，**getProjectFieldAsync** 函式可以取得 Project Web App 執行個體的 URL。
     
 ```
   Project GUID: 9845922E-DAB4-E111-8AF3-00155D3BA208
@@ -825,7 +825,7 @@ Project web app URL:
   http://servername/pwa
 ```
 
-18. 選擇 [取得內容值]**** 按鈕以取得文件和正在執行增益集的應用程式的屬性，方法是取得 **Office.Context.document** 物件和 **Office.context.application** 物件的屬性。 例如，如果 Project1.mpp 檔案位於本機電腦桌面時，文件 URL 是 `C:\Users\UserAlias\Desktop\Project1.mpp`。 如果 .mpp 檔案位於 SharePoint 程式庫，則值是文件的 URL。 如果您使用 Project Professional 2013，從 Project Web App 開啟名為 Project1 的專案，則文件 URL 是 `<>\Project1`。
+18. 選擇 [取得內容值] 按鈕以取得文件和正在執行增益集的應用程式的屬性，方法是取得 **Office.Context.document** 物件和 **Office.context.application** 物件的屬性。例如，如果 Project1.mpp 檔案位於本機電腦桌面時，文件 URL 是 `C:\Users\UserAlias\Desktop\Project1.mpp`。如果 .mpp 檔案位於 SharePoint 程式庫，則值是文件的 URL。如果您使用 Project Professional 2013，從 Project Web App 開啟名為 Project1 的專案，則文件 URL 是 `<>\Project1`。
     
 ```
   Document URL:
@@ -835,10 +835,10 @@ App language: en-US
 Display language: en-US
 ```
 
-19. 編輯原始程式碼之後，您可以關閉並重新啟動專案來重新整理增益集。 在 [專案]**** 功能區中，[Office 增益集]**** 下拉式清單會維護最近使用的增益集清單。
+19. 編輯原始程式碼之後，您可以關閉並重新啟動專案來重新整理增益集。在 [專案] 功能區中，[Office 增益集] 下拉式清單會維護最近使用的增益集清單。
     
 
-## 範例
+## <a name="example"></a>範例
 
 
 Project 2013 SDK 下載在 JSOMCall.html 檔、JSOM_Sample.js 檔，以及相關的 Office.js、Office.debug.js、Project-15.js 和 Project-15.debug.js 檔中包含完整的程式碼。下列是 JSOMCall.html 檔中的程式碼。
@@ -927,7 +927,7 @@ Project 2013 SDK 下載在 JSOMCall.html 檔、JSOM_Sample.js 檔，以及相關
 ```
 
 
-## 穩定的程式設計
+## <a name="robust-programming"></a>穩定的程式設計
 
 
 **專案 OM 測試**增益集是一個範例，示範 Project-15.js 和 Office.js 檔中 Project 2013 的一些 JavaScript 函式使用方式。此範例僅供測試，並且不包含健全的錯誤檢查。例如，如果您不選取資源並執行 **getSelectedResourceAsync** 函式，**resourceGuid** 變數未初始化，且呼叫 **getResourceFieldAsync** 會傳回錯誤。若為實際執行增益集，您應該檢查特定的錯誤並略過結果、隱藏不適用的功能，或通知使用者來選擇檢視，並在使用函式前先設定有效的選取範圍。
@@ -963,7 +963,7 @@ function getSelectedResourceAsync() {
 }
 ```
 
-使用 Visual Studio 2015 時更容易開發增益集，您可以在其中設定中斷點以協助偵錯 JavaScript 程式碼，並快速整合常見的錯誤處理常式。 例如，Project 2013 SDK 下載中的 **HelloProject_OData** 範例包括使用 JQuery 程式庫來顯示快顯錯誤訊息的 SurfaceErrors.js 檔。 圖 4 顯示「吐司」通知中的錯誤訊息。 這個範例也包括 Office vsdoc.js 檔案，在 Office.js file 和 Project-15.js file 檔中提供 Intellisense for JavaScript 函式。
+使用 Visual Studio 2015 時更容易開發增益集，您可以在其中設定中斷點以協助偵錯 JavaScript 程式碼，並快速整合常見的錯誤處理常式。例如，Project 2013 SDK 下載中的 **HelloProject_OData** 範例包括使用 JQuery 程式庫來顯示快顯錯誤訊息的 SurfaceErrors.js 檔。圖 4 顯示「吐司」通知中的錯誤訊息。這個範例也包括 Office vsdoc.js 檔案，在 Office.js file 和 Project-15.js file 檔中提供 Intellisense for JavaScript 函式。
 
 SurfaceErrors.js 檔中的下列程式碼包含建立 **Toast** 物件的 **throwError** 函式。
 
@@ -1120,12 +1120,12 @@ function logMethodError(methodName, errorName, errorMessage, actionMessage) {
 ```
 
 
-**圖 4. SurfaceErrors.js 檔案中的函式可以顯示快顯通知**
+**圖 4.SurfaceErrors.js 檔案中的函式可以顯示快顯通知**
 
 ![使用 SurfaceError 常式來顯示錯誤](../../images/pj15_CreateSimpleAgave_SurfaceError.gif)
 
 
-## 其他資源
+## <a name="additional-resources"></a>其他資源
 
 
 
@@ -1133,7 +1133,7 @@ function logMethodError(methodName, errorName, errorMessage, actionMessage) {
     
 - [了解適用於增益集的 JavaScript API](../develop/understanding-the-javascript-api-for-office.md)
     
-- [JavaScript API for Office 增益集](../../reference/javascript-api-for-office.md)
+- [適用於 Office 增益集的 JavaScript API](../../reference/javascript-api-for-office.md)
 
 - [Office 增益集資訊清單的結構描述參考 (v1.1)](../overview/add-in-manifests.md)     
     

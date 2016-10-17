@@ -1,11 +1,11 @@
 
-# OfficeApp 項目
+# <a name="officeapp-element"></a>OfficeApp 項目
 Office 增益集資訊清單中的根項目。
 
  **增益集類型︰**內容、工作窗格、郵件
 
 
-## 語法：
+## <a name="syntax:"></a>語法：
 
 
 ```XML
@@ -18,48 +18,48 @@ Office 增益集資訊清單中的根項目。
 ```
 
 
-## 內含於：
+## <a name="contained-in:"></a>內含於：
 
  _無_
 
 
-## 必須包含︰
+## <a name="must-contain:"></a>必須包含︰
 
 
 
-|**元素**|**內容**|**郵件**|**TaskPane**|
+|** 元素**|**內容**|**郵件**|**TaskPane**|
 |:-----|:-----|:-----|:-----|
 |[Id](../../reference/manifest/id.md)|x|x|x|
-|[版本](../../reference/manifest/version.md)|x|x|x|
+|[Version](../../reference/manifest/version.md)|x|x|x|
 |[ProviderName](../../reference/manifest/providername.md)|x|x|x|
 |[DefaultLocale](../../reference/manifest/defaultlocale.md)|x|x|x|
 |[DefaultSettings](../../reference/manifest/defaultsettings.md)|x|x|x|
 |[DisplayName](../../reference/manifest/displayname.md)|x|x|x|
-|[說明](../../reference/manifest/description.md)|x|x|x|
+|[Description](../../reference/manifest/description.md)|x|x|x|
 |[FormSettings](../../reference/manifest/formsettings.md)||x||
-|[權限](../../reference/manifest/permissions.md)|x||x|
-|[規則](../../reference/manifest/rule.md)||x||
+|[Permissions](../../reference/manifest/permissions.md)|x||x|
+|[Rule](../../reference/manifest/rule.md)||x||
 
-## 可以包含︰
+## <a name="can-contain:"></a>可以包含︰
 
 
 
-|**元素**|**內容**|**郵件**|**TaskPane**|
+|** 元素**|**內容**|**郵件**|**TaskPane**|
 |:-----|:-----|:-----|:-----|
 |[AlternateId](../../reference/manifest/alternateid.md)|x|x|x|
 |[IconUrl](../../reference/manifest/iconurl.md)|x|x|x|
 |[HighResolutionIconUrl](../../reference/manifest/highresolutioniconurl.md)|x|x|x|
 |[SupportUrl](../../reference/manifest/supporturl.md)|x|x|x|
 |[AppDomains](../../reference/manifest/appdomains.md)|x|x|x|
-|[主機](../../reference/manifest/hosts.md)|x|x|x|
-|[需求](../../reference/manifest/requirements.md)|x|x|x|
+|[Hosts](../../reference/manifest/hosts.md)|x|x|x|
+|[Requirements](../../reference/manifest/requirements.md)|x|x|x|
 |[AllowSnapshot](../../reference/manifest/allowsnapshot.md)|x|||
-|[權限](../../reference/manifest/permissions.md)||x||
+|[Permissions](../../reference/manifest/permissions.md)||x||
 |[DisableEntityHighlighting](../../reference/manifest/disableentityhighlighting.md)||x||
 |[Dictionary](../../reference/manifest/dictionary.md)|||x|
 |[VersionOverrides](../../reference/manifest/versionoverrides.md)|X|X|X|
 
-## 屬性
+## <a name="attributes"></a>屬性
 
 
 |||

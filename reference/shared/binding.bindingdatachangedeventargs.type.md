@@ -1,10 +1,10 @@
 
-# BindingDataChangedEventArgs.type 屬性
+# <a name="bindingdatachangedeventargs.type-property"></a>BindingDataChangedEventArgs.type 屬性
 取得可識別所引發事件類型的 **EventType** 列舉值。
 
 |||
 |:-----|:-----|
-|**主機︰**|Access、Excel、Word|
+|**主應用程式︰**|Access、Excel、Word|
 |**上次變更於 BindingEvents**|1.1|
 
 ```js
@@ -12,12 +12,12 @@ var myEvent = eventArgsObj.type;
 ```
 
 
-## 傳回值
+## <a name="return-value"></a>傳回值
 
 引發之事件的 [EventType](../../reference/shared/eventtype-enumeration.md)。
 
 
-## 支援詳細資料
+## <a name="support-details"></a>支援詳細資料
 
 
 下列矩陣中的大寫 Y，表示在相對應的 Office 主應用程式中支援此屬性。空白儲存格表示 Office 主應用程式不支援此屬性。
@@ -41,7 +41,7 @@ var myEvent = eventArgsObj.type;
 |**文件庫**|Office.js|
 |**命名空間**|Office|
 
-## 支援歷程記錄
+## <a name="support-history"></a>支援歷程記錄
 
 
 

@@ -1,51 +1,51 @@
-﻿# ChartCollection 物件 (適用於 Excel 的 JavaScript API)
+# <a name="chartcollection-object-(javascript-api-for-excel)"></a>ChartCollection 物件 (適用於 Excel 的 JavaScript API)
 
 工作表上所有 chart 物件的集合。
 
-## 屬性
+## <a name="properties"></a>屬性
 
-| 屬性	     | 類型	   |說明
+| 屬性	     | 類型	   |描述
 |:---------------|:--------|:----------|
 |Count|int|傳回工作表中的圖表數目。唯讀。|
-|項目|[Chart[]](chart.md)|Chart 物件的集合。唯讀。|
+|items|[Chart[]](chart.md)|Chart 物件的集合。唯讀。|
 
-_請參閱屬性存取[範例。](#範例)_
+_請參閱屬性存取[範例。](#property-access-examples)_
 
-## 關聯性
+## <a name="relationships"></a>關聯性
 無
 
 
-## 方法
+## <a name="methods"></a>方法
 
-| 方法           | 傳回類型    |說明|
+| 方法           | 傳回類型    |描述|
 |:---------------|:--------|:----------|
-|[add(type: string, sourceData:Range, seriesBy: string)](#addtype-string-sourcedata-range-seriesby-string)|[圖表](chart.md)|建立新圖表。|
-|[getItem(name: string)](#getitemname-string)|[圖表](chart.md)|使用名稱取得圖表。如果有多個圖表具有相同的名稱，則會傳回第一個圖表。|
-|[getItemAt(index: number)](#getitematindex-number)|[圖表](chart.md)|根據圖表在集合中的位置，取得圖表。|
+|[add(type: string, sourceData:Range, seriesBy: string)](#addtype-string-sourcedata-range-seriesby-string)|[Chart](chart.md)|建立新圖表。|
+|[getItem(name: string)](#getitemname-string)|[Chart](chart.md)|使用名稱取得圖表。如果有多個圖表具有相同的名稱，則會傳回第一個圖表。|
+|[getItemAt(index: number)](#getitematindex-number)|[Chart](chart.md)|根據圖表在集合中的位置，取得圖表。|
 |[load(param: object)](#loadparam-object)|void|以參數中指定的屬性和物件值填滿 JavaScript 層中建立的 Proxy 物件。|
 
-## 方法詳細資料
+## <a name="method-details"></a>方法詳細資料
 
 
-### add(type: string, sourceData:Range, seriesBy: string)
+### <a name="add(type:-string,-sourcedata:-range,-seriesby:-string)"></a>add(type: string, sourceData:Range, seriesBy: string)
 建立新圖表。
 
-#### 語法
+#### <a name="syntax"></a>語法
 ```js
 chartCollectionObject.add(type, sourceData, seriesBy);
 ```
 
-#### 參數
-| 參數	    | 類型	   |說明|
+#### <a name="parameters"></a>參數
+| 參數	    | 類型	   |描述|
 |:---------------|:--------|:----------|
 |類型|string|代表圖表的類型。可能的值為：ColumnClustered、ColumnStacked、ColumnStacked100、BarClustered、BarStacked、BarStacked100、LineStacked、LineStacked100、LineMarkers、LineMarkersStacked、LineMarkersStacked100、PieOfPie 等。|
 |sourceData|Range|包含來源資料的 range 物件。|
 |seriesBy|string|選用。指定在圖表中使用欄或列作為資料數列的方法。可能的值為：Auto、Columns、Rows。|
 
-#### 傳回
-[圖表](chart.md)
+#### <a name="returns"></a>傳回
+[Chart](chart.md)
 
-#### 範例
+#### <a name="examples"></a>範例
 
 使用來自範圍 "A1:B4" 的 `chartType`，在工作表 "Charts" 上新增圖表 `sourceData` "ColumnClustered"，並將 `seriesBy` 設定為 "auto"。
 
@@ -66,23 +66,23 @@ Excel.run(function (ctx) {
 ```
 
 
-### getItem(name: string)
+### <a name="getitem(name:-string)"></a>getItem(name: string)
 使用名稱取得圖表。如果有多個圖表具有相同的名稱，則會傳回第一個圖表。
 
-#### 語法
+#### <a name="syntax"></a>語法
 ```js
 chartCollectionObject.getItem(name);
 ```
 
-#### 參數
-| 參數	    | 類型	   |說明|
+#### <a name="parameters"></a>參數
+| 參數	    | 類型	   |描述|
 |:---------------|:--------|:----------|
 |Name|string|要擷取之圖表的名稱。|
 
-#### 傳回
-[圖表](chart.md)
+#### <a name="returns"></a>傳回
+[Chart](chart.md)
 
-#### 範例
+#### <a name="examples"></a>範例
 
 ```js
 Excel.run(function (ctx) { 
@@ -100,7 +100,7 @@ Excel.run(function (ctx) {
 ```
 
 
-#### 範例
+#### <a name="examples"></a>範例
 
 ```js
 Excel.run(function (ctx) { 
@@ -119,7 +119,7 @@ Excel.run(function (ctx) {
 
 
 
-#### 範例
+#### <a name="examples"></a>範例
 
 ```js
 Excel.run(function (ctx) { 
@@ -137,23 +137,23 @@ Excel.run(function (ctx) {
 ```
 
 
-### getItemAt(index: number)
+### <a name="getitemat(index:-number)"></a>getItemAt(index: number)
 根據圖表在集合中的位置，取得圖表。
 
-#### 語法
+#### <a name="syntax"></a>語法
 ```js
 chartCollectionObject.getItemAt(index);
 ```
 
-#### 參數
-| 參數	    | 類型	   |說明|
+#### <a name="parameters"></a>參數
+| 參數	    | 類型	   |描述|
 |:---------------|:--------|:----------|
 |index|number|要擷取之物件的索引值。以 0 開始編製索引。|
 
-#### 傳回
-[圖表](chart.md)
+#### <a name="returns"></a>傳回
+[Chart](chart.md)
 
-#### 範例
+#### <a name="examples"></a>範例
 
 ```js
 Excel.run(function (ctx) { 
@@ -171,22 +171,22 @@ Excel.run(function (ctx) {
 ```
 
 
-### load(param: object)
+### <a name="load(param:-object)"></a>load(param: object)
 以參數中指定的屬性和物件值填滿 JavaScript 層中建立的 Proxy 物件。
 
-#### 語法
+#### <a name="syntax"></a>語法
 ```js
 object.load(param);
 ```
 
-#### 參數
-| 參數	    | 類型	   |說明|
+#### <a name="parameters"></a>參數
+| 參數	    | 類型	   |描述|
 |:---------------|:--------|:----------|
 |param|物件|選用。接受參數與關聯性名稱，做為分隔字串或陣列。或者提供 [loadOption](loadoption.md) 物件。|
 
-#### 傳回
+#### <a name="returns"></a>傳回
 void
-### 屬性存取範例
+### <a name="property-access-examples"></a>屬性存取範例
 
 ```js
 Excel.run(function (ctx) { 

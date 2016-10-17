@@ -1,10 +1,10 @@
 
-# AsyncResult 物件
+# <a name="asyncresult-object"></a>AsyncResult 物件
 會封裝非同步要求結果的物件，包括狀態及錯誤資訊 (如果要求失敗)。
 
 |||
 |:-----|:-----|
-|**主機︰**|Access、Excel、Outlook、PowerPoint、Project、Word|
+|**主應用程式︰**|Access、Excel、Outlook、PowerPoint、Project、Word|
 |**上次變更於**|1.1|
 
 ```
@@ -12,20 +12,20 @@ AsyncResult
 ```
 
 
-## 成員
+## <a name="members"></a>成員
 
 
 **屬性**
 
 
-|**名稱**|**說明**|
+|**名稱**|**描述**|
 |:-----|:-----|
 |**[asyncContext](../../reference/shared/asyncresult.asynccontext.md)**|取得傳遞至叫用方法之選擇性 _asyncContext_ 參數的使用者定義項目，並保留傳遞時的狀態。|
-|**[錯誤](../../reference/shared/asyncresult.error.md)**|如果發生任何錯誤，取得提供錯誤描述的 **Error** 物件。|
-|**[狀態](../../reference/shared/asyncresult.status.md)**|取得非同步作業的狀態。|
-|**[value](../../reference/shared/asyncresult.value.md)**|如果有的話，請取得這個非同步作業的裝載或內容。|
+|**[error](../../reference/shared/asyncresult.error.md)**|如果發生任何錯誤，取得提供錯誤描述的 **Error** 物件。|
+|**[status](../../reference/shared/asyncresult.status.md)**|取得非同步作業的狀態。|
+|**[value](../../reference/shared/asyncresult.value.md)**|如果有的話，取得這個非同步作業的裝載或內容。|
 
-## 備註
+## <a name="remarks"></a>備註
 
 當傳遞至「Async」方法之 _callback_ 參數的函數執行時，該函數會收到 [AsyncResult](../../reference/shared/asyncresult.md) 物件，您可以從回呼函數的唯一參數存取該物件。
 
@@ -62,7 +62,7 @@ function write(message){
 
 
 
-|**父物件**|**方法	**|
+|**父物件**|**方法**|
 |:-----|:-----|
 |**Document** (僅限 Excel、 PowerPoint、Project 及 Word)|[getSelectedDataAsync](../../reference/shared/document.getselecteddataasync.md)|
 ||[setSelectedDataAsync](../../reference/shared/document.setselecteddataasync.md)|
@@ -93,13 +93,18 @@ function write(message){
 |**CustomXmlPrefixMappings** (僅限 Word)|[addNamespaceAsync](../../reference/shared/customxmlprefixmappings.addnamespaceasync.md)|
 ||[getNamespaceAsync](../../reference/shared/customxmlprefixmappings.getnamespaceasync.md)|
 ||[getPrefixAsync](../../reference/shared/customxmlprefixmappings.getprefixasync.md)|
-|**Mailbox** (僅限 Outlook)|[getUserIdentityTokenAsync](http://msdn.microsoft.com/library/c658518b-6867-41a0-99cf-810303e4c539%28Office.15%29.aspx)|
-||[makeEwsRequestAsync](http://msdn.microsoft.com/library/2ec380e0-4a67-4146-92a6-6a39f65dc6f2%28Office.15%29.aspx)|
-|**CustomProperties** (僅限 Outlook)|[saveAsync](http://msdn.microsoft.com/library/690d5aa9-62b5-4e5c-9548-62dfdbb5fa56%28Office.15%29.aspx)|
-|**Item** (僅限 Outlook)|[loadCustomPropertiesAsync](http://msdn.microsoft.com/library/dfbec151-8ea7-4915-b723-09ea1396a261%28Office.15%29.aspx)|
-|**RoamingSettings** (僅限 Outlook)|[saveAsync](http://msdn.microsoft.com/library/a616f71c-a447-423f-a0d2-e9d6f1ac32f8%28Office.15%29.aspx)|
+|**Mailbox** (僅限 Outlook)|
+  [getUserIdentityTokenAsync](http://msdn.microsoft.com/library/c658518b-6867-41a0-99cf-810303e4c539%28Office.15%29.aspx)|
+||
+  [makeEwsRequestAsync](http://msdn.microsoft.com/library/2ec380e0-4a67-4146-92a6-6a39f65dc6f2%28Office.15%29.aspx)|
+|**CustomProperties** (僅限 Outlook)|
+  [saveAsync](http://msdn.microsoft.com/library/690d5aa9-62b5-4e5c-9548-62dfdbb5fa56%28Office.15%29.aspx)|
+|**Item** (僅限 Outlook)|
+  [loadCustomPropertiesAsync](http://msdn.microsoft.com/library/dfbec151-8ea7-4915-b723-09ea1396a261%28Office.15%29.aspx)|
+|**RoamingSettings** (僅限 Outlook)|
+  [saveAsync](http://msdn.microsoft.com/library/a616f71c-a447-423f-a0d2-e9d6f1ac32f8%28Office.15%29.aspx)|
 
-## 支援詳細資料
+## <a name="support-details"></a>支援詳細資料
 
 
 下列矩陣中的大寫 Y，表示在相對應的 Office 主應用程式中支援此方法。空白儲存格表示 Office 主應用程式不支援此方法。
@@ -108,10 +113,10 @@ function write(message){
 
 
 
-| |**Office for Windows desktop**|**Office Online (在瀏覽器中)**|**Office for iPad**|**裝置適用的 OWA**|**Mac 版 Outlook**|
+| |**Office for Windows desktop**|**Office Online (在瀏覽器中)**|**Office for iPad**|**裝置適用的 OWA**|**Outlook for Mac**|
 |:-----|:-----|:-----|:-----|:-----|:-----|
 |**Access**||Y||||
-|**Excel**|Y|Y|是|||
+|**Excel**|Y|Y|Y|||
 |**Outlook**|Y|Y||Y|Y|
 |**PowerPoint**|Y|Y|Y|||
 |**Project**|Y|||||
@@ -123,7 +128,7 @@ function write(message){
 |**文件庫**|Office.js|
 |**命名空間**|Office|
 
-## 支援歷程記錄
+## <a name="support-history"></a>支援歷程記錄
 
 
 

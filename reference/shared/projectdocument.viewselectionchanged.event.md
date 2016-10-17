@@ -1,11 +1,11 @@
 
 
-# ProjectDocument.ViewSelectionChanged 事件
+# <a name="projectdocument.viewselectionchanged-event"></a>ProjectDocument.ViewSelectionChanged 事件
 使用中專案的使用中檢視變更時，就會發生。
 
 |||
 |:-----|:-----|
-|**主機︰**|Project|
+|**主應用程式︰**|Project|
 |**可用於[需求集合](../../docs/overview/specify-office-hosts-and-api-requirements.md)**|Selection|
 |**已新增於**|1.0|
 
@@ -14,12 +14,12 @@ Office.EventType.ViewSelectionChanged
 ```
 
 
-## 備註
+## <a name="remarks"></a>備註
 
  **ViewSelectionChanged** 為 [EventType](../../reference/shared/eventtype-enumeration.md) 列舉常數，可用於 [ProjectDocument.addHandlerAsync](../../reference/shared/projectdocument.addhandlerasync.md) 及 [ProjectDocument.removeHandlerAsync](../../reference/shared/projectdocument.removehandlerasync.md) 方法中，以新增或移除事件處理常式。
 
 
-## 範例
+## <a name="example"></a>範例
 
 下列程式碼範例會加入 **ViewSelectionChanged** 事件的處理常式。使用中檢視變更時，該處理常式會取得使用中檢視的名稱與類型。
 
@@ -78,7 +78,7 @@ Office.EventType.ViewSelectionChanged
 如需範例示範如何使用 Project 增益集中的 **ViewSelectionChanged** 事件處理常式，請參閱[使用文字編輯器，建立您的第一個 Project 2013 工作窗格增益集](../../docs/project/create-your-first-task-pane-add-in-for-project-by-using-a-text-editor.md)。
 
 
-## 支援詳細資料
+## <a name="support-details"></a>支援詳細資料
 
 
 下列矩陣中的大寫 Y，表示在相對應的 Office 主應用程式中支援此方法。空白儲存格表示 Office 主應用程式不支援此事件。
@@ -99,7 +99,7 @@ Office.EventType.ViewSelectionChanged
 |**文件庫**|Office.js|
 |**命名空間**|Office|
 
-## 支援歷程記錄
+## <a name="support-history"></a>支援歷程記錄
 
 
 
@@ -107,11 +107,11 @@ Office.EventType.ViewSelectionChanged
 |:-----|:-----|
 |1.0|已導入|
 
-## 請參閱
+## <a name="see-also"></a>請參閱
 
 
 
-#### 其他資源
+#### <a name="other-resources"></a>其他資源
 
 
 [使用文字編輯器來建立第一個 Project 2013 的工作窗格增益集](../../docs/project/create-your-first-task-pane-add-in-for-project-by-using-a-text-editor.md)

@@ -1,10 +1,10 @@
-﻿
-# 開發 Office 增益集的最佳做法
+
+# <a name="best-practices-for-developing-office-add-ins"></a>開發 Office 增益集的最佳做法
 
 
 有效的增益集提供獨特且令人信服的功能，以視覺上吸引人的方式擴充 Office 應用程式。若要建立很棒的增益集，請為您的使用者提供吸引人的首次經驗、設計第一級的 UI 經驗，以及將增益集的效能最佳化。運用本文中所述的最佳做法，來建立可協助使用者快速且有效地完成其工作的增益集。
 
-## 提供顯而易見的價值
+## <a name="provide-clear-value"></a>提供顯而易見的價值
 
 
 
@@ -13,11 +13,11 @@
  - 在 Office 內啟用新案例。
  - 在 Office 主應用程式內嵌補的服務。
  - 改善 Office 經驗來提升生產力。
-- 利用[吸引人的首次經驗](#吸引人的首次經驗)，確定增益集的價值對使用者來說立即顯而易見。
+- 利用[吸引人的首次經驗](#create-an-engaging-first-run-experience)，確定增益集的價值對使用者來說立即顯而易見。
 - 建立[有效的 Office 市集清單](http://msdn.microsoft.com/library/c66a6e6b-2e96-458f-8f8c-2a499fe942c9%28Office.15%29.aspx)。請在您的標題和描述中清楚說明增益集的優點。切勿仰賴您的品牌來說明增益集的用途。
 
 
-## 建立吸引人的首次執行經驗
+## <a name="create-an-engaging-first-run-experience"></a>建立吸引人的首次執行經驗
 
 
 
@@ -45,7 +45,7 @@
 
 如需說明當您開發初次執行體驗時可以套用的模式的範本，請參閱 [Office 增益集的 UX 設計模式](https://github.com/OfficeDev/Office-Add-in-UX-Design-Patterns-Code)。
 
-## 使用增益集命令
+## <a name="use-add-in-commands"></a>使用增益集命令
 
 - 使用[增益集命令](../design/add-in-commands.md)提供增益集的相關 UI 進入點。
 
@@ -61,7 +61,7 @@
   - 請勿加入過多的按鈕來增加增益集的實際資產。
 
      >
-  **附註**  佔用太多的空間的增益集可能無法通過 [Office 市集驗證](https://msdn.microsoft.com/library/cd90836a-523e-42f5-ab02-5123cdf9fefe(Office.15).aspx)。
+  **Note**  Add-ins that take up too much space might not pass [Office Store validation](https://msdn.microsoft.com/library/cd90836a-523e-42f5-ab02-5123cdf9fefe(Office.15).aspx).
 
 - 針對所有圖示︰
     - 為可清楚識別使用者所要採取動作的按鈕提供有意義的圖示和[標籤](http://msdn.microsoft.com/library/8cef4fce-e6a1-459b-951f-47ac03ec95a6%28Office.15%29.aspx)。
@@ -93,7 +93,7 @@
 
 
 
-## 套用 UX 設計原則
+## <a name="apply-ux-design-principles"></a>套用 UX 設計原則
 
 
 
@@ -113,11 +113,11 @@
 
 - 考慮[協助工具](http://msdn.microsoft.com/library/3be1abbb-237a-48ec-8e17-72caa25a3cb2%28Office.15%29.aspx) - 讓增益集方便所有的使用者與其互動，並納入輔助技術，例如螢幕助讀程式。
 
-- 針對所有的平台和輸入法進行設計，包括滑鼠/鍵盤和[觸控](#觸控)。請確定您的 UI 會對不同的尺寸回應。
+- 針對所有的平台和輸入法進行設計，包括滑鼠/鍵盤和[觸控](#optimize-for-touch)。請確定您的 UI 會對不同的尺寸回應。
 
 如需當您開發增益集可以使用並自訂的套用設計原則的範本，請參閱 [Office 增益集的 UX 設計模式](https://github.com/OfficeDev/Office-Add-in-UX-Design-Patterns-Code)。
 
-### 針對觸控最佳化
+### <a name="optimize-for-touch"></a>針對觸控最佳化
 
 
 
@@ -136,7 +136,7 @@
  >**附註：**如果您對您的設計元素使用 [Office UI 結構](https://github.com/OfficeDev/Office-UI-Fabric)，這些元素中有很多都已處理妥善。
 
 
-## 最佳化及監視增益集效能
+## <a name="optimize-and-monitor-add-in-performance"></a>最佳化及監視增益集效能
 
 
 
@@ -155,7 +155,7 @@
 
 |**互動類別**|**目標**|**上限**|**人類的認知**|
 |:-----|:-----|:-----|:-----|
-|立即|<=50 毫秒|100 毫秒|不會感覺到延遲。|
+|瞬間|<=50 毫秒|100 毫秒|不會感覺到延遲。|
 |快速|50-100 毫秒|200 毫秒|稍微感覺到延遲。不需回饋機制。|
 |一般|100-300 毫秒|500 毫秒|快，但稱不上快速。不需回饋機制。|
 |有反應|300-500 毫秒|1 秒|不夠快，但仍算有反應。不需回饋機制。|
@@ -166,7 +166,7 @@
 - 監視您的服務健康狀況，並使用遙測來監視使用者是否成功。
 
 
-## 行銷您的增益集
+## <a name="market-your-add-in"></a>行銷您的增益集
 
 
 

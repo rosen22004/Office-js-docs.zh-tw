@@ -1,11 +1,11 @@
 
-# Version 項目
+# <a name="version-element"></a>Version 項目
 指定您 Office 增益集的版本。
 
  **增益集類型︰**內容、工作窗格、郵件
 
 
-## 語法：
+## <a name="syntax:"></a>語法：
 
 
 ```XML
@@ -13,7 +13,7 @@
 ```
 
 
-## 內含於：
+## <a name="contained-in:"></a>內含於：
 
 [OfficeApp](../../reference/manifest/officeapp.md)
 

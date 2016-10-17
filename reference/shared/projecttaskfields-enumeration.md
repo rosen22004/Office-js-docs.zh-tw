@@ -1,10 +1,10 @@
 
-# ProjectTaskFields 列舉
+# <a name="projecttaskfields-enumeration"></a>ProjectTaskFields 列舉
 指定可作為 **[getTaskFieldAsync](../../reference/shared/projectdocument.gettaskfieldasync.md)** 方法參數的工作欄位。
 
 |||
 |:-----|:-----|
-|**主機︰**|Project|
+|**主應用程式︰**|Project|
 |**已新增於**|1.0|
 
 ```js
@@ -295,14 +295,14 @@ Microsoft.Office.WebExtension.ProjectTaskFields={
 ```
 
 
-## 成員
+## <a name="members"></a>成員
 
 
 **ProjectTaskFields** 列舉包含下列成員。
 
 
 
-|**名稱**|**值**|**說明**|
+|**名稱**|**值**|**描述**|
 |:-----|:-----|:-----|
 |ActualCost|0|目前的實際任務成本。|
 |ActualDuration|1|任務實際工期，以分鐘為單位。|
@@ -587,13 +587,13 @@ Microsoft.Office.WebExtension.ProjectTaskFields={
 |WBSSUCCESSORS|280|任務後續任務的分工結構圖代碼，並以清單分隔符號隔開。|
 |WSSID|281|SharePoint 清單中的任務識別碼，適用於與 SharePoint 任務清單同步的專案。|
 
-## 備註
+## <a name="remarks"></a>備註
 
 
 **ProjectTaskFields** 常數可作為 **[getTaskFieldAsync](../../reference/shared/projectdocument.gettaskfieldasync.md)** 方法的參數。<br/><br/>如需使用 Project 欄位的相關詳細資訊，請參閱[可用欄位參考資料](http://office.microsoft.com/en-us/project-help/available-fields-reference-HA102749299.aspx?CTT=1)。請在 Project 說明中，搜尋  _Available fields_。
 
 
-## 支援詳細資料
+## <a name="support-details"></a>支援詳細資料
 
 
 下列矩陣中的大寫 Y，表示在相對應的 Office 主應用程式中支援此列舉。空白儲存格表示 Office 主應用程式不支援此列舉。<br/><br/>
@@ -612,17 +612,17 @@ Microsoft.Office.WebExtension.ProjectTaskFields={
 |**文件庫**|Office.js|
 |**命名空間**|Office|
 
-## 支援歷程記錄
+## <a name="support-history"></a>支援歷程記錄
 
 |**版本**|**變更**|
 |:-----|:-----|
 |1.0|已導入|
 
-## 請參閱
+## <a name="see-also"></a>請參閱
 
 
 
-#### 其他資源
+#### <a name="other-resources"></a>其他資源
 
 [getTaskFieldAsync 方法](../../reference/shared/projectdocument.gettaskfieldasync.md)
 

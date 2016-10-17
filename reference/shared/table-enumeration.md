@@ -1,29 +1,29 @@
 
-# Table 列舉
+# <a name="table-enumeration"></a>Table 列舉
 指定_資料表格式化方法_的 [cellFormat](../../docs/excel/format-tables-in-add-ins-for-excel.md) 參數中的 `cells:` 屬性列舉值。
 
 |||
 |:-----|:-----|
-|**主機︰**|Excel|
+|**主應用程式︰**|Excel|
 |**已新增**|1.1|
 
 ```
 Office.Table
 ```
 
-## 成員
+## <a name="members"></a>成員
 
 
 **值**
 
 
-|**列舉**|**值**|**說明**|
+|**列舉**|**值**|**描述**|
 |:-----|:-----|:-----|
 |Office.Table.All|"all"|整張表格，若有欄標題、資料和總計，也包含在內。|
 |Office.Table.Data|"data"|只有資料 (沒有標題和總計)。|
 |Office.Table.Headers|"headers"|只有標題列。|
 
-## 支援詳細資料
+## <a name="support-details"></a>支援詳細資料
 
 
 下列矩陣中的大寫 Y，表示已在相對應的 Office 主應用程式中支援列舉。空白儲存格表示 Office 主應用程式不支援此列舉。
@@ -44,7 +44,7 @@ Office.Table
 |**文件庫**|Office.js|
 |**命名空間**|Office|
 
-## 支援歷程記錄
+## <a name="support-history"></a>支援歷程記錄
 
 
 

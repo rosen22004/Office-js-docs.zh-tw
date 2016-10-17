@@ -1,13 +1,13 @@
 
-# 執行 Office 增益集的需求
+# <a name="requirements-for-running-office-add-ins"></a>執行 Office 增益集的需求
 
 
 本文說明執行 Office 增益集的軟體及裝置需求。
 
->**附註：**如需目前 Office 增益集受支援所在的高階檢視，請參閱 [Office 增益集主應用程式和平台可用性](http://dev.office.com/add-in-availability)頁面。 
+>**附註︰**如需目前 Office 增益集受支援所在的高階檢視，請參閱 [Office 增益集主應用程式和平台可用性](http://dev.office.com/add-in-availability)頁面。 
 
 
-## 伺服器需求
+## <a name="server-requirements"></a>伺服器需求
 
 若要安裝和執行任何 Office 增益集，您必須先將增益集的 UI 和程式碼的資訊清單和網頁檔案，部署至適當的伺服器位置。
 
@@ -25,7 +25,7 @@
 
 
 
-## 用戶端需求Windows 桌上型電腦和平板電腦
+## <a name="client-requirements:-windows-desktop-and-tablet"></a>用戶端需求Windows 桌上型電腦和平板電腦
 
 需要下列軟體，才能為 Windows 架構桌上型電腦、膝上型電腦或平板電腦裝置上執行的支援 Office 桌面用戶端或 Web 用戶端開發 Office 增益集︰
 
@@ -43,7 +43,7 @@
 - 記事本、[Visual Studio 和 Microsoft Developer Tools](https://www.visualstudio.com/features/office-tools-vs)，或協力廠商 Web 開發工具之類的 HTML 和 JavaScript 編輯器。
 
 
-## 用戶端需求OS X 桌上型電腦
+## <a name="client-requirements:-os-x-desktop"></a>用戶端需求OS X 桌上型電腦
 
 作為 Office 365 一部分散發的 Outlook for Mac 支援 Outlook 增益集。在 Outlook for Mac 上執行 Outlook 增益集，與 Outlook for Mac 本身具有相同的需求︰必須至少是作業系統 OS X v10.10 "Yosemite"。由於 Outlook for Mac 會將 WebKit 做為配置引擎來呈現增益集頁面，但也沒有任何其他的瀏覽器相依性。
 
@@ -52,12 +52,12 @@
 - Excel for Mac 15.19 版 (160206) 
 - PowerPoint for Mac 15.24 版 (160614)
 
-## 用戶端需求Office Online Web 用戶端和 SharePoint 的瀏覽器支援
+## <a name="client-requirements:-browser-support-for-office-online-web-clients-and-sharepoint"></a>用戶端需求Office Online Web 用戶端和 SharePoint 的瀏覽器支援
 
 支援 ECMAScript 5.1、HTML5 和 CSS3 的任何瀏覽器，例如 Internet Explorer 9、Chrome 13、Firefox 5、Safari 5.0.6 或較新版的這些瀏覽器。
 
 
-## 用戶端需求︰非 Windows 智慧型手機和平板電腦
+## <a name="client-requirements:-non-windows-smartphone-and-tablet"></a>用戶端需求︰非 Windows 智慧型手機和平板電腦
 
 特別針對裝置的 OWA，以及智慧型手機和非 Windows 平板電腦裝置瀏覽器中執行的 Outlook Web App，需要下列軟體才能測試和執行 Outlook 增益集。
 
@@ -70,7 +70,7 @@
 |Outlook Web App|iPhone 4 或更新版本、iPad 2 或更新版本、iPod Touch 4 或更新版本|iOS 5 或更新版本|在 Office 365、Exchange Online，或在 Exchange Server 2013 或更新版本上的內部部署|Safari|
 
 
-## 其他資源
+## <a name="additional-resources"></a>其他資源
 
 - [Office 增益集平台概觀](../../docs/overview/office-add-ins.md)
 - [Office 增益集主應用程式和平台可用性](http://dev.office.com/add-in-availability)

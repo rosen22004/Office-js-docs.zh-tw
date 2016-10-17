@@ -1,26 +1,26 @@
-# Settings.settingschangedeventargs 物件
+# <a name="settings.settingschangedeventargs-object"></a>Settings.settingschangedeventargs 物件
 提供引發 [settingsChanged 事件](settings.settingschangedevent.md)的設定相關資訊。
 
 |||
 |:-----|:-----|
-|**主機︰**|Access、Excel |
-|**可用於[需求集合](../../docs/overview/specify-office-hosts-and-api-requirements.md)**|Settings|
+|**主應用程式︰**|Access、Excel |
+|**可用於[需求集合](../../docs/overview/specify-office-hosts-and-api-requirements.md)**|設定|
 |**上次變更於**|1.0|
 
 ```js
 Office.EventType.SettingsChanged
 ```
 
-## 成員
+## <a name="members"></a>成員
 
 **屬性**
 
-|**名稱**|**說明**|
+|**名稱**|**描述**|
 |:-----|:-----|
-|**[設定](settings.settingschangedeventargs.setting.md)**|取得代表引發 settingsChanged 事件之設定的 **Settings** 物件。|
-|**[類型](settings.settingschangedeventargs.type.md)**|取得可識別所引發事件類型的 **EventType** 列舉值。|
+|**[settings](settings.settingschangedeventargs.setting.md)**|取得代表引發 settingsChanged 事件之設定的 **Settings** 物件。|
+|**[type](settings.settingschangedeventargs.type.md)**|取得可識別所引發事件類型的 **EventType** 列舉值。|
 
-## 備註
+## <a name="remarks"></a>備註
 
 若要新增 **settingsChanged** 事件的事件處理常式，請使用 [Settings](settings.addhandlerasync.md) 物件的 **addHandlerAsync** 方法。
 
@@ -33,7 +33,7 @@ Office.EventType.SettingsChanged
 
 
 
-## 支援詳細資料
+## <a name="support-details"></a>支援詳細資料
 
 
 下列矩陣中的大寫 Y，表示在相對應的 Office 主應用程式中支援此物件。空白儲存格表示 Office 主應用程式不支援此物件。
@@ -49,12 +49,12 @@ Office.EventType.SettingsChanged
 |||
 |:-----|:-----|
 |**可用於需求集合**|Settings|
-|**最低權限等級**|限制|
+|**最低權限等級**|Restricted|
 |**增益集類型**|內容、工作窗格|
 |**文件庫**|Office.js|
 |**命名空間**|Office|
 
-## 支援歷程記錄
+## <a name="support-history"></a>支援歷程記錄
 
 |**版本**|**變更**|
 |:-----|:-----|

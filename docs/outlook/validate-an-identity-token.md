@@ -1,5 +1,5 @@
 
-# 驗證 Exchange 識別權杖
+# <a name="validate-an-exchange-identity-token"></a>驗證 Exchange 識別權杖
 
 Outlook 增益集可以傳送識別權杖給您，但您必須驗證權杖以確保其來自您所預期的 Exchange server 之後，才可以信任要求。本文中的範例會告訴您如何使用以 C#; 撰寫的驗證物件來驗證 Exchange 識別權杖；不過，您可以使用任何程式設計語言來執行驗證。[JSON Web 權杖 (JWT) 網際網路草稿](http://self-issued.info/docs/draft-goland-json-web-token-00.mdl)中敘述驗證權杖所需的步驟。 
 
@@ -9,7 +9,7 @@ Outlook 增益集可以傳送識別權杖給您，但您必須驗證權杖以確
 
 
 
-## 設定以驗證識別權杖
+## <a name="set-up-to-validate-your-identity-token"></a>設定以驗證識別權杖
 
 
 本文中的程式碼範例取決於 Windows Identity Foundation (WIF)，以及利用 JSON 權杖的處理常式延伸 WIF 的 DLL。您可以從下列位置下載必要的組件︰
@@ -22,7 +22,7 @@ Outlook 增益集可以傳送識別權杖給您，但您必須驗證權杖以確
 - [64 位元應用程式的 Windows.IdentityModel.Extensions.dll](http://download.microsoft.com/download/0/1/D/01D06854-CA0C-46F1-ADBA-EBF86010DCC6/MicrosoftIdentityExtensions-64.msi)
     
 
-## 擷取 JSON Web 權杖
+## <a name="extract-the-json-web-token"></a>擷取 JSON Web 權杖
 
 
 **Decode** 原廠方法會從 Exchange Server 將 JWT 分割成三個組成權杖的字串，然後使用 **Base64Decode** 方法 (如第二個範例所示) 將 JWT 標頭和內容解碼成 JSON 字串。字串會傳遞至 **JsonToken** 建構函式，其中會驗證 JWT 的內容且會傳回新的 **JsonToken** 物件執行個體。
@@ -92,7 +92,7 @@ Outlook 增益集可以傳送識別權杖給您，但您必須驗證權杖以確
 ```
 
 
-## 剖析 JWT
+## <a name="parse-the-jwt"></a>剖析 JWT
 
 
 **JsonToken** 物件的建構函式會檢查 JWT 的結構與內容以判斷是否有效。在您要求驗證中繼資料文件之前，最好這麼做。如果 JWT 不包含適當的宣告，或已超過其存留時間，您可以避免呼叫 Exchange Server 與相關聯的延遲。
@@ -148,7 +148,7 @@ Outlook 增益集可以傳送識別權杖給您，但您必須驗證權杖以確
 ```
 
 
-### ValidateHeader 方法
+### <a name="validateheader-method"></a>ValidateHeader 方法
 
 **ValidateHeader** 方法會檢查以確定必要的宣告是否位於權杖的標頭，以及宣告具有正確的值。標頭必須設定如下；否則，方法會擲回應用程式例外狀況並結束。
 
@@ -185,7 +185,7 @@ Outlook 增益集可以傳送識別權杖給您，但您必須驗證權杖以確
 ```
 
 
-### ValidateLifetime 方法
+### <a name="validatelifetime-method"></a>ValidateLifetime 方法
 
 JWT 中會提供兩個日期：「nbf」(not before) 提供權杖變成有效的日期和時間，以及「exp」提供權杖到期的時間。只有出現在這兩個日期之間的權杖才可視為有效。若要調整伺服器和用戶端之間的時鐘設定中的微小差異，這個方法會在權杖的時間中最多 5 分鐘前後內驗證權杖。
 
@@ -229,7 +229,7 @@ JWT 中會提供兩個日期：「nbf」(not before) 提供權杖變成有效的
 **validFrom** (nbf) 及 **validTo** (exp) 日期會以自 1970 年 1 月 1 日 Unix 期間起的秒數傳送。使用 UTC 計算日期和時間以防止任何在 Exchange Server 與執行驗證程式碼的伺服器之間的時區差異問題。
 
 
-### ValidateAudience 方法
+### <a name="validateaudience-method"></a>ValidateAudience 方法
 
 識別權杖僅對要求它的增益集有效。**ValidateAudience** 方法會檢查權杖中的對象宣告，以確保它符合 Outlook 增益集的預期 URL。
 
@@ -256,7 +256,7 @@ JWT 中會提供兩個日期：「nbf」(not before) 提供權杖變成有效的
 ```
 
 
-### ValidateVersion 方法
+### <a name="validateversion-method"></a>ValidateVersion 方法
 
 **ValidateVersion** 方法會檢查識別權杖的版本，並確保其符合預期的版本。不同版本的權杖可以執行不同的宣告。檢查版本可確保預期的宣告會是識別權杖。
 
@@ -280,7 +280,7 @@ JWT 中會提供兩個日期：「nbf」(not before) 提供權杖變成有效的
 ```
 
 
-### ValidateMetadataLocation 方法
+### <a name="validatemetadatalocation-method"></a>ValidateMetadataLocation 方法
 
 儲存在 Exchange Server 上的驗證中繼資料物件包含驗證識別權杖中包含的簽章所需的資訊。**ValidateMetadataLocation** 方法會確保識別權杖中有驗證中繼資料 URL 宣告，實際驗證簽章會在下一個步驟中發生。
 
@@ -297,7 +297,7 @@ JWT 中會提供兩個日期：「nbf」(not before) 提供權杖變成有效的
 ```
 
 
-## 驗證識別權杖簽章
+## <a name="validate-the-identity-token-signature"></a>驗證識別權杖簽章
 
 
 在知道 JWT 包含驗證簽章所需的宣告之後，您可以使用 Windows Identity Foundation (WIF) 和 WIF 副檔名來驗證權杖上的簽章。您需要下列資訊以驗證簽章︰
@@ -362,7 +362,7 @@ JWT 中會提供兩個日期：「nbf」(not before) 提供權杖變成有效的
 **IdentityToken** 物件建構函式中大部分的程式碼會利用來自 Exchange Server 的宣告在執行個體上設定屬性。建構函式會呼叫 **GetSecurityTokenHandler** 方法來取得驗證 Exchange 識別權杖的權杖處理常式。**GetSecurityTokenHandler** 方法會呼叫兩個公用程式方法，**GetMetadataDocument** 和 **GetSigningCertificate**，它會執行從 Exchange Server 取得簽章憑證的工作。下列各節將描述這些方法。
 
 
-### GetSecurityTokenHandler 方法
+### <a name="getsecuritytokenhandler-method"></a>GetSecurityTokenHandler 方法
 
 **GetSecurityTokenHandler** 方法會傳回驗證識別權杖的 WIF 權杖處理常式。方法中大多數的程式碼會初始化權杖處理常式來進行驗證；但是，該方法會呼叫 **GetSigningCertificate** 方法以擷取用來簽署來自 Exchange Server 的權杖的 X.509 憑證。
 
@@ -398,7 +398,7 @@ JWT 中會提供兩個日期：「nbf」(not before) 提供權杖變成有效的
 ```
 
 
-### GetSigningCertificate 方法
+### <a name="getsigningcertificate-method"></a>GetSigningCertificate 方法
 
 **GetSigningCertificate** 方法會呼叫 **GetMetadataDocument** 方法以擷取來自 Exchange Server 的驗證中繼資料，然後傳回驗證中繼資料文件中的第一個 X.509 憑證。如果文件不存在，方法會擲回應用程式例外狀況。
 
@@ -424,7 +424,7 @@ JWT 中會提供兩個日期：「nbf」(not before) 提供權杖變成有效的
 ```
 
 
-### GetMetadataDocument 方法
+### <a name="getmetadatadocument-method"></a>GetMetadataDocument 方法
 
 驗證中繼資料文件包含您要在 Exchange 識別權杖上驗證的簽章的資訊。文件會以 JSON 字串傳送。**GetMetatDataDocument** 方法會要求來自 Exchange 識別權杖中指定位置的文件，並傳回封裝 JSON 字串做為物件的物件。如果 URL 未包含驗證中繼資料文件，方法會擲回應用程式例外狀況。
 
@@ -462,7 +462,7 @@ JWT 中會提供兩個日期：「nbf」(not before) 提供權杖變成有效的
  **安全性附註**  如果您使用憑證驗證回呼方法，必須確定它符合組織的安全性需求。
 
 
-## 計算 Exchange 帳戶的唯一識別碼
+## <a name="compute-the-unique-id-for-an-exchange-account"></a>計算 Exchange 帳戶的唯一識別碼
 
 
 您可以雜湊驗證中繼資料文件 URL 與帳戶的 Exchange 識別項，來建立 Exchange 帳戶的唯一識別項。當您具有此唯一識別項時，可以使用它來建立 Outlook 增益集 web 服務的單一登入 (SSO) 系統。如需有關使用 SSO 的唯一識別項的詳細資訊，請參閱[使用 Exchange 的識別權杖來驗證使用者](../outlook/authenticate-a-user-with-an-identity-token.md)
@@ -504,22 +504,22 @@ JWT 中會提供兩個日期：「nbf」(not before) 提供權杖變成有效的
 ```
 
 
-## 公用程式物件
+## <a name="utility-objects"></a>公用程式物件
 
 
 本文中的程式碼範例根據幾個公用程式物件而定，這些物件對所使用的常數提供好記的名稱。下表列出公用程式物件。
 
 
-**表 1：公用程式物件**
+**表 1.公用程式物件**
 
 
-|**物件**|**說明**|
+|**物件**|**描述**|
 |:-----|:-----|
 |**AuthClaimsType**|將權杖驗證程式碼所使用的宣告識別項收集在單一位置。|
 |**Config**|提供要驗證識別權杖的常數。 |
 |**JsonAuthMetadataDocument**|封裝從 Exchange Server 所傳送的 JSON 驗證中繼資料文件。|
 
-### AuthClaimTypes 物件
+### <a name="authclaimtypes-object"></a>AuthClaimTypes 物件
 
 **AuthClaimTypes** 物件將權杖驗證程式碼所使用的宣告識別項收集在單一位置。它包括標準 JWT 宣告以及 Exchange 識別權杖中的特定宣告。
 
@@ -554,7 +554,7 @@ JWT 中會提供兩個日期：「nbf」(not before) 提供權杖變成有效的
 ```
 
 
-### Config 物件
+### <a name="config-object"></a>Config 物件
 
 **Config** 物件包含用來驗證識別權杖的常數，以及伺服器沒有可追蹤回到根憑證的 X509 憑證時，您可以使用的憑證驗證回呼方法。
 
@@ -595,7 +595,7 @@ JWT 中會提供兩個日期：「nbf」(not before) 提供權杖變成有效的
 ```
 
 
-### JsonAuthMetadataDocument 物件
+### <a name="jsonauthmetadatadocument-object"></a>JsonAuthMetadataDocument 物件
 
 **JsonAuthMetadataDocument** 物件會透過屬性公開驗證中繼資料文件的內容。
 
@@ -641,7 +641,7 @@ namespace IdentityTest
 ```
 
 
-## 其他資源
+## <a name="additional-resources"></a>其他資源
 
 
 

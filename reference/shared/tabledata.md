@@ -1,10 +1,10 @@
 
-# TableData 物件
+# <a name="tabledata-object"></a>TableData 物件
 代表資料表中的資料或 [TableBinding](../../reference/shared/binding.tablebinding.md)。
 
 |||
 |:-----|:-----|
-|**主機︰**|Excel、Word|
+|**主應用程式︰**|Excel、Word|
 |**可用於[需求集合](../../docs/overview/specify-office-hosts-and-api-requirements.md)**|TableBindings|
 |**已新增於**|1.1|
 
@@ -12,18 +12,18 @@
 TableData
 ```
 
-## 成員
+## <a name="members"></a>成員
 
 
 **屬性**
 
 
-|**名稱**|**說明**|
+|**名稱**|**描述**|
 |:-----|:-----|
 |[headers](../../reference/shared/tabledata.headers.md)|取得或設定資料表中的標題。|
 |[rows](../../reference/shared/tabledata.rows.md)|取得或設定資料表中的資料列。|
 
-## 支援詳細資料
+## <a name="support-details"></a>支援詳細資料
 
 
 下列矩陣中的大寫 Y，表示在相對應的 Office 主應用程式中支援此物件。空白儲存格表示 Office 主應用程式不支援此物件。
@@ -43,7 +43,7 @@ TableData
 |**文件庫**|Office.js|
 |**命名空間**|Office|
 
-## 支援歷程記錄
+## <a name="support-history"></a>支援歷程記錄
 
 
 

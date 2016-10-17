@@ -1,11 +1,11 @@
 
-# 更新您的適用於 Office 的 JavaScript API 和資訊清單結構描述檔案的版本
+# <a name="update-the-version-of-your-javascript-api-for-office-and-manifest-schema-files"></a>更新您的適用於 Office 的 JavaScript API 和資訊清單結構描述檔案的版本
 
 
 
 本文章說明如何將 JavaScript 檔案 (Office.js 和應用程式專屬 .js 檔案) 和您的 Office 增益集專案中的增益集資訊清單驗證檔案更新至 1.1 版。
 
-## 使用最新的專案檔案
+## <a name="using-the-most-up-to-date-project-files"></a>使用最新的專案檔案
 
 如果您使用 Visual Studio 來開發增益集，若要使用適用於 Office 的 JavaScript API [最新的 API 成員](../../reference/what's-changed-in-the-javascript-api-for-office.md)和[增益集資訊清單的 1.1 版功能](../../docs/overview/add-in-manifests.md) (已對 offappmanifest-1.1.xsd 經過驗證)，您必須下載並安裝 [Visual Studio 2015 和最新的 Office 開發人員工具](https://www.visualstudio.com/features/office-tools-vs)。
 
@@ -23,7 +23,7 @@
 - [Exchange Server 2013 Service Pack 1 的描述](http://support.microsoft.com/kb/2926248)
     
 
-## 將使用 Visual Studio 建立的 Office 增益集專案更新，以使用最新的適用於 Office 的 JavaScript API 程式庫和 1.1 版增益集資訊清單結構描述
+## <a name="updating-an-office-add-in-project-created-with-visual-studio-to-use-the-latest-javascript-api-for-office-library-and-version-1.1-add-in-manifest-schema"></a>將使用 Visual Studio 建立的 Office 增益集專案更新，以使用最新的適用於 Office 的 JavaScript API 程式庫和 1.1 版增益集資訊清單結構描述
 
 
 對於在 1.1 版的適用於 Office 的 JavaScript API 和增益集資訊清單結構描述之前建立的專案，您需要使用 **NuGet 封裝管理員**更新專案的檔案，然後更新增益集的 HTML 頁面以參考它們。 
@@ -33,20 +33,20 @@
 
 
 
-### 將專案中適用於 Office 的 JavaScript API 程式庫檔案更新為最新版本
+### <a name="to-update-the-javascript-api-for-office-library-files-in-your-project-to-the-newest-release"></a>將專案中適用於 Office 的 JavaScript API 程式庫檔案更新為最新版本
 
 
 1. 在 Visual Studio 2015 中，開啟或建立新的 **Office 增益集**專案。
     
-      - 在左窗格中，選擇 [更新]**** 並完成套件更新程序。
+      - 在左窗格中，選擇 [更新] 並完成套件更新程序。
     
   - 繼續進行步驟 6。
     
-2. 選擇 [工具]**** > **[NuGet 封裝管理員]** > **[管理方案的 Nuget 套件]**。
+2. 選擇 [工具] > **[NuGet 封裝管理員]** > **[管理方案的 Nuget 套件]**。
     
-3. 在 **NuGet 封裝管理員**中，對 [套件來源]**** 選取 **nuget.org**，以及對 [篩選]**** 選取 [升級可供使用]****， 然後選取 [Microsoft.Office.js]。
+3. 在 **NuGet 封裝管理員**中，對 [套件來源] 選取 **nuget.org**，以及對 [篩選] 選取 [升級可供使用]，然後選取 [Microsoft.Office.js]。
     
-4. 在左窗格中，選擇 [更新]**** 並完成套件更新程序。
+4. 在左窗格中，選擇 [更新] 並完成套件更新程序。
     
 5. 在增益集的 HTML 頁面的 **head** 標記中，註解化或刪除任何現有的 office.js 指令碼參考 (例如︰`<script src="https://appsforoffice.microsoft.com/lib/1.0/hosted/office.js" type="text/javascript"></script>)`)，並且現在參考更新的適用於 Office 的 JavaScript API 程式庫，就像這樣 (將版本值變更為 '1')。 
 
@@ -57,7 +57,7 @@
 ```
 
 
-### 更新專案中的資訊清單檔案以使用結構描述 1.1 版
+### <a name="to-update-the-manifest-file-in-your-project-to-use-schema-version-1.1"></a>更新專案中的資訊清單檔案以使用結構描述 1.1 版
 
 
 - 在您的專案的增益集資訊清單 (_projectname_ Manifest.xml) 檔案中，更新 **OfficeApp** 元素的 **xmlns** 屬性，將版本值變更為 '1.1' (保留 **xmlns** 屬性以外的屬性不變)。
@@ -70,7 +70,7 @@
 >
   **附註：**將增益集資訊清單結構描述的版本更新為 1.1 之後，您必須移除 **Capabilities** 和 **Capability** 元素，並以 [Hosts 和 Host 元素](http://msdn.microsoft.com/library/cff9fbdf-a530-4f6e-91ca-81bcacd90dcd%28Office.15%29.aspx)或 [Requirements 和 Requirement 元素](../../docs/overview/specify-office-hosts-and-api-requirements.md)取代它們。
 
-## 將使用文字編輯器或其他 IDE 建立的 Office 增益集專案更新，以使用最新的適用於 Office 的 JavaScript API 程式庫和 1.1 版增益集資訊清單結構描述
+## <a name="updating-an-office-add-in-project-created-with-a-text-editor-or-other-ide-to-use-the-newest-javascript-api-for-office-library-and-version-1.1-add-in-manifest-schema"></a>將使用文字編輯器或其他 IDE 建立的 Office 增益集專案更新，以使用最新的適用於 Office 的 JavaScript API 程式庫和 1.1 版增益集資訊清單結構描述
 
 
 對於在 1.1 版的適用於 Office 的 JavaScript API 和增益集資訊清單結構描述之前建立的專案，您需要更新增益集的 HTML 頁面，以參考 1.1 版程式庫的 CDN，並更新增益集的資訊清單檔案以使用結構描述 1.1 版。 
@@ -82,7 +82,7 @@
  > **附註** 若要取得 1.1 版增益集資訊清單的一份 XSD (XML 結構描述定義)，請參閱 [Office 增益集資訊清單的結構描述參考 (v1.1)](../overview/add-in-manifests.md) 中的清單。
 
 
-### 將專案中適用於 Office 的 JavaScript API 程式庫檔案更新以使用最新版本
+### <a name="to-update-the-javascript-api-for-office-library-files-in-your-project-to-use-the-newest-release"></a>將專案中適用於 Office 的 JavaScript API 程式庫檔案更新以使用最新版本
 
 
 1. 在文字編輯器或 IDE 中開啟增益集的 HTML 頁面。
@@ -97,7 +97,7 @@
     The  `/1/` in front of `office.js` in the CDN URL specifies to use the latest incremental release within version 1 of Office.js.
     
 
-### 更新專案中的資訊清單檔案以使用結構描述 1.1 版
+### <a name="to-update-the-manifest-file-in-your-project-to-use-schema-version-1.1"></a>更新專案中的資訊清單檔案以使用結構描述 1.1 版
 
 
 - 在您的專案的增益集資訊清單 (_projectname_ Manifest.xml) 檔案中，更新 **OfficeApp** 元素的 **xmlns** 屬性，將版本值變更為 `1.1` (保留 **xmlns** 屬性以外的屬性不變)。
@@ -110,7 +110,7 @@
   **附註：**將增益集資訊清單結構描述的版本更新為 1.1 之後，您必須移除 **Capabilities** 和 **Capability** 元素，並以 [Hosts 和 Host 元素](http://msdn.microsoft.com/library/cff9fbdf-a530-4f6e-91ca-81bcacd90dcd%28Office.15%29.aspx)或 [Requirements 和 Requirement 元素](../../docs/overview/specify-office-hosts-and-api-requirements.md)取代它們。
     
 
-## 其他資源
+## <a name="additional-resources"></a>其他資源
 
 
 
@@ -118,7 +118,7 @@
     
 - [了解適用於 Office 的 JavaScript API](../../docs/develop/understanding-the-javascript-api-for-office.md)
     
-- [JavaScript API for Office](../../reference/javascript-api-for-office.md)
+- [適用於 Office 的 JavaScript API](../../reference/javascript-api-for-office.md)
     
-- [Office 增益集資訊清單的結構描述參考 (1.1 版)](../overview/add-in-manifests.md)
+- [Office 增益集資訊清單的結構描述參考 (v1.1)](../overview/add-in-manifests.md)
     

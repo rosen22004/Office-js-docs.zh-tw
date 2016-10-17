@@ -1,5 +1,5 @@
 
-# Labs.Components.IActivityComponentInstance
+# <a name="labs.components.iactivitycomponentinstance"></a>Labs.Components.IActivityComponentInstance
 
  _**適用於︰**Office 的應用程式 | Office 增益集 | Office Mix | PowerPoint_
 
@@ -10,7 +10,7 @@ interface IActivityComponentInstance extends Labs.Core.IComponentInstance
 ```
 
 
-## 屬性
+## <a name="properties"></a>屬性
 
 無。
 

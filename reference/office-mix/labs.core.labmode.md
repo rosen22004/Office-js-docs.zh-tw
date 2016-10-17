@@ -1,5 +1,5 @@
 
-# Labs.Core.LabMode
+# <a name="labs.core.labmode"></a>Labs.Core.LabMode
 
  _**適用於︰**Office 的應用程式 | Office 增益集 | Office Mix | PowerPoint_
 
@@ -10,10 +10,10 @@ enum LabMode
 ```
 
 
-## 欄位
+## <a name="fields"></a>欄位
 
 
 |||
 |:-----|:-----|
 |**編輯**|編輯模式。|
-|**View**|檢視模式。|
+|**檢視**|檢視模式。|

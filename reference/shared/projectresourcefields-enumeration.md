@@ -1,10 +1,10 @@
 
-# ProjectResourceFields 列舉
+# <a name="projectresourcefields-enumeration"></a>ProjectResourceFields 列舉
 指定可作為 **[getResourceFieldAsync](../../reference/shared/projectdocument.getresourcefieldasync.md)** 方法參數的資源欄位。
 
 |||
 |:-----|:-----|
-|**主機︰**|Project|
+|**主應用程式︰**|Project|
 |**已新增於**|1.0|
 
 ```js
@@ -213,14 +213,14 @@ ProjectResourceFields={
 ```
 
 
-## 成員
+## <a name="members"></a>成員
 
 
 **ProjectResourceFields** 列舉包含下列成員。
 
 
 
-|**名稱**|**值**|**說明**|
+|**名稱**|**值**|**描述**|
 |:-----|:-----|:-----|
 |Accrual|0|定義任務如何累算資源成本的累算方法︰在任務開始時累算 = 1，在任務結束時累算 = 2，隨任務進行累算 (依比例) = 3。|
 |ActualCost|1|專案中分派之資源經計算的實際成本。|
@@ -423,13 +423,13 @@ ProjectResourceFields={
 |Text8|198|資源的文字欄位。|
 |Text9|199|資源的文字欄位。|
 
-## 備註
+## <a name="remarks"></a>備註
 
 
 **ProjectResourceFields** 常數可作為 [getResourceFieldAsync 方法](../../reference/shared/projectdocument.getresourcefieldasync.md)的常數。<br/><br/>如需使用 Project 欄位的相關詳細資訊，請參閱[可用欄位參考資料](http://office.microsoft.com/en-us/project-help/available-fields-reference-HA102749299.aspx?CTT=1)。請在 Project 說明中，搜尋  _Available fields_。
 
 
-## 支援詳細資料
+## <a name="support-details"></a>支援詳細資料
 
 
 下列矩陣中的大寫 Y，表示在相對應的 Office 主應用程式中支援此列舉。空白儲存格表示 Office 主應用程式不支援此列舉。
@@ -450,18 +450,18 @@ ProjectResourceFields={
 |**文件庫**|Office.js|
 |**命名空間**|Office|
 
-## 支援歷程記錄
+## <a name="support-history"></a>支援歷程記錄
 
 
 |**版本**|**變更**|
 |:-----|:-----|
 |1.0|已導入|
 
-## 請參閱
+## <a name="see-also"></a>請參閱
 
 
 
-#### 其他資源
+#### <a name="other-resources"></a>其他資源
 
 [getResourceFieldAsync 方法](../../reference/shared/projectdocument.getresourcefieldasync.md)
 

@@ -1,12 +1,12 @@
 
 
-# Settings.remove 方法
+# <a name="settings.remove-method"></a>Settings.remove 方法
 移除指定的設定。
 
 |||
 |:-----|:-----|
-|**主機︰**|Access、Excel、PowerPoint、Word|
-|**可用於[需求集合](../../docs/overview/specify-office-hosts-and-api-requirements.md)**|Settings|
+|**主應用程式︰**|Access、Excel、PowerPoint、Word|
+|**可用於[需求集合](../../docs/overview/specify-office-hosts-and-api-requirements.md)**|設定|
 |**上次變更於**|1.1|
 
 ```js
@@ -14,7 +14,7 @@ Office.context.document.settings.remove(name);
 ```
 
 
-## 參數
+## <a name="parameters"></a>參數
 
 
 
@@ -27,7 +27,7 @@ _name_<br/>
 
 
 
-## 備註
+## <a name="remarks"></a>備註
 
  **null** 是有效的設定值。因此，指派 **null** 至設定不會將該設定從設定屬性包移除。
 
@@ -35,7 +35,7 @@ _name_<br/>
  >**重要**：請注意，**Settings.remove** 方法僅影響設定屬性包的記憶體內部複本。若要在文件中保存移除指定設定，您必須在呼叫 **Settings.remove** 方法後及關閉增益集前這段時間內，呼叫 [Settings.saveAsync](../../reference/shared/settings.saveasync.md) 方法。
 
 
-## 範例
+## <a name="example"></a>範例
 
 
 
@@ -49,7 +49,7 @@ function removeMySetting() {
 
 
 
-## 支援詳細資料
+## <a name="support-details"></a>支援詳細資料
 
 
 下列矩陣中的大寫 Y，表示在相對應的 Office 主應用程式中支援此方法。空白儲存格表示 Office 主應用程式不支援此方法。
@@ -73,7 +73,7 @@ function removeMySetting() {
 |**文件庫**|Office.js|
 |**命名空間**|Office|
 
-## 支援歷程記錄
+## <a name="support-history"></a>支援歷程記錄
 
 
 

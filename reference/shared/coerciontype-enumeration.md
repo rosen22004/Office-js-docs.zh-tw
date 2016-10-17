@@ -1,29 +1,29 @@
 
-# CoercionType 列舉
-指定如何強制轉型所傳回或由叫用方法設定的資料。
+# <a name="coerciontype-enumeration"></a>CoercionType 列舉
+指定如何強制轉型傳回的或由叫用方法設定的資料。
 
 |||
 |:-----|:-----|
-|**主機︰**|Access、Excel、Outlook、PowerPoint、Project、Word|
+|**主應用程式︰**|Access、Excel、Outlook、PowerPoint、Project、Word|
 |**上次變更於信箱**|1.1|
 
 ```js
 Office.CoercionType
 ```
 
-## 成員
+## <a name="members"></a>成員
 
 
 **值**
 
 
-|**列舉**|**值**|**說明**|
+|**列舉**|**值**|**描述**|
 |:-----|:-----|:-----|
 |Office.CoercionType.Html|"html"|傳回或將資料設為 HTML。<br/><br/> **附註：**僅適用於 Word 增益集和 Outlook 之 Outlook 增益集中的資料 (撰寫模式)。|
-|Office.CoercionType.Matrix|"matrix"|傳回或將資料設為沒有標頭的表格式資料。 資料已傳回或設為包含一連串一維字元之陣列的陣列。 例如，兩欄中的三列**字串**值將會是：` [["R1C1", "R1C2"], ["R2C1", "R2C2"], ["R3C1", "R3C2"]]`。<br/><br/> **附註：**僅適用於 Excel 和 Word 中的資料。|
+|Office.CoercionType.Matrix|"matrix"|傳回或將資料設為沒有標頭的表格式資料。資料已傳回或設為包含一連串一維字元之陣列的陣列。例如，兩欄中的三列**字串**值將會是：` [["R1C1", "R1C2"], ["R2C1", "R2C2"], ["R3C1", "R3C2"]]`。<br/><br/> **附註：**僅適用於 Excel 和 Word 中的資料。|
 |Office.CoercionType.Ooxml|"ooxml"|傳回或將資料設為 Office Open XML。<br/><br/> **附註：**僅適用於 Word 中的資料。|
 |Office.CoercionType.SlideRange|"slideRange"|傳回包含所選取投影片之 id、標題和索引之陣列的 JSON 物件。例如：`{"slides":[{"id":257,"title":"Slide 2","index":2},{"id":256,"title":"Slide 1","index":1}]}` 適用於選取兩張投影片。<br/><br/> **附註：**僅適用於呼叫 [Document.getSelectedData](../../reference/shared/document.getselecteddataasync.md) 方法以取得目前投影片或選取的投影片範圍時，PowerPoint 中的資料。|
-|Office.CoercionType.Table|"table"|傳回或將資料設為帶有選擇性標頭的表格式資料。 資料已傳回或設為帶有選擇性標頭之陣列的陣列。<br/><br/> **附註：**僅適用於 Access、Excel 和 Word 中的資料。|
+|Office.CoercionType.Table|"table"|傳回或將資料設為帶有選擇性標頭的表格式資料。資料已傳回或設為帶有選擇性標頭之陣列的陣列。<br/><br/> **附註：**僅適用於 Access、Excel 和 Word 中的資料。|
 |Office.CoercionType.Text|"text"|傳回或將資料設為文字 (**字串**)。資料已傳回或設為一連串一維字元。|
 |Office.CoercionType.Image|"image"|資料已傳回或設為影像資料流。<br/><br/> **附註：**僅適用於 Excel、Word 和 PowerPoint 中的資料。|
 PowerPoint 僅支援 **Office.CoercionType.Text**、**Office.CoercionType.Image** 和 **Office.CoercionType.SlideRange**。
@@ -31,7 +31,7 @@ PowerPoint 僅支援 **Office.CoercionType.Text**、**Office.CoercionType.Image*
 Project 僅支援 **Office.CoercionType.Text**。
 
 
-## 支援詳細資料
+## <a name="support-details"></a>支援詳細資料
 
 
 下列矩陣中的大寫 Y，表示在相對應的 Office 主應用程式中支援此列舉。空白儲存格表示 Office 主應用程式不支援此列舉。
@@ -45,7 +45,7 @@ Project 僅支援 **Office.CoercionType.Text**。
 ||**Office for Windows desktop**|**Office Online (在瀏覽器中)**|**Office for iPad**|**裝置適用的 OWA**|**Office for Mac**|
 |:-----|:-----|:-----|:-----|:-----|:-----|
 |**Access**|Y|||||
-|**Excel**|Y|Y|是|||
+|**Excel**|Y|Y|Y|||
 |**Outlook**|Y|Y||Y|Y|
 |**PowerPoint**|Y|Y|Y|||
 |**Project**|Y|||||
@@ -57,7 +57,7 @@ Project 僅支援 **Office.CoercionType.Text**。
 |**文件庫**|Office.js|
 |**命名空間**|Office|
 
-## 支援歷程記錄
+## <a name="support-history"></a>支援歷程記錄
 
 
 |**版本**|**變更**|

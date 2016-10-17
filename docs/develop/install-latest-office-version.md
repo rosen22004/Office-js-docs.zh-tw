@@ -1,4 +1,4 @@
-# 安裝 Office 2016 最新版本
+# <a name="install-the-latest-version-of-office-2016"></a>安裝 Office 2016 最新版本
 
 新的開發人員功能，包括仍處於預覽階段的功能，將首次提供給選擇使用 Office 最新組建的訂閱者。若要選擇使用 Office 2016 最新組建 
 
@@ -6,7 +6,7 @@
 - 如果您是商務用 Office 365 客戶，請參閱[安裝適用於商務用 Office 365 客戶的第一版組建](https://support.office.com/en-us/article/Install-the-First-Release-build-for-Office-365-for-business-customers-4dd8ba40-73c0-4468-b778-c7b744d03ead?ui=en-US&rs=en-US&ad=US)。
 - 如果您正在 Mac 上執行 Office 2016 ︰
     - 啟動 Office 2016 for Mac 程式。
-    - 選取 **** [說明] 功能表的 [檢查更新]。
+    - 選取 [說明] 功能表的 [檢查更新]。
     - 在 Microsoft AutoUpdate 方塊中，核取方塊以加入 Office 測試人員計畫。 
 
 若要取得最新組建： 

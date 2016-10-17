@@ -1,12 +1,12 @@
 
-# 使用 Exchange 的識別權杖來驗證使用者
+# <a name="authenticate-a-user-with-an-identity-token-for-exchange"></a>使用 Exchange 的識別權杖來驗證使用者
 
 您可以對資訊服務實作單一登入 (SSO) 驗證配置，該服務可讓使用 Outlook 增益集的客戶使用他們的 Exchange 伺服器的認證來連線到您的服務。本文章顯示如何使用簡單的 **Dictionary** 物件式使用者資料存放區來比對憑證。
 
  >**附註：**這只是 SSO 的一個簡單範例，不應在您的實際執行程式碼中使用。一如往常，處理識別和驗證時，必須確定您的程式碼符合組織的安全性需求。
 
 
-## 使用 SSO 驗證的必要條件
+## <a name="prerequisites-for-using-sso-authentication"></a>使用 SSO 驗證的必要條件
 
 
 若要對 SSO 使用識別權杖，您的服務應用程式必須具有有效的識別權杖。您可以在下列文章中了解識別權杖，以及如何要求和驗證識別權杖︰
@@ -19,14 +19,14 @@
 - [使用 Exchange 權杖驗證程式庫](../outlook/use-the-token-validation-library.md) - 如果您使用 Managed 程式碼，或[驗證 Exchange 識別權杖](../outlook/validate-an-identity-token.md) - 如果您正在撰寫自己的權杖驗證方法。
     
 
-## 驗證使用者
+## <a name="authenticate-a-user"></a>驗證使用者
 
 
 下列程式碼範例顯示簡易的驗證物件，其符合由具有一組服務憑證的識別權杖所表示的唯一識別。**TokenAuthentication** 類別提供方法 **GetResponseFromService**，該方法會傳回先前已驗證的權杖，或要求使用者提供可驗證並與識別權杖關聯的認證。程式碼尚未完成；它會假設您將提供下列物件和方法。
 
 
 
-|**物件/方法**|**說明**|
+|**物件/方法**|**描述**|
 |:-----|:-----|
 |**LocalCredentials** 物件|代表您的服務的使用者認證。物件的結構根據您的服務需求而定。|
 |**IdentityToken** 物件|包含 Outlook 增益集傳送至您的服務的使用者識別權杖。該物件至少必須包含使用者的唯一 Exchange 識別碼，以及發出權杖之伺服器的驗證中繼資料 URL。這個範例會使用[驗證 Exchange 識別權杖](../outlook/validate-an-identity-token.md)文章中定義的識別權杖物件。|
@@ -155,7 +155,7 @@
 ```
 
 
-## 使用 Managed 驗證程式庫來驗證使用者
+## <a name="authenticating-a-user-with-the-managed-validation-library"></a>使用 Managed 驗證程式庫來驗證使用者
 
 
 如果您使用 Managed 程式庫來驗證識別權杖，則不需要計算唯一索引鍵。**AppIdentityToken** 類別上的 **UniqueUserIdentification** 屬性可直接作為使用者的唯一索引鍵。下列程式碼範例顯示在前一個範例中對 **GetResponseFromService** 方法的修改，您必須先進行這些修改，才能使用 **AppIdentityToken** 類別。
@@ -233,7 +233,7 @@
 ```
 
 
-## 其他資源
+## <a name="additional-resources"></a>其他資源
 
 
 

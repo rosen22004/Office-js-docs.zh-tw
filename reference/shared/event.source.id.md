@@ -1,13 +1,13 @@
 
 
-# event.source.id
+# <a name="event.source.id"></a>event.source.id
 取得觸發呼叫此函數的控制項識別碼。
 
 ****
 
 |||
 |:-----|:-----|
-|**主應用程式：**Outlook|**增益集類型︰**Outlook|
+|**主應用程式：**Outlook|**增益集類型：**Outlook|
 |**可用於[需求集合](../../docs/overview/specify-office-hosts-and-api-requirements.md)**|信箱|
 |**上次變更於信箱**|1.3|
 |**適用的 Outlook 模式**|讀取和撰寫|
@@ -19,12 +19,12 @@ event.source.id;
 ```
 
 
-## 傳回值
+## <a name="return-value"></a>傳回值
 
 觸發呼叫此函數的控制項識別碼。識別碼來自資訊清單。
 
 
-## 支援詳細資料
+## <a name="support-details"></a>支援詳細資料
 
 
 下表中的大寫 Y，表示在相對應的 Outlook 主應用程式中支援此屬性。空白儲存格表示 Outlook 主應用程式不支援此屬性。
@@ -48,7 +48,7 @@ event.source.id;
 |**文件庫**|Office.js|
 |**命名空間**|Office|
 
-## 支援歷程記錄
+## <a name="support-history"></a>支援歷程記錄
 
 
 

@@ -1,40 +1,40 @@
-﻿# ChartFill 物件 (適用於 Excel 的 JavaScript API)
+# <a name="chartfill-object-(javascript-api-for-excel)"></a>ChartFill 物件 (適用於 Excel 的 JavaScript API)
 
 代表圖表項目的填滿格式。
 
-## 屬性
+## <a name="properties"></a>屬性
 
 無
 
-## 關聯性
+## <a name="relationships"></a>關聯性
 無
 
 
-## 方法
+## <a name="methods"></a>方法
 
-| 方法           | 傳回類型    |說明|
+| 方法           | 傳回類型    |描述|
 |:---------------|:--------|:----------|
 |[clear()](#clear)|void|清除圖表項目的填滿色彩。|
 |[setSolidColor(color: string)](#setsolidcolorcolor-string)|void|將圖表項目的填滿色彩設定為統一的顏色。|
 
-## 方法詳細資料
+## <a name="method-details"></a>方法詳細資料
 
 
-### clear()
+### <a name="clear()"></a>clear()
 清除圖表項目的填滿色彩。
 
-#### 語法
+#### <a name="syntax"></a>語法
 ```js
 chartFillObject.clear();
 ```
 
-#### 參數
+#### <a name="parameters"></a>參數
 無
 
-#### 傳回
+#### <a name="returns"></a>傳回
 void
 
-#### 範例
+#### <a name="examples"></a>範例
 
 清除名為 "Chart1" 之圖表的數值軸上主要格線的線條格式。
 
@@ -53,23 +53,23 @@ Excel.run(function (ctx) {
 });
 ```
 
-### setSolidColor(color: string)
+### <a name="setsolidcolor(color:-string)"></a>setSolidColor(color: string)
 將圖表項目的填滿色彩設定為統一的顏色。
 
-#### 語法
+#### <a name="syntax"></a>語法
 ```js
 chartFillObject.setSolidColor(color);
 ```
 
-#### 參數
-| 參數	    | 類型	   |說明|
+#### <a name="parameters"></a>參數
+| 參數	    | 類型	   |描述|
 |:---------------|:--------|:----------|
 |Color|string|代表框線色彩的 HTML 色彩代碼，顯示為 #RRGGBB 格式 (例如 "FFA500") 或具名 HTML 色彩 (例如 "orange")。|
 
-#### 傳回
+#### <a name="returns"></a>傳回
 void
 
-#### 範例
+#### <a name="examples"></a>範例
 
 將 Chart1 的 backGround 色彩設定為紅色。
 

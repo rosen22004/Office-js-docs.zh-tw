@@ -1,46 +1,46 @@
-﻿# Document 物件 (適用於 Word 的 JavaScript API)
+# <a name="document-object-(javascript-api-for-word)"></a>Document 物件 (適用於 Word 的 JavaScript API)
 
 Document 物件是最上層物件。Document 物件包含一或多個區段、內容控制項，以及包含文件內容的內文。
 
-_適用版本：Word 2016、Word for iPad、Word for Mac_
+_適用於：Word 2016、Word for iPad、Word for Mac、Word Online_
 
-## 屬性
-| 屬性	     | 類型	   |說明
+## <a name="properties"></a>屬性
+| 屬性	     | 類型	   |描述
 |:---------------|:--------|:----------|
 |saved|bool|指出文件的變更是否已儲存。True 值表示文件在儲存後未經變更。唯讀。|
 
-## 關聯性
-| 關聯性 | 類型	   |說明|
+## <a name="relationships"></a>關聯性
+| 關聯性 | 類型	   |描述|
 |:---------------|:--------|:----------|
-|body|[本文](body.md)|取得文件的內文。內文是指頁首、頁尾、註腳、文字方塊等等以外的文字部分。唯讀。|
+|body|[Body](body.md)|取得文件的內文。內文是指頁首、頁尾、註腳、文字方塊等等以外的文字部分。唯讀。|
 |contentControls|[ContentControlCollection](contentcontrolcollection.md)|取得目前文件中內容控制項物件的集合。這包括文件內文、頁首、頁尾、文字方塊等項目的內容控制項。唯讀。|
 |sections|[SectionCollection](sectioncollection.md)|取得文件中 section 物件的集合。唯讀。|
 
-## 方法
+## <a name="methods"></a>方法
 
-| 方法           | 傳回類型    |說明|
+| 方法           | 傳回類型    |描述|
 |:---------------|:--------|:----------|
-|[getSelection()](#getselection)|[範圍](range.md)|取得文件的目前選取範圍。不支援多重選取範圍。|
+|[getSelection()](#getselection)|[Range](range.md)|取得文件的目前選取範圍。不支援多重選取範圍。|
 |[load(param: object)](#loadparam-object)|void|以參數中指定的屬性和物件值填滿 JavaScript 層中建立的 Proxy 物件。|
 |[save()](#save)|void|儲存文件。如果文件未曾儲存過，則會使用 Word 預設的檔案命名慣例。|
 
-## 方法詳細資料
+## <a name="method-details"></a>方法詳細資料
 
-### getSelection()
+### <a name="getselection()"></a>getSelection()
 取得文件的目前選取範圍。不支援多重選取範圍。
 
-#### 語法
+#### <a name="syntax"></a>語法
 ```js
 documentObject.getSelection();
 ```
 
-#### 參數
+#### <a name="parameters"></a>參數
 無
 
-#### 傳回
-[範圍](range.md)
+#### <a name="returns"></a>傳回
+[Range](range.md)
 
-#### 範例
+#### <a name="examples"></a>範例
 ```js
 // Run a batch operation against the Word object model.
 Word.run(function (context) {
@@ -71,23 +71,23 @@ Word.run(function (context) {
 });
 ```
 
-### load(param: object)
+### <a name="load(param:-object)"></a>load(param: object)
 以參數中指定的屬性和物件值填滿 JavaScript 層中建立的 Proxy 物件。
 
-#### 語法
+#### <a name="syntax"></a>語法
 ```js
 object.load(param);
 ```
 
-#### 參數
-| 參數	    | 類型	   |說明|
+#### <a name="parameters"></a>參數
+| 參數	    | 類型	   |描述|
 |:---------------|:--------|:----------|
 |param|物件|選用。接受參數與關聯性名稱，做為分隔字串或陣列。或者提供 [loadOption](loadoption.md) 物件。|
 
-#### 傳回
+#### <a name="returns"></a>傳回
 void
 
-#### 範例
+#### <a name="examples"></a>範例
 ```js
 // Run a batch operation against the Word object model.
 Word.run(function (context) {
@@ -120,21 +120,21 @@ Word.run(function (context) {
 });
 ```
 
-### save()
+### <a name="save()"></a>save()
 儲存文件。如果文件未曾儲存過，則會使用 Word 預設的檔案命名慣例。
 
-#### 語法
+#### <a name="syntax"></a>語法
 ```js
 documentObject.save();
 ```
 
-#### 參數
+#### <a name="parameters"></a>參數
 無
 
-#### 傳回
+#### <a name="returns"></a>傳回
 void
 
-#### 範例
+#### <a name="examples"></a>範例
 ```js
 // Run a batch operation against the Word object model.
 Word.run(function (context) {
@@ -171,5 +171,5 @@ Word.run(function (context) {
 });
 ```
 
-## 支援詳細資料
+## <a name="support-details"></a>支援詳細資料
 在執行階段檢查使用[需求集](../office-add-in-requirement-sets.md)以確認您的應用程式受到 Word 主應用程式版本的支援。如需有關 Office 主應用程式及伺服器需求的詳細資訊，請參閱[執行 Office 增益集的需求](../../docs/overview/requirements-for-running-office-add-ins.md)。

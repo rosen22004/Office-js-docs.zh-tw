@@ -1,10 +1,10 @@
 
-# ProjectViewTypes 列舉
+# <a name="projectviewtypes-enumeration"></a>ProjectViewTypes 列舉
 指定 **[getSelectedViewAsync](../../reference/shared/projectdocument.getselectedviewasync.md)** 方法可以辨識的檢視類型。
 
 |||
 |:-----|:-----|
-|**主機︰**|Project|
+|**主應用程式︰**|Project|
 |**已新增於**|1.0|
 
 ```
@@ -29,13 +29,13 @@ ProjectViewTypes={
 ```
 
 
-## 成員
+## <a name="members"></a>成員
 
 
 ****
 
 
-|**成員	**|**說明**|
+|**成員**|**描述**|
 |:-----|:-----|
 |**Gantt**|甘特圖檢視。|
 |**NetworkDiagram**|網狀圖檢視。|
@@ -50,17 +50,17 @@ ProjectViewTypes={
 |**TaskDetails**|任務詳細資訊檢視。|
 |**TaskNameForm**|任務名稱表單檢視。|
 |**ResourceNames**|資源名稱檢視。|
-|**行事曆**|行事曆檢視。|
+|**Calendar**|行事曆檢視。|
 |**TaskUsage**|任務分派狀況檢視。|
 |**ResourceUsage**|資源使用狀況檢視。|
-|**時間表**|時間表檢視。|
+|**Timeline**|時間表檢視。|
 
-## 備註
+## <a name="remarks"></a>備註
 
 **[getSelectedViewAsync](../../reference/shared/projectdocument.getselectedviewasync.md)** 方法會回傳 **ProjectViewTypes** 常數值，與對應至使用中檢視的名稱。
 
 
-## 支援詳細資料
+## <a name="support-details"></a>支援詳細資料
 
 
 下列矩陣中的大寫 Y，表示在相對應的 Office 主應用程式中支援此列舉。空白儲存格表示 Office 主應用程式不支援此列舉。
@@ -81,7 +81,7 @@ ProjectViewTypes={
 |**文件庫**|Office.js|
 |**命名空間**|Office|
 
-## 支援歷程記錄
+## <a name="support-history"></a>支援歷程記錄
 
 
 
@@ -92,11 +92,11 @@ ProjectViewTypes={
 |:-----|:-----|
 |1.0|已導入|
 
-## 請參閱
+## <a name="see-also"></a>請參閱
 
 
 
-#### 其他資源
+#### <a name="other-resources"></a>其他資源
 
 
 [getSelectedViewAsync 方法](../../reference/shared/projectdocument.getselectedviewasync.md)

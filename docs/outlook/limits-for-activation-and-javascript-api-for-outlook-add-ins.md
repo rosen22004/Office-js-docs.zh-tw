@@ -1,12 +1,12 @@
 
-# 適用於 Outlook 增益集的 JavaScript API 和啟動的限制
+# <a name="limits-for-activation-and-javascript-api-for-outlook-add-ins"></a>適用於 Outlook 增益集的 JavaScript API 和啟動的限制
 
 若要為 Outlook 增益集的使用者提供令人滿意的經驗，您應該留意特定啟動和 API 使用方針，並實作您的增益集以保持在這些限制內。這些指導方針存在，因此個別的增益集無法要求 Exchange Server 或 Outlook 花費過長的時間處理其啟動規則或呼叫適用於 Office 的 JavaScript API，影響整體 Outlook 和其他增益集的使用者體驗。這些限制會套用到增益集資訊清單中的設計啟動規則，及使用自訂屬性、漫遊設定、收件者、Exchange Web 服務 (EWS) 要求和回應，以及非同步呼叫。 
 
  >**附註** 如果您的增益集在 Outlook 豐富型用戶端上執行，您也必須確認增益集在執行階段資源使用狀況的限制內執行。 
 
 
-## 啟動規則的限制
+## <a name="limits-for-activation-rules"></a>啟動規則的限制
 
 
 設計 Outlook 增益集的啟動規則時，請遵循以下方針︰
@@ -52,7 +52,7 @@
 
 表 3 列出限制，並說明在每一個 Outlook 主應用程式評估規則運算式後傳回的相符項目中的差異。支援與裝置的任何特定類型無關，但如果在項目本文上套用規則運算式，可能會取決於項目本文的類型。
 
-**表 3.傳回的符合項目的限制**
+** 3.傳回的符合項目的限制**
 
 
 ||**Outlook 豐富型用戶端**|**Outlook Web App 或裝置用 OWA**|
@@ -61,7 +61,7 @@
 |純文字項目本文|**getRegExMatches** 傳回最多 1,536 (1.5 KB) 個字元的任何符合項目，最多 50 個符合項目。<br/><br/>**附註**：**getRegExMatches** 在傳回的陣列中不會以任何特定的順序傳回符合項目。一般而言，假設相同項目上套用的相同規則運算式的 Outlook 豐富型用戶端中的相符項目的順序與 Outlook Web App 或裝置用 OWA 不同。|**getRegExMatches** 傳回最多 3,072 (3 KB) 個字元的任何符合項目，最多 50 個符合項目。|
 |HTML 項目本文|**getRegExMatches** 傳回最多 3,072 (3 KB) 個字元的任何符合項目，最多 50 個符合項目。<br/> <br/> **附註**：**getRegExMatches** 在傳回的陣列中不會以任何特定的順序傳回符合項目。一般而言，假設相同項目上套用的相同規則運算式的 Outlook 豐富型用戶端中的相符項目的順序與 Outlook Web App 或裝置用 OWA 不同。|**getRegExMatches** 傳回最多 3,072 (3 KB) 個字元的任何符合項目，最多 50 個符合項目。|
 
-## JavaScript API 的限制
+## <a name="limits-for-javascript-api"></a>JavaScript API 的限制
 
 
 除了啟用規則的前述指導原則，每個 Outlook 主應用程式會在 JavaScript 物件模型中強制某些限制，如表 4 中所述。
@@ -70,7 +70,7 @@
 **表 4.使用適用於 Office 的 JavaScript API 取得或設定某些資料的限制**
 
 
-|**功能**|**限制**|**相關的 API**|**說明**|
+|**功能**|**限制**|**相關的 API**|**描述**|
 |:-----|:-----|:-----|:-----|
 |自訂屬性|2,500 個字元|[CustomProperties](../../reference/outlook/CustomProperties.md) 物件<br/> <br/>[item.loadCustomPropertiesAsync](../../reference/outlook/Office.context.mailbox.item.md) 方法|約會或郵件項目的所有自訂屬性的限制。如果增益集的所有自訂屬性的總大小超過這個限制，所有的 Outlook 主應用程式會傳回錯誤。|
 |漫遊設定|32 KB 字元數|[RoamingSettings](../../reference/outlook/RoamingSettings.md) 物件<br/><br/> [context.roamingSettings](../../reference/outlook/Office.context.md) 屬性|增益集的所有漫遊設定的限制。如果您的設定超過此限制，所有的 Outlook 主應用程式會傳回錯誤。|
@@ -90,7 +90,7 @@
 |附件 ID|100 個字元|[item.addItemAttachmentAsync](../../reference/outlook/Office.context.mailbox.item.md) 方法<br/><br/> [item.removeAttachmentAsync](../../reference/outlook/Office.context.mailbox.item.md) 方法|要加入項目或從項目中移除的附件的 ID 長度限制。|
 |非同步呼叫|3 個呼叫|**item.addFileAttachmentAsync** 方法<br/><br/>**item.addItemAttachmentAsync** 方法<br/><br/><br/>**item.removeAttachmentAsync** 方法<br/><br/> [Body.getTypeAsync](../../reference/outlook/Body.md) 方法<br/><br/>**Body.prependAsync** 方法<br/><br/>**Body.setSelectedDataAsync** 方法<br/><br/> [CustomProperties.saveAsync](../../reference/outlook/CustomProperties.md) 方法<br/><br/><br/> [item.LoadCustomPropertiesAysnc](../../reference/outlook/Office.context.mailbox.item.md) 方法<br/><br/><br/> [Location.getAsync](../../reference/outlook/Location.md) 方法<br/><br/>**Location.setAsync** 方法<br/><br/> [mailbox.getCallbackTokenAsync](../../reference/outlook/Office.context.mailbox.md) 方法<br/><br/> [mailbox.getUserIdentityTokenAsync](../../reference/outlook/Office.context.mailbox.md) 方法<br/><br/> [mailbox.makeEwsRequestAsync](../../reference/outlook/Office.context.mailbox.md) 方法<br/><br/>**Recipients.addAsync** 方法<br/><br/> [Recipients.getAsync](../../reference/outlook/Recipients.md) 方法<br/><br/>**Recipients.setAsync** 方法<br/><br/> [RoamingSettings.saveAsync](../../reference/outlook/RoamingSettings.md) 方法<br/><br/> [Subject.getAsync](../../reference/outlook/Subject.md) 方法<br/><br/>**Subject.setAsync** 方法<br/><br/> [Time.getAsync](../../reference/outlook/Time.md) 方法<br/><br/> [Time.setAsync](../../reference/outlook/Time.md) 方法|針對 Outlook Web App 或裝置用 OWA：任一時間同時非同步呼叫數目的限制，因為瀏覽器僅允許有限的對伺服器非同步呼叫數目。 |
 
-## 其他資源
+## <a name="additional-resources"></a>其他資源
 
 
 

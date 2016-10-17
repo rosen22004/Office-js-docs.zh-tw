@@ -1,10 +1,10 @@
 
-# TableBinding.setTableOptionsAsync 方法
+# <a name="tablebinding.settableoptionsasync-method"></a>TableBinding.setTableOptionsAsync 方法
 更新繫結表格上的表格格式設定選項。
 
 |||
 |:-----|:-----|
-|**主機︰**|Excel|
+|**主應用程式︰**|Excel|
 |**可用於[需求集合](../../docs/overview/specify-office-hosts-and-api-requirements.md)**|不在集合中|
 |**已新增於**|1.1|
 
@@ -13,18 +13,18 @@ bindingObj.setTableOptionsAsync(tableOptions [,options] , callback);
 ```
 
 
-## 參數
+## <a name="parameters"></a>參數
 
 
 
-|**名稱**|**類型	**|**說明**|**支援附註**|
+|**名稱**|**類型**|**描述**|**支援附註**|
 |:-----|:-----|:-----|:-----|
-| _tableOptions_|**物件**|包含定義要套用之表格選項的屬性名稱值組清單的物件常值。必要。||
-| _options_|**物件**|指定下列任何一項[選擇性參數](../../docs/develop/asynchronous-programming-in-office-add-ins.md#passing-optional-parameters-to-asynchronous-methods)||
+| _tableOptions_|**object**|包含定義要套用之表格選項的屬性名稱值組清單的物件常值。必要。||
+| _options_|**object**|指定下列任何一項[選擇性參數](../../docs/develop/asynchronous-programming-in-office-add-ins.md#passing-optional-parameters-to-asynchronous-methods)||
 | _asyncContext_|**陣列**、**布林值**、**null**、**數字**、**物件**、**字串**或**未定義**|無變更的情況下，於 **AsyncResult** 物件中傳回的任一類型使用者定義項目。||
-| _callback_|**物件**|回呼傳回時所叫用的函數，其唯一的參數為 **AsyncResult** 類型。||
+| _callback_|**object**|回呼傳回時所叫用的函數，其唯一的參數為 **AsyncResult** 類型。||
 
-## 回呼值
+## <a name="callback-value"></a>回呼值
 
 傳遞至 _callback_ 參數的函數執行時，該函數會收到 [AsyncResult](../../reference/shared/asyncresult.md) 物件，您可以從回呼函數的唯一參數存取該物件。
 
@@ -32,14 +32,14 @@ bindingObj.setTableOptionsAsync(tableOptions [,options] , callback);
 
 
 
-|**屬性**|**用途**|
+|**屬性**|**用於...**|
 |:-----|:-----|
 |[AsyncResult.value](../../reference/shared/asyncresult.value.md)|設定表格選項時，因為沒有可擷取的資料或物件，所以一律傳回 **undefined**。|
 |[AsyncResult.status](../../reference/shared/asyncresult.status.md)|判定作業成功或失敗。|
 |[AsyncResult.error](../../reference/shared/asyncresult.error.md)|作業失敗時，存取提供錯誤資訊的 [Error](../../reference/shared/error.md) 物件。|
 |[AsyncResult.asyncContext](../../reference/shared/asyncresult.asynccontext.md)|存取您的使用者定義**物件**或值 (如果您傳遞了其中一項做為 _asyncContext_ 參數)。|
 
-## 範例
+## <a name="example"></a>範例
 
 下列範例顯示如何：
 
@@ -60,7 +60,7 @@ function updateTableFormatting(){
 
 
 
-## 支援詳細資料
+## <a name="support-details"></a>支援詳細資料
 
 
 下列矩陣中的大寫 Y，表示在相對應的 Office 主應用程式中支援此方法。空白儲存格表示 Office 主應用程式不支援此方法。
@@ -83,7 +83,7 @@ function updateTableFormatting(){
 |**文件庫**|Office.js|
 |**命名空間**|Office|
 
-## 支援歷程記錄
+## <a name="support-history"></a>支援歷程記錄
 
 
 

@@ -1,5 +1,5 @@
 
-# 在 Outlook 中撰寫約會或郵件時，取得、設定或新增收件者。
+# <a name="get,-set,-or-add-recipients-when-composing-an-appointment-or-message-in-outlook"></a>在 Outlook 中撰寫約會或郵件時，取得、設定或新增收件者。
 
 
 適用於 Office 的 JavaScript API 分別提供非同步方法 ([Recipients.getAsync](../../reference/outlook/Recipients.md)、[Recipients.setAsync](../../reference/outlook/Recipients.md) 或 [Recipients.addAysnc](../../reference/outlook/Recipients.md)) 給約會或郵件的撰寫表單中的取得、設定或加入收件者。這些非同步方法僅供撰寫增益集使用。若要使用這些方法，請確定您已正確設定適用於 Outlook 的增益集資訊清單以啟動撰寫表單中的增益集，如[建立撰寫格式的 Outlook 增益集](../outlook/compose-scenario.md)中所述。
@@ -27,7 +27,7 @@ item.cc.getAsync
 如同適用於 Office 的 JavaScript APIe 中大部分的非同步方法，**getAsync**、**setAsync** 和 **addAsync** 接受選擇性輸入參數。如需有關指定這些選擇性輸入參數的詳細資訊，請參閱 [Office 增益集中的非同步程式設計](../../docs/develop/asynchronous-programming-in-office-add-ins.md#passing-optional-parameters-inline)中的[將選擇性參數傳遞至非同步方法](../../docs/develop/asynchronous-programming-in-office-add-ins.md)。
 
 
-## 若要取得收件者
+## <a name="to-get-recipients"></a>若要取得收件者
 
 
 本章節會顯示取得正在撰寫的約會或郵件的收件者，及顯示收件者的電子郵件地址的程式碼範例。程式碼範例假設增益集資訊清單中啟動約會或郵件撰寫表單中的增益集的規則，如下所示。 
@@ -139,7 +139,7 @@ function write(message){
 ```
 
 
-## 若要設定收件者
+## <a name="to-set-recipients"></a>若要設定收件者
 
 
 本章節會顯示設定使用者正在由使用者撰寫的約會或郵件的收件者的程式碼範例。設定收件者會覆寫任何現有的收件者。類似於先前取得撰寫表格中收件者的範例，此範例假設會在約會及郵件的撰寫表單中啟動增益集。本範例首先驗證撰寫的項目為約會還是郵件，因此在代表約會或郵件收件者的適當屬性上套用非同步方法 **Recipients.setAsync**。
@@ -266,7 +266,7 @@ function write(message){
 ```
 
 
-## 若要新增收件者
+## <a name="to-add-recipients"></a>若要新增收件者
 
 
 如果您不想覆寫約會或郵件中的任何現有收件者，您可以使用 **Recipients.addAsync** 非同步方法來附加收件者，而非使用 **Recipients.setAsync**。**addAsync** 運作方式類似 **setAsync** 因為其需要 _recipients_ 輸入引數。您可以使用 asyncContext 參數，選擇性地提供回撥方法及回撥的任何引數。然後您可以使用回撥方法的 **asyncResult** 輸出參數來檢查非同步 _addAsync_ 回呼的狀態、結果及任何錯誤。下列範例會檢查正在撰寫的項目是否為約會，並且將兩個必要的出席者附加至約會。
@@ -300,7 +300,7 @@ function addAttendees() {
 ```
 
 
-## 其他資源
+## <a name="additional-resources"></a>其他資源
 
 
 

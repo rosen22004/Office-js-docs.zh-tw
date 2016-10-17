@@ -1,5 +1,5 @@
 
-# Labs.Core.Actions.IAttemptTimeoutOptions
+# <a name="labs.core.actions.iattempttimeoutoptions"></a>Labs.Core.Actions.IAttemptTimeoutOptions
 
  _**適用於︰**Office 的應用程式 | Office 增益集 | Office Mix | PowerPoint_
 
@@ -10,7 +10,7 @@ interface IAttemptTimeoutOptions extends Core.IActionOptions
 ```
 
 
-## 屬性
+## <a name="properties"></a>屬性
 
 
 |||

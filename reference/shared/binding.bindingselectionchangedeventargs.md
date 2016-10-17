@@ -1,10 +1,10 @@
 
-# BindingSelectionChangedEventArgs 物件
+# <a name="bindingselectionchangedeventargs-object"></a>BindingSelectionChangedEventArgs 物件
 提供引發 [SelectionChanged](../../reference/shared/binding.bindingselectionchangedevent.md) 事件之繫結的相關資訊。
 
 |||
 |:-----|:-----|
-|**主機︰**|Access、Excel、Word|
+|**主應用程式︰**|Access、Excel、Word|
 |**上次變更於 TableBinding**|1.1|
 
 ```
@@ -12,22 +12,22 @@ Office.EventType.BindingSelectionChanged
 ```
 
 
-## 成員
+## <a name="members"></a>成員
 
 
 **屬性**
 
 
-|**名稱**|**說明**|
+|**名稱**|**描述**|
 |:-----|:-----|
-|[繫結](../../reference/shared/binding.bindingselectionchangedevent.binding.md)|取得代表引發 [SelectionChanged](../../reference/shared/binding.md) 事件之繫結的 **Binding** 物件。|
+|[binding](../../reference/shared/binding.bindingselectionchangedevent.binding.md)|取得代表引發 [SelectionChanged](../../reference/shared/binding.md) 事件之繫結的 **Binding** 物件。|
 |[columnCount](../../reference/shared/binding.bindingselectionchangedevent.columncount.md)|取得選取的資料欄數目。|
 |[rowCount](../../reference/shared/binding.bindingselectionchangedevent.rowcount.md)|取得選取的資料列數目。|
 |[startRow](../../reference/shared/binding.bindingselectionchangedevent.startrow.md)|取得選取範圍首列的索引 (以零為基礎)。|
 |[startColumn](../../reference/shared/binding.bindingselectionchangedevent.startcolumn.md)|取得選取範圍首欄的索引 (以零為基礎)。|
-|[類型](../../reference/shared/binding.bindingselectionchangedevent.type.md)|取得可識別所引發事件類型的 [EventType](../../reference/shared/eventtype-enumeration.md) 列舉值。|
+|[type](../../reference/shared/binding.bindingselectionchangedevent.type.md)|取得可識別所引發事件類型的 [EventType](../../reference/shared/eventtype-enumeration.md) 列舉值。|
 
-## 支援詳細資料
+## <a name="support-details"></a>支援詳細資料
 
 
 下列矩陣中的大寫 Y，表示在相對應的 Office 主應用程式中支援此方法。空白儲存格表示 Office 主應用程式不支援此方法。
@@ -42,7 +42,7 @@ Office.EventType.BindingSelectionChanged
 |:-----|:-----|:-----|:-----|
 |**Access**||Y||
 |**Excel**|Y|Y|Y|
-|**Word**|Y||Y|
+|**Word**|Y|Y|Y|
 
 |||
 |:-----|:-----|
@@ -50,7 +50,7 @@ Office.EventType.BindingSelectionChanged
 |**文件庫**|Office.js|
 |**命名空間**|Office|
 
-## 支援歷程記錄
+## <a name="support-history"></a>支援歷程記錄
 
 
 

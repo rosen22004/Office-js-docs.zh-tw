@@ -1,11 +1,11 @@
 
-# Dictionary 項目
+# <a name="dictionary-element"></a>Dictionary 項目
 定義會套用至實作其他字典支援的工作窗格增益集設定。
 
  **增益集類型︰**工作窗格
 
 
-## 語法：
+## <a name="syntax:"></a>語法：
 
 
 ```XML
@@ -15,16 +15,16 @@
 ```
 
 
-## 內含於：
+## <a name="contained-in:"></a>內含於：
 
 [OfficeApp](../../reference/manifest/officeapp.md)
 
 
-## 可以包含︰
+## <a name="can-contain:"></a>可以包含︰
 
 
 
-|**元素**|
+|** 元素**|
 |:-----|
 |[TargetDialects](../../reference/manifest/targetdialects.md)|
 |[QueryUri](../../reference/manifest/queryuri.md)|
@@ -32,7 +32,7 @@
 |[DictionaryName](../../reference/manifest/dictionaryname.md)|
 |[DictionaryHomePage](../../reference/manifest/dictionaryhomepage.md)|
 
-## 其他資源
+## <a name="additional-resources"></a>其他資源
 
 
 

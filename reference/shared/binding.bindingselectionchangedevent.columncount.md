@@ -1,10 +1,10 @@
 
-# BindingSelectionChangedEventArgs.columnCount 屬性
+# <a name="bindingselectionchangedeventargs.columncount-property"></a>BindingSelectionChangedEventArgs.columnCount 屬性
 取得選取的資料欄數目。
 
 |||
 |:-----|:-----|
-|**主機︰**|Access、Excel、Word|
+|**主應用程式︰**|Access、Excel、Word|
 |**上次變更於**|1.1|
 
 ```
@@ -12,19 +12,19 @@ var colCount = eventArgsObj.columnCount;
 ```
 
 
-## 傳回值
+## <a name="return-value"></a>傳回值
 
 選取的資料欄數目。如果選取單一儲存格，則會傳回 1。
 
 
-## 備註
+## <a name="remarks"></a>備註
 
 如果使用者選取非連續的選取範圍，則會傳回繫結內最後一個連續選取的計數。 
 
 對於 Word 而言，此屬性僅適用於 [BindingType](../../reference/shared/bindingtype-enumeration.md) "table" 的繫結。如果繫結是 "matrix" 類型，則會傳回 **null**。此外，如果表格包含合併的儲存格，則呼叫會失敗，因為表格結構必須針對此屬性統一，才可正常運作。
 
 
-## 範例
+## <a name="example"></a>範例
 
 下列範例會針對 [SelectionChanged](../../reference/shared/binding.bindingselectionchangedevent.md) 事件，將事件處理常式新增至帶有 `myTable`[id](../../reference/shared/binding.id.md) 的繫結。當使用者變更選取範圍時，處理常式會顯示選取範圍中第一個儲存格的座標，以及所選取的資料列和資料欄數目。
 
@@ -49,7 +49,7 @@ function write(message){
 ```
 
 
-## 支援詳細資料
+## <a name="support-details"></a>支援詳細資料
 
 
 下列矩陣中的大寫 Y，表示在相對應的 Office 主應用程式中支援此屬性。空白儲存格表示 Office 主應用程式不支援此屬性。
@@ -64,7 +64,7 @@ function write(message){
 |:-----|:-----|:-----|:-----|
 |**Access**||Y||
 |**Excel**|Y|Y|Y|
-|**Word**|Y||Y|
+|**Word**|Y|Y|Y|
 
 |||
 |:-----|:-----|
@@ -73,7 +73,7 @@ function write(message){
 |**文件庫**|Office.js|
 |**命名空間**|Office|
 
-## 支援歷程記錄
+## <a name="support-history"></a>支援歷程記錄
 
 
 

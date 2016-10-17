@@ -1,5 +1,5 @@
 
-# Labs.Components 介面
+# <a name="labs.components-interfaces"></a>Labs.Components 介面
 **LabsJS.Labs.Components** 模組中的介面
 
  _**適用於︰**Office 的應用程式 | Office 增益集 | Office Mix | PowerPoint_
@@ -9,7 +9,7 @@
 ## 
 
 
-|介面|說明|
+|介面|描述|
 |:-----|:-----|
 |[Labs.Components.IActivityComponent](../../reference/office-mix/labs.components.iactivitycomponent.md)|表示活動元件。展開 [Labs.Core.IComponent](../../reference/office-mix/labs.core.icomponent.md)。|
 |[Labs.Components.IActivityComponentInstance](../../reference/office-mix/labs.components.iactivitycomponentinstance.md)|表示活動元件的特定執行個體。展開 [Labs.Core.IComponentInstance](../../reference/office-mix/labs.core.icomponentinstance.md)。|

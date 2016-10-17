@@ -1,10 +1,10 @@
 
-# NodeDeletedEventArgs.isUndoRedo 屬性
+# <a name="nodedeletedeventargs.isundoredo-property"></a>NodeDeletedEventArgs.isUndoRedo 屬性
 取得關於使用者是否將刪除節點，當做 [復原/取消復原] 動作的一部分的資訊。
 
 |||
 |:-----|:-----|
-|**主機︰**|Word|
+|**主應用程式︰**|Word|
 |**可用於[需求集合](../../docs/overview/specify-office-hosts-and-api-requirements.md)**|CustomXmlParts|
 |**上次變更於**|1.1|
 
@@ -13,12 +13,12 @@ var isInUndoRedo = eventArgsObj.isUndoRedo;
 ```
 
 
-## 傳回值
+## <a name="return-value"></a>傳回值
 
 如果使用者將此節點當做 [復原/取消復原] 動作的一部分刪除，就會傳回 **true**。
 
 
-## 支援詳細資料
+## <a name="support-details"></a>支援詳細資料
 
 
 下列矩陣中的大寫 Y，表示在相對應的 Office 主應用程式中支援此屬性。空白儲存格表示 Office 主應用程式不支援此屬性。
@@ -38,7 +38,7 @@ var isInUndoRedo = eventArgsObj.isUndoRedo;
 |**文件庫**|Office.js|
 |**命名空間**|Office|
 
-## 支援歷程記錄
+## <a name="support-history"></a>支援歷程記錄
 
 
 

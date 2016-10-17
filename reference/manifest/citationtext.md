@@ -1,11 +1,11 @@
 
-# CitationText 項目
+# <a name="citationtext-element"></a>CitationText 項目
 指定此字典的引文重複使用文字。
 
  **增益集類型︰**內容、工作窗格、郵件
 
 
-## 語法：
+## <a name="syntax:"></a>語法：
 
 
 ```XML
@@ -13,12 +13,12 @@
 ```
 
 
-## 內含於：
+## <a name="contained-in:"></a>內含於：
 
 [Dictionary](../../reference/manifest/dictionary.md)
 
 
-## 其他資源
+## <a name="additional-resources"></a>其他資源
 
 
 

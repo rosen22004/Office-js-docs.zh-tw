@@ -1,11 +1,11 @@
 
 
-# ProjectDocument.getWSSUrlAsync 方法
+# <a name="projectdocument.getwssurlasync-method"></a>ProjectDocument.getWSSUrlAsync 方法
 以非同步方式取得同步化 SharePoint 工作清單的 URL。
 
 |||
 |:-----|:-----|
-|**主機︰**|Project|
+|**主應用程式︰**|Project|
 |**可用於[需求集合](../../docs/overview/specify-office-hosts-and-api-requirements.md)**|Selection|
 |**已新增於**|1.0|
 
@@ -14,36 +14,36 @@ Office.context.document.getWSSUrlAsync([options,] [callback]);
 ```
 
 
-## 參數
+## <a name="parameters"></a>參數
 
 
 
-|**名稱**|**類型	**|**說明**|**支援附註**|
+|**名稱**|**類型**|**描述**|**支援附註**|
 |:-----|:-----|:-----|:-----|
-| _options_|**物件**|指定下列任何一項[選擇性參數](../../docs/develop/asynchronous-programming-in-office-add-ins.md#passing-optional-parameters-to-asynchronous-methods)。||
+| _options_|**object**|指定下列任何一項[選擇性參數](../../docs/develop/asynchronous-programming-in-office-add-ins.md#passing-optional-parameters-to-asynchronous-methods)。||
 | _asyncContext_|**陣列**、**布林值**、**null**、**數字**、**物件**、**字串**或**未定義**|無變更的情況下，於 **AsyncResult** 物件中傳回的任一類型使用者定義項目。||
-| _callback_|**物件**|回呼傳回時所叫用的函數，其唯一的參數為 **AsyncResult** 類型。||
+| _callback_|**object**|回呼傳回時所叫用的函數，其唯一的參數為 **AsyncResult** 類型。||
 
-## 回呼值
+## <a name="callback-value"></a>回呼值
 
 當 _callback_ 函數執行時，該函數會收到 [AsyncResult](../../reference/shared/asyncresult.md) 物件，您可以從回呼函數的參數存取該物件。
 
 若為 **getWSSUrlAsync** 方法，傳回的 [AsyncResult](../../reference/shared/asyncresult.md) 物件會包含下列屬性。
 
 
-|**名稱**|**說明**|
+|**名稱**|**描述**|
 |:-----|:-----|
 |[asyncContext](../../reference/shared/asyncresult.asynccontext.md)|在選擇性 _asyncContext_ 參數中傳遞的資料 (如果有使用該參數)。|
-|[錯誤](../../reference/shared/asyncresult.error.md)|錯誤的相關資訊 (如果 **status** 屬性等於 **failed**)。|
-|[狀態](../../reference/shared/asyncresult.status.md)|非同步呼叫的 **succeeded** 或 **failed** 狀態。|
+|[error](../../reference/shared/asyncresult.error.md)|錯誤的相關資訊 (如果 **status** 屬性等於 **failed**)。|
+|[status](../../reference/shared/asyncresult.status.md)|非同步呼叫的 **succeeded** 或 **failed** 狀態。|
 |[value](../../reference/shared/asyncresult.value.md)|包含下列屬性︰<br/><br/><ul><li><b>listName</b> 屬性是同步化 SharePoint 工作清單的名稱。</li><li><b>ServerUrl</b> 屬性是同步化 SharePoint 工作清單的 URL。</li></ul>|
 
-## 備註
+## <a name="remarks"></a>備註
 
 如果使用中專案沒有與 SharePoint 工作清單同步化，則 **listName** 和 **serverUrl** 值是空的。
 
 
-## 範例
+## <a name="example"></a>範例
 
 下列程式碼範例會呼叫 **getWSSUrlAsync**，以取得同步化 SharePoint 工作清單的名稱和 URL。
 
@@ -96,7 +96,7 @@ Office.context.document.getWSSUrlAsync([options,] [callback]);
 ```
 
 
-## 支援詳細資料
+## <a name="support-details"></a>支援詳細資料
 
 
 下列矩陣中的大寫 Y，表示在相對應的 Office 主應用程式中支援此方法。空白儲存格表示 Office 主應用程式不支援此方法。
@@ -117,18 +117,18 @@ Office.context.document.getWSSUrlAsync([options,] [callback]);
 |**文件庫**|Office.js|
 |**命名空間**|Office|
 
-## 支援歷程記錄
+## <a name="support-history"></a>支援歷程記錄
 
 
 |**版本**|**變更**|
 |:-----|:-----|
 |1.0|已導入|
 
-## 請參閱
+## <a name="see-also"></a>請參閱
 
 
 
-#### 其他資源
+#### <a name="other-resources"></a>其他資源
 
 
 [AsyncResult 物件](../../reference/shared/asyncresult.md)

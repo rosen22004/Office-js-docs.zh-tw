@@ -1,53 +1,53 @@
-﻿# 應用程式物件 (適用於 OneNote 的 JavaScript API)
+# <a name="application-object-(javascript-api-for-onenote)"></a>應用程式物件 (適用於 OneNote 的 JavaScript API)
 
 _適用於：OneNote Online_
 
 
 代表最上層物件，會包含所有的全域可定址 OneNote 物件，例如筆記本、使用中的筆記本中和使用中的節。
 
-## 屬性
+## <a name="properties"></a>屬性
 
 無
 
-## 關聯性
-| 關聯性 | 類型	   |說明| 意見反應|
+## <a name="relationships"></a>關聯性
+| 關聯性 | 類型	   |描述| 意見反應|
 |:---------------|:--------|:----------|:-------|
 |Notebooks|[NotebookCollection](notebookcollection.md)|取得在 OneNote 應用程式執行個體中開啟的筆記本集合。在 OneNote Online 中，應用程式執行個體內，一次只能開啟一個筆記本。唯讀。|[移至](https://github.com/OfficeDev/office-js-docs/issues/new?title=OneNote-application-notebooks)|
 
-## 方法
+## <a name="methods"></a>方法
 
-| 方法           | 傳回類型    |說明| 意見反應|
+| 方法           | 傳回類型    |描述| 意見反應|
 |:---------------|:--------|:----------|:-------|
-|[getActiveNotebook()](#getactivenotebook)|[筆記本](notebook.md)|取得使用中的筆記本 (如果有的話)。如果沒有使用中的筆記本，會擲回 ItemNotFound。|[執行](https://github.com/OfficeDev/office-js-docs/issues/new?title=OneNote-application-getActiveNotebook)|
-|[getActiveNotebookOrNull()](#getactivenotebookornull)|[筆記本](notebook.md)|取得使用中的筆記本 (如果有的話)。如果沒有使用中的筆記本，會傳回 null。|[執行](https://github.com/OfficeDev/office-js-docs/issues/new?title=OneNote-application-getActiveNotebookOrNull)|
-|[getActiveOutline()](#getactiveoutline)|[大綱](outline.md)|取得使用中的大綱 (如果有的話)，如果沒有使用中的大綱，會擲回 ItemNotFound。|[執行](https://github.com/OfficeDev/office-js-docs/issues/new?title=OneNote-application-getActiveOutline)|
-|[getActiveOutlineOrNull()](#getactiveoutlineornull)|[大綱](outline.md)|取得使用中的大綱 (如果有的話)，否則會傳回 null。|[執行](https://github.com/OfficeDev/office-js-docs/issues/new?title=OneNote-application-getActiveOutlineOrNull)|
-|[getActivePage()](#getactivepage)|[Page](page.md)|取得使用中的頁面 (如果有的話)。如果沒有使用中的頁面，會擲回 ItemNotFound。|[執行](https://github.com/OfficeDev/office-js-docs/issues/new?title=OneNote-application-getActivePage)|
-|[getActivePageOrNull()](#getactivepageornull)|[Page](page.md)|取得使用中的頁面 (如果有的話)。如果沒有使用中的頁面，會傳回 null。|[執行](https://github.com/OfficeDev/office-js-docs/issues/new?title=OneNote-application-getActivePageOrNull)|
-|[getActiveSection()](#getactivesection)|[章節](section.md)|取得使用中的區段 (如果有的話)。如果沒有使用中的區段，會擲回 ItemNotFound。|[執行](https://github.com/OfficeDev/office-js-docs/issues/new?title=OneNote-application-getActiveSection)|
-|[getActiveSectionOrNull()](#getactivesectionornull)|[章節](section.md)|取得使用中的區段 (如果有的話)。如果沒有使用中的區段，會傳回 null。|[移至](https://github.com/OfficeDev/office-js-docs/issues/new?title=OneNote-application-getActiveSectionOrNull)|
+|[getActiveNotebook()](#getactivenotebook)|[Notebook](notebook.md)|取得使用中的筆記本 (如果有的話)。如果沒有使用中的筆記本，會擲回 ItemNotFound。|[移至](https://github.com/OfficeDev/office-js-docs/issues/new?title=OneNote-application-getActiveNotebook)|
+|[getActiveNotebookOrNull()](#getactivenotebookornull)|[Notebook](notebook.md)|取得使用中的筆記本 (如果有的話)。如果沒有使用中的筆記本，會傳回 null。|[移至](https://github.com/OfficeDev/office-js-docs/issues/new?title=OneNote-application-getActiveNotebookOrNull)|
+|[getActiveOutline()](#getactiveoutline)|[Outline](outline.md)|取得使用中的大綱 (如果有的話)，如果沒有使用中的大綱，會擲回 ItemNotFound。|[移至](https://github.com/OfficeDev/office-js-docs/issues/new?title=OneNote-application-getActiveOutline)|
+|[getActiveOutlineOrNull()](#getactiveoutlineornull)|[Outline](outline.md)|取得使用中的大綱 (如果有的話)，否則會傳回 null。|[移至](https://github.com/OfficeDev/office-js-docs/issues/new?title=OneNote-application-getActiveOutlineOrNull)|
+|[getActivePage()](#getactivepage)|[Page](page.md)|取得使用中的頁面 (如果有的話)。如果沒有使用中的頁面，會擲回 ItemNotFound。|[移至](https://github.com/OfficeDev/office-js-docs/issues/new?title=OneNote-application-getActivePage)|
+|[getActivePageOrNull()](#getactivepageornull)|[Page](page.md)|取得使用中的頁面 (如果有的話)。如果沒有使用中的頁面，會傳回 null。|[移至](https://github.com/OfficeDev/office-js-docs/issues/new?title=OneNote-application-getActivePageOrNull)|
+|[getActiveSection()](#getactivesection)|[Section](section.md)|取得使用中的區段 (如果有的話)。如果沒有使用中的區段，會擲回 ItemNotFound。|[移至](https://github.com/OfficeDev/office-js-docs/issues/new?title=OneNote-application-getActiveSection)|
+|[getActiveSectionOrNull()](#getactivesectionornull)|[Section](section.md)|取得使用中的區段 (如果有的話)。如果沒有使用中的區段，會傳回 null。|[移至](https://github.com/OfficeDev/office-js-docs/issues/new?title=OneNote-application-getActiveSectionOrNull)|
 |[load(param: object)](#loadparam-object)|void|以參數中指定的屬性和物件值填滿 JavaScript 層中建立的 Proxy 物件。|[移至](https://github.com/OfficeDev/office-js-docs/issues/new?title=OneNote-application-load)|
-|[navigateToPage(page:Page)](#navigatetopagepage-page)|void|在應用程式執行個體中開啟指定的頁面。|[執行](https://github.com/OfficeDev/office-js-docs/issues/new?title=OneNote-application-navigateToPage)|
-|[navigateToPageWithClientUrl(url: string)](#navigatetopagewithclienturlurl-string)|[Page](page.md)|取得指定的頁面，並且在應用程式執行個體中開啟。|[執行](https://github.com/OfficeDev/office-js-docs/issues/new?title=OneNote-application-navigateToPageWithClientUrl)|
+|[navigateToPage(page:Page)](#navigatetopagepage-page)|void|在應用程式執行個體中開啟指定的頁面。|[移至](https://github.com/OfficeDev/office-js-docs/issues/new?title=OneNote-application-navigateToPage)|
+|[navigateToPageWithClientUrl(url: string)](#navigatetopagewithclienturlurl-string)|[Page](page.md)|取得指定的頁面，並且在應用程式執行個體中開啟。|[移至](https://github.com/OfficeDev/office-js-docs/issues/new?title=OneNote-application-navigateToPageWithClientUrl)|
 
-## 方法詳細資料
+## <a name="method-details"></a>方法詳細資料
 
 
-### getActiveNotebook()
+### <a name="getactivenotebook()"></a>getActiveNotebook()
 取得使用中的筆記本 (如果有的話)。如果沒有使用中的筆記本，會擲回 ItemNotFound。
 
-#### 語法
+#### <a name="syntax"></a>語法
 ```js
 applicationObject.getActiveNotebook();
 ```
 
-#### 參數
+#### <a name="parameters"></a>參數
 無
 
-#### 傳回
-[筆記本](notebook.md)
+#### <a name="returns"></a>傳回
+[Notebook](notebook.md)
 
-#### 範例
+#### <a name="examples"></a>範例
 ```js
 OneNote.run(function (context) {
         
@@ -77,21 +77,21 @@ OneNote.run(function (context) {
 ```
 
 
-### getActiveNotebookOrNull()
+### <a name="getactivenotebookornull()"></a>getActiveNotebookOrNull()
 取得使用中的筆記本 (如果有的話)。如果沒有使用中的筆記本，會傳回 null。
 
-#### 語法
+#### <a name="syntax"></a>語法
 ```js
 applicationObject.getActiveNotebookOrNull();
 ```
 
-#### 參數
+#### <a name="parameters"></a>參數
 無
 
-#### 傳回
-[筆記本](notebook.md)
+#### <a name="returns"></a>傳回
+[Notebook](notebook.md)
 
-#### 範例
+#### <a name="examples"></a>範例
 ```js
 OneNote.run(function (context) {
 
@@ -122,21 +122,21 @@ OneNote.run(function (context) {
 ```
 
 
-### getActiveOutline()
+### <a name="getactiveoutline()"></a>getActiveOutline()
 取得使用中的大綱 (如果有的話)，如果沒有使用中的大綱，會擲回 ItemNotFound。
 
-#### 語法
+#### <a name="syntax"></a>語法
 ```js
 applicationObject.getActiveOutline();
 ```
 
-#### 參數
+#### <a name="parameters"></a>參數
 無
 
-#### 傳回
-[大綱](outline.md)
+#### <a name="returns"></a>傳回
+[Outline](outline.md)
 
-#### 範例
+#### <a name="examples"></a>範例
 ```js
 OneNote.run(function (context) {
 
@@ -163,21 +163,21 @@ OneNote.run(function (context) {
 ```
 
 
-### getActiveOutlineOrNull()
+### <a name="getactiveoutlineornull()"></a>getActiveOutlineOrNull()
 取得使用中的大綱 (如果有的話)，否則會傳回 null。
 
-#### 語法
+#### <a name="syntax"></a>語法
 ```js
 applicationObject.getActiveOutlineOrNull();
 ```
 
-#### 參數
+#### <a name="parameters"></a>參數
 無
 
-#### 傳回
-[大綱](outline.md)
+#### <a name="returns"></a>傳回
+[Outline](outline.md)
 
-#### 範例
+#### <a name="examples"></a>範例
 ```js
 OneNote.run(function (context) {
 
@@ -205,21 +205,21 @@ OneNote.run(function (context) {
 ```
 
 
-### getActivePage()
+### <a name="getactivepage()"></a>getActivePage()
 取得使用中的頁面 (如果有的話)。如果沒有使用中的頁面，會擲回 ItemNotFound。
 
-#### 語法
+#### <a name="syntax"></a>語法
 ```js
 applicationObject.getActivePage();
 ```
 
-#### 參數
+#### <a name="parameters"></a>參數
 無
 
-#### 傳回
+#### <a name="returns"></a>傳回
 [Page](page.md)
 
-#### 範例
+#### <a name="examples"></a>範例
 ```js
 OneNote.run(function (context) {
         
@@ -249,21 +249,21 @@ OneNote.run(function (context) {
 ```
 
 
-### getActivePageOrNull()
+### <a name="getactivepageornull()"></a>getActivePageOrNull()
 取得使用中的頁面 (如果有的話)。如果沒有使用中的頁面，會傳回 null。
 
-#### 語法
+#### <a name="syntax"></a>語法
 ```js
 applicationObject.getActivePageOrNull();
 ```
 
-#### 參數
+#### <a name="parameters"></a>參數
 無
 
-#### 傳回
+#### <a name="returns"></a>傳回
 [Page](page.md)
 
-#### 範例
+#### <a name="examples"></a>範例
 ```js
 OneNote.run(function (context) {
 
@@ -294,21 +294,21 @@ OneNote.run(function (context) {
 ```
 
 
-### getActiveSection()
+### <a name="getactivesection()"></a>getActiveSection()
 取得使用中的區段 (如果有的話)。如果沒有使用中的區段，會擲回 ItemNotFound。
 
-#### 語法
+#### <a name="syntax"></a>語法
 ```js
 applicationObject.getActiveSection();
 ```
 
-#### 參數
+#### <a name="parameters"></a>參數
 無
 
-#### 傳回
-[章節](section.md)
+#### <a name="returns"></a>傳回
+[Section](section.md)
 
-#### 範例
+#### <a name="examples"></a>範例
 ```js
 OneNote.run(function (context) {
         
@@ -338,21 +338,21 @@ OneNote.run(function (context) {
 ```
 
 
-### getActiveSectionOrNull()
+### <a name="getactivesectionornull()"></a>getActiveSectionOrNull()
 取得使用中的區段 (如果有的話)。如果沒有使用中的區段，會傳回 null。
 
-#### 語法
+#### <a name="syntax"></a>語法
 ```js
 applicationObject.getActiveSectionOrNull();
 ```
 
-#### 參數
+#### <a name="parameters"></a>參數
 無
 
-#### 傳回
-[章節](section.md)
+#### <a name="returns"></a>傳回
+[Section](section.md)
 
-#### 範例
+#### <a name="examples"></a>範例
 ```js
 OneNote.run(function (context) {
 
@@ -382,39 +382,39 @@ OneNote.run(function (context) {
 ```
 
 
-### load(param: object)
+### <a name="load(param:-object)"></a>load(param: object)
 以參數中指定的屬性和物件值填滿 JavaScript 層中建立的 Proxy 物件。
 
-#### 語法
+#### <a name="syntax"></a>語法
 ```js
 object.load(param);
 ```
 
-#### 參數
-| 參數	    | 類型	   |說明|
+#### <a name="parameters"></a>參數
+| 參數	    | 類型	   |描述|
 |:---------------|:--------|:----------|
 |param|物件|選用。接受參數與關聯性名稱，做為分隔字串或陣列。或者提供 [loadOption](loadoption.md) 物件。|
 
-#### 傳回
+#### <a name="returns"></a>傳回
 void
 
-### navigateToPage(page:Page)
+### <a name="navigatetopage(page:-page)"></a>navigateToPage(page:Page)
 在應用程式執行個體中開啟指定的頁面。
 
-#### 語法
+#### <a name="syntax"></a>語法
 ```js
 applicationObject.navigateToPage(page);
 ```
 
-#### 參數
-| 參數	    | 類型	   |說明|
+#### <a name="parameters"></a>參數
+| 參數	    | 類型	   |描述|
 |:---------------|:--------|:----------|
 |page|Page|要開啟的頁面。|
 
-#### 傳回
+#### <a name="returns"></a>傳回
 void
 
-#### 範例
+#### <a name="examples"></a>範例
 ```js        
 OneNote.run(function (context) {
         
@@ -448,23 +448,23 @@ OneNote.run(function (context) {
 ```
 
 
-### navigateToPageWithClientUrl(url: string)
+### <a name="navigatetopagewithclienturl(url:-string)"></a>navigateToPageWithClientUrl(url: string)
 取得指定的頁面，並且在應用程式執行個體中開啟。
 
-#### 語法
+#### <a name="syntax"></a>語法
 ```js
 applicationObject.navigateToPageWithClientUrl(url);
 ```
 
-#### 參數
-| 參數	    | 類型	   |說明|
+#### <a name="parameters"></a>參數
+| 參數	    | 類型	   |描述|
 |:---------------|:--------|:----------|
-|URL|string|要開啟頁面的用戶端 URL。|
+|URL|字串|要開啟頁面的用戶端 URL。|
 
-#### 傳回
+#### <a name="returns"></a>傳回
 [Page](page.md)
 
-#### 範例
+#### <a name="examples"></a>範例
 ```js
 OneNote.run(function (context) {
 

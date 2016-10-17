@@ -1,9 +1,9 @@
 
-# LabsJS 實驗室元件
+# <a name="labsjs-lab-components"></a>LabsJS 實驗室元件
 
 Labs.js 為您提供四種可用於組合實驗室的元件類型。每個元件類型支援特定類型的實驗室互動，例如，包括多個選擇問題、可用的回應問題，或是在本課程的 HTML iFrame 中檢視網頁等活動。
 
-## 元件
+## <a name="components"></a>元件
 
 Office Mix 支援下列四種實驗室元件類型︰ 
 
@@ -17,7 +17,7 @@ Office Mix 支援下列四種實驗室元件類型︰
 -  **動態元件** (**IDynamicComponent**)。在執行階段產生其他元件類型。當您有分支問題時使用這個元件類型，比方說，其中待處理的元件類型隨先前的使用者輸入而異。此類型也能讓您建立小測驗庫或在執行階段產生問題。如需詳細資訊，請參閱 [Labs.Components.DynamicComponentInstance](../../../reference/office-mix/labs.components.dynamiccomponentinstance.md)。
     
 
-## 其他資源
+## <a name="additional-resources"></a>其他資源
 
 
 

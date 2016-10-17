@@ -1,5 +1,5 @@
 
-# Labs.disconnect
+# <a name="labs.disconnect"></a>Labs.disconnect
 
  _**適用於︰**Office 的應用程式 | Office 增益集 | Office Mix | PowerPoint_
 
@@ -10,7 +10,7 @@ function disconnect(): void
 ```
 
 
-## 傳回值
+## <a name="return-value"></a>傳回值
 
 無。
 

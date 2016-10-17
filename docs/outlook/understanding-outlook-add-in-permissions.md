@@ -1,19 +1,19 @@
 
-# 了解 Outlook 增益集的權限
+# <a name="understanding-outlook-add-in-permissions"></a>了解 Outlook 增益集的權限
 
 Outlook 增益集在其資訊清單中指定所需的權限層級。可用的層級為 **Restricted**,  **ReadItem**、**ReadWriteItem** 或 **ReadWriteMailbox**。這些權限的層級是累積的︰**Restricted** 是最低的層級，而且每一個較高的層級包含所有較低層級的權限。**ReadWriteMailbox** 包括所有支援的權限。
 
 您從 Office 市集安裝郵件增益集之前，可以看到它所要求的權限。您也可以查看 Exchange 系統管理中心內已安裝增益集的必要權限。
 
 
-## 受限制的權限
+## <a name="restricted-permission"></a>受限制的權限
 
 
 
   **Restricted** 是最基本的權限層級。在資訊清單中的 **Permissions** 元素中指定 [Restricted](http://msdn.microsoft.com/en-us/library/c20cdf29-74b0-564c-e178-b75d148b36d1%28Office.15%29.aspx) 來要求此權限。如果增益集不在其資訊清單中要求特定權限，Outlook 會依預設指派此權限給郵件增益集。
 
 
-### 可以執行
+### <a name="can-do"></a>可以執行
 
 
 - [僅從項目的主旨或本文取得特定實體](../outlook/match-strings-in-an-item-as-well-known-entities.md) (電話號碼、地址、URL)。
@@ -23,7 +23,7 @@ Outlook 增益集在其資訊清單中指定所需的權限層級。可用的層
 - 存取**不**關於使用者或項目的特定資訊的任何屬性和方法。(請參閱下一節查看可以執行的成員清單。)
     
 
-### 無法執行
+### <a name="can't-do"></a>無法執行
 
 
 - 使用連絡人、電子郵件地址、會議建議或工作建議實體的 [ItemHasKnownEntity](http://msdn.microsoft.com/en-us/library/87e10fd2-eab4-c8aa-bec3-dff92d004d39%28Office.15%29.aspx) 規則。
@@ -83,20 +83,21 @@ Outlook 增益集在其資訊清單中指定所需的權限層級。可用的層
   - [時間](../../reference/outlook/Time.md)及其所有子成員
     
 
-## ReadItem 權限
+## <a name="readitem-permission"></a>ReadItem 權限
 
 
 **ReadItem** 權限是權限模型中下一個層級的權限。在資訊清單中的 **Permissions** 元素中指定 **ReadItem** 來要求此權限。
 
 
-### 可以執行
+### <a name="can-do"></a>可以執行
 
 
 - [讀取讀取或 [撰寫表單](../outlook/get-and-set-item-data-in-a-compose-form.md)中目前項目的所有屬性](../outlook/item-data.md)，例如，讀取表單中的 [item.to](../../reference/outlook/Office.context.mailbox.item.md) 和撰寫表單中的 [item.to.getAsync](../../reference/outlook/Recipients.md)。
     
 - [取得回撥權杖以取得項目附件](../outlook/get-attachments-of-an-outlook-item.md)或完整的項目。
     
-- [寫入由該項目上的增益集設定的自訂屬性](http://msdn.microsoft.com/library/30217d63-7615-4f3f-8618-c91e4e60cd43%28Office.15%29.aspx)。
+- 
+  [寫入由該項目上的增益集設定的自訂屬性](http://msdn.microsoft.com/library/30217d63-7615-4f3f-8618-c91e4e60cd43%28Office.15%29.aspx)。
     
 - [從項目的主旨或本文取得所有現有的已知實體](../outlook/match-strings-in-an-item-as-well-known-entities.md)，而非只是子集。
     
@@ -123,7 +124,7 @@ Outlook 增益集在其資訊清單中指定所需的權限層級。可用的層
 ```
 
 
-### 無法執行
+### <a name="can't-do"></a>無法執行
 
 存取 **mailbox.makeEWSRequestAsync** 或以下撰寫方法︰
 
@@ -169,13 +170,13 @@ Outlook 增益集在其資訊清單中指定所需的權限層級。可用的層
 - [item.to.setAsync](../../reference/outlook/Recipients.md)
     
 
-## ReadWriteItem 權限
+## <a name="readwriteitem-permission"></a>ReadWriteItem 權限
 
 
 在資訊清單中的 **Permissions** 元素中指定 **ReadWriteItem** 來要求此權限。使用寫入方法 ( **Message.to.addAsync** 或 **Message.to.setAsync**) 的撰寫表單中啟用的郵件增益集必須至少使用這個層級的權限。
 
 
-### 可以執行
+### <a name="can-do"></a>可以執行
 
 
 - [讀取和寫入在 Outlook 中檢視或撰寫的項目的所有項目層級屬性](../outlook/item-data.md)。
@@ -185,12 +186,12 @@ Outlook 增益集在其資訊清單中指定所需的權限層級。可用的層
 - 使用適用於 Office 的 JavaScript API 的所有其他成員 (可以用於郵件增益集)，除了 **Mailbox.makeEWSRequestAsync** 以外。
     
 
-### 無法執行
+### <a name="can't-do"></a>無法執行
 
 使用 **Mailbox.makeEWSRequestAsync**。
 
 
-## ReadWriteMailbox 權限
+## <a name="readwritemailbox-permission"></a>ReadWriteMailbox 權限
 
 
 **ReadWriteMailbox** 權限是最高層級的權限。在資訊清單中的 **Permissions** 元素中指定 **ReadWriteMailbox** 來要求此權限。
@@ -207,38 +208,52 @@ Outlook 增益集在其資訊清單中指定所需的權限層級。可用的層
 透過 **mailbox.makeEWSRequestAsync**，您可以存取下列 EWS 作業︰
 
 
-- [CopyItem](http://msdn.microsoft.com/en-us/library/bcc68f9e-d511-4c29-bba6-ed535524624a%28Office.15%29.aspx)
+- 
+  [CopyItem](http://msdn.microsoft.com/en-us/library/bcc68f9e-d511-4c29-bba6-ed535524624a%28Office.15%29.aspx)
     
-- [CreateFolder](http://msdn.microsoft.com/en-us/library/6f6c334c-b190-4e55-8f0a-38f2a018d1b3%28Office.15%29.aspx)
+- 
+  [CreateFolder](http://msdn.microsoft.com/en-us/library/6f6c334c-b190-4e55-8f0a-38f2a018d1b3%28Office.15%29.aspx)
     
-- [CreateItem](http://msdn.microsoft.com/en-us/library/78a52120-f1d0-4ed7-8748-436e554f75b6%28Office.15%29.aspx)
+- 
+  [CreateItem](http://msdn.microsoft.com/en-us/library/78a52120-f1d0-4ed7-8748-436e554f75b6%28Office.15%29.aspx)
     
-- [FindConversation](http://msdn.microsoft.com/en-us/library/2384908a-c203-45b6-98aa-efd6a4c23aac%28Office.15%29.aspx)
+- 
+  [FindConversation](http://msdn.microsoft.com/en-us/library/2384908a-c203-45b6-98aa-efd6a4c23aac%28Office.15%29.aspx)
     
-- [FindFolder](http://msdn.microsoft.com/en-us/library/7a9855aa-06cc-45ba-ad2a-645c15b7d031%28Office.15%29.aspx)
+- 
+  [FindFolder](http://msdn.microsoft.com/en-us/library/7a9855aa-06cc-45ba-ad2a-645c15b7d031%28Office.15%29.aspx)
     
-- [FindItem](http://msdn.microsoft.com/en-us/library/ebad6aae-16e7-44de-ae63-a95b24539729%28Office.15%29.aspx)
+- 
+  [FindItem](http://msdn.microsoft.com/en-us/library/ebad6aae-16e7-44de-ae63-a95b24539729%28Office.15%29.aspx)
     
-- [GetConversationItems](http://msdn.microsoft.com/en-us/library/8ae00a99-b37b-4194-829c-fe300db6ab99%28Office.15%29.aspx)
+- 
+  [GetConversationItems](http://msdn.microsoft.com/en-us/library/8ae00a99-b37b-4194-829c-fe300db6ab99%28Office.15%29.aspx)
     
-- [GetFolder](http://msdn.microsoft.com/en-us/library/355bcf93-dc71-4493-b177-622afac5fdb9%28Office.15%29.aspx)
+- 
+  [GetFolder](http://msdn.microsoft.com/en-us/library/355bcf93-dc71-4493-b177-622afac5fdb9%28Office.15%29.aspx)
     
-- [GetItem](http://msdn.microsoft.com/en-us/library/e3590b8b-c2a7-4dad-a014-6360197b68e4%28Office.15%29.aspx)
+- 
+  [GetItem](http://msdn.microsoft.com/en-us/library/e3590b8b-c2a7-4dad-a014-6360197b68e4%28Office.15%29.aspx)
     
-- [MarkAsJunk](http://msdn.microsoft.com/en-us/library/1f71f04d-56a9-4fee-a4e7-d1034438329e%28Office.15%29.aspx)
+- 
+  [MarkAsJunk](http://msdn.microsoft.com/en-us/library/1f71f04d-56a9-4fee-a4e7-d1034438329e%28Office.15%29.aspx)
     
-- [MoveItem](http://msdn.microsoft.com/en-us/library/dcf40fa7-7796-4a5c-bf5b-7a509a18d208%28Office.15%29.aspx)
+- 
+  [MoveItem](http://msdn.microsoft.com/en-us/library/dcf40fa7-7796-4a5c-bf5b-7a509a18d208%28Office.15%29.aspx)
     
-- [SendItem](http://msdn.microsoft.com/en-us/library/337b89ef-e1b7-45ed-92f3-8abe4200e4c7%28Office.15%29.aspx)
+- 
+  [SendItem](http://msdn.microsoft.com/en-us/library/337b89ef-e1b7-45ed-92f3-8abe4200e4c7%28Office.15%29.aspx)
     
-- [UpdateFolder](http://msdn.microsoft.com/en-us/library/3494c996-b834-4813-b1ca-d99642d8b4e7%28Office.15%29.aspx)
+- 
+  [UpdateFolder](http://msdn.microsoft.com/en-us/library/3494c996-b834-4813-b1ca-d99642d8b4e7%28Office.15%29.aspx)
     
-- [UpdateItem](http://msdn.microsoft.com/en-us/library/5d027523-e0bc-4da2-b60b-0cb9fc1fdfe4%28Office.15%29.aspx)
+- 
+  [UpdateItem](http://msdn.microsoft.com/en-us/library/5d027523-e0bc-4da2-b60b-0cb9fc1fdfe4%28Office.15%29.aspx)
     
 嘗試使用不支援的作業會導致錯誤回應。
 
 
-## 其他資源
+## <a name="additional-resources"></a>其他資源
 
 
 

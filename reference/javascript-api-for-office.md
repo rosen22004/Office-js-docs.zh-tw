@@ -1,5 +1,5 @@
 
-# JavaScript API for Office 參考
+# <a name="javascript-api-for-office-reference"></a>JavaScript API for Office 參考
 
 JavaScript API for Office 可讓您建立 Web 應用程式，與 Office 主應用程式中的物件模型互動。您的應用程式會參考 office.js 程式庫，也就是指令碼載入器。office.js 程式庫會載入執行增益集的 Office 應用程式所適用的物件模型。您可以使用下列 JavaScript 物件模型︰
 
@@ -10,7 +10,7 @@ JavaScript API for Office 可讓您建立 Web 應用程式，與 Office 主應�
 
 從 TOC 上方的下拉式清單選取 Office 用戶端，根據您的目標主應用程式篩選內容。
 
-## 支援的主應用程式
+## <a name="supported-host-applications"></a>支援的主應用程式
 * Access
 * Excel
 * Outlook
@@ -20,7 +20,7 @@ JavaScript API for Office 可讓您建立 Web 應用程式，與 Office 主應�
 
 深入了解[支援的主機及其他需求](../docs/overview/requirements-for-running-office-add-ins.md)。
 
-## 開放式 API 規格
+## <a name="open-api-specifications"></a>開放式 API 規格
 
 我們設計和開發新的 Office 增益集 API 時，我們會將其放在[開放式 API 規格](openspec.md)頁面中，可供您提出意見反應。了解即將推出的新功能，並對我們的設計規格提出意見反應。
 

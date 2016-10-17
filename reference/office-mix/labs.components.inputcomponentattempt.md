@@ -1,7 +1,7 @@
 
-# Labs.Components.InputComponentAttempt
+# <a name="labs.components.inputcomponentattempt"></a>Labs.Components.InputComponentAttempt
 
- _**適用於︰**Office 相關應用程式 | Office 增益集 | Office Mix | PowerPoint_
+ _**適用於︰**Office 的應用程式 | Office 增益集 | Office Mix | PowerPoint_
 
 表示嘗試與輸入元件互動。
 
@@ -10,12 +10,12 @@ class InputComponentAttempt extends Components.ComponentAttempt
 ```
 
 
-## 方法
+## <a name="methods"></a>方法
 
 
 
 
-### 建構函式
+### <a name="constructor"></a>建構函式
 
  `function constructor(labs: Labs.LabsInternal, componentId: string, attemptId: string, values: {[type:string]: Labs.Core.IValueInstance[]})`
 
@@ -24,14 +24,14 @@ class InputComponentAttempt extends Components.ComponentAttempt
  **參數**
 
 
-|參數|說明|
+|參數|描述|
 |:-----|:-----|
 | _labs_|嘗試所關聯的實驗室 ([Labs.LabsInternal](http://msdn.microsoft.com/library/599fb2c4-bb16-4422-84ad-10ed85a14018.aspx))。|
 | _componentID_|嘗試所關聯之元件的 ID。|
 | _attemptId_|特定嘗試的 ID。|
 | _values_|包含值執行個體的陣列 ([Labs.Core.IValueInstance](../../reference/office-mix/labs.core.ivalueinstance.md))。|
 
-### processAction
+### <a name="processaction"></a>processAction
 
  `public function processAction(action: Labs.Core.IAction): void`
 
@@ -40,18 +40,18 @@ class InputComponentAttempt extends Components.ComponentAttempt
  **參數**
 
 
-|參數|說明|
+|參數|描述|
 |:-----|:-----|
 | _action_|實驗室狀態的關聯動作。|
 
-### getSubmissions
+### <a name="getsubmissions"></a>getSubmissions
 
  `public function getSubmissions(): Components.InputComponentSubmission[]`
 
 擷取先前已針對指定嘗試提交的所有提交。
 
 
-### 提交
+### <a name="submit"></a>提交
 
  `public function submit(answer: Components.InputComponentAnswer, result: Components.InputComponentResult, callback: Labs.Core.ILabCallback<Components.InputComponentSubmission>): void`
 
@@ -60,7 +60,7 @@ class InputComponentAttempt extends Components.ComponentAttempt
  **參數**
 
 
-|參數|說明|
+|參數|描述|
 |:-----|:-----|
 | _answer_|嘗試的相關解答。|
 | _result_|提交的相關結果。|

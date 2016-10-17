@@ -1,10 +1,10 @@
 
-# DocumentSelectionChangedEventArgs.document 屬性
+# <a name="documentselectionchangedeventargs.document-property"></a>DocumentSelectionChangedEventArgs.document 屬性
 取得代表引發 **SelectionChanged** 事件之文件的 **Document** 物件。
 
 |||
 |:-----|:-----|
-|**主機︰**|Excel、Word|
+|**主應用程式︰**|Excel、Word|
 |**已新增於**|1.1|
 
 
@@ -15,12 +15,12 @@ var myDoc = eventArgsObj.document;
 ```
 
 
-## 傳回值
+## <a name="return-value"></a>傳回值
 
 代表引發 [SelectionChanged](../../reference/shared/document.md) 事件之文件的 [Document](../../reference/shared/document.selectionchanged.event.md) 物件。
 
 
-## 支援詳細資料
+## <a name="support-details"></a>支援詳細資料
 
 
 下列矩陣中的大寫 Y，表示在相對應的 Office 主應用程式中支援此方法。空白儲存格表示 Office 主應用程式不支援此方法。
@@ -43,7 +43,7 @@ var myDoc = eventArgsObj.document;
 |**文件庫**|Office.js|
 |**命名空間**|Office|
 
-## 支援歷程記錄
+## <a name="support-history"></a>支援歷程記錄
 
 
 

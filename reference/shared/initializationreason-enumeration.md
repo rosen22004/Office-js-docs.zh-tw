@@ -1,10 +1,10 @@
 
-# InitializationReason 列舉
+# <a name="initializationreason-enumeration"></a>InitializationReason 列舉
 指定增益集是否剛插入或之前已經包含在文件中。 
 
 |||
 |:-----|:-----|
-|**主機︰**|Excel、Project、Word|
+|**主應用程式︰**|Excel、Project、Word|
 |**已新增於**|1.0|
 
 ```
@@ -12,18 +12,18 @@ Office.InitializationReason
 ```
 
 
-## 成員
+## <a name="members"></a>成員
 
 
 **值**
 
 
-|**列舉**|**值**|**說明**|
+|**列舉**|**值**|**描述**|
 |:-----|:-----|:-----|
 |Office.InitializationReason.Inserted|"inserted"|增益集剛插入文件中。|
 |Office.InitializationReason.DocumentOpened|"documentOpened"|增益集已經是開啟文件的一部份。|
 
-## 支援詳細資料
+## <a name="support-details"></a>支援詳細資料
 
 
 下列矩陣中的大寫 Y，表示在相對應的 Office 主應用程式中支援此列舉。空白儲存格表示 Office 主應用程式不支援此列舉。
@@ -46,7 +46,7 @@ Office.InitializationReason
 |**文件庫**|Office.js|
 |**命名空間**|Office|
 
-## 支援歷程記錄
+## <a name="support-history"></a>支援歷程記錄
 
 
 

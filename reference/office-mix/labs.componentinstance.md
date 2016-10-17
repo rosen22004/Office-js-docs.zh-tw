@@ -1,7 +1,7 @@
 
-# Labs.ComponentInstance
+# <a name="labs.componentinstance"></a>Labs.ComponentInstance
 
- _**適用於︰**Office 相關應用程式 | Office 增益集 | Office Mix | PowerPoint_
+ _**適用於︰**Office 的應用程式 | Office 增益集 | Office Mix | PowerPoint_
 
 代表元件的執行個體，為使用者在執行階段的指定元件具現化。物件包含實驗室的特定執行之元件的轉譯檢視。
 
@@ -10,24 +10,24 @@ class ComponentInstance<T> extends Labs.ComponentInstanceBase
 ```
 
 
-## 屬性
+## <a name="properties"></a>屬性
 
 無。
 
 
-## 方法
+## <a name="methods"></a>方法
 
 
 
 
-### 建構函式
+### <a name="constructor"></a>建構函式
 
  `function constructor()`
 
 初始化 **ComponentInstance** 類別的新執行個體。
 
 
-### createAttempt
+### <a name="createattempt"></a>createAttempt
 
  `public function createAttempt(callback: Labs.Core.ILabCallback<T>): void`
 
@@ -36,11 +36,11 @@ class ComponentInstance<T> extends Labs.ComponentInstanceBase
  **參數**
 
 
-|**名稱**|**說明**|
+|**名稱**|**描述**|
 |:-----|:-----|
 | _callback_|建立嘗試後所引發的回呼。|
 
-### getAttempts
+### <a name="getattempts"></a>getAttempts
 
  `public function getAttempts(callback: Labs.Core.ILabCallback<T[]>): void`
 
@@ -49,18 +49,18 @@ class ComponentInstance<T> extends Labs.ComponentInstanceBase
  **參數**
 
 
-|**名稱**|**說明**|
+|**名稱**|**描述**|
 |:-----|:-----|
 | _callback_|擷取嘗試後所引發的回呼。|
 
-### getCreateAttemptOptions
+### <a name="getcreateattemptoptions"></a>getCreateAttemptOptions
 
  `public function getCreateAttemptOptions(): Labs.Core.Actions.ICreateAttemptOptions`
 
 擷取預設的建立嘗試選項。可由衍生類別覆寫。
 
 
-### buildAttempt
+### <a name="buildattempt"></a>buildAttempt
 
  `public function buildAttempt(createAttemptResult: Labs.Core.IAction): T`
 
@@ -69,6 +69,6 @@ class ComponentInstance<T> extends Labs.ComponentInstanceBase
  **參數**
 
 
-|**名稱**|**說明**|
+|**名稱**|**描述**|
 |:-----|:-----|
 | _createAttemptResult_|指定嘗試的建立嘗試動作。|

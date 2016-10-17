@@ -1,5 +1,5 @@
 
-# Labs.Components.InputComponentAnswer
+# <a name="labs.components.inputcomponentanswer"></a>Labs.Components.InputComponentAnswer
 
  _**適用於︰**Office 的應用程式 | Office 增益集 | Office Mix | PowerPoint_
 
@@ -10,19 +10,19 @@ class InputComponentAnswer
 ```
 
 
-## 屬性
+## <a name="properties"></a>屬性
 
 
-|屬性	|說明|
+|屬性	|描述|
 |:-----|:-----|
 | `public var answer: any`|答案值。|
 
-## 方法
+## <a name="methods"></a>方法
 
 
 
 
-### 建構函式
+### <a name="constructor"></a>建構函式
 
  `function constructor(answer: any)`
 
@@ -31,6 +31,6 @@ class InputComponentAnswer
  **參數**
 
 
-|參數|說明|
+|參數|描述|
 |:-----|:-----|
 | _answer_|答案值。|

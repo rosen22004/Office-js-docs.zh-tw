@@ -1,7 +1,7 @@
 
-# Labs.LabInstance
+# <a name="labs.labinstance"></a>Labs.LabInstance
 
- _**適用於︰**Office 相關應用程式 | Office 增益集 | Office Mix | PowerPoint_
+ _**適用於︰**Office 的應用程式 | Office 增益集 | Office Mix | PowerPoint_
 
 為目前的使用者設定的實驗室執行個體。使用此物件以記錄和擷取使用者的實驗室資料。
 
@@ -10,7 +10,7 @@ class LabInstance
 ```
 
 
-## 變數
+## <a name="variables"></a>變數
 
 
 |||
@@ -18,12 +18,12 @@ class LabInstance
 | `public var data: any`|用來保留使用者資料的容器變數。|
 | `public var components: Labs.ComponentInstanceBase[]`|組成實驗室執行個體的元件。|
 
-## 方法
+## <a name="methods"></a>方法
 
 
 
 
-### getState
+### <a name="getstate"></a>getState
 
  `public function getState(callback: Labs.Core.ILabCallback<any>): void`
 
@@ -36,7 +36,7 @@ class LabInstance
 |:-----|:-----|
 | _callback_|擷取實驗室狀態後時所引發的回呼函式。|
 
-### setState
+### <a name="setstate"></a>setState
 
  `public function setState(state: any, callback: Labs.Core.ILabCallback<void>): void`
 
@@ -50,7 +50,7 @@ class LabInstance
 | _state_|要設定的狀態。|
 | _callback_|設定狀態後所引發的回呼函式。|
 
-### 完成
+### <a name="done"></a>完成
 
  `public function done(callback: Labs.Core.ILabCallback<void>): void`
 

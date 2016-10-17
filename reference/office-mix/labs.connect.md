@@ -1,5 +1,5 @@
 
-# Labs.Connect
+# <a name="labs.connect"></a>Labs.Connect
 
  _**適用於︰**Office 的應用程式 | Office 增益集 | Office Mix | PowerPoint_
 

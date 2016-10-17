@@ -1,10 +1,10 @@
 
-# Context.contentLanguage 屬性
+# <a name="context.contentlanguage-property"></a>Context.contentLanguage 屬性
  取得使用者指定用於編輯文件或項目的地區設定 (語言)。
 
 |||
 |:-----|:-----|
-|**主機︰**|Access、Excel、PowerPoint、Project、Word|
+|**主應用程式︰**|Access、Excel、PowerPoint、Project、Word|
 |**上次變更於**|1.1|
 
 ```
@@ -12,19 +12,19 @@ var myContentLang = Office.context.contentLanguage;
 ```
 
 
-## 傳回值
+## <a name="return-value"></a>傳回值
 
 RFC 1766 語言標記格式中的**字串**，例如 `en-US`。
 
 
-## 備註
+## <a name="remarks"></a>備註
 
 **contentLanguage** 值會反映透過 Office 主應用程式中的 **[檔案]**  >  **[選項]**  >  **[語言]** 指定的 **[編輯語言]** 設定。
 
 在 Access web 應用程式的內容增益集中，**contentLanguage** 屬性會取得增益集的文化特性 (例如，"en-GB")。
 
 
-## 範例
+## <a name="example"></a>範例
 
 
 
@@ -50,7 +50,7 @@ function write(message){
 
 
 
-## 支援詳細資料
+## <a name="support-details"></a>支援詳細資料
 
 
 下列矩陣中的大寫 Y，表示在相對應的 Office 主應用程式中支援此方法。空白儲存格表示 Office 主應用程式不支援此方法。
@@ -72,7 +72,7 @@ function write(message){
 |**文件庫**|Office.js|
 |**命名空間**|Office|
 
-## 支援歷程記錄
+## <a name="support-history"></a>支援歷程記錄
 
 
 

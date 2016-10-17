@@ -1,11 +1,11 @@
 
-# Sets 項目
+# <a name="sets-element"></a>Sets 項目
 指定適用於 Office 的 JavaScript API 中，為了啟用您的 Office 增益集所需的最小子集合。
 
  **增益集類型︰**內容、工作窗格、郵件
 
 
-## 語法：
+## <a name="syntax:"></a>語法：
 
 
 ```XML
@@ -15,25 +15,25 @@
 ```
 
 
-## 內含於：
+## <a name="contained-in:"></a>內含於：
 
 [需求](../../reference/manifest/requirements.md)
 
 
-## 可以包含︰
+## <a name="can-contain:"></a>可以包含︰
 
-[Set](../../reference/manifest/set.md)
-
-
-## 屬性
+[集合](../../reference/manifest/set.md)
 
 
+## <a name="attributes"></a>屬性
 
-|**屬性**|**類型**|**必要**|**說明**|
+
+
+|**屬性**|**類型**|**必要**|**描述**|
 |:-----|:-----|:-----|:-----|
 |DefaultMinVersion|String|選用|指定所有子 **Set** 項目預設的 [MinVersion](../../reference/manifest/set.md) 屬性值。預設值為「1.1」。|
 
-## 備註
+## <a name="remarks"></a>備註
 
 如需有關需求集合的詳細資訊，請參閱[指定 Office 主機和 API 需求](../../docs/overview/specify-office-hosts-and-api-requirements.md)。
 

@@ -1,5 +1,5 @@
-
-# Office 增益集中的非同步程式設計
+﻿
+# <a name="asynchronous-programming-in-office-add-ins"></a>Office 增益集中的非同步程式設計
 
 為什麼 Office 增益集 API 使用非同步程式設計？由於 JavaScript 是單一執行緒語言，如果指令碼叫用長時間執行的同步處理程序，在該程序完成之前，所有後續的指令碼執行將遭封鎖。由於對 Office Web 用戶端 (也包括豐富型用戶端) 的某些作業若同步執行則可能會無法執行，適用於 Office 的 JavaScript API 中大部分方法的設計為以非同步方法執行。如此可確保 Office 增益集回應靈敏且執行良好。處理這些非同步方法時，它也會經常需要您撰寫回撥函式。
 
@@ -10,11 +10,11 @@ API 中所有非同步方法的名稱結尾是 "Async"，例如 [Document.getSel
 **圖 1.非同步程式設計執行流程**
 
 
-![Asynchronous programming thread execution flow](../../images/off15appAsyncProgFig01.png)
+![非同步程式設計執行緒的執行流程](../../images/off15appAsyncProgFig01.png)
 
 在豐富型與 Web 用戶端中非同步設計的支援是 Office 增益集的開發模型「撰寫一次即跨平台執行」(write once-run cross-platform) 設計目標的一部分。例如，您可以使用單一基礎程式碼來建立可同時在 Excel 2013 和 Excel Online 中執行的內容或工作窗格增益集。
 
-## 撰寫 "Async" 方法的回撥函式
+## <a name="writing-the-callback-function-for-an-"async"-method"></a>撰寫 "Async" 方法的回撥函式
 
 
 您傳遞至 "Async" 方法做為 _callback_ 引數的回撥函式，必須宣告單一參數，供增益集執行階段用來在回撥函式執行時提供存取 [AsyncResult](../../reference/shared/asyncresult.md) 物件。您可以撰寫︰
@@ -27,7 +27,7 @@ API 中所有非同步方法的名稱結尾是 "Async"，例如 [Document.getSel
 如果您只打算使用其程式碼一次，匿名函式會很實用，因為其中沒有任何名稱，使得無法在程式碼的另一個部分參考該程式碼。如果您想要對一個以上的 "Async" 方法重複使用回撥函式，則具名函式很實用。
 
 
-### 撰寫匿名的回撥函式
+### <a name="writing-an-anonymous-callback-function"></a>撰寫匿名的回撥函式
 
 下列匿名回撥函式會宣告名為 `result` 的單一參數，在回撥傳回時，從 [AsyncResult.value](../../reference/shared/asyncresult.status.md) 屬性擷取資料。
 
@@ -66,7 +66,7 @@ function write(message){
 如需使用 **getSelectedDataAsync** 方法的詳細資訊，請參閱[在文件或試算表中將資料讀取和寫入使用中的選取範圍](../../docs/develop/read-and-write-data-to-the-active-selection-in-a-document-or-spreadsheet.md)。 
 
 
-### 寫入具名的回撥函式
+### <a name="writing-a-named-callback-function"></a>寫入具名的回撥函式
 
 或者，您可以撰寫一個具名函式，並將其名稱傳遞至 "Async" 方法的 _callback_參數。例如，可以重新編寫先前的範例，傳遞名為 `writeDataCallback` 的函式做為 _callback_ 參數，類似這樣。
 
@@ -87,7 +87,7 @@ function write(message){
 ```
 
 
-## 傳回 AsyncResult.value 屬性的內容中的差異
+## <a name="differences-in-what's-returned-to-the-asyncresult.value-property"></a>傳回 AsyncResult.value 屬性的內容中的差異
 
 
 **AsyncResult** 物件的 **asyncContext**、**status** 和 **error** 屬性會傳回相同種類的資訊至傳遞至所有 "Async" 方法的回撥函式。不過，傳回至 **AsyncResult.value** 屬性的內容會因 "Async" 方法的功能而有所不同。
@@ -99,7 +99,7 @@ function write(message){
 如需傳回至 "Async" 方法 **AsyncResult.value** 屬性的描述，請參閱該方法參考主題的「回撥值」一節。如需提供 "Async" 方法的所有物件的摘要，請參閱 [AsyncResult](../../reference/shared/asyncresult.md) 物件主題底部的表格。
 
 
-## 非同步程式設計模式
+## <a name="asynchronous-programming-patterns"></a>非同步程式設計模式
 
 
 適用於 Office 的 JavaScript API 支援兩種非同步程式設計模式︰
@@ -114,7 +114,7 @@ function write(message){
 使用巢狀回撥是大部份 JavaScript 開發人員熟悉的程式設計模式，但具有深層巢狀回撥的程式碼可能難以閱讀及了解。做為巢狀回撥的替代方式，Office 的 JavaScript API 也支援 Promise 模式的實作。不過，在 Office 的 JavaScript API 的目前版本中，Promise 模式僅對 [Excel 試算表和 Word 文件中的繫結](../../docs/develop/bind-to-regions-in-a-document-or-spreadsheet.md)的程式碼有作用。
 
 <a name="AsyncProgramming_NestedCallbacks" />
-### 使用巢狀回撥函式的非同步程式設計
+### <a name="asynchronous-programming-using-nested-callback-functions"></a>使用巢狀回撥函式的非同步程式設計
 
 
 您通常必須執行兩或多個非同步作業，才能完成工作。若要完成該動作，您可以讓 "Async" 呼叫間形成巢狀。 
@@ -151,7 +151,7 @@ function write(message){
 下列各節說明如何在非同步方法中使用巢狀回撥的匿名或具名函式。
 
 
-#### 對巢狀回撥使用匿名函式
+#### <a name="using-anonymous-functions-for-nested-callbacks"></a>對巢狀回撥使用匿名函式
 
 在下列範例中，兩個匿名函式會內嵌宣告，並以巢狀回撥形式傳遞至 **getByIdAsync** 和 **getDataAsync** 方法。因為函式簡單且內嵌，實作的目的顯而易見。
 
@@ -174,7 +174,7 @@ function write(message){
 ```
 
 
-#### 對巢狀回撥使用具名函式
+#### <a name="using-named-functions-for-nested-callbacks"></a>對巢狀回撥使用具名函式
 
 在複雜的實作中使用具名函式讓您的程式碼更容易閱讀、維護和重複使用，可能會很有幫助。在下列範例中，來自上一節範例的兩個匿名函式已重新撰寫為名為 `deleteAllData` 和 `showResult` 的函式。然後會將這些具名函式依名稱傳遞至 **getByIdAsync** 和 **deleteAllDataValuesAsync** 方法做為回撥。
 
@@ -201,7 +201,7 @@ function write(message){
 ```
 
 
-### 使用 Promise 模式來存取繫結中的資料的非同步程式設計
+### <a name="asynchronous-programming-using-the-promises-pattern-to-access-data-in-bindings"></a>使用 Promise 模式來存取繫結中的資料的非同步程式設計
 
 
 Promise 程式設計模式不會傳遞回撥函式並在繼續執行之前等候函式傳回，而是會立即傳回 Promise 物件，代表其預期的結果。不過，與真正的同步程式設計不同，在背後，Promise 履行的結果實際上會延後，直到 Office 增益集的執行階段環境可以完成要求。當無法完成要求時，會提供 _onError_ 處理常式來涵蓋該情況。
@@ -250,10 +250,10 @@ function addBindingDataChangedEventHandler() {
 ```
 
 
- >**重要：****Office.select** 方法所傳回的 **Binding** 物件 Promise，僅提供 **Binding** 物件四個方法的存取。 如果您需要存取 **Binding** 物件的任何其他成員，您必須改為使用 **Document.bindings** 屬性和 **Bindings.getByIdAsync** 或 **Bindings.getAllAsync** 方法來擷取 **Binding** 物件。 例如，如果您需要存取 **Binding** 物件的任何屬性 (**document**、**id** 或 **type** 屬性)，或需要存取 [MatrixBinding](../../reference/shared/binding.matrixbinding.md) 或 [TableBinding](../../reference/shared/binding.tablebinding.md) 物件的屬性，您必須使用 **getByIdAsync** 或 **getAllAsync** 方法來擷取 **Binding** 物件。
+ >**重要：** **Office.select** 方法所傳回的 **Binding** 物件 Promise，僅提供 **Binding** 物件四個方法的存取。如果您需要存取 **Binding** 物件的任何其他成員，您必須改為使用 **Document.bindings** 屬性和 **Bindings.getByIdAsync** 或 **Bindings.getAllAsync** 方法來擷取 **Binding** 物件。例如，如果您需要存取 **Binding** 物件的任何屬性 (**document**、**id** 或 **type** 屬性)，或需要存取 [MatrixBinding](../../reference/shared/binding.matrixbinding.md) 或 [TableBinding](../../reference/shared/binding.tablebinding.md) 物件的屬性，您必須使用 **getByIdAsync** 或 **getAllAsync** 方法來擷取 **Binding** 物件。
 
 
-## 將選擇性參數傳遞至非同步方法
+## <a name="passing-optional-parameters-to-asynchronous-methods"></a>將選擇性參數傳遞至非同步方法
 
 
 所有 "Async" 方法的一般語法會遵循這個模式︰
@@ -265,7 +265,7 @@ function addBindingDataChangedEventHandler() {
 您可以建立包含內嵌選擇性參數的 JSON 物件，或是藉由建立 `options` 物件然後以 _options_ 參數形式傳入。
 
 
-### 傳遞內嵌選擇性參數
+### <a name="passing-optional-parameters-inline"></a>傳遞內嵌選擇性參數
 
 例如，使用內嵌選擇性參數呼叫 [Document.setSelectedDataAsync](../../reference/shared/document.getselecteddataasync.md) 方法的語法看起來像這樣︰
 
@@ -298,7 +298,7 @@ function write(message){
 > **附註：**您可以在 JSON 物件中以任何順序指定選擇性參數，只要已正確指定其名稱。
 
 
-### 在 options 物件中傳遞選擇性參數
+### <a name="passing-optional-parameters-in-an-options-object"></a>在 options 物件中傳遞選擇性參數
 
 此外，您可以建立一個名為 `options` 的物件，從方法呼叫分別指定選擇性參數，然後傳遞 `options` 物件做為 _options_ 引數。
 
@@ -383,10 +383,10 @@ function write(message){
 在這兩個選擇性參數範例中，_callback_ 參數是指定為最後一個參數 (接在內嵌選擇性參數或接在 _options_ 引數物件之後)。或者，您可以在內嵌的 JSON 物件內或 `options` 物件中指定 _callback_ 參數。不過，您只能在一個位置傳遞 _callback_ 參數︰在 _options_ 物件 (內嵌或外部建立)，或以最後一個參數形式，但不能同時。
 
 
-## 其他資源
+## <a name="additional-resources"></a>其他資源
 
 
 - [了解適用於 Office 的 JavaScript API](../../docs/develop/understanding-the-javascript-api-for-office.md)
     
-- [JavaScript API for Office](../../reference/javascript-api-for-office.md)
+- [適用於 Office 的 JavaScript API](../../reference/javascript-api-for-office.md)
      

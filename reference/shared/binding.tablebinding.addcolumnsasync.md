@@ -1,10 +1,10 @@
 
-# TableBinding.addColumnsAsync 方法
+# <a name="tablebinding.addcolumnsasync-method"></a>TableBinding.addColumnsAsync 方法
 將資料欄和值加入表格中。
 
 |||
 |:-----|:-----|
-|**主機︰**|Excel、Word|
+|**主應用程式︰**|Excel、Word|
 |**可用於[需求集合](../../docs/overview/specify-office-hosts-and-api-requirements.md)**|TableBindings|
 |**上次變更於**|1.0|
 
@@ -13,18 +13,18 @@ bindingObj.addColumnsAsync(data [, options], callback);
 ```
 
 
-## 參數
+## <a name="parameters"></a>參數
 
 
 
-|**名稱**|**類型	**|**說明**|**支援附註**|
+|**名稱**|**類型**|**描述**|**支援附註**|
 |:-----|:-----|:-----|:-----|
-| _資料_|**array** 或 [TableData](../../reference/shared/tabledata.md)|陣列的陣列 (“matrix”) 或包含資料之一或多列以加入表格的 **TableData** 物件。必要。||
-| _options_|**物件**|指定下列任何一項[選擇性參數](../../docs/develop/asynchronous-programming-in-office-add-ins.md#passing-optional-parameters-to-asynchronous-methods)。||
+| _data_|**array** 或 [TableData](../../reference/shared/tabledata.md)|陣列的陣列 (“matrix”) 或包含資料之一或多列以加入表格的 **TableData** 物件。必要。||
+| _options_|**object**|指定下列任何一項[選擇性參數](../../docs/develop/asynchronous-programming-in-office-add-ins.md#passing-optional-parameters-to-asynchronous-methods)。||
 | _asyncContext_|**陣列**、**布林值**、**null**、**數字**、**物件**、**字串**或**未定義**|無變更的情況下，於 **AsyncResult** 物件中傳回的任一類型使用者定義項目。||
-| _callback_|**物件**|回呼傳回時所叫用的函數，其唯一的參數為 **AsyncResult** 類型。||
+| _callback_|**object**|回呼傳回時所叫用的函數，其唯一的參數為 **AsyncResult** 類型。||
 
-## 回呼值
+## <a name="callback-value"></a>回呼值
 
 傳遞至 _callback_ 參數的函數執行時，該函數會收到 [AsyncResult](../../reference/shared/asyncresult.md) 物件，您可以從回呼函數的唯一參數存取該物件。
 
@@ -32,14 +32,14 @@ bindingObj.addColumnsAsync(data [, options], callback);
 
 
 
-|**屬性**|**用途**|
+|**屬性**|**用於...**|
 |:-----|:-----|
 |[AsyncResult.value](../../reference/shared/asyncresult.value.md)|因為沒有可擷取的物件或資料，所以一律傳回 **undefined**。|
 |[AsyncResult.status](../../reference/shared/asyncresult.status.md)|判定作業成功或失敗。|
 |[AsyncResult.error](../../reference/shared/asyncresult.error.md)|作業失敗時，存取提供錯誤資訊的 [Error](../../reference/shared/error.md) 物件。|
 |[AsyncResult.asyncContext](../../reference/shared/asyncresult.asynccontext.md)|存取您的使用者定義**物件**或值 (如果您傳遞了其中一項做為 _asyncContext_ 參數)。|
 
-## 備註
+## <a name="remarks"></a>備註
 
 若要新增指定資料或標頭的值的一或多個資料欄，請傳遞  **TableData** 物件做為 _data_ 參數。若要新增僅指定資料的一或多個資料欄，請傳遞陣列的陣列 (“matrix”) 做為 _data_ 參數。
 
@@ -57,7 +57,7 @@ bindingObj.addColumnsAsync(data [, options], callback);
 要傳遞給 **data** 參數之 _TableData_ 物件中的儲存格總數，在針對此方法的單一呼叫中，不可超過 20,000。
 
 
-## 範例
+## <a name="example"></a>範例
 
 下列範例將藉由傳遞 [TableData](../../reference/shared/binding.id.md) 物件做為 **addColumnsAsync** 方法的_資料_引數，將帶有三個資料列的單一資料欄新增至帶有 **id**`"myTable"` 的繫結表格。若要成功，要更新的表格必須有三個資料列。
 
@@ -92,7 +92,7 @@ function addColumns() {
 ```
 
 
-## 支援詳細資料
+## <a name="support-details"></a>支援詳細資料
 
 
 下列矩陣中的大寫 Y，表示在相對應的 Office 主應用程式中支援此方法。空白儲存格表示 Office 主應用程式不支援此方法。
@@ -106,7 +106,7 @@ function addColumns() {
 ||**Office for Windows desktop**|**Office Online (在瀏覽器中)**|**Office for iPad**|
 |:-----|:-----|:-----|:-----|
 |**Excel**|Y|Y|Y|
-|**Word**|Y||Y|
+|**Word**|Y|Y|Y|
 
 |||
 |:-----|:-----|
@@ -116,7 +116,7 @@ function addColumns() {
 |**文件庫**|Office.js|
 |**命名空間**|Office|
 
-## 支援歷程記錄
+## <a name="support-history"></a>支援歷程記錄
 
 
 

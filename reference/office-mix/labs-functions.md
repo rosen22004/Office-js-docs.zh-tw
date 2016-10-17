@@ -1,5 +1,5 @@
 
-# 實驗室函式
+# <a name="labs-functions"></a>實驗室函式
 實驗室模組中的 JavaScript 函式。
 
  _**適用於︰**Office 的應用程式 | Office 增益集 | Office Mix | PowerPoint_
@@ -22,7 +22,7 @@
 |[Labs.getTimeline](../../reference/office-mix/labs.gettimeline.md)|擷取您可以用來控制主機之播放程式控制項的 [Labs.Timeline](../../reference/office-mix/labs.timeline.md) 物件。|
 |[Labs.registerDeserializer](../../reference/office-mix/labs.registerdeserializer.md)|將指定的 JSON 物件還原序列化到物件。|
 
-## 其他資源
+## <a name="additional-resources"></a>其他資源
 
 
 

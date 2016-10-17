@@ -1,5 +1,5 @@
 
-# Labs.Components.ChoiceComponentAnswer
+# <a name="labs.components.choicecomponentanswer"></a>Labs.Components.ChoiceComponentAnswer
 
  _**適用於︰**Office 的應用程式 | Office 增益集 | Office Mix | PowerPoint_
 
@@ -10,19 +10,19 @@ class ChoiceComponentAnswer
 ```
 
 
-## 屬性
+## <a name="properties"></a>屬性
 
 
-|**名稱**|**說明**|
+|**名稱**|**描述**|
 |:-----|:-----|
 | `public var answer: any`|答案值。|
 
-## 方法
+## <a name="methods"></a>方法
 
 
 
 
-### 建構函式
+### <a name="constructor"></a>建構函式
 
  `function constructor(answer: any)`
 

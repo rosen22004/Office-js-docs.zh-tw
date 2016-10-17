@@ -1,10 +1,10 @@
 
-# Context.touchEnabled 屬性
+# <a name="context.touchenabled-property"></a>Context.touchEnabled 屬性
 取得關於增益集是否在具有觸控功能的 Office 主應用程式中執行的資訊。
 
 |||
 |:-----|:-----|
-|**主機︰**|Excel、Word|
+|**主應用程式︰**|Excel、Word|
 |**上次變更於**|1.1|
 
 ```
@@ -12,17 +12,17 @@ var isTouchEnabled = Office.context.touchEnabled;
 ```
 
 
-## 傳回值
+## <a name="return-value"></a>傳回值
 
 如果增益集是在觸控式裝置 (例如 iPad) 上執行，會傳回 **True**，否則會傳回 **False**。
 
 
-## 備註
+## <a name="remarks"></a>備註
 
 使用 **touchEnabled** 屬性決定增益集何時在觸控式裝置上執行，若有必要，可調整控制項的種類，以及增益集 UI 中的項目大小和間距，以配合觸控式互動。
 
 
-## 支援詳細資料
+## <a name="support-details"></a>支援詳細資料
 
 
 下列矩陣中的大寫 Y，表示在相對應的 Office 主應用程式中支援此方法。空白儲存格表示 Office 主應用程式不支援此方法。
@@ -42,7 +42,7 @@ var isTouchEnabled = Office.context.touchEnabled;
 |**文件庫**|Office.js|
 |**命名空間**|Office|
 
-## 支援歷程記錄
+## <a name="support-history"></a>支援歷程記錄
 
 
 

@@ -1,8 +1,7 @@
 
 
-# ProjectDocument.setResourceFieldAsync 方法
-以非同步方式設定指定資源的指定欄位值。
- **重要事項：**此 API 只適用於 Windows 桌面上的 Project 2016。
+# <a name="projectdocument.setresourcefieldasync-method"></a>ProjectDocument.setResourceFieldAsync 方法
+以非同步方式設定指定資源的指定欄位值。 **重要事項：**此 API 只適用於 Windows 桌面上的 Project 2016。
 
 |||
 |:-----|:-----|
@@ -15,51 +14,51 @@ Office.context.document.setResourceFieldAsync(resourceId, fieldId, fieldValue[, 
 ```
 
 
-## 參數
+## <a name="parameters"></a>參數
 
 _resourceId_<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;資源的 GUID。 必要。
+&nbsp;&nbsp;&nbsp;&nbsp;資源的 GUID。必要。
     
 _fieldId_<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;目標欄位的 ID，做為 [ProjectResourceFields](../../reference/shared/projectresourcefields-enumeration.md) 常數或其對應的整數值。 必要。
+&nbsp;&nbsp;&nbsp;&nbsp;目標欄位的 ID，做為 [ProjectResourceFields](../../reference/shared/projectresourcefields-enumeration.md) 常數或其對應的整數值。必要。
     
 _fieldValue_<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;目標欄位中的值為**字串**、**數字**、**布林值** 或 **物件**。 必要。
+&nbsp;&nbsp;&nbsp;&nbsp;目標欄位中的值為**字串**、**數字**、**布林值** 或 **物件**。必要。
     
-_選項_<br/>
+_options_<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;下列[選擇性參數](../../docs/develop/asynchronous-programming-in-office-add-ins.md#passing-optional-parameters-to-asynchronous-methods)：
 
 &nbsp;&nbsp;&nbsp;&nbsp;_asyncContext_<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;類型：**陣列、布林值、null、數字、物件、字串**或**未定義**<br/></br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;無變更的情況下，於 [AsyncResult](../../reference/shared/asyncresult.md) 物件中傳回的任一類型使用者定義項目。 選用。</br></br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;例如，您可以傳遞 _asyncContext_ 引數，方法是使用格式 `{asyncContext: 'Some text'}` 或 `{asyncContext: <object>}`。
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;類型：**陣列、布林值、null、數字、物件、字串**或**未定義**<br/></br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;無變更的情況下，於 [AsyncResult](../../reference/shared/asyncresult.md) 物件中傳回的任一類型使用者定義項目。選用。</br></br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;例如，您可以傳遞 _asyncContext_ 引數，方法是使用格式 `{asyncContext: 'Some text'}` 或 `{asyncContext: <object>}`。
 
 
-_回呼_<br/>
+_callback_<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;類型：**函數**
 
-&nbsp;&nbsp;&nbsp;&nbsp;方法呼叫傳回時所叫用的函數，其唯一的參數為 [AsyncResult](../../reference/shared/asyncresult.md) 類型。 選用。
+&nbsp;&nbsp;&nbsp;&nbsp;方法呼叫傳回時所叫用的函數，其唯一的參數為 [AsyncResult](../../reference/shared/asyncresult.md) 類型。選用。
 
     
 
-## 回呼值
+## <a name="callback-value"></a>回呼值
 
 當 _callback_ 函數執行時，該函數會收到 [AsyncResult](../../reference/shared/asyncresult.md) 物件，您可以從回呼函數的參數存取該物件。
 
 若為 **setResourceFieldAsync** 方法，傳回的 [AsyncResult](../../reference/shared/asyncresult.md) 物件會包含下列屬性。
 
 
-|**名稱**|**說明**|
+|**名稱**|**描述**|
 |:-----|:-----|
 |[asyncContext](../../reference/shared/asyncresult.asynccontext.md)|在選擇性 _asyncContext_ 參數中傳遞的資料 (如果有使用該參數)。|
-|[錯誤](../../reference/shared/asyncresult.error.md)|錯誤的相關資訊 (如果 **status** 屬性等於 **failed**)。|
-|[狀態](../../reference/shared/asyncresult.status.md)|非同步呼叫的 **succeeded** 或 **failed** 狀態。|
-|[值](../../reference/shared/asyncresult.value.md)|這個方法不會傳回值。|
+|[error](../../reference/shared/asyncresult.error.md)|錯誤的相關資訊 (如果 **status** 屬性等於 **failed**)。|
+|[status](../../reference/shared/asyncresult.status.md)|非同步呼叫的 **succeeded** 或 **failed** 狀態。|
+|[value](../../reference/shared/asyncresult.value.md)|這個方法不會傳回值。|
 
-## 備註
+## <a name="remarks"></a>備註
 
 請先呼叫 [getSelectedResourceAsync](../../reference/shared/projectdocument.getselectedtaskasync.md) 或 [getResourceByIndexAsync](../../reference/shared/projectdocument.getresourcebyindexasync.md) 方法，以取得資源 GUID，然後將此 GUID 當作 _resourceId_ 引數傳遞至 **setResourceFieldAsync**。在每個非同步呼叫中，只能更新單一資源的單一欄位。
 
 
-## 範例
+## <a name="example"></a>範例
 
 下列程式碼範例會呼叫 [getSelectedResourceAsync](../../reference/shared/projectdocument.getselectedtaskasync.md)，以取得資源檢視中目前選取的資源 GUID。然後它會以遞迴方式呼叫 **setResourceFieldAsync**，以取得兩個資源欄位值。
 
@@ -148,7 +147,7 @@ _回呼_<br/>
 ```
 
 
-## 支援詳細資料
+## <a name="support-details"></a>支援詳細資料
 
 
 下列矩陣中的大寫 Y，表示在相對應的 Office 主應用程式中支援此方法。空白儲存格表示 Office 主應用程式不支援此方法。
@@ -168,17 +167,17 @@ _回呼_<br/>
 |**文件庫**|Office.js|
 |**命名空間**|Office|
 
-## 支援歷程記錄
+## <a name="support-history"></a>支援歷程記錄
 
 |**版本**|**變更**|
 |:-----|:-----|
 |1.1|已導入|
 
-## 請參閱
+## <a name="see-also"></a>請參閱
 
 
 
-#### 其他資源
+#### <a name="other-resources"></a>其他資源
 
 
 [getSelectedResourceAsync](../../reference/shared/projectdocument.getselectedtaskasync.md)

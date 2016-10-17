@@ -1,10 +1,10 @@
 
-# Document.goToByIdAsync 方法
+# <a name="document.gotobyidasync-method"></a>Document.goToByIdAsync 方法
 移至文件中指定的物件或位置。
 
 |||
 |:-----|:-----|
-|**主機︰**|Excel、PowerPoint、Word|
+|**主應用程式︰**|Excel、PowerPoint、Word|
 |**可用於需求集合**|不在集合中|
 |**已新增於**|1.1|
 
@@ -13,20 +13,20 @@ Office.context.document.goToByIdAsync(id, goToType, [,options], callback);
 ```
 
 
-## 參數
+## <a name="parameters"></a>參數
 
 
 
-|**名稱**|**類型	**|**說明**|**支援附註**|
+|**名稱**|**類型**|**描述**|**支援附註**|
 |:-----|:-----|:-----|:-----|
 | _id_|**字串**或**數字**|要前往之物件或位置的識別碼。必要。||
 | _goToType_|[GoToType](../../reference/shared/gototype-enumeration.md)|要前往的位置類型。必要。||
-| _options_|**物件**|指定下列任何一項[選擇性參數](../../docs/develop/asynchronous-programming-in-office-add-ins.md#passing-optional-parameters-to-asynchronous-methods)||
+| _options_|**object**|指定下列任何一項[選擇性參數](../../docs/develop/asynchronous-programming-in-office-add-ins.md#passing-optional-parameters-to-asynchronous-methods)||
 | _selectionMode_|[SelectionMode](../../reference/shared/selectionmode-enumeration.md)|指定位置是否由所選取 (反白顯示) 的 _id_ 參數指定。|**在 Excel 中：**<br/> **Office.SelectionMode.Selected** 會選取繫結中的所有內容，或具名項目。 <br/>**Office.SelectionMode.None** 對於文字繫結，會選取儲存格；對於矩陣細節、表格繫結和具名項目，會選取第一個資料儲存格 (非表格之標題列中的第一個儲存格)。<br/><br/> **在 PowerPoint 中：**<br/> **Office.SelectionMode.Selected** 會選取投影片上的投影片標題或第一個文字方塊。<br/> **Office.SelectionMode.None** 不會選取任何項目。<br/><br/> **在 Word 中：**<br/> **Office.SelectionMode.Selected** 會選取繫結中的所有內容。 <br/>**Office.SelectionMode.None** 對於文字繫結，會將游標移至文字開頭；對於矩陣繫結與表格繫結，會選取第一個資料儲存格 (非表格之標題列中的第一個儲存格)。|
 | _asyncContext_|**陣列**、**布林值**、**null**、**數字**、**物件**、**字串**或**未定義**|無變更的情況下，於 **AsyncResult** 物件中傳回的任一類型使用者定義項目。||
-| _callback_|**物件**|回呼傳回時所叫用的函數，其唯一的參數為 **AsyncResult** 類型。||
+| _callback_|**object**|回呼傳回時所叫用的函數，其唯一的參數為 **AsyncResult** 類型。||
 
-## 回呼值
+## <a name="callback-value"></a>回呼值
 
 傳遞至 _callback_ 參數的函數執行時，該函數會收到 [AsyncResult](../../reference/shared/asyncresult.md) 物件，您可以從回呼函數的唯一參數存取該物件。
 
@@ -34,19 +34,19 @@ Office.context.document.goToByIdAsync(id, goToType, [,options], callback);
 
 
 
-|**屬性**|**用途**|
+|**屬性**|**用於...**|
 |:-----|:-----|
 |[AsyncResult.value](../../reference/shared/asyncresult.value.md)|傳回目前的檢視。|
 |[AsyncResult.status](../../reference/shared/asyncresult.status.md)|判定作業成功或失敗。|
 |[AsyncResult.error](../../reference/shared/asyncresult.error.md)|作業失敗時，存取提供錯誤資訊的 [Error](../../reference/shared/error.md) 物件。|
 |[AsyncResult.asyncContext](../../reference/shared/asyncresult.asynccontext.md)|存取您的使用者定義**物件**或值 (如果您傳遞了其中一項做為 _asyncContext_ 參數)。|
 
-## 備註
+## <a name="remarks"></a>備註
 
 PowerPoint 不支援 **Master Views** 中的 **goToByIdAsync** 方法。
 
 
-## 範例
+## <a name="example"></a>範例
 
  **根據 ID 移至繫結 (Word 和 Excel)**
 
@@ -197,7 +197,7 @@ function goToSlideByIndex() {
 
 
 
-## 支援詳細資料
+## <a name="support-details"></a>支援詳細資料
 
 
 下列矩陣中的大寫 Y，表示在相對應的 Office 主應用程式中支援此方法。空白儲存格表示 Office 主應用程式不支援此方法。
@@ -222,7 +222,7 @@ function goToSlideByIndex() {
 |**文件庫**|Office.js|
 |**命名空間**|Office|
 
-## 支援歷程記錄
+## <a name="support-history"></a>支援歷程記錄
 
 
 

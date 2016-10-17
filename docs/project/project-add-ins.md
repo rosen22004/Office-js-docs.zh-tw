@@ -1,5 +1,5 @@
-
-# Project 的工作窗格增益集
+﻿
+# <a name="task-pane-add-ins-for-project"></a>Project 的工作窗格增益集
 
 
 Project Standard 2013 和 Project Professional 2013 兩者均含有工作窗格增益集的支援。您可以執行為 Word 2013 或 Excel 2013 開發的一般工作窗格增益集。您也可以開發自訂增益集來處理 Project 中的選取事件，並將工作、資源、檢視，及專案中的其他儲存格層級資料，與 SharePoint 清單、SharePoint 增益集、Web 組件、Web 服務和企業應用程式予以整合。
@@ -8,7 +8,7 @@ Project Standard 2013 和 Project Professional 2013 兩者均含有工作窗格�
 
 如簡介 Office 增益集簡介，請參閱 [Office 增益集平台概觀](../../docs/overview/office-add-ins.md)。
 
-## Project 的增益集案例
+## <a name="add-in-scenarios-for-project"></a>Project 的增益集案例
 
 
 專案經理可使用 Project 工作窗格增益集來協助管理專案活動。不需離開 Project 並開啟另一個應用程式來搜尋常用的資訊，專案經理可以直接存取 Project 內的資訊。工作窗格增益集中的內容可為感應式、根據選定的工作、資源、檢視，或甘特圖、工作使用狀況檢視或資源使用狀況檢視的儲存格中的其他資料。
@@ -38,7 +38,7 @@ Project 的增益集案例包括：
     例如，請參閱[建立會以內部部署 Project Server OData 服務來使用 REST 的 Project 增益集](../project/create-a-project-add-in-that-uses-rest-with-an-on-premises-odata-service.md)
     
 
-## 開發 Project 增益集
+## <a name="developing-project-add-ins"></a>開發 Project 增益集
 
 
 Project 增益集的 JavaScript 程式庫包含  **Office** 命名空間別名的副檔名，讓開發人員存取 Project 應用程式與工作、資源的屬性，並在專案中檢視。Project-15.js 檔中的 JavaScript 程式庫延伸，是在使用 Visual Studio 2015 建立的 Project 增益集中使用。Project 2013 SDK 下載也提供 Office.js、Office.debug.js，Project-15.js、Project-15.debug.js 及相關的檔案。
@@ -60,13 +60,13 @@ Project 增益集的 JavaScript 程式庫包含  **Office** 命名空間別名�
 -  **HelloProject_OData：**這是從作用中專案摘要資料之 Project Professional 2013 的 Visual Studio 解決方案，例如成本、工作及完成百分比，然後將之與儲存使用中專案的 Project Web App 執行個體中的所有發佈的專案平均做比較。開發、安裝及測試範例，其使用 REST 通訊協定與 Project Web App 中的 **ProjectData** 服務，如[建立會以內部部署 Project Server OData 服務來使用 REST 的 Project 增益集](../project/create-a-project-add-in-that-uses-rest-with-an-on-premises-odata-service.md)所述。
     
 
-### 建立增益集資訊清單檔
+### <a name="creating-an-add-in-manifest-file"></a>建立增益集資訊清單檔
 
 
 資訊清單檔會指定增益集網頁或 Web 應用程式的 URL，增益集種類 (Project 的工作窗格)、其他語言及地區設定之內容的選擇性 URL，及其他屬性。
 
 
-### 程序 1.建立 Bing 搜尋的增益集資訊清單檔案
+### <a name="procedure-1.-to-create-the-add-in-manifest-file-for-bing-search"></a>程序 1.建立 Bing 搜尋的增益集資訊清單檔案
 
 
 - 在本機目錄中建立 XML 檔案。XML 檔案包含 **OfficeApp** 元素和子元素，[Office 增益集的 XML 資訊清單](../../docs/overview/add-in-manifests.md)中有說明。例如，建立名為 BingSearch.xml 且包含下列 XML 的檔案。
@@ -101,7 +101,7 @@ Project 增益集的 JavaScript 程式庫包含  **Office** 命名空間別名�
   - 在 **OfficeApp** 元素中，`xsi:type="TaskPaneApp"` 屬性指定增益集是工作窗格類型。
   - **Id** 元素是 UUID，且必須是唯一的。
   - **Version** 元素是增益集的版本。**ProviderName** 元素是提供增益集的公司或開發人員的名稱。 **DefaultLocale** 元素指定資訊清單中字串的預設地區設定。
-  - [DisplayName]**** 元素是 Project 2013 功能區的 [檢視]**** 索引標籤中，[工作窗格增益集]**** 下拉式清單中顯示的名稱。 值最多可以包含 32 個字元。
+  - [DisplayName] 元素是 Project 2013 功能區的 [檢視] 索引標籤中，[工作窗格增益集] 下拉式清單中顯示的名稱。值最多可以包含 32 個字元。
   - **Description** 元素包含預設地區設定的增益集描述。值最多可以包含 2000 個字元。
   - **Capabilities** 元素包含指定主應用程式的一或多個 **Capability** 子元素。
   - **DefaultSettings** 元素包含 **SourceLocation** 元素，其指定檔案共用上 HTML 檔案的路徑，或增益集使用之網頁的 URL。工作窗格增益集會忽略 **RequestedHeight** 元素和 **RequestedWidth** 元素。
@@ -140,12 +140,12 @@ Project 增益集的 JavaScript 程式庫包含  **Office** 命名空間別名�
 ```
 
 
-## 安裝 Project 增益集
+## <a name="installing-project-add-ins"></a>安裝 Project 增益集
 
 
 在 Project 2013 中，您可以在檔案共用或私用增益集目錄中，將增益集安裝為獨立解決方案。您也可以在公用 Office 市集中檢閱並購買增益集。
 
-一個檔案共用可以有多個增益集資訊清單 XML 檔案和子目錄。 您可以新增或移除資訊清單的目錄位置和目錄，方法是在 Project 2013 中使用 [信任中心]**** 的 [受信任的增益集目錄]**** 索引標籤。 若要在 Project 中顯示增益集，資訊清單中的 **SourceLocation** 元素必須指向現有的網站或 HTML 來源檔案。
+一個檔案共用可以有多個增益集資訊清單 XML 檔案和子目錄。您可以新增或移除資訊清單的目錄位置和目錄，方法是在 Project 2013 中使用 [信任中心] 的 [受信任的增益集目錄] 索引標籤。若要在 Project 中顯示增益集，資訊清單中的 **SourceLocation** 元素必須指向現有的網站或 HTML 來源檔案。
 
 
  >**附註**  Internet Explorer 9 或更新版本必須安裝，但不一定是預設瀏覽器。Office 增益集需要 Internet Explorer 9 中的元件。預設瀏覽器可為 Internet Explorer 9、Safari 5.0.6、Firefox 5、Chrome 13 或其中一個瀏覽器的更新版本。
@@ -153,7 +153,7 @@ Project 增益集的 JavaScript 程式庫包含  **Office** 命名空間別名�
 在程序 2 中，Bing 搜尋增益集會安裝在 Project 2013 安裝所在的本機電腦上。不過，因為增益集基礎結構並不直接使用本機檔案路徑，例如 `C:\Project\AppManifests`，因此您可以在本機電腦上建立網路共用。如果您喜歡，您可以在遠端電腦上建立檔案共用。
 
 
-### 程序 2.安裝 Bing 搜尋增益集
+### <a name="procedure-2.-to-install-the-bing-search-add-in"></a>程序 2.安裝 Bing 搜尋增益集
 
 
 1. 建立增益集資訊清單的本機目錄。例如，建立 `C:\Project\AppManifests` 目錄。
@@ -162,40 +162,40 @@ Project 增益集的 JavaScript 程式庫包含  **Office** 命名空間別名�
     
 3. 將 BingSearch.xml 資訊清單檔案複製到 `C:\Project\AppManifests` 目錄。
     
-4. 在 Project 2013 中，開啟 [專案選項]**** 對話方塊，選擇 [信任中心]****，然後選擇 [信任中心設定]****。
+4. 在 Project 2013 中，開啟 [專案選項] 對話方塊，選擇 [信任中心]，然後選擇 [信任中心設定]。
     
-5. 在 [信任中心]**** 對話方塊的左窗格中，選擇 [受信任的增益集目錄]****。
+5. 在 [信任中心] 對話方塊的左窗格中，選擇 [受信任的增益集目錄]。
     
-6. 在 [受信任的增益集目錄]**** 窗格中 (見圖 1)，於 [目錄 Url]**** 文字方塊中加入 `\\ServerName\AppManifests` 路徑，選擇 [新增目錄]****，然後選擇 [確定]****。
+6. 在 [受信任的增益集目錄] 窗格中 (見圖 1)，於 [目錄 Url] 文字方塊中加入 `\\ServerName\AppManifests` 路徑，選擇 [新增目錄]，然後選擇 [確定]。
     
-     >**附註**  圖 1 在 [受信任目錄位址] ****清單顯示 2 個檔案共用和 1 個私人目錄的假設 URL。 只能有一個檔案共用可以是預設的檔案共用，且只有一個目錄的 URL 可以是預設目錄。 例如，如果您設定 `\\Server2\AppManifests` 為預設值，專案會清除 `\\ServerName\AppManifests`****[預設] 核取方塊。如果您變更預設選項時，可以選擇 ****[清除] 來移除已安裝的增益集，然後再重新啟動專案。 如果您在專案開啟時，將增益集新增到預設檔案共用或 SharePoint 目錄，您應該重新啟動專案。
+     >**附註**  圖 1 在 [受信任目錄位址] 清單顯示 2 個檔案共用和 1 個私人目錄的假設 URL。只能有一個檔案共用可以是預設的檔案共用，且只有一個目錄的 URL 可以是預設目錄。例如，如果您設定 `\\Server2\AppManifests` 為預設值，專案會清除 `\\ServerName\AppManifests` [預設] 核取方塊。如果您變更預設選項時，可以選擇 [清除] 來移除已安裝的增益集，然後再重新啟動專案。如果您在專案開啟時，將增益集新增到預設檔案共用或 SharePoint 目錄，您應該重新啟動專案。
 
-    **圖 1. 使用信任中心以新增增益集資訊清單目錄**
+    **圖 1.使用信任中心以新增增益集資訊清單目錄**
 
     ![使用信任中心以新增應用程式資訊清單](../../images/pj15_AgaveOverview_TrustCenter.PNG)
 
-7. 在 [專案]**** 功能區中，選擇 [Office 增益集]**** 下拉功能表，然後選擇 [全部查看]****。 在 [插入增益集]**** 對話方塊中，選擇 [共用資料夾]**** (見圖 2)。
+7. 在 [專案] 功能區中，選擇 [Office 增益集] 下拉功能表，然後選擇 [全部查看]。在 [插入增益集] 對話方塊中，選擇 [共用資料夾] (見圖 2)。
     
-    **圖 2. 啟動檔案共用上的增益集**
+    **圖 2.啟動檔案共用上的增益集**
 
     ![啟動檔案共用上的 Office 應用程式](../../images/pj15_AgaveOverview_StartAgaveApp.PNG)
 
-8. 選取 [Bing 搜尋] 增益集，然後選擇 [插入]****。
+8. 選取 [Bing 搜尋] 增益集，然後選擇 [插入]。
     
 Bing 搜尋增益集顯示在工作窗格中，如圖 3 所示。您可以手動調整工作窗格大小，並使用 Bing 搜尋增益集。
 
 **圖 3.使用 Bing 搜尋增益集**
 
-![Using the Bing Search app](../../images/pj15_AgaveOverview_BingSearch.gif)
+![使用 Bing 搜尋應用程式](../../images/pj15_AgaveOverview_BingSearch.gif)
 
 
-## 散發 Project 增益集
+## <a name="distributing-project-add-ins"></a>散發 Project 增益集
 
 
 您可以透過檔案共用散發增益集、SharePoint 程式庫中的增益集目錄，或 Office 市集中的 Project 增益集。如需詳細資訊，請參閱[發佈 Office 增益集](../publish/publish.md)。
 
 
-## 其他資源
+## <a name="additional-resources"></a>其他資源
 
 
 
@@ -203,7 +203,7 @@ Bing 搜尋增益集顯示在工作窗格中，如圖 3 所示。您可以手動
     
 - [Office 增益集的 XML 資訊清單](../../docs/overview/add-in-manifests.md)
     
-- [JavaScript API for Office](../../reference/javascript-api-for-office.md)
+- [適用於 Office 的 JavaScript API](../../reference/javascript-api-for-office.md)
     
 - [使用文字編輯器來建立第一個 Project 2013 的工作窗格增益集](../project/create-your-first-task-pane-add-in-for-project-by-using-a-text-editor.md)
     

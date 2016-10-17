@@ -1,12 +1,12 @@
 
 
-# Settings.settingsChanged 事件
+# <a name="settings.settingschanged-event"></a>Settings.settingsChanged 事件
 透過 [Settings.saveAsync](../../reference/shared/settings.saveasync.md) 方法，將設定屬性包的記憶體內部複本儲存至文件時，就會發生。
 
 |||
 |:-----|:-----|
-|**主機︰**|Excel |
-|**可用於[需求集合](../../docs/overview/specify-office-hosts-and-api-requirements.md)**|Settings|
+|**主應用程式︰**|Excel |
+|**可用於[需求集合](../../docs/overview/specify-office-hosts-and-api-requirements.md)**|設定|
 |**上次變更於**|1.0|
 
 ```js
@@ -14,7 +14,7 @@ Office.EventType.SettingsChanged
 ```
 
 
-## 備註
+## <a name="remarks"></a>備註
 
 若要新增 **settingsChanged** 事件的事件處理常式，請使用 [Settings](../../reference/shared/settings.addhandlerasync.md) 物件的 **addHandlerAsync** 方法。
 
@@ -26,7 +26,7 @@ Office.EventType.SettingsChanged
  >**重要**：您的增益集程式碼可在增益集透過任何 Excel 用戶端執行時，註冊 **settingsChanged** 事件的處理常式，但僅會在透過 Excel Online 開啟的試算表載入增益集，_且_有多位使用者編輯試算表 (共同編寫) 時，啟動此事件。因此，實際上僅在 Excel Online 中的共同編寫情節下，支援 **settingsChanged** 事件。
 
 
-## 支援詳細資料
+## <a name="support-details"></a>支援詳細資料
 
 
 下列矩陣中的大寫 Y，表示在相對應的 Office 主應用程式中支援此方法。空白儲存格表示 Office 主應用程式不支援此事件。
@@ -47,7 +47,7 @@ Office.EventType.SettingsChanged
 |**文件庫**|Office.js|
 |**命名空間**|Office|
 
-## 支援歷程記錄
+## <a name="support-history"></a>支援歷程記錄
 
 
 

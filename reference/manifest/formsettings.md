@@ -1,11 +1,11 @@
 
-# FormSettings 項目
+# <a name="formsettings-element"></a>FormSettings 項目
 指定您郵件增益集的來源位置和控制項設定。
 
  **增益集類型︰**郵件
 
 
-## 語法：
+## <a name="syntax:"></a>語法：
 
 
 ```XML
@@ -15,12 +15,12 @@
 ```
 
 
-## 內含於：
+## <a name="contained-in:"></a>內含於：
 
 [OfficeApp](../../reference/manifest/officeapp.md)
 
 
-## 可以包含︰
+## <a name="can-contain:"></a>可以包含︰
 
 [Form](../../reference/manifest/form.md)
 

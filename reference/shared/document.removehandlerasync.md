@@ -1,10 +1,10 @@
 
-# Document.removeHandlerAsync 方法
+# <a name="document.removehandlerasync-method"></a>Document.removeHandlerAsync 方法
 移除 **Document** 物件事件的事件處理常式。
 
 |||
 |:-----|:-----|
-|**主機︰**|Excel、PowerPoint、Project、Word|
+|**主應用程式︰**|Excel、PowerPoint、Project、Word|
 |**可用於[需求集合](../../docs/overview/specify-office-hosts-and-api-requirements.md)**|DocumentEvents|
 |**已新增於**|1.1|
 
@@ -13,19 +13,19 @@ Office.context.document.removeHandlerAsync(eventType [, options], callback);
 ```
 
 
-## 參數
+## <a name="parameters"></a>參數
 
 
 
-|**名稱**|**類型	**|**說明**|**支援附註**|
+|**名稱**|**類型**|**描述**|**支援附註**|
 |:-----|:-----|:-----|:-----|
 | _eventType_|[EventType](../../reference/shared/eventtype-enumeration.md)|指定要移除事件的類型。必要。||
-| _options_|**物件**|指定下列任何[選擇性參數](../../docs/develop/asynchronous-programming-in-office-add-ins.md#passing-optional-parameters-to-asynchronous-methods)：||
-| _處理常式_|**物件**|指定要移除之處理常式的名稱。 ||
+| _options_|**object**|指定下列任何[選擇性參數](../../docs/develop/asynchronous-programming-in-office-add-ins.md#passing-optional-parameters-to-asynchronous-methods)：||
+| _handler_|**object**|指定要移除之處理常式的名稱。 ||
 | _asyncContext_|**陣列**、**布林值**、**null**、**數字**、**物件**、**字串**或**未定義**|無變更的情況下，於 **AsyncResult** 物件中傳回的任一類型使用者定義項目。||
-| _callback_|**物件**|回呼傳回時所叫用的函數，其唯一的參數為 **AsyncResult** 類型。||
+| _callback_|**object**|回呼傳回時所叫用的函數，其唯一的參數為 **AsyncResult** 類型。||
 
-## 回呼值
+## <a name="callback-value"></a>回呼值
 
 傳遞至 _callback_ 參數的函數執行時，該函數會收到 [AsyncResult](../../reference/shared/asyncresult.md) 物件，您可以從回呼函數的唯一參數存取該物件。
 
@@ -33,19 +33,19 @@ Office.context.document.removeHandlerAsync(eventType [, options], callback);
 
 
 
-|**屬性**|**用途**|
+|**屬性**|**用於...**|
 |:-----|:-----|
 |[AsyncResult.value](../../reference/shared/asyncresult.value.md)|因為沒有可擷取的物件或資料，所以一律傳回 **undefined**。|
 |[AsyncResult.status](../../reference/shared/asyncresult.status.md)|判定作業成功或失敗。|
 |[AsyncResult.error](../../reference/shared/asyncresult.error.md)|作業失敗時，存取提供錯誤資訊的 [Error](../../reference/shared/error.md) 物件。|
 |[AsyncResult.asyncContext](../../reference/shared/asyncresult.asynccontext.md)|存取您的使用者定義**物件**或值 (如果您傳遞了其中一項做為 _asyncContext_ 參數)。|
 
-## 備註
+## <a name="remarks"></a>備註
 
 如果在呼叫 _removeHandlerAsync_ 方法時省略選擇性的 **handler** 參數，會移除所有指定的 _eventType_ 的事件處理常式。
 
 
-## 範例
+## <a name="example"></a>範例
 
 下列範例移除名為 'MyHandler' 的事件處理常式。
 
@@ -60,7 +60,7 @@ function removeSelectionChangedEventHandler() {
 
 
 
-## 支援詳細資料
+## <a name="support-details"></a>支援詳細資料
 
 
 下列矩陣中的大寫 Y，表示在相對應的 Office 主應用程式中支援此方法。空白儲存格表示 Office 主應用程式不支援此方法。
@@ -86,7 +86,7 @@ function removeSelectionChangedEventHandler() {
 |**文件庫**|Office.js|
 |**命名空間**|Office|
 
-## 支援歷程記錄
+## <a name="support-history"></a>支援歷程記錄
 
 
 

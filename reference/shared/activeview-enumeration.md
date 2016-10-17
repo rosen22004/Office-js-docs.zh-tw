@@ -1,5 +1,5 @@
 
-# ActiveView 列舉
+# <a name="activeview-enumeration"></a>ActiveView 列舉
 指定文件的使用中檢視狀態，例如使用者是否可以編輯文件。
 
 |||
@@ -8,7 +8,7 @@
 
 |||
 |:-----|:-----|
-|**主機︰**|PowerPoint|
+|**主應用程式︰**|PowerPoint|
 |**已新增於**|1.1|
 
 
@@ -18,18 +18,18 @@ Office.ActiveView
 ```
 
 
-## 成員
+## <a name="members"></a>成員
 
 
 **值**
 
 
-|**列舉**|**值**|**說明**|
+|**列舉**|**值**|**描述**|
 |:-----|:-----|:-----|
 |Office.ActiveView.Read|"read"|主應用程式的使用中檢視只能讓使用者讀取文件中的內容。|
 |Office.ActiveView.Edit|"edit"|主應用程式的使用中檢視只能讓使用者編輯文件中的內容。|
 
-## 支援詳細資料
+## <a name="support-details"></a>支援詳細資料
 
 
 下列矩陣中的大寫 Y，表示在相對應的 Office 主應用程式中支援此列舉。空白儲存格表示 Office 主應用程式不支援此列舉。
@@ -50,7 +50,7 @@ Office.ActiveView
 |**文件庫**|Office.js|
 |**命名空間**|Office|
 
-## 支援歷程記錄
+## <a name="support-history"></a>支援歷程記錄
 
 
 

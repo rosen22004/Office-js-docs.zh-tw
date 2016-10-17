@@ -1,10 +1,10 @@
 
-# Bindings.addFromPromptAsync 方法
+# <a name="bindings.addfrompromptasync-method"></a>Bindings.addFromPromptAsync 方法
  顯示 UI，讓使用者可指定要繫結的選取範圍。
 
 |||
 |:-----|:-----|
-|**主機︰**|Access、Excel|
+|**主應用程式︰**|Access、Excel|
 |**可用於[需求集合](../../docs/overview/specify-office-hosts-and-api-requirements.md)**|不在集合中|
 |**上次變更**|1.1|
 
@@ -13,21 +13,21 @@ _bindingsObj.addFromPromptAsync(bindingType [, options], callback);
 ```
 
 
-## 參數
+## <a name="parameters"></a>參數
 
 
 
-|**名稱**|**類型	**|**說明**|**支援附註**|
+|**名稱**|**類型**|**描述**|**支援附註**|
 |:-----|:-----|:-----|:-----|
 | _bindingType_|[BindingType](../../reference/shared/bindingtype-enumeration.md)|指定要建立的繫結物件類型。必要。如果選取的物件無法強制轉型至指定的類型，則傳回 **null**。||
-| _options_|**物件**|指定下列任何一項[選擇性參數](../../docs/develop/asynchronous-programming-in-office-add-ins.md#passing-optional-parameters-to-asynchronous-methods)。||
-| _id_|**字串**|指定要用於識別新繫結物件的唯一名稱。如果針對 _id_ 參數未傳遞任何引數，則會自動產生 [Binding.id](../../reference/shared/binding.id.md)。||
+| _options_|**object**|指定下列任何一項[選擇性參數](../../docs/develop/asynchronous-programming-in-office-add-ins.md#passing-optional-parameters-to-asynchronous-methods)。||
+| _id_|**string**|指定要用於識別新繫結物件的唯一名稱。如果針對 _id_ 參數未傳遞任何引數，則會自動產生 [Binding.id](../../reference/shared/binding.id.md)。||
 | _promptText_|**string**|指定要在提示 UI 中顯示的字串，告知使用者要選取的內容。限制為 200 個字元。如果未傳遞任何 _promptText_ 引數，則會顯示「請進行選擇」。||
 | _sampleData_|[TableData](../../reference/shared/tabledata.md)|指定提示 UI 中顯示的範例資料表格，做為可由增益集繫結之欄位 (欄) 種類的範例。**TableData** 物件中提供的標頭可指定欄位選擇 UI 中所使用的標籤。選擇性。**附註：**此參數僅用於 Access 的增益集。如果在 Excel 增益集中呼叫方法時提供此參數，會予以忽略。||
 | _asyncContext_|**陣列**、**布林值**、**null**、**數字**、**物件**、**字串**或**未定義**|無變更的情況下，於 **AsyncResult** 物件中傳回的任一類型使用者定義項目。||
-| _callback_|**物件**|回呼傳回時所叫用的函數，其唯一的參數為 **AsyncResult** 類型。||
+| _callback_|**object**|回呼傳回時所叫用的函數，其唯一的參數為 **AsyncResult** 類型。||
 
-## 回呼值
+## <a name="callback-value"></a>回呼值
 
 傳遞至 _callback_ 參數的函數執行時，該函數會收到 [AsyncResult](../../reference/shared/asyncresult.md) 物件，您可以從回呼函數的唯一參數存取該物件。
 
@@ -35,19 +35,19 @@ _bindingsObj.addFromPromptAsync(bindingType [, options], callback);
 
 
 
-|**屬性**|**用途**|
+|**屬性**|**用於...**|
 |:-----|:-----|
 |[AsyncResult.value](../../reference/shared/asyncresult.value.md)|存取代表由使用者指定之選取範圍的 [Binding](../../reference/shared/binding.md) 物件。|
 |[AsyncResult.status](../../reference/shared/asyncresult.status.md)|判定作業成功或失敗。|
 |[AsyncResult.error](../../reference/shared/asyncresult.error.md)|作業失敗時，存取提供錯誤資訊的 [Error](../../reference/shared/error.md) 物件。|
 |[AsyncResult.asyncContext](../../reference/shared/asyncresult.asynccontext.md)|存取您的使用者定義**物件**或值 (如果您傳遞了其中一項做為 _asyncContext_ 參數)。|
 
-## 備註
+## <a name="remarks"></a>備註
 
 將指定類型的繫結物件新增至 [Bindings](../../reference/shared/bindings.bindings.md) 集合，可由提供的 _id_ 識別。如果無法繫結指定的選取範圍，此方法將會失敗。
 
 
-## 範例
+## <a name="example"></a>範例
 
 
 
@@ -68,7 +68,7 @@ function write(message){
 
 
 
-## 支援詳細資料
+## <a name="support-details"></a>支援詳細資料
 
 
 下列矩陣中的大寫 Y，表示在相對應的 Office 主應用程式中支援此方法。空白儲存格表示 Office 主應用程式不支援此方法。
@@ -89,7 +89,7 @@ function write(message){
 |**文件庫**|Office.js|
 |**命名空間**|Office|
 
-## 支援歷程記錄
+## <a name="support-history"></a>支援歷程記錄
 
 
 

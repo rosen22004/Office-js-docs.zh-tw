@@ -1,12 +1,12 @@
 
 
-# Settings.set 方法
+# <a name="settings.set-method"></a>Settings.set 方法
 設定或建立指定的設定。
 
 |||
 |:-----|:-----|
-|**主機︰**|Access、Excel、PowerPoint、Word|
-|**可用於[需求集合](../../docs/overview/specify-office-hosts-and-api-requirements.md)**|Settings|
+|**主應用程式︰**|Access、Excel、PowerPoint、Word|
+|**可用於[需求集合](../../docs/overview/specify-office-hosts-and-api-requirements.md)**|設定|
 |**上次變更於**|1.1|
 
 ```js
@@ -14,7 +14,7 @@ Office.context.document.settings.set(name, value);
 ```
 
 
-## 參數
+## <a name="parameters"></a>參數
 
 
 
@@ -30,7 +30,7 @@ _value_<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;指定要儲存的值。
     
 
-## 備註
+## <a name="remarks"></a>備註
 
 如果沒有設定，**set** 方法會建立具有指定名稱的新設定，或在設定屬性包的記憶體內部複本中，設定具有指定名稱的現有設定。呼叫 [Settings.saveAsync](../../reference/shared/settings.saveasync.md) 方法後，傳回值會儲存在文件中，成為其資料類型的序列化 JSON 表示法。每個增益集的設定最多可使用 2MB。
 
@@ -38,7 +38,7 @@ _value_<br/>
  >**重要**：請注意，**Settings.set** 方法只會影響設定屬性包的記憶體內部複本。若要確保下次開啟文件時，增益集可使用新增或變更的設定，您必須在呼叫 **Settings.set** 方法後及關閉增益集前這段時間內，呼叫 **Settings.saveAsync** 方法，將設定保存於文件中。
 
 
-## 範例
+## <a name="example"></a>範例
 
 
 
@@ -53,7 +53,7 @@ function setMySetting() {
 
 
 
-## 支援詳細資料
+## <a name="support-details"></a>支援詳細資料
 
 
 下列矩陣中的大寫 Y，表示在相對應的 Office 主應用程式中支援此方法。空白儲存格表示 Office 主應用程式不支援此方法。
@@ -77,7 +77,7 @@ function setMySetting() {
 |**文件庫**|Office.js|
 |**命名空間**|Office|
 
-## 支援歷程記錄
+## <a name="support-history"></a>支援歷程記錄
 
 
 

@@ -1,21 +1,21 @@
-﻿# 工作表函數
+# <a name="worksheet-functions"></a>工作表函數
 做為可從 JavaScript 或 REST 中呼叫之 Microsoft Excel 工作表函數的容器。
 
-## 傳回類型	
+## <a name="return-type"></a>傳回類型	
 工作表函數會傳回 FunctionResult 物件。FunctionResult 物件有兩個屬性。
 
 | 屬性       | 類型	    |描述|備註 |
 |:---------------|:--------|:----------|:-----|
-|value|string|傳回套用指定的工作表函數的結果。||
-|錯誤|string|套用指定的工作表函數時傳回錯誤資訊。||
+|value|字串|傳回套用指定的工作表函數的結果。||
+|錯誤|字串|套用指定的工作表函數時傳回錯誤資訊。||
 
 
-## 語法
+## <a name="syntax"></a>語法
 ```js
 workbook.functions.functionMethod();
 ```
 
-## 範例
+## <a name="examples"></a>範例
 以下是 Excel 中不同工具的範例資料表追蹤銷售。我們將使用此表格中的資料，來說明工作表函數的運作方式。
 
 ![範例](../../images/worksheetfunctionschainingResult.JPG)
@@ -68,7 +68,7 @@ workbook.functions.functionMethod();
 
 ```
 
-## [支援的工作表函數清單](#支援的工作表函數清單)
+## <a name="[list-of-supported-worksheet-functions](#list)"></a>[支援的工作表函數清單](#list)
 
 | 方法           | 傳回類型    |描述|附註 |
 |:---------------|:--------|:----------|:-----|

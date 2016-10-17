@@ -1,10 +1,10 @@
 
-# TableBinding 物件
+# <a name="tablebinding-object"></a>TableBinding 物件
 表示資料列和資料行的兩個維度中的繫結，選擇性地包含標頭。
 
 |||
 |:-----|:-----|
-|**主機︰**|Access、Excel、PowerPoint、Project、Word|
+|**主應用程式︰**|Access、Excel、PowerPoint、Project、Word|
 |**可用於[需求集合](../../docs/overview/specify-office-hosts-and-api-requirements.md)**|TableBindings|
 |**上次變更於 Selection**|1.1|
 
@@ -13,13 +13,13 @@ TableBinding
 ```
 
 
-## 成員
+## <a name="members"></a>成員
 
 
 **屬性**
 
 
-|**名稱**|**說明**|**更新 Office.js v1.1**|
+|**名稱**|**描述**|**更新 Office.js v1.1**|
 |:-----|:-----|:-----|
 |[columnCount](../../reference/shared/binding.tablebinding.columncount.md)|取得指定之 **TableBinding** 物件中的欄數。|新增支援 Access 內容增益集中的表格繫結。|
 |[hasHeaders](../../reference/shared/binding.tablebinding.hasheaders.md)|如果指定的 **TableBinding** 有標頭，則會傳回 True；否則會傳回 False。|新增支援 Access 內容增益集中的表格繫結。|
@@ -28,7 +28,7 @@ TableBinding
 **方法**
 
 
-|**名稱**|**說明**|**更新 Office.js v1.1**|
+|**名稱**|**描述**|**更新 Office.js v1.1**|
 |:-----|:-----|:-----|
 |[addColumnsAsync](../../reference/shared/binding.tablebinding.addcolumnsasync.md)|將資料欄和值加入表格中。||
 |[addRowsAsync](../../reference/shared/binding.tablebinding.addrowsasync.md)|將資料列和值加入表格中。|新增支援 Access 內容增益集中的表格繫結。|
@@ -38,14 +38,14 @@ TableBinding
 |[setFormatsAsync](../../reference/shared/binding.tablebinding.setformatsasync.md)|設定繫結表格中指定的項目和資料上的儲存格與表格格式。|可設定 Excel 增益集中的表格格式。|
 |[setTableOptionsAsync](../../reference/shared/binding.tablebinding.settableoptionsasync.md)|更新繫結表格上的表格格式設定選項。|可設定 Excel 增益集中的表格格式。|
 
-## 備註
+## <a name="remarks"></a>備註
 
 **TableBinding** 物件從 [Binding](../../reference/shared/binding.id.md) 抽象物件繼承 [id](../../reference/shared/binding.type.md) 屬性、[type](../../reference/shared/binding.getdataasync.md) 屬性、[getDataAsync](../../reference/shared/binding.setdataasync.md) 方法，以及 [setDataAsync](../../reference/shared/binding.md) 方法。
 
 在 Excel 中建立表格繫結之後，使用者新增至表格的每個新列會自動包含在繫結中 (將增加 **rowCount**)。
 
 
-## 支援詳細資料
+## <a name="support-details"></a>支援詳細資料
 
 
 下列矩陣中的大寫 Y，表示在相對應的 Office 主應用程式中支援此物件。空白儲存格表示 Office 主應用程式不支援此物件。
@@ -70,7 +70,7 @@ TableBinding
 |**文件庫**|Office.js|
 |**命名空間**|Office|
 
-## 支援歷程記錄
+## <a name="support-history"></a>支援歷程記錄
 
 
 

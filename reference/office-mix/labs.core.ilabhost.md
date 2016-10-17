@@ -1,7 +1,7 @@
 
-# Labs.Core.ILabHost
+# <a name="labs.core.ilabhost"></a>Labs.Core.ILabHost
 
- _**適用於︰**Office 相關應用程式 | Office 增益集 | Office Mix | PowerPoint_
+ _**適用於︰**Office 的應用程式 | Office 增益集 | Office Mix | PowerPoint_
 
 提供將 Labs.js 連線到主機的抽象層。
 
@@ -10,10 +10,10 @@ interface ILabHost
 ```
 
 
-## 方法
+## <a name="methods"></a>方法
 
 
-### getSupportedVersions
+### <a name="getsupportedversions"></a>getSupportedVersions
 
  `getSupportedVersions(): Core.ILabHostVersionInfo[]`
 
@@ -24,7 +24,7 @@ interface ILabHost
 無。
 
 
-### 連線
+### <a name="connect"></a>連線
 
  `connect(versions: Core.ILabHostVersionInfo[], callback: Core.ILabCallback<Core.IConnectionResponse>)`
 
@@ -35,10 +35,10 @@ interface ILabHost
 
 |||
 |:-----|:-----|
-| _版本_|用戶端可使用的主機版本清單。|
+| _versions_|用戶端可使用的主機版本清單。|
 | _callback_|完成連線時引發的回呼函式。|
 
-### 中斷連線
+### <a name="disconnect"></a>中斷連線
 
  `disconnect(callback: Core.ILabCallback<void>)`
 
@@ -52,7 +52,7 @@ interface ILabHost
 | _completionStatus_|中斷連線時的實驗室狀態。|
 | _callback_|中斷連線完成時所引發的回呼函式。|
 
-### 開啟
+### <a name="on"></a>開啟
 
  `on(handler: (string: any, any: any): void)`
 
@@ -63,9 +63,9 @@ interface ILabHost
 
 |||
 |:-----|:-----|
-| _處理常式_|事件處理常式。|
+| _handler_|事件處理常式。|
 
-### sendMessage
+### <a name="sendmessage"></a>sendMessage
 
  `sendMessage(type: string, options: Core.IMessage, callback: Core.ILabCallback<Core.IMessageResponse>)`
 
@@ -76,11 +76,11 @@ interface ILabHost
 
 |||
 |:-----|:-----|
-| _類型_|正在傳送的郵件類型。|
+| _type_|正在傳送的郵件類型。|
 | _options_|郵件選項。|
 | _callback_|收到郵件後所引發的回呼函式。|
 
-### 建立
+### <a name="create"></a>建立
 
  `create(options: Core.ILabCreationOptions, callback: Core.ILabCallback<void>)`
 
@@ -94,7 +94,7 @@ interface ILabHost
 | _options_|建立作業過程所傳遞的選項。|
 | _callback_|建立實驗室後所引發的回呼函式。|
 
-### getConfiguration
+### <a name="getconfiguration"></a>getConfiguration
 
  `getConfiguration(callback: Core.ILabCallback<Core.IConfiguration>)`
 
@@ -107,7 +107,7 @@ interface ILabHost
 |:-----|:-----|
 | _callback_|用來擷取組態資訊的回呼函式。|
 
-### setConfiguration
+### <a name="setconfiguration"></a>setConfiguration
 
  `setConfiguration(configuration: Core.IConfiguration, callback: Core.ILabCallback<void>)`
 
@@ -118,10 +118,10 @@ interface ILabHost
 
 |||
 |:-----|:-----|
-| _組態_|設定的實驗室組態。|
+| _configuration_|設定的實驗室組態。|
 | _callback_|設定組態後所引發的回呼函式。|
 
-### getConfigurationInstance
+### <a name="getconfigurationinstance"></a>getConfigurationInstance
 
  `getConfigurationInstance(callback: Core.ILabCallback<Core.IConfigurationInstance>)`
 
@@ -134,7 +134,7 @@ interface ILabHost
 |:-----|:-----|
 | _callback_|擷取組態執行個體後所引發的回呼函式。|
 
-### getState
+### <a name="getstate"></a>getState
 
  `getState(callback: Core.ILabCallback<any>)`
 
@@ -147,7 +147,7 @@ interface ILabHost
 |:-----|:-----|
 | _completionStatus_|傳回目前的實驗室狀態的回呼函式。|
 
-### setState
+### <a name="setstate"></a>setState
 
  `setState(state: any, callback: Core.ILabCallback<void>)`
 
@@ -161,7 +161,7 @@ interface ILabHost
 | _state_|實驗室狀態。|
 | _callback_|設定狀態後所引發的回呼函式。|
 
-### takeAction
+### <a name="takeaction"></a>takeAction
 
  `takeAction(type: string, options: Core.IActionOptions, callback: Core.ILabCallback<Core.IAction>)`
 
@@ -172,11 +172,11 @@ interface ILabHost
 
 |||
 |:-----|:-----|
-| _類型_|動作的類型。|
+| _type_|動作的類型。|
 | _options_|與動作一起提供的選項。|
 | _callback_|傳回最後一個執行動作的回呼函式。|
 
-### takeAction
+### <a name="takeaction"></a>takeAction
 
  `takeAction(type: string, options: Core.IActionOptions, result: Core.IActionResult, callback: Core.ILabCallback<Core.IAction>)`
 
@@ -187,12 +187,12 @@ interface ILabHost
 
 |||
 |:-----|:-----|
-| _類型_|動作的類型。|
+| _type_|動作的類型。|
 | _options_|與動作一起提供的選項。|
 | _result_|動作的結果。|
 | _callback_|傳回最後一個執行動作的回呼函式。|
 
-### getActions
+### <a name="getactions"></a>getActions
 
  `getActions(type: string, options: Core.IGetActionOptions, callback: Core.ILabCallback<Core.IAction[]>)`
 
@@ -203,6 +203,6 @@ interface ILabHost
 
 |||
 |:-----|:-----|
-| _類型_|取得動作的類型。|
+| _type_|取得動作的類型。|
 | _options_|與取得動作一起提供的選項。|
 | _callback_|傳回已完成動作清單的回呼函式。|

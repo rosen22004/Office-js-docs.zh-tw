@@ -1,13 +1,13 @@
+﻿
 
-
-# event.completed
+# <a name="event.completed"></a>event.completed
 增益集叫用的回呼，可讓 Outlook 知道此作業已完成。
 
 ****
 
 |||
 |:-----|:-----|
-|**主應用程式：**Outlook|**增益集類型︰**Outlook|
+|**主應用程式：**Outlook|**增益集類型：**Outlook|
 |**可用於[需求集合](../../docs/overview/specify-office-hosts-and-api-requirements.md)**|信箱|
 |**上次變更於信箱**|1.3|
 |**適用的 Outlook 模式**|讀取和撰寫|
@@ -19,12 +19,12 @@ event.completed();
 ```
 
 
-## 參數
+## <a name="parameters"></a>參數
 
 無
 
 
-## 支援詳細資料
+## <a name="support-details"></a>支援詳細資料
 
 
 下表中的大寫 Y，表示在相對應的 Outlook 主應用程式中支援此屬性。空白儲存格表示 Outlook 主應用程式不支援此屬性。
@@ -37,7 +37,7 @@ event.completed();
 **支援的主應用程式 (依平台排序)**
 
 
-| |**Office for Windows desktop**|**Office Online (在瀏覽器中)**|**裝置適用的 OWA**|
+| |**Office for Windows desktop**|**Office Online (in browser)**|**裝置適用的 OWA**|
 |:-----|:-----|:-----|:-----|
 |**Outlook**|Y|||
 
@@ -49,7 +49,7 @@ event.completed();
 |**文件庫**|Office.js|
 |**命名空間**|Office|
 
-## 支援歷程記錄
+## <a name="support-history"></a>支援歷程記錄
 
 
 

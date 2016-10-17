@@ -1,51 +1,46 @@
 
-# Document.settings 屬性
+# <a name="document.settings-property"></a>Document.settings 屬性
 取得代表目前文件的內容或工作窗格增益集的已儲存自訂設定的物件。
 
 |||
-|:-----|:-----|
-|**主機︰**|Access、Excel、PowerPoint、Word|
-|**上次變更於**|1.1|
+|:-----------------|:--------------------------------|
+| 主機︰           | Access、Excel、PowerPoint、Word |
+| 上次變更於： | 1.1                             |
 
 ```js
 var _settings = Office.context.document.settings;
 ```
 
-## 傳回值
+## <a name="return-value"></a>傳回值
 
-[Settings](../../reference/shared/document.settings.md) 物件。
+[Settings](./settings.md) 物件。
 
-
-## 支援詳細資料
-
+## <a name="support-details"></a>支援詳細資料
 
 下列矩陣中的大寫 Y，表示在相對應的 Office 主應用程式中支援此方法。空白儲存格表示 Office 主應用程式不支援此方法。
 
 如需有關 Office 主應用程式與伺服器需求的詳細資訊，請參閱[執行 Office 增益集的需求](../../docs/overview/requirements-for-running-office-add-ins.md)。
 
-
 **支援的主應用程式 (依平台排序)**
 
-
-||**Office for Windows desktop**|**Office Online (在瀏覽器中)**|**Office for iPad**|
-|:-----|:-----|:-----|:-----|
-|**Access**||Y||
-|**Excel**|Y|Y|Y|
-|**PowerPoint**|Y|Y|Y|
-|**Word**|Y|Y|Y|
+|             | Office for Windows desktop | Office Online (在瀏覽器中) | Office for iPad |
+|:------------|:---------------------------|:---------------------------|:----------------|
+| Access      |                            | Y                          |                 |
+| Excel       | Y                          | Y                          | Y               |
+| PowerPoint  | Y                          | Y                          | Y               |
+| Word        | Y                          | Y                          | Y               |
 
 |||
-|:-----|:-----|
-|**最低權限等級**|[限制](../../docs/develop/requesting-permissions-for-api-use-in-content-and-task-pane-add-ins.md)|
-|**增益集類型**|內容、工作窗格|
-|**文件庫**|Office.js|
-|**命名空間**|Office|
+|:--------------------------|:-----|
+| 最低權限等級  | [限制](../../docs/develop/requesting-permissions-for-api-use-in-content-and-task-pane-add-ins.md)
+| 增益集類型：             | 內容、工作窗格
+| 文件庫：                  | Office.js
+| 命名空間：                | Office
 
-## 支援歷程記錄
+## <a name="support-history"></a>支援歷程記錄
 
-
-|**版本**|**變更**|
-|:-----|:-----|
-|1.1|新增 iPad 版 Office 中對 Excel、PowerPoint 和 Word 的支援。|
-|1.1|新增對 Access 內容增益集的支援。|
-|1.0|已導入|
+| 版本 | 變更 |
+|:--------|:--------|
+| 1.1     |新增 iPad 版 Office 中對 Excel、PowerPoint 和 Word 的支援。
+| 1.1     |新增對 Access 內容增益集的支援。
+| 1.0     |已導入

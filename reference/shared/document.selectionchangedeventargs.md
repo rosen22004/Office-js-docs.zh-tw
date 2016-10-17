@@ -1,10 +1,10 @@
 
-# DocumentSelectionChangedEventArgs 物件
+# <a name="documentselectionchangedeventargs-object"></a>DocumentSelectionChangedEventArgs 物件
 提供引發 [SelectionChanged](../../reference/shared/document.selectionchanged.event.md) 事件的文件相關資訊。
 
 |||
 |:-----|:-----|
-|**主機︰**|Excel、PowerPoint、Word|
+|**主應用程式︰**|Excel、PowerPoint、Word|
 |**已新增於**|1.1|
 
 ```
@@ -12,18 +12,18 @@
 ```
 
 
-## 成員
+## <a name="members"></a>成員
 
 
 **屬性**
 
 
-|**名稱**|**說明**|
+|**名稱**|**描述**|
 |:-----|:-----|
-|[文件](../../reference/shared/document.selectionchangedeventargs.document.md)|取得代表引發 **SelectionChanged** 事件之文件的 **Document** 物件。|
-|[類型](../../reference/shared/document.selectionchangedeventargs.type.md)|取得可識別所引發事件類型的 **EventType** 列舉值。|
+|[document](../../reference/shared/document.selectionchangedeventargs.document.md)|取得代表引發 **SelectionChanged** 事件之文件的 **Document** 物件。|
+|[type](../../reference/shared/document.selectionchangedeventargs.type.md)|取得可識別所引發事件類型的 **EventType** 列舉值。|
 
-## 支援詳細資料
+## <a name="support-details"></a>支援詳細資料
 
 
 下列矩陣中的大寫 Y，表示在相對應的 Office 主應用程式中支援此方法。空白儲存格表示 Office 主應用程式不支援此方法。
@@ -46,7 +46,7 @@
 |**文件庫**|Office.js|
 |**命名空間**|Office|
 
-## 支援歷程記錄
+## <a name="support-history"></a>支援歷程記錄
 
 
 

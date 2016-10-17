@@ -1,10 +1,10 @@
 
-# ProjectProjectFields 列舉
+# <a name="projectprojectfields-enumeration"></a>ProjectProjectFields 列舉
 指定可作為 **[getProjectFieldAsync](../../reference/shared/projectdocument.getprojectfieldasync.md)** 方法參數的專案欄位。
 
 |||
 |:-----|:-----|
-|**主機︰**|Project|
+|**主應用程式︰**|Project|
 |**已新增於**|1.0|
 
 ```
@@ -26,13 +26,13 @@ ProjectProjectFields={
 ```
 
 
-## 成員
+## <a name="members"></a>成員
 
 
 ****
 
 
-|**成員	**|**說明**|
+|**成員**|**描述**|
 |:-----|:-----|
 |**CurrencyDigits**|貨幣小數點後的位數。|
 |**CurrencySymbol**|貨幣符號。|
@@ -47,12 +47,12 @@ ProjectProjectFields={
 |**WSSUrl**|與 SharePoint 清單同步之專案的 SharePoint URL。|
 |**WSSList**|與任務清單同步之專案的 SharePoint 清單名稱。|
 
-## 備註
+## <a name="remarks"></a>備註
 
 **ProjectProjectFields** 常數可作為 **[getProjectFieldAsync](../../reference/shared/projectdocument.getprojectfieldasync.md)** 方法的參數。
 
 
-## 支援詳細資料
+## <a name="support-details"></a>支援詳細資料
 
 
 下列矩陣中的大寫 Y，表示在相對應的 Office 主應用程式中支援此列舉。空白儲存格表示 Office 主應用程式不支援此列舉。
@@ -73,7 +73,7 @@ ProjectProjectFields={
 |**文件庫**|Office.js|
 |**命名空間**|Office|
 
-## 支援歷程記錄
+## <a name="support-history"></a>支援歷程記錄
 
 
 
@@ -84,11 +84,11 @@ ProjectProjectFields={
 |:-----|:-----|
 |1.0|已導入|
 
-## 請參閱
+## <a name="see-also"></a>請參閱
 
 
 
-#### 其他資源
+#### <a name="other-resources"></a>其他資源
 
 
 [getProjectFieldAsync 方法](../../reference/shared/projectdocument.getprojectfieldasync.md)

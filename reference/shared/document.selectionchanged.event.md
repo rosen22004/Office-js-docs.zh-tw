@@ -1,22 +1,22 @@
 
-# Document.SelectionChanged 事件
+# <a name="document.selectionchanged-event"></a>Document.SelectionChanged 事件
 文件中的選取項目變更時，就會發生。
 
 |||
 |:-----|:-----|
-|**主機︰**|Excel、PowerPoint、Word|
+|**主應用程式︰**|Excel、PowerPoint、Word|
 |**導入在**|1.1|
 
 ```
 Office.EventType.DocumentSelectionChanged
 ```
 
-## 備註
+## <a name="remarks"></a>備註
 
 若要新增文件之 **SelectionChanged** 事件的事件處理常式，請使用 [Document](../../reference/shared/document.addhandlerasync.md) 物件的 **addHandlerAsync** 方法。
 
 
-## 範例
+## <a name="example"></a>範例
 
 
 
@@ -35,7 +35,7 @@ function MyHandler(eventArgs) {
 
 
 
-## 支援詳細資料
+## <a name="support-details"></a>支援詳細資料
 
 
 下列矩陣中的大寫 Y，表示在相對應的 Office 主應用程式中支援此方法。空白儲存格表示 Office 主應用程式不支援此方法。
@@ -58,7 +58,7 @@ function MyHandler(eventArgs) {
 |**文件庫**|Office.js|
 |**命名空間**|Office|
 
-## 支援歷程記錄
+## <a name="support-history"></a>支援歷程記錄
 
 
 

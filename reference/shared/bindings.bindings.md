@@ -1,10 +1,10 @@
 
-# 繫結物件
+# <a name="bindings-object"></a>繫結物件
 代表增益集在文件中所具有的繫結。
 
 |||
 |:-----|:-----|
-|**主機︰**|Access、Excel、Word|
+|**主應用程式︰**|Access、Excel、Word|
 |**上次變更**於|1.1|
 
 ```js
@@ -16,14 +16,14 @@ Office.context.document.bindings
 
 |||
 |:-----|:-----|
-|名稱|說明|
-|[文件](../../reference/shared/bindings.document.md)|取得代表與此組繫結相關聯之文件的 **Document** 物件。|
+|名稱|描述|
+|[document](../../reference/shared/bindings.document.md)|取得代表與此組繫結相關聯之文件的 **Document** 物件。|
 
 **方法**
 
 |||
 |:-----|:-----|
-|名稱|說明|
+|名稱|描述|
 |[addFromNamedItemAsync](../../reference/shared/bindings.addfromnameditemasync.md)|將繫結加入至文件中的具名項目。|
 |[addFromPromptAsync](../../reference/shared/bindings.addfrompromptasync.md)|顯示 UI，讓使用者可指定要繫結的選取範圍。|
 |[addFromSelectionAsync](../../reference/shared/bindings.addfromselectionasync.md)|加入繫結至文件中目前選取範圍所指定的類型的繫結物件。|
@@ -31,7 +31,7 @@ Office.context.document.bindings
 |[getByIdAsync](../../reference/shared/bindings.getbyidasync.md)|藉由其識別碼取得指定的繫結。|
 |[releaseByIdAsync](../../reference/shared/bindings.releasebyidasync.md)|移除指定的繫結。|
 
-## 支援詳細資料
+## <a name="support-details"></a>支援詳細資料
 
 
 下列矩陣中的大寫 Y，表示在相對應的 Office 主應用程式中支援此方法。空白儲存格表示 Office 主應用程式不支援此方法。
@@ -44,7 +44,7 @@ Office.context.document.bindings
 ||Office for Windows desktop|Office Online (在瀏覽器中)|Office for iPad|
 |**Access**||Y||
 |**Excel**|Y|Y|Y|
-|**Word**|Y||Y|
+|**Word**|Y|Y|Y|
 
 |||
 |:-----|:-----|
@@ -52,7 +52,7 @@ Office.context.document.bindings
 |**文件庫**|Office.js|
 |**命名空間**|Office|
 
-## 支援歷程記錄
+## <a name="support-history"></a>支援歷程記錄
 
 
 

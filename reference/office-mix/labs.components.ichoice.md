@@ -1,5 +1,5 @@
 
-# Labs.Components.IChoice
+# <a name="labs.components.ichoice"></a>Labs.Components.IChoice
 
  _**適用於︰**Office 的應用程式 | Office 增益集 | Office Mix | PowerPoint_
 
@@ -10,10 +10,10 @@ interface IChoice
 ```
 
 
-## 屬性
+## <a name="properties"></a>屬性
 
 
-|名稱|說明|
+|名稱|描述|
 |:-----|:-----|
 | `id: string`|選項的唯一 ID。|
 | `name: string`|代表要在值類型中放置的值。|

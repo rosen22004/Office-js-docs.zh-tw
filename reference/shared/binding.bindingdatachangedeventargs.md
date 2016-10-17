@@ -1,10 +1,10 @@
 
-# BindingDataChangedEventArgs 物件
+# <a name="bindingdatachangedeventargs-object"></a>BindingDataChangedEventArgs 物件
 提供引發 [DataChanged](../../reference/shared/binding.bindingdatachangedevent.md) 事件之繫結的相關資訊。
 
 |||
 |:-----|:-----|
-|**主機︰**|Access、Excel、Word|
+|**主應用程式︰**|Access、Excel、Word|
 |**上次變更於 BindingEvents**|1.1|
 
 ```js
@@ -12,18 +12,18 @@ Office.EventType.BindingDataChanged
 ```
 
 
-## 成員
+## <a name="members"></a>成員
 
 
 **屬性**
 
 
-|**名稱**|**說明**|
+|**名稱**|**描述**|
 |:-----|:-----|
-|[繫結](../../reference/shared/binding.bindingdatachangedeventargs.binding.md)|取得代表引發 [DataChanged](../../reference/shared/binding.md) 事件之繫結的 **Binding** 物件。|
-|[類型](../../reference/shared/binding.bindingdatachangedeventargs.type.md)|取得可識別所引發事件類型的 [EventType](../../reference/shared/eventtype-enumeration.md) 列舉值。|
+|[binding](../../reference/shared/binding.bindingdatachangedeventargs.binding.md)|取得代表引發 [DataChanged](../../reference/shared/binding.md) 事件之繫結的 **Binding** 物件。|
+|[type](../../reference/shared/binding.bindingdatachangedeventargs.type.md)|取得可識別所引發事件類型的 [EventType](../../reference/shared/eventtype-enumeration.md) 列舉值。|
 
-## 支援詳細資料
+## <a name="support-details"></a>支援詳細資料
 
 
 下列矩陣中的大寫 Y，表示在相對應的 Office 主應用程式中支援此物件。空白儲存格表示 Office 主應用程式不支援此物件。
@@ -46,7 +46,7 @@ Office.EventType.BindingDataChanged
 |**文件庫**|Office.js|
 |**命名空間**|Office|
 
-## 支援歷程記錄
+## <a name="support-history"></a>支援歷程記錄
 
 
 

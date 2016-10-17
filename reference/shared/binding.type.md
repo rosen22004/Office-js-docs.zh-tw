@@ -1,10 +1,10 @@
 
-# Binding.type 屬性
+# <a name="binding.type-property"></a>Binding.type 屬性
 取得繫結的類型。
 
 |||
 |:-----|:-----|
-|**主機︰**|Access、Excel、Word|
+|**主應用程式︰**|Access、Excel、Word|
 |**上次變更於**|1.1|
 
 ```
@@ -12,12 +12,12 @@ var bindingType = bindingObj.type;
 ```
 
 
-## 傳回值
+## <a name="return-value"></a>傳回值
 
 [BindingType](../../reference/shared/bindingtype-enumeration.md)。
 
 
-## 範例
+## <a name="example"></a>範例
 
 
 
@@ -36,7 +36,7 @@ function write(message){
 
 
 
-## 支援詳細資料
+## <a name="support-details"></a>支援詳細資料
 
 
 下列矩陣中的大寫 Y，表示在相對應的 Office 主應用程式中支援此屬性。空白儲存格表示 Office 主應用程式不支援此屬性。
@@ -51,7 +51,7 @@ function write(message){
 |:-----|:-----|:-----|:-----|
 |**Access**||Y||
 |**Excel**|Y|Y|Y|
-|**Word**|Y||Y|
+|**Word**|Y|Y|Y|
 
 |||
 |:-----|:-----|
@@ -60,7 +60,7 @@ function write(message){
 |**文件庫**|Office.js|
 |**命名空間**|Office|
 
-## 支援歷程記錄
+## <a name="support-history"></a>支援歷程記錄
 
 
 

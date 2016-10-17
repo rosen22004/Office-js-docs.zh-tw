@@ -1,11 +1,11 @@
 
-# 載入 DOM 和執行階段環境
+# <a name="loading-the-dom-and-runtime-environment"></a>載入 DOM 和執行階段環境
 
 
 
 增益集必須確定載入 DOM 和 Office 增益集的執行階段環境，才能執行它自己的自訂邏輯。 
 
-## 內容或工作窗格增益集的啟動
+## <a name="startup-of-a-content-or-task-pane-add-in"></a>內容或工作窗格增益集的啟動
 
 下圖顯示在 Excel、PowerPoint、Project、Word 或 Access 中啟動內容或工作窗格增益集的相關事件流程。
 
@@ -21,7 +21,7 @@
     
 3. Office 主應用程式會在瀏覽器控制項中開啟增益集 HTML 頁面。
     
-    接下來的兩個步驟，步驟 4 和 5，會以非同步且並行的方式進行。 基於這個理由，繼續之前請務必確認您的 DOM 與增益集的執行階段環境已經完成載入。
+    接下來的兩個步驟，步驟 4 和 5，會以非同步且並行的方式進行。基於這個理由，繼續之前請務必確認您的 DOM 與增益集的執行階段環境已經完成載入。
     
 4. 瀏覽器控制項會載入 DOM 和 HTML 內文，並呼叫 **window.onload** 事件的事件處理常式。
     
@@ -30,7 +30,7 @@
 6. 當 DOM 和 HTML 內文完成載入，且增益集完成初始化時，可以繼續進行增益集的主函式。
     
 
-## Outlook 增益集的啟動
+## <a name="startup-of-an-outlook-add-in"></a>Outlook 增益集的啟動
 
 
 
@@ -57,7 +57,7 @@ Outlook 增益集啟動時，就會發生下列事件︰
 7. 當 DOM 和 HTML 內文完成載入，且增益集完成初始化時，可以繼續進行增益集的主函式。
     
 
-## 檢查載入狀態
+## <a name="checking-the-load-status"></a>檢查載入狀態
 
 
 檢查 DOM 和執行階段環境都已完成載入的一個方法是使用 jQuery [.ready()](http://api.jquery.com/ready/) 函式︰`$(document).ready()`。例如，下列 **initialize** 事件處理常式函式可確保在特定程式碼之前先載入 DOM 以初始化增益集執行。接下來，**initialize** 事件處理常式會繼續進行，以使用 [mailbox.item](../../reference/outlook/Office.context.mailbox.item.md) 屬性來取得目前在 Outlook 中選取的項目，並呼叫增益集的主函式 `initDialer`。
@@ -94,7 +94,7 @@ Office.initialize = function () {
 如果增益集包含一個以上的頁面，只要載入新頁面，該頁面必須包含或呼叫 **Office.initialize** 事件處理常式。
 
 
-## 其他資源
+## <a name="additional-resources"></a>其他資源
 
 
 

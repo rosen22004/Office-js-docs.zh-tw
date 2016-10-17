@@ -1,11 +1,11 @@
 
-# Slice.data 屬性
+# <a name="slice.data-property"></a>Slice.data 屬性
 取得檔案配量的未經處理資料。
 
 |||
 |:-----|:-----|
-|**主機︰**|PowerPoint、Word|
-|**可用於[需求集合](../../docs/overview/specify-office-hosts-and-api-requirements.md)**|File|
+|**主應用程式︰**|PowerPoint、Word|
+|**可用於[需求集合](../../docs/overview/specify-office-hosts-and-api-requirements.md)**|檔案|
 |**上次變更於**|1.1|
 
 ```
@@ -13,17 +13,17 @@ var sliceData = slice.data;
 ```
 
 
-## 傳回值
+## <a name="return-value"></a>傳回值
 
 已透過呼叫 **Document.getFileAsync** 方法的 **fileType** 參數，指定_Office.FileType.Text_ ("text") 或 [Office.FileType.Compressed](../../reference/shared/document.getfileasync.md) ("compressed") 格式的檔案配量未經處理資料。
 
 
-## 備註
+## <a name="remarks"></a>備註
 
 “compressed” 格式的檔案會回傳位元組陣列，其可視需要轉換為以 base64 編碼的字串。
 
 
-## 支援詳細資料
+## <a name="support-details"></a>支援詳細資料
 
 
 下列矩陣中的大寫 Y，表示在相對應的 Office 主應用程式中支援此屬性。空白儲存格表示 Office 主應用程式不支援此屬性。
@@ -39,13 +39,13 @@ var sliceData = slice.data;
 
 |||
 |:-----|:-----|
-|**可用於需求集合**|File|
+|**可用於需求集合**|檔案|
 |**最低權限等級**|[ReadDocument](../../docs/develop/requesting-permissions-for-api-use-in-content-and-task-pane-add-ins.md)|
 |**增益集類型**|內容、工作窗格|
 |**文件庫**|Office.js|
 |**命名空間**|Office|
 
-## 支援歷程記錄
+## <a name="support-history"></a>支援歷程記錄
 
 
 

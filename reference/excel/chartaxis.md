@@ -1,51 +1,51 @@
-﻿# ChartAxis 物件 (適用於 Excel 的 JavaScript API)
+# <a name="chartaxis-object-(javascript-api-for-excel)"></a>ChartAxis 物件 (適用於 Excel 的 JavaScript API)
 
 代表圖表中的單個座標軸。
 
-## 屬性
+## <a name="properties"></a>屬性
 
-| 屬性	     | 類型	   |說明
+| 屬性	     | 類型	   |描述
 |:---------------|:--------|:----------|
 |majorUnit|物件|代表兩個主要刻度標記之間的間隔。可以設定為數值或空字串。傳回值一律為數字。|
 |maximum|物件|代表數值軸的最大值。可以設定為數值或空字串 (針對自動數值軸)。傳回值一律為數字。|
 |minimum|物件|代表數值軸的最小值。可以設定為數值或空字串 (針對自動數值軸)。傳回值一律為數字。|
 |minorUnit|物件|代表兩個次要刻度標記之間的間隔。可以設定為數值或空字串 (針對自動數值軸)。傳回值一律為數字。|
 
-_請參閱屬性存取[範例。](#範例)_
+_請參閱屬性存取[範例。](#property-access-examples)_
 
-## 關聯性
-| 關聯性 | 類型	   |說明|
+## <a name="relationships"></a>關聯性
+| 關聯性 | 類型	   |描述|
 |:---------------|:--------|:----------|
 |format|[ChartAxisFormat](chartaxisformat.md)|代表 chart 物件的格式，其中包含線條和字型格式。唯讀。|
 |majorGridlines|[ChartGridlines](chartgridlines.md)|傳回 Gridlines 物件，該物件代表指定座標軸的主要格線。唯讀。|
 |minorGridlines|[ChartGridlines](chartgridlines.md)|傳回 Gridlines 物件，該物件代表指定座標軸的次要格線。唯讀。|
-|職稱|[ChartAxisTitle](chartaxistitle.md)|代表座標軸標題。唯讀。|
+|title|[ChartAxisTitle](chartaxistitle.md)|代表座標軸標題。唯讀。|
 
-## 方法
+## <a name="methods"></a>方法
 
-| 方法           | 傳回類型    |說明|
+| 方法           | 傳回類型    |描述|
 |:---------------|:--------|:----------|
 |[load(param: object)](#loadparam-object)|void|以參數中指定的屬性和物件值填滿 JavaScript 層中建立的 Proxy 物件。|
 
-## 方法詳細資料
+## <a name="method-details"></a>方法詳細資料
 
 
-### load(param: object)
+### <a name="load(param:-object)"></a>load(param: object)
 以參數中指定的屬性和物件值填滿 JavaScript 層中建立的 Proxy 物件。
 
-#### 語法
+#### <a name="syntax"></a>語法
 ```js
 object.load(param);
 ```
 
-#### 參數
-| 參數	    | 類型	   |說明|
+#### <a name="parameters"></a>參數
+| 參數	    | 類型	   |描述|
 |:---------------|:--------|:----------|
 |param|物件|選用。接受參數與關聯性名稱，做為分隔字串或陣列。或者提供 [loadOption](loadoption.md) 物件。|
 
-#### 傳回
+#### <a name="returns"></a>傳回
 void
-### 屬性存取範例
+### <a name="property-access-examples"></a>屬性存取範例
 從 Chart1 取得圖表座標軸的 `maximum`。
 
 ```js

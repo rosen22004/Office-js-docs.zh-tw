@@ -1,10 +1,10 @@
 
-# AsyncResult.asyncContext property
+# <a name="asyncresult.asynccontext-property"></a>AsyncResult.asyncContext property
 取得傳遞至叫用方法之選擇性 _asyncContext_ 參數的使用者定義項目，並保留傳遞時的狀態。
 
 |||
 |:-----|:-----|
-|**主機︰**|Access、Excel、Outlook、PowerPoint、Project、Word|
+|**主應用程式︰**|Access、Excel、Outlook、PowerPoint、Project、Word|
 |**上次變更於**|1.1|
 
 ```
@@ -12,12 +12,12 @@ var myContext = asynchResult.asyncContext;
 ```
 
 
-## 傳回值
+## <a name="return-value"></a>傳回值
 
 傳回使用者定義項目 (可以是任何 JavaScript 類型︰**字串**、**數字**、**布林值**、**物件**、**陣列**、**Null** 或 **未定義**) 傳遞至叫用方法之選擇性 _asyncContext_ 參數。傳回**未定義**，如果您未傳遞任何項目至 _asyncContext_ 參數。
 
 
-## 範例
+## <a name="example"></a>範例
 
 
 
@@ -41,7 +41,7 @@ function write(message){
 
 
 
-## 支援詳細資料
+## <a name="support-details"></a>支援詳細資料
 
 
 下列矩陣中的大寫 Y，表示在相對應的 Office 主應用程式中支援此方法。空白儲存格表示 Office 主應用程式不支援此方法。
@@ -52,10 +52,10 @@ function write(message){
 **支援的主應用程式 (依平台排序)**
 
 
-||**Office for Windows desktop**|**Office Online (在瀏覽器中)**|**Office for iPad**|**裝置適用的 OWA**|**Mac 版 Outlook**|
+||**Office for Windows desktop**|**Office Online (在瀏覽器中)**|**Office for iPad**|**裝置適用的 OWA**|**Outlook for Mac**|
 |:-----|:-----|:-----|:-----|:-----|:-----|
 |**Access**|Y|||||
-|**Excel**|Y|Y|是|||
+|**Excel**|Y|Y|Y|||
 |**Outlook**|Y|Y||Y|Y|
 |**PowerPoint**|Y|Y|Y|||
 |**Project**||||||
@@ -68,7 +68,7 @@ function write(message){
 |**文件庫**|Office.js|
 |**命名空間**|Office|
 
-## 支援歷程記錄
+## <a name="support-history"></a>支援歷程記錄
 
 
 

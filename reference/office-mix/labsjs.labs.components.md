@@ -1,17 +1,17 @@
 
-# LabsJS.Labs.Components
+# <a name="labsjs.labs.components"></a>LabsJS.Labs.Components
 提供 Labs.JS Labs.Components JavaScript API 的高階概觀。
 
  _**適用於︰**Office 的應用程式 | Office 增益集 | Office Mix | PowerPoint_
 
 Labs.Components 模組中的 API 代表實驗室開發目前可用的四個預設元件 (活動、選擇、輸入和動態元件)。
 
-## Labs.Components 模組
+## <a name="labs.components-module"></a>Labs.Components 模組
 
 以下是 Labs.Components 類型︰
 
 
-### 類別
+### <a name="classes"></a>類別
 
 
 |||
@@ -31,7 +31,7 @@ Labs.Components 模組中的 API 代表實驗室開發目前可用的四個預�
 |[Labs.Components.InputComponentResult](../../reference/office-mix/labs.components.inputcomponentresult.md)|輸入元件提交的結果。|
 |[Labs.Components.InputComponentSubmission](../../reference/office-mix/labs.components.inputcomponentsubmission.md)|表示提交到輸入元件。|
 
-### 介面
+### <a name="interfaces"></a>介面
 
 
 |||

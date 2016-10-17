@@ -1,5 +1,5 @@
 
-# Labs.Components 類別
+# <a name="labs.components-classes"></a>Labs.Components 類別
 **LabsJS.Labs.Components** 模組中的類別
 
  _**適用於︰**Office 的應用程式 | Office 增益集 | Office Mix | PowerPoint_

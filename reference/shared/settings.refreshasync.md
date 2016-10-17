@@ -1,12 +1,12 @@
 
 
-# Settings.refreshAsync 方法
+# <a name="settings.refreshasync-method"></a>Settings.refreshAsync 方法
 讀取保存在文件內的所有設定，並重新整理保留在記憶體內部的內容或工作窗格增益集複本。
 
 |||
 |:-----|:-----|
-|**主機︰**|Access、Excel、PowerPoint、Word|
-|**可用於[需求集合](../../docs/overview/specify-office-hosts-and-api-requirements.md)**|Settings|
+|**主應用程式︰**|Access、Excel、PowerPoint、Word|
+|**可用於[需求集合](../../docs/overview/specify-office-hosts-and-api-requirements.md)**|設定|
 |**上次變更於**|1.1|
 
 ```js
@@ -14,9 +14,9 @@ Office.context.document.settings.refreshAsync(callback);
 ```
 
 
-## 參數
+## <a name="parameters"></a>參數
 
-_回呼_<br/>
+_callback_<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;類型：**物件**
 
 &nbsp;&nbsp;&nbsp;&nbsp;回呼傳回時所叫用的函數，其唯一的參數為 **AsyncResult** 類型。
@@ -25,7 +25,7 @@ _回呼_<br/>
 
 
 
-## 回呼值
+## <a name="callback-value"></a>回呼值
 
 傳遞至 _callback_ 參數的函數執行時，該函數會收到 [AsyncResult](../../reference/shared/asyncresult.md) 物件，您可以從回呼函數的唯一參數存取該物件。
 
@@ -33,21 +33,21 @@ _回呼_<br/>
 
 
 
-|**屬性**|**用途**|
+|**屬性**|**用於...**|
 |:-----|:-----|
 |[AsyncResult.value](../../reference/shared/asyncresult.value.md)|存取具重新整理過的值的 [Settings](../../reference/shared/settings.md) 物件。|
 |[AsyncResult.status](../../reference/shared/asyncresult.status.md)|判定作業成功或失敗。|
 |[AsyncResult.error](../../reference/shared/asyncresult.error.md)|作業失敗時，存取提供錯誤資訊的 [Error](../../reference/shared/error.md) 物件。|
 |[AsyncResult.asyncContext](../../reference/shared/asyncresult.asynccontext.md)|存取您的使用者定義**物件**或值 (如果您傳遞了其中一項做為 _asyncContext_ 參數)。|
 
-## 備註
+## <a name="remarks"></a>備註
 
 相同增益集的多個執行個體處理相同文件時，此方法便可用於 Word 與 PowerPoint 共同編寫情節中。因各增益集在使用者開啟文件時，會使用文件載入的設定記憶體內部複本，所以可同步各使用者使用的設定值。每當增益集的執行個體呼叫 [Settings.saveAsync](../../reference/shared/settings.saveasync.md) 方法，將所有使用者的設定保存至文件時，就可能發生此狀況。從增益集的 **settingsChanged** 事件的事件處理常式，呼叫 [refreshAsync](../../reference/shared/settings.settingschangedevent.md) 方法，會重新整理所有使用者的設定值。
 
 可從為 Excel 而建立的增益集中呼叫 **refreshAsync** 方法，但因該方法不支援共同編寫，所以沒有必要呼叫該方法。
 
 
-## 範例
+## <a name="example"></a>範例
 
 
 
@@ -67,7 +67,7 @@ function write(message){
 
 
 
-## 支援詳細資料
+## <a name="support-details"></a>支援詳細資料
 
 
 下列矩陣中的大寫 Y，表示在相對應的 Office 主應用程式中支援此方法。空白儲存格表示 Office 主應用程式不支援此方法。
@@ -91,7 +91,7 @@ function write(message){
 |**文件庫**|Office.js|
 |**命名空間**|Office|
 
-## 支援歷程記錄
+## <a name="support-history"></a>支援歷程記錄
 
 
 

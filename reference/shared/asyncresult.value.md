@@ -1,10 +1,10 @@
 
-# AsyncResult.value 屬性
+# <a name="asyncresult.value-property"></a>AsyncResult.value 屬性
 如果有的話，請取得這個非同步作業的裝載或內容。
 
 |||
 |:-----|:-----|
-|**主機︰**|Access、Excel、Outlook、PowerPoint、Project、Word|
+|**主應用程式︰**|Access、Excel、Outlook、PowerPoint、Project、Word|
 |**上次變更於**|1.1|
 
 ```js
@@ -12,7 +12,7 @@ var dataValue = asyncResult.value;
 ```
 
 
-## 傳回值
+## <a name="return-value"></a>傳回值
 
 在進行非同步呼叫時，傳回要求值。 
 
@@ -20,12 +20,12 @@ var dataValue = asyncResult.value;
  >**附註**：**值**屬性針對特定「Async」方法傳回的值，根據該方法的用途與內容而有所不同。若要判斷**值**屬性針對「Async」方法傳回的內容，請參閱方法主題的「回呼值」一節。如需「Async」方法的完整清單，請參閱 [AsyncResult](../../reference/shared/asyncresult.md) 物件主題的「備註」一節。
 
 
-## 備註
+## <a name="remarks"></a>備註
 
 存取函數中的 **AsyncResult** 物件，以引數的方式傳遞至「Async」方法的 _callback_ 參數，例如 [Document](../../reference/shared/document.getselecteddataasync.md) 物件的 [getSelectedDataAsync](../../reference/shared/document.setselecteddataasync.md) 與 **setSelectedDataAsync** 方法。
 
 
-## 範例
+## <a name="example"></a>範例
 
 
 
@@ -51,7 +51,7 @@ function write(message){
 
 
 
-## 支援詳細資料
+## <a name="support-details"></a>支援詳細資料
 
 
 下列矩陣中的大寫 Y，表示在相對應的 Office 主應用程式中支援此方法。空白儲存格表示 Office 主應用程式不支援此方法。
@@ -61,7 +61,7 @@ function write(message){
 ||**Office for Windows desktop**|**Office Online (在瀏覽器中)**|**Office for iPad**|**裝置適用的 OWA**|**Office for Mac**|
 |:-----|:-----|:-----|:-----|:-----|:-----|
 |**Access**||Y||||
-|**Excel**|Y|Y|是|||
+|**Excel**|Y|Y|Y|||
 |**Outlook**|Y|Y||Y|Y|
 |**PowerPoint**|Y|Y|Y|||
 |**Project**|Y|||||
@@ -74,7 +74,7 @@ function write(message){
 |**文件庫**|Office.js|
 |**命名空間**|Office|
 
-## 支援歷程記錄
+## <a name="support-history"></a>支援歷程記錄
 
 
 

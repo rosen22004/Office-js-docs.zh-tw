@@ -1,11 +1,11 @@
-﻿
-# Set 項目
+
+# <a name="set-element"></a>Set 項目
 指定適用於 Office 的 JavaScript API 中，為了啟用您的 Office 增益集所需的需求集合。
 
  **增益集類型︰**內容、工作窗格、郵件
 
 
-## 語法：
+## <a name="syntax:"></a>語法：
 
 
 ```XML
@@ -13,21 +13,21 @@
 ```
 
 
-## 內含於：
+## <a name="contained-in:"></a>內含於：
 
 [Sets](../../reference/manifest/sets.md)
 
 
-## 屬性
+## <a name="attributes"></a>屬性
 
 
 
-|**屬性**|**類型**|**必要**|**說明**|
+|**屬性**|**類型**|**必要**|**描述**|
 |:-----|:-----|:-----|:-----|
-|名稱|string|必要|[需求集合](../../docs/overview/specify-office-hosts-and-api-requirements.md#set-the-requirements-element-in-the-manifest) 的名稱。|
+|名稱|字串|必要|[需求集合](../../docs/overview/specify-office-hosts-and-api-requirements.md#set-the-requirements-element-in-the-manifest) 的名稱。|
 |MinVersion|String|選用|指定增益集所需的 API 集合最小版本。如果已在父 **Sets** 項目中將其指定，就會覆寫 [DefaultMinVersion](../../reference/manifest/sets.md) 的值。|
 
-## 備註
+## <a name="remarks"></a>備註
 
 如需有關需求集合的詳細資訊，請參閱[指定 Office 主機和 API 需求](../../docs/overview/specify-office-hosts-and-api-requirements.md#specify-office-hosts-and-api-requirements)。
 

@@ -1,10 +1,10 @@
 
-# DocumentMode 列舉
+# <a name="documentmode-enumeration"></a>DocumentMode 列舉
 指定關聯的應用程式中的文件是否為唯讀或讀寫。 
 
 |||
 |:-----|:-----|
-|**主機︰**|Excel、PowerPoint、Project、Word|
+|**主應用程式︰**|Excel、PowerPoint、Project、Word|
 |**已新增於**|1.1|
 
 ```
@@ -12,23 +12,23 @@ Office.DocumentMode
 ```
 
 
-## 成員
+## <a name="members"></a>成員
 
 
 **值**
 
 
-|**列舉**|**值**|**說明**|
+|**列舉**|**值**|**描述**|
 |:-----|:-----|:-----|
 |Office.DocumentMode.ReadOnly|"readOnly"|文件為唯讀。|
 |Office.DocumentMode.ReadWrite|"readWrite"|可以讀取和寫入文件。|
 
-## 備註
+## <a name="remarks"></a>備註
 
 由 **Document** 物件的 [mode](../../reference/shared/document.md) 屬性傳回。
 
 
-## 支援詳細資料
+## <a name="support-details"></a>支援詳細資料
 
 
 下列矩陣中的大寫 Y，表示在相對應的 Office 主應用程式中支援此列舉。空白儲存格表示 Office 主應用程式不支援此列舉。
@@ -52,7 +52,7 @@ Office.DocumentMode
 |**文件庫**|Office.js|
 |**命名空間**|Office|
 
-## 支援歷程記錄
+## <a name="support-history"></a>支援歷程記錄
 
 
 

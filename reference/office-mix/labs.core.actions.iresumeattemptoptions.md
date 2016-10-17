@@ -1,5 +1,5 @@
 
-# Labs.Core.Actions.IResumeAttemptOptions
+# <a name="labs.core.actions.iresumeattemptoptions"></a>Labs.Core.Actions.IResumeAttemptOptions
 
  _**適用於︰**Office 的應用程式 | Office 增益集 | Office Mix | PowerPoint_
 
@@ -10,7 +10,7 @@ interface IResumeAttemptOptions extends Core.IActionOptions
 ```
 
 
-## 屬性
+## <a name="properties"></a>屬性
 
 
 |||

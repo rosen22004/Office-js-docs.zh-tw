@@ -1,10 +1,10 @@
 
-# Bindings.document 屬性
+# <a name="bindings.document-property"></a>Bindings.document 屬性
 取得代表與此組繫結相關聯之文件的 **Document** 物件。
 
 |||
 |:-----|:-----|
-|**主機︰**|Access、Excel、Word|
+|**主應用程式︰**|Access、Excel、Word|
 |**上次變更於**|1.1|
 
 ```
@@ -12,12 +12,12 @@ var docObj = bindingsObj.document;
 ```
 
 
-## 傳回值
+## <a name="return-value"></a>傳回值
 
 [Document](../../reference/shared/bindings.document.md) 物件。
 
 
-## 支援詳細資料
+## <a name="support-details"></a>支援詳細資料
 
 
 下列矩陣中的大寫 Y，表示在相對應的 Office 主應用程式中支援此方法。空白儲存格表示 Office 主應用程式不支援此方法。
@@ -29,7 +29,7 @@ var docObj = bindingsObj.document;
 |:-----|:-----|:-----|:-----|
 |**Access**||Y||
 |**Excel**|Y|Y|Y|
-|**Word**|Y||Y|
+|**Word**|Y|Y|Y|
 
 |||
 |:-----|:-----|
@@ -38,7 +38,7 @@ var docObj = bindingsObj.document;
 |**文件庫**|Office.js|
 |**命名空間**|Office|
 
-## 支援歷程記錄
+## <a name="support-history"></a>支援歷程記錄
 
 
 

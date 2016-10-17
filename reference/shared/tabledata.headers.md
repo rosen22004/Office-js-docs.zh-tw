@@ -1,10 +1,10 @@
 
-# TableData.headers 屬性
+# <a name="tabledata.headers-property"></a>TableData.headers 屬性
 取得或設定資料表中的標題。
 
 |||
 |:-----|:-----|
-|**主機︰**|Excel、Word|
+|**主應用程式︰**|Excel、Word|
 |**可用於[需求集合](../../docs/overview/specify-office-hosts-and-api-requirements.md)**|TableBindings|
 |**上次變更於**|1.1|
 
@@ -13,14 +13,14 @@ var hasHeaders = tableBindingObj.headers;
 ```
 
 
-## 傳回值
+## <a name="return-value"></a>傳回值
 
  如果資料表有標題會傳回 **true**；沒有則傳回 **false**。 
 
 
-## 備註
+## <a name="remarks"></a>備註
 
-若要指定標題，您必須指定對應到資料表結構之陣列的陣列。 例如，若要指定兩欄資料表的標題，您要將 **header** 屬性設定為 ` [['header1', 'header2']]`。
+若要指定標題，您必須指定對應到資料表結構之陣列的陣列。例如，若要指定兩欄資料表的標題，您要將 **header** 屬性設定為 ` [['header1', 'header2']]`。
 
 如果您將 **headers** 屬性指定為 **null** (或在架構 **TableData** 物件時空下屬性)，您的程式碼執行時會發生下列結果︰
 
@@ -30,7 +30,7 @@ var hasHeaders = tableBindingObj.headers;
 - 您覆寫或更新現有的資料表時，未變更現有的標題。
     
 
-## 範例
+## <a name="example"></a>範例
 
 下列範例會建立具一個標題與三個資料列的單欄式資料表。
 
@@ -46,7 +46,7 @@ function createTableData() {
 ```
 
 
-## 支援詳細資料
+## <a name="support-details"></a>支援詳細資料
 
 
 下列矩陣中的大寫 Y，表示在相對應的 Office 主應用程式中支援此屬性。空白儲存格表示 Office 主應用程式不支援此屬性。
@@ -66,7 +66,7 @@ function createTableData() {
 |**文件庫**|Office.js|
 |**命名空間**|Office|
 
-## 支援歷程記錄
+## <a name="support-history"></a>支援歷程記錄
 
 
 

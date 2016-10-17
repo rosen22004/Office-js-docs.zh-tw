@@ -1,10 +1,10 @@
 
-# NodeInsertedEventArgs.newNode 屬性
+# <a name="nodeinsertedeventargs.newnode-property"></a>NodeInsertedEventArgs.newNode 屬性
 取得剛加入 **CustomXMLPart** 物件的節點。
 
 |||
 |:-----|:-----|
-|**主機︰**|Word|
+|**主應用程式︰**|Word|
 |**可用於[需求集合](../../docs/overview/specify-office-hosts-and-api-requirements.md)**|CustomXmlParts|
 |**上次變更於**|1.1|
 
@@ -13,17 +13,17 @@ var myNode = eventArgsObj.newNode;
 ```
 
 
-## 傳回值
+## <a name="return-value"></a>傳回值
 
 [CustomXmlNode](../../reference/shared/customxmlnode.customxmlnode.md)，表示剛插入節點。
 
 
-## 備註
+## <a name="remarks"></a>備註
 
 請注意，當您將樹狀子目錄新增至文件時，這個節點可能會有子項。
 
 
-## 支援詳細資料
+## <a name="support-details"></a>支援詳細資料
 
 
 下列矩陣中的大寫 Y，表示在相對應的 Office 主應用程式中支援此屬性。空白儲存格表示 Office 主應用程式不支援此屬性。
@@ -33,7 +33,7 @@ var myNode = eventArgsObj.newNode;
 
 ||**Office for Windows desktop**|**Office Online (在瀏覽器中)**|**Office for iPad**|
 |:-----|:-----|:-----|:-----|
-|**Word**|Y||Y|
+|**Word**|Y|Y|Y|
 
 |||
 |:-----|:-----|
@@ -43,7 +43,7 @@ var myNode = eventArgsObj.newNode;
 |**文件庫**|Office.js|
 |**命名空間**|Office|
 
-## 支援歷程記錄
+## <a name="support-history"></a>支援歷程記錄
 
 
 

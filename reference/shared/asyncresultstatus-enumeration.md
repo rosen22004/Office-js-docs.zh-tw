@@ -1,10 +1,10 @@
 
-# AsyncResultStatus 列舉
+# <a name="asyncresultstatus-enumeration"></a>AsyncResultStatus 列舉
 指定非同步呼叫的結果。 
 
 |||
 |:-----|:-----|
-|**主機︰**|Access、Excel、Outlook、PowerPoint、Project、Word|
+|**主應用程式︰**|Access、Excel、Outlook、PowerPoint、Project、Word|
 |**上次變更於**|1.1|
 
 ```
@@ -12,23 +12,23 @@ Office.AsyncResultStatus
 ```
 
 
-## 成員
+## <a name="members"></a>成員
 
 
 **值**
 
 
-|**列舉**|**值**|**說明**|
+|**列舉**|**值**|**描述**|
 |:-----|:-----|:-----|
 |Office.AsyncResultStatus.Succeeded|"succeeded"|呼叫成功。|
 |Office.AsyncResultStatus.Failed|"failed"|呼叫失敗。|
 
-## 備註
+## <a name="remarks"></a>備註
 
 傳回 [AsyncResult](../../reference/shared/asyncresult.status.md) 物件的 [status](../../reference/shared/asyncresult.md) 屬性。
 
 
-## 支援詳細資料
+## <a name="support-details"></a>支援詳細資料
 
 
 下列矩陣中的大寫 Y，表示在相對應的 Office 主應用程式中支援此列舉。空白儲存格表示 Office 主應用程式不支援此列舉。
@@ -43,7 +43,7 @@ Office.AsyncResultStatus
 ||**Office for Windows desktop**|**Office Online (在瀏覽器中)**|**Office for iPad**|**裝置適用的 OWA**|**Office for Mac**|
 |:-----|:-----|:-----|:-----|:-----|:-----|
 |**Access**|Y|||||
-|**Excel**|Y|Y|是|||
+|**Excel**|Y|Y|Y|||
 |**Outlook**|Y|Y||Y|Y|
 |**PowerPoint**|Y|Y|Y|||
 |**Project**|Y|||||
@@ -55,7 +55,7 @@ Office.AsyncResultStatus
 |**文件庫**|Office.js|
 |**命名空間**|Office|
 
-## 支援歷程記錄
+## <a name="support-history"></a>支援歷程記錄
 
 
 |**版本**|**變更**|

@@ -1,11 +1,11 @@
 
 
-# ProjectDocument.getTaskFieldAsync 方法
+# <a name="projectdocument.gettaskfieldasync-method"></a>ProjectDocument.getTaskFieldAsync 方法
 以非同步方式取得指定工作的指定欄位值。
 
 |||
 |:-----|:-----|
-|**主機︰**|Project|
+|**主應用程式︰**|Project|
 |**可用於[需求集合](../../docs/overview/specify-office-hosts-and-api-requirements.md)**|Selection|
 |**已新增於**|1.0|
 
@@ -14,19 +14,19 @@ Office.context.document.getTaskFieldAsync(taskId, fieldId[, options][, callback]
 ```
 
 
-## 參數
+## <a name="parameters"></a>參數
 
 
 
-|**名稱**|**類型	**|**說明**|**支援附註**|
+|**名稱**|**類型**|**描述**|**支援附註**|
 |:-----|:-----|:-----|:-----|
-| _taskId_|**string**|工作的 GUID。必要。||
+| _taskId_|**string**|任務的 GUID。必要。||
 | _fieldId_|[ProjectTaskFields](../../reference/shared/projecttaskfields-enumeration.md)|目標欄位的識別碼。必要。||
-| _options_|**物件**|指定下列任何一項[選擇性參數](../../docs/develop/asynchronous-programming-in-office-add-ins.md#passing-optional-parameters-to-asynchronous-methods)。||
+| _options_|**object**|指定下列任何一項[選擇性參數](../../docs/develop/asynchronous-programming-in-office-add-ins.md#passing-optional-parameters-to-asynchronous-methods)。||
 | _asyncContext_|**陣列**、**布林值**、**null**、**數字**、**物件**、**字串**或**未定義**|無變更的情況下，於 **AsyncResult** 物件中傳回的任一類型使用者定義項目。||
-| _callback_|**物件**|回呼傳回時所叫用的函數，其唯一的參數為 **AsyncResult** 類型。||
+| _callback_|**object**|回呼傳回時所叫用的函數，其唯一的參數為 **AsyncResult** 類型。||
 
-## 回呼值
+## <a name="callback-value"></a>回呼值
 
 當 _callback_ 函數執行時，該函數會收到 [AsyncResult](../../reference/shared/asyncresult.md) 物件，您可以從回呼函數的參數存取該物件。
 
@@ -34,19 +34,19 @@ Office.context.document.getTaskFieldAsync(taskId, fieldId[, options][, callback]
 
 
 
-|**名稱**|**說明**|
+|**名稱**|**描述**|
 |:-----|:-----|
 |[asyncContext](../../reference/shared/asyncresult.asynccontext.md)|在選擇性 _asyncContext_ 參數中傳遞的資料 (如果有使用該參數)。|
-|[錯誤](../../reference/shared/asyncresult.error.md)|錯誤的相關資訊 (如果 **status** 屬性等於 **failed**)。|
-|[狀態](../../reference/shared/asyncresult.status.md)|非同步呼叫的 **succeeded** 或 **failed** 狀態。|
+|[error](../../reference/shared/asyncresult.error.md)|錯誤的相關資訊 (如果 **status** 屬性等於 **failed**)。|
+|[status](../../reference/shared/asyncresult.status.md)|非同步呼叫的 **succeeded** 或 **failed** 狀態。|
 |[value](../../reference/shared/asyncresult.value.md)|包含 **fieldValue** 屬性，其代表指定欄位的值。|
 
-## 備註
+## <a name="remarks"></a>備註
 
 請先呼叫 [getSelectedTaskAsync](../../reference/shared/projectdocument.getselectedtaskasync.md) 方法，以取得工作 GUID，然後將它當作 _taskId_ 引數傳遞至 **getTaskFieldAsync**。如果使用中檢視不是工作檢視 (例如 [甘特圖] 或 [工作使用狀況] 檢視)，或如果沒有在工作檢視中選取任何工作，[getSelectedTaskAsync](../../reference/shared/projectdocument.getselectedtaskasync.md) 就會傳回 5001 錯誤 (內部錯誤)。請參閱 [addHandlerAsync 方法](../../reference/shared/projectdocument.addhandlerasync.md)，以取得根據使用中檢視類型，使用 [ViewSelectionChanged](../../reference/shared/projectdocument.viewselectionchanged.event.md) 事件和 [getSelectedViewAsync](../../reference/shared/projectdocument.getselectedviewasync.md) 方法啟動按鈕的範例。
 
 
-## 範例
+## <a name="example"></a>範例
 
 下列程式碼範例會呼叫 [getSelectedTaskAsync](../../reference/shared/projectdocument.getselectedtaskasync.md)，以取得工作檢視中目前所選工作的 GUID。然後它會以遞迴方式呼叫 **getTaskFieldAsync**，以取得兩個工作欄位值。
 
@@ -145,7 +145,7 @@ Office.context.document.getTaskFieldAsync(taskId, fieldId[, options][, callback]
 ```
 
 
-## 支援詳細資料
+## <a name="support-details"></a>支援詳細資料
 
 
 下列矩陣中的大寫 Y，表示在相對應的 Office 主應用程式中支援此方法。空白儲存格表示 Office 主應用程式不支援此方法。
@@ -165,7 +165,7 @@ Office.context.document.getTaskFieldAsync(taskId, fieldId[, options][, callback]
 |**文件庫**|Office.js|
 |**命名空間**|Office|
 
-## 支援歷程記錄
+## <a name="support-history"></a>支援歷程記錄
 
 
 
@@ -173,11 +173,11 @@ Office.context.document.getTaskFieldAsync(taskId, fieldId[, options][, callback]
 |:-----|:-----|
 |1.0|已導入|
 
-## 請參閱
+## <a name="see-also"></a>請參閱
 
 
 
-#### 其他資源
+#### <a name="other-resources"></a>其他資源
 
 
 [getSelectedTaskAsync 方法](../../reference/shared/projectdocument.getselectedresourceasync.md)

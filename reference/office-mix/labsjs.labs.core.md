@@ -1,24 +1,24 @@
 
-# LabsJS.Labs.Core
+# <a name="labsjs.labs.core"></a>LabsJS.Labs.Core
 提供 LabsJS.Labs.Core JavaScript API 參考的高階檢視。
 
  _**適用於︰**Office 的應用程式 | Office 增益集 | Office Mix | PowerPoint_
 
 核心介面、資料結構和類別是 LabsJS 和簡報驅動程式所共用的元件 (在此情況下為 Office Mix)，以建立兩者之間的互動橋樑。
 
-## LabsJS.Labs.Core API 模組
+## <a name="labsjs.labs.core-api-module"></a>LabsJS.Labs.Core API 模組
 
 Labs.Core 模組包含下列類型︰
 
 
-### 類別
+### <a name="classes"></a>類別
 
 
 |||
 |:-----|:-----|
 |[Labs.Core.Permissions](../../reference/office-mix/labs.core.permissions.md)|表示為實驗室的指定使用者啟用之權限的靜態類別。|
 
-### 介面
+### <a name="interfaces"></a>介面
 
 
 |||
@@ -49,7 +49,7 @@ Labs.Core 模組包含下列類型︰
 |[Labs.Core.ModeChangedEventData](../../reference/office-mix/labs.core.modechangedeventdata.md)|與變更的模式事件相關聯的資料。|
 |[Labs.Core.IEventCallback](../../reference/office-mix/labs.core.ieventcallback.md)|處理 EventManager 回呼的介面。|
 
-### 列舉
+### <a name="enumerations"></a>列舉
 
 
 |||

@@ -1,10 +1,10 @@
 
-# TableBinding.rowCount 屬性
+# <a name="tablebinding.rowcount-property"></a>TableBinding.rowCount 屬性
 以整數值取得表格中的列數。
 
 |||
 |:-----|:-----|
-|**主機︰**|Access、Excel、Word|
+|**主應用程式︰**|Access、Excel、Word|
 |**可用於[需求集合](../../docs/overview/specify-office-hosts-and-api-requirements.md)**|TableBindings|
 |**上次變更於 Selection**|1.1|
 
@@ -13,12 +13,12 @@ var rowCount = bindingObj.rowCount;
 ```
 
 
-## 傳回值
+## <a name="return-value"></a>傳回值
 
 在指定之 [TableBinding](../../reference/shared/binding.tablebinding.md) 物件中的列數。
 
 
-## 備註
+## <a name="remarks"></a>備註
 
 當您藉由在 Excel 2013 和 Excel Online 中選取單一列 (使用 **[插入]** 索引標籤上的**[表格]**)，插入空白表格時，Office 主應用程式會建立標頭的單一列，後面跟著單一空白列。不過，如果您的增益集指令碼為此新插入的表格建立繫結 (例如，藉由使用 [addFromSelectionAsync](../../reference/shared/bindings.addfromselectionasync.md) 方法)，然後檢查 **rowCount** 屬性的值，則傳回的值將會根據是否在 Excel 2013 或 Excel Online 中開啟試算表而有所不同。
 
@@ -32,7 +32,7 @@ var rowCount = bindingObj.rowCount;
 在 Access 的內容增益集中，基於效能原因，**rowCount** 屬性一律會傳回 -1。
 
 
-## 範例
+## <a name="example"></a>範例
 
 
 
@@ -52,7 +52,7 @@ function write(message){
 
 
 
-## 支援詳細資料
+## <a name="support-details"></a>支援詳細資料
 
 
 下列矩陣中的大寫 Y，表示在相對應的 Office 主應用程式中支援此屬性。空白儲存格表示 Office 主應用程式不支援此屬性。
@@ -67,7 +67,7 @@ function write(message){
 |:-----|:-----|:-----|:-----|
 |**Access**||Y||
 |**Excel**|Y|Y|Y|
-|**Word**|Y||Y|
+|**Word**|Y|Y|Y|
 
 |||
 |:-----|:-----|
@@ -77,7 +77,7 @@ function write(message){
 |**文件庫**|Office.js|
 |**命名空間**|Office|
 
-## 支援歷程記錄
+## <a name="support-history"></a>支援歷程記錄
 
 
 

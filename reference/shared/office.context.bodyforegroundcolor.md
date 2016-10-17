@@ -1,5 +1,5 @@
 
-# officeTheme.bodyForegroundColor 屬性
+# <a name="officetheme.bodyforegroundcolor-property"></a>officeTheme.bodyForegroundColor 屬性
 取得 Office 佈景主題內容前景色彩。
 
  **重要事項：**此 API 目前只能在 Windows 桌面上，用於 [Office 2016 Preview](https://products.office.com/en-us/office-2016-preview) 的 Excel、Outlook、PowerPoint 和 Word 中。
@@ -7,7 +7,7 @@
 
 |||
 |:-----|:-----|
-|**主機︰**|Excel、Outlook、PowerPoint、Word|
+|**主應用程式︰**|Excel、Outlook、PowerPoint、Word|
 |**可用於[需求集合](../../docs/overview/specify-office-hosts-and-api-requirements.md)**|不在集合中|
 |**已新增於**|1.3|
 
@@ -18,17 +18,17 @@ var bodyForegroundColor = Office.context.officeTheme.bodyForegroundColor;
 ```
 
 
-## 傳回值
+## <a name="return-value"></a>傳回值
 
 十六進位彩色三元組。
 
 
-## 備註
+## <a name="remarks"></a>備註
 
 傳回的色彩對應於使用者透過 **[檔案]**  >  **[Office 帳戶]**  >  **[Office 佈景主題]** UI 所選取的 Office 佈景主題值 (套用於所有 Office 主應用程式)。
 
 
-## 支援詳細資料
+## <a name="support-details"></a>支援詳細資料
 
 
 下列矩陣中的大寫 Y，表示在相對應的 Office 主應用程式中支援此方法。空白儲存格表示 Office 主應用程式不支援此方法。
@@ -53,7 +53,7 @@ var bodyForegroundColor = Office.context.officeTheme.bodyForegroundColor;
 |**文件庫**|Office.js|
 |**命名空間**|Office|
 
-## 支援歷程記錄
+## <a name="support-history"></a>支援歷程記錄
 
 
 

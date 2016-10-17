@@ -1,10 +1,10 @@
 
-# NodeDeletedEventArgs.oldNextSibling 屬性
+# <a name="nodedeletedeventargs.oldnextsibling-property"></a>NodeDeletedEventArgs.oldNextSibling 屬性
 取得剛從 **CustomXMLPart** 物件中刪除的節點，先前的下個同層級。
 
 |||
 |:-----|:-----|
-|**主機︰**|Word|
+|**主應用程式︰**|Word|
 |**可用於[需求集合](../../docs/overview/specify-office-hosts-and-api-requirements.md)**|CustomXmlParts|
 |**已新增於**|1.1|
 
@@ -13,12 +13,12 @@ var myNode = eventArgsObj.oldNextSibling;
 ```
 
 
-## 傳回值
+## <a name="return-value"></a>傳回值
 
 [CustomXmlNode](../../reference/shared/customxmlnode.customxmlnode.md)，表示剛刪除節點之先前的下個同層級。
 
 
-## 支援詳細資料
+## <a name="support-details"></a>支援詳細資料
 
 
 下列矩陣中的大寫 Y，表示在相對應的 Office 主應用程式中支援此屬性。空白儲存格表示 Office 主應用程式不支援此屬性。
@@ -27,7 +27,7 @@ var myNode = eventArgsObj.oldNextSibling;
 
 ||**Office for Windows desktop**|**Office Online (在瀏覽器中)**|**Office for iPad**|
 |:-----|:-----|:-----|:-----|
-|**Word**|Y||Y|
+|**Word**|Y|Y|Y|
 
 |||
 |:-----|:-----|
@@ -37,7 +37,7 @@ var myNode = eventArgsObj.oldNextSibling;
 |**文件庫**|Office.js|
 |**命名空間**|Office|
 
-## 支援歷程記錄
+## <a name="support-history"></a>支援歷程記錄
 
 
 

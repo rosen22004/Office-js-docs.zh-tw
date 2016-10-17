@@ -1,5 +1,5 @@
 
-# 在 Exchange 中使用識別權杖以從 Outlook 增益集呼叫服務
+# <a name="call-a-service-from-an-outlook-add-in-by-using-an-identity-token-in-exchange"></a>在 Exchange 中使用識別權杖以從 Outlook 增益集呼叫服務
 
 識別權杖會為每個您可用來個人化您所提供的服務的客戶提供的唯一識別項。藉由使用會傳回字串至 Outlook 增益集的非同步方法呼叫，您的程式碼可以向 Exchange Server 要求識別權杖。字串包含 JSON Web 權杖 (JWT) 的識別權杖。增益集不需要解壓縮權杖。相反地，它會將權杖傳遞到您的 web 服務，讓您的服務可以驗證來自增益集的要求。
 
@@ -7,7 +7,7 @@
 
 將識別權杖加入增益集傳送的服務要求很簡單。您要求權杖、使用權杖，然後再使用 web 服務回應。以下是您使用 **XmlHttpRequest** 方法傳送給您伺服器的簡單 XML 文件的外觀。
 
-## 從您的 Exchange Server 要求權杖
+## <a name="request-a-token-from-your-exchange-server"></a>從您的 Exchange Server 要求權杖
 
 
 這個簡單的增益集初始化方法使用 **getUserIdentityTokenAsync** 方法，從 Exchange Server 要求識別權杖。_getUserIdentityToken_ 參數是對伺服器的非同步要求傳回時所呼叫的函數。請參閱下一個步驟以了解回撥方法。
@@ -29,7 +29,7 @@ Office.initialize = function () {
 ```
 
 
-## 使用識別權杖
+## <a name="use-the-identity-token"></a>使用識別權杖
 
 
 **getUserIdentityTokenAsync** 方法的回撥函數具有一個在其 **value** 屬性中包含使用者識別權杖的參數。
@@ -57,7 +57,7 @@ function getUserIdentityTokenCallback(asyncResult) {
 ```
 
 
-## 使用 web 服務回應
+## <a name="use-the-web-service-response"></a>使用 web 服務回應
 
 
 這是處理來自 web 服務的回應的其他簡單函數。其依照 **XHMHttpResponse** 回撥函數的標準模式。它會等候整個來自 web 服務的回應傳入，然後將回應的內容放在增益集的 UI 上。這個函數剖析的回應是來自 web 服務的回應。如需有關此回應的資訊，請參閱[驗證 Exchange 識別權杖](../outlook/validate-an-identity-token.md)。 
@@ -86,7 +86,7 @@ function readyStateChange() {
 ```
 
 
-## 範例：使用識別權杖呼叫 web 服務
+## <a name="example:-calling-a-web-service-with-identity-tokens"></a>範例：使用識別權杖呼叫 web 服務
 
 
 識別權杖會提供關於呼叫您的服務到您的伺服器上執行的 web 服務用戶端的識別資訊。若要使用識別權杖，需要具備下列項目︰
@@ -101,7 +101,7 @@ function readyStateChange() {
   - [驗證 Exchange 識別權杖](../outlook/validate-an-identity-token.md) -- 如果您在撰寫您自己的驗證程式碼。
     
 
-### 範例增益集的程式碼
+### <a name="code-for-the-sample-add-in"></a>範例增益集的程式碼
 
 
 本文所述的增益集需要下列檔案︰
@@ -114,7 +114,7 @@ function readyStateChange() {
 您也需要識別測試 web 服務。如需有關該 web 服務的資訊，請參閱[驗證 Exchange 識別權杖](../outlook/validate-an-identity-token.md)。
 
 
-#### IdentityTest.js
+#### <a name="identitytest.js"></a>IdentityTest.js
 
 下列範例顯示 IdentityTest.js 檔案。
 
@@ -169,7 +169,7 @@ function readyStateChange() {
 ```
 
 
-#### IdentityTest.html
+#### <a name="identitytest.html"></a>IdentityTest.html
 
 下列範例顯示 IdentityTest.html 檔案。
 
@@ -272,7 +272,7 @@ function readyStateChange() {
 ```
 
 
-## 後續步驟
+## <a name="next-steps"></a>後續步驟
 
 
 既然您知道如何要求識別權杖，您需要使用要求的伺服器端的權杖。下列文章會協助您快速入門︰
@@ -285,7 +285,7 @@ function readyStateChange() {
 - [使用 Exchange 的識別權杖來驗證使用者](../outlook/authenticate-a-user-with-an-identity-token.md)
     
 
-## 其他資源
+## <a name="additional-resources"></a>其他資源
 
 
 

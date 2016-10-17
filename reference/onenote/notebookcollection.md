@@ -1,52 +1,52 @@
-﻿# NotebookCollection 物件 (適用於 OneNote 的 JavaScript API)
+# <a name="notebookcollection-object-(javascript-api-for-onenote)"></a>NotebookCollection 物件 (適用於 OneNote 的 JavaScript API)
 
 _適用於：OneNote Online_  
 
 
 代表筆記本的集合。
 
-## 屬性
+## <a name="properties"></a>屬性
 
-| 屬性	     | 類型	   |說明|意見反應|
+| 屬性	     | 類型	   |描述|意見反應|
 |:---------------|:--------|:----------|:-------|
-|Count|int|傳回集合中的筆記本數目。唯讀。|[執行](https://github.com/OfficeDev/office-js-docs/issues/new?title=OneNote-notebookCollection-count)|
-|項目|[Notebook[]](notebook.md)|Notebook 物件的集合。唯讀。|[執行](https://github.com/OfficeDev/office-js-docs/issues/new?title=OneNote-notebookCollection-items)|
+|Count|int|傳回集合中的筆記本數目。唯讀。|[移至](https://github.com/OfficeDev/office-js-docs/issues/new?title=OneNote-notebookCollection-count)|
+|items|[Notebook[]](notebook.md)|Notebook 物件的集合。唯讀。|[移至](https://github.com/OfficeDev/office-js-docs/issues/new?title=OneNote-notebookCollection-items)|
 
-_請參閱屬性存取[範例。](#範例)_
+_請參閱屬性存取[範例。](#property-access-examples)_
 
-## 關聯性
+## <a name="relationships"></a>關聯性
 無
 
 
-## 方法
+## <a name="methods"></a>方法
 
-| 方法           | 傳回類型    |說明| 意見反應|
+| 方法           | 傳回類型    |描述| 意見反應|
 |:---------------|:--------|:----------|:-------|
-|[getByName(name: string)](#getbynamename-string)|[NotebookCollection](notebookcollection.md)|取得具有指定名稱，在應用程式執行個體中開啟的筆記本集合。|[執行](https://github.com/OfficeDev/office-js-docs/issues/new?title=OneNote-notebookCollection-getByName)|
-|[getItem(index: number or string)](#getitemindex-number-or-string)|[筆記本](notebook.md)|藉由識別碼或藉由其集合中的索引，來取得筆記本。唯讀。|[執行](https://github.com/OfficeDev/office-js-docs/issues/new?title=OneNote-notebookCollection-getItem)|
-|[getItemAt(index: number)](#getitematindex-number)|[筆記本](notebook.md)|根據筆記本在集合中的位置，取得筆記本。|[執行](https://github.com/OfficeDev/office-js-docs/issues/new?title=OneNote-notebookCollection-getItemAt)|
-|[load(param: object)](#loadparam-object)|void|以參數中指定的屬性和物件值填滿 JavaScript 層中建立的 Proxy 物件。|[執行](https://github.com/OfficeDev/office-js-docs/issues/new?title=OneNote-notebookCollection-load)|
+|[getByName(name: string)](#getbynamename-string)|[NotebookCollection](notebookcollection.md)|取得具有指定名稱，在應用程式執行個體中開啟的筆記本集合。|[移至](https://github.com/OfficeDev/office-js-docs/issues/new?title=OneNote-notebookCollection-getByName)|
+|[getItem(index: number 或 string)](#getitemindex-number-or-string)|[Notebook](notebook.md)|藉由識別碼或藉由其集合中的索引，來取得筆記本。唯讀。|[移至](https://github.com/OfficeDev/office-js-docs/issues/new?title=OneNote-notebookCollection-getItem)|
+|[getItemAt(index: number)](#getitematindex-number)|[Notebook](notebook.md)|根據筆記本在集合中的位置，取得筆記本。|[移至](https://github.com/OfficeDev/office-js-docs/issues/new?title=OneNote-notebookCollection-getItemAt)|
+|[load(param: object)](#loadparam-object)|void|以參數中指定的屬性和物件值填滿 JavaScript 層中建立的 Proxy 物件。|[移至](https://github.com/OfficeDev/office-js-docs/issues/new?title=OneNote-notebookCollection-load)|
 
-## 方法詳細資料
+## <a name="method-details"></a>方法詳細資料
 
 
-### getByName(name: string)
+### <a name="getbyname(name:-string)"></a>getByName(name: string)
 取得具有指定名稱，在應用程式執行個體中開啟的筆記本集合。
 
-#### 語法
+#### <a name="syntax"></a>語法
 ```js
 notebookCollectionObject.getByName(name);
 ```
 
-#### 參數
-| 參數	    | 類型	   |說明|
+#### <a name="parameters"></a>參數
+| 參數	    | 類型	   |描述|
 |:---------------|:--------|:----------|
 |Name|string|筆記本的名稱。|
 
-#### 傳回
+#### <a name="returns"></a>傳回
 [NotebookCollection](notebookcollection.md)
 
-#### 範例
+#### <a name="examples"></a>範例
 ```js
 OneNote.run(function (context) {
 
@@ -77,56 +77,56 @@ OneNote.run(function (context) {
 });
 ```
 
-### getItem(index: number 或 string)
+### <a name="getitem(index:-number-or-string)"></a>getItem(index: number 或 string)
 藉由識別碼或藉由其集合中的索引，來取得筆記本。唯讀。
 
-#### 語法
+#### <a name="syntax"></a>語法
 ```js
 notebookCollectionObject.getItem(index);
 ```
 
-#### 參數
-| 參數	    | 類型	   |說明|
+#### <a name="parameters"></a>參數
+| 參數	    | 類型	   |描述|
 |:---------------|:--------|:----------|
 |Index|number 或 string|筆記本的識別碼，或筆記本在集合中的索引位置。|
 
-#### 傳回
-[筆記本](notebook.md)
+#### <a name="returns"></a>傳回
+[Notebook](notebook.md)
 
-### getItemAt(index: number)
+### <a name="getitemat(index:-number)"></a>getItemAt(index: number)
 根據筆記本在集合中的位置，取得筆記本。
 
-#### 語法
+#### <a name="syntax"></a>語法
 ```js
 notebookCollectionObject.getItemAt(index);
 ```
 
-#### 參數
-| 參數	    | 類型	   |說明|
+#### <a name="parameters"></a>參數
+| 參數	    | 類型	   |描述|
 |:---------------|:--------|:----------|
 |index|number|要擷取之物件的索引值。以 0 開始編製索引。|
 
-#### 傳回
-[筆記本](notebook.md)
+#### <a name="returns"></a>傳回
+[Notebook](notebook.md)
 
-### load(param: object)
+### <a name="load(param:-object)"></a>load(param: object)
 以參數中指定的屬性和物件值填滿 JavaScript 層中建立的 Proxy 物件。
 
-#### 語法
+#### <a name="syntax"></a>語法
 ```js
 object.load(param);
 ```
 
-#### 參數
-| 參數	    | 類型	   |說明|
+#### <a name="parameters"></a>參數
+| 參數	    | 類型	   |描述|
 |:---------------|:--------|:----------|
 |param|物件|選用。接受參數與關聯性名稱，做為分隔字串或陣列。或者提供 [loadOption](loadoption.md) 物件。|
 
-#### 傳回
+#### <a name="returns"></a>傳回
 void
-### 屬性存取範例
+### <a name="property-access-examples"></a>屬性存取範例
 
-**項目**
+**items**
 ```js
 OneNote.run(function (context) {
 

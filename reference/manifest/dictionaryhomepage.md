@@ -1,11 +1,11 @@
 
-# DictionaryHomePage 項目
+# <a name="dictionaryhomepage-element"></a>DictionaryHomePage 項目
 指定字典首頁的 URL。
 
  **增益集類型︰**工作窗格
 
 
-## 語法：
+## <a name="syntax:"></a>語法：
 
 
 ```XML
@@ -13,12 +13,12 @@
 ```
 
 
-## 內含於：
+## <a name="contained-in:"></a>內含於：
 
 [Dictionary](../../reference/manifest/dictionary.md)
 
 
-## 其他資源
+## <a name="additional-resources"></a>其他資源
 
 
 

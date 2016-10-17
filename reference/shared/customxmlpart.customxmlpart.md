@@ -1,10 +1,10 @@
 
-# CustomXMLPart 物件
+# <a name="customxmlpart-object"></a>CustomXMLPart 物件
 代表 **CustomXMLParts** 集合中的單一 [CustomXMLPart](../../reference/shared/customxmlparts.customxmlparts.md)。
 
 |||
 |:-----|:-----|
-|**主機︰**|Word|
+|**主應用程式︰**|Word|
 |**可用於[需求集合](../../docs/overview/specify-office-hosts-and-api-requirements.md)**|CustomXmlParts|
 |**上次變更於**|1.1|
 
@@ -13,13 +13,13 @@ Office.context.document.customXmlParts.getByIdAsync(id);
 ```
 
 
-## 成員
+## <a name="members"></a>成員
 
 
 **屬性**
 
 
-|**名稱**|**說明**|
+|**名稱**|**描述**|
 |:-----|:-----|
 |[builtIn](../../reference/shared/customxmlpart.builtin.md)|取得一個值，指出 CustomXMLPart 是否為內建的。|
 |[id](../../reference/shared/customxmlpart.id.md)|取得 CustomXMLPart 的 GUID|
@@ -28,7 +28,7 @@ Office.context.document.customXmlParts.getByIdAsync(id);
 **方法**
 
 
-|**名稱**|**說明**|
+|**名稱**|**描述**|
 |:-----|:-----|
 |[addHandlerAsync](../../reference/shared/customxmlpart.addhandlerasync.md)|以非同步方式新增 **CustomXmlPart** 物件事件的事件處理常式。|
 |[deleteAsync](../../reference/shared/customxmlpart.deleteasync.md)|以非同步方式從集合中刪除這個自訂 XML 組件。|
@@ -39,13 +39,13 @@ Office.context.document.customXmlParts.getByIdAsync(id);
 **事件**
 
 
-|**名稱**|**說明**|
+|**名稱**|**描述**|
 |:-----|:-----|
 |[dataNodeDeleted](../../reference/shared/customxmlpart.datanodedeleted.event.md)|刪除節點時，就會發生。|
 |[dataNodeInserted](../../reference/shared/customxmlpart.datanodeinserted.event.md)|插入節點時，就會發生。|
 |[dataNodeReplaced](../../reference/shared/customxmlpart.datanodereplaced.event.md)|取代節點時，就會發生。|
 
-## 支援詳細資料
+## <a name="support-details"></a>支援詳細資料
 
 
 下列矩陣中的大寫 Y，表示在相對應的 Office 主應用程式中支援此方法。空白儲存格表示 Office 主應用程式不支援此方法。
@@ -55,7 +55,7 @@ Office.context.document.customXmlParts.getByIdAsync(id);
 
 ||**Office for Windows desktop**|**Office Online (在瀏覽器中)**|**Office for iPad**|
 |:-----|:-----|:-----|:-----|
-|**Word**|Y||Y|
+|**Word**|Y|Y|Y|
 
 |||
 |:-----|:-----|
@@ -65,7 +65,7 @@ Office.context.document.customXmlParts.getByIdAsync(id);
 |**文件庫**|Office.js|
 |**命名空間**|Office|
 
-## 支援歷程記錄
+## <a name="support-history"></a>支援歷程記錄
 
 
 

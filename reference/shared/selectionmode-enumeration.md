@@ -1,5 +1,5 @@
 
-# SelectionMode 列舉
+# <a name="selectionmode-enumeration"></a>SelectionMode 列舉
 指定使用 [Document.goToByIdAsync](../../reference/shared/document.gotobyidasync.md) 方法時，是否要選取 (醒目提示) 要瀏覽至的位置。
 
 |||
@@ -8,7 +8,7 @@
 
 |||
 |:-----|:-----|
-|**主機︰**|Excel、PowerPoint、Word|
+|**主應用程式︰**|Excel、PowerPoint、Word|
 |**已新增於**|1.1|
 
 
@@ -18,18 +18,18 @@ Office.SelectionMode
 ```
 
 
-## 成員
+## <a name="members"></a>成員
 
 
 **值**
 
 
-|**列舉**|**值**|**說明**|
+|**列舉**|**值**|**描述**|
 |:-----|:-----|:-----|
 |Office.SelectionMode.Selected|"selected"|將選取 (醒目提示) 的位置。|
 |Office.SelectionMode.None|"none"|將游標移至位置的開頭。|
 
-## 支援詳細資料
+## <a name="support-details"></a>支援詳細資料
 
 
 下列矩陣中的大寫 Y，表示在相對應的 Office 主應用程式中支援此方法。空白儲存格表示 Office 主應用程式不支援此方法。
@@ -52,7 +52,7 @@ Office.SelectionMode
 |**文件庫**|Office.js|
 |**命名空間**|Office|
 
-## 支援歷程記錄
+## <a name="support-history"></a>支援歷程記錄
 
 
 

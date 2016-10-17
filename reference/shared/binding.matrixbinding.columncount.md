@@ -1,10 +1,10 @@
 
-# MatrixBinding.columnCount 屬性
+# <a name="matrixbinding.columncount-property"></a>MatrixBinding.columnCount 屬性
 以整數值在矩陣資料結構中，取得資料欄的數目。
 
 |||
 |:-----|:-----|
-|**主機︰**|Access、Excel、PowerPoint、Project、Word|
+|**主應用程式︰**|Access、Excel、PowerPoint、Project、Word|
 |**可用於[需求集合](../../docs/overview/specify-office-hosts-and-api-requirements.md)**|MatrixBindings|
 |**上次變更於 Selection**|1.1|
 
@@ -13,12 +13,12 @@ var colCount = bindingObj.columnCount;
 ```
 
 
-## 傳回值
+## <a name="return-value"></a>傳回值
 
 在指定之 [MatrixBinding](../../reference/shared/binding.matrixbinding.md) 物件中的資料欄數目。
 
 
-## 範例
+## <a name="example"></a>範例
 
 
 
@@ -38,7 +38,7 @@ function write(message){
 
 
 
-## 支援詳細資料
+## <a name="support-details"></a>支援詳細資料
 
 
 下列矩陣中的大寫 Y，表示在相對應的 Office 主應用程式中支援此方法。空白儲存格表示 Office 主應用程式不支援此方法。
@@ -52,7 +52,7 @@ function write(message){
 ||**Office for Windows desktop**|**Office Online (在瀏覽器中)**|**Office for iPad**|
 |:-----|:-----|:-----|:-----|
 |**Excel**|Y|Y|Y|
-|**Word**|Y||Y|
+|**Word**|Y|Y|Y|
 
 |||
 |:-----|:-----|
@@ -62,7 +62,7 @@ function write(message){
 |**文件庫**|Office.js|
 |**命名空間**|Office|
 
-## 支援歷程記錄
+## <a name="support-history"></a>支援歷程記錄
 
 |**版本**|**變更**|
 |:-----|:-----|

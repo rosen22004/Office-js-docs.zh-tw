@@ -1,15 +1,15 @@
 
-# LabsJS.Labs.CommandType
+# <a name="labsjs.labs.commandtype"></a>LabsJS.Labs.CommandType
 提供 LabsJS Labs.CommandType JavaScript API 的高階檢視。
 
  _**適用於︰**Office 的應用程式 | Office 增益集 | Office Mix | PowerPoint_
 
 **Labs.CommandType** 模組成員只包含宣告為代表支援之命令類型的字串變數。
 
-## CommandType 變數
+## <a name="commandtype-variables"></a>CommandType 變數
 
 
-|變數|說明|
+|變數|描述|
 |:-----|:-----|
 | `var Connect: string`||
 | `var Disconnect: string`||

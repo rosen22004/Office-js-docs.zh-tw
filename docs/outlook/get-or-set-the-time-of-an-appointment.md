@@ -1,5 +1,5 @@
 
-# 在 Outlook 中撰寫約會時，取得或設定時間
+# <a name="get-or-set-the-time-when-composing-an-appointment-in-outlook"></a>在 Outlook 中撰寫約會時，取得或設定時間
 
 Office 的 JavaScript API 提供非同步方法 ([Time.getAsync](../../reference/outlook/Time.md) 與 [Time.setAsync](../../reference/outlook/Time.md)) 來取得及設定使用者正在撰寫的郵件或約會的開始或結束時間。這些非同步方法僅供撰寫增益集使用。若要使用這些方法，請確定您已正確設定適用於 Outlook 的增益集資訊清單以啟動撰寫表單中的增益集，如[建立撰寫格式的 Outlook 增益集](../outlook/compose-scenario.md)中所述。
 
@@ -42,7 +42,7 @@ item.end.getAsync
 如同適用於 Office 的 JavaScript API 中大部分的非同步方法，**getAsync** 和 **setAsync** 接受選擇性輸入參數。如需有關指定這些選擇性輸入參數的詳細資訊，請參閱 [Office 增益集中的非同步程式設計](../../docs/develop/asynchronous-programming-in-office-add-ins.md#passing-optional-parameters-inline)中的[將選擇性參數傳遞至非同步方法](../../docs/develop/asynchronous-programming-in-office-add-ins.md)。
 
 
-## 若要取得開始或結束時間
+## <a name="to-get-the-start-or-end-time"></a>若要取得開始或結束時間
 
 
 本章節會顯示取得使用者正在撰寫的約會開始時間，及顯示時間的程式碼範例。您可以使用相同的程式碼，並以 **end** 屬性取代 **start** 屬性來取得結束時間。這個程式碼範例假設增益集資訊清單中啟動約會撰寫表單中的增益集的規則，如下所示。
@@ -94,7 +94,7 @@ function write(message){
 ```
 
 
-## 若要設定開始或結束時間
+## <a name="to-set-the-start-or-end-time"></a>若要設定開始或結束時間
 
 
 本章節會顯示設定使用者正在撰寫的約會開始時間，或使用者正在撰寫的郵件的程式碼範例。您可以使用相同的程式碼，並以 **end** 屬性取代 **start** 屬性來設定結束時間。請注意，如果約會撰寫表單已經有現有的開始時間，接下來設定開始時間會調整結束時間以維持約會的任何先前的期間。如果約會撰寫表單已經有現有的結束時間，接下來設定結束時間會調整期間及結束時間。如果約會已經設定為全天事件，則設定開始時間會將結束時間調整為晚 24 小時，並取消選取撰寫表單中全天事件的 UI。
@@ -145,7 +145,7 @@ function write(message){
 ```
 
 
-## 其他資源
+## <a name="additional-resources"></a>其他資源
 
 
 

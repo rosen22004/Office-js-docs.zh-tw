@@ -1,5 +1,5 @@
 
-# Labs.Core.ILabObject
+# <a name="labs.core.ilabobject"></a>Labs.Core.ILabObject
 
  _**適用於︰**Office 的應用程式 | Office 增益集 | Office Mix | PowerPoint_
 
@@ -10,7 +10,7 @@ interface ILabObject
 ```
 
 
-## 欄位
+## <a name="fields"></a>欄位
 
 
 |||

@@ -1,17 +1,18 @@
-# SearchOptions 物件 (適用於 Word 的 JavaScript API)
+# <a name="searchoptions-object-(javascript-api-for-word)"></a>SearchOptions 物件 (適用於 Word 的 JavaScript API)
 
 指定搜尋作業中要包含的選項。
 
-_適用版本：Word 2016、Word for iPad、Word for Mac_
+_適用於：Word 2016、Word for iPad、Word for Mac、Word Online_
 
-## 屬性
-| 屬性	     | 類型	   |說明
+## <a name="properties"></a>屬性
+| 屬性	     | 類型	   |描述
 |:---------------|:--------|:----------|
 |ignorePunct|bool|取得或設定值，指出是否忽略文字之間的所有標點符號。相當於 [尋找及取代] 對話方塊中的 [略過標點符號] 核取方塊。|
 |ignoreSpace|bool|取得或設定值，指出是否忽略文字之間的所有空格。相當於 [尋找及取代] 對話方塊中的 [略過空格字元] 核取方塊。|
 |matchCase|bool|取得或設定值，指出是否執行區分大小寫的搜尋。相當於 [尋找及取代] 對話方塊 ([編輯] 功能表) 中的 [大小寫須相符] 核取方塊。|
 |matchPrefix|bool|取得或設定值，指出是否比對符合搜尋字串開頭的文字。相當於 [尋找及取代] 對話方塊中的 [前置詞須相符] 核取方塊。|
-|matchSoundsLike|bool|**此選項已在 2016 年 6 月更新中被取代**。 取得或設定值，指出是否尋找發音類似於搜尋字串的文字。 相當於 [尋找及取代] 對話方塊中的 [類似拼音 ] 核取方塊|
+|matchSoundsLike|bool|
+  **此選項已在 2016 年 6 月更新中被取代**。取得或設定值，指出是否尋找發音類似於搜尋字串的文字。相當於 [尋找及取代] 對話方塊中的 [類似拼音 ] 核取方塊|
 |matchSuffix|bool|取得或設定值，指出是否比對符合搜尋字串結尾的文字。相當於 [尋找及取代] 對話方塊中的 [後置詞須相符] 核取方塊。|
 |matchWholeWord|bool|取得或設定值，指出是否只尋找整個字，而非屬於較長字詞一部分的文字。相當於 [尋找及取代] 對話方塊中的 [全字拼寫須相符] 核取方塊。|
 |matchWildCards|bool|取得或設定值，指出是否使用特殊搜尋運算子來執行搜尋。相當於 [尋找及取代] 對話方塊中的 [使用萬用字元] 核取方塊。|
@@ -26,37 +27,37 @@ _請參閱屬性存取[範例。](#property-access-examples)_
 
 您可以用物件常值提供一或多個搜尋選項屬性，來指定搜尋選項。 
 
-## 關聯性
+## <a name="relationships"></a>關聯性
 無
 
 
-## 方法
+## <a name="methods"></a>方法
 
-| 方法           | 傳回類型    |說明|
+| 方法           | 傳回類型    |描述|
 |:---------------|:--------|:----------|
 |[load(param: object)](#loadparam-object)|void|以參數中指定的屬性和物件值填滿 JavaScript 層中建立的 Proxy 物件。|
 
-## 方法詳細資料
+## <a name="method-details"></a>方法詳細資料
 
-### load(param: object)
+### <a name="load(param:-object)"></a>load(param: object)
 以參數中指定的屬性和物件值填滿 JavaScript 層中建立的 Proxy 物件。
 
-#### 語法
+#### <a name="syntax"></a>語法
 ```js
 object.load(param);
 ```
 
-#### 參數
-| 參數	    | 類型	   |說明|
+#### <a name="parameters"></a>參數
+| 參數	    | 類型	   |描述|
 |:---------------|:--------|:----------|
 |param|物件|選用。接受參數與關聯性名稱，做為分隔字串或陣列。或者提供 [loadOption](loadoption.md) 物件。|
 
-#### 傳回
+#### <a name="returns"></a>傳回
 void
 
-## 屬性存取範例
+## <a name="property-access-examples"></a>屬性存取範例
 
-### 忽略標點符號搜尋
+### <a name="ignore-punctuation-search"></a>忽略標點符號搜尋
 ```js
 // Run a batch operation against the Word object model.
 Word.run(function (context) {
@@ -92,7 +93,7 @@ Word.run(function (context) {
 });
 ```
 
-### 根據前置詞進行搜尋
+### <a name="search-based-on-a-prefix"></a>根據前置詞進行搜尋
 ```js
 // Run a batch operation against the Word object model.
 Word.run(function (context) {
@@ -128,7 +129,7 @@ Word.run(function (context) {
 });
 ```
 
-### 根據後置詞進行搜尋
+### <a name="search-based-on-a-suffix"></a>根據後置詞進行搜尋
 ```js
 // Run a batch operation against the Word object model.
 Word.run(function (context) {
@@ -164,7 +165,7 @@ Word.run(function (context) {
 });
 ```
 
-### 使用萬用字元搜尋
+### <a name="search-using-a-wildcard"></a>使用萬用字元搜尋
 ```js
 // Run a batch operation against the Word object model.
 Word.run(function (context) {
@@ -202,7 +203,7 @@ Word.run(function (context) {
 ```
 
 
-## 萬用字元指引 
+## <a name="wildcard-guidance"></a>萬用字元指引 
 
 | 尋找：         | 萬用字元 |  範例 |
 |:-----------------|:--------|:----------|
@@ -219,5 +220,5 @@ Word.run(function (context) {
 |前一字元或運算式的一或多發生次數|@ |lo@t 可尋找 lot 和 loot。|
 
 
-## 支援詳細資料
+## <a name="support-details"></a>支援詳細資料
 在執行階段檢查使用[需求集](../office-add-in-requirement-sets.md)以確認您的應用程式受到 Word 主應用程式版本的支援。如需有關 Office 主應用程式及伺服器需求的詳細資訊，請參閱[執行 Office 增益集的需求](../../docs/overview/requirements-for-running-office-add-ins.md)。

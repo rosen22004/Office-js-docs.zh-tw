@@ -1,5 +1,5 @@
 
-# Labs.Core.Permissions
+# <a name="labs.core.permissions"></a>Labs.Core.Permissions
 
  _**適用於︰**Office 的應用程式 | Office 增益集 | Office Mix | PowerPoint_
 
@@ -10,7 +10,7 @@ class Permissions
 ```
 
 
-## 值
+## <a name="values"></a>值
 
 
 |||

@@ -1,46 +1,46 @@
-﻿# TableRow 物件 (適用於 Excel 的 JavaScript API)
+# <a name="tablerow-object-(javascript-api-for-excel)"></a>TableRow 物件 (適用於 Excel 的 JavaScript API)
 
 代表表格中的一列。
 
-## 屬性
+## <a name="properties"></a>屬性
 
-| 屬性	     | 類型	   |說明
+| 屬性	     | 類型	   |描述
 |:---------------|:--------|:----------|
 |index|int|傳回表格列集合中列的索引編號。以 0 開始編製索引。唯讀。|
 |values|object[][]|代表所指定範圍的原始值。傳回的資料可能是 string、number 或 boolean 類型。包含錯誤的儲存格會傳回錯誤字串。|
 
-_請參閱屬性存取[範例。](#範例)_
+_請參閱屬性存取[範例。](#property-access-examples)_
 
-## 關聯性
+## <a name="relationships"></a>關聯性
 無
 
 
-## 方法
+## <a name="methods"></a>方法
 
-| 方法           | 傳回類型    |說明|
+| 方法           | 傳回類型    |描述|
 |:---------------|:--------|:----------|
 |[delete()](#delete)|void|從表格中刪除列。|
-|[getRange()](#getrange)|[範圍](range.md)|傳回與整個列相關的 range 物件。|
+|[getRange()](#getrange)|[Range](range.md)|傳回與整個列相關的 range 物件。|
 |[load(param: object)](#loadparam-object)|void|以參數中指定的屬性和物件值填滿 JavaScript 層中建立的 Proxy 物件。|
 
-## 方法詳細資料
+## <a name="method-details"></a>方法詳細資料
 
 
-### delete()
+### <a name="delete()"></a>delete()
 從表格中刪除列。
 
-#### 語法
+#### <a name="syntax"></a>語法
 ```js
 tableRowObject.delete();
 ```
 
-#### 參數
+#### <a name="parameters"></a>參數
 無
 
-#### 傳回
+#### <a name="returns"></a>傳回
 void
 
-#### 範例
+#### <a name="examples"></a>範例
 
 ```js
 Excel.run(function (ctx) { 
@@ -58,21 +58,21 @@ Excel.run(function (ctx) {
 ```
 
 
-### getRange()
+### <a name="getrange()"></a>getRange()
 傳回與整個列相關的 range 物件。
 
-#### 語法
+#### <a name="syntax"></a>語法
 ```js
 tableRowObject.getRange();
 ```
 
-#### 參數
+#### <a name="parameters"></a>參數
 無
 
-#### 傳回
-[範圍](range.md)
+#### <a name="returns"></a>傳回
+[Range](range.md)
 
-#### 範例
+#### <a name="examples"></a>範例
 
 ```js
 Excel.run(function (ctx) { 
@@ -92,22 +92,22 @@ Excel.run(function (ctx) {
 ```
 
 
-### load(param: object)
+### <a name="load(param:-object)"></a>load(param: object)
 以參數中指定的屬性和物件值填滿 JavaScript 層中建立的 Proxy 物件。
 
-#### 語法
+#### <a name="syntax"></a>語法
 ```js
 object.load(param);
 ```
 
-#### 參數
-| 參數	    | 類型	   |說明|
+#### <a name="parameters"></a>參數
+| 參數	    | 類型	   |描述|
 |:---------------|:--------|:----------|
 |param|物件|選用。接受參數與關聯性名稱，做為分隔字串或陣列。或者提供 [loadOption](loadoption.md) 物件。|
 
-#### 傳回
+#### <a name="returns"></a>傳回
 void
-### 屬性存取範例
+### <a name="property-access-examples"></a>屬性存取範例
 
 ```js
 Excel.run(function (ctx) { 

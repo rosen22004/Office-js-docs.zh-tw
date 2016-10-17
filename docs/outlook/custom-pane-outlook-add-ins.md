@@ -1,5 +1,5 @@
 
-# 自訂窗格 Outlook 增益集
+# <a name="custom-pane-outlook-add-ins"></a>自訂窗格 Outlook 增益集
 
 自訂窗格是增益集的擴充點，當目前選取的項目上符合特定條件時會啟動。其在 **VersionOverrides** 元素的增益集資訊清單中進行定義，連同任何由增益集所實作的增益集命令。如需詳細資訊，請參閱[定義 Outlook 增益集資訊清單中的增益集命令](../outlook/manifests/define-add-in-commands.md)。自訂窗格只能出現在讀取的郵件或約會出席者檢視中。它會在增益集列中顯示一個項目。當使用者按一下項目時，自訂窗格會以水平方向顯示在項目本文的上方。外觀和行為與不會實作增益集命令的讀取模式增益集相同。
 
@@ -33,7 +33,7 @@
   **Rule** 指定增益集啟動時指定的規則或規則集合。其與 [Outlook 增益集資訊清單](../outlook/manifests/manifests.md)中所定義的相同，除了 [ItemIs](http://msdn.microsoft.com/en-us/library/f7dac4a3-1574-9671-1eda-47f092390669%28Office.15%29.aspx) 規則具有以下變更：**ItemType** 是「Message」或「AppointmentAttendee」，且沒有 **FormType** 屬性。如需詳細資訊，請參閱 [Outlook 增益集的啟用規則](../outlook/manifests/activation-rules.md)。
     
 
-## 其他資源
+## <a name="additional-resources"></a>其他資源
 
 
 

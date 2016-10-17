@@ -1,9 +1,9 @@
 
-# 使用 Exchange 識別權杖來驗證 Outlook 增益集
+# <a name="authenticate-an-outlook-add-in-by-using-exchange-identity-tokens"></a>使用 Exchange 識別權杖來驗證 Outlook 增益集
 
 Outlook 增益集可以提供客戶來自網際網路上任何位置的資訊，無論是來自主控增益集的伺服器、來自您的內部網路或雲端中某處。不過，如果該資訊受到保護，您的增益集需要一個方式，將 Exchange 電子郵件帳戶與您的資訊服務產生關聯。藉由提供可識別提出要求之電子郵件帳戶的權杖，Exchange 2013 可以為您的增益集啟用單一登入 (SSO)。您可以將這個權杖與您的應用程式已註冊的使用者產生關聯，使得每當增益集連線到您的服務時即可識別使用者。
 
-## 識別權杖
+## <a name="identity-tokens"></a>識別權杖
 
 
 我們的範例增益集中有兩個使用可公開取得的資訊 - 一個對郵件的地址顯示 Bing 地圖，另一個在郵件中顯示 YouTube 視訊連結的預覽。但您的增益集也可以存取非公開資訊。您可以使用主控增益集的伺服器，將您的增益集連結至內部網路或雲端中某處的資訊。
@@ -36,7 +36,7 @@ Outlook 增益集可以提供客戶來自網際網路上任何位置的資訊，
 - [使用 Exchange 的識別權杖來驗證使用者](../outlook/validate-an-identity-token.md)
 
 
-## 其他資源
+## <a name="additional-resources"></a>其他資源
 
 
 

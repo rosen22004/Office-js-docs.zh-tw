@@ -1,10 +1,10 @@
 
-# NodeInsertedEventArgs 物件
+# <a name="nodeinsertedeventargs-object"></a>NodeInsertedEventArgs 物件
 提供引發 [dataNodeInserted](../../reference/shared/customxmlpart.datanodeinserted.event.md) 事件之插入節點的相關資訊。
 
 |||
 |:-----|:-----|
-|**主機︰**|Word|
+|**主應用程式︰**|Word|
 |**可用於[需求集合](../../docs/overview/specify-office-hosts-and-api-requirements.md)**|CustomXmlParts|
 |**上次變更於**|1.1|
 
@@ -13,18 +13,18 @@ NodeInsertedEventArgs
 ```
 
 
-## 成員
+## <a name="members"></a>成員
 
 
 **屬性**
 
 
-|**名稱**|**說明**|
+|**名稱**|**描述**|
 |:-----|:-----|
 |[isUndoRedo](../../reference/shared/customxmlpart.isundoredo.md)|取得關於使用者是否將插入節點，當做 [復原/取消復原] 動作的一部分的資訊。|
 |[newNode](../../reference/shared/customxmlpart.newnode.md)|取得剛加入 **CustomXMLPart** 物件的節點。|
 
-## 支援詳細資料
+## <a name="support-details"></a>支援詳細資料
 
 
 下列矩陣中的大寫 Y，表示在相對應的 Office 主應用程式中支援此物件。空白儲存格表示 Office 主應用程式不支援此物件。
@@ -34,7 +34,7 @@ NodeInsertedEventArgs
 
 ||**Office for Windows desktop**|**Office Online (在瀏覽器中)**|**Office for iPad**|
 |:-----|:-----|:-----|:-----|
-|**Word**|Y||Y|
+|**Word**|Y|Y|Y|
 
 |||
 |:-----|:-----|
@@ -44,7 +44,7 @@ NodeInsertedEventArgs
 |**文件庫**|Office.js|
 |**命名空間**|Office|
 
-## 支援歷程記錄
+## <a name="support-history"></a>支援歷程記錄
 
 
 

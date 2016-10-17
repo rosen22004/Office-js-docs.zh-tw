@@ -1,5 +1,5 @@
 
-# Labs.Core.GetActions 變數
+# <a name="labs.core.getactions-variables"></a>Labs.Core.GetActions 變數
 Labs.js API 的 Labs.Core.Actions 模組中的變數宣告。
 
  _**適用於︰**Office 的應用程式 | Office 增益集 | Office Mix | PowerPoint_

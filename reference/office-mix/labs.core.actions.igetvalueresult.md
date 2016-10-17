@@ -1,5 +1,5 @@
 
-# Labs.Core.Actions.IGetValueResult
+# <a name="labs.core.actions.igetvalueresult"></a>Labs.Core.Actions.IGetValueResult
 
  _**適用於︰**Office 的應用程式 | Office 增益集 | Office Mix | PowerPoint_
 
@@ -10,7 +10,7 @@ interface IGetValueResult extends Core.IActionResult
 ```
 
 
-## 屬性
+## <a name="properties"></a>屬性
 
 
 |||

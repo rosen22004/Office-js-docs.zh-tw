@@ -1,10 +1,10 @@
 
-# Document 物件
+# <a name="document-object"></a>Document 物件
 代表在與增益集互動之文件的抽象類別。
 
 |||
 |:-----|:-----|
-|**主機︰**|Access、Excel、PowerPoint、Project、Word|
+|**主應用程式︰**|Access、Excel、PowerPoint、Project、Word|
 |**已新增於**|1.0|
 |**上次變更於**|1.1|
 
@@ -13,24 +13,24 @@ Office.context.document
 ```
 
 
-## 成員
+## <a name="members"></a>成員
 
 
 **屬性**
 
 
-|**名稱**|**說明**|**支援附註**|
+|**名稱**|**描述**|**支援附註**|
 |:-----|:-----|:-----|
 |[bindings](../../reference/shared/document.bindings.md)|取得提供文件中所定義的繫結存取的物件。|在 1.1 中，新增對 Access 內容增益集的支援。|
 |[customXmlParts](../../reference/shared/document.customxmlparts.md)|取得在文件中代表自訂 XML 組件的物件。||
-|[模式](../../reference/shared/document.mode.md)|取得文件所在的模式。|在 1.1 中，新增對 Access 內容增益集的支援。|
-|[設定](../../reference/shared/document.settings.md)|取得代表目前文件的內容或工作窗格增益集的已儲存自訂設定的物件。|在 1.1 中，新增對 Access 內容增益集的支援。|
-|[URL](../../reference/shared/document.url.md)|取得主應用程式目前已開啟的文件 URL。|在 1.1 中，新增對 Access 內容增益集的支援。|
+|[mode](../../reference/shared/document.mode.md)|取得文件所在的模式。|在 1.1 中，新增對 Access 內容增益集的支援。|
+|[settings](../../reference/shared/document.settings.md)|取得代表目前文件的內容或工作窗格增益集的已儲存自訂設定的物件。|在 1.1 中，新增對 Access 內容增益集的支援。|
+|[url](../../reference/shared/document.url.md)|取得主應用程式目前已開啟的文件 URL。|在 1.1 中，新增對 Access 內容增益集的支援。|
 
 **方法**
 
 
-|**名稱**|**說明**|**支援附註**|
+|**名稱**|**描述**|**支援附註**|
 |:-----|:-----|:-----|
 |[addHandlerAsync](../../reference/shared/document.addhandlerasync.md)|新增 **Document** 物件事件的事件處理常式。||
 |[getActiveViewAsync](../../reference/shared/document.getactiveviewasync.md)|傳回簡報的目前檢視。|在 1.1 中，新增支援 [PowerPoint 的增益集](../../docs/powerpoint/powerpoint-add-ins.md)。|
@@ -41,20 +41,20 @@ Office.context.document
 |[removeHandlerAsync](../../reference/shared/document.removehandlerasync.md)|移除 **Document** 物件事件的事件處理常式。||
 |[setSelectedDataAsync](../../reference/shared/document.setselecteddataasync.md)|將資料寫入文件中目前的選取範圍。|在 1.1 中，新增支援[在 Excel 增益集中寫入資料時，在選取的表格上設定格式](../../docs/excel/format-tables-in-add-ins-for-excel.md)。|
 
-**事件**
+**件**
 
 
-|**名稱**|**說明**|**支援附註**||
+|**名稱**|**描述**|**支援附註**||
 |:-----|:-----|:-----|:-----|
 |[ActiveViewChanged](../../reference/shared/document.activeviewchanged.md)|使用者變更文件目前的檢視時，就會發生。|在 1.1 中，新增支援 PowerPoint 的增益集。||
 |[SelectionChanged](../../reference/shared/document.selectionchanged.event.md)|文件中的選取項目變更時，就會發生。|||
 
-## 備註
+## <a name="remarks"></a>備註
 
 您在指令碼中未直接具現化 **Document** 物件。若要呼叫 **Document** 物件的成員，以與目前文件或工作表互動，請在指令碼中使用 `Office.context.document`。
 
 
-## 範例
+## <a name="example"></a>範例
 
 下列範例使用**Document** 物件的 **getSelectedDataAsync** 方法，以擷取使用者目前選擇做為文字，然後將其顯示在增益集頁面中。
 
@@ -82,7 +82,7 @@ function write(message){
 
 
 
-## 支援詳細資料
+## <a name="support-details"></a>支援詳細資料
 
 
 支援 **Document** 物件的每個 API 成員在 Office 主應用程式之間有所不同。如需瞭解主機支援資訊，請參閱每個成員主題的「支援詳細資料」一節。

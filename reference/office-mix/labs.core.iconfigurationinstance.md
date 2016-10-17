@@ -1,5 +1,5 @@
 
-# Labs.Core.IConfigurationInstance
+# <a name="labs.core.iconfigurationinstance"></a>Labs.Core.IConfigurationInstance
 
  _**適用於︰**Office 的應用程式 | Office 增益集 | Office Mix | PowerPoint_
 
@@ -10,7 +10,7 @@ interface IConfigurationInstance extends Core.IUserData
 ```
 
 
-## 屬性
+## <a name="properties"></a>屬性
 
 
 |||

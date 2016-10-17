@@ -1,5 +1,5 @@
 
-# Labs.Components.IChoiceComponentInstance
+# <a name="labs.components.ichoicecomponentinstance"></a>Labs.Components.IChoiceComponentInstance
 
  _**適用於︰**Office 的應用程式 | Office 增益集 | Office Mix | PowerPoint_
 
@@ -10,10 +10,10 @@ interface IChoiceComponentInstance extends Labs.Core.IComponentInstance
 ```
 
 
-## 屬性
+## <a name="properties"></a>屬性
 
 
-|名稱|說明|
+|名稱|描述|
 |:-----|:-----|
 | `choices: Components.IChoice[]`|表示與問題與相關聯之選項清單的陣列。|
 | `timeLimit: number`|完成問題的時間限制。|

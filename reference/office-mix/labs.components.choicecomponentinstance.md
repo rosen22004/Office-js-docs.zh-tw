@@ -1,5 +1,5 @@
 
-# Labs.Components.ChoiceComponentInstance
+# <a name="labs.components.choicecomponentinstance"></a>Labs.Components.ChoiceComponentInstance
 
  _**適用於︰**Office 的應用程式 | Office 增益集 | Office Mix | PowerPoint_
 
@@ -10,19 +10,19 @@ class ChoiceComponentInstance extends Labs.ComponentInstance<Components.ChoiceCo
 ```
 
 
-## 屬性
+## <a name="properties"></a>屬性
 
 
-|屬性	|說明|
+|屬性	|描述|
 |:-----|:-----|
 | `public var component: Components.IChoiceComponentInstance`|這個類別表示的基礎 [Labs.Components.IChoiceComponentInstance](../../reference/office-mix/labs.components.ichoicecomponentinstance.md)|
 
-## 方法
+## <a name="methods"></a>方法
 
 
 
 
-### 建構函式
+### <a name="constructor"></a>建構函式
 
  `function constructor(component: Components.IChoiceComponentInstance)`
 
@@ -31,11 +31,11 @@ class ChoiceComponentInstance extends Labs.ComponentInstance<Components.ChoiceCo
  **參數**
 
 
-|參數|說明|
+|參數|描述|
 |:-----|:-----|
 | _component_|從中建立此類別的 [Labs.Components.IChoiceComponentInstance](../../reference/office-mix/labs.components.ichoicecomponentinstance.md) 物件。|
 
-### buildAttempt
+### <a name="buildattempt"></a>buildAttempt
 
  `public function buildAttempt(createAttemptAction: Labs.Core.IAction): Components.ChoiceComponentAttempt`
 
@@ -44,6 +44,6 @@ class ChoiceComponentInstance extends Labs.ComponentInstance<Components.ChoiceCo
  **參數**
 
 
-|參數|說明|
+|參數|描述|
 |:-----|:-----|
 | _createAttemptResult_|來自建立嘗試動作的結果。|

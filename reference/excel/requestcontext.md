@@ -1,36 +1,36 @@
-﻿# RequestContext 物件 (適用於 Excel 的 JavaScript API)
+# <a name="requestcontext-object-(javascript-api-for-excel)"></a>RequestContext 物件 (適用於 Excel 的 JavaScript API)
 
 RequestContext 物件可協助向 Excel 應用程式提出要求。由於 Office 增益集和 Excel 應用程式在兩個不同的處理程序中執行，因此需要使用要求內容以便從增益集存取 Excel 及相關的物件，例如工作表、表格等。 
 
-## 屬性
+## <a name="properties"></a>屬性
 無
 
-## 方法
+## <a name="methods"></a>方法
 
-| 方法         | 傳回類型    |說明|
+| 方法         | 傳回類型    |描述|
 |:---------------|:--------|:----------|
 |[load(object: object, option: object)](#loadobject-object-option-object)  |void     |以參數中指定的屬性和選項填滿 JavaScript 層中建立的 proxy 物件。|
 
-## API 規格
+## <a name="api-specification"></a>API 規格
 
-### load(object: object, option: object)
+### <a name="load(object:-object,-option:-object)"></a>load(object: object, option: object)
 以參數中指定的屬性和選項填滿 JavaScript 層中建立的 proxy 物件。
 
-#### 語法
+#### <a name="syntax"></a>語法
 ```js
 requestContextObject.load(object, loadOption);
 ```
 
-#### 參數
+#### <a name="parameters"></a>參數
 | 參數	       | 類型	    |描述|
 |:----------------|:--------|:----------|
 |物件|物件|選用。指定要載入之物件的名稱。|
 |option|[loadOption](loadoption.md)|選用。指定載入選項，例如 select、expand、skip 和 top。如需詳細資訊，請參閱 loadOption 物件。|
 
-#### 傳回
+#### <a name="returns"></a>傳回
 void
 
-##### 範例
+##### <a name="examples"></a>範例
 
 下列範例會從一個範圍載入屬性值，並將它們複製到另一個範圍。
 

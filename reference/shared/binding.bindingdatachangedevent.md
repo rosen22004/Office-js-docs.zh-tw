@@ -1,10 +1,10 @@
 
-# Binding.bindingDataChanged 事件
+# <a name="binding.bindingdatachanged-event"></a>Binding.bindingDataChanged 事件
 繫結內的資料變更時，就會發生。
 
 |||
 |:-----|:-----|
-|**主機︰**|Access、Excel、Word|
+|**主應用程式︰**|Access、Excel、Word|
 |**上次變更於 BindingEvents**|1.1|
 
 ```js
@@ -12,12 +12,12 @@ Office.EventType.BindingDataChanged
 ```
 
 
-## 備註
+## <a name="remarks"></a>備註
 
 若要新增繫結之 **BindingDataChanged** 事件的事件處理常式，請使用 [Binding](../../reference/shared/binding.addhandlerasync.md) 物件的 **addHandlerAsync** 方法。事件處理常式會收到 [BindingDataChangedEventArgs](../../reference/shared/binding.bindingdatachangedeventargs.md) 類型的引數。
 
 
-## 範例
+## <a name="example"></a>範例
 
 
 
@@ -38,7 +38,7 @@ function write(message){
 ```
 
 
-## 支援詳細資料
+## <a name="support-details"></a>支援詳細資料
 
 
 下列矩陣中的大寫 Y，表示在相對應的 Office 主應用程式中支援此方法。空白儲存格表示 Office 主應用程式不支援此方法。
@@ -62,7 +62,7 @@ function write(message){
 |**文件庫**|Office.js|
 |**命名空間**|Office|
 
-## 支援歷程記錄
+## <a name="support-history"></a>支援歷程記錄
 
 |**版本**|**變更**|
 |:-----|:-----|

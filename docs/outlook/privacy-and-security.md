@@ -1,5 +1,5 @@
-﻿
-# Outlook 增益集的隱私權、權限和安全性
+
+# <a name="privacy,-permissions,-and-security-for-outlook-add-ins"></a>Outlook 增益集的隱私權、權限和安全性
 使用者、開發人員和系統管理員可以使用 Outlook 增益集安全性模型的階梯式權限層級來控制隱私性和效能。
 
 
@@ -15,7 +15,7 @@
 - 系統管理員 - 設定效能臨界值的權限。
     
 
-## 權限模型
+## <a name="permissions-model"></a>權限模型
 
 
 因為客戶對於增益集安全性的認知可能會影響增益集的採用，因此 Outlook 增益集安全性依賴分層的權限模型。Outlook 增益集會透露其所需的權限層級，可識別增益集可以在客戶的信箱資料上執行的可能存取及動作。 
@@ -28,11 +28,11 @@
 
 |**權限等級**|**Outlook 增益集資訊清單中的值**|
 |:-----|:-----|
-|限制|受限|
+|受限|受限|
 |讀取項目|ReadItem|
 |讀寫項目|ReadWriteItem|
 |讀寫信箱|ReadWriteMailbox|
-權限的四個層級為累計：**讀寫信箱**權限包含**讀寫項目**的權限，**讀取項目**和**受限**，**讀寫項目**包含**讀取項目**和**受限**，以及**讀取項目**權限包含**受限**。圖 1 顯示四個等級的權限，並說明依每一個層級提供給使用者、開發人員和系統管理員的能力。如需有關這些權限的詳細資訊，請參閱[使用者：隱私性和效能考量](#使用者：隱私性和效能考量)、[開發人員︰權限選項及資源使用量限制](#開發人員︰權限選項及資源使用量限制)，以及[了解 Outlook 增益集的權限](../outlook/understanding-outlook-add-in-permissions.md)。 
+權限的四個層級為累計：**讀寫信箱**權限包含**讀寫項目**的權限，**讀取項目**和**受限**，**讀寫項目**包含**讀取項目**和**受限**，以及**讀取項目**權限包含**受限**。圖 1 顯示四個等級的權限，並說明依每一個層級提供給使用者、開發人員和系統管理員的能力。如需有關這些權限的詳細資訊，請參閱[使用者：隱私性和效能考量](#end-users-privacy-and-performance-concerns)、[開發人員︰權限選項及資源使用量限制](#developers-permission-choices-and-resource-usage-limits)，以及[了解 Outlook 增益集的權限](../outlook/understanding-outlook-add-in-permissions.md)。 
 
 
 **圖 1.關於使用者、開發人員和系統管理員的 4 層的權限模型**
@@ -40,7 +40,7 @@
 ![郵件應用程式結構描述 v1.1 的 4 層權限模式](../../images/olowa15wecon_Permissions_4Tier.png)
 
 
-## Office 市集：增益集完整性
+## <a name="office-store:-add-in-integrity"></a>Office 市集：增益集完整性
 
 
 Office 市集裝載可由使用者和系統管理員安裝的增益集。Office 市集強制執行下列措施來保有這些 Outlook 增益集的完整性︰
@@ -55,7 +55,7 @@ Office 市集裝載可由使用者和系統管理員安裝的增益集。Office 
 - 支援可用增益集的使用者檢閱系統，以提升自我監督的社群。
     
 
-## 使用者：隱私權與效能考量。
+## <a name="end-users:-privacy-and-performance-concerns"></a>使用者：隱私權與效能考量。
 
 
 安全性模型會以下列方式解決安全性、隱私權和使用者的效能問題︰
@@ -77,7 +77,7 @@ Office 市集裝載可由使用者和系統管理員安裝的增益集。Office 
     
 - 僅 Outlook 豐富型用戶端適用︰Outlook 豐富型用戶端會監視已安裝的 Outlook 增益集的效能、執行控管控制項，並在下列區域停用這些超出限制的 Outlook 增益集︰
     
-      - Response time to activate
+      - 啟動的回應時間
     
   - 啟動或重新啟動的失敗次數
     
@@ -86,18 +86,18 @@ Office 市集裝載可由使用者和系統管理員安裝的增益集。Office 
   - CPU 使用量
     
 
-    控管會阻擋拒絕服務攻擊，並維持合理的增益集效能。 「商務列」會提供使用者 Outlook 增益集的相關警示：根據此控管控制項，系統已停用 Outlook 豐富型用戶端。
+    控管會阻擋拒絕服務攻擊，並維持合理的增益集效能。「商務列」會提供使用者 Outlook 增益集的相關警示：根據此控管控制項，系統已停用 Outlook 豐富型用戶端。
     
 - 任何時候，使用者可以驗證已安裝 Outlook 增益集所要求的權限，並停用或接著在 Exchange 系統管理中心啟用任何 Outlook 增益集。
     
 
-## 開發人員：權限選項及資源使用量限制。
+## <a name="developers:-permission-choices-and-resource-usage-limits"></a>開發人員：權限選項及資源使用量限制。
 
 
 安全性模型提供開發人員權限的細微層級以從中選擇，以及嚴格效能方針以進行觀察。
 
 
-### 分層的權限會增加透明度
+### <a name="tiered-permissions-increases-transparency"></a>分層的權限會增加透明度
 
 開發人員應該依照分層的權限模型來提供透明度，並減輕使用者對於增益集可以對其資料及信箱進行之動作的考量，間接升級增益集採用︰
 
@@ -136,19 +136,19 @@ Office 市集裝載可由使用者和系統管理員安裝的增益集。Office 
     
 - 只有當 Outlook 增益集需要使用 **mailbox.makeEWSRequestAsync** 方法來執行一或多個下列的動作時，開發人員才會要求[讀寫信箱](../../reference/outlook/Office.context.mailbox.md)權限︰
     
-      - Read or write to properties of items in the mailbox.
+      - 讀取或寫入至信箱中項目的屬性。
     
   - 建立、讀取、寫入，或傳送信箱中的項目。
     
   - 建立、讀取或寫入信箱中的資料夾。
     
 
-### 資源使用狀況調整
+### <a name="resource-usage-tuning"></a>資源使用狀況調整
 
 開發人員應該注意啟動的資源使用量限制，在其開發工作流程中合併效能調整，以減少執行效能不佳的增益集拒絕主應用程式服務的機會。開發人員在設計[適用於 Outlook 增益集的 JavaScript API 和啟動的限制](../outlook/limits-for-activation-and-javascript-api-for-outlook-add-ins.md)中所述的啟動規則時，應該遵循指導方針。如果 Outlook 增益集要在 Outlook 豐富型用戶端上執行，開發人員應該確認增益集在資源使用量限制內執行。
 
 
-### 提升使用者安全性的其他措施
+### <a name="other-measures-to-promote-user-security"></a>提升使用者安全性的其他措施
 
 開發人員也應該注意並計劃下列項目︰
 
@@ -157,7 +157,7 @@ Office 市集裝載可由使用者和系統管理員安裝的增益集。Office 
     
 - 開發人員提交增益集至 Office 市集時，應該執行下列動作︰
     
-      - Produce an Extended Validation (EV) SSL certificate as a proof of identity.
+      - 產生延伸驗證 (EV) SSL 憑證做為識別的證明。
     
   - 在支援 SSL 的網頁伺服器上主控他們要提交的增益集。
     
@@ -166,7 +166,7 @@ Office 市集裝載可由使用者和系統管理員安裝的增益集。Office 
   - 準備在送出增益集時簽署契約性協議。
     
 
-## 系統管理員︰權限
+## <a name="administrators:-privileges"></a>系統管理員︰權限
 
 
 安全性模型提供下列權限及責任給系統管理員︰
@@ -180,7 +180,7 @@ Office 市集裝載可由使用者和系統管理員安裝的增益集。Office 
     
 
 
-## 其他資源
+## <a name="additional-resources"></a>其他資源
 
 
 

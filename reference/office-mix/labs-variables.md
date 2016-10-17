@@ -1,5 +1,5 @@
 
-# 實驗室變數
+# <a name="labs-variables"></a>實驗室變數
 
  _**適用於︰**Office 的應用程式 | Office 增益集 | Office Mix | PowerPoint_
 
@@ -12,7 +12,7 @@ LabsJS 物件模型函式中的變數，其做為常數，或做為用於儲存�
 |:-----|:-----|
 |[Labs.DefaultHostBuilder](../../reference/office-mix/labs.defaulthostbuilder.md)|使用這個物件來建構預設的 [Labs.Core.ILabHost](../../reference/office-mix/labs.core.ilabhost.md) 執行個體。|
 
-## 其他資源
+## <a name="additional-resources"></a>其他資源
 
 
 

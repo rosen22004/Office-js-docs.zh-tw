@@ -1,11 +1,11 @@
 
-# TargetDialect 項目
+# <a name="targetdialect-element"></a>TargetDialect 項目
  定義此字典所支援的方言，以文化特性名稱的字串表示。
 
  **增益集類型︰**工作窗格
 
 
-## 語法：
+## <a name="syntax:"></a>語法：
 
 
 ```XML
@@ -15,17 +15,17 @@
 ```
 
 
-## 內含於：
+## <a name="contained-in:"></a>內含於：
 
 [TargetDialects](../../reference/manifest/targetdialects.md)
 
 
-## 備註
+## <a name="remarks"></a>備註
 
 以 BCP 47 語言標記格式來指定值，例如 `"en-US"`。
 
 
-## 其他資源
+## <a name="additional-resources"></a>其他資源
 
 
 

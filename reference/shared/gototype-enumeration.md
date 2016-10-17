@@ -1,10 +1,10 @@
 
-# GoToType 列舉
+# <a name="gototype-enumeration"></a>GoToType 列舉
 指定要瀏覽至的位置或物件類型。
 
 |||
 |:-----|:-----|
-|**主機︰**|Excel、PowerPoint、Word|
+|**主應用程式︰**|Excel、PowerPoint、Word|
 |**已新增於**|1.1|
 
 ```js
@@ -12,20 +12,20 @@ Office.GoToType
 ```
 
 
-## 成員
+## <a name="members"></a>成員
 
 
 **值**
 
 
-|**列舉**|**值**|**說明**|**支援的用戶端**|
+|**列舉**|**值**|**描述**|**支援的用戶端**|
 |:-----|:-----|:-----|:-----|
 |Office.GoToType.Binding|"binding"|移至使用指定繫結識別碼的繫結物件。|Excel</br>Word|
 |Office.GoToType.NamedItem|"namedItem"|移至使用該項目名稱的項目，例如指派給資料表或範圍的名稱。在 Excel 中，您可以針對已命名的範圍或資料表，使用任何結構化的參考︰"Worksheet2!Table1"|Excel|
 |Office.GoToType.Slide|"slide"|移至使用指定識別碼的投影片。|PowerPoint|
 |Office.GoToType.Index|"index"|依據投影片號碼或列舉，移至指定的索引：</br>**Office.Index.First**</br>**Office.Index.Last**</br>**Office.Index.Next**</br>**Office.Index.Previous**|PowerPoint|
 
-## 支援詳細資料
+## <a name="support-details"></a>支援詳細資料
 
 
 下列矩陣中的大寫 Y，表示在相對應的 Office 主應用程式中支援此列舉。空白儲存格表示 Office 主應用程式不支援此列舉。
@@ -49,7 +49,7 @@ Office.GoToType
 |**文件庫**|Office.js|
 |**命名空間**|Office|
 
-## 支援歷程記錄
+## <a name="support-history"></a>支援歷程記錄
 
 
 

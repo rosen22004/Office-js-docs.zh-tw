@@ -1,5 +1,5 @@
 
-# Labs.TakeActionCommandData
+# <a name="labs.takeactioncommanddata"></a>Labs.TakeActionCommandData
 
  _**適用於︰**Office 的應用程式 | Office 增益集 | Office Mix | PowerPoint_
 
@@ -17,6 +17,6 @@ interface TakeActionCommandData(type: string, options: options: Labs.Core.IActio
 
 |||
 |:-----|:-----|
-| _類型_|動作的類型。|
+| _type_|動作的類型。|
 | _options_|動作的相關選項。|
 | _result_|動作的結果。|

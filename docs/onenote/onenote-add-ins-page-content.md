@@ -1,4 +1,4 @@
-# 使用 OneNote 頁面內容 
+# <a name="work-with-onenote-page-content"></a>使用 OneNote 頁面內容 
 
 在 OneNote 增益集 JavaScript API 中，頁面內容會以下列物件模型顯示。
 
@@ -16,13 +16,13 @@
 
 然後在下列物件中使用方法以使用頁面內容，例如 Page.addOutline 和 Outline.appendHtml。 
 
-- [頁面](../../reference/onenote/page.md)
-- [大綱](../../reference/onenote/outline.md)
-- [段落](../../reference/onenote/paragraph.md)
+- [Page](../../reference/onenote/page.md)
+- [Outline](../../reference/onenote/outline.md)
+- [Paragraph](../../reference/onenote/paragraph.md)
 
-OneNote 頁面的內容和結構會以 HTML 顯示。 僅支援 HTML 的子集來建立或更新網頁內容，如下所述。
+OneNote 頁面的內容和結構會以 HTML 顯示。僅支援 HTML 的子集來建立或更新網頁內容，如下所述。
 
-## 支援的 HTML
+## <a name="supported-html"></a>支援的 HTML
 
 OneNote 增益集 JavaScript API 支援下列的 HTML 建立和更新網頁內容︰
 
@@ -35,13 +35,13 @@ OneNote 增益集 JavaScript API 支援下列的 HTML 建立和更新網頁內�
 - `<h1>` ... `<h6>`
 - `<b>`, `<em>`, `<strong>`, `<i>`, `<u>`, `<del>`, `<sup>`, `<sub>`, `<cite>`
 
-## 存取頁面內容
+## <a name="accessing-page-contents"></a>存取頁面內容
 
-您只能夠透過 `Page#load` 針對目前使用中的頁面存取*頁面內容*。 若要變更使用中的頁面，請叫用 `navigateToPage($page)`。
+您只能夠透過 `Page#load` 針對目前使用中的頁面存取*頁面內容*。若要變更使用中的頁面，請叫用 `navigateToPage($page)`。
 
 中繼資料，例如標題，仍然可以針對任何頁面查詢。
 
-## 其他資源
+## <a name="additional-resources"></a>其他資源
 
 - [OneNote JavaScript API 程式設計的概觀](onenote-add-ins-programming-overview.md)
 - [OneNote JavaScript API 參考](../../reference/onenote/onenote-add-ins-javascript-reference.md)

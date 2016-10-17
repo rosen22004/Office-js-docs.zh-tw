@@ -1,10 +1,10 @@
 
-# Document.ActiveViewChanged 事件
+# <a name="document.activeviewchanged-event"></a>Document.ActiveViewChanged 事件
 使用者變更文件目前的檢視時，就會發生。
 
 |||
 |:-----|:-----|
-|**主機︰**|PowerPoint|
+|**主應用程式︰**|PowerPoint|
 |**導入在**|1.1|
 
 ```
@@ -12,12 +12,12 @@ Office.EventType.ActiveViewChanged
 ```
 
 
-## 備註
+## <a name="remarks"></a>備註
 
 若要新增文件之 **ActiveViewChanged** 事件的事件處理常式，請使用 [Document](../../reference/shared/document.addhandlerasync.md) 物件的 **addHandlerAsync** 方法。事件處理常式會收到 [ActiveViewChangedEventArgs](../../reference/shared/document.activeviewchangedeventargs.md) 類型的引數。
 
 
-## 支援詳細資料
+## <a name="support-details"></a>支援詳細資料
 
 
 下列矩陣中的大寫 Y，表示在相對應的 Office 主應用程式中支援此方法。空白儲存格表示 Office 主應用程式不支援此方法。

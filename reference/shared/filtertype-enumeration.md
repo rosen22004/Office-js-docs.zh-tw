@@ -1,10 +1,10 @@
 
-# FilterType 列舉
+# <a name="filtertype-enumeration"></a>FilterType 列舉
 指定擷取資料時，是否從主應用程式套用篩選條件。
 
 |||
 |:-----|:-----|
-|**主機︰**|Excel、Project、Word|
+|**主應用程式︰**|Excel、Project、Word|
 |**上次變更於**|1.1|
 
 ```js
@@ -12,18 +12,18 @@ Office.FilterType
 ```
 
 
-## 成員
+## <a name="members"></a>成員
 
 
 **值**
 
 
-|**列舉**|**值**|**說明**|
+|**列舉**|**值**|**描述**|
 |:-----|:-----|:-----|
 |Office.FilterType.All|"all"|傳回所有資料 (不依主應用程式篩選)。|
 |Office.FilterType.OnlyVisible|"onlyVisible"|只傳回可見的資料 (如同依主應用程式篩選)。|
 
-## 支援詳細資料
+## <a name="support-details"></a>支援詳細資料
 
 
 下列矩陣中的大寫 Y，表示在相對應的 Office 主應用程式中支援此列舉。空白儲存格表示 Office 主應用程式不支援此列舉。
@@ -47,7 +47,7 @@ Office.FilterType
 |**文件庫**|Office.js|
 |**命名空間**|Office|
 
-## 支援歷程記錄
+## <a name="support-history"></a>支援歷程記錄
 
 |**版本**|**變更**|
 |:-----|:-----|

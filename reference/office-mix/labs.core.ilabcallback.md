@@ -1,5 +1,5 @@
 
-# Labs.Core.ILabCallback
+# <a name="labs.core.ilabcallback"></a>Labs.Core.ILabCallback
 
  _**適用於︰**Office 的應用程式 | Office 增益集 | Office Mix | PowerPoint_
 
@@ -10,7 +10,7 @@ interface ILabCallback<T>
 ```
 
 
-## 回呼簽章
+## <a name="callback-signature"></a>回呼簽章
 
  `(err: any, data: T): void`
 
@@ -20,4 +20,4 @@ interface ILabCallback<T>
 |||
 |:-----|:-----|
 | _err_|如果未發生錯誤則傳回 **Null**。如果發生錯誤則為非 **null**。|
-| _資料_|使用回呼傳回的資料。|
+| _data_|使用回呼傳回的資料。|

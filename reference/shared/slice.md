@@ -1,11 +1,11 @@
 
-# Slice 物件
+# <a name="slice-object"></a>Slice 物件
 代表文件檔案的配量。
 
 |||
 |:-----|:-----|
-|**主機︰**|PowerPoint、Word|
-|**可用於[需求集合](../../docs/overview/specify-office-hosts-and-api-requirements.md)**|File|
+|**主應用程式︰**|PowerPoint、Word|
+|**可用於[需求集合](../../docs/overview/specify-office-hosts-and-api-requirements.md)**|檔案|
 |**上次變更於**|1.1|
 
 ```
@@ -13,24 +13,24 @@ slice
 ```
 
 
-## 成員
+## <a name="members"></a>成員
 
 
 **屬性**
 
 
-|**名稱**|**說明**|
+|**名稱**|**描述**|
 |:-----|:-----|
-|**[資料](../../reference/shared/slice.data.md)**|取得檔案配量的未經處理資料。|
+|**[data](../../reference/shared/slice.data.md)**|取得檔案配量的未經處理資料。|
 |**[index](../../reference/shared/slice.index.md)**|取得檔案配量的索引。|
-|**[Size](../../reference/shared/slice.size.md)**|取得配量大小，以位元組為單位。|
+|**[size](../../reference/shared/slice.size.md)**|取得配量大小，以位元組為單位。|
 
-## 備註
+## <a name="remarks"></a>備註
 
 可透過 **File.getSliceAsync** 方法存取 [Slice](../../reference/shared/file.getsliceasync.md) 物件。
 
 
-## 支援詳細資料
+## <a name="support-details"></a>支援詳細資料
 
 
 下列矩陣中的大寫 Y，表示在相對應的 Office 主應用程式中支援此物件。空白儲存格表示 Office 主應用程式不支援此物件。
@@ -46,13 +46,13 @@ slice
 
 |||
 |:-----|:-----|
-|**可用於需求集合**|File|
+|**可用於需求集合**|檔案|
 |**最低權限等級**|[ReadDocument](../../docs/develop/requesting-permissions-for-api-use-in-content-and-task-pane-add-ins.md)|
 |**增益集類型**|內容、工作窗格|
 |**文件庫**|Office.js|
 |**命名空間**|Office|
 
-## 支援歷程記錄
+## <a name="support-history"></a>支援歷程記錄
 
 
 

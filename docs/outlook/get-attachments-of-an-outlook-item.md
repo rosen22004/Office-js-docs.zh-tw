@@ -1,5 +1,5 @@
 
-# 從伺服器取得 Outlook 項目的附件
+# <a name="get-attachments-of-an-outlook-item-from-the-server"></a>從伺服器取得 Outlook 項目的附件
 
 Outlook 增益集無法將選取項目的附件直接傳遞至您的伺服器上執行的遠端服務。相反地，增益集可以使用附件 API 來傳送附件相關資訊到遠端服務。然後，服務可以直接連絡 Exchange Server 以擷取附件。
 
@@ -14,17 +14,17 @@ Outlook 增益集無法將選取項目的附件直接傳遞至您的伺服器上
 - [Office.context.mailbox.getCallbackTokenAsync](../../reference/outlook/Office.context.mailbox.md) 函數 -- 對主控信箱的 Exchange Server 進行非同步呼叫，以取得伺服器傳回 Exchange Server 以驗證附件要求的回撥權杖。
     
 
-## 使用附件 API
+## <a name="using-the-attachments-api"></a>使用附件 API
 
 
-若要使用附件 API 以從 Exchange 信箱中取得附件，請執行下列步驟︰ 
+若要使用附件 API 以從 Exchange 信箱取得附件，請執行下列步驟︰ 
 
 
 1. 當使用者正在檢視包含附件的郵件或約會時顯示增益集。
     
-2. 從 Exchange Server 取得回撥權杖。
+2. 從 Exchange 伺服器取得回呼權杖。
     
-3. 將回撥權杖和附件資訊傳送到遠端服務。
+3. 將回呼權杖和附件資訊傳送到遠端服務。
     
 4. 使用 **ExchangeService.GetAttachments** 方法或 **GetAttachment** 作業從 Exchange Server 取得附件。
     
@@ -34,7 +34,7 @@ Outlook 增益集無法將選取項目的附件直接傳遞至您的伺服器上
  >**附註** 已縮短這些範例中的程式碼，以強調附件資訊。這個範例包含額外的程式碼，以利用遠端伺服器驗證增益集並管理要求的狀態。
 
 
-### 啟動增益集
+### <a name="activate-the-add-in"></a>啟動增益集
 
 
 當選取的項目具有附件時，您可以使用增益集資訊清單檔中的 [ItemHasAttachment](http://msdn.microsoft.com/en-us/library/031db7be-8a25-5185-a9c3-93987e10c6c2%28Office.15%29.aspx) 規則來顯示您的增益集，如下列範例中所示。
@@ -45,7 +45,7 @@ Outlook 增益集無法將選取項目的附件直接傳遞至您的伺服器上
 ```
 
 
-### 取得回撥權杖
+### <a name="get-a-callback-token"></a>取得回撥權杖
 
 
 [Office.context.mailbox](../../reference/outlook/Office.context.mailbox.md) 物件提供 **getCallbackTokenAsync** 函數來取得遠端伺服器可用來以 Exchange Server 驗證的權杖。下列程式碼會顯示增益集中的函數，其可啟動非同步要求來取得回撥權杖及取得回應的回撥函數。回撥權杖會儲存在下一節中所定義的服務要求物件。
@@ -70,7 +70,7 @@ function attachmentTokenCallback(asyncResult, userContext) {
 ```
 
 
-### 將附件資訊傳送到遠端服務
+### <a name="send-attachment-information-to-the-remote-service"></a>將附件資訊傳送到遠端服務
 
 
 您的增益集呼叫的遠端服務會定義如何將附件資訊傳送至服務的細節。在這個範例中，遠端服務是使用 Visual Studio 2013 所建立的 Web API 應用程式。遠端服務會預期 JSON 物件中的附件資訊。下列程式碼會初始化包含附件資訊的物件。
@@ -127,7 +127,7 @@ serviceRequest.attachments = new Array();
 ```
 
 
-### 從 Exchange Server 伺服器取得附件
+### <a name="get-the-attachments-from-the-exchange-server"></a>從 Exchange Server 伺服器取得附件
 
 
 您的遠端服務可以使用 [GetAttachments](http://msdn.microsoft.com/en-us/library/office/dn600509%28v=exchg.80%29.aspx) EWS 受管理 API 方法或 [GetAttachment](http://msdn.microsoft.com/library/24d10a15-b942-415e-9024-a6375708f326%28Office.15%29.aspx) EWS 作業，從伺服器擷取附件。服務應用程式需要兩個物件以將 JSON 字串還原序列化成可在伺服器上使用的 .NET Framework 物件。下列程式碼顯示還原序列化物件的定義。
@@ -160,7 +160,7 @@ namespace AttachmentsSample
 ```
 
 
-#### 使用 EWS 受管理 API 取得附件
+#### <a name="use-the-ews-managed-api-to-get-the-attachments"></a>使用 EWS 受管理 API 取得附件
 
 如果您在在遠端服務中使用 [EWS 受管理 API](http://go.microsoft.com/fwlink/?LinkID=255472)，您可以使用 [GetAttachments](http://msdn.microsoft.com/en-us/library/office/dn600509%28v=exchg.80%29.aspx) 方法，以建構、傳送及接收 EWS SOAP 要求來取得附件。我們建議您使用 EWS 受管理 API，因為它需要較少行的程式碼，且提供更具直覺性介面來呼叫 EWS。下列程式碼會提出一個要求來擷取所有的附件，並傳回已處理附件的計數和名稱。
 
@@ -230,7 +230,7 @@ namespace AttachmentsSample
 ```
 
 
-#### 使用 EWS 取得附件
+#### <a name="use-ews-to-get-the-attachments"></a>使用 EWS 取得附件
 
 如果您在遠端服務中使用 EWS，您必須建構 [GetAttachment](http://msdn.microsoft.com/library/24d10a15-b942-415e-9024-a6375708f326%28Office.15%29.aspx) SOAP 要求以從 Exchange Server 取得附件。下列程式碼會傳回提供 SOAP 要求的字串。遠端服務使用 **String.Format** 方法將附件的附件 ID 插入字串。
 
@@ -435,15 +435,17 @@ xmlns:t=""http://schemas.microsoft.com/exchange/services/2006/types"">
 ```
 
 
-## 其他資源
+## <a name="additional-resources"></a>其他資源
 
 
 
 - [建立讀取格式的 Outlook 增益集](../outlook/read-scenario.md)
     
-- [探索 Exchange 中的 EWS Managed API、EWS 和 Web 服務](http://msdn.microsoft.com/library/0bc6f81d-cc10-42b0-ba5d-6f22ff55d51c%28Office.15%29.aspx)
+- 
+  [探索 Exchange 中的 EWS Managed API、EWS 和 Web 服務](http://msdn.microsoft.com/library/0bc6f81d-cc10-42b0-ba5d-6f22ff55d51c%28Office.15%29.aspx)
     
-- [開始使用 EWS Managed API 用戶端應用程式](http://msdn.microsoft.com/library/c2267733-6f4f-49e5-9614-1e4a24c3af1a%28Office.15%29.aspx)
+- 
+  [開始使用 EWS Managed API 用戶端應用程式](http://msdn.microsoft.com/library/c2267733-6f4f-49e5-9614-1e4a24c3af1a%28Office.15%29.aspx)
     
 - [Outlook-Power-Hour_Code-Samples](https://github.com/OfficeDev/Outlook-Power-Hour-Code-Samples)：`MyAttachments` 和 `AttachmentsDemo`
     

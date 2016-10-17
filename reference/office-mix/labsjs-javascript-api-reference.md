@@ -1,12 +1,12 @@
 
-# LabsJS JavaScript API 參考
+# <a name="labsjs-javascript-api-reference"></a>LabsJS JavaScript API 參考
 取得 LabsJS JavaScript 物件模型的概觀。
 
  _**適用於︰**Office 的應用程式 | Office 增益集 | Office Mix | PowerPoint_
 
 LabsJS 參考文件 [TypeScript](http://www.typescriptlang.org/) 檔案，**實驗室 1.0.42.d.ts**，這會將 LabsJS 物件模型排序 至模組。
 
-## LabsJS 物件模型
+## <a name="labsjs-object-model"></a>LabsJS 物件模型
 
 LabsJS 物件模型會組織成五個模組︰
 
@@ -37,7 +37,7 @@ LabsJS 物件模型會組織成五個模組︰
 
 
 
-## 其他資源
+## <a name="additional-resources"></a>其他資源
 
 
 

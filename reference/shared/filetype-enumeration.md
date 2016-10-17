@@ -1,10 +1,10 @@
 
-# FileType 列舉
+# <a name="filetype-enumeration"></a>FileType 列舉
 指定文件要傳回的格式。
 
 |||
 |:-----|:-----|
-|**主機︰**|PowerPoint、Word|
+|**主應用程式︰**|PowerPoint、Word|
 |**上次變更於**|1.1|
 
 ```js
@@ -12,19 +12,19 @@ Office.FileType
 ```
 
 
-## 成員
+## <a name="members"></a>成員
 
 
 **值**
 
 
-|**列舉**|**值**|**說明**|
+|**列舉**|**值**|**描述**|
 |:-----|:-----|:-----|
 |Office.FileType.Compressed|"compressed"|以 Office Open XML (OOXML) 格式傳回整個文件 (.pptx 或 .docx) ，成為位元組陣列。|
 |Office.FileType.Pdf|"pdf"|以 PDF 格式傳回整個文件，成為位元組陣列。|
 |Office.FileType.Text|"text"|只傳回文件的文字，成為**字串**。(只限 Word)|
 
-## 支援詳細資料
+## <a name="support-details"></a>支援詳細資料
 
 
 下列矩陣中的大寫 Y，表示在相對應的 Office 主應用程式中支援此列舉。空白儲存格表示 Office 主應用程式不支援此列舉。
@@ -46,7 +46,7 @@ Office.FileType
 |**文件庫**|Office.js|
 |**命名空間**|Office|
 
-## 支援歷程記錄
+## <a name="support-history"></a>支援歷程記錄
 
 
 |**版本**|**變更**|

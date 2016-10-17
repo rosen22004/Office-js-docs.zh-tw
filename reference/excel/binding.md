@@ -1,47 +1,47 @@
-﻿# Binding 物件 (適用於 Excel 的 JavaScript API)
+# <a name="binding-object-(javascript-api-for-excel)"></a>Binding 物件 (適用於 Excel 的 JavaScript API)
 
 代表活頁簿中定義的 Office.js 繫結。
 
-## 屬性
+## <a name="properties"></a>屬性
 
-| 屬性	     | 類型	   |說明
+| 屬性	     | 類型	   |描述
 |:---------------|:--------|:----------|
 |id|string|代表繫結識別碼。唯讀。|
 |類型|string|傳回繫結的類型。唯讀。可能的值為：Range、Table、Text。|
 
-_請參閱屬性存取[範例。](#範例)_
+_請參閱屬性存取[範例。](#property-access-examples)_
 
-## 關聯性
+## <a name="relationships"></a>關聯性
 無
 
 
-## 方法
+## <a name="methods"></a>方法
 
-| 方法           | 傳回類型    |說明|
+| 方法           | 傳回類型    |描述|
 |:---------------|:--------|:----------|
-|[getRange()](#getrange)|[範圍](range.md)|傳回繫結所代表的範圍。如果繫結不是正確的類型，則會擲回錯誤。|
-|[getTable()](#gettable)|[表格](table.md)|傳回繫結所代表的表格。如果繫結不是正確的類型，則會擲回錯誤。|
+|[getRange()](#getrange)|[Range](range.md)|傳回繫結所代表的範圍。如果繫結不是正確的類型，則會擲回錯誤。|
+|[getTable()](#gettable)|[Table](table.md)|傳回繫結所代表的表格。如果繫結不是正確的類型，則會擲回錯誤。|
 |[getText()](#gettext)|string|傳回繫結所代表的文字。如果繫結不是正確的類型，則會擲回錯誤。|
 |[load(param: object)](#loadparam-object)|void|以參數中指定的屬性和物件值填滿 JavaScript 層中建立的 Proxy 物件。|
 
-## 方法詳細資料
+## <a name="method-details"></a>方法詳細資料
 
 
-### getRange()
+### <a name="getrange()"></a>getRange()
 傳回繫結所代表的範圍。如果繫結不是正確的類型，則會擲回錯誤。
 
-#### 語法
+#### <a name="syntax"></a>語法
 ```js
 bindingObject.getRange();
 ```
 
-#### 參數
+#### <a name="parameters"></a>參數
 無
 
-#### 傳回
-[範圍](range.md)
+#### <a name="returns"></a>傳回
+[Range](range.md)
 
-#### 範例
+#### <a name="examples"></a>範例
 下面的範例會使用 binding 物件，以取得相關的範圍。
 
 ```js
@@ -61,21 +61,21 @@ Excel.run(function (ctx) {
 ```
 
 
-### getTable()
+### <a name="gettable()"></a>getTable()
 傳回繫結所代表的表格。如果繫結不是正確的類型，則會擲回錯誤。
 
-#### 語法
+#### <a name="syntax"></a>語法
 ```js
 bindingObject.getTable();
 ```
 
-#### 參數
+#### <a name="parameters"></a>參數
 無
 
-#### 傳回
-[表格](table.md)
+#### <a name="returns"></a>傳回
+[Table](table.md)
 
-#### 範例
+#### <a name="examples"></a>範例
 ```js
 Excel.run(function (ctx) { 
     var binding = ctx.workbook.bindings.getItemAt(0);
@@ -93,21 +93,21 @@ Excel.run(function (ctx) {
 ```
 
 
-### getText()
+### <a name="gettext()"></a>getText()
 傳回繫結所代表的文字。如果繫結不是正確的類型，則會擲回錯誤。
 
-#### 語法
+#### <a name="syntax"></a>語法
 ```js
 bindingObject.getText();
 ```
 
-#### 參數
+#### <a name="parameters"></a>參數
 無
 
-#### 會傳回
+#### <a name="returns"></a>會傳回
 字串
 
-#### 範例
+#### <a name="examples"></a>範例
 
 ```js
 Excel.run(function (ctx) { 
@@ -126,22 +126,22 @@ Excel.run(function (ctx) {
 ```
 
 
-### load(param: object)
+### <a name="load(param:-object)"></a>load(param: object)
 以參數中指定的屬性和物件值填滿 JavaScript 層中建立的 Proxy 物件。
 
-#### 語法
+#### <a name="syntax"></a>語法
 ```js
 object.load(param);
 ```
 
-#### 參數
-| 參數	    | 類型	   |說明|
+#### <a name="parameters"></a>參數
+| 參數	    | 類型	   |描述|
 |:---------------|:--------|:----------|
 |param|物件|選用。接受參數與關係名稱，做為分隔字串或陣列。或者接受 [loadOption](loadoption.md) 物件。|
 
-#### 傳回
+#### <a name="returns"></a>傳回
 void
-### 屬性存取範例
+### <a name="property-access-examples"></a>屬性存取範例
 
 ```js
 Excel.run(function (ctx) { 

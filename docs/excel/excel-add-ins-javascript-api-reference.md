@@ -1,4 +1,4 @@
-# Excel JavaScript API 參考
+# <a name="excel-javascript-api-reference"></a>Excel JavaScript API 參考
 
 您可以使用 Excel JavaScript API 來建置 Excel 2016 的增益集。下列清單顯示 API 中可用的高層次 Excel 物件。每個物件頁面連結都會描述物件可用的屬性、關聯性和方法。請瀏覽連結以了解詳細資訊。
 
@@ -25,7 +25,7 @@
 * [Request Context](../../reference/excel/requestcontext.md)：RequestContext 物件可協助向 Excel 應用程式提出要求。
 
 
-##### 其他資源
+##### <a name="additional-resources"></a>其他資源
 
 *  [Excel 增益集程式設計概觀](excel-add-ins-javascript-programming-overview.md)
 *  [建立第一個 Excel 增益集](build-your-first-excel-add-in.md)

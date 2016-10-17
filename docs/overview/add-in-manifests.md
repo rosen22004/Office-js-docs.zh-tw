@@ -1,5 +1,5 @@
-﻿
-# Office 增益集的 XML 資訊清單
+
+# <a name="office-add-ins-xml-manifest"></a>Office 增益集的 XML 資訊清單
 
 
 Office 增益集的 XML 資訊清單檔案，描述了當使用者安裝並將其與 Office 文件和應用程式搭配使用時，如何啟動增益集。 
@@ -16,55 +16,84 @@ Office 增益集的 XML 資訊清單檔案，描述了當使用者安裝並將�
     
 - 若為 Outlook 增益集，請定義規則來指定內容，以便在其中啟動，並與郵件、約會或會議要求項目互動。
     
-如需相關資訊，請參閱[資訊清單 v1.1 XML 檔案範例](#資訊清單-v1.1-xml-檔案範例)。
+如需相關資訊，請參閱[資訊清單 v1.1 XML 檔案範例](#manifest-v1.1-xml-file-examples-and-schemas)。
 
-## 必要元素
+## <a name="required-elements"></a>必要元素
 
 
 下表指定三種類型的 Office 增益集的必要元素。
 
 
  >**重要提示**： 
- - 所有 URL，例如 [SourceLocation](../../reference/manifest/sourcelocation.md) 元素中指定的來源檔案位置，都必須是 **SSL 安全 (HTTPS)**。
- - 所有圖示 URL，例如用於命令介面的 URL，都必須**允許快取**。 Web 伺服器不應傳回像無快取/無儲存的 HTTP 標頭。 
- - 提交至 Office 市集的增益集也必須包含 [SupportUrl](../../reference/manifest/supporturl.md) 元素。 如需詳細資訊，請參閱[應避免哪些常見的提交錯誤？](http://msdn.microsoft.com/library/0ceb385c-a608-40cc-8314-78e39d6c75d0%28Office.15%29.aspx#bk_q2)
+ 
+ >- 所有 URL，例如 [SourceLocation](../../reference/manifest/sourcelocation.md) 元素中指定的來源檔案位置，都必須是 **SSL 安全 (HTTPS)**。
+ >- 所有圖示 URL，例如用於命令介面的 URL，都必須**允許快取**。Web 伺服器不應傳回像無快取/無儲存的 HTTP 標頭。 
+ >- 提交至 Office 市集的增益集也必須包含 [SupportUrl](../../reference/manifest/supporturl.md) 元素。如需詳細資訊，請參閱[應避免哪些常見的提交錯誤？](http://msdn.microsoft.com/library/0ceb385c-a608-40cc-8314-78e39d6c75d0%28Office.15%29.aspx#bk_q2)
 
 
 **按 Office 增益集類型排列的必要元素**
 
 
-|**元素**|**內容**|**工作窗格**|**Outlook**|
+|** 元素**|**內容**|**工作窗格**|**Outlook**|
 |:-----|:-----|:-----|:-----|
-|[OfficeApp](http://msdn.microsoft.com/en-us/library/68f1cada-66f8-4341-45f5-14e0634c24fb%28Office.15%29.aspx)|X|X|X|
-|[ID](http://msdn.microsoft.com/en-us/library/67c4344a-935c-09d6-1282-55ee61a2838b%28Office.15%29.aspx)|X|X|X|
-|[版本](http://msdn.microsoft.com/en-us/library/6a8bbaa5-ee8c-6824-4aba-cb1a804269f6%28Office.15%29.aspx)|X|X|X|
-|[ProviderName](http://msdn.microsoft.com/en-us/library/0062693a-fafa-ea2d-051a-75dac0f6c323%28Office.15%29.aspx)|X|X|X|
-|[DefaultLocale](http://msdn.microsoft.com/en-us/library/04796a3a-3afa-dc85-db66-4677560c185c%28Office.15%29.aspx)|X|X|X|
-|[DisplayName](http://msdn.microsoft.com/en-us/library/529159ca-53bf-efcf-c245-e572dab0ef57%28Office.15%29.aspx)|X|X|X|
-|[說明](http://msdn.microsoft.com/en-us/library/bcce6bad-23d0-7631-7d8c-1064b8453b5a%28Office.15%29.aspx)|X|X|X|
-|[IconUrl](http://msdn.microsoft.com/library/c7dac2d4-4fda-6fc7-3774-49f02b2d3e1e%28Office.15%29.aspx)|X|X|X|
-|[HighResolutionIconUrl](http://msdn.microsoft.com/library/ff7b2647-ec8e-70dc-4e4a-e1a1377ff3f2%28Office.15%29.aspx)|||X|
-|[DefaultSettings (ContentApp)](http://msdn.microsoft.com/en-us/library/f7edc689-551f-1a17-ea81-ffd58f534557%28Office.15%29.aspx)<br/>[DefaultSettings (TaskPaneApp)](http://msdn.microsoft.com/en-us/library/36e3d139-56a4-fb3d-0a21-cbd14e606765%28Office.15%29.aspx)|X|X||
-|[SourceLocation (ContentApp)](http://msdn.microsoft.com/en-us/library/00d95bb0-e8f5-647f-790a-0aa3aabc8141%28Office.15%29.aspx)<br/>[SourceLocation (TaskPaneApp)](http://msdn.microsoft.com/en-us/library/e6ea8cd4-7c8b-1da7-d8f8-8d3c80a088bc%28Office.15%29.aspx)|X|X||
-|[DesktopSettings](http://msdn.microsoft.com/en-us/library/da9fd085-b8cc-2be0-d329-2aa1ef5d3f1c%28Office.15%29.aspx)|||X|
-|[SourceLocation (MailApp)](http://msdn.microsoft.com/en-us/library/3792d389-bebd-d19a-9d90-35b7a0bfc623%28Office.15%29.aspx)|||X|
-|[權限 (ContentApp)](http://msdn.microsoft.com/en-us/library/9f3dcf9c-fced-c115-4f0d-38d60fb7c583%28Office.15%29.aspx)<br/>[權限 (TaskPaneApp)](http://msdn.microsoft.com/en-us/library/d4cfe645-353d-8240-8495-f76fb36602fe%28Office.15%29.aspx)<br/>[權限 (MailApp)](http://msdn.microsoft.com/en-us/library/c20cdf29-74b0-564c-e178-b75d148b36d1%28Office.15%29.aspx)|X|X|X|
-|[規則 (RuleCollection)](http://msdn.microsoft.com/en-us/library/c6ce9d52-4b53-c6a6-de7e-c64106135c81%28Office.15%29.aspx)<br/>[規則 (MailApp)](http://msdn.microsoft.com/en-us/library/56dfc32e-2b8c-1724-05be-5595baf38aa3%28Office.15%29.aspx)|||X|
-|[字典](http://msdn.microsoft.com/en-us/library/f78898f4-059e-d5dc-5eab-1f6b92214068%28Office.15%29.aspx)||||
-|[*需求 (MailApp)](http://msdn.microsoft.com/en-us/library/9536ea30-34f7-76b5-7f30-1508626840e4%28Office.15%29.aspx)||X|
-|[*集合](http://msdn.microsoft.com/en-us/library/1506daa1-332c-30e1-6402-3371bcd0b895%28Office.15%29.aspx)<br/>[**集合 (MailAppRequirements)](http://msdn.microsoft.com/en-us/library/2a6a2484-eeee-37e4-43bc-c185e8ae0d1d%28Office.15%29.aspx)|||X|
-|[*表單](http://msdn.microsoft.com/en-us/library/77a8ac83-c22b-1225-4fc4-ba4038b68648%28Office.15%29.aspx)<br/>[**FormSettings](http://msdn.microsoft.com/en-us/library/0d1a311d-939d-78c1-e968-89ddf7ebc4b4%28Office.15%29.aspx)|||X|
-|[*集合 (需求)](http://msdn.microsoft.com/en-us/library/509be287-b532-87c6-71ac-64f3a4bbd3af%28Office.15%29.aspx)||X|
-|[*主機](http://msdn.microsoft.com/library/f9a739c1-3daf-c03a-2bd9-4a2a6b870101%28Office.15%29.aspx)||X|
+|
+  [OfficeApp](http://msdn.microsoft.com/en-us/library/68f1cada-66f8-4341-45f5-14e0634c24fb%28Office.15%29.aspx)|X|X|X|
+|
+  [Id](http://msdn.microsoft.com/en-us/library/67c4344a-935c-09d6-1282-55ee61a2838b%28Office.15%29.aspx)|X|X|X|
+|
+  [Version](http://msdn.microsoft.com/en-us/library/6a8bbaa5-ee8c-6824-4aba-cb1a804269f6%28Office.15%29.aspx)|X|X|X|
+|
+  [ProviderName](http://msdn.microsoft.com/en-us/library/0062693a-fafa-ea2d-051a-75dac0f6c323%28Office.15%29.aspx)|X|X|X|
+|
+  [DefaultLocale](http://msdn.microsoft.com/en-us/library/04796a3a-3afa-dc85-db66-4677560c185c%28Office.15%29.aspx)|X|X|X|
+|
+  [DisplayName](http://msdn.microsoft.com/en-us/library/529159ca-53bf-efcf-c245-e572dab0ef57%28Office.15%29.aspx)|X|X|X|
+|
+  [Description](http://msdn.microsoft.com/en-us/library/bcce6bad-23d0-7631-7d8c-1064b8453b5a%28Office.15%29.aspx)|X|X|X|
+|
+  [IconUrl](http://msdn.microsoft.com/library/c7dac2d4-4fda-6fc7-3774-49f02b2d3e1e%28Office.15%29.aspx)|X|X|X|
+|
+  [HighResolutionIconUrl](http://msdn.microsoft.com/library/ff7b2647-ec8e-70dc-4e4a-e1a1377ff3f2%28Office.15%29.aspx)|||X|
+|
+  [DefaultSettings (ContentApp)](http://msdn.microsoft.com/en-us/library/f7edc689-551f-1a17-ea81-ffd58f534557%28Office.15%29.aspx)<br/>
+  [DefaultSettings (TaskPaneApp)](http://msdn.microsoft.com/en-us/library/36e3d139-56a4-fb3d-0a21-cbd14e606765%28Office.15%29.aspx)|X|X||
+|
+  [SourceLocation (ContentApp)](http://msdn.microsoft.com/en-us/library/00d95bb0-e8f5-647f-790a-0aa3aabc8141%28Office.15%29.aspx)<br/>
+  [SourceLocation (TaskPaneApp)](http://msdn.microsoft.com/en-us/library/e6ea8cd4-7c8b-1da7-d8f8-8d3c80a088bc%28Office.15%29.aspx)|X|X||
+|
+  [DesktopSettings](http://msdn.microsoft.com/en-us/library/da9fd085-b8cc-2be0-d329-2aa1ef5d3f1c%28Office.15%29.aspx)|||X|
+|
+  [SourceLocation (MailApp)](http://msdn.microsoft.com/en-us/library/3792d389-bebd-d19a-9d90-35b7a0bfc623%28Office.15%29.aspx)|||X|
+|
+  [Permissions (ContentApp)](http://msdn.microsoft.com/en-us/library/9f3dcf9c-fced-c115-4f0d-38d60fb7c583%28Office.15%29.aspx)<br/>
+  [Permissions (TaskPaneApp)](http://msdn.microsoft.com/en-us/library/d4cfe645-353d-8240-8495-f76fb36602fe%28Office.15%29.aspx)<br/>
+  [Permissions (MailApp)](http://msdn.microsoft.com/en-us/library/c20cdf29-74b0-564c-e178-b75d148b36d1%28Office.15%29.aspx)|X|X|X|
+|
+  [Rule (RuleCollection)](http://msdn.microsoft.com/en-us/library/c6ce9d52-4b53-c6a6-de7e-c64106135c81%28Office.15%29.aspx)<br/>
+  [Rule (MailApp)](http://msdn.microsoft.com/en-us/library/56dfc32e-2b8c-1724-05be-5595baf38aa3%28Office.15%29.aspx)|||X|
+|
+  [Dictionary](http://msdn.microsoft.com/en-us/library/f78898f4-059e-d5dc-5eab-1f6b92214068%28Office.15%29.aspx)||||
+|
+  [*Requirements (MailApp)](http://msdn.microsoft.com/en-us/library/9536ea30-34f7-76b5-7f30-1508626840e4%28Office.15%29.aspx)||X|
+|
+  [*Set](http://msdn.microsoft.com/en-us/library/1506daa1-332c-30e1-6402-3371bcd0b895%28Office.15%29.aspx)<br/>
+  [**Sets (MailAppRequirements)](http://msdn.microsoft.com/en-us/library/2a6a2484-eeee-37e4-43bc-c185e8ae0d1d%28Office.15%29.aspx)|||X|
+|
+  [*Form](http://msdn.microsoft.com/en-us/library/77a8ac83-c22b-1225-4fc4-ba4038b68648%28Office.15%29.aspx)<br/>
+  [**FormSettings](http://msdn.microsoft.com/en-us/library/0d1a311d-939d-78c1-e968-89ddf7ebc4b4%28Office.15%29.aspx)|||X|
+|
+  [*Sets (Requirements)](http://msdn.microsoft.com/en-us/library/509be287-b532-87c6-71ac-64f3a4bbd3af%28Office.15%29.aspx)||X|
+|
+  [*Hosts](http://msdn.microsoft.com/library/f9a739c1-3daf-c03a-2bd9-4a2a6b870101%28Office.15%29.aspx)||X|
 *加入至 Office 增益集資訊清單結構描述 1.1 版。
 
 
-## 資訊清單 v1.1 XML 檔案範例和結構描述
+## <a name="manifest-v1.1-xml-file-examples-and-schemas"></a>資訊清單 v1.1 XML 檔案範例和結構描述
 
 
 以下章節顯示內容、工作窗格及 Outlook 增益集的資訊清單 v1.1 XML 檔案的範例。
 
-### 含命令和後援工作窗格的 Office 增益集資訊清單 v1.1 範例
+### <a name="office-add-in-manifest-v1.1-example-with-commands-and-fallback-task-pane"></a>含命令和後援工作窗格的 Office 增益集資訊清單 v1.1 範例
 [工作窗格資訊清單結構描述](https://github.com/OfficeDev/office-js-docs/tree/master/docs/overview/schemas/taskpane)
 
 ```XML
@@ -260,7 +289,7 @@ Office 增益集的 XML 資訊清單檔案，描述了當使用者安裝並將�
 </OfficeApp>
 ```
 
-### 內容增益集資訊清單 v1.1 範例
+### <a name="content-add-in-manifest-v1.1-example"></a>內容增益集資訊清單 v1.1 範例
 [內容資訊清單結構描述](https://github.com/OfficeDev/office-js-docs/tree/master/docs/overview/schemas/content)
 
 
@@ -297,7 +326,7 @@ Office 增益集的 XML 資訊清單檔案，描述了當使用者安裝並將�
 </OfficeApp>
 ```
 
-### Outlook 增益集資訊清單 v1.1 範例
+### <a name="outlook-add-in-manifest-v1.1-example"></a>Outlook 增益集資訊清單 v1.1 範例
 [內容資訊清單結構描述](https://github.com/OfficeDev/office-js-docs/tree/master/docs/overview/schemas/mail)
 
 
@@ -390,7 +419,7 @@ Office 增益集的 XML 資訊清單檔案，描述了當使用者安裝並將�
 ```
 
 
-## 驗證 Office 增益集的資訊清單
+## <a name="validate-the-office-add-ins-manifest"></a>驗證 Office 增益集的資訊清單
 
 
 若要確定說明 Office 增益集的資訊清單檔案是完整且正確，請針對 [XML 結構描述定義 (XSD) 檔案](https://github.com/OfficeDev/office-js-docs/tree/master/docs/overview/schemas)驗證它。您可以使用 XML 結構描述驗證工具或 Visual Studio 來驗證資訊清單。您也可以下載 [Office 應用程式相容性套件](https://www.microsoft.com/en-us/download/details.aspx?id=46831)，並在增益集上執行它。
@@ -398,14 +427,14 @@ Office 增益集的 XML 資訊清單檔案，描述了當使用者安裝並將�
 如需針對結構描述驗證資訊清單的詳細資訊，請參閱 [XML 結構描述 (XSD) 驗證工具](http://stackoverflow.com/questions/124865/xml-schema-xsd-validation-tool)。
 
 
-## 指定您想要在增益集視窗中開啟的網域
+## <a name="specify-domains-you-want-to-open-in-the-add-in-window"></a>指定您想要在增益集視窗中開啟的網域
 
 
-根據預設，如果增益集嘗試移至網域中的 URL，且該網域非裝載起始頁的網域 (在資訊清單檔案的 [SourceLocation](http://msdn.microsoft.com/en-us/library/00d95bb0-e8f5-647f-790a-0aa3aabc8141%28Office.15%29.aspx) 元素中指定)，將在 Office 主應用程式的增益集窗格以外的新瀏覽器視窗中開啟該 URL。 此預設行為會保護使用者，避免內嵌 **iframe** 元素的增益集窗格中的非預期頁面瀏覽。
+根據預設，如果增益集嘗試移至網域中的 URL，且該網域非裝載起始頁的網域 (在資訊清單檔案的 [SourceLocation](http://msdn.microsoft.com/en-us/library/00d95bb0-e8f5-647f-790a-0aa3aabc8141%28Office.15%29.aspx) 元素中指定)，將在 Office 主應用程式的增益集窗格以外的新瀏覽器視窗中開啟該 URL。此預設行為會保護使用者，避免內嵌 **iframe** 元素的增益集窗格中的非預期頁面瀏覽。
 
-若要覆寫此行為，請指定要在資訊清單檔的 [AppDomains](http://msdn.microsoft.com/en-us/library/13cf867d-9b24-786f-0687-6bcdc954628e%28Office.15%29.aspx) 元素所指定的網域清單中，於增益集視窗中開啟的每個網域。 如果增益集嘗試移至不在清單中網域的 URL，該 URL 將會在新的瀏覽器視窗中開啟 (增益集窗格外部)。
+若要覆寫此行為，請指定要在資訊清單檔的 [AppDomains](http://msdn.microsoft.com/en-us/library/13cf867d-9b24-786f-0687-6bcdc954628e%28Office.15%29.aspx) 元素所指定的網域清單中，於增益集視窗中開啟的每個網域。如果增益集嘗試移至不在清單中網域的 URL，該 URL 將會在新的瀏覽器視窗中開啟 (增益集窗格外部)。
 
-下列的 XML 資訊清單範例將裝載其在 `https://www.contoso.com` 網域 (在 **SourceLocation** 元素中指定) 中的主增益集頁面。 它也會指定 [AppDomain](http://msdn.microsoft.com/en-us/library/2a0353ec-5e09-6fbf-1636-4bb5dcebb9bf%28Office.15%29.aspx) 元素清單的 **AppDomains** 元素中的 `https://www.northwindtraders.com` 網域。 如果增益集前往 www.northwindtraders.com 網域中的頁面，該頁面會在增益集窗格中開啟。
+下列的 XML 資訊清單範例將裝載其在 `https://www.contoso.com` 網域 (在 **SourceLocation** 元素中指定) 中的主增益集頁面。它也會指定 **AppDomain** 元素清單的 [AppDomains](http://msdn.microsoft.com/en-us/library/2a0353ec-5e09-6fbf-1636-4bb5dcebb9bf%28Office.15%29.aspx) 元素中的 `https://www.northwindtraders.com` 網域。如果增益集前往 www.northwindtraders.com 網域中的頁面，該頁面會在增益集窗格中開啟。
 
 
 ```XML
@@ -427,7 +456,7 @@ Office 增益集的 XML 資訊清單檔案，描述了當使用者安裝並將�
 </OfficeApp>
 ```
 
-## 其他資源
+## <a name="additional-resources"></a>其他資源
 
 
 - [在資訊清單中定義增益集命令](../../docs/outlook/manifests/define-add-in-commands.md)

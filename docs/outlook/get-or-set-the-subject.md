@@ -1,5 +1,5 @@
 
-# 在 Outlook 中撰寫約會或郵件時，取得或設定主旨
+# <a name="get-or-set-the-subject-when-composing-an-appointment-or-message-in-outlook"></a>在 Outlook 中撰寫約會或郵件時，取得或設定主旨
 
 Office 的 JavaScript API 提供非同步方法 ([subject.getAsync](../../reference/outlook/Subject.md) 與 [subject.setAsync](../../reference/outlook/Subject.md)) 來取得及設定使用者正在撰寫的約會或郵件的主旨。這些非同步方法僅供撰寫增益集使用。若要使用這些方法，請確定您已正確設定適用於 Outlook 的增益集資訊清單以啟動撰寫表單中的增益集。
 
@@ -26,7 +26,7 @@ item.subject.getAsync
 如同適用於 Office 的 JavaScript API 中大部分的非同步方法，**getAsync** 和 **setAsync** 接受選擇性輸入參數。如需有關指定這些選擇性輸入參數的詳細資訊，請參閱 [Office 增益集中的非同步程式設計](../../docs/develop/asynchronous-programming-in-office-add-ins.md)中的「將選擇性參數傳遞至非同步方法」。
 
 
-## 若要取得主旨
+## <a name="to-get-the-subject"></a>若要取得主旨
 
 
 本章節會顯示取得使用者正在撰寫的約會主旨，或使用者正在撰寫的郵件，及顯示主旨的程式碼範例。這個程式碼範例假設增益集資訊清單中啟動約會或郵件撰寫表單中的增益集的規則，如下所示。
@@ -79,7 +79,7 @@ function write(message){
 ```
 
 
-## 若要設定主旨
+## <a name="to-set-the-subject"></a>若要設定主旨
 
 
 本章節會顯示設定使用者正在撰寫的約會主旨，或使用者正在撰寫的郵件的程式碼範例。類似於先前的範例，這個程式碼範例假設增益集資訊清單中啟動約會或郵件撰寫表單中的增益集的規則。
@@ -132,7 +132,7 @@ function write(message){
 ```
 
 
-## 其他資源
+## <a name="additional-resources"></a>其他資源
 
 
 

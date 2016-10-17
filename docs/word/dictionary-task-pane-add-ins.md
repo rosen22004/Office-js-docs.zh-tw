@@ -1,39 +1,37 @@
 
-# 建立字典工作窗格增益集
+# <a name="create-a-dictionary-task-pane-add-in"></a>建立字典工作窗格增益集
 
 
 本文將告訴您工作窗格增益集的範例，並隨附 Web 服務來提供使用者在 Word 2013 文件中目前選取範圍的字典定義或同義字。 
 
 字典 Office 增益集是根據標準的工作窗格增益集，包含額外的功能以支援查詢和顯示字典 XML Web 服務的定義 (除了 Office 應用程式的 UI 中的其他位置)。 
 
-在典型的字典工作窗格增益集，使用者在他們的文件中選取單字或片語，增益集背後的 JavaScript 邏輯接著會將此選項傳遞至字典提供者的 XML Web 服務。 接著會更新字典提供者的網頁，向使用者顯示選項的定義。
-XML Web 服務元件最多會以 OfficeDefinitions XML 結構描述所定義的格式傳回定義，隨後在裝載 Office 應用程式的 UI中，向其他位置的使用者顯示。 圖 1 顯示在 Word 2013 中執行的 Bing 品牌字典增益集的選項和顯示經驗。
+在典型的字典工作窗格增益集，使用者在他們的文件中選取單字或片語，增益集背後的 JavaScript 邏輯接著會將此選項傳遞至字典提供者的 XML Web 服務。接著會更新字典提供者的網頁，向使用者顯示選項的定義。XML Web 服務元件最多會以 OfficeDefinitions XML 結構描述所定義的格式傳回定義，隨後在裝載 Office 應用程式的 UI中，向其他位置的使用者顯示。圖 1 顯示在 Word 2013 中執行的 Bing 品牌字典增益集的選項和顯示經驗。
 
-**圖 1. 顯示所選字定義的字典增益集**
+**圖 1.顯示所選字定義的字典增益集**
 
 
 ![顯示定義的字典應用程式](../../images/DictionaryAgave01.jpg)
 
-取決於您按一下字典增益集的 HTML UI 的 [查看更多]**** 連結以顯示工作窗格中的詳細資訊，或開啟另一個瀏覽器視窗來顯示所選單字或片語的完整網頁。
-圖 2 顯示 [定義]**** 內容功能表命令，可讓使用者快速啟動安裝字典。 數字 3 到 5 會顯示 Office UI 中的位置，其中的字典 XML 服務可用於在 Word 2013 中提供定義。
+取決於您按一下字典增益集的 HTML UI 的 [查看更多] 連結以顯示工作窗格中的詳細資訊，或開啟另一個瀏覽器視窗來顯示所選單字或片語的完整網頁。圖 2 顯示 [定義] 內容功能表命令，可讓使用者快速啟動安裝字典。數字 3 到 5 會顯示 Office UI 中的位置，其中的字典 XML 服務可用於在 Word 2013 中提供定義。
 
-**圖 2. 定義在內容功能表中的命令**
+**圖 2.定義在內容功能表中的命令**
 
 
 
 ![定義內容功能表](../../images/DictionaryAgave02.jpg)
 
-**圖 3. [拼字及文法檢查] 窗格中的定義**
+**圖 3.[拼字及文法檢查] 窗格中的定義**
 
 
 ![[拼字及文法檢查] 窗格中的定義](../../images/DictionaryAgave03.jpg)
 
-**圖 4. [同義字] 窗格中的定義**
+**圖 4.[同義字] 窗格中的定義**
 
 
 ![[同義字] 窗格中的定義](../../images/DictionaryAgave04.jpg)
 
-**圖 5. 閱讀模式中的定義**
+**圖 5.閱讀模式中的定義**
 
 
 ![閱讀模式中的定義](../../images/DictionaryAgave05.jpg)
@@ -47,13 +45,13 @@ XML Web 服務元件最多會以 OfficeDefinitions XML 結構描述所定義的�
     
 下列章節提供如何建立這些元件的範例。
 
-## 建立字典 XML Web 服務
+## <a name="creating-a-dictionary-xml-web-service"></a>建立字典 XML Web 服務
 
 
 XML Web 服務必須將查詢傳回 Web 服務，做為符合 OfficeDefinitions XML 結構描述的 XML。下列兩節描述 OfficeDefinitions XML 結構描述，並提供如何撰寫 XML Web 服務程式碼，以該 XML 格式傳回查詢的範例。
 
 
-### OfficeDefinitions XML 結構描述
+### <a name="officedefinitions-xml-schema"></a>OfficeDefinitions XML 結構描述
 
 下列程式碼顯示 OfficeDefinitions XML 結構描述的 XSD。
 
@@ -106,7 +104,7 @@ XML Web 服務必須將查詢傳回 Web 服務，做為符合 OfficeDefinitions 
 ```
 
 
-### 字典 XML Web 服務範例
+### <a name="sample-dictionary-xml-web-service"></a>字典 XML Web 服務範例
 
 下列 C# 程式碼提供簡單的範例，說明如何撰寫 XML Web 服務的 程式碼，以 OfficeDefinitions XML 格式傳回字典查詢的結果。
 
@@ -180,7 +178,7 @@ public class WebService : System.Web.Services.WebService {
 ```
 
 
-## 建立字典增益集的元件
+## <a name="creating-the-components-of-a-dictionary-add-in"></a>建立字典增益集的元件
 
 
 字典增益集包含三個主要元件檔案。
@@ -193,7 +191,7 @@ public class WebService : System.Web.Services.WebService {
 - JavaScript 檔案，其提供邏輯以取得文件的使用者選項、傳回選項做為 Web 服務的查詢，然後在增益集的 UI 中顯示傳回的結果。
     
 
-### 建立字典增益集的資訊清單檔
+### <a name="creating-a-dictionary-add-in's-manifest-file"></a>建立字典增益集的資訊清單檔
 
 以下是字典增益集的範例資訊清單檔。
 
@@ -258,7 +256,7 @@ public class WebService : System.Web.Services.WebService {
 用於建立字典增益集的資訊清單檔的 **Dictionary** 元素及其子元素將在下列各節說明。如需資訊清單檔中其他元素的相關資訊，請參閱 [Office 增益集的 XML 資訊清單](../../docs/overview/add-in-manifests.md)。
 
 
-### Dictionary 項目
+### <a name="dictionary-element"></a>Dictionary 項目
 
 
 指定字典增益集的設定。
@@ -276,10 +274,10 @@ public class WebService : System.Web.Services.WebService {
 建立字典增益集時，**Dictionary** 元素及其子元素會加入至工作窗格增益集的資訊清單。
 
 
-#### TargetDialects 項目
+#### <a name="targetdialects-element"></a>TargetDialects 項目
 
 
-指定這個字典所支援的用語。 必要 (適用於字典增益集)。
+指定這個字典所支援的用語。必要 (適用於字典增益集)。
 
  **父元素**
 
@@ -322,10 +320,10 @@ public class WebService : System.Web.Services.WebService {
 ```
 
 
-#### TargetDialect 項目
+#### <a name="targetdialect-element"></a>TargetDialect 元素
 
 
-指定這個字典所支援的方言。 必要 (適用於字典增益集)。
+指定這個字典所支援的方言。必要 (適用於字典增益集)。
 
  **父元素**
 
@@ -345,10 +343,10 @@ public class WebService : System.Web.Services.WebService {
 ```
 
 
-#### QueryUri 項目
+#### <a name="queryuri-element"></a>QueryUri 元素
 
 
-指定字典查詢服務的端點。 必要 (適用於字典增益集)。
+指定字典查詢服務的端點。必要 (適用於字典增益集)。
 
  **父元素**
 
@@ -356,7 +354,7 @@ public class WebService : System.Web.Services.WebService {
 
  **備註**
 
-這是字典提供者的 XML Web 服務的 URI。 正確地逸出查詢將附加至此 URI。 
+這是字典提供者的 XML Web 服務的 URI。正確地逸出查詢將附加至此 URI。 
 
  **範例**
 
@@ -368,10 +366,10 @@ public class WebService : System.Web.Services.WebService {
 ```
 
 
-#### CitationText 項目
+#### <a name="citationtext-element"></a>CitationText 元素
 
 
-指定要用於引文的文字。 必要 (適用於字典增益集)。
+指定要用於引文的文字。必要 (適用於字典增益集)。
 
  **父元素**
 
@@ -393,10 +391,10 @@ public class WebService : System.Web.Services.WebService {
 ```
 
 
-#### DictionaryName 項目
+#### <a name="dictionaryname-element"></a>DictionaryName 元素
 
 
-指定此字典的名稱。 必要 (適用於字典增益集)。
+指定此字典的名稱。必要 (適用於字典增益集)。
 
  **父元素**
 
@@ -418,10 +416,10 @@ public class WebService : System.Web.Services.WebService {
 ```
 
 
-#### DictionaryHomePage 項目
+#### <a name="dictionaryhomepage-element"></a>DictionaryHomePage 元素
 
 
-指定字典首頁的 URL。 必要 (適用於字典增益集)。
+指定字典首頁的 URL。必要 (適用於字典增益集)。
 
  **父元素**
 
@@ -443,7 +441,7 @@ public class WebService : System.Web.Services.WebService {
 ```
 
 
-### 建立字典增益集的 HTML 使用者介面
+### <a name="creating-a-dictionary-add-in's-html-user-interface"></a>建立字典增益集的 HTML 使用者介面
 
 
 下列兩個範例顯示「示範字典」增益集之 UI 的 HTML 和 CSS 檔案。若要檢視 UI 在增益集的工作窗格中的顯示方式，請參閱程式碼下方的圖 6。若要查看 Dictionary.js 檔案中的 JavaScript 實作如何為此 HTML UI 提供程式設計邏輯，請參閱緊接本節後面的「撰寫 JavaScript 實作 」。
@@ -533,15 +531,15 @@ a:hover, a:active
 ```
 
 
-**圖 6. 示範字典 UI**
+**圖 6.示範字典 UI**
 
 ![示範字典 UI](../../images/DictionaryAgave06.jpg)
 
 
-### 撰寫 JavaScript 實作
+### <a name="writing-the-javascript-implementation"></a>撰寫 JavaScript 實作
 
 
-下列範例會顯示從增益集的 HTML 網頁呼叫的 Dictionary.js 檔案中的 JavaScript 實作，為示範字典增益集提供程式設計邏輯。 這個指令碼會重複使用先前所描述的 XML Web 服務。 放置在與範例 Web 服務相同的目錄中時，指令碼會取得從該服務的定義。 它可以用於公用的 OfficeDefinitions 合格的 XML Web 服務，方法是修改檔案上方的 `xmlServiceURL` 變數，然後以正確註冊的一個來取代發音的 Bing API 索引鍵。
+下列範例會顯示從增益集的 HTML 網頁呼叫的 Dictionary.js 檔案中的 JavaScript 實作，為示範字典增益集提供程式設計邏輯。這個指令碼會重複使用先前所描述的 XML Web 服務。放置在與範例 Web 服務相同的目錄中時，指令碼會取得從該服務的定義。它可以用於公用的 OfficeDefinitions 合格的 XML Web 服務，方法是修改檔案上方的 `xmlServiceURL` 變數，然後以正確註冊的一個來取代發音的 Bing API 索引鍵。
 
 從這個實作中呼叫的 JavaScript API for Office (Office.js) 的主要成員如下所示 ︰
 
@@ -552,9 +550,9 @@ a:hover, a:active
     
 - **Document** 物件的 [GetSelectedDataAsync](../../reference/shared/document.getselecteddataasync.md) 方法，當引發 **SelectionChanged** 事件處理常式來取得使用者選取的字或片語、迫使它為純文字，然後執行 `selectedTextCallback` 非同步回呼函式時，會在 `tryUpdatingSelectedWord()` 中呼叫它。
     
-- 將 `selectTextCallback` 非同步回呼函式傳遞為 **getSelectedDataAsync** 方法的 _callback_ 引數加以執行時，它會在回呼傳回時取得所選文字的值。 它會使用傳回的 **AsyncResult** 物件的 [value](../../reference/shared/asyncresult.status.md) 屬性，從回呼的 _selectedText_ 引數 (屬於類型 [AsyncResult](../../reference/shared/asyncresult.md)) 取得值。
+- 將 `selectTextCallback` 非同步回呼函式傳遞為 **getSelectedDataAsync** 方法的 _callback_ 引數加以執行時，它會在回呼傳回時取得所選文字的值。它會使用傳回的 **AsyncResult** 物件的 [value](../../reference/shared/asyncresult.status.md) 屬性，從回呼的 _selectedText_ 引數 (屬於類型 [AsyncResult](../../reference/shared/asyncresult.md)) 取得值。
     
-- `selectedTextCallback` 函式的其餘程式碼會查詢定義的 XML Web 服務。 它也會呼叫 Microsoft Translator API 以提供具有所選文字發音的 .wav 檔的 URL。
+- `selectedTextCallback` 函式的其餘程式碼會查詢定義的 XML Web 服務。它也會呼叫 Microsoft Translator API 以提供具有所選文字發音的 .wav 檔的 URL。
     
 - Dictionary.js 的其餘程式碼會顯示增益集的 HTML UI 中定義及發音連結清單。
     

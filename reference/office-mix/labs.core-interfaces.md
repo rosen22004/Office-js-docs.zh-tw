@@ -1,5 +1,5 @@
 
-# Labs.Core 介面
+# <a name="labs.core-interfaces"></a>Labs.Core 介面
 **LabsJS.Labs.Core** 模組中的介面
 
  _**適用於︰**Office 的應用程式 | Office 增益集 | Office Mix | PowerPoint_

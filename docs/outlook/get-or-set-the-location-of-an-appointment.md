@@ -1,5 +1,5 @@
 
-# 在 Outlook 中撰寫約會時，取得或設定位置
+# <a name="get-or-set-the-location-when-composing-an-appointment-in-outlook"></a>在 Outlook 中撰寫約會時，取得或設定位置
 
 Office 的 JavaScript API 提供非同步方法 ([getAsync](../../reference/outlook/Location.md) 與 [setAsync](../../reference/outlook/Location.md)) 來取得及設定使用者正在撰寫的郵件或約會的位置。這些非同步方法僅供撰寫增益集使用。若要使用這些方法，請確定您已正確設定適用於 Outlook 的增益集資訊清單以啟動撰寫表單中的增益集，如[建立撰寫格式的 Outlook 增益集](../outlook/compose-scenario.md)所述。
 
@@ -26,7 +26,7 @@ item.location.getAsync
 如同適用於 Office 的 JavaScript API 中大部分的非同步方法，**getAsync** 和 **setAsync** 接受選擇性輸入參數。如需有關指定這些選擇性輸入參數的詳細資訊，請參閱[Office 增益集中的非同步程式設計](../../docs/develop/asynchronous-programming-in-office-add-ins.md)。
 
 
-## 若要取得位置
+## <a name="to-get-the-location"></a>若要取得位置
 
 
 本章節會顯示取得使用者正在撰寫的約會位置，及顯示位置的程式碼範例。這個程式碼範例假設增益集資訊清單中啟動約會撰寫表單中的增益集的規則，如下所示。
@@ -76,7 +76,7 @@ function write(message){
 ```
 
 
-## 若要設定位置
+## <a name="to-set-the-location"></a>若要設定位置
 
 
 本章節會顯示設定使用者正在撰寫的約會位置的程式碼範例。類似於先前的範例，這個程式碼範例假設增益集資訊清單中啟動約會撰寫表單中的增益集的規則。
@@ -123,7 +123,7 @@ function write(message){
 ```
 
 
-## 其他資源
+## <a name="additional-resources"></a>其他資源
 
 
 

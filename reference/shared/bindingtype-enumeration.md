@@ -1,10 +1,10 @@
 
-# BindingType 列舉
+# <a name="bindingtype-enumeration"></a>BindingType 列舉
  指定應傳回的繫結物件類型。
 
 |||
 |:-----|:-----|
-|**主機︰**|Access、Excel、Word|
+|**主應用程式︰**|Access、Excel、Word|
 |**上次變更**|1.1|
 
 ```
@@ -12,19 +12,19 @@ Office.BindingType
 ```
 
 
-## 成員
+## <a name="members"></a>成員
 
 
 **值**
 
 
-|**列舉**|**值**|**說明**|
+|**列舉**|**值**|**描述**|
 |:-----|:-----|:-----|
 |Office.BindingType.Matrix|"matrix"|沒有標題列的表格式資料。資料會以陣列的陣列傳回，例如以此形式：` [[row1column1, row1column2],[row2column1, row2column2]]`|
 |Office.BindingType.Table|"table"|帶有標題列的表格式資料。資料會以 [TableData](../../reference/shared/tabledata.md) 物件傳回。|
 |Office.BindingType.Text|"text"|純文字。資料會以一連串的字元傳回。|
 
-## 支援詳細資料
+## <a name="support-details"></a>支援詳細資料
 
 
 下列矩陣中的大寫 Y，表示在相對應的 Office 主應用程式中支援此列舉。空白儲存格表示 Office 主應用程式不支援此列舉。
@@ -39,7 +39,7 @@ Office.BindingType
 |:-----|:-----|:-----|:-----|
 |**Access**|Y|||
 |**Excel**|Y|Y|Y|
-|**Word**|Y||Y|
+|**Word**|Y|Y|Y|
 
 |||
 |:-----|:-----|
@@ -47,7 +47,7 @@ Office.BindingType
 |**文件庫**|Office.js|
 |**命名空間**|Office|
 
-## 支援歷程記錄
+## <a name="support-history"></a>支援歷程記錄
 
 
 
