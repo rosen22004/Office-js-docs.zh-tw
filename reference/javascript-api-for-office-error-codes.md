@@ -125,5 +125,5 @@
 
 - [Office 增益集 API 和結構描述參考](../reference/reference.md)
     
-- [Office 增益集開發生命週期](../docs/design/add-in-development-lifecycle.md)
+- [Office 增益集開發生命週期](../docs/develop/add-in-development-lifecycle.md)
     

@@ -1,4 +1,4 @@
-# <a name="build-your-first-onenote-add-in"></a>建立第一個 OneNote 增益集
+﻿# <a name="build-your-first-onenote-add-in"></a>建立第一個 OneNote 增益集
 
 此文章會引導您建置簡單的工作窗格增益集，可將某些文字加入到 OneNote 頁面中。
 
@@ -152,8 +152,10 @@ function addOutlineToPage() {
 3 - 移至 [OneNote Online](https://www.onenote.com/notebooks) 上，並開啟筆記本。
 
 4 - 選擇 [插入 > Office 增益集]。這樣會開啟 [Office 增益集] 對話方塊。
-  - 如果您登入您的家庭用戶帳戶，選擇 [我的增益集] 索引標籤，然後選擇 [上傳我的增益集]。
-  - 如果您登入您的工作或學校帳戶，選擇 [我的組織] 索引標籤，然後選擇 [上傳我的增益集]。 
+
+  -如果您登入您的家庭用戶帳戶，選擇 [我的增益集] 索引標籤，然後選擇 [上傳我的增益集]。
+  
+  -如果您登入您的工作或學校帳戶，選擇 [我的組織] 索引標籤，然後選擇 [上傳我的增益集]。 
   
   下列影像顯示家庭用戶筆記本的 [我的增益集] 索引標籤。
 
@@ -164,20 +166,22 @@ function addOutlineToPage() {
 6 - 增益集會在 OneNote 頁面旁的 iFrame 中開啟。在文字區域中輸入一些文字，然後選擇 [新增大綱]。您輸入的文字會加入至頁面。 
 
 ## <a name="troubleshooting-and-tips"></a>疑難排解及秘訣：
-- 您可以使用瀏覽器的開發人員工具，來偵錯增益集。當您使用 Gulp Web 伺服器，並在 Internet Explorer 或 Chrome 中偵錯時，您可以本機儲存您的變更，然後只要重新整理增益集 iFrame 即可。
+-您可以使用瀏覽器的開發人員工具，來偵錯增益集。當您使用 Gulp Web 伺服器，並在 Internet Explorer 或 Chrome 中偵錯時，您可以本機儲存您的變更，然後只要重新整理增益集 iFrame 即可。
 
-- 當您檢查 OneNote 物件時，目前可用的屬性會顯示實際值。需要載入的屬性會顯示 *undefined*。展開 `_proto_` 節點來檢視已在物件上定義，但尚未載入的屬性。
+-當您檢查 OneNote 物件時，目前可用的屬性會顯示實際值。需要載入的屬性會顯示 *undefined*。展開 `_proto_` 節點來檢視已在物件上定義，但尚未載入的屬性。
 
       ![Unloaded OneNote object in the debugger](../../images/onenote-debug.png)
 
-- 如果增益集使用任何 HTTP 資源，則您必須在瀏覽器中啟用混合的內容。實際執行的增益集只應該使用安全的 HTTPS 資源。
+-如果增益集使用任何 HTTP 資源，則您必須在瀏覽器中啟用混合的內容。實際執行的增益集只應該使用安全的 HTTPS 資源。
 
--  可從任何地方，開啟工作窗格的增益集，但只能在一般頁面內容中 (亦即不在標題、影像、Iframe 中等等) 插入內容的增益集。 
+-可從任何地方，開啟工作窗格的增益集，但只能在一般頁面內容中 (亦即不在標題、影像、Iframe 中等等) 插入內容的增益集。 
 
 ## <a name="additional-resources"></a>其他資源
 
-- [OneNote JavaScript API 程式設計的概觀](onenote-add-ins-programming-overview.md)
-- [OneNote JavaScript API 參考](../../reference/onenote/onenote-add-ins-javascript-reference.md)
-- [Rubric Grader 範例](https://github.com/OfficeDev/OneNote-Add-in-Rubric-Grader)
-- [Office 增益集平台概觀](https://dev.office.com/docs/add-ins/overview/office-add-ins)
+-[OneNote JavaScript API 程式設計的概觀](onenote-add-ins-programming-overview.md)
 
+-[OneNote JavaScript API 參考](../../reference/onenote/onenote-add-ins-javascript-reference.md)
+
+-[Rubric Grader 範例](https://github.com/OfficeDev/OneNote-Add-in-Rubric-Grader)
+
+-[Office 增益集平台概觀](https://dev.office.com/docs/add-ins/overview/office-add-ins)

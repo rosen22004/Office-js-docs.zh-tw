@@ -1,5 +1,5 @@
 # <a name="icon-element"></a>圖示元素
-定義[按鈕](./button.md)和[功能表](./menu-control.md)控制項的**影像**元素。
+定義按鈕[](./control.md#button-control)和功能表[](./control.md#menu-dropdown-button-controls)控制項的**影像**元素。
 
 ## <a name="child-elements"></a>子元素
 |  元素 |  必要  |  描述  |

@@ -1,6 +1,6 @@
 # <a name="functionfile-element"></a>FunctionFile 元素
 
-透過增益集命令為增益集所公開的作業指定原始程式碼檔，以執行 JavaScript 函式而非顯示 UI。**FunctionFile** 元素是 [FormFactor](./formfactor) 的子元素。**FunctionFile** 元素的 **resid** 屬性是設定為 **Resources** 元素中 **Url** 元素的 **id** 屬性，包含要包含或載入無 UI 增益集命令按鈕所使用的所有 JavaScript 函式的 HTML 檔案的 URL，如 [Control 元素](control.md)所定義。
+透過增益集命令為增益集所公開的作業指定原始程式碼檔，以執行 JavaScript 函式而非顯示 UI。**FunctionFile** 元素是 [FormFactor](./formfactor.md) 的子元素。**FunctionFile** 元素的 **resid** 屬性是設定為 **Resources** 元素中 **Url** 元素的 **id** 屬性，包含要包含或載入無 UI 增益集命令按鈕所使用的所有 JavaScript 函式的 HTML 檔案的 URL，如 [Control 元素](control.md)所定義。
 
 下列是 **FunctionFile** 元素的範例。
 
@@ -17,7 +17,7 @@
         </DesktopFormFactor>
 ```
 
-**FunctionFile** 元素指示的 HTML 檔案中的 JavaScript 必須呼叫 `Office.initialize`，並定義採用單一參數的命名函式︰`event`。函式應該使用 [item.notificationMessages](../../../reference/outlook/Office.context.mailbox.item.md) API，以指出進度、成功或失敗給使用者。它也應該在完成執行後呼叫 [event.completed](../../../reference/shared/event.completed.md)。函式的名稱是在無 UI 按鈕的 **FunctionName** 元素中使用。
+**FunctionFile** 元素指示的 HTML 檔案中的 JavaScript 必須呼叫 `Office.initialize`，並定義採用單一參數的命名函式︰`event`。函式應該使用 [item.notificationMessages](../../reference/outlook/Office.context.mailbox.item.md) API，以指出進度、成功或失敗給使用者。它也應該在完成執行後呼叫 [event.completed](../../reference/shared/event.completed.md)。函式的名稱是在無 UI 按鈕的 **FunctionName** 元素中使用。
 
 下列是定義 **trackMessage** 函式的 HTML 檔範例。
 

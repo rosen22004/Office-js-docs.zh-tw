@@ -46,7 +46,7 @@ _適用於：Word 2016、Word for iPad、Word for Mac、Word Online_
 |[insertText(text: string, insertLocation:InsertLocation)](#inserttexttext-string-insertlocation-insertlocation)|[Range](range.md)|在段落的指定位置插入文字。InsertLocation 值可以是 'Replace'、'Start' 或 'End'。|
 |[load(param: object)](#loadparam-object)|void|以參數中指定的屬性和物件值填滿 JavaScript 層中建立的 Proxy 物件。|
 |[search(searchText: string, searchOptions:ParamTypeStrings.SearchOptions)](#searchsearchtext-string-searchoptions-paramtypestringssearchoptions)|[SearchResultCollection](searchresultcollection.md)|以指定的 searchOptions 在 paragraph 物件的範圍中執行搜尋。搜尋結果將是 range 物件的集合。|
-|[select(selectionMode: SelectionMode)](#selectselectionmode-selectionmode)|void|選取段落並將 Word UI 導覽至該處。選取模式可以是 'Select'、'Start' 或 'End'。'Select' 為預設值。|
+|[select(selectionMode: SelectionMode)](#selectselectionmode-selectionmode)|void|選取段落並將 Word UI 導覽至該處。選取模式可以是'Select'、'Start' 或 'End'。'Select' 為預設值。|
 
 ## <a name="method-details"></a>方法詳細資料
 
@@ -350,7 +350,7 @@ Word.run(function (context) {
 [Word-Add-in-DocumentAssembly][paragraph.insertContentControl] 範例示範如何使用 insertContentControl 方法。
 
 ### <a name="insertfilefrombase64(base64file:-string,-insertlocation:-insertlocation)"></a>insertFileFromBase64(base64File: string, insertLocation:InsertLocation)
-在目前段落的指定位置插入文件。InsertLocation 值可以是 'Start' 或 'End'。
+在目前段落的指定位置插入文件。InsertLocation 值可以是 ‘Replace’、'Start' 或 'End'。
 
 #### <a name="syntax"></a>語法
 ```js
@@ -361,7 +361,7 @@ paragraphObject.insertFileFromBase64(base64File, insertLocation);
 | 參數	    | 類型	   |描述|
 |:---------------|:--------|:----------|
 |base64File|string|必要。要插入的檔案 base64 編碼檔案內容。|
-|insertLocation|InsertLocation|必要。此值可以是 'Start' 或 'End'。|
+|insertLocation|InsertLocation|必要。此值可以是 ‘Replace’、'Start' 或 'End'。|
 
 #### <a name="returns"></a>傳回
 [Range](range.md)
@@ -459,7 +459,7 @@ Word.run(function (context) {
 ```
 
 ### <a name="insertinlinepicturefrombase64(base64encodedimage:-string,-insertlocation:-insertlocation)"></a>insertInlinePictureFromBase64(base64EncodedImage: string, insertLocation:InsertLocation)
-在段落的指定位置插入圖片。InsertLocation 值可以是 'Before'、'After'、'Start' 或 'End'。
+在段落的指定位置插入圖片。InsertLocation 值可以是 'Replace'、'Start' 或 'End'。
 
 #### <a name="syntax"></a>語法
 ```js
@@ -470,7 +470,7 @@ paragraphObject.insertInlinePictureFromBase64(base64EncodedImage, insertLocation
 | 參數	    | 類型	   |描述|
 |:---------------|:--------|:----------|
 |base64EncodedImage|string|必要。要插入至段落的 HTML。|
-|insertLocation|InsertLocation|必要。此值可以是 'Before'、'After'、'Start' 或 'End'。|
+|insertLocation|InsertLocation|必要。此值可以是 'Replace'、'Start' 或 'End'。|
 
 #### <a name="returns"></a>傳回
 [InlinePicture](inlinepicture.md)
@@ -532,6 +532,9 @@ paragraphObject.insertOoxml(ooxml, insertLocation);
 
 #### <a name="returns"></a>傳回
 [Range](range.md)
+
+#### <a name="known-issues"></a>已知問題
+這個方法會在 Word Online 中導致較長的延遲時間，可能會影響增益集的使用者經驗。我們建議您只有在沒有其他解決方案可以使用時，才使用這個方法。 
 
 #### <a name="examples"></a>範例
 ```js
@@ -772,7 +775,7 @@ paragraphObject.select(selectionMode);
 #### <a name="parameters"></a>參數
 | 參數	    | 類型	   |描述|
 |:---------------|:--------|:----------|
-|selectionMode|SelectionMode|選用。選取模式可以是 'Select'、'Start' 或 'End'。'Select' 為預設值。|
+|selectionMode|SelectionMode|選用。選取模式可以是'Select'、'Start' 或 'End'。'Select' 為預設值。|
 
 #### <a name="returns"></a>傳回
 void

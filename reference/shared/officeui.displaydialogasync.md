@@ -47,7 +47,7 @@
 ## <a name="syntax"></a>語法
 
 ```js
-office.context.ui.displayDialogAsync(startAddress, options, callback);
+Office.context.ui.displayDialogAsync(startAddress, options, callback);
 ```
 ##<a name="examples"></a>範例
 
@@ -60,7 +60,7 @@ office.context.ui.displayDialogAsync(startAddress, options, callback);
 
 | 參數	    | 類型	   |描述|
 |:---------------|:--------|:----------|
-|startAddress|字串|接受在對話方塊中開啟的初始 HTTPS(TLS) URL。 <ul><li>初始頁面必須位於與父系頁面相同的網域。初始頁面載入之後，您可以移至其他網域。</li><li>任何呼叫 [office.context.ui.messageParent](officeui.messageparent.md) 的頁面必須位於與父系頁面相同的網域。</li></ul>|
+|startAddress|string|接受在對話方塊中開啟的初始 HTTPS(TLS) URL。 <ul><li>初始頁面必須位於與父系頁面相同的網域。初始頁面載入之後，您可以移至其他網域。</li><li>任何呼叫 [office.context.ui.messageParent](officeui.messageparent.md) 的頁面必須位於與父系頁面相同的網域。</li></ul>|
 |選項|物件|選擇性。接受 options 物件，以定義對話方塊的行為。|
 |callback|object|接受 callback 方法，以處理建立對話方塊的嘗試。|
     
@@ -72,7 +72,7 @@ office.context.ui.displayDialogAsync(startAddress, options, callback);
 |:---------------|:--------|:----------|
 |**width**|object|選用。將對話方塊的寬度定義為目前顯示的百分比。預設值為 80%。最小解析為 250 像素。|
 |**height**|object|選用。將對話方塊的高度定義為目前顯示的百分比。預設值為 80%。最小解析為 150 像素。|
-|**displayInIFrame**|object|選用。決定對話方塊是否應該在 Office Online 用戶端中的 IFrame 顯示。桌面用戶端會忽略這項設定。可能的值如下：<ul><li>False (預設值) - 對話方塊會顯示為新的瀏覽器視窗 (快顯視窗)。針對無法在 IFrame 中顯示的驗證頁面建議使用此選項。 </li><li>True - 對話方塊會顯示為與 IFrame 浮動重疊。這對於使用者經驗與效能是最佳選項。</li>|
+|**displayInIframe**|物件|選用。決定對話方塊是否應該在 Office Online 用戶端中的 IFrame 顯示。桌面用戶端會忽略這項設定。可能的值如下：<ul><li>False (預設值) - 對話方塊會顯示為新的瀏覽器視窗 (快顯視窗)。針對無法在 IFrame 中顯示的驗證頁面建議使用此選項。 </li><li>True - 對話方塊會顯示為與 IFrame 浮動重疊。這對於使用者經驗與效能是最佳選項。</li>|
 
 
 ## <a name="callback-value"></a>回呼值

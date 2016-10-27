@@ -9,7 +9,7 @@
 
 - [Microsoft 帳戶](http://www.microsoft.com/en-us/account/default.aspx)
     
-- [Napa](https://www.napacloudapp.com/ ) Web 應用程式的 URL
+- [Napa](https://www.napacloudapp.com) Web 應用程式的 URL
 
 >**附註：**若要開始使用 OneNote 的增益集，請參閱[建置第一個 OneNote 增益集](../onenote/onenote-add-ins-getting-started.md)。
 
@@ -17,11 +17,11 @@
 
 
 
-1. 在瀏覽器中開啟 [Napa](https://www.napacloudapp.com/ )。
+1. 在瀏覽器中開啟 [Napa](https://www.napacloudapp.com)。
     
 2. 選擇 [新增專案] 磚。
     
-     **附註：**只有在您已建立其他專案，才會出現 [新增專案] 磚。如果這是您的第一個專案，則會跳至下一個步驟。
+     **附註：** 只有在您已建立其他專案，才會出現 [新增專案] 磚。如果這是您的第一個專案，則會跳至下一個步驟。
     
     ![專案頁面](../../images/08fc36cf-7cc1-442f-a9a5-b6bb30d786a4.png)
 
@@ -31,7 +31,8 @@
 
     程式碼編輯器會開啟並顯示預設網頁，其中已包含部分不需再做任何處理即可執行的範例程式碼。
     
-4. 在頁面的一側，選擇 [執行] 按鈕 (![執行按鈕](../../images/Apps_NAPA_Run_Button.png))。
+4. 在頁面的一側，選擇 [執行] 按鈕 (
+![執行按鈕](../../images/Apps_NAPA_Run_Button.png))。
     
     所選增益集種類相關聯的 Office 應用程式隨即開啟，並顯示範例增益集。您現在可以嘗試增益集的功能。
     

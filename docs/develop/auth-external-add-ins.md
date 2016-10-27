@@ -24,8 +24,6 @@ OAuth 的基本概念是應用程式可以是本身的安全性主體，就像�
 
 [Office-js-helpers](https://github.com/OfficeDev/office-js-helpers)
 
-儲存機制的 \demo 資料夾包含範例增益集，使用程式庫以存取一些受歡迎的服務，包括 Google、Facebook 和 Office 365。
-
 另請參閱本文稍後的**程式庫**章節。
 
 ## <a name="using-the-authorization-code-flow-in-office-add-ins"></a>在 Office 增益集中使用授權程式碼流程
@@ -39,7 +37,8 @@ OAuth 的基本概念是應用程式可以是本身的安全性主體，就像�
 
 ### <a name="relay/proxy-functions"></a>轉送/Proxy 函式
 
-您甚至可以搭配使用授權程式碼流程與無伺服器 Web 應用程式，方法是在簡單的函式中儲存*用戶端 ID*和*用戶端密碼*值，該函式裝載於如 [Azure Functions](https://azure.microsoft.com/en-us/services/functions) 或 [Amazon Lambda](https://aws.amazon.com/lambda) 的服務。函式交換適當*存取權杖*的指定程式碼，並將它轉送回用戶端。這種方法的安全性取決於函式存取權的受保護程度。
+您甚至可以搭配使用授權程式碼流程與無伺服器 Web 應用程式，方法是在簡單的函式中儲存*用戶端 ID*和*用戶端密碼*值，該函式裝載於如 [Azure Functions](https://azure.microsoft.com/en-us/services/functions) 或 [Amazon Lambda](https://aws.amazon.com/lambda) 的服務。
+函式交換適當*存取權杖*的指定程式碼，並將它轉送回用戶端。這種方法的安全性取決於函式存取權的受保護程度。
 
 若要使用這項技術，您的增益集會顯示 UI/快顯功能表，以顯示線上服務的登入畫面 (例如 Google、Facebook 等等)。當使用者登入，並授與增益集權限給她在線上服務的資源時，開發人員就會收到可以再傳送給線上函式的程式碼。本文中的 **Middleman 服務**中說明的服務使用類似這個的流程。 
 

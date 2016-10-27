@@ -35,7 +35,7 @@
 
     ![顯示在沒有資料的內容增益集旁邊，具有資料的內容增益集的螢幕擷取畫面](../../images/7de2215f-ccef-4f82-aa9d-babcbddae0c6.png)
 
-- 提供[免費試用](http://msdn.microsoft.com/library/145d9466-3c3d-4294-aa23-82068a8e7ae9.aspx%28Office.15%29.aspx#sectionSection1)。如果您的增益集需要訂閱，請提供一些無需訂閱就能使用的功能。
+- 提供[免費試用](https://msdn.microsoft.com/en-us/library/dn456317.aspx#Anchor_1)。如果您的增益集需要訂閱，請提供一些無需訂閱就能使用的功能。
 
 - 讓註冊簡單。預先填入資訊 (電子郵件、顯示名稱)，並略過電子郵件驗證。
 
@@ -60,32 +60,9 @@
   - 命名您的群組，使其符合增益集的名稱。如果您有多個群組，請依據該群組中的命令提供的功能命名每個群組。
   - 請勿加入過多的按鈕來增加增益集的實際資產。
 
-     >
-  **Note**  Add-ins that take up too much space might not pass [Office Store validation](https://msdn.microsoft.com/library/cd90836a-523e-42f5-ab02-5123cdf9fefe(Office.15).aspx).
+     >**請注意**  佔用太多空間的增益集可能無法通過 [Office 市集驗證](https://msdn.microsoft.com/en-us/library/jj220035.aspx)。
 
-- 針對所有圖示︰
-    - 為可清楚識別使用者所要採取動作的按鈕提供有意義的圖示和[標籤](http://msdn.microsoft.com/library/8cef4fce-e6a1-459b-951f-47ac03ec95a6%28Office.15%29.aspx)。
-
-
- - 使用具有透明背景的 PNG 格式。
-
- - 併入[全部八個支援的大小](https://msdn.microsoft.com/EN-US/library/mt267547.aspx#bk_resources)。這可為所有支援的解析度創造最佳的體驗。
-
-  - 符合 Office 的視覺樣式。例如：
-
-    - 讓形狀保持簡潔，並避免使用多個色彩。在較小的大小和解析度中難以看見複雜的圖形。
-
-    - 不要對不同的命令重複使用視覺化的隱喻。對不同動作使用相同圖示將會造成混淆。
-
-    - 讓您的按鈕標籤清楚且簡潔。使用視覺和文字資訊的組合來傳遞意義。
-
-    - 在深色和淺色 Office 佈景主題與高對比設定中測試您的圖示。請注意，在深色背景上或在高對比模式下可能很難看到圖示。
-
-    - 使用一致的圖示大小和位置，以協助功能區上的視覺對齊。
-
-
-    ![顯示在不符合 Office 樣式的按鈕旁邊，符合樣式的增益集命令按鈕的螢幕擷取畫面](../../images/31e11214-61e8-41c1-888c-29d167cb9486.png)
-
+- 針對所有的圖示，請依照 [圖示設計的指導方針](../design/design-icons.md)進行。
 
 - 提供也可以在不支援命令的主應用程式上運作的增益集版本。單一增益集資訊清單能夠同時在命令感知 (具有命令) 與非命令感知 (如工作窗格) 主應用程式中運作。
 
@@ -109,9 +86,9 @@
 
 - 請勿併入未授權的影像。
 
-- 在增益集中使用[簡單明瞭的語言](http://msdn.microsoft.com/library/8cef4fce-e6a1-459b-951f-47ac03ec95a6%28Office.15%29.aspx)。
+- 在增益集中使用[簡單明瞭的語言](../design/voice-guidelines.md)。
 
-- 考慮[協助工具](http://msdn.microsoft.com/library/3be1abbb-237a-48ec-8e17-72caa25a3cb2%28Office.15%29.aspx) - 讓增益集方便所有的使用者與其互動，並納入輔助技術，例如螢幕助讀程式。
+- 考慮[協助工具](../design/accessibility-guidelines.md) - 讓增益集方便所有的使用者與其互動，並納入輔助技術，例如螢幕助讀程式。
 
 - 針對所有的平台和輸入法進行設計，包括滑鼠/鍵盤和[觸控](#optimize-for-touch)。請確定您的 UI 會對不同的尺寸回應。
 

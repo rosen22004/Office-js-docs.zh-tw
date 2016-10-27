@@ -412,6 +412,9 @@ rangeObject.insertOoxml(ooxml, insertLocation);
 #### <a name="returns"></a>傳回
 [Range](range.md)
 
+#### <a name="known-issues"></a>已知問題
+這個方法會在 Word Online 中導致較長的延遲時間，可能會影響增益集的使用者經驗。我們建議您只有在沒有其他解決方案可以使用時，才使用這個方法。 
+
 #### <a name="examples"></a>範例
 ```js
 // Run a batch operation against the Word object model.
@@ -485,7 +488,7 @@ Word.run(function (context) {
 ```
 
 ### <a name="inserttext(text:-string,-insertlocation:-insertlocation)"></a>insertText(text: string, insertLocation:InsertLocation)
-在範圍的指定位置插入文字。InsertLocation 值可以是 'Replace'、'Start' 或 'End'。
+在範圍的指定位置插入文字。InsertLocation 值可以是 'Replace'、'Start'、'End'、‘Before’ 或 ‘After’。
 
 #### <a name="syntax"></a>語法
 ```js
@@ -496,7 +499,7 @@ rangeObject.insertText(text, insertLocation);
 | 參數	    | 類型	   |描述|
 |:---------------|:--------|:----------|
 |文字|string|必要。要插入的文字。|
-|insertLocation|InsertLocation|必要。此值可以是 'Replace'、'Start' 或 'End'。|
+|insertLocation|InsertLocation|必要。此值可以是 'Replace'、'Start'、'End'、‘Before’ 或 ‘After’。|
 
 #### <a name="returns"></a>傳回
 [Range](range.md)

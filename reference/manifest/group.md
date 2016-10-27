@@ -20,7 +20,7 @@
 必要。群組的標籤。**resid** 屬性必須設定為  **Resources** 元素的 **ShortStrings** 元素中，[String](./resources.md#shortstrings) 元素的 [id](./resources.md) 屬性值。
 
 ## <a name="control"></a>控制項
-一個群組至少需要一個控制項。目前僅支援按鈕[](./control.md#button-control)和功能表[](./menu.md#menu-control)。 
+一個群組至少需要一個控制項。目前僅支援按鈕[](./control.md#button-control)和功能表[](./control.md#menu-dropdown-button-controls)。 
 
 ```xml
 <Group id="msgreadCustomTab.grp1">

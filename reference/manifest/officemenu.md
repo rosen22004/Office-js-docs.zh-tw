@@ -20,7 +20,7 @@
 
 ## <a name="control"></a>控制項
 
-在一或多個 [menu](./menu.md#menu-control) 控制項上需要**OfficeMenu** 
+在一或多個 [menu](./control.md#menu-dropdown-button-controls) 控制項上需要**OfficeMenu** 
 
 
 ## <a name="example"></a>範例

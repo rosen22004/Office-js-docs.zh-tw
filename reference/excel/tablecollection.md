@@ -38,7 +38,7 @@ tableCollectionObject.add(address, hasHeaders);
 #### <a name="parameters"></a>參數
 | 參數	    | 類型	   |描述|
 |:---------------|:--------|:----------|
-|地址|string|代表資料來源的 range 物件的位址或名稱。如果位址不含工作表名稱，則會使用目前作用中的工作表。|
+|地址|string|代表資料來源的 range 物件的位址或名稱。請注意範圍位址必須包含需要加入資料表的工作表。範例 `Sheet1!A1:D4`。|
 |hasHeaders|bool|布林值，指出是要匯入的資料是否具有欄標籤。如果來源不含標頭 (亦即此屬性設為 false)，Excel 會自動產生標頭，並將資料向下移一列。|
 
 #### <a name="returns"></a>傳回

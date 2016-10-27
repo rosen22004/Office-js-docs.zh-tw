@@ -85,7 +85,7 @@ CustomPane 擴充點定義了符合指定的規則時所啟動的增益集。它
 |:-----|:-----|:-----|
 |  **RequestedHeight** | 不可以 |  要求的高度 (單位為像素)，適用於桌上型電腦上執行的顯示窗格。這可以從 32 到 450 個像素。  |
 |  **SourceLocation**  | 是 |  增益集的原始程式碼檔的 URL。這是指 [Resources](./resources.md) 元素中的 **Url** 元素。  |
-|  **Rule**  | 是 |  增益集啟動時指定的規則或規則集合。如需詳細資訊，請參閱 [Outlook 增益集的啟用規則](../../outlook/manifests/activation-rules.md)。 |
+|  **Rule**  | 是 |  增益集啟動時指定的規則或規則集合。如需詳細資訊，請參閱 [Outlook 增益集的啟用規則](../../docs/outlook/manifests/activation-rules.md)。 |
 |  **DisableEntityHighlighting**  | 不可以 |  指定是否要關閉實體醒目提示功能。 |
 
 

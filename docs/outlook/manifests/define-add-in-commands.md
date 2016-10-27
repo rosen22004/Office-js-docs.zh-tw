@@ -20,7 +20,7 @@ VersionOverrides 元素包括下列子元素：
 
 下圖顯示用來定義增益集命令的元素階層。 
 
-![資訊清單中增益集命令元素的階層](../../images/080da303-51c4-4882-b74a-7ba11517c0ad.png)
+![資訊清單中增益集命令元素的階層](../../../images/080da303-51c4-4882-b74a-7ba11517c0ad.png)
 
 ## <a name="rule-changes-for-outlook-add-in-commands"></a>Outlook 增益集命令的規則變更
 

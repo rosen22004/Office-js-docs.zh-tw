@@ -10,7 +10,7 @@ _適用於：Word 2016、Word for iPad、Word for Mac、Word Online_
 |cannotDelete|bool|取得或設定值，指出使用者是否可以刪除內容控制項。與 removeWhenEdited 互斥。|
 |cannotEdit|bool|取得或設定值，指出使用者是否可以編輯內容控制項的內容。|
 |color|string|取得或設定內容控制項的色彩。Color 以 "#RRGGBB" 格式設定，或使用色彩名稱。|
-|placeholderText|string|取得或設定內容控制項的預留位置文字。內容控制項為空時，將顯示暗灰色文字。|
+|placeholderText|string|取得或設定內容控制項的預留位置文字。內容控制項為空時，將顯示暗灰色文字。Word Online 目前已不支援此屬性。|
 |removeWhenEdited|bool|取得或設定值，指出在編輯內容控制項後是否可以將其移除。與 cannotDelete 互斥。|
 |Style|string|取得或設定內容控制項所使用的樣式。這是預先安裝或自訂樣式的名稱。|
 |Tag|string|取得或設定用以識別內容控制項的標記。[Silly stories](https://aka.ms/sillystorywordaddin) 增益集範例示範如何使用 **tag** 屬性。|
@@ -411,7 +411,8 @@ contentControlObject.insertInlinePictureFromBase64(image, insertLocation);
 #### <a name="returns"></a>傳回
 [InlinePicture](inlinepicture.md)
 
-
+#### <a name="known-issues"></a>已知問題
+在 Word Online 中，_insertLocation_ 參數僅支援「取代」值。如果您使用的「開始」或「結束」值，此作業將會失敗。
 
 ### <a name="insertooxml(ooxml:-string,-insertlocation:-insertlocation)"></a>insertOoxml(ooxml: string, insertLocation:InsertLocation)
 在內容控制項的指定位置插入 OOXML 或 wordProcessingML。InsertLocation 值可以是 'Replace'、'Start' 或 'End'。
@@ -429,6 +430,9 @@ contentControlObject.insertOoxml(ooxml, insertLocation);
 
 #### <a name="returns"></a>傳回
 [Range](range.md)
+
+#### <a name="known-issues"></a>已知問題
+這個方法會在 Word Online 中導致較長的延遲時間，可能會影響增益集的使用者經驗。我們建議您只有在沒有其他解決方案可以使用時，才使用這個方法。 
 
 #### <a name="examples"></a>範例
 ```js
@@ -542,6 +546,9 @@ contentControlObject.insertText(text, insertLocation);
 
 #### <a name="returns"></a>傳回
 [Range](range.md)
+
+#### <a name="known-issues"></a>已知問題
+在 Word Online 中，_insertLocation_ 參數僅支援「取代」值。如果您使用的「開始」或「結束」值，此作業將會失敗。
 
 #### <a name="examples"></a>範例
 ```js

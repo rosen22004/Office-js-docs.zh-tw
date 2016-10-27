@@ -37,7 +37,7 @@
 ---
 
 ## <a name="versionoverrides-node"></a>VersionOverrides 節點
-在 [VersionOverrides](./versionoverrides) 中定義時，主機類型是由 `xsi:type` 屬性決定。 
+在 [VersionOverrides](./versionoverrides.md) 中定義時，主機類型是由 `xsi:type` 屬性決定。 
 
 ### <a name="attributes"></a>屬性
 

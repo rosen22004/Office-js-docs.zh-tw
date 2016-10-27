@@ -20,7 +20,8 @@
       </Item>	
     	<Item text="UX 設計模式" url="design/ux-design-patterns" SEODescription="使用 Office 增益集的 UX 設計模式範本，建立 UI 擴充功能。" />
 	<Item text="Excel、Word 和 PowerPoint 的增益集命令" url="design/add-in-commands" SEODescription="使用增益集中的增益集命令來延伸 Excel、Word 和 PowerPoint 中的預設 Office 使用者介面。" />
-  	<Item text="資料視覺效果樣式指導方針" url="design/data-visualization-guidelines" SEODescription="提供 Office 增益集中的資料視覺效果指導方針。" />
+  	<Item text="設計增益集命令的設計圖示" url="design/design-icons" SEODescription="設計增益集命令的設計圖示與 Office UI 緊密整合。" />
+	<Item text="資料視覺效果樣式指導方針" url="design/data-visualization-guidelines" SEODescription="提供 Office 增益集中的資料視覺效果指導方針。" />
     	<Item text="語音指導方針" url="design/voice-guidelines" SEODescription="尋找 Office 增益集 UI 文字中使用語音的指導方針" />
     	<Item text="協助工具指導方針" url="design/accessibility-guidelines" SEODescription="了解如何讓所有使用者存取您的 Office 增益集。" />
     </Item>

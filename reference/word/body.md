@@ -7,7 +7,7 @@ _適用於：Word 2016、Word for iPad、Word for Mac、Word Online_
 ## <a name="properties"></a>屬性
 | 屬性	     | 類型	   |描述
 |:---------------|:--------|:----------|
-|Style|字串|取得或設定內文所使用的樣式。這是預先安裝或自訂樣式的名稱。|
+|Style|string|取得或設定內文所使用的樣式。這是預先安裝或自訂樣式的名稱。|
 |文字|string|取得內文的文字。可以使用 insertText 方法來插入文字。唯讀。|
 
 _請參閱屬性存取[範例。](#property-access-examples)_
@@ -254,7 +254,7 @@ bodyObject.insertFileFromBase64(base64File, insertLocation);
 #### <a name="parameters"></a>參數
 | 參數	    | 類型	   |描述|
 |:---------------|:--------|:----------|
-|base64File|字串|必要。要插入的 base64 編碼檔案內容。|
+|base64File|string|必要。要插入的 base64 編碼檔案內容。|
 |insertLocation|InsertLocation|必要。此值可以是 'Replace'、'Start' 或 'End'。|
 
 #### <a name="returns"></a>傳回
@@ -356,11 +356,14 @@ bodyObject.insertOoxml(ooxml, insertLocation);
 #### <a name="parameters"></a>參數
 | 參數	    | 類型	   |描述|
 |:---------------|:--------|:----------|
-|ooxml|字串|必要。要插入的 OOXML 或 wordProcessingML。|
+|ooxml|string|必要。要插入的 OOXML 或 wordProcessingML。|
 |insertLocation|InsertLocation|必要。此值可以是 'Replace'、'Start' 或 'End'。|
 
 #### <a name="returns"></a>傳回
 [Range](range.md)
+
+#### <a name="known-issues"></a>已知問題
+這個方法會在 Word Online 中導致較長的延遲時間，可能會影響增益集的使用者經驗。我們建議您只有在沒有其他解決方案可以使用時，才使用這個方法。 
 
 #### <a name="examples"></a>範例
 ```js
