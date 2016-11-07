@@ -1,7 +1,7 @@
 
 # <a name="use-php-to-validate-an-identity-token"></a>使用 PHP 來驗證識別權杖
 
-Outlook 增益集可以傳送識別權杖給您，但您必須驗證權杖以確保其來自您所預期的 Exchange server 之後，才可以信任要求。本文中的範例使用 PHP 來驗證識別權杖；但是，您可以使用任何程式設計語言來執行驗證。[JSON Web 權杖 (JWT) 網際網路草稿](http://self-issued.info/docs/draft-goland-json-web-token-00.html)中敘述驗證權杖所需的步驟。
+Outlook 增益集可以傳送識別權杖給您，但您必須驗證權杖以確保其來自您所預期的 Exchange server 之後，才可以信任要求。本文中的範例使用 PHP 來驗證識別權杖；但是，您可以使用任何程式設計語言來執行驗證。[JSON Web 權杖 (JWT) 網際網路草稿](http://self-issued.info/docs/draft-ietf-oauth-json-web-token.html)中敘述驗證權杖所需的步驟。
 
 我們建議您使用四個步驟的程序來驗證識別權杖，並取得使用者的唯一識別項︰ 
 

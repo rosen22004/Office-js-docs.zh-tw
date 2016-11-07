@@ -1,10 +1,10 @@
-
+﻿
 # <a name="javascript-api-for-office-reference"></a>JavaScript API for Office 參考
 
 JavaScript API for Office 可讓您建立 Web 應用程式，與 Office 主應用程式中的物件模型互動。您的應用程式會參考 office.js 程式庫，也就是指令碼載入器。office.js 程式庫會載入執行增益集的 Office 應用程式所適用的物件模型。您可以使用下列 JavaScript 物件模型︰
 
 
-1. 一般 (必要) - Office 2013 引入的 API。這是為**所有 Office 主應用程式**載入，並連接您的增益集應用程式與 Office 用戶端應用程式。物件模型包含 Office 用戶端的特定 API，且適用於多個 Office 用戶端主應用程式的 API。[shared](../reference/shared/shared-api.md) 和 **outlook** 下的所有內容會視為一般 API。**Microsoft.Office.WebExtension** 命名空間 (預設是使用程式碼中的別名 [Office](../reference/shared/office.md) 所參考) 包含您可用來撰寫指令碼的物件，以便與 Office 文件、工作表、簡報、郵件項目，以及 Office 增益集的專案中內容互動。如果增益集將選定 Office 2013 及更新版本，您必須使用這些常見的 API。這個物件模型會使用回呼。
+1. 一般 (必要) - Office 2013 引入的 API。這是為**所有 Office 主應用程式**載入，並連接您的增益集應用程式與 Office 用戶端應用程式。物件模型包含 Office 用戶端的特定 API，且適用於多個 Office 用戶端主應用程式的 API。[共用 API] 和 [Outlook] 下的所有內容會視為一般 API。**Microsoft.Office.WebExtension** 命名空間 (預設是使用程式碼中的別名 [Office](../reference/shared/office.md) 所參考) 包含您可用來撰寫指令碼的物件，以便與 Office 文件、工作表、簡報、郵件項目，以及 Office 增益集的專案中內容互動。如果增益集將選定 Office 2013 及更新版本，您必須使用這些常見的 API。這個物件模型會使用回呼。
 
 1. **Office 2016** 引入的主機特定 API。這個物件模型提供主機特定的強型別物件，其對應於您使用 Office 用戶端時會看到的熟悉物件，並且代表 Office JavaScript API 的願景。主應用程式特定 API 目前包含 [Word JavaScript API](../reference/word/word-add-ins-reference-overview.md) 和 [Excel JavaScript API](../reference/excel/application.md)。這個物件模型使用承諾。
 

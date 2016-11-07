@@ -1,12 +1,9 @@
 
-# <a name="outlook-add-in-manifests"></a>Outlook 增益集資訊清單
+# <a name="outlook-addin-manifests"></a>Outlook 增益集資訊清單
 
 Outlook 增益集包含兩個元件︰XML 增益集清單和網頁，由 Office 的 JavaScript 程式庫增益集 (office.js) 所支援。資訊清單描述如何跨 Outlook 用戶端整合增益集。目前有三個版本的資訊清單結構描述，包括 **VersionOverrides**。我們建議您使用資訊清單結構描述 1.1 版和 **VersionOverrides** 1.0 以建置增益集。以下為範例。
 
  >**附註**  下列範例的所有 URL 值以 "YOUR_WEB_SERVER" 開頭。這個值是預留位置。在實際的有效資訊清單中，這些值會包含有效的 https Web URL。
-
-
-
 
 ```XML
 <?xml version="1.0" encoding="UTF-8" ?>
@@ -112,16 +109,6 @@ Outlook 增益集包含兩個元件︰XML 增益集清單和網頁，由 Office 
 
                 <DesktopFormFactor>
                     <FunctionFile resid="functionFile" />
-
-                    <!-- Custom pane, only applies to read form -->
-                    <ExtensionPoint xsi:type="CustomPane">
-                        <RequestedHeight>100</RequestedHeight>
-                        <SourceLocation resid="customPaneUrl" />
-                        <Rule xsi:type="RuleCollection" Mode="Or">
-                            <Rule xsi:type="ItemIs" ItemType="Message" />
-                            <Rule xsi:type="ItemIs" ItemType="AppointmentAttendee" />
-                        </Rule>
-                    </ExtensionPoint>
 
                     <!-- Message compose form -->
                     <ExtensionPoint xsi:type="MessageComposeCommandSurface">
@@ -549,7 +536,6 @@ Outlook 增益集包含兩個元件︰XML 增益集清單和網頁，由 Office 
                 <bt:Url id="functionFile" DefaultValue="YOUR_WEB_SERVER/FunctionFile/Functions.html" />
                 <bt:Url id="readTaskPaneUrl" DefaultValue="YOUR_WEB_SERVER/AppRead/TaskPane/TaskPane.html" />
                 <bt:Url id="composeTaskPaneUrl" DefaultValue="YOUR_WEB_SERVER/AppCompose/TaskPane/TaskPane.html" />
-                <bt:Url id="customPaneUrl" DefaultValue="YOUR_WEB_SERVER/AppRead/CustomPane/CustomPane.html" />
             </bt:Urls>
             <bt:ShortStrings>
                 <bt:String id="groupLabel" DefaultValue="Add-in Demo" />
@@ -646,7 +632,7 @@ Outlook 增益集資訊清單的根元素是 **OfficeApp**。這個元素也會�
 
 ## <a name="version"></a>版本
 
-這是特定增益集的版本。如果開發人員更新資訊清單中的項目，就必須也遞增版本。如此一來，當安裝新的資訊清單時，它會覆寫現有的值，且使用者會得到新的功能。如果這個增益集已提交至存放區，就必須重新提交和重新驗證新的資訊清單。然後，此增益集的使用者會在它受到核准的幾個小時後，自動收到新的更新資訊清單。
+This is the version of the specific add-in. If a developer updates something in the manifest, the version must be incremented as well. This way, when the new manifest is installed, it will overwrite the existing one and the user will get the new functionality. If this add-in was submitted to the store, the new manifest will have to be re-submitted and re-validated. Then, users of this add-in will get the new updated manifest automatically in a few hours, after it was approved.
 
 如果增益集要求的權限變更時，系統將提示使用者升級，並重新同意該增益集。如果原本是由系統管理員為整個組織安裝這個增益集，則必須先經由系統管理員重新同意。使用者仍可同時看到舊的功能。
 
@@ -794,7 +780,7 @@ Outlook 增益集指定  **主機** 元素 (與下方類型)。
 如需啟動規則的詳細資料及範例，請參閱 [Outlook 增益集的啟動規則](../../outlook/manifests/activation-rules.md)。
 
 
-## <a name="next-steps:-add-in-commands"></a>後續步驟：增益集命令
+## <a name="next-steps-addin-commands"></a>後續步驟：增益集命令
 
 
 定義基本資訊清單後，[定義增益集的增益集命令](../../outlook/manifests/define-add-in-commands.md)。增益集命令會在功能區顯示按鈕，讓使用者可以簡單、直覺的方式啟動增益集。如需詳細資訊，請參閱 [Outlook 的增益集命令](../../outlook/add-in-commands-for-outlook.md)。
@@ -810,8 +796,7 @@ Outlook 增益集指定  **主機** 元素 (與下方類型)。
     
 - [Office 增益集的當地語系化](../../develop/localization.md)
     
-- 
-  [為桌上型電腦、平板電腦及行動裝置上執行的 Outlook 建立郵件增益集 (結構描述 v1.1)](http://msdn.microsoft.com/library/8d425fb3-8a7c-429d-87b3-8046e964b153%28Office.15%29.aspx)
+- [為桌上型電腦、平板電腦及行動裝置上執行的 Outlook 建立郵件增益集 (結構描述 v1.1)](http://msdn.microsoft.com/library/8d425fb3-8a7c-429d-87b3-8046e964b153%28Office.15%29.aspx)
     
 - [Outlook 增益集的隱私權、權限和安全性](../../outlook/privacy-and-security.md)
     
@@ -821,8 +806,7 @@ Outlook 增益集指定  **主機** 元素 (與下方類型)。
     
 - [Office 增益集資訊清單的結構描述參考 (v1.1)](../../overview/add-in-manifests.md)
     
-- 
-  [項目類型和郵件類別](http://msdn.microsoft.com/library/15b709cc-7486-b6c7-88a3-4a4d8e0ab292%28Office.15%29.aspx)
+- [項目類型和郵件類別](http://msdn.microsoft.com/library/15b709cc-7486-b6c7-88a3-4a4d8e0ab292%28Office.15%29.aspx)
     
 - [Office 增益集的設計指導方針](../../design/add-in-design.md)
     

@@ -1,4 +1,4 @@
-﻿# <a name="build-your-first-onenote-add-in"></a>建立第一個 OneNote 增益集
+﻿# <a name="build-your-first-onenote-addin"></a>建立第一個 OneNote 增益集
 
 此文章會引導您建置簡單的工作窗格增益集，可將某些文字加入到 OneNote 頁面中。
 
@@ -7,7 +7,7 @@
    ![這個逐步解說中所建置的 OneNote 增益集](../../images/onenote-first-add-in.png)
 
 <a name="setup"></a>
-## <a name="step-1:-set-up-your-dev-environment-and-create-an-add-in-project"></a>步驟 1：設定您的開發環境，並建立增益集專案
+## <a name="step-1-set-up-your-dev-environment-and-create-an-addin-project"></a>步驟 1：設定您的開發環境，並建立增益集專案
 依照[使用任何編輯器建立 Office 增益集](../get-started/create-an-office-add-in-using-any-editor.md)的指示以安裝必要的必要項目和執行 Office Yeoman 產生器，來建立新的增益集專案。下表會列出要在 Yeoman 產生器中選取的專案屬性。
 
 | 選項 | 值 |
@@ -19,7 +19,7 @@
 | 要使用的技術 | HTML、CSS 及 JavaScript |
 
 <a name="develop"></a>
-## <a name="step-2:-modify-the-add-in"></a>步驟 2：修改增益集
+## <a name="step-2-modify-the-addin"></a>步驟 2：修改增益集
 您可以使用任何文字編輯器或 IDE 來編輯增益集檔案。如果您尚未嘗試使用 Visual Studio 程式碼，您可以在 Linux、Mac OSX 和 Windows 上[免費下載](https://code.visualstudio.com/)。
 
 1 - 開啟 *app/home* 資料夾中的 **home.html**。 
@@ -128,7 +128,7 @@ function addOutlineToPage() {
 ```
 
 <a name="test"></a>
-## <a name="step-3:-test-the-add-in-on-onenote-online"></a>步驟 3：在 OneNote Online 上測試增益集
+## <a name="step-3-test-the-addin-on-onenote-online"></a>步驟 3：在 OneNote Online 上測試增益集
 1 - 執行 Gulp Web 伺服器。  
 
   a.開啟 **cmd** 命令提示字元，並移至增益集專案資料夾。 
@@ -170,7 +170,7 @@ function addOutlineToPage() {
 
 -當您檢查 OneNote 物件時，目前可用的屬性會顯示實際值。需要載入的屬性會顯示 *undefined*。展開 `_proto_` 節點來檢視已在物件上定義，但尚未載入的屬性。
 
-      ![Unloaded OneNote object in the debugger](../../images/onenote-debug.png)
+![偵錯工具中解除載入的 OneNote 物件](../../images/onenote-debug.png)
 
 -如果增益集使用任何 HTTP 資源，則您必須在瀏覽器中啟用混合的內容。實際執行的增益集只應該使用安全的 HTTPS 資源。
 

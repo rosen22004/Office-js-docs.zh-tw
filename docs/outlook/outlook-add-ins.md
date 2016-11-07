@@ -1,5 +1,5 @@
 
-# <a name="outlook-add-ins"></a>Outlook 增益集
+# <a name="outlook-addins"></a>Outlook 增益集
 
 Outlook 增益集是由協力廠商使用新的 web 技術為基礎的平台建立至 Outlook 的整合。Outlook 增益集有三個主要領域︰
 
@@ -33,14 +33,8 @@ Outlook 增益集與 COM 或 VSTO 增益集不同，其為 Windows 上執行的 
 
     ![在卡片中顯示內容應用程式](../../images/59bcabc2-7cb0-4b9b-bb9f-06089dca9c31.png)
 
-- 增益集可以出現在郵件或約會的本文上方的水平窗格。這是根據複雜的規則，例如附件或是郵件或約會的 Exchange 項目類別的存在。如需詳細資訊，請參閱[自訂窗格 Outlook 增益集](../outlook/custom-pane-outlook-add-ins.md)。
-    
-    **具有讀取模式中自訂窗格的增益集**
 
-    ![顯示郵件閱讀表單中的自訂窗格。](../../images/c585ab0a-6c33-42d0-a20f-5deb8b54f480.png)
-
-
-## <a name="mailbox-items-available-to-add-ins"></a>增益集可用的信箱項目
+## <a name="mailbox-items-available-to-addins"></a>增益集可用的信箱項目
 
 
 Outlook 增益集在撰寫或讀取可在郵件或約會上使用，但非其他項目類型。如果目前的郵件項目 (在撰寫或讀取表單中) 為下列其中一項，則 Outlook 不會啟動增益集︰
@@ -65,7 +59,7 @@ Outlook 增益集在撰寫或讀取可在郵件或約會上使用，但非其他
 Outlook 2013 和更新版本、Outlook 2016 for Mac、適用於 Exchange 2013 內部部署的 Outlook Web App、Office 365 及 Outlook.com. 中的 Outlook Web App 支援 Outlook 增益集。並非所有用戶端中都同時支援所有最新的功能。請參閱個別的主題和 API 參考，以查看它們在哪些主機中不支援。
 
 
-## <a name="get-started-building-outlook-add-ins"></a>開始建置 Outlook 增益集
+## <a name="get-started-building-outlook-addins"></a>開始建置 Outlook 增益集
 
 
 若要開始建置 Outlook 增益集，請參閱[開始使用 Office 365 的 Outlook 增益集](https://dev.outlook.com/MailAppsGettingStarted/GetStarted)。
@@ -77,9 +71,7 @@ Outlook 2013 和更新版本、Outlook 2016 for Mac、適用於 Exchange 2013 �
 - [Outlook 增益集的架構和功能概觀](../outlook/overview.md)
 - [開發 Office 增益集的最佳做法](../../docs/overview/add-in-development-best-practices.md)
 - [Office 增益集的設計指導方針](../../docs/design/add-in-design.md)
-- 
-  [授權您的 Office 和 SharePoint 增益集](http://msdn.microsoft.com/library/3e0e8ff6-66d6-44ff-b0c2-59108ebd9181%28Office.15%29.aspx)
+- [授權您的 Office 和 SharePoint 增益集](http://msdn.microsoft.com/library/3e0e8ff6-66d6-44ff-b0c2-59108ebd9181%28Office.15%29.aspx)
 - [發佈 Office 增益集](../publish/publish.md)
-- 
-  [將 Office 和 SharePoint 增益集和 Office 365 Web 應用程式提交給 Office 市集](http://msdn.microsoft.com/library/ff075782-1303-4517-91cc-b3d730e9b9ae%28Office.15%29.aspx)
+- [將 Office 和 SharePoint 增益集和 Office 365 Web 應用程式提交給 Office 市集](http://msdn.microsoft.com/library/ff075782-1303-4517-91cc-b3d730e9b9ae%28Office.15%29.aspx)
 

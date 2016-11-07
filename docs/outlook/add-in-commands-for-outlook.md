@@ -1,5 +1,5 @@
-
-# <a name="add-in-commands-for-outlook"></a>Outlook 的增益集命令
+﻿
+# <a name="addin-commands-for-outlook"></a>Outlook 的增益集命令
 
 
 藉由加入按鈕或下拉式功能表，Outlook 增益集命令提供從功能區初始化特定增益集動作的方式。這可讓使用者以簡單、直覺化又不礙眼的方式存取增益集。因為是以順暢的方式提供增強的功能，您可以使用增益集命令來建立更吸引人的解決方案。
@@ -9,7 +9,7 @@
 增益集命令只適用於未使用 [temHasAttachment、ItemHasKnownEntity 或 ItemHasRegularExpressionMatch 規則](manifests/activation-rules.md)來限制他們啟動的項目類型的內容相關式增益集。不過，內容相關式增益集可以根據目前選取的項目是郵件或約會來呈現不同的命令，而且可以選擇顯現在讀取或撰寫案例中。如果可能的話，使用增益集命令是[最佳作法](../../docs/overview/add-in-development-best-practices.md)。
 
 
-## <a name="creating-the-add-in-command"></a>建立增益集命令
+## <a name="creating-the-addin-command"></a>建立增益集命令
 
 增益集命令是在增益集清單的 **VersionOverrides** 元素中宣告。這個元素是可確保回溯相容性的資訊清單結構描述 1.1 版的新增項目。在不支援 **VersionOverrides** 的用戶端中，現有增益集將繼續如往常沒有增益集命令般運作。
 
@@ -20,7 +20,7 @@
 開發人員應該定義所有所需大小的圖示，使得增益集命令將順暢地隨著功能區調整。圖示大小是 80 x 80 像素、32 x 32 像素和 16 x 16 像素。
 
 
-## <a name="how-do-add-in-commands-appear?"></a>增益集命令的顯示方式？
+## <a name="how-do-addin-commands-appear"></a>增益集命令的顯示方式？
 
 增益集命令會在功能區上顯示為按鈕。當使用者安裝增益集時，它的命令會以標示了增益集名稱的一組按鈕形式出現在 UI 中。這可以是在功能區的預設索引標籤或在自訂索引標籤上。對於郵件，預設值是 [首頁] 或 [訊息] 索引標籤。對於行事曆，預設值是 [會議]、[會議項目]、[會議系列] 或 [約會] 索引標籤。針對模組延伸模組，預設值是自訂索引標籤。在預設索引標籤上，每個增益集可以有一個含有最多 6 個命令的功能區群組。在自訂索引標籤上，增益集最多可以有 10 個群組，每個有 6 個命令。增益集僅限於一個自訂索引標籤。
 
@@ -29,10 +29,10 @@
 
 ![螢幕擷取畫面顯示正常和摺疊狀態下的增益集命令按鈕。](../../images/6fcb64d8-9598-41d1-8944-f6d1f6d2edb6.png)
 
-當增益集命令加入至增益集時，會從應用程式列移除增益集名稱，除非增益集也包含[自訂窗格 Outlook 增益集](../outlook/custom-pane-outlook-add-ins.md)。只會保留功能區上的增益集命令按鈕。
+當增益集命令加入至增益集時，會從應用程式列移除增益集名稱。只會保留功能區上的增益集命令按鈕。
 
 
-## <a name="what-ux-shapes-exist-for-add-in-commands?"></a>增益集命令存在哪些 UX 形狀？
+## <a name="what-ux-shapes-exist-for-addin-commands"></a>增益集命令存在哪些 UX 形狀？
 
 增益集命令的 UX 形狀的組成包含主應用程式中的功能區索引標籤，其中包含可以執行各種功能的按鈕。目前，支援三個 UI 形狀︰
 
@@ -68,7 +68,7 @@
 如果使用者選擇可開啟工作窗格的另一個增益集命令，則工作窗格會由最近使用的命令取代。如果使用者在工作窗格開啟時，選擇會執行函式的增益集命令按鈕或下拉式清單功能表，動作將會完成，並且工作窗格會維持開啟。
 
 
-### <a name="drop-down-menu"></a>下拉功能表
+### <a name="dropdown-menu"></a>下拉功能表
 
 定義按鈕靜態清單的下拉功能表增益集命令。功能表內的按鈕可以是執行函式或可開啟工作窗格之按鈕的按鈕任意組合。不支援子功能表。
 
@@ -76,7 +76,7 @@
 ![Outlook 功能區上下拉式功能表的按鈕。](../../images/3eff90d6-7822-4fdb-9153-68f754c0c746.png)
 
 
-## <a name="where-do-add-in-commands-appear-in-the-ui?"></a>增益集命令出現在 UI 中的位置？
+## <a name="where-do-addin-commands-appear-in-the-ui"></a>增益集命令出現在 UI 中的位置？
 
 增益集命令可支援四個案例︰
 

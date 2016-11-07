@@ -58,7 +58,7 @@ Office.context.document.settings
 |**Access**||Y||
 |**Excel**|Y|Y|Y|
 |**PowerPoint**|Y|Y|Y|
-|**Word**|Y||Y|
+|**Word**|Y|Y|Y|
 
 |||
 |:-----|:-----|

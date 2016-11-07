@@ -6,12 +6,12 @@
 
 Exchange Server 傳送至 Outlook 增益集的驗證識別權杖對您的增益集而言是不透明的；您不需要查看權杖內部即可在您的伺服器上傳送它。但是，當您在撰寫與 Outlook 增益集互動的 web 服務程式碼時，您需要知道識別權杖的內容。
 
-## <a name="what-is-an-identity-token?"></a>識別權杖是什麼？
+## <a name="what-is-an-identity-token"></a>識別權杖是什麼？
 
 
 識別權杖是 Base-64 URL 編碼的字串，由傳送它的 Exchange Server 自我簽署。權杖未加密，您用來驗證簽章的公開金鑰會儲存在發出此權杖的 Exchange Server 上。權杖包含三個部分︰標頭、內容和簽章。在權杖字串中，各部分是由「.」字元所分隔，讓您可輕鬆分割權杖。
 
-Exchange 2013 針對識別權杖使用 JSON Web 權杖 (JWT)。如需 JWT 權杖的相關資訊，請參閱 [JSON Web 權杖 (JWT) 網際網路草稿](http://self-issued.info/docs/draft-goland-json-web-token-00.html).
+Exchange 2013 針對識別權杖使用 JSON Web 權杖 (JWT)。如需 JWT 權杖的相關資訊，請參閱 [JSON Web 權杖 (JWT) 網際網路草稿](http://self-issued.info/docs/draft-ietf-oauth-json-web-token.html).
 
 
 ### <a name="identity-token-header"></a>識別權杖標頭

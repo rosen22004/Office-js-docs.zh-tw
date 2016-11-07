@@ -1,5 +1,5 @@
 
-# <a name="document.activeviewchanged-event"></a>Document.ActiveViewChanged 事件
+# <a name="documentactiveviewchanged-event"></a>Document.ActiveViewChanged 事件
 使用者變更文件目前的檢視時，就會發生。
 
 |||
@@ -30,7 +30,7 @@ Office.EventType.ActiveViewChanged
 
 ||**Office for Windows desktop**|**Office Online (在瀏覽器中)**|**Office for iPad**|
 |:-----|:-----|:-----|:-----|
-|**PowerPoint**|Y|Y|Y|
+|**PowerPoint**|Y||Y|
 
 |||
 |:-----|:-----|

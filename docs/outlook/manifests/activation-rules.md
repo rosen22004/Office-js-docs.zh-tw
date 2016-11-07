@@ -1,7 +1,7 @@
 ﻿
-# <a name="activation-rules-for-outlook-add-ins"></a>Outlook 增益集的啟用規則
+# <a name="activation-rules-for-outlook-addins"></a>Outlook 增益集的啟用規則
 
-如果使用者讀取或撰寫的郵件或約會符合增益集的啟動規則，Outlook 將啟動某些類型的增益集。這適用於使用 1.1 版資訊清單結構描述的所有增益集，以及自訂窗格增益集。使用者接著可從 Outlook UI 中選擇增益集，為目前的項目啟動它。
+如果使用者讀取或撰寫的郵件或約會符合增益集的啟動規則，Outlook 將啟動某些類型的增益集。這適用於使用 1.1 版資訊清單結構描述的所有增益集。使用者接著可從 Outlook UI 中選擇增益集，為目前的項目啟動它。
 
 下圖顯示為 [讀取窗格] 中訊息，而在增益集列中啟動的 Outlook 增益集。 
 
@@ -24,11 +24,11 @@
 
 |**規則名稱**|**適用的表單**|**描述**|
 |:-----|:-----|:-----|
-|[ItemIs](#itemis-rule)|閱讀、撰寫、自訂窗格|檢查目前的項目是否屬於指定的類型 (郵件或約會)。也可以檢查項目類別及表單類型，並選擇性地檢查項目郵件類別。|
-|[ItemHasAttachment](#itemhasattachment-rule)|閱讀、自訂窗格|檢查選取的項目是否包含附件。|
-|[ItemHasKnownEntity](#itemhasknownentity-rule)|閱讀、自訂窗格|檢查選取的項目是否包含一或多個已知的實體。更多資訊：[使 Outlook 項目中的字串與已知的實體相符](../../outlook/match-strings-in-an-item-as-well-known-entities.md)。|
-|[ItemHasRegularExpressionMatch](#itemhasregularexpressionmatch-rule)|閱讀、自訂窗格|檢查寄件者的電子郵件地址、主旨及/或選取的項目主體是否包含規則運算式的符合項。如果您需要更多資訊︰[使用規則運算式的啟用規則來顯示 Outlook 增益集](../../outlook/use-regular-expressions-to-show-an-outlook-add-in.md)。|
-|[RuleCollection](#rulecollection-rule)|閱讀、撰寫、自訂窗格|結合一組規則，以便您可以形成更複雜的規則。|
+|[ItemIs](#itemis-rule)|讀取、撰寫|檢查目前的項目是否屬於指定的類型 (郵件或約會)。也可以檢查項目類別及表單類型，並選擇性地檢查項目郵件類別。|
+|[ItemHasAttachment](#itemhasattachment-rule)|讀取|檢查選取的項目是否包含附件。|
+|[ItemHasKnownEntity](#itemhasknownentity-rule)|讀取|檢查選取的項目是否包含一或多個已知的實體。更多資訊：[使 Outlook 項目中的字串與已知的實體相符](../../outlook/match-strings-in-an-item-as-well-known-entities.md)。|
+|[ItemHasRegularExpressionMatch](#itemhasregularexpressionmatch-rule)|讀取|檢查寄件者的電子郵件地址、主旨及/或選取的項目主體是否包含規則運算式的符合項。如果您需要更多資訊︰[使用規則運算式的啟用規則來顯示 Outlook 增益集](../../outlook/use-regular-expressions-to-show-an-outlook-add-in.md)。|
+|[RuleCollection](#rulecollection-rule)|讀取、撰寫|結合一組規則，以便您可以形成更複雜的規則。|
 
 ## <a name="itemis-rule"></a>ItemIs 規則
 

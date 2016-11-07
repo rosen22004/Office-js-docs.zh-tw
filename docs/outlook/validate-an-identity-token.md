@@ -1,7 +1,7 @@
 
 # <a name="validate-an-exchange-identity-token"></a>驗證 Exchange 識別權杖
 
-Outlook 增益集可以傳送識別權杖給您，但您必須驗證權杖以確保其來自您所預期的 Exchange server 之後，才可以信任要求。本文中的範例會告訴您如何使用以 C#; 撰寫的驗證物件來驗證 Exchange 識別權杖；不過，您可以使用任何程式設計語言來執行驗證。[JSON Web 權杖 (JWT) 網際網路草稿](http://self-issued.info/docs/draft-goland-json-web-token-00.mdl)中敘述驗證權杖所需的步驟。 
+Outlook 增益集可以傳送識別權杖給您，但您必須驗證權杖以確保其來自您所預期的 Exchange server 之後，才可以信任要求。本文中的範例會告訴您如何使用以 C#; 撰寫的驗證物件來驗證 Exchange 識別權杖；不過，您可以使用任何程式設計語言來執行驗證。[JSON Web 權杖 (JWT) 網際網路草稿](http://self-issued.info/docs/draft-ietf-oauth-json-web-token.html)中敘述驗證權杖所需的步驟。 
 
 我們建議您使用四個步驟的程序來驗證識別權杖，並取得使用者的唯一識別項。首先，從以 Base64 編碼的字串擷取 JSON Web 權杖 (JWT)。第二，請確定權杖格式正確，其適用於您的 Outlook 增益集、尚未過期，而且您可以擷取驗證中繼資料文件的有效 URL。接下來，從 Exchange Server 擷取驗證中繼資料文件，並附加至識別權杖的簽章。最後，利用驗證中繼資料文件的 URL 雜湊使用者的 Exchange ID，計算使用者的唯一識別項。整體而言，程序看起來會很複雜，但每個個別的步驟相當簡單。您可以在 [Outlook-Add-in-JavaScript-ValidateIdentityToken](https://github.com/OfficeDev/Outlook-Add-in-JavaScript-ValidateIdentityToken)下載包含這些來自 web 的範例的解決方案。
  
@@ -54,7 +54,7 @@ Outlook 增益集可以傳送識別權杖給您，但您必須驗證權杖以確
     }
 ```
 
-**Base64Decode** 方法會實作 [JSON Web 權杖 (JWT) 網際網路草稿](http://self-issued.info/docs/draft-goland-json-web-token-00.mdl)中的「無填補實作 base64url 編碼的附註」附錄中所述的解碼邏輯。
+**Base64Decode** 方法會實作 [JSON Web 權杖 (JWT) 網際網路草稿](http://self-issued.info/docs/draft-ietf-oauth-json-web-token.html)中的「無填補實作 base64url 編碼的附註」附錄中所述的解碼邏輯。
 
 
 

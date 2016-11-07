@@ -1,4 +1,4 @@
-# <a name="range-object-(javascript-api-for-word)"></a>Range 物件 (適用於 Word 的 JavaScript API)
+# <a name="range-object-javascript-api-for-word"></a>Range 物件 (適用於 Word 的 JavaScript API)
 
 代表文件中的連續區域。
 
@@ -7,7 +7,7 @@ _適用於：Word 2016、Word for iPad、Word for Mac、Word Online_
 ## <a name="properties"></a>屬性
 | 屬性	     | 類型	   |描述
 |:---------------|:--------|:----------|
-|Style|string|取得或設定範圍所使用的樣式。這是預先安裝或自訂樣式的名稱。|
+|Style|string|取得或設定範圍所使用的樣式。這是預先安裝或自訂樣式的名稱。在 Word Online 中，如果樣式名稱只包含字母字元，則樣式「必須」**是全小寫 (第一個字元除外)，第一個字元「必須」**是大寫。如果樣式包含至少一個非字母字元，則會與已知樣式進行比對 (不考慮大小寫)，而如果符合多個樣式，則會套用最後定義的樣式。|
 |文字|string|取得範圍的文字。唯讀。|
 
 ## <a name="relationships"></a>關聯性
@@ -41,7 +41,7 @@ _適用於：Word 2016、Word for iPad、Word for Mac、Word Online_
 
 ## <a name="method-details"></a>方法詳細資料
 
-### <a name="clear()"></a>clear()
+### <a name="clear"></a>clear()
 清除 range 物件的內容。使用者可對已清除的內容執行復原作業。
 
 #### <a name="syntax"></a>語法
@@ -80,7 +80,7 @@ Word.run(function (context) {
     }
 });
 ```
-### <a name="delete()"></a>delete()
+### <a name="delete"></a>delete()
 刪除文件中的範圍及其內容。
 
 #### <a name="syntax"></a>語法
@@ -120,7 +120,7 @@ Word.run(function (context) {
 });
 ```
 
-### <a name="gethtml()"></a>getHtml()
+### <a name="gethtml"></a>getHtml()
 取得 range 物件的 HTML 表示法。
 
 #### <a name="syntax"></a>語法
@@ -160,7 +160,7 @@ Word.run(function (context) {
 });
 ```
 
-### <a name="getooxml()"></a>getOoxml()
+### <a name="getooxml"></a>getOoxml()
 取得 range 物件的 OOXML 表示法。
 
 #### <a name="syntax"></a>語法
@@ -200,7 +200,7 @@ Word.run(function (context) {
 });
 ```
 
-### <a name="insertbreak(breaktype:-breaktype,-insertlocation:-insertlocation)"></a>insertBreak(breakType: BreakType, insertLocation: InsertLocation)
+### <a name="insertbreakbreaktype-breaktype-insertlocation-insertlocation"></a>insertBreak(breakType: BreakType, insertLocation: InsertLocation)
 在指定的位置插入中斷符號。除了換行符號可以插入至任何 body 物件，其他中斷符號只能插入到主文件內文所包含的 range 物件中。InsertLocation 值可以是 'Before' 或 'After'。
 
 #### <a name="syntax"></a>語法
@@ -246,7 +246,7 @@ Word.run(function (context) {
 });
 ```
 
-### <a name="insertcontentcontrol()"></a>insertContentControl()
+### <a name="insertcontentcontrol"></a>insertContentControl()
 以 RTF 內容控制項圍繞 range 物件。
 
 #### <a name="syntax"></a>語法
@@ -293,7 +293,7 @@ Word.run(function (context) {
 });
 ```
 
-### <a name="insertfilefrombase64(base64file:-string,-insertlocation:-insertlocation)"></a>insertFileFromBase64(base64File: string, insertLocation:InsertLocation)
+### <a name="insertfilefrombase64base64file-string-insertlocation-insertlocation"></a>insertFileFromBase64(base64File: string, insertLocation:InsertLocation)
 在範圍的指定位置插入文件。InsertLocation 值可以是 'Replace'、'Start' 或 'End'。
 
 #### <a name="syntax"></a>語法
@@ -337,7 +337,7 @@ Word.run(function (context) {
 });
 ```
 
-### <a name="inserthtml(html:-string,-insertlocation:-insertlocation)"></a>insertHtml(html: string, insertLocation:InsertLocation)
+### <a name="inserthtmlhtml-string-insertlocation-insertlocation"></a>insertHtml(html: string, insertLocation:InsertLocation)
 在範圍的指定位置插入 HTML。InsertLocation 值可以是 'Replace'、'Start' 或 'End'。
 
 #### <a name="syntax"></a>語法
@@ -380,7 +380,7 @@ Word.run(function (context) {
 });
 ```
 
-### <a name="insertinlinepicturefrombase64(base64encodedimage:-string,-insertlocation:-insertlocation)"></a>insertInlinePictureFromBase64(base64EncodedImage: string, insertLocation:InsertLocation)
+### <a name="insertinlinepicturefrombase64base64encodedimage-string-insertlocation-insertlocation"></a>insertInlinePictureFromBase64(base64EncodedImage: string, insertLocation:InsertLocation)
 在範圍的指定位置插入圖片。InsertLocation 值可以是 'Replace'、'Start'、'End'、'Before' 或 'After'。
 
 #### <a name="syntax"></a>語法
@@ -395,7 +395,7 @@ rangeObject.insertInlinePictureFromBase64(image, insertLocation);
 #### <a name="returns"></a>傳回
 [InlinePicture](inlinepicture.md)
 
-### <a name="insertooxml(ooxml:-string,-insertlocation:-insertlocation)"></a>insertOoxml(ooxml: string, insertLocation:InsertLocation)
+### <a name="insertooxmlooxml-string-insertlocation-insertlocation"></a>insertOoxml(ooxml: string, insertLocation:InsertLocation)
 在範圍的指定位置插入 OOXML 或 wordProcessingML。InsertLocation 值可以是 'Replace'、'Start' 或 'End'。
 
 #### <a name="syntax"></a>語法
@@ -444,7 +444,7 @@ Word.run(function (context) {
 #### <a name="additional-information"></a>其他資訊
 如需使用 OOXML 的指示，請閱讀[使用 Office Open XML 為 Word 建立更佳的增益集](https://msdn.microsoft.com/en-us/library/office/dn423225.aspx)。
 
-### <a name="insertparagraph(paragraphtext:-string,-insertlocation:-insertlocation)"></a>insertParagraph(paragraphText: string, insertLocation:InsertLocation)
+### <a name="insertparagraphparagraphtext-string-insertlocation-insertlocation"></a>insertParagraph(paragraphText: string, insertLocation:InsertLocation)
 在範圍的指定位置插入段落。InsertLocation 值可以是 'Before' 或 'After'。
 
 #### <a name="syntax"></a>語法
@@ -487,7 +487,7 @@ Word.run(function (context) {
 });
 ```
 
-### <a name="inserttext(text:-string,-insertlocation:-insertlocation)"></a>insertText(text: string, insertLocation:InsertLocation)
+### <a name="inserttexttext-string-insertlocation-insertlocation"></a>insertText(text: string, insertLocation:InsertLocation)
 在範圍的指定位置插入文字。InsertLocation 值可以是 'Replace'、'Start'、'End'、‘Before’ 或 ‘After’。
 
 #### <a name="syntax"></a>語法
@@ -530,7 +530,7 @@ Word.run(function (context) {
 });
 ```
 
-### <a name="load(param:-object)"></a>load(param: object)
+### <a name="loadparam-object"></a>load(param: object)
 以參數中指定的屬性和物件值填滿 JavaScript 層中建立的 Proxy 物件。
 
 #### <a name="syntax"></a>語法
@@ -579,7 +579,7 @@ Word.run(function (context) {
 });
 ```
 
-### <a name="search(searchtext:-string,-searchoptions:-paramtypestrings.searchoptions)"></a>search(searchText: string, searchOptions:ParamTypeStrings.SearchOptions)
+### <a name="searchsearchtext-string-searchoptions-paramtypestringssearchoptions"></a>search(searchText: string, searchOptions:ParamTypeStrings.SearchOptions)
 以指定的 searchOptions 在 range 物件的範圍中執行搜尋。搜尋結果將是 range 物件的集合。
 
 #### <a name="syntax"></a>語法
@@ -597,7 +597,7 @@ rangeObject.search(searchText, searchOptions);
 [SearchResultCollection](searchresultcollection.md)
 
 
-### <a name="select(selectionmode:-selectionmode)"></a>select(selectionMode: SelectionMode)
+### <a name="selectselectionmode-selectionmode"></a>select(selectionMode: SelectionMode)
 選取範圍並將 Word UI 導覽至該處。SelectionMode 值可以是 'Select'、'Start' 或 'End'。
 
 #### <a name="syntax"></a>語法

@@ -26,9 +26,10 @@
     	<Item text="協助工具指導方針" url="design/accessibility-guidelines" SEODescription="了解如何讓所有使用者存取您的 Office 增益集。" />
     </Item>
   <Item text="開發" url="develop">
-	<Item text="增益集開發生命週期" url="design/add-in-development-lifecycle" SEODescription="計劃端對端程序來開發工作窗格、內容和 Outlook 增益集以擴充 Office 應用程式。" />
+	<Item text="增益集開發生命週期" url="develop/add-in-development-lifecycle" SEODescription="計劃端對端程序來開發工作窗格、內容和 Outlook 增益集以擴充 Office 應用程式。" />
 	<Item text="安裝最新的 Office 版本" url="develop/install-latest-office-version" SEODescription="了解如何加入宣告來取得最新的 Office 版本。" />
 	<Item text="開發適用於 iPad 的增益集" url="develop/develop-office-add-ins-for-the-ipad" SEODescription="讓您的 Office 增益集可供 iPad 版 Office 使用。" />
+	<Item text="使用 Angular 2 建立增益集的祕訣" url="develop/add-ins-with-angular2" SEODescription="使用 Angular 2 來開發 Office 增益集。" />
 	<Item text="資訊清單" url="overview/add-in-manifests">	
 		<Item text="定義增益集命令" url="outlook/manifests/define-add-in-commands" SEODescription="使用增益集資訊清單中的 VersionOverrides 元素來定義增益集命令。" />
 		<Item text="指定 Office 主機" url="overview/specify-office-hosts-and-api-requirements" SEODescription="了解如何指定資訊清單中的 Office 主機和 API 需求。" /> 	
@@ -85,8 +86,7 @@
     <Item text="概觀" url="outlook/overview" SEODescription="深入了解 Outlook 增益集的架構和功能。" Scope="outlook" />
     <Item text="Outlook 的增益集命令" url="outlook/add-in-commands-for-outlook" SEODescription="使用增益集命令將 Outlook 增益集與 Outlook 使用者介面整合。" Scope="outlook" />
     <Item text="內容相關的 Outlook 增益集" url="outlook/contextual-outlook-add-ins" SEODescription="根據郵件或約會中的指定文字啟動 Outlook 增益集。" Scope="outlook" />
-    <Item text="自訂窗格 Outlook 增益集" url="outlook/custom-pane-outlook-add-ins" SEODescription="了解如何定義根據特定規則啟動的 Outlook 增益集。" Scope="outlook" />
-	<Item text="模組延伸 Outlook 增益集" url="outlook/extension-module-outlook-add-ins" FriendlyUrl="outlookmodule-extension-outlook-add-ins" Scope="outlook" SEODescription="透過新增模組延伸到導覽列來擴充 Outlook UI。" /> 
+    <Item text="模組延伸 Outlook 增益集" url="outlook/extension-module-outlook-add-ins" FriendlyUrl="outlookmodule-extension-outlook-add-ins" Scope="outlook" SEODescription="透過新增模組延伸到導覽列來擴充 Outlook UI。" /> 
 	<Item text="API" url="outlook/apis" SEODescription="了解如何指定 Outlook 增益集所需的 API。" Scope="outlook" />
 	<Item text="資訊清單" url="overview/add-in-manifests" Scope="outlook" SEODescription="使用 XML 資訊清單來指定如何啟動增益集。">
       <Item text="資訊清單" url="outlook/manifests/manifests" SEODescription="建立 Outlook 增益集讀取或撰寫表單的資訊清單。" Scope="outlook" /><Item text="啟動規則" url="outlook/manifests/activation-rules" FriendlyUrl="outlook/manifestsactivation-rules" SEODescription="定義 Outlook 增益集資訊清單中的啟動規則，以指定 Outlook 何時要顯示增益集。" Scope="outlook" />
