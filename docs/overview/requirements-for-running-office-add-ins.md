@@ -38,7 +38,7 @@
 
 - Internet Explorer 11 或更新版本，必須先安裝，但不一定是預設瀏覽器。若要支援 Office 增益集，做為主機的 Office 用戶端會使用 Internet Explorer 11 或更新版本的瀏覽器元件。
 
-- 預設瀏覽器為下列其中一項︰Internet Explorer 11 或更新版本，或最新版的 Edge、Chrome、Firefox 或 Safari (Mac OS)。
+- 預設瀏覽器為下列其中一項︰Internet Explorer 11 或更新版本，或最新版本的 Microsoft Edge、Chrome、Firefox 或 Safari (Mac 作業系統)。
 
 - 記事本、[Visual Studio 和 Microsoft Developer Tools](https://www.visualstudio.com/features/office-tools-vs)，或協力廠商 Web 開發工具之類的 HTML 和 JavaScript 編輯器。
 
@@ -54,7 +54,7 @@
 
 ## <a name="client-requirements-browser-support-for-office-online-web-clients-and-sharepoint"></a>用戶端需求Office Online Web 用戶端和 SharePoint 的瀏覽器支援
 
-支援 ECMAScript 5.1、HTML5 和 CSS3 的任何瀏覽器，例如 Internet Explorer 11 或更新版本，或最新版的 Edge、Chrome、Firefox 或 Safari (Mac OS)。
+支援 ECMAScript 5.1、HTML5 和 CSS3 的所有瀏覽器，例如 Internet Explorer 11 或更新版本，或最新版本的 Microsoft Edge、Chrome、Firefox 或 Safari (Mac 作業系統)。
 
 
 ## <a name="client-requirements-nonwindows-smartphone-and-tablet"></a>用戶端需求︰非 Windows 智慧型手機和平板電腦

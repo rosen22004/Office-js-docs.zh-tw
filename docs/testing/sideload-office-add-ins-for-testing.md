@@ -1,15 +1,18 @@
-
-# <a name="sideload-office-add-ins-in-office-online-for-testing"></a>在 Office Online 中側載 Office 增益集來進行測試
+﻿
+# <a name="sideload-office-addins-in-office-online-for-testing"></a>在 Office Online 中側載 Office 增益集來進行測試
 
 您可以為測試安裝 Office 增益集，而不必先使用側載將它放入增益集目錄。側載可以在 Office 365 或 Office Online 上完成。兩個平台的程序略有不同。 
 
 側載增益集時，增益集資訊清單會儲存在瀏覽器的本機存放區，因此如果您清除瀏覽器的快取，或切換至不同的瀏覽器，您必須重新側載增益集。
 
 
- >**附註**  Word、Excel 及 PowerPoint 支援本文所述的側載。若要側載 Outlook 增益集，請參閱[側載 Outlook 增益集來進行測試](sideload-outlook-add-ins-for-testing.md)。
+ >**附註：**Word、Excel 和 PowerPoint 支援本文中說明的側載。若要側載 Outlook 增益集，請參閱[側載 Outlook 增益集進行測試](sideload-outlook-add-ins-for-testing.md)。
 
+以下影片會帶您了解在 Office 桌面或 Office 線上側載增益集的程序。
 
-## <a name="sideload-an-office-add-in-on-office-365"></a>在 Office 365 上側載 Office 增益集
+<iframe width="560" height="315" src="https://www.youtube.com/embed/XXsAw2UUiQo" frameborder="0" allowfullscreen></iframe>
+
+## <a name="sideload-an-office-addin-on-office-365"></a>在 Office 365 上側載 Office 增益集
 
 
 1. 登入您的 Office 365 帳戶。
@@ -29,7 +32,7 @@
 6. 確認已安裝的增益集。例如，如果它是增益集命令，它應該會出現在功能區或快顯功能表上。如果它是工作窗格增益集，應該會顯示窗格。
     
 
-## <a name="sideload-an-office-add-in-on-office-online"></a>在 Office Online 上側載 Office 增益集
+## <a name="sideload-an-office-addin-on-office-online"></a>在 Office Online 上側載 Office 增益集
 
 
 

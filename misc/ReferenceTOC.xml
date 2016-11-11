@@ -47,8 +47,8 @@
     
 	<Item text="SupportUrl" url="manifest/supporturl" SEODescription="指定提供您增益集的支援資訊的網頁 URL。" />
     <Item text="TabletSettings" url="manifest/tabletsettings" Scope="outlook" SEODescription="指定您的郵件增益集用在平板電腦上時，可套用的控制項設定。" />
-    <Item text="TargetDialect" url="manifest/targetdialect" Scope="excel, word, powerpoint, project" SEODescription="定義此字典所支援的方言，以文化特性名稱的字串表示。" />
-    <Item text="TargetDialects" url="manifest/targetdialects" Scope="excel, word, powerpoint, project" SEODescription="定義此字典所支援的方言。" />
+    <Item text="TargetDialect" url="manifest/targetdialect" Scope="excel, word, powerpoint, project" SEODescription="定義由本字典支援的區域性語言，以文化名稱字串表示。" />
+    <Item text="TargetDialects" url="manifest/targetdialects" Scope="excel, word, powerpoint, project" SEODescription="定義由本字典支援的各種區域性語言。" />
     <Item text="版本" url="manifest/version" SEODescription="指定您 Office 增益集的版本。" />
 	<Item text="VersionOverrides" url="manifest/versionoverrides" Scope="excel, word, powerpoint" SEODescription="根元素，其包含增益集實作的增益集命令的資訊。"> 
 		<Item text="動作" url="manifest/action" Scope="excel, word, powerpoint" SEODescription="指定使用者選取的按鈕或功能表控制項時所執行的動作。" />
@@ -139,7 +139,7 @@
     <Item text="TableRowCollection" url="excel/tablerowcollection" SEODescription="代表屬於表格一部份的所有列集合。" />
     <Item text="TableSort" url="excel/tablesort" SEODescription="管理在 Table 物件上的排序作業。" />
     <Item text="TrackedObjectsCollection" url="excel/trackedobjectscollection" SEODescription="可讓增益集跨 sync() 批次管理 Range 物件參考。" />
-    <Item text="Workbook" url="excel/workbook" SEODescription="包含相關的活頁簿物件，例如工作表、表格、範圍等等。" />
+    <Item text="活頁簿" url="excel/workbook" SEODescription="包含相關的活頁簿物件，例如工作表、表格、範圍等等。" />
     <Item text="Worksheet" url="excel/worksheet" SEODescription="表示包含資料、表格和圖表的儲存格的格線。" />
     <Item text="WorksheetCollection" url="excel/worksheetcollection" SEODescription="代表屬於活頁簿一部份的 worksheet 物件集合。" />
     <Item text="WorksheetFunctions" url="excel/functions" SEODescription="做為可從 JavaScript 或 REST 中呼叫之 Excel 工作表函數的容器。" />

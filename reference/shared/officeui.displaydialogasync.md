@@ -1,4 +1,4 @@
-# <a name="ui.displaydialogasync-method"></a>UI.displayDialogAsync 方法
+# <a name="uidisplaydialogasync-method"></a>UI.displayDialogAsync 方法
 
 在 Office 主應用程式中顯示對話方塊。 
 
@@ -53,14 +53,21 @@ Office.context.ui.displayDialogAsync(startAddress, options, callback);
 
 如需使用 **displayDialogAsync** 方法的簡單範例，請參閱 GitHub 上的 [Office 增益功能對話方塊 API 範例](https://github.com/OfficeDev/Office-Add-in-Dialog-API-Simple-Example/)。
 
-如需顯示驗證案例的範例，請參閱 GitHub 上的 [適用於 AngularJS 的 Office 增益集 Office 365 用戶端驗證](https://github.com/OfficeDev/Word-Add-in-AngularJS-Client-OAuth)範例。
+如需驗證案例的範例，請參閱：
+
+- [Microsoft Graph ASP.Net 中的 PowerPoint 增益集插入圖表](https://github.com/OfficeDev/PowerPoint-Add-in-Microsoft-Graph-ASPNET-InsertChart)
+- [Office 增益集 Auth0](https://github.com/OfficeDev/Office-Add-in-Auth0)
+- [Excel 增益集 ASP.NET QuickBooks](https://github.com/OfficeDev/Excel-Add-in-ASPNET-QuickBooks)
+- [適用於 ASP.net MVC 的 Office 增益集伺服器驗證範例](https://github.com/dougperkes/Office-Add-in-AspNetMvc-ServerAuth/tree/Office2016DisplayDialog)
+- [適用於 AngularJS 的 Office 增益集 Office 365 用戶端驗證](https://github.com/OfficeDev/Word-Add-in-AngularJS-Client-OAuth)
+
 
  
 ## <a name="parameters"></a>參數
 
 | 參數	    | 類型	   |描述|
 |:---------------|:--------|:----------|
-|startAddress|string|接受在對話方塊中開啟的初始 HTTPS(TLS) URL。 <ul><li>初始頁面必須位於與父系頁面相同的網域。初始頁面載入之後，您可以移至其他網域。</li><li>任何呼叫 [office.context.ui.messageParent](officeui.messageparent.md) 的頁面必須位於與父系頁面相同的網域。</li></ul>|
+|startAddress|字串|接受在對話方塊中開啟的初始 HTTPS(TLS) URL。 <ul><li>初始頁面必須位於與父系頁面相同的網域。初始頁面載入之後，您可以移至其他網域。</li><li>任何呼叫 [office.context.ui.messageParent](officeui.messageparent.md) 的頁面必須位於與父系頁面相同的網域。</li></ul>|
 |選項|物件|選擇性。接受 options 物件，以定義對話方塊的行為。|
 |callback|object|接受 callback 方法，以處理建立對話方塊的嘗試。|
     
@@ -70,8 +77,8 @@ Office.context.ui.displayDialogAsync(startAddress, options, callback);
 
 | 屬性     | 類型	   |描述|
 |:---------------|:--------|:----------|
-|**width**|object|選用。將對話方塊的寬度定義為目前顯示的百分比。預設值為 80%。最小解析為 250 像素。|
-|**height**|object|選用。將對話方塊的高度定義為目前顯示的百分比。預設值為 80%。最小解析為 150 像素。|
+|**width**|物件|選用。將對話方塊的寬度定義為目前顯示的百分比。預設值為 80%。最小解析為 250 像素。|
+|**height**|物件|選用。將對話方塊的高度定義為目前顯示的百分比。預設值為 80%。最小解析為 150 像素。|
 |**displayInIframe**|物件|選用。決定對話方塊是否應該在 Office Online 用戶端中的 IFrame 顯示。桌面用戶端會忽略這項設定。可能的值如下：<ul><li>False (預設值) - 對話方塊會顯示為新的瀏覽器視窗 (快顯視窗)。針對無法在 IFrame 中顯示的驗證頁面建議使用此選項。 </li><li>True - 對話方塊會顯示為與 IFrame 浮動重疊。這對於使用者經驗與效能是最佳選項。</li>|
 
 
@@ -88,6 +95,17 @@ Office.context.ui.displayDialogAsync(startAddress, options, callback);
 |[AsyncResult.status](../../reference/shared/asyncresult.status.md)|判定作業成功或失敗。|
 |[AsyncResult.error](../../reference/shared/asyncresult.error.md)|作業失敗時，存取提供錯誤資訊的 [Error](../../reference/shared/error.md) 物件。|
 |[AsyncResult.asyncContext](../../reference/shared/asyncresult.asynccontext.md)|存取您的使用者定義物件或值 (如果您傳遞了其中一項做為 _asyncContext_ 參數)。|
+
+### <a name="errors-from-displaydialogasync"></a>來自 displayDialogAsync 的錯誤
+
+除了一般平台和系統錯誤以外，以下是呼叫 **displayDialogAsync** 所發生的特定錯誤。
+
+|**程式碼數字**|**意義**|
+|:-----|:-----|
+|12004|傳送至 `displayDialogAsync` 的 URL 網域已不受信任。網域必須是與主機頁面 (包括通訊協定和連接埠號碼) 相同的網域，或必須已在增益集資訊清單中登錄的 `<AppDomains>` 區段。|
+|12005|傳送至 `displayDialogAsync` 的 URL 使用 HTTP 通訊協定。HTTPS 為必填。(部分 Office 版本中，傳回的 12005 錯誤訊息與傳回的 12004 錯誤相同。)|
+|12007|已在工作面板中開啟對話方塊。工作面板增益集一次只能開啟一個對話方塊。|
+
 
 
 ## <a name="design-considerations"></a>設計考量

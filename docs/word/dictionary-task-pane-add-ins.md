@@ -1,40 +1,43 @@
-
-# <a name="create-a-dictionary-task-pane-add-in"></a>建立字典工作窗格增益集
+﻿
+# <a name="create-a-dictionary-task-pane-addin"></a>建立字典工作窗格增益集
 
 
 本文將告訴您工作窗格增益集的範例，並隨附 Web 服務來提供使用者在 Word 2013 文件中目前選取範圍的字典定義或同義字。 
 
 字典 Office 增益集是根據標準的工作窗格增益集，包含額外的功能以支援查詢和顯示字典 XML Web 服務的定義 (除了 Office 應用程式的 UI 中的其他位置)。 
 
-在典型的字典工作窗格增益集，使用者在他們的文件中選取單字或片語，增益集背後的 JavaScript 邏輯接著會將此選項傳遞至字典提供者的 XML Web 服務。接著會更新字典提供者的網頁，向使用者顯示選項的定義。XML Web 服務元件最多會以 OfficeDefinitions XML 結構描述所定義的格式傳回定義，隨後在裝載 Office 應用程式的 UI中，向其他位置的使用者顯示。圖 1 顯示在 Word 2013 中執行的 Bing 品牌字典增益集的選項和顯示經驗。
+在典型的字典工作窗格增益集，使用者在他們的文件中選取單字或片語，增益集背後的 JavaScript 邏輯接著會將此選項傳遞至字典提供者的 XML Web 服務。接著會更新字典提供者的網頁，向使用者顯示選項的定義。
+XML Web 服務元件最多會以 OfficeDefinitions XML 結構描述所定義的格式傳回定義，隨後在裝載 Office 應用程式的 UI中，向其他位置的使用者顯示。
+圖 1 顯示在 Word 2013 中執行的 Bing 品牌字典增益集的選項和顯示經驗。
 
 **圖 1.顯示所選字定義的字典增益集**
 
 
-![顯示定義的字典應用程式](../../images/DictionaryAgave01.jpg)
+![A dictionary app displaying a definition](../../images/DictionaryAgave01.jpg)
 
-取決於您按一下字典增益集的 HTML UI 的 [查看更多] 連結以顯示工作窗格中的詳細資訊，或開啟另一個瀏覽器視窗來顯示所選單字或片語的完整網頁。圖 2 顯示 [定義] 內容功能表命令，可讓使用者快速啟動安裝字典。數字 3 到 5 會顯示 Office UI 中的位置，其中的字典 XML 服務可用於在 Word 2013 中提供定義。
+取決於您按一下字典增益集的 HTML UI 的 [查看更多] 連結以顯示工作窗格中的詳細資訊，或開啟另一個瀏覽器視窗來顯示所選單字或片語的完整網頁。圖 2 顯示 [定義] 內容功能表命令，可讓使用者快速啟動安裝字典。
+數字 3 到 5 會顯示 Office UI 中的位置，其中的字典 XML 服務可用於在 Word 2013 中提供定義。
 
 **圖 2.定義在內容功能表中的命令**
 
 
 
-![定義內容功能表](../../images/DictionaryAgave02.jpg)
+![Define context menu](../../images/DictionaryAgave02.jpg)
 
 **圖 3.[拼字及文法檢查] 窗格中的定義**
 
 
-![[拼字及文法檢查] 窗格中的定義](../../images/DictionaryAgave03.jpg)
+![Definitions in the Spelling and Grammar panes](../../images/DictionaryAgave03.jpg)
 
 **圖 4.[同義字] 窗格中的定義**
 
 
-![[同義字] 窗格中的定義](../../images/DictionaryAgave04.jpg)
+![Definitions in the Thesaurus pane](../../images/DictionaryAgave04.jpg)
 
 **圖 5.閱讀模式中的定義**
 
 
-![閱讀模式中的定義](../../images/DictionaryAgave05.jpg)
+![Definitions in Reading Mode](../../images/DictionaryAgave05.jpg)
 
 若要建立工作窗格增益集來提供字典查閱，您可以建立兩個主要元件︰ 
 
@@ -178,7 +181,7 @@ public class WebService : System.Web.Services.WebService {
 ```
 
 
-## <a name="creating-the-components-of-a-dictionary-add-in"></a>建立字典增益集的元件
+## <a name="creating-the-components-of-a-dictionary-addin"></a>建立字典增益集的元件
 
 
 字典增益集包含三個主要元件檔案。
@@ -191,7 +194,7 @@ public class WebService : System.Web.Services.WebService {
 - JavaScript 檔案，其提供邏輯以取得文件的使用者選項、傳回選項做為 Web 服務的查詢，然後在增益集的 UI 中顯示傳回的結果。
     
 
-### <a name="creating-a-dictionary-add-in's-manifest-file"></a>建立字典增益集的資訊清單檔
+### <a name="creating-a-dictionary-addins-manifest-file"></a>建立字典增益集的資訊清單檔
 
 以下是字典增益集的範例資訊清單檔。
 
@@ -222,7 +225,7 @@ public class WebService : System.Web.Services.WebService {
   <!--Permissions is the set of permissions a user will have to give your dictionary. If you need write access, such as to allow a user to replace the highlighted word with a synonym, use ReadWriteDocument. -->
   <Permissions>ReadDocument</Permissions>
   <Dictionary>
-    <!--TargetDialects is the set of dialects your dictionary contains. For example, if your dictionary applies to Spanish (Mexico) and Spanish (Peru), but not Spanish (Spain), you can specify that here. This is for different dialects of the same language. Please do NOT put more than one language (for example, Spanish and English) here. Publish separate languages as separate dictionaries. -->
+    <!--TargetDialects is the set of regional languages your dictionary contains. For example, if your dictionary applies to Spanish (Mexico) and Spanish (Peru), but not Spanish (Spain), you can specify that here. Do not put more than one language (for example, Spanish and English) here. Publish separate languages as separate dictionaries. -->
     <TargetDialects>
       <TargetDialect>EN-AU</TargetDialect>
       <TargetDialect>EN-BZ</TargetDialect>
@@ -274,10 +277,10 @@ public class WebService : System.Web.Services.WebService {
 建立字典增益集時，**Dictionary** 元素及其子元素會加入至工作窗格增益集的資訊清單。
 
 
-#### <a name="targetdialects-element"></a>TargetDialects 項目
+#### <a name="targetdialects-element"></a>TargetDialects 元素
 
 
-指定這個字典所支援的用語。必要 (適用於字典增益集)。
+指定這個字典所支援的區域性語言。必要 (適用於字典增益集)。
 
  **父元素**
 
@@ -289,7 +292,7 @@ public class WebService : System.Web.Services.WebService {
 
  **備註**
 
-**TargetDialects** 元素及其子元素指定字典包含的方言集合。比方說，如果您的字典套用至西班牙文 (墨西哥) 和西班牙文 (秘魯) 方言，但不是西班牙文 (西班牙) 中，您可以在此元素中指定它。這個元素只是用來指定相同語言的不同方言。不要在此資訊清單中指定一種以上的語言 (例如，西班牙文和英文)。將不同的語言發行為個別的字典。
+**TargetDialects** 元素及其子元素指定字典包含的區域性語言集合。比方說，如果您的字典套用至西班牙文 (墨西哥) 和西班牙文 (秘魯)，但不是西班牙文 (西班牙) 中，您可以在此元素中指定它。不要在此資訊清單中指定一種以上的語言 (例如，西班牙文和英文)。將不同的語言發行為個別的字典。
 
  **範例**
 
@@ -323,7 +326,7 @@ public class WebService : System.Web.Services.WebService {
 #### <a name="targetdialect-element"></a>TargetDialect 元素
 
 
-指定這個字典所支援的方言。必要 (適用於字典增益集)。
+指定這個字典所支援的區域性語言。必要 (適用於字典增益集)。
 
  **父元素**
 
@@ -331,7 +334,7 @@ public class WebService : System.Web.Services.WebService {
 
  **備註**
 
-為 RFC1766 `language` 標記格式中的方言指定值，例如 EN-US。
+為 RFC1766 `language` 標記格式中的區域性語言指定值，例如 EN-US。
 
  **範例**
 
@@ -343,7 +346,7 @@ public class WebService : System.Web.Services.WebService {
 ```
 
 
-#### <a name="queryuri-element"></a>QueryUri 元素
+#### <a name="queryuri-element"></a>QueryUri 項目
 
 
 指定字典查詢服務的端點。必要 (適用於字典增益集)。
@@ -366,7 +369,7 @@ public class WebService : System.Web.Services.WebService {
 ```
 
 
-#### <a name="citationtext-element"></a>CitationText 元素
+#### <a name="citationtext-element"></a>CitationText 項目
 
 
 指定要用於引文的文字。必要 (適用於字典增益集)。
@@ -391,7 +394,7 @@ public class WebService : System.Web.Services.WebService {
 ```
 
 
-#### <a name="dictionaryname-element"></a>DictionaryName 元素
+#### <a name="dictionaryname-element"></a>DictionaryName 項目
 
 
 指定此字典的名稱。必要 (適用於字典增益集)。
@@ -416,7 +419,7 @@ public class WebService : System.Web.Services.WebService {
 ```
 
 
-#### <a name="dictionaryhomepage-element"></a>DictionaryHomePage 元素
+#### <a name="dictionaryhomepage-element"></a>DictionaryHomePage 項目
 
 
 指定字典首頁的 URL。必要 (適用於字典增益集)。
@@ -441,7 +444,7 @@ public class WebService : System.Web.Services.WebService {
 ```
 
 
-### <a name="creating-a-dictionary-add-in's-html-user-interface"></a>建立字典增益集的 HTML 使用者介面
+### <a name="creating-a-dictionary-addins-html-user-interface"></a>建立字典增益集的 HTML 使用者介面
 
 
 下列兩個範例顯示「示範字典」增益集之 UI 的 HTML 和 CSS 檔案。若要檢視 UI 在增益集的工作窗格中的顯示方式，請參閱程式碼下方的圖 6。若要查看 Dictionary.js 檔案中的 JavaScript 實作如何為此 HTML UI 提供程式設計邏輯，請參閱緊接本節後面的「撰寫 JavaScript 實作 」。
@@ -533,7 +536,7 @@ a:hover, a:active
 
 **圖 6.示範字典 UI**
 
-![示範字典 UI](../../images/DictionaryAgave06.jpg)
+![Demo dictionary UI](../../images/DictionaryAgave06.jpg)
 
 
 ### <a name="writing-the-javascript-implementation"></a>撰寫 JavaScript 實作

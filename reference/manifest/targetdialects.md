@@ -1,11 +1,11 @@
 
-# <a name="targetdialects-element"></a>TargetDialects 項目
-定義此字典所支援的方言。
+# <a name="targetdialects-element"></a>TargetDialects 元素
+定義區域性語言或由本字典支援的各種語言。
 
- **增益集類型︰**工作窗格
+ **增益集類型：**工作窗格
 
 
-## <a name="syntax:"></a>語法：
+## <a name="syntax"></a>語法：
 
 
 ```XML
@@ -15,9 +15,9 @@
 ```
 
 
-## <a name="contained-in:"></a>內含於：
+## <a name="contained-in"></a>內含於：
 
-[字典](../../reference/manifest/dictionary.md)
+[Dictionary](../../reference/manifest/dictionary.md)
 
 
 ## <a name="additional-resources"></a>其他資源
