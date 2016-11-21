@@ -28,9 +28,9 @@ Office.EventType.ActiveViewChanged
 **支援的主應用程式 (依平台排序)**
 
 
-||**Office for Windows desktop**|**Office Online (在瀏覽器中)**|**Office for iPad**|
-|:-----|:-----|:-----|:-----|
-|**PowerPoint**|Y||Y|
+||**Office for Windows desktop**|**Office Online (在瀏覽器中)**|**Office for Mac**|**Office for iPad**|
+|:-----|:-----|:-----|:-----|:-----|
+|**PowerPoint**|Y||Y|Y|
 
 |||
 |:-----|:-----|

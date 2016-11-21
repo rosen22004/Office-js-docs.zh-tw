@@ -6,7 +6,7 @@
 - 如果您是商務用 Office 365 客戶，請參閱[安裝適用於商務用 Office 365 客戶的第一版組建](https://support.office.com/en-us/article/Install-the-First-Release-build-for-Office-365-for-business-customers-4dd8ba40-73c0-4468-b778-c7b744d03ead?ui=en-US&rs=en-US&ad=US)。
 - 如果您正在 Mac 上執行 Office 2016 ︰
     - 啟動 Office 2016 for Mac 程式。
-    - 選取 [說明] 功能表的 [檢查更新]。
+    - 選取 **** [說明] 功能表的 [檢查更新]。
     - 在 Microsoft AutoUpdate 方塊中，核取方塊以加入 Office 測試人員計畫。 
 
 若要取得最新組建： 
@@ -21,3 +21,13 @@
 當安裝程序完成時，將會安裝最新的 Office 2016 應用程式。若要驗證您擁有的是最新組建，請移至任何 Office 應用程式的**檔案**  >  **帳戶**。在 Office Update 下，您會在版本號碼上方看到 (Office 測試人員) 標籤。
 
 ![螢幕擷取畫面顯示產品資訊與 Office 測試人員標籤](../../images/officeinsider.PNG)
+
+## <a name="minimum-office-builds-for-office-javascript-api-requirement-sets"></a>Office JavaScript API 需求集合的最小 Office 組建
+
+如需 API 需求集合每個平台的最小產品組建的詳細資訊，請參閱下列各項︰
+
+- [Word JavaScript API 需求集合](../../reference/requirement-sets/word-api-requirement-sets.md)
+- [Excel JavaScript API 需求集合](../../reference/requirement-sets/excel-api-requirement-sets.md)
+- [OneNote JavaScript API 需求集合](../../reference/requirement-sets/onenote-api-requirement-sets.md)
+- [對話方塊 API 需求集合](../../reference/requirement-sets/dialog-api-requirement-sets.md)
+- [Office 通用 API 需求集合](../../reference/requirement-sets/office-add-in-requirement-sets.md)

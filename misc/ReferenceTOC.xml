@@ -87,6 +87,7 @@
     <Item text="SearchResultCollection" url="word/searchresultcollection" FriendlyUrl="word/referencesearchresultcollection" Scope="word" SEODescription="包含 Range 物件的集合，作為搜尋作業的結果。" />
     <Item text="章節" url="word/section" FriendlyUrl="word/referencesection" Scope="word" SEODescription="代表 Word 文件中的區段。" />
     <Item text="SectionCollection" url="word/sectioncollection" FriendlyUrl="word/referencesectioncollection" Scope="word" SEODescription="包含文件的 Section 物件集合。" />
+	<Item text="Word JavaScript API 需求集" url="requirement-sets/word-api-requirement-sets" Scope="word" SEODescription="深入了解 Word 需求集、支援需求集的 Office 主應用程式，以及這些應用程式的組建或版本號碼。" />
   </Item>
   
   <Item text="Excel" url="excel" Scope="excel">
@@ -140,10 +141,11 @@
     <Item text="TableSort" url="excel/tablesort" SEODescription="管理在 Table 物件上的排序作業。" />
     <Item text="TrackedObjectsCollection" url="excel/trackedobjectscollection" SEODescription="可讓增益集跨 sync() 批次管理 Range 物件參考。" />
     <Item text="活頁簿" url="excel/workbook" SEODescription="包含相關的活頁簿物件，例如工作表、表格、範圍等等。" />
-    <Item text="Worksheet" url="excel/worksheet" SEODescription="表示包含資料、表格和圖表的儲存格的格線。" />
+    <Item text="工作表" url="excel/worksheet" SEODescription="表示包含資料、表格和圖表的儲存格的格線。" />
     <Item text="WorksheetCollection" url="excel/worksheetcollection" SEODescription="代表屬於活頁簿一部份的 worksheet 物件集合。" />
     <Item text="WorksheetFunctions" url="excel/functions" SEODescription="做為可從 JavaScript 或 REST 中呼叫之 Excel 工作表函數的容器。" />
     <Item text="WorksheetProtection" url="excel/worksheetprotection" SEODescription="代表 Sheet 物件的保護。" />
+	<Item text="Excel JavaScript API 需求集合" url="requirement-sets/excel-api-requirement-sets" Scope="excel" SEODescription="深入了解 Excel 需求集、支援需求集的 Office 主應用程式，以及這些應用程式的組建或版本號碼。" />
   </Item>
   
   <Item text="Outlook" url="outlook" Scope="Outlook">
@@ -412,11 +414,12 @@
     <Item text="Sectiongroupcollection" url="onenote/sectiongroupcollection" SEODescription="OneNote 的增益集參考。" />
     <Item text="大綱" url="onenote/outline" SEODescription="OneNote 的增益集參考。" />
     <Item text="影像" url="onenote/image" SEODescription="OneNote 的增益集參考。" />
+	<Item text="OneNote JavaScript API 需求集合" url="requirement-sets/onenote-api-requirement-sets" SEODescription="深入了解 OneNote 需求集、支援需求集的 Office 主應用程式，以及組建版本或可用性日期。" />
   </Item>  
   <Item text="共用 API" url="shared/shared-api">
     <Item text="JavaScript API for Office" url="javascript-api-for-office" SEODescription="適用於 Office 的 JavaScript API 包括物件、方法、屬性、事件和列舉型別，您可以用於您的 Office 增益集程式碼中。" />
 	<Item text="適用於 Office 的 JavaScript API 中的變更項目" url="what's-changed-in-the-javascript-api-for-office" SEODescription="適用於 Office 的 JavaScript API 會定期以新的或更新的物件、方法、屬性、事件和列舉型別更新，來擴充您 Office 增益集的功能。" />
-	<Item text="Office 增益集需求集合" url="office-add-in-requirement-sets" SEODescription="需求集合是 API 成員的具名群組。Office 增益集使用資訊清單中所指定的需求集合，或使用執行階段檢查，以判定 Office 主應用程式是否支援增益集所需的的 API。" />
+	<Item text="Office 通用需求集合" url="requirement-sets/office-add-in-requirement-sets" SEODescription="需求集合是 API 成員的具名群組。Office 增益集使用資訊清單中所指定的需求集合，或使用執行階段檢查，以判定 Office 主應用程式是否支援增益集所需的的 API。" />
 	<Item text="適用於 Office 的 JavaScript API 錯誤代碼" url="javascript-api-for-office-error-codes" SEODescription="您使用適用於 Office 的 JavaScript API (Office.js) 時可能遇到的錯誤訊息。" />
 	<Item text="列舉" url="shared/enumerations" FriendlyUrl="reference/enumerationsenumerations">
       <Item text="ActiveView 列舉" url="shared/activeview-enumeration" FriendlyUrl="reference/enumerationsactiveview-enumeration" Scope="powerpoint" SEODescription="指定文件的使用中檢視狀態，例如使用者是否可以編輯文件。" />
@@ -643,6 +646,7 @@
     	<Item text="Dialog 物件" url="shared/officeui.dialog" Scope="outlook, excel, word, powerpoint" SEODescription="呼叫 displayDialogAsync 方法時傳回的物件。" />
     	<Item text="DisplayDialog 方法" url="shared/officeui.displaydialogasync" Scope="outlook, excel, word, powerpoint" SEODescription="顯示 Office 主機內的 Web 對話方塊。" />
     	<Item text="MessageParent 方法" url="shared/officeui.messageparent" Scope="outlook, excel, word, powerpoint" SEODescription="從對話方塊將訊息傳遞至其父系/opener 頁面。" />
+		<Item text="對話方塊 API 需求集合" url="requirement-sets/dialog-api-requirement-sets" Scope="outlook, excel, word, powerpoint" SEODescription="深入了解對話方塊 API 需求集合、支援需求集合的 Office 主應用程式，以及 Office 應用程式的組建或版本號碼。" />
     </Item>
   </Item>
   <Item text="Open 規格" url="openspec" Scope="Excel, PowerPoint, Word, Outlook, OneNote" SEODescription="深入了解持續設計 API 的努力，並提供意見反應" />
