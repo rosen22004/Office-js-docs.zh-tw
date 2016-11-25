@@ -32,6 +32,9 @@ Office.EventType.ActiveViewChanged
 |:-----|:-----|:-----|:-----|:-----|
 |**PowerPoint**|Y||Y|Y|
 
+>**附註：因為投影片放映模式被視為新的工作階段，所以不會在 PowerPoint Online 案例中觸發此事件。若要取得使用中檢視，您必須在 Office.Initialize 期間進行查詢。
+ 
+
 |||
 |:-----|:-----|
 |**導入在**|1.1|

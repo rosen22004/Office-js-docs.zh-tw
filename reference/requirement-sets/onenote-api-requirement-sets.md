@@ -1,6 +1,6 @@
 # <a name="onenote-javascript-api-requirement-sets"></a>OneNote JavaScript API 需求集合
 
-需求集合是 API 成員的具名群組。Office 增益集使用資訊清單中所指定的需求集合，或使用執行階段檢查，以判定 Office 主應用程式是否支援增益集所需的的 API。如需詳細資訊，請參閱[指定 Office 主應用程式及 API 需求](../docs/overview/specify-office-hosts-and-api-requirements.md)。
+需求集合是 API 成員的具名群組。Office 增益集使用資訊清單中所指定的需求集合，或使用執行階段檢查，以判定 Office 主應用程式是否支援增益集所需的的 API。如需詳細資訊，請參閱[指定 Office 主應用程式及 API 需求](../../docs/overview/specify-office-hosts-and-api-requirements.md)。
 
 下表列出 OneNote 需求集、支援需求集的 Office 主應用程式，以及組建版本或可用性日期。
 

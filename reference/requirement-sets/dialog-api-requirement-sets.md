@@ -1,7 +1,7 @@
 
 # <a name="dialog-api-requirement-sets"></a>對話方塊 API 需求集合
 
-需求集合是 API 成員的具名群組。Office 增益集使用資訊清單中所指定的需求集合，或使用執行階段檢查，以判定 Office 主應用程式是否支援增益集所需的的 API。如需詳細資訊，請參閱[指定 Office 主應用程式及 API 需求](../docs/overview/specify-office-hosts-and-api-requirements.md)。
+需求集合是 API 成員的具名群組。Office 增益集使用資訊清單中所指定的需求集合，或使用執行階段檢查，以判定 Office 主應用程式是否支援增益集所需的的 API。如需詳細資訊，請參閱[指定 Office 主應用程式及 API 需求](../../docs/overview/specify-office-hosts-and-api-requirements.md)。
 
 Office 增益集執行多個版本的 Office。下表列出對話方塊 API 需求集合、支援需求集合的 Office 主應用程式，以及 Office 應用程式的組建或版本號碼。
 
@@ -25,5 +25,6 @@ Office 增益集執行多個版本的 Office。下表列出對話方塊 API 需�
 
 ## <a name="additional-resources"></a>其他資源
 
-- [指定 Office 主應用程式和 API 需求](../docs/overview/specify-office-hosts-and-api-requirements.md)
-- [Office 增益集的 XML 資訊清單](https://dev.office.com/docs/add-ins/overview/add-in-manifests)
+- [指定 Office 主應用程式和 API 需求](../../docs/overview/specify-office-hosts-and-api-requirements.md)
+- [Office 增益集的 XML 資訊清單](../../docs/overview/add-in-manifests.md)
+

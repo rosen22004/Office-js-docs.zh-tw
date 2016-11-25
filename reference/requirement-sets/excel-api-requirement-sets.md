@@ -1,6 +1,6 @@
 # <a name="excel-javascript-api-requirement-sets"></a>Excel JavaScript API 需求集合
 
-需求集合是 API 成員的具名群組。Office 增益集使用資訊清單中所指定的需求集合，或使用執行階段檢查，以判定 Office 主應用程式是否支援增益集所需的的 API。如需詳細資訊，請參閱[指定 Office 主應用程式及 API 需求](../docs/overview/specify-office-hosts-and-api-requirements.md)。
+需求集合是 API 成員的具名群組。Office 增益集使用資訊清單中所指定的需求集合，或使用執行階段檢查，以判定 Office 主應用程式是否支援增益集所需的的 API。如需詳細資訊，請參閱[指定 Office 主應用程式及 API 需求](../../docs/overview/specify-office-hosts-and-api-requirements.md)。
 
 Excel 增益集可在多種 Office 版本上執行，包含 Office 2016 for Windows、iPad 版 Office、Mac 版 Office 以及 Office Online。下表列出 Excel 需求集合、支援需求集合的 Office 主應用程式，以及這些應用程式的組建或版本號碼。 
 
@@ -117,7 +117,7 @@ Excel 增益集可在多種 Office 版本上執行，包含 Office 2016 for Wind
 |[範圍](../excel/range.md)|_方法_ > [merge(across: bool)](../excel/range.md#mergeacross-bool)|合併範圍儲存格到工作表中的一個區域。|1.2|
 |[範圍](../excel/range.md)|_方法_ > [unmerge()](../excel/range.md#unmerge)|取消將範圍儲存格合併至個別儲存格。|1.2|
 |[rangeFormat](../excel/rangeformat.md)|_屬性_ > columnWidth|取得或設定範圍內所有資料行寬度。如果資料行寬度不一致，則會傳回 null。|1.2|
-|[rangeFormat](../excel/rangeformat.md)|_屬性_ > rowHeight|取得或設定範圍內所有資料列的高度。如果不是統一的資料列高度，則會傳回 null。|1.2|
+|[rangeFormat](../excel/rangeformat.md)|_屬性_ > rowHeight|取得或設定範圍內所有列的高度。如果不是統一的資料列高度，則會傳回 null。|1.2|
 |[rangeFormat](../excel/rangeformat.md)|_關聯性_ > 保護|傳回範圍的格式保護物件。唯讀。|1.2|
 |[rangeFormat](../excel/rangeformat.md)|_方法_ > [autofitColumns()](../excel/rangeformat.md#autofitcolumns)|根據資料行中的目前資料，變更目前範圍的資料行寬度來調整為最適寬度。|1.2|
 |[rangeFormat](../excel/rangeformat.md)|_方法_ > [autofitRows()](../excel/rangeformat.md#autofitrows)|根據資料行中的目前資料，變更目前範圍的資料列高度來調整為最適高度。|1.2|
@@ -127,7 +127,7 @@ Excel 增益集可在多種 Office 版本上執行，包含 Office 2016 for Wind
 |[sortField](../excel/sortfield.md)|_屬性_ > 色彩|如果排序是針對字型或儲存格色彩，表示色彩是條件的目標。|1.2|
 |[sortField](../excel/sortfield.md)|_屬性_ > dataOption|表示此欄位額外的排序選項。可能的值為：一般、TextAsNumber。|1.2|
 |[sortField](../excel/sortfield.md)|_屬性_ > 索引鍵|表示套用條件的資料行 (或資料列，視排序的方向而定)。表示為從第一個資料行 (或資料列) 的位移。|1.2|
-|[sortField](../excel/sortfield.md)|_屬性_ > sortOn|表示這個條件的排序的類型。可能的值為：Value、CellColor、FontColor、Icon。|1.2|
+|[sortField](../excel/sortfield.md)|_屬性_ > sortOn|表示這個條件的排序的類型。可能的值為：值、CellColor、FontColor、圖示。|1.2|
 |[sortField](../excel/sortfield.md)|_關聯性_ > 圖示|如果排序是針對儲存格的圖示，表示圖示是條件的目標。|1.2|
 |[表格](../excel/table.md)|_關聯性_ > 排序|代表資料表的排序。唯讀。|1.2|
 |[表格](../excel/table.md)|_關聯性_ > 工作表|包含目前資料表的工作表。唯讀。|1.2|
@@ -164,5 +164,6 @@ Excel JavaScript API 1.1 是 API 的第一個版本。如需 API 的詳細資訊
     
 ## <a name="additional-resources"></a>其他資源
 
-- [指定 Office 主應用程式和 API 需求](../docs/overview/specify-office-hosts-and-api-requirements.md)
-- [Office 增益集的 XML 資訊清單](https://dev.office.com/docs/add-ins/overview/add-in-manifests)
+- [指定 Office 主應用程式和 API 需求](../../docs/overview/specify-office-hosts-and-api-requirements.md)
+- [Office 增益集的 XML 資訊清單](../../docs/overview/add-in-manifests.md)
+

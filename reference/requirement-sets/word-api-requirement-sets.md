@@ -1,6 +1,6 @@
 # <a name="word-javascript-api-requirement-sets"></a>Word JavaScript API 需求集
 
-需求集合是 API 成員的具名群組。Office 增益集使用資訊清單中所指定的需求集合，或使用執行階段檢查，以判定 Office 主應用程式是否支援增益集所需的的 API。如需詳細資訊，請參閱[指定 Office 主應用程式及 API 需求](../docs/overview/specify-office-hosts-and-api-requirements.md)。
+需求集合是 API 成員的具名群組。Office 增益集使用資訊清單中所指定的需求集合，或使用執行階段檢查，以判定 Office 主應用程式是否支援增益集所需的的 API。如需詳細資訊，請參閱[指定 Office 主應用程式及 API 需求](../../docs/overview/specify-office-hosts-and-api-requirements.md)。
 
 Word 增益集可在多種 Office 版本上執行，包含 Office 2016 for Windows、iPad 版 Office、Mac 版 Office 以及 Office Online。下表列出 Word 需求集、支援需求集的 Office 主應用程式，以及這些應用程式的組建或版本號碼。
 
@@ -217,7 +217,7 @@ Word 增益集可在多種 Office 版本上執行，包含 Office 2016 for Windo
 |[tableCellCollection](https://github.com/OfficeDev/office-js-docs/blob/WordJs_1.3_Openspec/reference/word/tablecellcollection.md)|_屬性_ > 項目|TableCell 物件的集合。唯讀。|1.3|
 |[tableCellCollection](https://github.com/OfficeDev/office-js-docs/blob/WordJs_1.3_Openspec/reference/word/tablecellcollection.md)|_方法_ > [getFirst()](https://github.com/OfficeDev/office-js-docs/blob/WordJs_1.3_Openspec/reference/word/tablecellcollection.md#getfirst)|取得這個集合中的第一個資料表儲存格。|1.3|
 |[tableCellCollection](https://github.com/OfficeDev/office-js-docs/blob/WordJs_1.3_Openspec/reference/word/tablecellcollection.md)|_方法_ > [getItem(index: number)](https://github.com/OfficeDev/office-js-docs/blob/WordJs_1.3_Openspec/reference/word/tablecellcollection.md#getitemindex-number)|依其集合中的索引，來取得資料表儲存格物件。|1.3|
-|[tableCollection](https://github.com/OfficeDev/office-js-docs/blob/WordJs_1.3_Openspec/reference/word/tablecollection.md)|_屬性_ > 項目|資料表物件的集合。唯讀。|1.3|
+|[tableCollection](https://github.com/OfficeDev/office-js-docs/blob/WordJs_1.3_Openspec/reference/word/tablecollection.md)|_屬性_ > 項目|Table 物件的集合。唯讀。|1.3|
 |[tableCollection](https://github.com/OfficeDev/office-js-docs/blob/WordJs_1.3_Openspec/reference/word/tablecollection.md)|_方法_ > [getFirst()](https://github.com/OfficeDev/office-js-docs/blob/WordJs_1.3_Openspec/reference/word/tablecollection.md#getfirst)|取得這個集合中的第一個資料表。|1.3|
 |[tableCollection](https://github.com/OfficeDev/office-js-docs/blob/WordJs_1.3_Openspec/reference/word/tablecollection.md)|_方法_ > [getItem(index: number)](https://github.com/OfficeDev/office-js-docs/blob/WordJs_1.3_Openspec/reference/word/tablecollection.md#getitemindex-number)|依其集合中的索引，來取得資料表物件。|1.3|
 |[tableRow](https://github.com/OfficeDev/office-js-docs/blob/WordJs_1.3_Openspec/reference/word/tablerow.md)|_屬性_ > cellCount|取得資料列中的儲存格數目。唯讀。|1.3|
@@ -269,5 +269,6 @@ Word JavaScript API 1.1 是 API 的第一個版本。如需 API 的詳細資訊�
 
 ## <a name="additional-resources"></a>其他資源
 
-- [指定 Office 主應用程式和 API 需求](../docs/overview/specify-office-hosts-and-api-requirements.md)
-- [Office 增益集的 XML 資訊清單](https://dev.office.com/docs/add-ins/overview/add-in-manifests)
+- [指定 Office 主應用程式和 API 需求](../../docs/overview/specify-office-hosts-and-api-requirements.md)
+- [Office 增益集的 XML 資訊清單](../../docs/overview/add-in-manifests.md)
+

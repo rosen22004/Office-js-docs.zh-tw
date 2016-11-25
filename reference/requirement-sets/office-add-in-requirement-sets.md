@@ -1,18 +1,18 @@
 # <a name="office-common-api-requirement-sets"></a>Office 通用 API 需求集合
 
-需求集合是 API 成員的具名群組。Office 增益集使用資訊清單中所指定的需求集合，或使用執行階段檢查，以判定 Office 主應用程式是否支援增益集所需的的 API。如需詳細資訊，請參閱[指定 Office 主應用程式及 API 需求](../docs/overview/specify-office-hosts-and-api-requirements.md)。
+需求集合是 API 成員的具名群組。Office 增益集使用資訊清單中所指定的需求集合，或使用執行階段檢查，以判定 Office 主應用程式是否支援增益集所需的的 API。如需詳細資訊，請參閱[指定 Office 主應用程式及 API 需求](../../docs/overview/specify-office-hosts-and-api-requirements.md)。
 
 如需 Office 主應用程式在何處支援增益集的詳細資訊，請參閱 [Office 增益集主應用程式和平台可用性](https://dev.office.com/add-in-availability)。
 
-## <a name="hostspecific-api-requirement-sets"></a>主應用程式特定 API 需求集合
+## <a name="host-specific-api-requirement-sets"></a>主應用程式特定 API 需求集合
 
 如需有關 Excel、Word、OneNote、Outlook 及對話方塊 API 需求集合的詳細資訊，請參閱︰
 
-- [Excel JavaScript API 需求集合](excel-api-requirement-sets.md)
-- [Word JavaScript API 需求集合](word-api-requirement-sets.md)
-- [OneNote JavaScript API 需求集合](onenote-api-requirement-sets.md)
-- [了解 Outlook API 需求集合](../outlook/tutorial-api-requirement-sets.md)
-[對話方塊 API 需求集合](dialog-api-requirement-sets.md)
+- [Excel JavaScript API 需求集合](excel-api-requirement-sets.md) (ExcelApi)
+- [Word JavaScript API 需求集](word-api-requirement-sets.md) (WordApi)
+- [OneNote JavaScript API 需求集合](onenote-api-requirement-sets.md) (OneNoteApi)
+- [了解 Outlook API 需求集合](../outlook/tutorial-api-requirement-sets.md) (MailBox)
+- [對話方塊 API 需求集合](dialog-api-requirement-sets.md) (DialogApi)
 
 ## <a name="common-api-requirement-sets"></a>通用 API 需求集合
 
@@ -68,7 +68,9 @@
 
 ## <a name="additional-resources"></a>其他資源
 
-- [指定 Office 主應用程式和 API 需求](../docs/overview/specify-office-hosts-and-api-requirements.md)
+- [指定 Office 主應用程式和 API 需求](../../docs/overview/specify-office-hosts-and-api-requirements.md)
+- [Office 增益集的 XML 資訊清單](../../docs/overview/add-in-manifests.md)
+
 
 
 
