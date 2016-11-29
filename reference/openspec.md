@@ -6,6 +6,11 @@
 
 _**重要事項：**此處所列的功能仍在設計和檢閱階段，尚無法使用。這些功能和 API 可能有所異動。_
 
+## <a name="visio-javascript-apis"></a>Visio JavaScript API
+Visio Online 是在網路上檢視並共用 Visio 圖表的新方法。您可以使用 Visio JavaScript API 1.1 來擴充 Visio Online 的功能。對內嵌在 SharePoint 網頁中的 Visio 圖表使用這些 API。請注意，Visio JavaScript API 目前並未套用於 [Office 增益集](https://dev.office.com/docs/add-ins/overview/office-add-ins)。
+
+**請參閱 [Visio JavaScript API 1.1](https://github.com/OfficeDev/office-js-docs/tree/VisioJs_1.1_Openspec) 頁面來深入了解並提供您的意見反應。**
+
 ## <a name="new-excel-javascript-apis"></a>新的 Excel JavaScript API
 請加入我們檢閱新 Excel JavaScript API 設計的行列。新的和更新的 API 包括 customXML 組件、樞紐分析表的更新、範圍篩選的檢視、範圍和表格如影像、附加多個資料列到表格以及其他。 
 
