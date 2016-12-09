@@ -1,44 +1,45 @@
-# <a name="chart-object-(javascript-api-for-excel)"></a>Chart 物件 (適用於 Excel 的 JavaScript API)
+﻿# <a name="chart-object-javascript-api-for-excel"></a>Chart 物件 (適用於 Excel 的 JavaScript API)
 
 代表活頁簿中的 chart 物件。
 
 ## <a name="properties"></a>屬性
 
-| 屬性	     | 類型	   |描述
-|:---------------|:--------|:----------|
-|Height|double|代表 chart 物件的高度，以點為單位。|
-|id|string|根據圖表在集合中的位置，取得圖表。唯讀。|
-|left|double|從圖表左側到工作表原點的距離，以點為單位。|
-|name|string|代表 chart 物件的名稱。|
-|top|double|代表從物件上邊緣到第 1 列頂端 (在工作表上) 或圖表區域頂端 (在圖表上) 的距離，以點為單位。|
-|width|double|代表 chart 物件的寬度，以點為單位。|
+| 屬性	     | 類型	   |描述| 需求集合|
+|:---------------|:--------|:----------|:----|
+|height|double|代表 chart 物件的高度，以點為單位。|[1.1](../requirement-sets/excel-api-requirement-sets.md)|
+|id|string|根據圖表在集合中的位置，取得圖表。唯讀。|[1.2](../requirement-sets/excel-api-requirement-sets.md)|
+|left|double|從圖表左側到工作表原點的距離，以點為單位。|[1.1](../requirement-sets/excel-api-requirement-sets.md)|
+|name|string|代表 chart 物件的名稱。|[1.1](../requirement-sets/excel-api-requirement-sets.md)|
+|top|double|代表從物件上邊緣到第 1 列頂端 (在工作表上) 或圖表區域頂端 (在圖表上) 的距離，以點為單位。|[1.1](../requirement-sets/excel-api-requirement-sets.md)|
+|width|double|代表 chart 物件的寬度，以點為單位。|[1.1](../requirement-sets/excel-api-requirement-sets.md)|
 
 _請參閱屬性存取[範例。](#property-access-examples)_
 
 ## <a name="relationships"></a>關聯性
-| 關聯性 | 類型	   |描述|
-|:---------------|:--------|:----------|
-|axes|[ChartAxes](chartaxes.md)|代表圖表座標軸。唯讀。|
-|dataLabels|[ChartDataLabels](chartdatalabels.md)|代表圖表上的資料標籤。唯讀。|
-|format|[ChartAreaFormat](chartareaformat.md)|封裝圖表區域的格式屬性。唯讀。|
-|legend|[ChartLegend](chartlegend.md)|代表圖表的圖例。唯讀。|
-|series|[ChartSeriesCollection](chartseriescollection.md)|代表圖表中的單一數列或數列集合。唯讀。|
-|title|[ChartTitle](charttitle.md)|代表所指定圖表的標題，包括標題的文字、可見度、位置和格式設定。唯讀。|
+| 關聯性 | 類型	   |描述| 需求集合|
+|:---------------|:--------|:----------|:----|
+|axes|[ChartAxes](chartaxes.md)|代表圖表座標軸。唯讀。|[1.1](../requirement-sets/excel-api-requirement-sets.md)|
+|dataLabels|[ChartDataLabels](chartdatalabels.md)|代表圖表上的資料標籤。唯讀。|[1.1](../requirement-sets/excel-api-requirement-sets.md)|
+|format|[ChartAreaFormat](chartareaformat.md)|封裝圖表區域的格式屬性。唯讀。|[1.1](../requirement-sets/excel-api-requirement-sets.md)|
+|legend|[ChartLegend](chartlegend.md)|代表圖表的圖例。唯讀。|[1.1](../requirement-sets/excel-api-requirement-sets.md)|
+|series|[ChartSeriesCollection](chartseriescollection.md)|代表圖表中的單一數列或數個數列集合。唯讀。|[1.1](../requirement-sets/excel-api-requirement-sets.md)|
+|title|[ChartTitle](charttitle.md)|代表所指定圖表的標題，包括標題的文字、可見度、位置和格式設定。唯讀。|[1.1](../requirement-sets/excel-api-requirement-sets.md)|
+|worksheet|[Worksheet](worksheet.md)|包含目前圖表的工作表。唯讀。|[1.2](../requirement-sets/excel-api-requirement-sets.md)|
 
 ## <a name="methods"></a>方法
 
-| 方法           | 傳回類型    |描述|
-|:---------------|:--------|:----------|
-|[delete()](#delete)|void|刪除 chart 物件。|
-|[getImage(height: number, width: number, fittingMode: string)](#getimageheight-number-width-number-fittingmode-string)|System.IO.Stream|藉由縮放圖表以符合指定的維度，以 base64 編碼的影像呈現圖表。|
-|[load(param: object)](#loadparam-object)|void|以參數中指定的屬性和物件值填滿 JavaScript 層中建立的 Proxy 物件。|
-|[setData(sourceData:Range, seriesBy: string)](#setdatasourcedata-range-seriesby-string)|void|重設圖表的來源資料。|
-|[setPosition(startCell:Range or string, endCell:Range 或 string)](#setpositionstartcell-range-or-string-endcell-range-or-string)|void|將圖表定位至工作表上儲存格的相對位置。|
+| 方法           | 傳回類型    |描述| 需求集合|
+|:---------------|:--------|:----------|:----|
+|[delete()](#delete)|void|刪除 chart 物件。|[1.1](../requirement-sets/excel-api-requirement-sets.md)|
+|[getImage(height: number, width: number, fittingMode: string)](#getimageheight-number-width-number-fittingmode-string)|[System.IO.Stream](system.io.stream.md)|藉由縮放圖表以符合指定的維度，以 base64 編碼的影像呈現圖表。|[1.2](../requirement-sets/excel-api-requirement-sets.md)|
+|[load(param: object)](#loadparam-object)|void|以參數中指定的屬性和物件值填滿 JavaScript 層中建立的 Proxy 物件。|[1.1](../requirement-sets/excel-api-requirement-sets.md)|
+|[setData(sourceData:Range, seriesBy: string)](#setdatasourcedata-range-seriesby-string)|void|重設圖表的來源資料。|[1.1](../requirement-sets/excel-api-requirement-sets.md)|
+|[setPosition(startCell:Range or string, endCell:Range or string)](#setpositionstartcell-range-or-string-endcell-range-or-string)|void|將圖表定位至工作表上儲存格的相對位置。|[1.1](../requirement-sets/excel-api-requirement-sets.md)|
 
 ## <a name="method-details"></a>方法詳細資料
 
 
-### <a name="delete()"></a>delete()
+### <a name="delete"></a>delete()
 刪除 chart 物件。
 
 #### <a name="syntax"></a>語法
@@ -66,7 +67,7 @@ Excel.run(function (ctx) {
 });
 ```
 
-### <a name="getimage(height:-number,-width:-number,-fittingmode:-string)"></a>getImage(height: number, width: number, fittingMode: string)
+### <a name="getimageheight-number-width-number-fittingmode-string"></a>getImage(height: number, width: number, fittingMode: string)
 藉由縮放圖表以符合指定的維度，以 base64 編碼的影像呈現圖表。
 
 #### <a name="syntax"></a>語法
@@ -76,13 +77,13 @@ chartObject.getImage(height, width, fittingMode);
 
 #### <a name="parameters"></a>參數
 | 參數	    | 類型	   |描述|
-|:---------------|:--------|:----------|
+|:---------------|:--------|:----------|:---|
 |Height|數字|選用。(選擇性) 導出之影像的所要高度。|
 |寬度|數字|選用。(選擇性) 導出之影像的所要寬度。|
-|fittingMode|字串|選用。(選擇性) 用來將圖表縮放為指定尺寸的方法 (如果設定高度及寬度)。可能的值為：Fit、FitAndCenter、Fill|
+|fittingMode|string|選用。(選擇性) 用來將圖表縮放為指定尺寸的方法 (如果設定高度及寬度)。可能的值為：Fit、FitAndCenter、Fill|
 
 #### <a name="returns"></a>傳回
-System.IO.Stream
+[System.IO.Stream](system.io.stream.md)
 
 #### <a name="examples"></a>範例
 ```js
@@ -102,7 +103,7 @@ Excel.run(function (ctx) {
 
 
 
-### <a name="load(param:-object)"></a>load(param: object)
+### <a name="loadparam-object"></a>load(param: object)
 以參數中指定的屬性和物件值填滿 JavaScript 層中建立的 Proxy 物件。
 
 #### <a name="syntax"></a>語法
@@ -112,13 +113,13 @@ object.load(param);
 
 #### <a name="parameters"></a>參數
 | 參數	    | 類型	   |描述|
-|:---------------|:--------|:----------|
+|:---------------|:--------|:----------|:---|
 |param|物件|選用。接受參數與關聯性名稱，做為分隔字串或陣列。或者提供 [loadOption](loadoption.md) 物件。|
 
 #### <a name="returns"></a>傳回
 void
 
-### <a name="setdata(sourcedata:-range,-seriesby:-string)"></a>setData(sourceData: Range, seriesBy: string)
+### <a name="setdatasourcedata-range-seriesby-string"></a>setData(sourceData: Range, seriesBy: string)
 重設圖表的來源資料。
 
 #### <a name="syntax"></a>語法
@@ -128,9 +129,9 @@ chartObject.setData(sourceData, seriesBy);
 
 #### <a name="parameters"></a>參數
 | 參數	    | 類型	   |描述|
-|:---------------|:--------|:----------|
+|:---------------|:--------|:----------|:---|
 |sourceData|Range|對應到來源資料的 Range 物件。|
-|seriesBy|字串|選用。指定在圖表中使用欄或列作為資料數列的方法。可能的值為：Auto、Columns、Rows。在桌面上，"auto" 選項會檢查來源資料圖形以自動猜測資料是按資料列或資料行排列；在 Excel Online 上，"auto" 僅預設為 "columns"。|
+|seriesBy|string|選用。指定在圖表中使用欄或列作為資料數列的方法。可以是下列其中一項：Auto (預設)、Rows、Columns。可能的值為：Auto、Columns、Rows|
 
 #### <a name="returns"></a>傳回
 void
@@ -154,7 +155,7 @@ Excel.run(function (ctx) {
 ```
 
 
-### <a name="setposition(startcell:-range-or-string,-endcell:-range-or-string)"></a>setPosition(startCell:Range or string, endCell:Range or string)
+### <a name="setpositionstartcell-range-or-string-endcell-range-or-string"></a>setPosition(startCell:Range or string, endCell:Range or string)
 將圖表定位至工作表上儲存格的相對位置。
 
 #### <a name="syntax"></a>語法
@@ -164,9 +165,9 @@ chartObject.setPosition(startCell, endCell);
 
 #### <a name="parameters"></a>參數
 | 參數	    | 類型	   |描述|
-|:---------------|:--------|:----------|
-|startCell|Range 或 string|起始儲存格。這是圖表的移動目標位置。取決於使用者的從左至右顯示設定，開始儲存格將是左上角或右上角儲存格。|
-|endCell|Range 或 string|選用。結束儲存格。如果指定，則圖表的寬度和高度會設定為完全覆蓋這個儲存格/範圍。|
+|:---------------|:--------|:----------|:---|
+|startCell|Range 或 string|起始儲存格。這是圖表的移動目標位置。開始儲存格是左上角或右上角儲存格，這取決於使用者的顯示設定是從右至左。|
+|endCell|Range 或 string|選用。(選用) 結束儲存格。如果指定，則圖表的寬度和高度將會設定為完全覆蓋這個儲存格/範圍。|
 
 #### <a name="returns"></a>傳回
 void
@@ -177,8 +178,10 @@ void
 ```js
 Excel.run(function (ctx) { 
     var sheetName = "Charts";
+    var rangeSelection = "A1:B4";
+    var range = ctx.workbook.worksheets.getItem(sheetName).getRange(rangeSelection);
     var sourceData = sheetName + "!" + "A1:B4";
-    var chart = ctx.workbook.worksheets.getItem(sheetName).charts.add("pie", sourceData, "auto");
+    var chart = ctx.workbook.worksheets.getItem(sheetName).charts.add("pie", range, "auto");
     chart.width = 500;
     chart.height = 300;
     chart.setPosition("C2", null);
@@ -219,7 +222,7 @@ Excel.run(function (ctx) {
     chart.top = 100;
     chart.left = 100;
     chart.height = 200;
-    chart.weight = 200;
+    chart.width = 200;
     return ctx.sync(); 
 }).catch(function(error) {
         console.log("Error: " + error);
@@ -229,7 +232,7 @@ Excel.run(function (ctx) {
 });
 ```
 
-提供新名稱給圖表；調整圖表的大小為高度和寬度都是 200 點。將 Chart1 向左上方移動 100 點。 
+將圖表重新命名為新的名稱，並將圖表的高度和寬度皆重新調整為 200 點。將 Chart1 向左上方移動 100 點。 
 
 ```js
 Excel.run(function (ctx) { 

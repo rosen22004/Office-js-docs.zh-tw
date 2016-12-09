@@ -1,28 +1,28 @@
-# <a name="chartpoint-object-(javascript-api-for-excel)"></a>ChartPoint 物件 (適用於 Excel 的 JavaScript API)
+# <a name="chartpoint-object-javascript-api-for-excel"></a>ChartPoint 物件 (適用於 Excel 的 JavaScript API)
 
 代表圖表中的數列點。
 
 ## <a name="properties"></a>屬性
 
-| 屬性	     | 類型	   |描述
-|:---------------|:--------|:----------|
-|值|物件|傳回圖表點的值。唯讀。|
+| 屬性	     | 類型	   |描述| 需求集合|
+|:---------------|:--------|:----------|:----|
+|value|object|傳回圖表點的值。唯讀。|[1.1](../requirement-sets/excel-api-requirement-sets.md)|
 
 ## <a name="relationships"></a>關聯性
-| 關聯性 | 類型	   |描述|
-|:---------------|:--------|:----------|
-|format|[ChartPointFormat](chartpointformat.md)|封裝圖表點的格式屬性。唯讀。|
+| 關聯性 | 類型	   |描述| 需求集合|
+|:---------------|:--------|:----------|:----|
+|format|[ChartPointFormat](chartpointformat.md)|封裝圖表點的格式屬性。唯讀。|[1.1](../requirement-sets/excel-api-requirement-sets.md)|
 
 ## <a name="methods"></a>方法
 
-| 方法           | 傳回類型    |描述|
-|:---------------|:--------|:----------|
-|[load(param: object)](#loadparam-object)|void|以參數中指定的屬性和物件值填滿 JavaScript 層中建立的 Proxy 物件。|
+| 方法           | 傳回類型    |描述| 需求集合|
+|:---------------|:--------|:----------|:----|
+|[load(param: object)](#loadparam-object)|void|以參數中指定的屬性和物件值填滿 JavaScript 層中建立的 Proxy 物件。|[1.1](../requirement-sets/excel-api-requirement-sets.md)|
 
 ## <a name="method-details"></a>方法詳細資料
 
 
-### <a name="load(param:-object)"></a>load(param: object)
+### <a name="loadparam-object"></a>load(param: object)
 以參數中指定的屬性和物件值填滿 JavaScript 層中建立的 Proxy 物件。
 
 #### <a name="syntax"></a>語法
@@ -32,7 +32,7 @@ object.load(param);
 
 #### <a name="parameters"></a>參數
 | 參數	    | 類型	   |描述|
-|:---------------|:--------|:----------|
+|:---------------|:--------|:----------|:---|
 |param|物件|選用。接受參數與關聯性名稱，做為分隔字串或陣列。或者提供 [loadOption](loadoption.md) 物件。|
 
 #### <a name="returns"></a>傳回

@@ -80,7 +80,7 @@ Office.context.ui.displayDialogAsync(startAddress, options, callback);
 |:---------------|:--------|:----------|
 |**width**|物件|選用。將對話方塊的寬度定義為目前顯示的百分比。預設值為 80%。最小解析為 250 像素。|
 |**height**|物件|選用。將對話方塊的高度定義為目前顯示的百分比。預設值為 80%。最小解析為 150 像素。|
-|**displayInIframe**|物件|選用。決定對話方塊是否應該在 Office Online 用戶端中的 IFrame 顯示。桌面用戶端會忽略這項設定。可能的值如下：<ul><li>False (預設值) - 對話方塊會顯示為新的瀏覽器視窗 (快顯視窗)。針對無法在 IFrame 中顯示的驗證頁面建議使用此選項。 </li><li>True - 對話方塊會顯示為與 IFrame 浮動重疊。這對於使用者經驗與效能是最佳選項。</li>|
+|**displayInIframe**|物件|選用。決定對話方塊是否應該在 IFrame 內顯示。**此設定僅適用於 Office Online 用戶端**，桌面用戶端會忽略此設定。可能的值如下：<ul><li>False (預設值) - 對話方塊會顯示為新的瀏覽器視窗 (快顯視窗)。針對無法在 IFrame 中顯示的驗證頁面建議使用此選項。 </li><li>True - 對話方塊會顯示為與 IFrame 浮動重疊。這對於使用者經驗與效能是最佳選項。</li>|
 
 
 ## <a name="callback-value"></a>回呼值

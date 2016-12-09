@@ -1,14 +1,12 @@
-# <a name="rangefill-object-(javascript-api-for-excel)"></a>RangeFill 物件 (適用於 Excel 的 JavaScript API)
+# <a name="rangefill-object-javascript-api-for-excel"></a>RangeFill 物件 (適用於 Excel 的 JavaScript API)
 
-_適用於：Excel 2016、Excel Online、Excel for iOS、Office 2016_
-
-代表 range 物件的背景。
+代表範圍物件的背景。
 
 ## <a name="properties"></a>屬性
 
-| 屬性	     | 類型	   |描述
-|:---------------|:--------|:----------|
-|Color|string|代表框線色彩的 HTML 色彩代碼，顯示為 #RRGGBB 格式 (例如 "FFA500") 或具名 HTML 色彩 (例如 "orange")|
+| 屬性	     | 類型	   |描述| 需求集合|
+|:---------------|:--------|:----------|:----|
+|color|string|代表框線色彩的 HTML 色彩代碼，顯示為 #RRGGBB 格式 (例如 "FFA500") 或具名 HTML 色彩 (例如 "orange")|[1.1](../requirement-sets/excel-api-requirement-sets.md)|
 
 _請參閱屬性存取[範例。](#property-access-examples)_
 
@@ -18,15 +16,15 @@ _請參閱屬性存取[範例。](#property-access-examples)_
 
 ## <a name="methods"></a>方法
 
-| 方法           | 傳回類型    |描述|
-|:---------------|:--------|:----------|
-|[clear()](#clear)|void|重設範圍背景。|
-|[load(param: object)](#loadparam-object)|void|以參數中指定的屬性和物件值填滿 JavaScript 層中建立的 Proxy 物件。|
+| 方法           | 傳回類型    |描述| 需求集合|
+|:---------------|:--------|:----------|:----|
+|[clear()](#clear)|void|重設範圍背景。|[1.1](../requirement-sets/excel-api-requirement-sets.md)|
+|[load(param: object)](#loadparam-object)|void|以參數中指定的屬性和物件值填滿 JavaScript 層中建立的 Proxy 物件。|[1.1](../requirement-sets/excel-api-requirement-sets.md)|
 
 ## <a name="method-details"></a>方法詳細資料
 
 
-### <a name="clear()"></a>clear()
+### <a name="clear"></a>clear()
 重設範圍背景。
 
 #### <a name="syntax"></a>語法
@@ -62,7 +60,7 @@ Excel.run(function (ctx) {
 ```
 
 
-### <a name="load(param:-object)"></a>load(param: object)
+### <a name="loadparam-object"></a>load(param: object)
 以參數中指定的屬性和物件值填滿 JavaScript 層中建立的 Proxy 物件。
 
 #### <a name="syntax"></a>語法
@@ -72,7 +70,7 @@ object.load(param);
 
 #### <a name="parameters"></a>參數
 | 參數	    | 類型	   |描述|
-|:---------------|:--------|:----------|
+|:---------------|:--------|:----------|:---|
 |param|物件|選用。接受參數與關聯性名稱，做為分隔字串或陣列。或者提供 [loadOption](loadoption.md) 物件。|
 
 #### <a name="returns"></a>傳回

@@ -1,4 +1,4 @@
-# <a name="searchoptions-object-(javascript-api-for-word)"></a>SearchOptions 物件 (適用於 Word 的 JavaScript API)
+# <a name="searchoptions-object-javascript-api-for-word"></a>SearchOptions 物件 (適用於 Word 的 JavaScript API)
 
 指定搜尋作業中要包含的選項。
 
@@ -15,7 +15,7 @@ _適用於：Word 2016、Word for iPad、Word for Mac、Word Online_
   **此選項已在 2016 年 6 月更新中被取代**。取得或設定值，指出是否尋找發音類似於搜尋字串的文字。相當於 [尋找及取代] 對話方塊中的 [類似拼音 ] 核取方塊|
 |matchSuffix|bool|取得或設定值，指出是否比對符合搜尋字串結尾的文字。相當於 [尋找及取代] 對話方塊中的 [後置詞須相符] 核取方塊。|
 |matchWholeWord|bool|取得或設定值，指出是否只尋找整個字，而非屬於較長字詞一部分的文字。相當於 [尋找及取代] 對話方塊中的 [全字拼寫須相符] 核取方塊。|
-|matchWildCards|bool|取得或設定值，指出是否使用特殊搜尋運算子來執行搜尋。相當於 [尋找及取代] 對話方塊中的 [使用萬用字元] 核取方塊。|
+|matchWildCards|bool|取得或設定值，指出是否使用特殊搜尋運算子來執行搜尋。相當於 [尋找及取代] 對話方塊中的 [使用萬用字元] 核取方塊。請參閱下列的萬用字元指引，以取得使用此選項的重要相關資訊。|
 
 _請參閱屬性存取[範例。](#property-access-examples)_
 
@@ -39,7 +39,7 @@ _請參閱屬性存取[範例。](#property-access-examples)_
 
 ## <a name="method-details"></a>方法詳細資料
 
-### <a name="load(param:-object)"></a>load(param: object)
+### <a name="loadparam-object"></a>load(param: object)
 以參數中指定的屬性和物件值填滿 JavaScript 層中建立的 Proxy 物件。
 
 #### <a name="syntax"></a>語法
@@ -219,6 +219,9 @@ Word.run(function (context) {
 |前一字元或運算式的 n 到 m 個發生次數|{n,m} |10{1,3} 可尋找 10、100 和 1000。|
 |前一字元或運算式的一或多發生次數|@ |lo@t 可尋找 lot 和 loot。|
 
+### <a name="escaping-the-special-characters"></a>逸出特殊字元
+
+萬用字元搜尋本質上與規則運算式搜尋相同。規則運算式中含有特殊字元，包含 '[', ']', '(', ')', '{', '}', '\*', '?', '<', '>', '!', 和 '@'。如果這些字元其中一個為程式碼正在搜尋之常值字串的一部分，則必須逸出該字元，好讓 Word 知道應該視其為常值，而不是規則運算式邏輯的一部分。若要在 Word UI 搜尋中逸出字元，您應該將 '\' 字元放置在其前面，但如果是要在程式設計方式中逸出，則請放在 '[]' 字元之間。例如，'[\*]\*' 會搜尋任何以 '\*' 開始的字串，後跟任意數目的其他字元。 
 
 ## <a name="support-details"></a>支援詳細資料
 在執行階段檢查使用[需求集](../office-add-in-requirement-sets.md)以確認您的應用程式受到 Word 主應用程式版本的支援。如需有關 Office 主應用程式及伺服器需求的詳細資訊，請參閱[執行 Office 增益集的需求](../../docs/overview/requirements-for-running-office-add-ins.md)。

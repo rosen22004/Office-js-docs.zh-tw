@@ -1,15 +1,16 @@
-# <a name="rangeborder-object-(javascript-api-for-excel)"></a>RangeBorder 物件 (適用於 Excel 的 JavaScript API)
+# <a name="rangeborder-object-javascript-api-for-excel"></a>RangeBorder 物件 (適用於 Excel 的 JavaScript API)
 
 代表物件的框線。
 
 ## <a name="properties"></a>屬性
 
-| 屬性	     | 類型	   |描述
-|:---------------|:--------|:----------|
-|Color|string|代表框線色彩的 HTML 色彩代碼，顯示為 #RRGGBB 格式 (例如 "FFA500") 或具名 HTML 色彩 (例如 "orange")。|
-|sideIndex|string|常數值，指出框線的特定一邊。唯讀。可能的值為：EdgeTop、EdgeBottom、EdgeLeft、EdgeRight、InsideVertical、InsideHorizontal、DiagonalDown、DiagonalUp。|
-|Style|string|一個線條樣式常數，指定框線的線條樣式。可能的值為：None、Continuous、Dash、DashDot、DashDotDot、Dot、Double、SlantDashDot。|
-|weight|string|指定圍繞範圍的框線粗細。可能的值為：Hairline、Thin、Medium、Thick。|
+| 屬性	     | 類型	   |描述| 需求集合|
+|:---------------|:--------|:----------|:----|
+|color|string|代表框線色彩的 HTML 色彩代碼，顯示為 #RRGGBB 格式 (例如 "FFA500") 或具名 HTML 色彩 (例如 "orange")。|[1.1](../requirement-sets/excel-api-requirement-sets.md)|
+|id|string|代表框線識別碼。唯讀。可能的值為：EdgeTop、EdgeBottom、EdgeLeft、EdgeRight、InsideVertical、InsideHorizontal、DiagonalDown、DiagonalUp。|[1.1](../requirement-sets/excel-api-requirement-sets.md)|
+|sideIndex|string|常數值，指出框線的特定一邊。唯讀。可能的值為：EdgeTop、EdgeBottom、EdgeLeft、EdgeRight、InsideVertical、InsideHorizontal、DiagonalDown、DiagonalUp。|[1.1](../requirement-sets/excel-api-requirement-sets.md)|
+|style|string|一個線條樣式常數，指定框線的線條樣式。可能的值為：None、Continuous、Dash、DashDot、DashDotDot、Dot、Double、SlantDashDot。|[1.1](../requirement-sets/excel-api-requirement-sets.md)|
+|weight|string|指定圍繞範圍的框線粗細。可能的值為：Hairline、Thin、Medium、Thick。|[1.1](../requirement-sets/excel-api-requirement-sets.md)|
 
 _請參閱屬性存取[範例。](#property-access-examples)_
 
@@ -19,14 +20,14 @@ _請參閱屬性存取[範例。](#property-access-examples)_
 
 ## <a name="methods"></a>方法
 
-| 方法           | 傳回類型    |描述|
-|:---------------|:--------|:----------|
-|[load(param: object)](#loadparam-object)|void|以參數中指定的屬性和物件值填滿 JavaScript 層中建立的 Proxy 物件。|
+| 方法           | 傳回類型    |描述| 需求集合|
+|:---------------|:--------|:----------|:----|
+|[load(param: object)](#loadparam-object)|void|以參數中指定的屬性和物件值填滿 JavaScript 層中建立的 Proxy 物件。|[1.1](../requirement-sets/excel-api-requirement-sets.md)|
 
 ## <a name="method-details"></a>方法詳細資料
 
 
-### <a name="load(param:-object)"></a>load(param: object)
+### <a name="loadparam-object"></a>load(param: object)
 以參數中指定的屬性和物件值填滿 JavaScript 層中建立的 Proxy 物件。
 
 #### <a name="syntax"></a>語法
@@ -36,7 +37,7 @@ object.load(param);
 
 #### <a name="parameters"></a>參數
 | 參數	    | 類型	   |描述|
-|:---------------|:--------|:----------|
+|:---------------|:--------|:----------|:---|
 |param|物件|選用。接受參數與關聯性名稱，做為分隔字串或陣列。或者提供 [loadOption](loadoption.md) 物件。|
 
 #### <a name="returns"></a>傳回

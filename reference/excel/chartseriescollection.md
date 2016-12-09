@@ -1,13 +1,13 @@
-# <a name="chartseriescollection-object-(javascript-api-for-excel)"></a>ChartSeriesCollection 物件 (適用於 Excel 的 JavaScript API)
+# <a name="chartseriescollection-object-javascript-api-for-excel"></a>ChartSeriesCollection 物件 (適用於 Excel 的 JavaScript API)
 
 代表圖表數列的集合。
 
 ## <a name="properties"></a>屬性
 
-| 屬性	     | 類型	   |描述
-|:---------------|:--------|:----------|
-|Count|int|傳回集合中的數列數目。唯讀。|
-|items|[ChartSeries[]](chartseries.md)|ChartSeries 物件的集合。唯讀。|
+| 屬性	     | 類型	   |描述| 需求集合|
+|:---------------|:--------|:----------|:----|
+|count|int|傳回集合中的數列數目。唯讀。|[1.1](../requirement-sets/excel-api-requirement-sets.md)|
+|items|[ChartSeries[]](chartseries.md)|ChartSeries 物件的集合。唯讀。|[1.1](../requirement-sets/excel-api-requirement-sets.md)|
 
 _請參閱屬性存取[範例。](#property-access-examples)_
 
@@ -17,16 +17,16 @@ _請參閱屬性存取[範例。](#property-access-examples)_
 
 ## <a name="methods"></a>方法
 
-| 方法           | 傳回類型    |描述|
-|:---------------|:--------|:----------|
-|[getItemAt(index: number)](#getitematindex-number)|[ChartSeries](chartseries.md)|根據集合中的位置，擷取數列|
-|[load(param: object)](#loadparam-object)|void|以參數中指定的屬性和物件值填滿 JavaScript 層中建立的 Proxy 物件。|
+| 方法           | 傳回類型    |描述| 需求集合|
+|:---------------|:--------|:----------|:----|
+|[getItemAt(index: number)](#getitematindex-number)|[ChartSeries](chartseries.md)|根據集合中的位置，擷取數列|[1.1](../requirement-sets/excel-api-requirement-sets.md)|
+|[load(param: object)](#loadparam-object)|void|以參數中指定的屬性和物件值填滿 JavaScript 層中建立的 Proxy 物件。|[1.1](../requirement-sets/excel-api-requirement-sets.md)|
 
 ## <a name="method-details"></a>方法詳細資料
 
 
-### <a name="getitemat(index:-number)"></a>getItemAt(index: number)
-根據集合中的位置，擷取數列。
+### <a name="getitematindex-number"></a>getItemAt(index: number)
+根據集合中的位置，擷取數列
 
 #### <a name="syntax"></a>語法
 ```js
@@ -35,7 +35,7 @@ chartSeriesCollectionObject.getItemAt(index);
 
 #### <a name="parameters"></a>參數
 | 參數	    | 類型	   |描述|
-|:---------------|:--------|:----------|
+|:---------------|:--------|:----------|:---|
 |index|number|要擷取之物件的索引值。以 0 開始編製索引。|
 
 #### <a name="returns"></a>傳回
@@ -61,7 +61,7 @@ Excel.run(function (ctx) {
 ```
 
 
-### <a name="load(param:-object)"></a>load(param: object)
+### <a name="loadparam-object"></a>load(param: object)
 以參數中指定的屬性和物件值填滿 JavaScript 層中建立的 Proxy 物件。
 
 #### <a name="syntax"></a>語法
@@ -71,7 +71,7 @@ object.load(param);
 
 #### <a name="parameters"></a>參數
 | 參數	    | 類型	   |描述|
-|:---------------|:--------|:----------|
+|:---------------|:--------|:----------|:---|
 |param|物件|選用。接受參數與關聯性名稱，做為分隔字串或陣列。或者提供 [loadOption](loadoption.md) 物件。|
 
 #### <a name="returns"></a>傳回

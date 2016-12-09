@@ -1,68 +1,73 @@
-# <a name="range-object-(javascript-api-for-excel)"></a>Range 物件 (適用於 Excel 的 JavaScript API)
-
-_適用於：Excel 2016、Excel Online、Excel for iOS、Office 2016_
+# <a name="range-object-javascript-api-for-excel"></a>Range 物件 (適用於 Excel 的 JavaScript API)
 
 Range 代表一組一或多個連續儲存格，例如儲存格、列、欄或儲存格區塊等。
 
 ## <a name="properties"></a>屬性
 
-| 屬性	     | 類型	   |描述
-|:---------------|:--------|:----------|
-|地址|string|代表 A1 樣式的範圍參照。位址值會包含工作表參照 (例如 Sheet1!A1: B4)。唯讀。|
-|addressLocal|string|以使用者的語言表示指定範圍的範圍參照。唯讀。|
-|cellCount|int|範圍中的儲存格數目。唯讀。|
-|columnCount|int|代表範圍中的欄總數。唯讀。|
-|columnHidden|bool|表示是否隱藏目前範圍的所有資料行。|
-|columnIndex|int|代表範圍中第一個儲存格的欄號。以 0 開始編製索引。唯讀。|
-|formulas|object[]|代表 A1 樣式標記法的公式。|
-|formulasLocal|object[][]|以使用者的語言和數字格式地區設定，表示 A1 樣式標記法的公式。例如，英文的 "=SUM(A1, 1.5)" 公式在德文中會表示為 "=SUMME(A1; 1,5)"。|
-|formulasR1C1|object[][]|代表 R1C1 樣式標記法的公式。|
-|hidden|bool|表示是否隱藏目前範圍的所有儲存格。唯讀。|
-|numberFormat|object[][]|代表特定儲存格的數字格式代碼。|
-|rowCount|int|傳回範圍中的列總數。唯讀。|
-|rowHidden|bool|表示是否隱藏目前範圍的所有資料列。|
-|rowIndex|int|傳回範圍中第一個儲存格的列號。以 0 開始編製索引。唯讀。|
-|文字|object[][]|所指定範圍的文字值。文字值與儲存格寬度無關。Excel UI 中出現的 # 替代符號不會影響 API 所傳回的文字值。唯讀。|
-|valueTypes|string|代表每個儲存格的資料類型。唯讀。可能的值為：Unknown、Empty、String、Integer、Double、Boolean、Error。|
-|values|object[][]|代表所指定範圍的原始值。傳回的資料可能是 string、number 或 boolean 類型。包含錯誤的儲存格會傳回錯誤字串。|
+| 屬性	     | 類型	   |描述| 需求集合|
+|:---------------|:--------|:----------|:----|
+|address|string|代表 A1 樣式的範圍參照。位址值會包含工作表參照 (例如 Sheet1!A1: B4)。唯讀。|[1.1](../requirement-sets/excel-api-requirement-sets.md)|
+|addressLocal|string|以使用者的語言表示指定範圍的範圍參照。唯讀。|[1.1](../requirement-sets/excel-api-requirement-sets.md)|
+|cellCount|int|範圍中的儲存格數目。如果儲存格計數超過 2^31-1 (2,147,483,647)，此 API 將會傳回 -1。唯讀。|[1.1](../requirement-sets/excel-api-requirement-sets.md)|
+|columnCount|int|代表範圍中的欄總數。唯讀。|[1.1](../requirement-sets/excel-api-requirement-sets.md)|
+|columnHidden|bool|表示是否隱藏目前範圍的所有資料行。|[1.2](../requirement-sets/excel-api-requirement-sets.md)|
+|columnIndex|int|代表範圍中第一個儲存格的欄號。以 0 開始編製索引。唯讀。|[1.1](../requirement-sets/excel-api-requirement-sets.md)|
+|formulas|object[][]|代表 A1 樣式標記法的公式。|[1.1](../requirement-sets/excel-api-requirement-sets.md)|
+|formulasLocal|object[][]|以使用者的語言和數字格式地區設定，表示 A1 樣式標記法的公式。例如，英文的 "=SUM(A1, 1.5)" 公式在德文中會表示為 "=SUMME(A1; 1,5)"。|[1.1](../requirement-sets/excel-api-requirement-sets.md)|
+|formulasR1C1|object[][]|代表 R1C1 樣式標記法的公式。|[1.2](../requirement-sets/excel-api-requirement-sets.md)|
+|hidden|bool|表示是否隱藏目前範圍的所有儲存格。唯讀。|[1.2](../requirement-sets/excel-api-requirement-sets.md)|
+|numberFormat|object[][]|代表特定儲存格的 Excel 數字格式代碼。|[1.1](../requirement-sets/excel-api-requirement-sets.md)|
+|rowCount|int|傳回範圍中的列總數。唯讀。|[1.1](../requirement-sets/excel-api-requirement-sets.md)|
+|rowHidden|bool|表示是否隱藏目前範圍的所有資料列。|[1.2](../requirement-sets/excel-api-requirement-sets.md)|
+|rowIndex|int|傳回範圍中第一個儲存格的列號。以 0 開始編製索引。唯讀。|[1.1](../requirement-sets/excel-api-requirement-sets.md)|
+|text|object[][]|所指定範圍的文字值。文字值與儲存格寬度無關。Excel UI 中出現的 # 替代符號不會影響 API 所傳回的文字值。唯讀。|[1.1](../requirement-sets/excel-api-requirement-sets.md)|
+|valueTypes|string|代表每個儲存格的資料類型。唯讀。可能的值為：Unknown、Empty、String、Integer、Double、Boolean、Error。|[1.1](../requirement-sets/excel-api-requirement-sets.md)|
+|values|object[][]|代表所指定範圍的原始值。傳回的資料可能是 string、number 或 boolean 類型。包含錯誤的儲存格會傳回錯誤字串。|[1.1](../requirement-sets/excel-api-requirement-sets.md)|
 
 _請參閱屬性存取[範例。](#property-access-examples)_
 
 ## <a name="relationships"></a>關聯性
-| 關聯性 | 類型	   |描述|
-|:---------------|:--------|:----------|
-|format|[RangeFormat](rangeformat.md)|傳回格式物件，其中封裝了範圍的字型、填滿、框線、對齊方式及其他屬性。唯讀。|
-|排序|[RangeSort](rangesort.md)|代表範圍的排序組態。唯讀。|
-|worksheet|[Worksheet](worksheet.md)|包含目前範圍的工作表。唯讀。|
+| 關聯性 | 類型	   |描述| 需求集合|
+|:---------------|:--------|:----------|:----|
+|format|[RangeFormat](rangeformat.md)|傳回格式物件，其中封裝了範圍的字型、填滿、框線、對齊方式及其他屬性。唯讀。|[1.1](../requirement-sets/excel-api-requirement-sets.md)|
+|sort|[RangeSort](rangesort.md)|代表目前範圍的範圍排序。唯讀。|[1.2](../requirement-sets/excel-api-requirement-sets.md)|
+|worksheet|[Worksheet](worksheet.md)|包含目前範圍的工作表。唯讀。|[1.1](../requirement-sets/excel-api-requirement-sets.md)|
 
 ## <a name="methods"></a>方法
 
-| 方法           | 傳回類型    |描述|
-|:---------------|:--------|:----------|
-|[clear(applyTo: string)](#clearapplyto-string)|void|清除範圍值、格式、填滿、框線等。|
-|[delete(shift: string)](#deleteshift-string)|void|刪除範圍相關的儲存格。|
-|[getBoundingRect(anotherRange:Range 或 string)](#getboundingrectanotherrange-range-or-string)|[Range](range.md)|取得包含特定範圍的最小 range 物件。例如，"B2:C5" 和 "D10:E15" 的 getBoundingRect 是 "B2:E15"。|
-|[getCell(row: number, column: number)](#getcellrow-number-column-number)|[Range](range.md)|根據列和欄數，取得包含單一儲存格的 range 物件。只要儲存格保持在工作表方格中，此儲存格可以位於其父範圍的界限之外。傳回的儲存格位置相對於範圍的左上角儲存格。|
-|[getColumn(column: number)](#getcolumncolumn-number)|[Range](range.md)|取得範圍內包含的欄。|
-|[getEntireColumn()](#getentirecolumn)|[Range](range.md)|取得物件，代表範圍的整個欄。|
-|[getEntireRow()](#getentirerow)|[Range](range.md)|取得物件，代表範圍的整個列。|
-|[getIntersection(anotherRange:Range 或 string)](#getintersectionanotherrange-range-or-string)|[Range](range.md)|取得 range 物件，代表特定範圍的矩形交集。|
-|[getLastCell()](#getlastcell)|[Range](range.md)|取得範圍內最後一個儲存格。例如，"B2:D5" 的最後一個儲存格是 "D5"。|
-|[getLastColumn()](#getlastcolumn)|[Range](range.md)|取得範圍內最後一欄。例如，"B2:D5" 的最後一欄是 "D2:D5"。|
-|[getLastRow()](#getlastrow)|[Range](range.md)|取得範圍內最後一列。例如，"B2:D5" 的最後一列是 "B5:D5"。|
-|[getOffsetRange(rowOffset: number, columnOffset: number)](#getoffsetrangerowoffset-number-columnoffset-number)|[Range](range.md)|取得物件，代表從指定範圍偏移的範圍。傳回範圍的維度會符合此範圍。如果產生的範圍強制超出工作表方格的界限，則會擲回例外狀況。|
-|[getRow(row: number)](#getrowrow-number)|[Range](range.md)|取得範圍內包含的列。|
-|[getUsedRange(valuesOnly: bool)](#getusedrangevaluesonly-bool)|[Range](range.md)|傳回 range 物件的使用的子範圍。|
-|[insert(shift: string)](#insertshift-string)|[Range](range.md)|在工作表中插入一個儲存格或儲存格範圍以取代此範圍，並移動其他儲存格以挪出空間。傳回位於現在空格的新 Range 物件。|
-|[load(param: object)](#loadparam-object)|void|以參數中指定的屬性和物件值填滿 JavaScript 層中建立的 Proxy 物件。|
-|[merge(across: bool)](#mergeacross-bool)|void|合併範圍儲存格到工作表中的一個區域。|
-|[select()](#select)|void|在 Excel UI 中選取指定的範圍。|
-|[unmerge()](#unmerge)|void|取消將範圍儲存格合併至個別儲存格。|
+| 方法           | 傳回類型    |描述| 需求集合|
+|:---------------|:--------|:----------|:----|
+|[clear(applyTo: string)](#clearapplyto-string)|void|清除範圍值、格式、填滿、框線等。|[1.1](../requirement-sets/excel-api-requirement-sets.md)|
+|[delete(shift: string)](#deleteshift-string)|void|刪除範圍相關的儲存格。|[1.1](../requirement-sets/excel-api-requirement-sets.md)|
+|[getBoundingRect(anotherRange:Range or string)](#getboundingrectanotherrange-range-or-string)|[Range](range.md)|取得包含特定範圍的最小範圍物件。例如，"B2:C5" 和 "D10:E15" 的 GetBoundingRect 是 "B2:E16"。|[1.1](../requirement-sets/excel-api-requirement-sets.md)|
+|[getCell(row: number, column: number)](#getcellrow-number-column-number)|[Range](range.md)|根據列和欄數，取得包含單一儲存格的範圍物件。只要儲存格保持在工作表方格中，此儲存格可以位於其父範圍的界限之外。傳回的儲存格位置相對於範圍的左上角儲存格。|[1.1](../requirement-sets/excel-api-requirement-sets.md)|
+|[getColumn(column: number)](#getcolumncolumn-number)|[Range](range.md)|取得範圍內包含的欄。|[1.1](../requirement-sets/excel-api-requirement-sets.md)|
+|[getColumnsAfter(count: number)](#getcolumnsaftercount-number)|[Range](range.md)|取得目前的 Range 物件右邊的欄數。|[1.2, 1.3](../requirement-sets/excel-api-requirement-sets.md)|
+|[getColumnsBefore(count: number)](#getcolumnsbeforecount-number)|[Range](range.md)|取得目前的 Range 物件左邊的欄數。|[1.2, 1.3](../requirement-sets/excel-api-requirement-sets.md)|
+|[getEntireColumn()](#getentirecolumn)|[Range](range.md)|取得物件，代表範圍的整個欄。|[1.1](../requirement-sets/excel-api-requirement-sets.md)|
+|[getEntireRow()](#getentirerow)|[Range](range.md)|取得物件，代表範圍的整個列。|[1.1](../requirement-sets/excel-api-requirement-sets.md)|
+|[getIntersection(anotherRange:Range or string)](#getintersectionanotherrange-range-or-string)|[Range](range.md)|取得範圍物件，代表特定範圍的矩形交集。|[1.1](../requirement-sets/excel-api-requirement-sets.md)|
+|[getIntersectionOrNull(anotherRange:Range or string)](#getintersectionornullanotherrange-range-or-string)|[Range](range.md)|取得範圍物件，代表特定範圍的矩形交集。如果找到沒有交集，則會傳回 null 物件。|[1.3](../requirement-sets/excel-api-requirement-sets.md)|
+|[getLastCell()](#getlastcell)|[Range](range.md)|取得範圍內最後一個儲存格。例如，"B2:D5" 的最後一個儲存格是 "D5"。|[1.1](../requirement-sets/excel-api-requirement-sets.md)|
+|[getLastColumn()](#getlastcolumn)|[Range](range.md)|取得範圍內最後一欄。例如，"B2:D5" 的最後一欄是 "D2:D5"。|[1.1](../requirement-sets/excel-api-requirement-sets.md)|
+|[getLastRow()](#getlastrow)|[Range](range.md)|取得範圍內最後一列。例如，"B2:D5" 的最後一列是 "B5:D5"。|[1.1](../requirement-sets/excel-api-requirement-sets.md)|
+|[getOffsetRange(rowOffset: number, columnOffset: number)](#getoffsetrangerowoffset-number-columnoffset-number)|[Range](range.md)|取得物件，代表從指定範圍偏移的範圍。傳回範圍的維度會符合此範圍。如果產生的範圍強制超出工作表方格的界限，則將會擲回例外狀況。|[1.1](../requirement-sets/excel-api-requirement-sets.md)|
+|[getResizedRange(deltaRows: number, deltaColumns: number)](#getresizedrangedeltarows-number-deltacolumns-number)|[Range](range.md)|取得與目前 Range 物件類似的 Range 物件，但右下角以一定的欄與列數展開 (或收起)。|[1.2, 1.3](../requirement-sets/excel-api-requirement-sets.md)|
+|[getRow(row: number)](#getrowrow-number)|[Range](range.md)|取得範圍內包含的列。|[1.1](../requirement-sets/excel-api-requirement-sets.md)|
+|[getRowsAbove(count: number)](#getrowsabovecount-number)|[Range](range.md)|取得目前的 Range 物件上方的列數。|[1.2, 1.3](../requirement-sets/excel-api-requirement-sets.md)|
+|[getRowsBelow(count: number)](#getrowsbelowcount-number)|[Range](range.md)|取得目前的 Range 物件下方的列數。|[1.2, 1.3](../requirement-sets/excel-api-requirement-sets.md)|
+|[getUsedRange(valuesOnly)](#getusedrangevaluesonly)|[Range](range.md)|傳回特定範圍物件所使用的範圍。|[1.1](../requirement-sets/excel-api-requirement-sets.md)|
+|[getVisibleView()](#getvisibleview)|[RangeView](rangeview.md)|代表目前範圍的可見資料列。|[1.3](../requirement-sets/excel-api-requirement-sets.md)|
+|[insert(shift: string)](#insertshift-string)|[Range](range.md)|在工作表中插入一個儲存格或儲存格範圍以取代此範圍，並移動其他儲存格以挪出空間。傳回位於現在空格的新 Range 物件。|[1.1](../requirement-sets/excel-api-requirement-sets.md)|
+|[load(param: object)](#loadparam-object)|void|以參數中指定的屬性和物件值填滿 JavaScript 層中建立的 Proxy 物件。|[1.1](../requirement-sets/excel-api-requirement-sets.md)|
+|[merge(across: bool)](#mergeacross-bool)|void|合併範圍儲存格到工作表中的一個區域。|[1.2](../requirement-sets/excel-api-requirement-sets.md)|
+|[select()](#select)|void|在 Excel UI 中選取指定的範圍。|[1.1](../requirement-sets/excel-api-requirement-sets.md)|
+|[unmerge()](#unmerge)|void|取消將範圍儲存格合併至個別儲存格。|[1.2](../requirement-sets/excel-api-requirement-sets.md)|
 
 ## <a name="method-details"></a>方法詳細資料
 
 
-### <a name="clear(applyto:-string)"></a>clear(applyTo: string)
+### <a name="clearapplyto-string"></a>clear(applyTo: string)
 清除範圍值、格式、填滿、框線等。
 
 #### <a name="syntax"></a>語法
@@ -72,8 +77,8 @@ rangeObject.clear(applyTo);
 
 #### <a name="parameters"></a>參數
 | 參數	    | 類型	   |描述|
-|:---------------|:--------|:----------|
-|applyTo|string|選用。決定清除動作的類型。可能的值為：`All` 預設選項、`Formats`、`Contents`。|
+|:---------------|:--------|:----------|:---|
+|applyTo|string|選用。決定清除動作的類型。可能的值為：`All` 預設選項、`Formats`、`Contents` |
 
 #### <a name="returns"></a>傳回
 void
@@ -98,7 +103,7 @@ Excel.run(function (ctx) {
 ```
 
 
-### <a name="delete(shift:-string)"></a>delete(shift: string)
+### <a name="deleteshift-string"></a>delete(shift: string)
 刪除範圍相關的儲存格。
 
 #### <a name="syntax"></a>語法
@@ -108,8 +113,8 @@ rangeObject.delete(shift);
 
 #### <a name="parameters"></a>參數
 | 參數	    | 類型	   |描述|
-|:---------------|:--------|:----------|
-|SHIFT|string|指定移動儲存格的方式。可能的值為：Up、Left。|
+|:---------------|:--------|:----------|:---|
+|SHIFT|string|指定移動儲存格的方式。可能的值為：Up、Left|
 
 #### <a name="returns"></a>傳回
 void
@@ -132,8 +137,8 @@ Excel.run(function (ctx) {
 ```
 
 
-### <a name="getboundingrect(anotherrange:-range-or-string)"></a>getBoundingRect(anotherRange:Range or string)
-取得包含特定範圍的最小 range 物件。例如，"B2:C5" 和 "D10:E15" 的 GetBoundingRect 是 "B2:E15"。
+### <a name="getboundingrectanotherrange-range-or-string"></a>getBoundingRect(anotherRange:Range or string)
+取得包含特定範圍的最小範圍物件。例如，"B2:C5" 和 "D10:E15" 的 GetBoundingRect 是 "B2:E16"。
 
 #### <a name="syntax"></a>語法
 ```js
@@ -142,7 +147,7 @@ rangeObject.getBoundingRect(anotherRange);
 
 #### <a name="parameters"></a>參數
 | 參數	    | 類型	   |描述|
-|:---------------|:--------|:----------|
+|:---------------|:--------|:----------|:---|
 |anotherRange|Range 或 string|Range 物件或位址或範圍名稱。|
 
 #### <a name="returns"></a>傳回
@@ -170,8 +175,8 @@ Excel.run(function (ctx) {
 ```
 
 
-### <a name="getcell(row:-number,-column:-number)"></a>getCell(row: number, column: number)
-根據列和欄數，取得包含單一儲存格的 range 物件。只要儲存格保持在工作表方格中，此儲存格可以位於其父範圍的界限之外。傳回的儲存格位置相對於範圍的左上角儲存格。
+### <a name="getcellrow-number-column-number"></a>getCell(row: number, column: number)
+根據列和欄數，取得包含單一儲存格的範圍物件。只要儲存格保持在工作表方格中，此儲存格可以位於其父範圍的界限之外。傳回的儲存格位置相對於範圍的左上角儲存格。
 
 #### <a name="syntax"></a>語法
 ```js
@@ -180,7 +185,7 @@ rangeObject.getCell(row, column);
 
 #### <a name="parameters"></a>參數
 | 參數	    | 類型	   |描述|
-|:---------------|:--------|:----------|
+|:---------------|:--------|:----------|:---|
 |列|number|要擷取之儲存格的列號。以 0 開始編製索引。|
 |column|number|要擷取之儲存格的欄號。以 0 開始編製索引。|
 
@@ -195,7 +200,7 @@ Excel.run(function (ctx) {
     var rangeAddress = "A1:F8";
     var worksheet = ctx.workbook.worksheets.getItem(sheetName);
     var range = worksheet.getRange(rangeAddress);
-    var cell = range.getCell(0,0);
+    var cell = range.cell(0,0);
     cell.load('address');
     return ctx.sync().then(function() {
         console.log(cell.address);
@@ -209,7 +214,7 @@ Excel.run(function (ctx) {
 ```
 
 
-### <a name="getcolumn(column:-number)"></a>getColumn(column: number)
+### <a name="getcolumncolumn-number"></a>getColumn(column: number)
 取得範圍內包含的欄。
 
 #### <a name="syntax"></a>語法
@@ -219,7 +224,7 @@ rangeObject.getColumn(column);
 
 #### <a name="parameters"></a>參數
 | 參數	    | 類型	   |描述|
-|:---------------|:--------|:----------|
+|:---------------|:--------|:----------|:---|
 |column|number|要擷取之範圍的欄號。以 0 開始編製索引。|
 
 #### <a name="returns"></a>傳回
@@ -246,7 +251,39 @@ Excel.run(function (ctx) {
 ```
 
 
-### <a name="getentirecolumn()"></a>getEntireColumn()
+### <a name="getcolumnsaftercount-number"></a>getColumnsAfter(count: number)
+取得目前的 Range 物件右邊的欄數。
+
+#### <a name="syntax"></a>語法
+```js
+rangeObject.getColumnsAfter(count);
+```
+
+#### <a name="parameters"></a>參數
+| 參數	    | 類型	   |描述|
+|:---------------|:--------|:----------|:---|
+|Count|number|選用。要包含在結果範圍中的欄數。一般情況下，請使用正數建立目前範圍以外的範圍。您也可以使用負數建立目前範圍內的範圍。預設值為 1。|
+
+#### <a name="returns"></a>傳回
+[Range](range.md)
+
+### <a name="getcolumnsbeforecount-number"></a>getColumnsBefore(count: number)
+取得目前的 Range 物件左邊的欄數。
+
+#### <a name="syntax"></a>語法
+```js
+rangeObject.getColumnsBefore(count);
+```
+
+#### <a name="parameters"></a>參數
+| 參數	    | 類型	   |描述|
+|:---------------|:--------|:----------|:---|
+|Count|number|選用。要包含在結果範圍中的欄數。一般情況下，請使用正數建立目前範圍以外的範圍。您也可以使用負數建立目前範圍內的範圍。預設值為 1。|
+
+#### <a name="returns"></a>傳回
+[Range](range.md)
+
+### <a name="getentirecolumn"></a>getEntireColumn()
 取得物件，代表範圍的整個欄。
 
 #### <a name="syntax"></a>語法
@@ -262,7 +299,7 @@ rangeObject.getEntireColumn();
 
 #### <a name="examples"></a>範例
 
-附註：Range 的方格屬性 (values、numberFormat、formulas) 包含 `null`，因為相關範圍為無界限。
+附註：因為相關範圍為無界限，所以 Range 的方格屬性 (values、numberFormat、formulas) 會包含 `null`。
 
 ```js
 
@@ -283,7 +320,7 @@ Excel.run(function (ctx) {
 });
 ```
 
-### <a name="getentirerow()"></a>getEntireRow()
+### <a name="getentirerow"></a>getEntireRow()
 取得物件，代表範圍的整個列。
 
 #### <a name="syntax"></a>語法
@@ -316,10 +353,11 @@ Excel.run(function (ctx) {
         }
 });
 ```
-Range 的方格屬性 (values、numberFormat、formulas) 包含 `null`，因為相關範圍為無界限。
+因為相關範圍為無界限，所以 Range 的方格屬性 (values、numberFormat、formulas) 會包含 `null`。
 
-### <a name="getintersection(anotherrange:-range-or-string)"></a>getIntersection(anotherRange:Range or string)
-取得 range 物件，代表特定範圍的矩形交集。
+
+### <a name="getintersectionanotherrange-range-or-string"></a>getIntersection(anotherRange:Range or string)
+取得範圍物件，代表特定範圍的矩形交集。
 
 #### <a name="syntax"></a>語法
 ```js
@@ -328,7 +366,7 @@ rangeObject.getIntersection(anotherRange);
 
 #### <a name="parameters"></a>參數
 | 參數	    | 類型	   |描述|
-|:---------------|:--------|:----------|
+|:---------------|:--------|:----------|:---|
 |anotherRange|Range 或 string|將用來決定範圍交集的 Range 物件或範圍位址。|
 
 #### <a name="returns"></a>傳回
@@ -355,7 +393,23 @@ Excel.run(function (ctx) {
 ```
 
 
-### <a name="getlastcell()"></a>getLastCell()
+### <a name="getintersectionornullanotherrange-range-or-string"></a>getIntersectionOrNull(anotherRange:Range or string)
+取得範圍物件，代表特定範圍的矩形交集。如果找到沒有交集，則會傳回 null 物件。
+
+#### <a name="syntax"></a>語法
+```js
+rangeObject.getIntersectionOrNull(anotherRange);
+```
+
+#### <a name="parameters"></a>參數
+| 參數	    | 類型	   |描述|
+|:---------------|:--------|:----------|:---|
+|anotherRange|Range 或 string|將用來決定範圍交集的 Range 物件或範圍位址。|
+
+#### <a name="returns"></a>傳回
+[Range](range.md)
+
+### <a name="getlastcell"></a>getLastCell()
 取得範圍內最後一個儲存格。例如，"B2:D5" 的最後一個儲存格是 "D5"。
 
 #### <a name="syntax"></a>語法
@@ -390,7 +444,7 @@ Excel.run(function (ctx) {
 ```
 
 
-### <a name="getlastcolumn()"></a>getLastColumn()
+### <a name="getlastcolumn"></a>getLastColumn()
 取得範圍內最後一欄。例如，"B2:D5" 的最後一欄是 "D2:D5"。
 
 #### <a name="syntax"></a>語法
@@ -425,7 +479,7 @@ Excel.run(function (ctx) {
 ```
 
 
-### <a name="getlastrow()"></a>getLastRow()
+### <a name="getlastrow"></a>getLastRow()
 取得範圍內最後一列。例如，"B2:D5" 的最後一列是 "B5:D5"。
 
 #### <a name="syntax"></a>語法
@@ -461,8 +515,8 @@ Excel.run(function (ctx) {
 
 
 
-### <a name="getoffsetrange(rowoffset:-number,-columnoffset:-number)"></a>getOffsetRange(rowOffset: number, columnOffset: number)
-取得物件，代表從指定範圍偏移的範圍。傳回範圍的維度會符合此範圍。如果產生的範圍強制超出工作表方格的界限，則會擲回例外狀況。
+### <a name="getoffsetrangerowoffset-number-columnoffset-number"></a>getOffsetRange(rowOffset: number, columnOffset: number)
+取得物件，代表從指定範圍偏移的範圍。傳回範圍的維度會符合此範圍。如果產生的範圍強制超出工作表方格的界限，則將會擲回例外狀況。
 
 #### <a name="syntax"></a>語法
 ```js
@@ -471,7 +525,7 @@ rangeObject.getOffsetRange(rowOffset, columnOffset);
 
 #### <a name="parameters"></a>參數
 | 參數	    | 類型	   |描述|
-|:---------------|:--------|:----------|
+|:---------------|:--------|:----------|:---|
 |rowOffset|number|該範圍要偏移的列數 (正值、負值或 0)。正值表示向下偏移，負值表示向上偏移。|
 |columnOffset|number|該範圍要偏移的欄數 (正值、負值或 0)。正值表示向右偏移，負值表示向左偏移。|
 
@@ -498,7 +552,24 @@ Excel.run(function (ctx) {
 ```
 
 
-### <a name="getrow(row:-number)"></a>getRow(row: number)
+### <a name="getresizedrangedeltarows-number-deltacolumns-number"></a>getResizedRange(deltaRows: number, deltaColumns: number)
+取得與目前 Range 物件類似的 Range 物件，但右下角以一定的欄與列數展開 (或收起)。
+
+#### <a name="syntax"></a>語法
+```js
+rangeObject.getResizedRange(deltaRows, deltaColumns);
+```
+
+#### <a name="parameters"></a>參數
+| 參數	    | 類型	   |描述|
+|:---------------|:--------|:----------|:---|
+|deltaRows|number|將在右下角展開的列數，相對於目前範圍。使用正數來展開範圍，或負數來減少範圍。|
+|deltaColumns|number|將在右下角展開的欄數，相對於目前範圍。使用正數來展開範圍，或負數來減少範圍。|
+
+#### <a name="returns"></a>傳回
+[Range](range.md)
+
+### <a name="getrowrow-number"></a>getRow(row: number)
 取得範圍內包含的列。
 
 #### <a name="syntax"></a>語法
@@ -508,7 +579,7 @@ rangeObject.getRow(row);
 
 #### <a name="parameters"></a>參數
 | 參數	    | 類型	   |描述|
-|:---------------|:--------|:----------|
+|:---------------|:--------|:----------|:---|
 |列|number|要擷取之範圍的列號。以 0 開始編製索引。|
 
 #### <a name="returns"></a>傳回
@@ -535,8 +606,40 @@ Excel.run(function (ctx) {
 ```
 
 
-### <a name="getusedrange(valuesonly:-bool)"></a>getUsedRange(valuesOnly: bool)
-傳回特定 range 物件所使用的範圍。
+### <a name="getrowsabovecount-number"></a>getRowsAbove(count: number)
+取得目前的 Range 物件上方的列數。
+
+#### <a name="syntax"></a>語法
+```js
+rangeObject.getRowsAbove(count);
+```
+
+#### <a name="parameters"></a>參數
+| 參數	    | 類型	   |描述|
+|:---------------|:--------|:----------|:---|
+|Count|number|選用。要包含在結果範圍中的列數。一般情況下，請使用正數建立目前範圍以外的範圍。您也可以使用負數建立目前範圍內的範圍。預設值為 1。|
+
+#### <a name="returns"></a>傳回
+[Range](range.md)
+
+### <a name="getrowsbelowcount-number"></a>getRowsBelow(count: number)
+取得目前的 Range 物件下方的列數。
+
+#### <a name="syntax"></a>語法
+```js
+rangeObject.getRowsBelow(count);
+```
+
+#### <a name="parameters"></a>參數
+| 參數	    | 類型	   |描述|
+|:---------------|:--------|:----------|:---|
+|Count|number|選用。要包含在結果範圍中的列數。一般情況下，請使用正數建立目前範圍以外的範圍。您也可以使用負數建立目前範圍內的範圍。預設值為 1。|
+
+#### <a name="returns"></a>傳回
+[Range](range.md)
+
+### <a name="getusedrangevaluesonly"></a>getUsedRange(valuesOnly)
+傳回特定範圍物件所使用的範圍。
 
 #### <a name="syntax"></a>語法
 ```js
@@ -545,8 +648,8 @@ rangeObject.getUsedRange(valuesOnly);
 
 #### <a name="parameters"></a>參數
 | 參數	    | 類型	   |描述|
-|:---------------|:--------|:----------|
-|valuesOnly|bool|選用。若為 true，只會將目前有值的儲存格視為使用的儲存格。預設為 false，會將任何曾具有值的儲存格視為已使用。|
+|:---------------|:--------|:----------|:---|
+|valuesOnly|[ApiSet(Version|僅將包含值的儲存格考慮為使用的儲存格。|
 
 #### <a name="returns"></a>傳回
 [Range](range.md)
@@ -573,7 +676,21 @@ Excel.run(function (ctx) {
 ```
 
 
-### <a name="insert(shift:-string)"></a>insert(shift: string)
+### <a name="getvisibleview"></a>getVisibleView()
+代表目前範圍的可見資料列。
+
+#### <a name="syntax"></a>語法
+```js
+rangeObject.getVisibleView();
+```
+
+#### <a name="parameters"></a>參數
+無
+
+#### <a name="returns"></a>傳回
+[RangeView](rangeview.md)
+
+### <a name="insertshift-string"></a>insert(shift: string)
 在工作表中插入一個儲存格或儲存格範圍以取代此範圍，並移動其他儲存格以挪出空間。傳回位於現在空格的新 Range 物件。
 
 #### <a name="syntax"></a>語法
@@ -583,8 +700,8 @@ rangeObject.insert(shift);
 
 #### <a name="parameters"></a>參數
 | 參數	    | 類型	   |描述|
-|:---------------|:--------|:----------|
-|SHIFT|string|指定移動儲存格的方式。可能的值為：Down、Right。|
+|:---------------|:--------|:----------|:---|
+|SHIFT|string|指定移動儲存格的方式。可能的值為：Down、Right|
 
 #### <a name="returns"></a>傳回
 [Range](range.md)
@@ -609,7 +726,7 @@ Excel.run(function (ctx) {
 ```
 
 
-### <a name="load(param:-object)"></a>load(param: object)
+### <a name="loadparam-object"></a>load(param: object)
 以參數中指定的屬性和物件值填滿 JavaScript 層中建立的 Proxy 物件。
 
 #### <a name="syntax"></a>語法
@@ -619,13 +736,13 @@ object.load(param);
 
 #### <a name="parameters"></a>參數
 | 參數	    | 類型	   |描述|
-|:---------------|:--------|:----------|
+|:---------------|:--------|:----------|:---|
 |param|物件|選用。接受參數與關聯性名稱，做為分隔字串或陣列。或者提供 [loadOption](loadoption.md) 物件。|
 
 #### <a name="returns"></a>傳回
 void
 
-### <a name="merge(across:-bool)"></a>merge(across: bool)
+### <a name="mergeacross-bool"></a>merge(across: bool)
 合併範圍儲存格到工作表中的一個區域。
 
 #### <a name="syntax"></a>語法
@@ -635,7 +752,7 @@ rangeObject.merge(across);
 
 #### <a name="parameters"></a>參數
 | 參數	    | 類型	   |描述|
-|:---------------|:--------|:----------|
+|:---------------|:--------|:----------|:---|
 |跨列|bool|選用。若設為 True，則會將指定範圍的每一列的儲存格合併成個別的合併儲存格。預設值為 False。|
 
 #### <a name="returns"></a>傳回
@@ -658,7 +775,25 @@ Excel.run(function (ctx) {
 ```
 
 
-### <a name="select()"></a>select()
+
+#### <a name="examples"></a>範例
+```js
+Excel.run(function (ctx) { 
+    var sheetName = "Sheet1";
+    var rangeAddress = "A1:C3";
+    var range = ctx.workbook.worksheets.getItem(sheetName).getRange(rangeAddress);
+    range.unmerge();
+    return ctx.sync(); 
+}).catch(function(error) {
+        console.log("Error: " + error);
+        if (error instanceof OfficeExtension.Error) {
+            console.log("Debug info: " + JSON.stringify(error.debugInfo));
+        }
+});
+```
+
+
+### <a name="select"></a>select()
 在 Excel UI 中選取指定的範圍。
 
 #### <a name="syntax"></a>語法
@@ -682,7 +817,6 @@ Excel.run(function (ctx) {
     var range = ctx.workbook.worksheets.getItem(sheetName).getRange(rangeAddress);
     range.select();
     return ctx.sync(); 
-    });
 }).catch(function(error) {
         console.log("Error: " + error);
         if (error instanceof OfficeExtension.Error) {
@@ -692,8 +826,8 @@ Excel.run(function (ctx) {
 ```
 
 
-### <a name="unmerge()"></a>unmerge()
-取消將合併的儲存格範圍合併至個別儲存格。
+### <a name="unmerge"></a>unmerge()
+取消將範圍儲存格合併至個別儲存格。
 
 #### <a name="syntax"></a>語法
 ```js
@@ -724,7 +858,7 @@ Excel.run(function (ctx) {
 
 ### <a name="property-access-examples"></a>屬性存取範例
 
-這個範例會使用範圍位址，以取得 range 物件。
+下列範例會使用範圍位址，以取得範圍物件。
 
 ```js
 
@@ -745,7 +879,7 @@ Excel.run(function (ctx) {
 });
 ```
 
-這個範例會使用具名範圍，以取得 range 物件。
+下列範例會使用具名範圍，以取得範圍物件。
 
 ```js
 
@@ -788,37 +922,16 @@ Excel.run(function (ctx) {
         }
 });
 ```
-下列範例與上方的範例相同，不同之處在於它使用公式的 R1C1 表示法。
-
-```js
-Excel.run(function (ctx) { 
-    var sheetName = "Sheet1";
-    var rangeAddress = "F5:G7";
-    var numberFormat = [[null, "d-mmm"], [null, "d-mmm"], [null, null]]
-    var values = [["Today", 42147], ["Tomorrow", "5/24"], ["Difference in days", null]];
-    var formulasR1C1 = [[null,null], [null,null], [null,"=R[-1]C-R[-2]C"]];
-    var range = ctx.workbook.worksheets.getItem(sheetName).getRange(rangeAddress);
-    range.numberFormat = numberFormat;
-    range.values = values;
-    range.formulasR1C1= formulasR1C1;
-    range.load('text');
-    return ctx.sync().then(function() {
-        console.log(range.text);
-    });
-}).catch(function(error) {
-        console.log("Error: " + error);
-        if (error instanceof OfficeExtension.Error) {
-            console.log("Debug info: " + JSON.stringify(error.debugInfo));
-        }
-});
-```
 取得包含目前範圍的工作表。 
 
 ```js
+/* This might be broken still - it was broken before because it 
+    it was missing 'var', but might still be wrong because of
+    getting information without loading properly. */
 Excel.run(function (ctx) { 
     var names = ctx.workbook.names;
     var namedItem = names.getItem('MyRange');
-    range = namedItem.range;
+    var range = namedItem.range;
     var rangeWorksheet = range.worksheet;
     rangeWorksheet.load('name');
     return ctx.sync().then(function() {
