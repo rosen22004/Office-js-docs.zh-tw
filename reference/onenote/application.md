@@ -1,4 +1,4 @@
-# <a name="application-object-(javascript-api-for-onenote)"></a>應用程式物件 (適用於 OneNote 的 JavaScript API)
+﻿# <a name="application-object-javascript-api-for-onenote"></a>應用程式物件 (適用於 OneNote 的 JavaScript API)
 
 _適用於：OneNote Online_
 
@@ -33,7 +33,7 @@ _適用於：OneNote Online_
 ## <a name="method-details"></a>方法詳細資料
 
 
-### <a name="getactivenotebook()"></a>getActiveNotebook()
+### <a name="getactivenotebook"></a>getActiveNotebook()
 取得使用中的筆記本 (如果有的話)。如果沒有使用中的筆記本，會擲回 ItemNotFound。
 
 #### <a name="syntax"></a>語法
@@ -77,7 +77,7 @@ OneNote.run(function (context) {
 ```
 
 
-### <a name="getactivenotebookornull()"></a>getActiveNotebookOrNull()
+### <a name="getactivenotebookornull"></a>getActiveNotebookOrNull()
 取得使用中的筆記本 (如果有的話)。如果沒有使用中的筆記本，會傳回 null。
 
 #### <a name="syntax"></a>語法
@@ -122,7 +122,7 @@ OneNote.run(function (context) {
 ```
 
 
-### <a name="getactiveoutline()"></a>getActiveOutline()
+### <a name="getactiveoutline"></a>getActiveOutline()
 取得使用中的大綱 (如果有的話)，如果沒有使用中的大綱，會擲回 ItemNotFound。
 
 #### <a name="syntax"></a>語法
@@ -163,7 +163,7 @@ OneNote.run(function (context) {
 ```
 
 
-### <a name="getactiveoutlineornull()"></a>getActiveOutlineOrNull()
+### <a name="getactiveoutlineornull"></a>getActiveOutlineOrNull()
 取得使用中的大綱 (如果有的話)，否則會傳回 null。
 
 #### <a name="syntax"></a>語法
@@ -205,7 +205,7 @@ OneNote.run(function (context) {
 ```
 
 
-### <a name="getactivepage()"></a>getActivePage()
+### <a name="getactivepage"></a>getActivePage()
 取得使用中的頁面 (如果有的話)。如果沒有使用中的頁面，會擲回 ItemNotFound。
 
 #### <a name="syntax"></a>語法
@@ -249,7 +249,7 @@ OneNote.run(function (context) {
 ```
 
 
-### <a name="getactivepageornull()"></a>getActivePageOrNull()
+### <a name="getactivepageornull"></a>getActivePageOrNull()
 取得使用中的頁面 (如果有的話)。如果沒有使用中的頁面，會傳回 null。
 
 #### <a name="syntax"></a>語法
@@ -294,7 +294,7 @@ OneNote.run(function (context) {
 ```
 
 
-### <a name="getactivesection()"></a>getActiveSection()
+### <a name="getactivesection"></a>getActiveSection()
 取得使用中的區段 (如果有的話)。如果沒有使用中的區段，會擲回 ItemNotFound。
 
 #### <a name="syntax"></a>語法
@@ -338,7 +338,7 @@ OneNote.run(function (context) {
 ```
 
 
-### <a name="getactivesectionornull()"></a>getActiveSectionOrNull()
+### <a name="getactivesectionornull"></a>getActiveSectionOrNull()
 取得使用中的區段 (如果有的話)。如果沒有使用中的區段，會傳回 null。
 
 #### <a name="syntax"></a>語法
@@ -382,7 +382,7 @@ OneNote.run(function (context) {
 ```
 
 
-### <a name="load(param:-object)"></a>load(param: object)
+### <a name="loadparam-object"></a>load(param: object)
 以參數中指定的屬性和物件值填滿 JavaScript 層中建立的 Proxy 物件。
 
 #### <a name="syntax"></a>語法
@@ -398,7 +398,7 @@ object.load(param);
 #### <a name="returns"></a>傳回
 void
 
-### <a name="navigatetopage(page:-page)"></a>navigateToPage(page:Page)
+### <a name="navigatetopagepage-page"></a>navigateToPage(page:Page)
 在應用程式執行個體中開啟指定的頁面。
 
 #### <a name="syntax"></a>語法
@@ -448,7 +448,7 @@ OneNote.run(function (context) {
 ```
 
 
-### <a name="navigatetopagewithclienturl(url:-string)"></a>navigateToPageWithClientUrl(url: string)
+### <a name="navigatetopagewithclienturlurl-string"></a>navigateToPageWithClientUrl(url: string)
 取得指定的頁面，並且在應用程式執行個體中開啟。
 
 #### <a name="syntax"></a>語法
@@ -459,7 +459,7 @@ applicationObject.navigateToPageWithClientUrl(url);
 #### <a name="parameters"></a>參數
 | 參數	    | 類型	   |描述|
 |:---------------|:--------|:----------|
-|URL|字串|要開啟頁面的用戶端 URL。|
+|URL|string|要開啟頁面的用戶端 URL。|
 
 #### <a name="returns"></a>傳回
 [Page](page.md)

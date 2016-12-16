@@ -1,6 +1,7 @@
 
 # <a name="office-add-ins-development-lifecycle"></a>Office 增益集開發生命週期
 
+>**附註：**建立增益集時，如果您打算[發佈](../publish/publish.md)增益集至 Office 市集中，請確定您符合 [Office 市集驗證原則](https://msdn.microsoft.com/en-us/library/jj220035.aspx)。例如，若要通過驗證，增益集必須可以在所有的平台上運作，其平台支援您在資訊清單內 Requirements 元素中所定義的方法 (請參閱 [區段 4.12](https://msdn.microsoft.com/en-us/library/jj220035.aspx#Anchor_3))。
 
 Office 增益集的一般開發生命週期包括下列步驟︰
 

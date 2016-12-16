@@ -4,21 +4,20 @@
 
 Excel 增益集可在多種 Office 版本上執行，包含 Office 2016 for Windows、iPad 版 Office、Mac 版 Office 以及 Office Online。下表列出 Excel 需求集合、支援需求集合的 Office 主應用程式，以及這些應用程式的組建或版本號碼。 
 
-|  需求集合  |  Office 2016 for Windows*  |  Office 2016 for iPad  |  Mac 版 Office 2016  | Office Online  |
-|:-----|-----|:-----|:-----|:-----|
-| ExcelApi 1.3  | 版本 1608 (組建 7369.2055) 或更新版本| 1.27 或更新版本 |  15.27 或更新版本| 2016 年 9 月 | 
-| ExcelApi 1.2  | 版本 1601 (組建 6741.2088) 或更新版本 | 1.21 或更新版本 | 15.22 或更新版本| 2016 年 1 月 |
-| ExcelApi 1.1  | 版本 1509 (組建 4266.1001) 或更新版本 | 1.19 或更新版本 | 15.20 或更新版本| 2016 年 1 月 |
+|  需求集合  |  Office 2016 for Windows*  |  Office 2016 for iPad  |  Mac 版 Office 2016  | Office Online  |  Office Online 伺服器  |
+|:-----|-----|:-----|:-----|:-----|:-----|
+| ExcelApi 1.3  | 版本 1608 (組建 7369.2055) 或更新版本| 1.27 或更新版本 |  15.27 或更新版本| 2016 年 9 月 | 版本 1608 (組建 7601.6800) 或更新版本|
+| ExcelApi 1.2  | 版本 1601 (組建 6741.2088) 或更新版本 | 1.21 或更新版本 | 15.22 或更新版本| 2016 年 1 月 ||
+| ExcelApi 1.1  | 版本 1509 (組建 4266.1001) 或更新版本 | 1.19 或更新版本 | 15.20 或更新版本| 2016 年 1 月 ||
 
-> &#42; **附註**：透過 MSI 安裝的 Office 2016 組建編號是 16.0.4266.1001。這個版本只會包含 ExcelApi 1.1 需求集合。
+> **附註**：透過 MSI 安裝的 Office 2016 組建編號是 16.0.4266.1001。這個版本只會包含 ExcelApi 1.1 需求集合。
 
-若要深入了解版本和組建編號，請參閱︰
+若要瞭解關於版本、組建編號及 Office Online Server 的詳細資訊，請參閱︰
 
-- 
-  [Office 365 用戶端的更新通道版本和組建編號](https://technet.microsoft.com/en-us/library/mt592918.aspx)
+- [Office 365 用戶端的更新通道版本和組建編號](https://technet.microsoft.com/en-us/library/mt592918.aspx)
 - [我使用的是哪個版本的 Office？](https://support.office.com/en-us/article/What-version-of-Office-am-I-using-932788b8-a3ce-44bf-bb09-e334518b8b19?ui=en-US&rs=en-US&ad=US&fromAR=1)
-- 
-  [您可以在其中找到 Office 365 用戶端應用程式的版本和組建編號](https://technet.microsoft.com/en-us/library/mt592918.aspx#Anchor_1)
+- [您可以在其中找到 Office 365 用戶端應用程式的版本和組建編號](https://technet.microsoft.com/en-us/library/mt592918.aspx#Anchor_1)
+- [Office Online Server 概觀](https://technet.microsoft.com/en-us/library/jj219437(v=office.16).aspx)
 
 ## <a name="office-common-api-requirement-sets"></a>Office 通用 API 需求集合
 如需通用 API 需求集合的詳細資訊，請參閱 [Office 通用 API 需求集合](office-add-in-requirement-sets.md)。
@@ -28,53 +27,53 @@ Excel 增益集可在多種 Office 版本上執行，包含 Office 2016 for Wind
 
 |物件| 新功能| 描述|需求集合|
 |:----|:----|:----|:----|
-|[繫結](https://github.com/OfficeDev/office-js-docs/tree/ExcelJs_1.3_OpenSpec/reference/excel/binding.md)|_方法_ > [delete()](https://github.com/OfficeDev/office-js-docs/tree/ExcelJs_1.3_OpenSpec/reference/excel/binding.md#delete)|刪除繫結。|1.3|
-|[bindingCollection](https://github.com/OfficeDev/office-js-docs/tree/ExcelJs_1.3_OpenSpec/reference/excel/bindingcollection.md)|_方法_ > [add(range:Range or string, bindingType: string, id: string)](https://github.com/OfficeDev/office-js-docs/tree/ExcelJs_1.3_OpenSpec/reference/excel/bindingcollection.md#addrange-range-or-string-bindingtype-string-id-string)|將新的繫結新增至特定範圍。|1.3|
-|[bindingCollection](https://github.com/OfficeDev/office-js-docs/tree/ExcelJs_1.3_OpenSpec/reference/excel/bindingcollection.md)|_方法_ > [addFromNamedItem(name: string, bindingType: string, id: string)](https://github.com/OfficeDev/office-js-docs/tree/ExcelJs_1.3_OpenSpec/reference/excel/bindingcollection.md#addfromnameditemname-string-bindingtype-string-id-string)|根據活頁簿中具名的項目，新增新的繫結。|1.3|
-|[bindingCollection](https://github.com/OfficeDev/office-js-docs/tree/ExcelJs_1.3_OpenSpec/reference/excel/bindingcollection.md)|_方法_ > [addFromSelection(bindingType: string, id: string)](https://github.com/OfficeDev/office-js-docs/tree/ExcelJs_1.3_OpenSpec/reference/excel/bindingcollection.md#addfromselectionbindingtype-string-id-string)|根據目前的選取範圍，新增新的繫結。|1.3|
-|[bindingCollection](https://github.com/OfficeDev/office-js-docs/tree/ExcelJs_1.3_OpenSpec/reference/excel/bindingcollection.md)|_方法_ > [getItemOrNull(id: string)](https://github.com/OfficeDev/office-js-docs/tree/ExcelJs_1.3_OpenSpec/reference/excel/bindingcollection.md#getitemornullid-string)|藉由識別碼取得繫結物件。如果繫結物件不存在，傳回物件的 isNull 屬性為 true。|1.3|
-|[chartCollection](https://github.com/OfficeDev/office-js-docs/tree/ExcelJs_1.3_OpenSpec/reference/excel/chartcollection.md)|_方法_ > [getItemOrNull(name: string)](https://github.com/OfficeDev/office-js-docs/tree/ExcelJs_1.3_OpenSpec/reference/excel/chartcollection.md#getitemornullname-string)|使用其名稱取得圖表。如果有多個圖表具有相同的名稱，則會傳回第一個圖表。|1.3|
-|[namedItemCollection](https://github.com/OfficeDev/office-js-docs/tree/ExcelJs_1.3_OpenSpec/reference/excel/nameditemcollection.md)|_方法_ > [getItemOrNull(name: string)](https://github.com/OfficeDev/office-js-docs/tree/ExcelJs_1.3_OpenSpec/reference/excel/nameditemcollection.md#getitemornullname-string)|使用其名稱取得 nameditem 物件。如果 nameditem 物件不存在，傳回物件的 isNull 屬性為 true。|1.3|
-|[pivotTable](https://github.com/OfficeDev/office-js-docs/tree/ExcelJs_1.3_OpenSpec/reference/excel/pivottable.md)|_屬性_ > 名稱|樞紐分析表的名稱。|1.3|
-|[pivotTable](https://github.com/OfficeDev/office-js-docs/tree/ExcelJs_1.3_OpenSpec/reference/excel/pivottable.md)|_關聯性_ > 工作表|包含目前樞紐分析表的工作表。唯讀。|1.3|
-|[pivotTable](https://github.com/OfficeDev/office-js-docs/tree/ExcelJs_1.3_OpenSpec/reference/excel/pivottable.md)|_方法_ > [refresh()](https://github.com/OfficeDev/office-js-docs/tree/ExcelJs_1.3_OpenSpec/reference/excel/pivottable.md#refresh)|重新整理樞紐分析表。|1.3|
-|[pivotTableCollection](https://github.com/OfficeDev/office-js-docs/tree/ExcelJs_1.3_OpenSpec/reference/excel/pivottablecollection.md)|_屬性_ > 項目|pivotTable 物件的集合。唯讀。|1.3|
-|[pivotTableCollection](https://github.com/OfficeDev/office-js-docs/tree/ExcelJs_1.3_OpenSpec/reference/excel/pivottablecollection.md)|_方法_ > [getItem(name: string)](https://github.com/OfficeDev/office-js-docs/tree/ExcelJs_1.3_OpenSpec/reference/excel/pivottablecollection.md#getitemname-string)|藉由名稱取得樞紐分析表。|1.3|
-|[pivotTableCollection](https://github.com/OfficeDev/office-js-docs/tree/ExcelJs_1.3_OpenSpec/reference/excel/pivottablecollection.md)|_方法_ > [getItemOrNull(name: string)](https://github.com/OfficeDev/office-js-docs/tree/ExcelJs_1.3_OpenSpec/reference/excel/pivottablecollection.md#getitemornullname-string)|藉由名稱取得樞紐分析表。如果樞紐分析表不存在，傳回物件的 isNull 屬性為 true。|1.3|
-|[範圍](https://github.com/OfficeDev/office-js-docs/tree/ExcelJs_1.3_OpenSpec/reference/excel/range.md)|_方法_ > [getIntersectionOrNull(anotherRange:Range or string)](https://github.com/OfficeDev/office-js-docs/tree/ExcelJs_1.3_OpenSpec/reference/excel/range.md#getintersectionornullanotherrange-range-or-string)|取得範圍物件，代表特定範圍的矩形交集。如果找到沒有交集，則會傳回 null 物件。|1.3|
-|[範圍](https://github.com/OfficeDev/office-js-docs/tree/ExcelJs_1.3_OpenSpec/reference/excel/range.md)|_方法_ > [getVisibleView()](https://github.com/OfficeDev/office-js-docs/tree/ExcelJs_1.3_OpenSpec/reference/excel/range.md#getvisibleview)|代表目前範圍的可見資料列。|1.3|
-|[rangeView](https://github.com/OfficeDev/office-js-docs/tree/ExcelJs_1.3_OpenSpec/reference/excel/rangeview.md)|_屬性_ > cellAddresses|表示 RangeView 的儲存格位址。唯讀。|1.3|
-|[rangeView](https://github.com/OfficeDev/office-js-docs/tree/ExcelJs_1.3_OpenSpec/reference/excel/rangeview.md)|_屬性_ > columnWidth|傳回可見資料行的數目。唯讀。|1.3|
-|[rangeView](https://github.com/OfficeDev/office-js-docs/tree/ExcelJs_1.3_OpenSpec/reference/excel/rangeview.md)|_屬性_ > 公式|代表 A1 樣式標記法的公式。|1.3|
-|[rangeView](https://github.com/OfficeDev/office-js-docs/tree/ExcelJs_1.3_OpenSpec/reference/excel/rangeview.md)|_屬性_ > formulasLocal|以使用者的語言和數字格式地區設定，表示 A1 樣式標記法的公式。例如，英文的 "=SUM(A1, 1.5)" 公式在德文中會表示為 "=SUMME(A1; 1,5)"。|1.3|
-|[rangeView](https://github.com/OfficeDev/office-js-docs/tree/ExcelJs_1.3_OpenSpec/reference/excel/rangeview.md)|_屬性_ > formulasR1C1|代表 R1C1 樣式標記法的公式。|1.3|
-|[rangeView](https://github.com/OfficeDev/office-js-docs/tree/ExcelJs_1.3_OpenSpec/reference/excel/rangeview.md)|_屬性_ > 索引|傳回值，表示 RangeView 的索引。唯讀。|1.3|
-|[rangeView](https://github.com/OfficeDev/office-js-docs/tree/ExcelJs_1.3_OpenSpec/reference/excel/rangeview.md)|_屬性_ > numberFormat|代表特定儲存格的 Excel 數字格式代碼。|1.3|
-|[rangeView](https://github.com/OfficeDev/office-js-docs/tree/ExcelJs_1.3_OpenSpec/reference/excel/rangeview.md)|_屬性_ > rowCount|傳回可見資料列的數目。唯讀。|1.3|
-|[rangeView](https://github.com/OfficeDev/office-js-docs/tree/ExcelJs_1.3_OpenSpec/reference/excel/rangeview.md)|_屬性_ > 文字|所指定範圍的文字值。文字值與儲存格寬度無關。Excel UI 中出現的 # 替代符號不會影響 API 所傳回的文字值。唯讀。|1.3|
-|[rangeView](https://github.com/OfficeDev/office-js-docs/tree/ExcelJs_1.3_OpenSpec/reference/excel/rangeview.md)|_屬性_ > valueTypes|代表每個儲存格的資料類型。唯讀。可能的值為：Unknown、Empty、String、Integer、Double、Boolean、Error。|1.3|
-|[rangeView](https://github.com/OfficeDev/office-js-docs/tree/ExcelJs_1.3_OpenSpec/reference/excel/rangeview.md)|_屬性_ > 值|代表所指定範圍檢視的原始值。傳回的資料可能是 string、number 或 boolean 類型。包含錯誤的儲存格會傳回錯誤字串。|1.3|
-|[rangeView](https://github.com/OfficeDev/office-js-docs/tree/ExcelJs_1.3_OpenSpec/reference/excel/rangeview.md)|_關聯性_ > 資料列|代表與範圍關聯的範圍檢視集合。唯讀。|1.3|
-|[rangeView](https://github.com/OfficeDev/office-js-docs/tree/ExcelJs_1.3_OpenSpec/reference/excel/rangeview.md)|_方法_ > [getRange()](https://github.com/OfficeDev/office-js-docs/tree/ExcelJs_1.3_OpenSpec/reference/excel/rangeview.md#getrange)|取得與目前的 RangeView 相關聯的父項範圍。|1.3|
-|[rangeViewCollection](https://github.com/OfficeDev/office-js-docs/tree/ExcelJs_1.3_OpenSpec/reference/excel/rangeviewcollection.md)|_屬性_ > 項目|rangeView 物件的集合。唯讀。|1.3|
-|[rangeViewCollection](https://github.com/OfficeDev/office-js-docs/tree/ExcelJs_1.3_OpenSpec/reference/excel/rangeviewcollection.md)|_方法_ > [getItemAt(index: number)](https://github.com/OfficeDev/office-js-docs/tree/ExcelJs_1.3_OpenSpec/reference/excel/rangeviewcollection.md#getitematindex-number)|透過其索引取得 RangeView 資料列。以 0 開始編製索引。|1.3|
-|[設定](https://github.com/OfficeDev/office-js-docs/tree/ExcelJs_1.3_OpenSpec/reference/excel/setting.md)|_屬性_ > 索引鍵|傳回代表設定識別碼的索引鍵。唯讀。|1.3|
-|[設定](https://github.com/OfficeDev/office-js-docs/tree/ExcelJs_1.3_OpenSpec/reference/excel/setting.md)|_方法_ > [delete()](https://github.com/OfficeDev/office-js-docs/tree/ExcelJs_1.3_OpenSpec/reference/excel/setting.md#delete)|刪除設定。|1.3|
-|[settingCollection](https://github.com/OfficeDev/office-js-docs/tree/ExcelJs_1.3_OpenSpec/reference/excel/settingcollection.md)|_屬性_ > 項目|設定物件的集合。唯讀。|1.3|
-|[settingCollection](https://github.com/OfficeDev/office-js-docs/tree/ExcelJs_1.3_OpenSpec/reference/excel/settingcollection.md)|_方法_ > [getItem(key: string)](https://github.com/OfficeDev/office-js-docs/tree/ExcelJs_1.3_OpenSpec/reference/excel/settingcollection.md#getitemkey-string)|透過索引鍵取得設定項目。|1.3|
-|[settingCollection](https://github.com/OfficeDev/office-js-docs/tree/ExcelJs_1.3_OpenSpec/reference/excel/settingcollection.md)|_方法_ > [getItemOrNull(key: string)](https://github.com/OfficeDev/office-js-docs/tree/ExcelJs_1.3_OpenSpec/reference/excel/settingcollection.md#getitemornullkey-string)|透過索引鍵取得設定項目。如果設定物件不存在，傳回物件的 isNull 屬性為 true。|1.3|
-|[settingCollection](https://github.com/OfficeDev/office-js-docs/tree/ExcelJs_1.3_OpenSpec/reference/excel/settingcollection.md)|_方法_ > [set(key: string, value: string)](https://github.com/OfficeDev/office-js-docs/tree/ExcelJs_1.3_OpenSpec/reference/excel/settingcollection.md#setkey-string-value-string)|將指定的設定設定或新增至活頁簿。|1.3|
-|[settingsChangedEventArgs](https://github.com/OfficeDev/office-js-docs/tree/ExcelJs_1.3_OpenSpec/reference/excel/settingschangedeventargs.md)|_關聯性_ > settingCollection|取得代表引發 settingsChanged 事件之繫結的 Settings 物件。|1.3|
-|[表格](https://github.com/OfficeDev/office-js-docs/tree/ExcelJs_1.3_OpenSpec/reference/excel/table.md)|_屬性_ > highlightFirstColumn|指出第一個資料行是否包含特殊格式。|1.3|
-|[表格](https://github.com/OfficeDev/office-js-docs/tree/ExcelJs_1.3_OpenSpec/reference/excel/table.md)|_屬性_ > highlightFirstColumn|指出最後一個資料行是否包含特殊格式。|1.3|
-|[表格](https://github.com/OfficeDev/office-js-docs/tree/ExcelJs_1.3_OpenSpec/reference/excel/table.md)|_屬性_ > showBandedColumns|表示資料行是否顯示帶狀格式，其中奇數的資料行會以不同於偶數資料行的方式反白顯示，讓閱讀資料表更方便。|1.3|
-|[表格](https://github.com/OfficeDev/office-js-docs/tree/ExcelJs_1.3_OpenSpec/reference/excel/table.md)|_屬性_ > showBandedRows|表示資料列是否顯示帶狀格式，其中奇數的資料列會以不同於偶數資料列的方式反白顯示，讓閱讀資料表更方便。|1.3|
-|[表格](https://github.com/OfficeDev/office-js-docs/tree/ExcelJs_1.3_OpenSpec/reference/excel/table.md)|_屬性_ > showFilterButton|表示篩選按鈕是否在各個資料行標頭上方可見。只有在資料表包含標頭資料列時允許設定這個選項。|1.3|
-|[tableCollection](https://github.com/OfficeDev/office-js-docs/tree/ExcelJs_1.3_OpenSpec/reference/excel/tablecollection.md)|_方法_ > [getItemOrNull(key: number or string)](https://github.com/OfficeDev/office-js-docs/tree/ExcelJs_1.3_OpenSpec/reference/excel/tablecollection.md#getitemornullkey-number-or-string)|依名稱或識別碼取得資料表。如果資料表不存在，傳回物件的 isNull 屬性為 true。|1.3|
-|[tableColumnCollection](https://github.com/OfficeDev/office-js-docs/tree/ExcelJs_1.3_OpenSpec/reference/excel/tablecolumncollection.md)|_方法_ > [getItemOrNull(key: number or string)](https://github.com/OfficeDev/office-js-docs/tree/ExcelJs_1.3_OpenSpec/reference/excel/tablecolumncollection.md#getitemornullkey-number-or-string)|依名稱或識別碼取得資料行物件。如果資料行物件不存在，傳回物件的 isNull 屬性為 true。|1.3|
-|[活頁簿](https://github.com/OfficeDev/office-js-docs/tree/ExcelJs_1.3_OpenSpec/reference/excel/workbook.md)|_關聯性_ > 樞紐分析表|代表與活頁簿關聯的樞紐分析表集合。唯讀。|1.3|
-|[活頁簿](https://github.com/OfficeDev/office-js-docs/tree/ExcelJs_1.3_OpenSpec/reference/excel/workbook.md)|_關聯性_ > 設定|代表與活頁簿關聯的設定集合。唯讀。|1.3|
-|[工作表](https://github.com/OfficeDev/office-js-docs/tree/ExcelJs_1.3_OpenSpec/reference/excel/worksheet.md)|_關聯性_ > 樞紐分析表|代表屬於活頁簿一部份的樞紐分析表集合。唯讀。|1.3|
+|[繫結](../excel/binding.md)|_方法_ > [delete()](../excel/binding.md#delete)|刪除繫結。|1.3|
+|[bindingCollection](../excel/bindingcollection.md)|_方法_ > [add(range:Range or string, bindingType: string, id: string)](../excel/bindingcollection.md#addrange-range-or-string-bindingtype-string-id-string)|將新的繫結新增至特定範圍。|1.3|
+|[bindingCollection](../excel/bindingcollection.md)|_方法_ > [addFromNamedItem(name: string, bindingType: string, id: string)](../excel/bindingcollection.md#addfromnameditemname-string-bindingtype-string-id-string)|根據活頁簿中具名的項目，新增新的繫結。|1.3|
+|[bindingCollection](../excel/bindingcollection.md)|_方法_ > [addFromSelection(bindingType: string, id: string)](../excel/bindingcollection.md#addfromselectionbindingtype-string-id-string)|根據目前的選取範圍，新增新的繫結。|1.3|
+|[bindingCollection](../excel/bindingcollection.md)|_方法_ > [getItemOrNull(id: string)](../excel/bindingcollection.md#getitemornullid-string)|藉由識別碼取得繫結物件。如果繫結物件不存在，傳回物件的 isNull 屬性為 true。|1.3|
+|[chartCollection](../excel/chartcollection.md)|_方法_ > [getItemOrNull(name: string)](../excel/chartcollection.md#getitemornullname-string)|使用其名稱取得圖表。如果有多個圖表具有相同的名稱，則會傳回第一個圖表。|1.3|
+|[namedItemCollection](../excel/nameditemcollection.md)|_方法_ > [getItemOrNull(name: string)](../excel/nameditemcollection.md#getitemornullname-string)|使用其名稱取得 nameditem 物件。如果 nameditem 物件不存在，傳回物件的 isNull 屬性為 true。|1.3|
+|[pivotTable](../excel/pivottable.md)|_屬性_ > 名稱|樞紐分析表的名稱。|1.3|
+|[pivotTable](../excel/pivottable.md)|_關聯性_ > 工作表|包含目前樞紐分析表的工作表。唯讀。|1.3|
+|[pivotTable](../excel/pivottable.md)|_方法_ > [refresh()](../excel/pivottable.md#refresh)|重新整理樞紐分析表。|1.3|
+|[pivotTableCollection](../excel/pivottablecollection.md)|_屬性_ > 項目|pivotTable 物件的集合。唯讀。|1.3|
+|[pivotTableCollection](../excel/pivottablecollection.md)|_方法_ > [getItem(name: string)](../excel/pivottablecollection.md#getitemname-string)|藉由名稱取得樞紐分析表。|1.3|
+|[pivotTableCollection](../excel/pivottablecollection.md)|_方法_ > [getItemOrNull(name: string)](../excel/pivottablecollection.md#getitemornullname-string)|藉由名稱取得樞紐分析表。如果樞紐分析表不存在，傳回物件的 isNull 屬性為 true。|1.3|
+|[範圍](../excel/range.md)|_方法_ > [getIntersectionOrNull(anotherRange:Range or string)](../excel/range.md#getintersectionornullanotherrange-range-or-string)|取得範圍物件，代表特定範圍的矩形交集。如果找到沒有交集，則會傳回 null 物件。|1.3|
+|[範圍](../excel/range.md)|_方法_ > [getVisibleView()](../excel/range.md#getvisibleview)|代表目前範圍的可見資料列。|1.3|
+|[rangeView](../excel/rangeview.md)|_屬性_ > cellAddresses|表示 RangeView 的儲存格位址。唯讀。|1.3|
+|[rangeView](../excel/rangeview.md)|_屬性_ > columnWidth|傳回可見資料行的數目。唯讀。|1.3|
+|[rangeView](../excel/rangeview.md)|_屬性_ > 公式|代表 A1 樣式標記法的公式。|1.3|
+|[rangeView](../excel/rangeview.md)|_屬性_ > formulasLocal|以使用者的語言和數字格式地區設定，表示 A1 樣式標記法的公式。例如，英文的 "=SUM(A1, 1.5)" 公式在德文中會表示為 "=SUMME(A1; 1,5)"。|1.3|
+|[rangeView](../excel/rangeview.md)|_屬性_ > formulasR1C1|代表 R1C1 樣式標記法的公式。|1.3|
+|[rangeView](../excel/rangeview.md)|_屬性_ > 索引|傳回值，表示 RangeView 的索引。唯讀。|1.3|
+|[rangeView](../excel/rangeview.md)|_屬性_ > numberFormat|代表特定儲存格的 Excel 數字格式代碼。|1.3|
+|[rangeView](../excel/rangeview.md)|_屬性_ > rowCount|傳回可見資料列的數目。唯讀。|1.3|
+|[rangeView](../excel/rangeview.md)|_屬性_ > 文字|所指定範圍的文字值。文字值與儲存格寬度無關。Excel UI 中出現的 # 替代符號不會影響 API 所傳回的文字值。唯讀。|1.3|
+|[rangeView](../excel/rangeview.md)|_屬性_ > valueTypes|代表每個儲存格的資料類型。唯讀。可能的值為：Unknown、Empty、String、Integer、Double、Boolean、Error。|1.3|
+|[rangeView](../excel/rangeview.md)|_屬性_ > 值|代表所指定範圍檢視的原始值。傳回的資料可能是 string、number 或 boolean 類型。包含錯誤的儲存格會傳回錯誤字串。|1.3|
+|[rangeView](../excel/rangeview.md)|_關聯性_ > 資料列|代表與範圍關聯的範圍檢視集合。唯讀。|1.3|
+|[rangeView](../excel/rangeview.md)|_方法_ > [getRange()](../excel/rangeview.md#getrange)|取得與目前的 RangeView 相關聯的父項範圍。|1.3|
+|[rangeViewCollection](../excel/rangeviewcollection.md)|_屬性_ > 項目|rangeView 物件的集合。唯讀。|1.3|
+|[rangeViewCollection](../excel/rangeviewcollection.md)|_方法_ > [getItemAt(index: number)](../excel/rangeviewcollection.md#getitematindex-number)|透過其索引取得 RangeView 資料列。以 0 開始編製索引。|1.3|
+|[設定](../excel/setting.md)|_屬性_ > 索引鍵|傳回代表設定識別碼的索引鍵。唯讀。|1.3|
+|[設定](../excel/setting.md)|_方法_ > [delete()](../excel/setting.md#delete)|刪除設定。|1.3|
+|[settingCollection](../excel/settingcollection.md)|_屬性_ > 項目|設定物件的集合。唯讀。|1.3|
+|[settingCollection](../excel/settingcollection.md)|_方法_ > [getItem(key: string)](../excel/settingcollection.md#getitemkey-string)|透過索引鍵取得設定項目。|1.3|
+|[settingCollection](../excel/settingcollection.md)|_方法_ > [getItemOrNull(key: string)](../excel/settingcollection.md#getitemornullkey-string)|透過索引鍵取得設定項目。如果設定物件不存在，傳回物件的 isNull 屬性為 true。|1.3|
+|[settingCollection](../excel/settingcollection.md)|_方法_ > [set(key: string, value: string)](../excel/settingcollection.md#setkey-string-value-string)|將指定的設定設定或新增至活頁簿。|1.3|
+|[settingsChangedEventArgs](../excel/settingschangedeventargs.md)|_關聯性_ > settingCollection|取得代表引發 settingsChanged 事件之繫結的 Settings 物件。|1.3|
+|[表格](../excel/table.md)|_屬性_ > highlightFirstColumn|指出第一個資料行是否包含特殊格式。|1.3|
+|[表格](../excel/table.md)|_屬性_ > highlightFirstColumn|指出最後一個資料行是否包含特殊格式。|1.3|
+|[表格](../excel/table.md)|_屬性_ > showBandedColumns|表示資料行是否顯示帶狀格式，其中奇數的資料行會以不同於偶數資料行的方式反白顯示，讓閱讀資料表更方便。|1.3|
+|[表格](../excel/table.md)|_屬性_ > showBandedRows|表示資料列是否顯示帶狀格式，其中奇數的資料列會以不同於偶數資料列的方式反白顯示，讓閱讀資料表更方便。|1.3|
+|[表格](../excel/table.md)|_屬性_ > showFilterButton|表示篩選按鈕是否在各個資料行標頭上方可見。只有在資料表包含標頭資料列時允許設定這個選項。|1.3|
+|[tableCollection](../excel/tablecollection.md)|_方法_ > [getItemOrNull(key: number or string)](../excel/tablecollection.md#getitemornullkey-number-or-string)|依名稱或識別碼取得資料表。如果資料表不存在，傳回物件的 isNull 屬性為 true。|1.3|
+|[tableColumnCollection](../excel/tablecolumncollection.md)|_方法_ > [getItemOrNull(key: number or string)](../excel/tablecolumncollection.md#getitemornullkey-number-or-string)|依名稱或識別碼取得資料行物件。如果資料行物件不存在，傳回物件的 isNull 屬性為 true。|1.3|
+|[活頁簿](../excel/workbook.md)|_關聯性_ > 樞紐分析表|代表與活頁簿關聯的樞紐分析表集合。唯讀。|1.3|
+|[活頁簿](../excel/workbook.md)|_關聯性_ > 設定|代表與活頁簿關聯的設定集合。唯讀。|1.3|
+|[工作表](../excel/worksheet.md)|_關聯性_ > 樞紐分析表|代表屬於活頁簿一部份的樞紐分析表集合。唯讀。|1.3|
 
 ## <a name="whats-new-in-excel-javascript-api-12"></a>Excel JavaScript API 1.2 的新功能
 以下是需求集合 1.2 中 Excel JavaScript API 的新功能。 

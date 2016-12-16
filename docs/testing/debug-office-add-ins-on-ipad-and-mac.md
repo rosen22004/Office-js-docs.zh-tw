@@ -3,7 +3,7 @@
 
 您可以在 Windows 上使用 Visual Studio 來開發並偵錯增益集，但您無法使用它來偵錯 iPad 或 Mac 上的增益集。由於增益集是使用 HTML 和 Javascript 開發，因此設計為跨平台使用，但不同瀏覽器呈現 HTML 的方式可能有細微差異。本文說明如何偵錯 iPad 或 Mac 上執行的增益集。 
 
-## <a name="debugging-with-vorlon.js"></a>以 Vorlon.js 偵錯 
+## <a name="debugging-with-vorlonjs"></a>以 Vorlon.js 偵錯 
 
 Vorlon.js 是網頁的偵錯工具，類似於 F12 工具，設計用來遠端工作，並可讓您跨不同的裝置偵錯網頁。如需詳細資訊，請參閱 [Vorlon 網站](http://www.vorlonjs.com)。  
 
@@ -19,7 +19,7 @@ Vorlon.js 是網頁的偵錯工具，類似於 F12 工具，設計用來遠端�
 
 5.  使用命令 `sudo vorlon` 執行 Vorlon 伺服器。 
 
-6.  開啟瀏覽器視窗並移至 [http://localhost:1337](http://localhost:1337)，也就是 Vorlon 介面。信任安全性憑證，系統應該會提示您執行。您也可以在 /Server/cert 下的 Vorlon 資料夾中找到安全性憑證。 
+6.  開啟瀏覽器視窗並移至 [http://localhost:1337](http://localhost:1337)，也就是 Vorlon 介面。出現提示時，選擇**永遠**以信任安全性認證。您也可以在 /Server/cert 下的 Vorlon 資料夾中找到安全性憑證。 
 
 7.  將下列指令碼標記新增至增益集的 Home.html 檔 (或主要 HTML 檔案) 的 `<head>` 區段︰
 ```    

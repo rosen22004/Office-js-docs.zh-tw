@@ -5,6 +5,7 @@
 - 使用**內容增益集**，將動態 HTML5 內容新增到您的簡報。例如，請參閱[適用於 PowerPoint 的 LucidChart 圖表](https://store.office.com/en-us/app.aspx?assetid=WA104380117&ui=en-US&rs=en-US&ad=US&clickedfilter=OfficeProductFilter%3APowerPoint&productgroup=PowerPoint&homprd=PowerPoint&sourcecorrid=950950b7-aa6c-4766-95fa-e75d37266c21&homappcat=Productivity&homapppos=3&homchv=2&appredirect=false)增益集，您可用於將 LucidChart 中的互動式圖表插入您的投影片組中。
 - 使用**工作窗格增益集**帶入參考資訊，或透過服務將資料插入投影片中。例如，請參閱 [Shutterstock 影像](https://store.office.com/en-us/app.aspx?assetid=WA104380169&ui=en-US&rs=en-US&ad=US&clickedfilter=OfficeProductFilter%3APowerPoint&productgroup=PowerPoint&homprd=PowerPoint&sourcecorrid=950950b7-aa6c-4766-95fa-e75d37266c21&homappcat=Editor%2527s%2BPicks&homapppos=0&homchv=1&appredirect=false)增益集，您可用於將專業相片新增至您的簡報。 
 
+>**附註：**建立增益集時，如果您打算[發佈](../publish/publish.md)增益集至 Office 市集中，請確定您符合 [Office 市集驗證原則](https://msdn.microsoft.com/en-us/library/jj220035.aspx)。例如，若要通過驗證，增益集必須可以在所有的平台上運作，其平台支援您在資訊清單內 Requirements 元素中所定義的方法 (請參閱 [區段 4.12](https://msdn.microsoft.com/en-us/library/jj220035.aspx#Anchor_3))。
 
 ## <a name="powerpoint-add-in-scenarios"></a>PowerPoint 增益集案例
 

@@ -3,9 +3,13 @@
 
 您是否要建立一個解決方案，擴充 Word 功能 - 例如，牽涉到自動化文件組件，或將 Word 文件中的資料繫結至其他資料來源以及從中存取？您可以使用 Office 增益集平台，包括 Word JavaScript API 和適用於 Office 的 JavaScript API，來擴充在 Windows 桌上型電腦、Mac 或是在雲端中執行的 Word 用戶端。
 
-Word 增益集是您在 [Office 增益集平台](../overview/office-add-ins.md)上擁有的許多開發選項之一。您可以使用增益集命令，來擴充 Word UI，並啟動工作窗格，它會執行 JavaScript，與 Word 文件中的內容互動。您可以在瀏覽器中執行的任何程式碼都可以在 Word 增益集中執行。與 Word 文件中的內容互動的增益集會建立要求以在 Word 物件上執行，並且同步處理物件狀態。下圖顯示在工作窗格中執行的 Word 增益集的範例。
+Word 增益集是您在 [Office 增益集平台](../overview/office-add-ins.md)上擁有的許多開發選項之一。您可以使用增益集命令，來擴充 Word UI，並啟動工作窗格，它會執行 JavaScript，與 Word 文件中的內容互動。您可以在瀏覽器中執行的任何程式碼都可以在 Word 增益集中執行。與 Word 文件中的內容互動的增益集會建立要求以在 Word 物件上執行，並且同步處理物件狀態。 
 
-**圖 1.在 Word 的工作窗格中執行的增益集**
+>**附註：**建立增益集時，如果您打算[發佈](../publish/publish.md)增益集至 Office 市集中，請確定您符合 [Office 市集驗證原則](https://msdn.microsoft.com/en-us/library/jj220035.aspx)。例如，若要通過驗證，增益集必須可以在所有的平台上運作，其平台支援您在資訊清單內 Requirements 元素中所定義的方法 (請參閱 [區段 4.12](https://msdn.microsoft.com/en-us/library/jj220035.aspx#Anchor_3))。
+
+下圖顯示在工作窗格中執行的 Word 增益集的範例。
+
+**圖 1。在 Word 的工作窗格中執行的增益集**
 
 ![在 Word 的工作窗格中執行的增益集](../../images/WordAddinShowHostClient.png)
 
@@ -65,7 +69,7 @@ Word JavaScript API 可讓您的應用程式存取在 Word 文件中找到的的
 
 開發您的增益集之後，您可以將其[發佈](../publish/publish.md)至網路共用、應用程式目錄或 Office 市集。
 
-## <a name="what's-coming-up-for-word-add-ins?"></a>Word 增益集接下來是什麼？
+## <a name="whats-coming-up-for-word-add-ins"></a>Word 增益集接下來是什麼？
 
 我們設計和開發新的 Word 增益集 API 時，我們會將其放在[開放式 API 規格](../../reference/openspec.md)頁面中，可供您提出意見反應。了解 Word JavaScript API 即將推出的新功能，並對我們的設計規格提出意見反應。
 

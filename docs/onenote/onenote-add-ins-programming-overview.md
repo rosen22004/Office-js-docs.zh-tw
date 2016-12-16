@@ -2,6 +2,8 @@
 
 OneNote 為 OneNote Online 增益集推出 JavaScript API。您可以建立工作窗格增益集、內容增益集和增益集命令，與 OneNote 物件互動，並連接到 Web 服務或其他以網路為基礎的資源。
 
+>**附註：**建立增益集時，如果您打算[發佈](../publish/publish.md)增益集至 Office 市集中，請確定您符合 [Office 市集驗證原則](https://msdn.microsoft.com/en-us/library/jj220035.aspx)。例如，若要通過驗證，增益集必須可以在所有的平台上運作，其平台支援您在資訊清單內 Requirements 元素中所定義的方法 (請參閱 [區段 4.12](https://msdn.microsoft.com/en-us/library/jj220035.aspx#Anchor_3))。
+
 增益集是由兩個基本元件所組成︰
 
 - **Web 應用程式**，由網頁以及任何所需的 JavaScript、CSS 或其他檔案所組成。這些檔案是裝載在 Web 伺服器或虛擬主機服務上，例如 Microsoft Azure。在 OneNote Online 中，Web 應用程式會顯示在瀏覽器控制項或 iframe 中。
@@ -19,7 +21,7 @@ OneNote 為 OneNote Online 增益集推出 JavaScript API。您可以建立工�
 - **豐富 API** 適用於 OneNote 特定的作業，透過 **Application** 物件來存取。
 - **一般 API** 由所有 Office 應用程式共用，透過 **Document** 物件來存取。
 
-#### <a name="accessing-the-rich-api-through-the-*application*-object"></a>透過 *Application* 物件來存取豐富 API
+#### <a name="accessing-the-rich-api-through-the-application-object"></a>透過 *Application* 物件來存取豐富 API
 
 使用 **Application** 物件來存取 OneNote 的物件，如 **Notebook**、**Section** 和 **Page**。使用豐富 API，您可以對 Proxy 物件執行批次作業。基本流程如下所示： 
 
@@ -69,7 +71,7 @@ OneNote 為 OneNote Online 增益集推出 JavaScript API。您可以建立工�
 
 在 [API 參考](../../reference/onenote/onenote-add-ins-javascript-reference.md)，中您可以找到支援的 OneNote 物件和作業。
 
-### <a name="accessing-the-common-api-through-the-*document*-object"></a>透過 *Document* 物件來存取一般 API。
+### <a name="accessing-the-common-api-through-the-document-object"></a>透過 *Document* 物件來存取一般 API。
 
 使用 **Document** 物件來存取一般 API，例如 [getSelectedDataAsync](https://dev.office.com/reference/add-ins/shared/document.getselecteddataasync) 和 [setSelectedDataAsync](https://dev.office.com/reference/add-ins/shared/document.setselecteddataasync) 方法。 
 
@@ -93,14 +95,10 @@ OneNote 增益集只支援下列的一般 API：
 
 | API | 附註 |
 |:------|:------|
-| 
-  [Office.context.document.getSelectedDataAsync](https://msdn.microsoft.com/en-us/library/office/fp142294.aspx) | 只有 **Office.CoercionType.Text** 和 **Office.CoercionType.Matrix** |
-| 
-  [Office.context.document.setSelectedDataAsync](https://msdn.microsoft.com/en-us/library/office/fp142145.aspx) | 只有 **Office.CoercionType.Text**、**Office.CoercionType.Image** 和 **Office.CoercionType.Html** | 
-| 
-  [var mySetting = Office.context.document.settings.get(name);](https://msdn.microsoft.com/en-us/library/office/fp142180.aspx) | 只有內容增益集支援設定 | 
-| 
-  [Office.context.document.settings.set(name, value);](https://msdn.microsoft.com/en-us/library/office/fp161063.aspx) | 只有內容增益集支援設定 | 
+| [Office.context.document.getSelectedDataAsync](https://msdn.microsoft.com/en-us/library/office/fp142294.aspx) | 只有 **Office.CoercionType.Text** 和 **Office.CoercionType.Matrix** |
+| [Office.context.document.setSelectedDataAsync](https://msdn.microsoft.com/en-us/library/office/fp142145.aspx) | 只有 **Office.CoercionType.Text**、**Office.CoercionType.Image** 和 **Office.CoercionType.Html** | 
+| [var mySetting = Office.context.document.settings.get(name);](https://msdn.microsoft.com/en-us/library/office/fp142180.aspx) | 只有內容增益集支援設定 | 
+| [Office.context.document.settings.set(name, value);](https://msdn.microsoft.com/en-us/library/office/fp161063.aspx) | 只有內容增益集支援設定 | 
 | [Office.EventType.DocumentSelectionChanged](https://dev.office.com/reference/add-ins/shared/document.selectionchanged.event) ||
 
 一般情況下，您只使用一般 API 來執行豐富 API 中所不支援的一些動作。若要深入瞭解如何使用一般的 API，請參閱 Office 增益集[文件](https://dev.office.com/docs/add-ins/overview/office-add-ins)和[參考](https://dev.office.com/reference/add-ins/javascript-api-for-office)。

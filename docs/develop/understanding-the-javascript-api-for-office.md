@@ -1,11 +1,13 @@
-﻿
+
 # <a name="understanding-the-javascript-api-for-office"></a>了解適用於 Office 的 JavaScript API
 
 
 
 本文提供適用於 Office 的 JavaScript API 和如何使用它的相關資訊。如需參考資訊，請參閱[適用於 Office 的 JavaScript API](../../reference/javascript-api-for-office.md)。如需將 Visual Studio 專案檔更新至最新版的適用於 Office 的 JavaScript API 的相關資訊，請參閱[更新您的適用於 Office 的 JavaScript API 和資訊清單的結構描述檔案的版本](../../docs/develop/update-your-javascript-api-for-office-and-manifest-schema-version.md)。
 
-## <a name="referencing-the-javascript-api-for-office-library-in-your-add-in"></a>在增益集中參考適用於 Office 的 JavaScript API 程式庫
+>**附註：**建立增益集時，如果您打算[發佈](../publish/publish.md)增益集至 Office 市集中，請確定您符合 [Office 市集驗證原則](https://msdn.microsoft.com/en-us/library/jj220035.aspx)。例如，若要通過驗證，增益集必須可以在所有的平台上運作，其平台支援您在資訊清單內 Requirements 元素中所定義的方法 (請參閱 [區段 4.12](https://msdn.microsoft.com/en-us/library/jj220035.aspx#Anchor_3))。
+
+## <a name="referencing-the-javascript-api-for-office-library-in-your-add-in"></a>在增益集中參考適用於 Office 程式庫的 JavaScript API
 
 [JavaScript API for Office](../../reference/javascript-api-for-office.md) 程式庫包含 Office.js 檔案和關聯的主應用程式特定的 .js 檔案，例如 Excel-15.js 和 Outlook-15.js。參考 API 的最簡單方法是藉由將下列 `<script>` 新增至您的頁面的 `<head>` 標記，使用我們的 CDN：  
 
@@ -227,7 +229,7 @@ var item = Office.context.mailbox.item;
 |||||||||
 |:-----|:-----|:-----|:-----|:-----|:-----|:-----|:-----|
 ||**主應用程式名稱**|資料庫|活頁簿|信箱|Presentation|Document|Project|
-||**支援的** **主應用程式**|Access Web App|Excel Online|Outlook Web App OWA for Devices|PowerPoint Online|Word|Project|
+||**支援的****主應用程式**|Access Web App|Excel Online|Outlook Web App OWA for Devices|PowerPoint Online|Word|Project|
 |**支援的增益集類型**|內容|是|Y||是|||
 ||工作窗格||是||Y|Y|是|
 ||Outlook|||是||||

@@ -12,24 +12,36 @@ Visio Online 是在網路上檢視並共用 Visio 圖表的新方法。您可以
 **請參閱 [Visio JavaScript API 1.1](https://github.com/OfficeDev/office-js-docs/tree/VisioJs_1.1_Openspec) 頁面來深入了解並提供您的意見反應。**
 
 ## <a name="new-excel-javascript-apis"></a>新的 Excel JavaScript API
-請加入我們檢閱新 Excel JavaScript API 設計的行列。新的和更新的 API 包括 customXML 組件、樞紐分析表的更新、範圍篩選的檢視、範圍和表格如影像、附加多個資料列到表格以及其他。 
+請加入我們檢閱新 Excel JavaScript API 設計的行列。新的和更新的 API 包含 CustomXML 組件、命名項目加入方法和條件格式化設定等。 
 
-**請參閱 [Excel JavaScript 1.3 API 頁面](https://github.com/OfficeDev/office-js-docs/tree/ExcelJs_1.3_OpenSpec)來深入了解並提供您的意見反應。**
+**請參閱 [Excel JavaScript 1.4 API 頁面](https://github.com/OfficeDev/office-js-docs/tree/ExcelJs_1.4_OpenSpec)來深入了解並提供您的意見反應。**
 
-## <a name="new-word-javascript-apis"></a>新的 Word JavaScript API
+## <a name="new-word-javascript-apis-13"></a>新的 Word JavaScript API (1.3)
 Word JavaScript API 1.3 更新包含了自從引進此 API 以後，我們所實作最大的一組變更。透過新的 API，您將能夠︰ 
 
-* 建立並更改記憶體中的文件
 * 建立並存取清單物件
 * 建立並存取資料表物件
 * 有更多可用來存取並比較範圍物件的選項
+* 文件屬性
 
 幾乎所有的 Word JavaScript API 物件都已實作了這些變更。這項功能現在已經或即將在 Windows、Mac 以及 iPad 上的 Word 2016 提供預覽。將您的用戶端更新至最新的每月組建並開始實作這些最棒的功能！
 
-**請參閱 [Word JS API 1.3 頁面](https://github.com/OfficeDev/office-js-docs/tree/WordJs_1.3_Openspec/word)來深入了解並提供您的意見反應。**
+**請參閱 [Word JS API 1.3 頁面](https://github.com/OfficeDev/office-js-docs/tree/WordJs_1.3_Openspec/word) 來深入了解並提供您的意見反應。**
 
-## <a name="document-properties-access"></a>文件屬性存取
-我們正在努力新增 Web 增益集存取 (取得、設定) 文件層級屬性的能力。這項功能可讓增益集將文件屬性整合為自訂工作流程的一部分，或讀取/設定文件屬性。Word 和 Excel (PowerPoint 也有可能) 將會支援這項功能。這個功能也將適用於 Excel REST API (Excel 支援 REST 服務)。我們將會介紹基本的設計概念，並且逐步介紹加入 API 時，API 會如何運作的使用情況和程式碼片段。我們歡迎您的設計意見反應。 
+## <a name="new-word-javascript-apis-14"></a>新的 Word JavaScript API (1.4)
+Word JavaScript API 1.4 更新包含重要的附加元件，包括︰
 
-**請參閱[文件屬性開啟規格頁面](https://github.com/OfficeDev/office-js-docs/tree/DocumentProperties_OpenSpec)來深入了解並提供您的意見反應。**
+* 建立並更改記憶體中的文件
+* 使用承諾型語法的設定 API
+* 使用承諾型語法的自訂 XML 文件
+* 插入書籤 
+* 資料表合併儲存格
+* 資料表合併列與分割資料行
+
+**請參閱 [Word JS API 1.4 頁面](https://github.com/OfficeDev/office-js-docs/tree/WordJs_1.4_Openspec/word)來深入了解並提供您的意見反應。**
+
+## <a name="host-platform-information-and-diagnostic-information"></a>主機、平台資訊及診斷資訊 
+若要向程式開發人員提供增益集執行階段環境的資訊及診斷資訊，請參閱 Office.Context 物件的已規劃新增項目。 
+
+**請參閱[Office 內容新增規格](https://github.com/OfficeDev/office-js-docs/tree/ContextAdditions_OpenSpec) 以深入了解並提供您的意見反應。**
 

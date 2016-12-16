@@ -2,6 +2,8 @@
 
 本文說明如何使用 Excel JavaScript API 為 Excel 2016 建置增益集。會介紹使用 API 的基礎關鍵概念，例如 RequestContext、JavaScript proxy 物件 sync()、Excel.run() 及 load()。在文件結尾的程式碼範例顯示如何套用概念。
 
+>**附註：**建立增益集時，如果您打算[發佈](../publish/publish.md)增益集至 Office 市集中，請確定您符合 [Office 市集驗證原則](https://msdn.microsoft.com/en-us/library/jj220035.aspx)。例如，若要通過驗證，增益集必須可以在所有的平台上運作，其平台支援您在資訊清單內 Requirements 元素中所定義的方法 (請參閱 [區段 4.12](https://msdn.microsoft.com/en-us/library/jj220035.aspx#Anchor_3))。
+
 ## <a name="requestcontext"></a>RequestContext
 
 RequestContext 物件可協助向 Excel 應用程式提出要求。由於 Office 增益集和 Excel 應用程式在兩個不同的處理程序中執行，因此需要使用要求內容以便從增益集存取 Excel 及相關的物件，例如工作表、表格等。建立的要求內容如下所示。
@@ -20,17 +22,17 @@ var ctx = new Excel.RequestContext();
 var selectedRange = ctx.workbook.getSelectedRange();
 ```
 
-## <a name="sync()"></a>sync()
+## <a name="sync"></a>sync()
 
 要求內容可用的 sync() 方法會透過執行在內容中排入佇列的指示以及擷取已載入供程式碼使用之 Office 物件的屬性，來同步處理 JavaScript proxy 物件和 Excel 中實際物件之間的狀態。此方法會傳回承諾，同步處理完成時就會將其解決。
 
-## <a name="excel.run(function(context)-{-batch-})"></a>Excel.run(function(context) { batch })
+## <a name="excelrunfunctioncontext-batch-"></a>Excel.run(function(context) { batch })
 
 Excel.run() 會執行批次指令碼，以對 Excel 物件模型執行動作。批次命令包括本機 JavaScript proxy 物件的定義，以及同步處理本機、Excel 物件及承諾解決之間狀態的 sync() 方法。在 Excel.run() 中批次處理要求的優點是，當承諾已解決時，任何在執行期間所配置的追蹤 range 物件就會自動釋出。
 
 Run 方法發生在 RequestContext 中，並傳回一項承諾 (通常就是 ctx.sync() 的結果)。也有可能在 Excel.run() 外部執行批次作業。不過，在這種情況下，將需要手動追蹤並管理 range 物件參考。
 
-## <a name="load()"></a>load()
+## <a name="load"></a>load()
 
 Load() 方法是用於填入在增益集 JavaScript 層中建立的 proxy 物件。舉例來說，當工作表嘗試擷取物件時，會先在 JavaScript 層中建立一個本機 proxy 物件。這種物件可用來佇列其屬性設定以及叫用方法。不過，若要讀取物件屬性或關聯，則需先叫用 load() 和 sync() 方法。Load() 方法會發生在屬性中以及在呼叫 sync() 方法時需要載入的關聯中。
 
@@ -48,7 +50,7 @@ object.load({loadOption});
 * `properties` 是要載入的屬性和/或關聯性名稱清單，以逗點分隔的字串或名稱陣列來指定。如需詳細資訊，請參閱每個物件下方的 .load() 方法。
 * `loadOption` 指定的物件用於描述 selection、expansion、top 和 skip 選項。如需詳細資訊，請參閱物件載入[選項](../../reference/excel/loadoption.md)。
 
-## <a name="example:-write-values-from-an-array-to-a-range-object"></a>範例：從陣列中寫入值到範圍物件
+## <a name="example-write-values-from-an-array-to-a-range-object"></a>範例：從陣列中寫入值到範圍物件
 
 下列範例會示範如何從陣列中寫入值到範圍物件。
 
@@ -83,7 +85,7 @@ Excel.run(function (ctx) {
 });
 ```
 
-## <a name="example:-copy-values"></a>範例：複製值
+## <a name="example-copy-values"></a>範例：複製值
 
 下列範例示範如何在 range 物件上使用 load() 方法，將作用中工作表的範圍 A1:A2 的值複製到 B1:B2。
 

@@ -1,6 +1,5 @@
 
-# <a name="deploy-and-publish-your-office-addin"></a>部署及發佈 Office 增益集
-
+# <a name="deploy-and-publish-your-office-add-in"></a>部署及發佈 Office 增益集
 
 您可以使用以下幾種方法中的任一種方法來部署 Office 增益集，以供測試之用或散發給使用者︰ 
 
@@ -10,8 +9,9 @@
 - [SharePoint 目錄](publish-task-pane-and-content-add-ins-to-an-add-in-catalog.md) - 能做為開發程序的一部分來測試增益集，或在內部部署環境中將增益集散發給組織中的使用者。
 
 可用的選項視您鎖定的 Office 主應用程式和建立的增益集類型而定。
+>**附註：**建立增益集時，如果您打算[發佈](../publish/publish.md)增益集至 Office 市集中，請確定您符合 [Office 市集驗證原則](https://msdn.microsoft.com/en-us/library/jj220035.aspx)。例如，若要通過驗證，增益集必須可以在所有的平台上運作，其平台支援您在資訊清單內 Requirements 元素中所定義的方法 (請參閱 [區段 4.12](https://msdn.microsoft.com/en-us/library/jj220035.aspx#Anchor_3))。
 
-### <a name="deployment-options-for-word-excel-and-powerpoint-addins"></a>Word、Excel 及 PowerPoint 增益集的部署選項
+## <a name="deployment-options-for-word-excel-and-powerpoint-add-ins"></a>Word、Excel 及 PowerPoint 增益集的部署選項
 
 | 擴充點            | 側載 | Office 365 系統管理中心預覽 |Office 市集  | SharePoint 目錄  |
 |:----------------|:-----------:|:------------------:|:-------------------------------:|:------------:|
@@ -21,7 +21,7 @@
 
 > **附註：**Office 2016 for Mac 不支援 SharePoint 目錄。若要將 Office 增益集部署到 Mac 用戶端，您必須將它們提交到 [Office 市集]。    
 
-### <a name="deployment-options-for-outlook-addins"></a>Outlook 增益集的部署選項
+## <a name="deployment-options-for-outlook-add-ins"></a>Outlook 增益集的部署選項
 
 | 擴充點     | 側載 | Exchange Server | Office 市集 |
 |:---------|:-----------:|:---------------:|:------------:|

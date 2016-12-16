@@ -12,9 +12,11 @@ Office 增益集使用 HTML、CSS 及 JavaScript 之類的 web 技術，讓您�
     
 **Office 增益集可在多種 Office 版本上執行**包含 Office for Windows Desktop、Office Online、Mac 版 Office 以及 iPad 版 Office。
 
->**附註︰**如需目前 Office 增益集受支援所在的高階檢視，請參閱 [Office 增益集主應用程式和平台可用性](http://dev.office.com/add-in-availability)頁面。 
+>**附註：**建立增益集時，如果您打算[發佈](../publish/publish.md)增益集至 Office 市集中，請確定您符合 [Office 市集驗證原則](https://msdn.microsoft.com/en-us/library/jj220035.aspx)。例如，若要通過驗證，增益集必須可以在所有的平台上運作，其平台支援您在資訊清單內 Requirements 元素中所定義的方法 (請參閱 [區段 4.12](https://msdn.microsoft.com/en-us/library/jj220035.aspx#Anchor_3))。
 
-## <a name="what-can-an-office-add-in-do?"></a>Office 增益集可以做什麼？
+如需目前 Office 增益集受支援所在的高階檢視，請參閱 [Office 增益集主應用程式和平台可用性](http://dev.office.com/add-in-availability)頁面。 
+
+## <a name="what-can-an-office-add-in-do"></a>Office 增益集可以做什麼？
 
 網頁能在瀏覽器中做的，Office 增益集幾乎都可以辦到，例如以下功能：
 
@@ -42,7 +44,7 @@ Office 增益集使用 HTML、CSS 及 JavaScript 之類的 web 技術，讓您�
 - 可建立新物件的 Excel 及 PowerPoint 增益集
 - 可擴充功能的 Outlook 增益集
 
-### <a name="word,-excel,-and-powerpoint-add-ins-that-extend-functionality"></a>可擴充功能的 Word、Excel 及 PowerPoint 增益集 
+### <a name="word-excel-and-powerpoint-add-ins-that-extend-functionality"></a>可擴充功能的 Word、Excel 及 PowerPoint 增益集 
 您可以**將新功能新增至** Word、Excel 或 PowerPoint，方法是使用[工作窗格增益集資訊清單](../design/add-in-commands.md)來登錄您的增益集。此資訊清單支援**兩種整合模式**：
 
 - 增益集命令
@@ -110,7 +112,9 @@ Office 增益集的基本元件是 XML 資訊清單檔案和您自己的 web 應
     
 - 增益集的顯示名稱、描述、識別碼、版本及預設地區設定。
     
-- 增益集如何與 Office 整合：     - 若為可擴充 Word/Excel/PowerPoint/Outlook 的增益集：增益集用來公開功能 (例如功能區上的按鈕) 的原生擴充點。     - 若為可新增可嵌入物件的增益集：載入之預設網頁的物件 URL。
+- 增益集如何與 Office 整合：     
+      - 若為可擴充 Word/Excel/PowerPoint/Outlook 的增益集：增益集用來公開功能 (例如功能區上的按鈕) 的原生擴充點。     
+      - 若為可新增可嵌入物件的增益集：載入之預設網頁的物件 URL。
        
     
 - 增益集的權限層級和資料存取需求。

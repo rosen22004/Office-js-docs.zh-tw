@@ -1,4 +1,4 @@
-# <a name="body-object-(javascript-api-for-word)"></a>Body 物件 (適用於 Word 的 JavaScript API)
+﻿# <a name="body-object-javascript-api-for-word"></a>Body 物件 (適用於 Word 的 JavaScript API)
 
 代表文件或區段的內文。
 
@@ -42,7 +42,7 @@ _請參閱屬性存取[範例。](#property-access-examples)_
 
 ## <a name="method-details"></a>方法詳細資料
 
-### <a name="clear()"></a>clear()
+### <a name="clear"></a>clear()
 清除 body 物件的內容。使用者可對已清除的內容執行復原作業。
 
 #### <a name="syntax"></a>語法
@@ -83,7 +83,7 @@ Word.run(function (context) {
 
 [Silly stories](https://aka.ms/sillystorywordaddin) 增益集範例示範如何使用 **clear** 方法清除文件的內容。
 
-### <a name="gethtml()"></a>getHtml()
+### <a name="gethtml"></a>getHtml()
 取得 body 物件的 HTML 表示法。
 
 #### <a name="syntax"></a>語法
@@ -94,7 +94,7 @@ bodyObject.getHtml();
 #### <a name="parameters"></a>參數
 無
 
-#### <a name="returns"></a>會傳回
+#### <a name="returns"></a>傳回
 字串
 
 #### <a name="examples"></a>範例
@@ -122,7 +122,7 @@ Word.run(function (context) {
 });
 ```
 
-### <a name="getooxml()"></a>getOoxml()
+### <a name="getooxml"></a>getOoxml()
 取得 body 物件的 OOXML (Office Open XML) 表示法。
 
 #### <a name="syntax"></a>語法
@@ -133,7 +133,7 @@ bodyObject.getOoxml();
 #### <a name="parameters"></a>參數
 無
 
-#### <a name="returns"></a>會傳回
+#### <a name="returns"></a>傳回
 字串
 
 #### <a name="examples"></a>範例
@@ -161,7 +161,7 @@ Word.run(function (context) {
 });
 ```
 
-### <a name="insertbreak(breaktype:-breaktype,-insertlocation:-insertlocation)"></a>insertBreak(breakType: BreakType, insertLocation: InsertLocation)
+### <a name="insertbreakbreaktype-breaktype-insertlocation-insertlocation"></a>insertBreak(breakType: BreakType, insertLocation: InsertLocation)
 在指定的位置插入中斷符號。除了換行符號可以插入至任何 body 物件，其他中斷符號只能插入到主文件內文中。InsertLocation 值可以是 'Start' 或 'End'。
 
 #### <a name="syntax"></a>語法
@@ -205,7 +205,7 @@ Word.run(function (ctx) {
     }
 });
 ```
-### <a name="insertcontentcontrol()"></a>insertContentControl()
+### <a name="insertcontentcontrol"></a>insertContentControl()
 以 RTF 內容控制項圍繞 body 物件。
 
 #### <a name="syntax"></a>語法
@@ -243,7 +243,7 @@ Word.run(function (context) {
     }
 });
 ```
-### <a name="insertfilefrombase64(base64file:-string,-insertlocation:-insertlocation)"></a>insertFileFromBase64(base64File: string, insertLocation:InsertLocation)
+### <a name="insertfilefrombase64base64file-string-insertlocation-insertlocation"></a>insertFileFromBase64(base64File: string, insertLocation:InsertLocation)
 在內文的指定位置插入文件。InsertLocation 值可以是 'Replace'、'Start' 或 'End'。
 
 #### <a name="syntax"></a>語法
@@ -288,7 +288,7 @@ Word.run(function (context) {
 
 [Silly stories](https://aka.ms/sillystorywordaddin) 增益集範例示範如何使用 **insertFileFromBase64** 方法從服務插入 docx 檔案。
 
-### <a name="inserthtml(html:-string,-insertlocation:-insertlocation)"></a>insertHtml(html: string, insertLocation:InsertLocation)
+### <a name="inserthtmlhtml-string-insertlocation-insertlocation"></a>insertHtml(html: string, insertLocation:InsertLocation)
 在指定的位置插入 HTML。InsertLocation 值可以是 'Replace'、'Start' 或 'End'。
 
 #### <a name="syntax"></a>語法
@@ -330,7 +330,7 @@ Word.run(function (context) {
 });
 ```
 
-### <a name="insertinlinepicturefrombase64(base64encodedimage:-string,-insertlocation:-insertlocation)"></a>insertInlinePictureFromBase64(base64EncodedImage: string, insertLocation:InsertLocation)
+### <a name="insertinlinepicturefrombase64base64encodedimage-string-insertlocation-insertlocation"></a>insertInlinePictureFromBase64(base64EncodedImage: string, insertLocation:InsertLocation)
 在內文的指定位置插入圖片。InsertLocation 值可以是 'Start' 或 'End'。
 
 #### <a name="syntax"></a>語法
@@ -345,7 +345,7 @@ bodyObject.insertInlinePictureFromBase64(image, insertLocation);
 #### <a name="returns"></a>傳回
 [InlinePicture](inlinepicture.md)
 
-### <a name="insertooxml(ooxml:-string,-insertlocation:-insertlocation)"></a>insertOoxml(ooxml: string, insertLocation:InsertLocation)
+### <a name="insertooxmlooxml-string-insertlocation-insertlocation"></a>insertOoxml(ooxml: string, insertLocation:InsertLocation)
 在指定的位置插入 OOXML。InsertLocation 值可以是 'Replace'、'Start' 或 'End'。
 
 #### <a name="syntax"></a>語法
@@ -391,9 +391,9 @@ Word.run(function (context) {
 ```
 
 #### <a name="additional-information"></a>其他資訊
-如需使用 OOXML 的指示，請閱讀[使用 Office Open XML 為 Word 建立更佳的增益集](https://msdn.microsoft.com/en-us/library/office/dn423225.aspx)。[Word-Add-in-DocumentAssembly][body.insertOoxml] 範例示範如何使用此 API 來組合文件。
+如需使用 OOXML 的指示，請閱讀[使用 Office Open XML 為 Word 建立更佳的增益集](https://msdn.microsoft.com/en-us/library/office/dn423225.aspx)。[Word-Add-in-DocumentAssemblybody.insertOoxml][body.insertOoxml] 範例示範如何使用此 API 來組合文件。
 
-### <a name="insertparagraph(paragraphtext:-string,-insertlocation:-insertlocation)"></a>insertParagraph(paragraphText: string, insertLocation:InsertLocation)
+### <a name="insertparagraphparagraphtext-string-insertlocation-insertlocation"></a>insertParagraph(paragraphText: string, insertLocation:InsertLocation)
 在指定的位置插入段落。InsertLocation 值可以是 'Start' 或 'End'。
 
 #### <a name="syntax"></a>語法
@@ -438,7 +438,7 @@ Word.run(function (context) {
 #### <a name="additional-information"></a>其他資訊
 [Word-Add-in-DocumentAssembly][body.insertParagraph] 範例示範如何使用 insertParagraph 方法來組合文件。
 
-### <a name="inserttext(text:-string,-insertlocation:-insertlocation)"></a>insertText(text: string, insertLocation:InsertLocation)
+### <a name="inserttexttext-string-insertlocation-insertlocation"></a>insertText(text: string, insertLocation:InsertLocation)
 在內文的指定位置插入文字。InsertLocation 值可以是 'Replace'、'Start' 或 'End'。
 
 #### <a name="syntax"></a>語法
@@ -479,7 +479,7 @@ Word.run(function (context) {
     }
 });
 ```
-### <a name="load(param:-object)"></a>load(param: object)
+### <a name="loadparam-object"></a>load(param: object)
 以參數中指定的屬性和物件值填滿 JavaScript 層中建立的 Proxy 物件。
 
 #### <a name="syntax"></a>語法
@@ -526,7 +526,7 @@ Word.run(function (context) {
     }
 });
 ```
-### <a name="search(searchtext:-string,-searchoptions:-paramtypestrings.searchoptions)"></a>search(searchText: string, searchOptions:ParamTypeStrings.SearchOptions)
+### <a name="searchsearchtext-string-searchoptions-paramtypestringssearchoptions"></a>search(searchText: string, searchOptions:ParamTypeStrings.SearchOptions)
 以指定的搜尋選項在 body 物件的範圍中執行搜尋。搜尋結果將是 range 物件的集合。
 
 #### <a name="syntax"></a>語法
@@ -588,7 +588,7 @@ Word.run(function (context) {
 #### <a name="additional-information"></a>其他資訊
 [Word-Add-in-DocumentAssembly][body.search] 範例提供如何搜尋文件的另一個範例。
 
-### <a name="select(selectionmode:-selectionmode)"></a>select(selectionMode: SelectionMode)
+### <a name="selectselectionmode-selectionmode"></a>select(selectionMode: SelectionMode)
 選取內文並將 Word UI 導覽至該處。SelectionMode 值可以是 'Select'、'Start' 或 'End'。
 
 #### <a name="syntax"></a>語法
@@ -656,7 +656,7 @@ Word.run(function (context) {
     }
 });
 ```
-### <a name="get-the-style-and-the-font-size,-font-name,-and-font-color-properties-on-the-body-object."></a>取得 body 物件的樣式及字型大小、字型名稱和字型色彩屬性。
+### <a name="get-the-style-and-the-font-size-font-name-and-font-color-properties-on-the-body-object"></a>取得 body 物件的樣式及字型大小、字型名稱和字型色彩屬性。
 
 ```js
 // Run a batch operation against the Word object model.
@@ -696,4 +696,4 @@ Word.run(function (context) {
 
 [body.insertOoxml]: https://github.com/OfficeDev/Word-Add-in-DocumentAssembly/blob/master/WordAPIDocAssemblySampleWeb/App/Home/Home.js#L127 "插入 OOXML"
 [body.insertParagraph]: https://github.com/OfficeDev/Word-Add-in-DocumentAssembly/blob/master/WordAPIDocAssemblySampleWeb/App/Home/Home.js#L153 "插入段落"
-[body.search]: https://github.com/OfficeDev/Word-Add-in-DocumentAssembly/blob/master/WordAPIDocAssemblySampleWeb/App/Home/Home.js#L261 "主體搜尋"
+[body.search]: https://github.com/OfficeDev/Word-Add-in-DocumentAssembly/blob/master/WordAPIDocAssemblySampleWeb/App/Home/Home.js#L261 "本文搜尋"

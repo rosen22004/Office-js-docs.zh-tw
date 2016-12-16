@@ -20,7 +20,7 @@ Outlook 增益集使用[資訊清單](https://msdn.microsoft.com/EN-US/library/o
 
 ## <a name="using-apis-from-later-requirement-sets"></a>使用來自較新需求集合的 API
 
-設定需求集合不會限制增益集可以使用的 API。例如，如果增益集指定需求集合 1.1，但它正在支援 1.3 的 Outlook 用戶端中執行，增益集可以使用來自需求集合 1.3 的 API。\.
+設定需求集合不會限制增益集可以使用的 API。例如，如果增益集指定需求集合 1.1，但它正在支援 1.3 的 Outlook 用戶端中執行，增益集可以使用來自需求集合 1.3 的 API。
 
 若要使用較新的 API，開發人員只要使用標準 JavaScript 技術來檢查 API 是否存在即可
 
@@ -42,10 +42,10 @@ if (item.somePropertyOrFunction !== undefined) {
 
 | 用戶端 | 支援的 API 需求集合 |
 | --- | --- |
-| Outlook 2016 for Windows | 1.1, 1.2, 1.3 |
+| Outlook 2016 for Windows | 1.1, 1.2, 1.3, 1.4 |
 | Outlook 2016 for Mac | 1.1 |
 | Outlook 2013 for Windows | 1.1, 1.2, 1.3 |
-| Outlook 網頁版 (Office 365 和 Outlook.com) | 1.1, 1.2, 1.3 |
+| Outlook 網頁版 (Office 365 和 Outlook.com) | 1.1, 1.2, 1.3, 1.4 |
 | Outlook Web App (Exchange 2013 On-Premise) | 1.1 |
 | Outlook Web App (Exchange 2016 On-Premise) | 1.1, 1.2. 1.3 |
 >**附註** Outlook 2013 中的 1.3 支援已隨著 [2015 年 12 月 8 日的 Outlook 2013 更新 (KB3114349)](https://support.microsoft.com/en-us/kb/3114349) 一同新增    

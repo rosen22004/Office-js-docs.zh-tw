@@ -119,8 +119,7 @@
 		<Item text="使用權杖驗證程式庫" url="outlook/use-the-token-validation-library" SEODescription="了解如何使用 EWS 管理的 API 驗證程式庫來驗證 Exchange 識別權杖。" Scope="outlook" />
 		<Item text="驗證識別權杖" url="outlook/validate-an-identity-token" SEODescription="了解如何使用識別權杖將您 Outlook 增益集客戶的電子郵件帳戶連結至 Web 服務所提供的資訊。" Scope="outlook" />
 		<Item text="使用 PHP 來驗證識別權杖" url="outlook/use-php-to-validate-an-identity-token" SEODescription="了解如何使用 PHP 來驗證可將您 Outlook 增益集客戶的電子郵件帳戶連結至您的服務所提供資訊的 Exchange 2013 識別權杖。" Scope="outlook" />
-		<Item text="使用識別權杖來驗證使用者" url="outlook/authenticate-a-user-with-an-identity-token" SEODescription="請參閱程式碼範例，其顯示驗證物件如何符合由具有一組服務憑證的識別權杖所表示的唯一識別。" Scope="outlook" />    
-    	 </Item>
+		<Item text="使用識別權杖來驗證使用者" url="outlook/authenticate-a-user-with-an-identity-token" SEODescription="請參閱程式碼範例，其顯示驗證物件如何符合由具有一組服務憑證的識別權杖所表示的唯一識別。" Scope="outlook" /></Item>
 	<Item text="測試及秘訣" url="outlook/testing-and-tips" FriendlyUrl="outlook/testingtesting-and-tips" Scope="outlook">
 		<Item text="比較 Outlook 增益集在 Mac 版 Outlook 中的支援" url="outlook/compare-outlook-add-in-support-in-outlook-for-mac" SEOKeyword="移至 dev.office.com 的連結不正確。 我已修復資料表中的項目符號清單。" Scope="outlook" />
 		<Item text="處理 Outlook 增益集中日期值的秘訣" url="outlook/tips-for-handling-date-values-in-outlook-add-ins" Scope="outlook" SEODescription="使用 Date 物件在 Outlook 增益集中處理日期值。" />

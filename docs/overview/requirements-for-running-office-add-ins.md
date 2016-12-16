@@ -1,11 +1,12 @@
 
-# <a name="requirements-for-running-office-addins"></a>執行 Office 增益集的需求
+# <a name="requirements-for-running-office-add-ins"></a>執行 Office 增益集的需求
 
 
 本文說明執行 Office 增益集的軟體及裝置需求。
 
->**附註︰**如需目前 Office 增益集受支援所在的高階檢視，請參閱 [Office 增益集主應用程式和平台可用性](http://dev.office.com/add-in-availability)頁面。 
+>**附註：**建立增益集時，如果您打算[發佈](../publish/publish.md)增益集至 Office 市集中，請確定您符合 [Office 市集驗證原則](https://msdn.microsoft.com/en-us/library/jj220035.aspx)。例如，若要通過驗證，增益集必須可以在所有的平台上運作，其平台支援您在資訊清單內 Requirements 元素中所定義的方法 (請參閱 [區段 4.12](https://msdn.microsoft.com/en-us/library/jj220035.aspx#Anchor_3))。
 
+如需目前 Office 增益集受支援所在的高階檢視，請參閱 [Office 增益集主應用程式和平台可用性](http://dev.office.com/add-in-availability)頁面。
 
 ## <a name="server-requirements"></a>伺服器需求
 
@@ -57,7 +58,7 @@
 支援 ECMAScript 5.1、HTML5 和 CSS3 的所有瀏覽器，例如 Internet Explorer 11 或更新版本，或最新版本的 Microsoft Edge、Chrome、Firefox 或 Safari (Mac 作業系統)。
 
 
-## <a name="client-requirements-nonwindows-smartphone-and-tablet"></a>用戶端需求︰非 Windows 智慧型手機和平板電腦
+## <a name="client-requirements-non-windows-smartphone-and-tablet"></a>用戶端需求︰非 Windows 智慧型手機和平板電腦
 
 特別針對裝置的 OWA，以及智慧型手機和非 Windows 平板電腦裝置瀏覽器中執行的 Outlook Web App，需要下列軟體才能測試和執行 Outlook 增益集。
 

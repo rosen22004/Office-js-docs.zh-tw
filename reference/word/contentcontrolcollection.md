@@ -1,4 +1,4 @@
-# <a name="contentcontrolcollection-object-(javascript-api-for-word)"></a>ContentControlCollection 物件 (適用於 Word 的 JavaScript API)
+# <a name="contentcontrolcollection-object-javascript-api-for-word"></a>ContentControlCollection 物件 (適用於 Word 的 JavaScript API)
 
 包含 ContentControl 物件的集合。內容控制項是指文件中具有界限且可能具有標籤的區域，這些區域會做為特定內容類型的容器。個別的內容控制項可能含有內容，例如影像、表格或格式化文字的段落。目前僅支援 RTF 內容控制項。
 
@@ -24,7 +24,7 @@ _適用於：Word 2016、Word for iPad、Word for Mac、Word Online_
 
 ## <a name="method-details"></a>方法詳細資料
 
-### <a name="getbyid(id:-number)"></a>getById(id: number)
+### <a name="getbyidid-number"></a>getById(id: number)
 依識別碼取得內容控制項。
 
 #### <a name="syntax"></a>語法
@@ -65,7 +65,7 @@ Word.run(function (context) {
 });
 ```
 
-### <a name="getbytag(tag:-string)"></a>getByTag(tag: string)
+### <a name="getbytagtag-string"></a>getByTag(tag: string)
 取得具有指定之標記的內容控制項。
 
 #### <a name="syntax"></a>語法
@@ -112,10 +112,10 @@ Word.run(function (context) {
 ```
 
 #### <a name="additional-information"></a>其他資訊
-The [Word-Add-in-DocumentAssembly][contentControls.getByTag] 範例提供使用 getByTag 方法的另一個範例。
+[Word-Add-in-DocumentAssembly][contentControls.getByTag]範例提供使用 getByTag 方法的另一個範例。
 
 
-### <a name="getbytitle(title:-string)"></a>getByTitle(title: string)
+### <a name="getbytitletitle-string"></a>getByTitle(title: string)
 取得具有指定之標題的內容控制項。
 
 #### <a name="syntax"></a>語法
@@ -164,7 +164,7 @@ Word.run(function (context) {
 #### <a name="additional-information"></a>其他資訊
 [Word-Add-in-DocumentAssembly][contentControls.getByTitle] 範例提供使用 getByTitle 方法的另一個範例。
 
-### <a name="load(param:-object)"></a>load(param: object)
+### <a name="loadparam-object"></a>load(param: object)
 以參數中指定的屬性和物件值填滿 JavaScript 層中建立的 Proxy 物件。
 
 #### <a name="syntax"></a>語法
@@ -252,6 +252,6 @@ Word.run(function (context) {
 在執行階段檢查使用[需求集](../office-add-in-requirement-sets.md)以確認您的應用程式受到 Word 主應用程式版本的支援。如需有關 Office 主應用程式及伺服器需求的詳細資訊，請參閱[執行 Office 增益集的需求](../../docs/overview/requirements-for-running-office-add-ins.md)。
 
 
-[contentControls.getByTag]: https://github.com/OfficeDev/Word-Add-in-DocumentAssembly/blob/master/WordAPIDocAssemblySampleWeb/App/Home/Home.js#L300 "依標籤取得"
-[contentControls.getByTitle]: https://github.com/OfficeDev/Word-Add-in-DocumentAssembly/blob/master/WordAPIDocAssemblySampleWeb/App/Home/Home.js#L331 "依標題取得"
+[contentControls.getByTag]: https://github.com/OfficeDev/Word-Add-in-DocumentAssembly/blob/master/WordAPIDocAssemblySampleWeb/App/Home/Home.js#L300 "由標籤取得"
+[contentControls.getByTitle]: https://github.com/OfficeDev/Word-Add-in-DocumentAssembly/blob/master/WordAPIDocAssemblySampleWeb/App/Home/Home.js#L331 "由標題取得"
 

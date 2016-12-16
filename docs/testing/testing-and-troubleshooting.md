@@ -17,22 +17,22 @@
 |:-----|:-----|
 |應用程式錯誤︰無法存取目錄|請確認防火牆設定。「目錄」參考至 Office 市集。此訊息表示使用者無法存取 Office 市集。|
 |應用程式錯誤︰無法啟動此應用程式。關閉此對話方塊以忽略問題，或按一下 [重新啟動] 再試一次。|請確認已安裝最新的 Office 更新，或下載[Office 2013 更新](https://support.microsoft.com/en-us/kb/2986156/)。|
-|錯誤：物件不支援屬性或方法 'defineProperty'|確認 Internet Explorer 不是在相容性模式中執行。移至 [工具] > [相容性檢視設定]。|
+|錯誤：物件不支援屬性或方法 'defineProperty'|確認 Internet Explorer 不是在相容性模式中執行。移至 [工具] > [相容性檢視設定]****。|
 |很抱歉，我們無法載入應用程式，因為您的瀏覽器版本不受支援。如需支援的瀏覽器版本清單，請按一下這裡。|確定瀏覽器支援 HTML5 本機存放區，或重設您的 Internet Explorer 設定。如需支援瀏覽器的詳細資訊，請參閱[執行 Office 增益集的需求](../../docs/overview/requirements-for-running-office-add-ins.md)|
 
-## <a name="outlook-add-in-doesn't-work-correctly"></a>Outlook 增益集無法正確運作
+## <a name="outlook-add-in-doesnt-work-correctly"></a>Outlook 增益集無法正確運作
 
 如果 Windows 上執行的 Outlook 增益集無法正確運作，請嘗試在 Internet Explorer 中開啟指令碼偵錯。 
 
 
-- 移至 [工具] > [網際網路選項] > **[進階]**。
+- 移至 [工具] > [網際網路選項]**** > **[進階]**。
     
-- 在 [瀏覽] 下，取消核取 [停用指令碼偵錯 (Internet Explorer)] 和 [停用指令碼偵錯 (其他)]。
+- 在 [瀏覽]**** 下，取消核取 [停用指令碼偵錯 (Internet Explorer)]**** 和 [停用指令碼偵錯 (其他)]****。
     
-我們建議您只有在疑難排解問題時才取消核取這些設定。如果維持取消核取，您就會在瀏覽時看到提示。解決問題後，重新核取 [停用指令碼偵錯 (Internet Explorer)] 和 [停用指令碼偵錯 (其他)]。
+我們建議您只有在疑難排解問題時才取消核取這些設定。如果維持取消核取，您就會在瀏覽時看到提示。解決問題後，重新核取 [停用指令碼偵錯 (Internet Explorer)]**** 和 [停用指令碼偵錯 (其他)]****。
 
 
-## <a name="add-in-doesn't-activate-in-office-2013"></a>增益集不會在 Office 2013 中啟動
+## <a name="add-in-doesnt-activate-in-office-2013"></a>增益集不會在 Office 2013 中啟動
 
 如果增益集未在使用者執行下列步驟時啟動︰
 
@@ -45,6 +45,9 @@
     
 請確認已安裝最新的 Office 更新，或下載[Office 2013 更新](https://support.microsoft.com/en-us/kb/2986156/)。
 
+## <a name="add-in-doesnt-load-in-task-pane-or-other-issues-with-the-add-in-manifest"></a>增益集沒有在工作窗格載入，或增益集資訊清單發生其他問題
+
+請嘗試使用 [執行階段記錄](https://dev.office.com/docs/add-ins/develop/use-runtime-logging-to-debug-manifest)來偵錯增益集資訊清單的問題。
 
 ## <a name="additional-resources"></a>其他資源
 
@@ -59,4 +62,6 @@
 - [在 Visual Studio 中建立和偵錯 Office 增益集](../../docs/get-started/create-and-debug-office-add-ins-in-visual-studio.md)
     
 - [部署和安裝 Outlook 增益集以進行測試](../outlook/testing-and-tips.md)
+    
+- [使用執行階段記錄來偵錯資訊清單](https://dev.office.com/docs/add-ins/develop/use-runtime-logging-to-debug-manifest)
     

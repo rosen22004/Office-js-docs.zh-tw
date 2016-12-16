@@ -1,5 +1,5 @@
 
-# <a name="outlook-addins"></a>Outlook 增益集
+# <a name="outlook-add-ins"></a>Outlook 增益集
 
 Outlook 增益集是由協力廠商使用新的 web 技術為基礎的平台建立至 Outlook 的整合。Outlook 增益集有三個主要領域︰
 
@@ -14,6 +14,7 @@ Outlook 增益集與 COM 或 VSTO 增益集不同，其為 Windows 上執行的 
 
 支援郵件增益集的 Outlook 項目包括電子郵件、會議要求、回應和取消通知以及約會。每個郵件增益集會定義在當中其為可供使用 (包括項目類型以及使用者為讀取或撰寫項目) 的內容。
 
+>**附註：**建立增益集時，如果您打算[發佈](../publish/publish.md)增益集至 Office 市集中，請確定您符合 [Office 市集驗證原則](https://msdn.microsoft.com/en-us/library/jj220035.aspx)。例如，若要通過驗證，增益集必須可以在所有的平台上運作，其平台支援您在資訊清單內 Requirements 元素中所定義的方法 (請參閱 [區段 4.12](https://msdn.microsoft.com/en-us/library/jj220035.aspx#Anchor_3))。
 
 ## <a name="extension-points"></a>擴充點
 
@@ -34,7 +35,7 @@ Outlook 增益集與 COM 或 VSTO 增益集不同，其為 Windows 上執行的 
     ![在卡片中顯示內容應用程式](../../images/59bcabc2-7cb0-4b9b-bb9f-06089dca9c31.png)
 
 
-## <a name="mailbox-items-available-to-addins"></a>增益集可用的信箱項目
+## <a name="mailbox-items-available-to-add-ins"></a>增益集可用的信箱項目
 
 
 Outlook 增益集在撰寫或讀取可在郵件或約會上使用，但非其他項目類型。如果目前的郵件項目 (在撰寫或讀取表單中) 為下列其中一項，則 Outlook 不會啟動增益集︰
@@ -59,7 +60,7 @@ Outlook 增益集在撰寫或讀取可在郵件或約會上使用，但非其他
 Outlook 2013 和更新版本、Outlook 2016 for Mac、適用於 Exchange 2013 內部部署的 Outlook Web App、Office 365 及 Outlook.com. 中的 Outlook Web App 支援 Outlook 增益集。並非所有用戶端中都同時支援所有最新的功能。請參閱個別的主題和 API 參考，以查看它們在哪些主機中不支援。
 
 
-## <a name="get-started-building-outlook-addins"></a>開始建置 Outlook 增益集
+## <a name="get-started-building-outlook-add-ins"></a>開始建置 Outlook 增益集
 
 
 若要開始建置 Outlook 增益集，請參閱[開始使用 Office 365 的 Outlook 增益集](https://dev.outlook.com/MailAppsGettingStarted/GetStarted)。
