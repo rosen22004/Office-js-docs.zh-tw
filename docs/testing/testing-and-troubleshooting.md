@@ -47,7 +47,7 @@
 
 ## <a name="add-in-doesnt-load-in-task-pane-or-other-issues-with-the-add-in-manifest"></a>增益集沒有在工作窗格載入，或增益集資訊清單發生其他問題
 
-請嘗試使用 [執行階段記錄](https://dev.office.com/docs/add-ins/develop/use-runtime-logging-to-debug-manifest)來偵錯增益集資訊清單的問題。
+請參閱[驗證與排解資訊清單的問題](troubleshoot-manifest.md)以對增益集資訊清單的問題進行偵錯。
 
 ## <a name="additional-resources"></a>其他資源
 
@@ -63,5 +63,5 @@
     
 - [部署和安裝 Outlook 增益集以進行測試](../outlook/testing-and-tips.md)
     
-- [使用執行階段記錄來偵錯資訊清單](https://dev.office.com/docs/add-ins/develop/use-runtime-logging-to-debug-manifest)
+- [驗證與排解資訊清單的問題](troubleshoot-manifest.md)
     

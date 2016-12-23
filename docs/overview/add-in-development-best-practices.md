@@ -4,7 +4,7 @@
 
 有效的增益集提供獨特且令人信服的功能，以視覺上吸引人的方式擴充 Office 應用程式。若要建立很棒的增益集，請為您的使用者提供吸引人的首次經驗、設計第一級的 UI 經驗，以及將增益集的效能最佳化。運用本文中所述的最佳做法，來建立可協助使用者快速且有效地完成其工作的增益集。
 
->**附註：**建立增益集時，如果您打算[發佈](../publish/publish.md)增益集至 Office 市集中，請確定您符合 [Office 市集驗證原則](https://msdn.microsoft.com/en-us/library/jj220035.aspx)。例如，若要通過驗證，增益集必須可以在所有的平台上運作，其平台支援您在資訊清單內 Requirements 元素中所定義的方法 (請參閱 [區段 4.12](https://msdn.microsoft.com/en-us/library/jj220035.aspx#Anchor_3))。
+>**附註：**建立增益集時，如果您打算[發佈](../publish/publish.md)增益集至 Office 市集中，請確定您符合 [Office 市集驗證原則](https://msdn.microsoft.com/en-us/library/jj220035.aspx)。例如，若要通過驗證，增益集必須可以在所有支援您定義的方法的平台上運作 (如需詳細資料，請參閱 [4.12 節](https://msdn.microsoft.com/en-us/library/jj220035.aspx#Anchor_3)與 [Office 增益集主應用程式與可用性頁面](https://dev.office.com/add-in-availability))。
 
 ## <a name="provide-clear-value"></a>提供顯而易見的價值
 

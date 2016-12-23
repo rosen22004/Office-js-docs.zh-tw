@@ -2,7 +2,7 @@
 
 本文說明如何使用 Excel JavaScript API 為 Excel 2016 建置增益集。會介紹使用 API 的基礎關鍵概念，例如 RequestContext、JavaScript proxy 物件 sync()、Excel.run() 及 load()。在文件結尾的程式碼範例顯示如何套用概念。
 
->**附註：**建立增益集時，如果您打算[發佈](../publish/publish.md)增益集至 Office 市集中，請確定您符合 [Office 市集驗證原則](https://msdn.microsoft.com/en-us/library/jj220035.aspx)。例如，若要通過驗證，增益集必須可以在所有的平台上運作，其平台支援您在資訊清單內 Requirements 元素中所定義的方法 (請參閱 [區段 4.12](https://msdn.microsoft.com/en-us/library/jj220035.aspx#Anchor_3))。
+>**附註：**建立增益集時，如果您打算[發佈](../publish/publish.md)增益集至 Office 市集中，請確定您符合 [Office 市集驗證原則](https://msdn.microsoft.com/en-us/library/jj220035.aspx)。例如，若要通過驗證，增益集必須可以在所有支援您定義的方法的平台上運作 (如需詳細資料，請參閱 [4.12 節](https://msdn.microsoft.com/en-us/library/jj220035.aspx#Anchor_3)與 [Office 增益集主應用程式與可用性頁面](https://dev.office.com/add-in-availability))。
 
 ## <a name="requestcontext"></a>RequestContext
 
@@ -26,7 +26,7 @@ var selectedRange = ctx.workbook.getSelectedRange();
 
 要求內容可用的 sync() 方法會透過執行在內容中排入佇列的指示以及擷取已載入供程式碼使用之 Office 物件的屬性，來同步處理 JavaScript proxy 物件和 Excel 中實際物件之間的狀態。此方法會傳回承諾，同步處理完成時就會將其解決。
 
-## <a name="excelrunfunctioncontext-batch-"></a>Excel.run(function(context) { batch })
+## <a name="excelrunfunctioncontext--batch-"></a>Excel.run(function(context) { batch })
 
 Excel.run() 會執行批次指令碼，以對 Excel 物件模型執行動作。批次命令包括本機 JavaScript proxy 物件的定義，以及同步處理本機、Excel 物件及承諾解決之間狀態的 sync() 方法。在 Excel.run() 中批次處理要求的優點是，當承諾已解決時，任何在執行期間所配置的追蹤 range 物件就會自動釋出。
 

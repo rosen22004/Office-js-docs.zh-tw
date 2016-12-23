@@ -1,174 +1,162 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Menu xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" SupportedProduct="|Word|Excel|Outlook|OneNote|PowerPoint|Project|Access" SupportedVersion="|V1.3|V1.2|V1.1|">
-  <Item text="資訊清單" url="manifest">
-    
-	<Item text="AllowSnapshot" url="manifest/allowsnapshot" Scope="excel, powerpoint" SEODescription="指定是否要將內容增益集的快照影像與主文件一起儲存。" />
-    <Item text="AlternateId" url="manifest/alternateid" Scope="excel, word, powerpoint, access, project" SEODescription="指定由 Office 市集所發行的 Office 增益集替代識別碼。" />
-    <Item text="AppDomain" url="manifest/appdomain" SEODescription="指定會用來在增益集視窗中載入頁面的其他網域。" />
-    <Item text="AppDomains" url="manifest/appdomains" SEODescription="指定您 Office 增益集將用來載入頁面的任何其他網域。" />
-    <Item text="CitationText" url="manifest/citationtext" SEODescription="指定此字典的引文重複使用文字。" />
-    <Item text="DefaultLocale" url="manifest/defaultlocale" SEODescription="指定增益集中字串使用之地區設定的預設文化特性名稱。" />
-    <Item text="DefaultSettings" url="manifest/defaultsettings" SEODescription="指定您的內容或工作窗格增益集的預設來源位置和其他的預設設定。" />
-    <Item text="說明" url="manifest/description" SEODescription="將您 Office 增益集的描述指定為不超過 250 個字元的字串。" />
-    <Item text="DesktopSettings" url="manifest/desktopsettings" Scope="outlook" SEODescription="指定您的郵件增益集用在桌上型電腦時的來源位置和可套用的控制項設定。" />
-    <Item text="Dictionary" url="manifest/dictionary" Scope="excel, word, powerpoint, project" SEODescription="定義會套用至實作其他字典支援的工作窗格增益集設定。" />
-    <Item text="DictionaryHomePage" url="manifest/dictionaryhomepage" Scope="excel, word, powerpoint, project" SEODescription="指定字典首頁的 URL。" />
-    <Item text="DictionaryName" url="manifest/dictionaryname" Scope="excel, word, powerpoint, project" SEODescription="指定此字典的名稱。" />
-    <Item text="DisableEntityHighlighting" url="manifest/disableentityhighlighting" Scope="outlook" SEODescription="指定是否要關閉您郵件增益集的實體醒目提示功能。" />
-    <Item text="DisplayName" url="manifest/displayname" SEODescription="將您 Office 增益集的名稱指定為多達 125 個字元的字串。" />
-    
-	<Item text="Form" url="manifest/form" Scope="outlook" SEODescription="在特定裝置 (桌上型電腦、平板電腦或手機) 上執行您的郵件增益集時，會定義表單的 UX 設定。" />
-    
-	<Item text="FormSettings" url="manifest/formsettings" Scope="outlook" SEODescription="指定您郵件增益集的來源位置和控制項設定。" />
-    
-	
-	<Item text="HighResolutionIconUrl" url="manifest/highresolutioniconurl" SEODescription="指定在高 DPI 的螢幕上，插入 UX 和 Office 市集中，用來表示您 Office 增益集的影像 URL。" />
-    <Item text="主應用程式" url="manifest/host" SEODescription="指定您 Office 增益集所支援的 Office 主應用程式類型。" />
-    <Item text="主機" url="manifest/hosts" SEODescription="指定啟動 Office 增益集的 Office 用戶端應用程式。" />
-	<Item text="IconUrl" url="manifest/iconurl" SEODescription="指定在插入 UX 和 Office 市集中，用來表示您 Office 增益集的影像 URL。" />
-    <Item text="Id" url="manifest/id" SEODescription="將您 Office 增益集的唯一識別碼指定為 GUID。" />
-    <Item text="方法 " url="manifest/method" Scope="excel, word, powerpoint, access, project" SEODescription="指定適用於 Office 的 JavaScript API 中，為了啟用您的 Office 增益集所需的個別方法。" />
-    <Item text="方法" url="manifest/methods" Scope="excel, word, powerpoint, access, project" SEODescription="指定適用於 Office 的 JavaScript API 中，為了啟用您的 Office 增益集所需的方法清單。" />
-    <Item text="OfficeApp" url="manifest/officeapp" SEODescription="Office 增益集資訊清單中的根項目。" />
-    
-	<Item text="Override" url="manifest/override" SEODescription="提供指定其他的地區設定的設定值的方法。" />
-    <Item text="權限" url="manifest/permissions" SEODescription="指定您 Office 增益集的 API 存取層級；您應該根據「最低權限」原則來要求各項權限。" />
-    <Item text="PhoneSettings" url="manifest/phonesettings" SEODescription="指定您的郵件增益集用在手機上時的來源位置和可套用的控制項設定。" />
-    <Item text="ProviderName" url="manifest/providername" SEODescription="將開發此 Office 增益集的個人或公司的名稱，指定為不超過 125 個字元的字串。" />
-    <Item text="QueryUri" url="manifest/queryuri" Scope="excel, word, powerpoint, access, project" SEODescription="指定字典查詢服務端點的 URL。" />
-    <Item text="RequestedHeight" url="manifest/requestedheight" Scope="excel, powerpoint, access" SEODescription="以像素為單位，指定內容增益集的初始高度，可介於 32 到 1000 像素之間。" />
-    <Item text="RequestedWidth" url="manifest/requestedwidth" Scope="excel, powerpoint, access" SEODescription="以像素為單位，指定內容增益集的初始寬度，可介於 32 到 1000 像素之間。" />
-    <Item text="需求" url="manifest/requirements" SEODescription="指定適用於 Office 的 JavaScript API 需求 (需求集合和/或方法) 中，為了啟用您的 Office 增益集所需的最小集合。" />
-    
-	<Item text="規則" url="manifest/rule" Scope="outlook" SEODescription="指定要針對此郵件增益集評估的啟用規則。" />
-    <Item text="Set" url="manifest/set" SEODescription="指定適用於 Office 的 JavaScript API 中，為了啟用您的 Office 增益集所需的需求集合。" />
-    <Item text="Sets" url="manifest/sets" SEODescription="指定適用於 Office 的 JavaScript API 中，為了啟用您的 Office 增益集所需的最小子集合。" />
-    <Item text="SourceLocation" url="manifest/sourcelocation" SEODescription="將您 Office 增益集的來源檔位置，指定為 URL，長度介於 1 到 2018 個字元。" />
-    
-	<Item text="SupportUrl" url="manifest/supporturl" SEODescription="指定提供您增益集的支援資訊的網頁 URL。" />
-    <Item text="TabletSettings" url="manifest/tabletsettings" Scope="outlook" SEODescription="指定您的郵件增益集用在平板電腦上時，可套用的控制項設定。" />
-    <Item text="TargetDialect" url="manifest/targetdialect" Scope="excel, word, powerpoint, project" SEODescription="定義由本字典支援的區域性語言，以文化名稱字串表示。" />
-    <Item text="TargetDialects" url="manifest/targetdialects" Scope="excel, word, powerpoint, project" SEODescription="定義由本字典支援的各種區域性語言。" />
-    <Item text="版本" url="manifest/version" SEODescription="指定您 Office 增益集的版本。" />
-	<Item text="VersionOverrides" url="manifest/versionoverrides" Scope="excel, word, powerpoint" SEODescription="根元素，其包含增益集實作的增益集命令的資訊。"> 
-		<Item text="動作" url="manifest/action" Scope="excel, word, powerpoint" SEODescription="指定使用者選取的按鈕或功能表控制項時所執行的動作。" />
-		<Item text="控制項" url="manifest/control" SEODescription="指定使用者選取的按鈕或功能表時所執行的控制項。" />
-		<Item text="CustomTab" url="manifest/customtab" Scope="excel, word, powerpoint" SEODescription="指定增益集命令的索引標籤和群組。" />
-		<Item text="ExtensionPoint" url="manifest/extensionpoint" Scope="excel, word, powerpoint" SEODescription="定義增益集公開功能的位置。" />
-		<Item text="FormFactor" url="manifest/formfactor" Scope="excel, word, powerpoint" SEODescription="為指定外觀尺寸的增益集指定設定。" />
-		<Item text="FunctionFile" url="manifest/functionfile" Scope="excel, word, powerpoint" SEODescription="透過增益集命令為增益集所公開的作業指定原始程式碼檔，以執行 JavaScript 函式而非顯示 UI。" />
-		<Item text="GetStarted" url="manifest/getstarted" Scope="excel, word, powerpoint" SEODescription="提供在 Word、Excel 及 PowerPoint 主應用程式中安裝增益集時，顯示的圖說文字所使用的資訊。" />
-		<Item text="Group" url="manifest/group" Scope="excel, word, powerpoint" SEODescription="定義索引標籤中的一群使用者介面擴充點。" />
-		<Item text="主機" url="manifest/hosts" Scope="excel, word, powerpoint" SEODescription="指定您 Office 增益集所支援的 Office 主應用程式類型。" />
-		<Item text="圖示" url="manifest/icon" Scope="excel, word, powerpoint" SEODescription="定義按鈕和功能表控制項的影像元素。" />
-		<Item text="OfficeMenu" url="manifest/officemenu" Scope="excel, word, powerpoint" SEODescription="定義要新增至 Office 內容功能表的控制項的集合。" />
-		<Item text="OfficeTab" url="manifest/officetab" Scope="excel, word, powerpoint" SEODescription="指定要用於增益集命令的預先存在的索引標籤。" />
-		<Item text="資源" url="manifest/resources" Scope="excel, word, powerpoint" SEODescription="包含圖示、字串，和 VersionOverrides 節點的 URL。" />
-		<Item text="Supertip" url="manifest/supertip" Scope="excel, word, powerpoint" SEODescription="定義豐富的工具提示 (包括標題和描述)。" />
+<Menu xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" SupportedProduct="|Word|Excel|Outlook|OneNote|PowerPoint|Project|Access|Visio" SupportedVersion="|V1.3|V1.2|V1.1|">
+	<Item text="資訊清單" url="manifest">
+		<Item text="AllowSnapshot" url="manifest/allowsnapshot" Scope="excel, powerpoint" SEODescription="指定是否要將內容增益集的快照影像與主文件一起儲存。" />
+		<Item text="AlternateId" url="manifest/alternateid" Scope="excel, word, powerpoint, access, project" SEODescription="指定由 Office 市集所發行的 Office 增益集替代識別碼。" />
+		<Item text="AppDomain" url="manifest/appdomain" SEODescription="指定會用來在增益集視窗中載入頁面的其他網域。" />
+		<Item text="AppDomains" url="manifest/appdomains" SEODescription="指定您 Office 增益集將用來載入頁面的任何其他網域。" />
+		<Item text="CitationText" url="manifest/citationtext" SEODescription="指定此字典的引文重複使用文字。" />
+		<Item text="DefaultLocale" url="manifest/defaultlocale" SEODescription="指定增益集中字串使用之地區設定的預設文化特性名稱。" />
+		<Item text="DefaultSettings" url="manifest/defaultsettings" SEODescription="指定您的內容或工作窗格增益集的預設來源位置和其他的預設設定。" />
+		<Item text="說明" url="manifest/description" SEODescription="將您 Office 增益集的描述指定為不超過 250 個字元的字串。" />
+		<Item text="DesktopSettings" url="manifest/desktopsettings" Scope="outlook" SEODescription="指定您的郵件增益集用在桌上型電腦時的來源位置和可套用的控制項設定。" />
+		<Item text="Dictionary" url="manifest/dictionary" Scope="excel, word, powerpoint, project" SEODescription="定義會套用至實作其他字典支援的工作窗格增益集設定。" />
+		<Item text="DictionaryHomePage" url="manifest/dictionaryhomepage" Scope="excel, word, powerpoint, project" SEODescription="指定字典首頁的 URL。" />
+		<Item text="DictionaryName" url="manifest/dictionaryname" Scope="excel, word, powerpoint, project" SEODescription="指定此字典的名稱。" />
+		<Item text="DisableEntityHighlighting" url="manifest/disableentityhighlighting" Scope="outlook" SEODescription="指定是否要關閉您郵件增益集的實體醒目提示功能。" />
+		<Item text="DisplayName" url="manifest/displayname" SEODescription="將您 Office 增益集的名稱指定為多達 125 個字元的字串。" />
+		<Item text="Form" url="manifest/form" Scope="outlook" SEODescription="在特定裝置 (桌上型電腦、平板電腦或手機) 上執行您的郵件增益集時，會定義表單的 UX 設定。" />
+		<Item text="FormSettings" url="manifest/formsettings" Scope="outlook" SEODescription="指定您郵件增益集的來源位置和控制項設定。" />
+		<Item text="HighResolutionIconUrl" url="manifest/highresolutioniconurl" SEODescription="指定在高 DPI 的螢幕上，插入 UX 和 Office 市集中，用來表示您 Office 增益集的影像 URL。" />
+		<Item text="主應用程式" url="manifest/host" SEODescription="指定您 Office 增益集所支援的 Office 主應用程式類型。" />
+		<Item text="主機" url="manifest/hosts" SEODescription="指定啟動 Office 增益集的 Office 用戶端應用程式。" />
+		<Item text="IconUrl" url="manifest/iconurl" SEODescription="指定在插入 UX 和 Office 市集中，用來表示您 Office 增益集的影像 URL。" />
+		<Item text="Id" url="manifest/id" SEODescription="將您 Office 增益集的唯一識別碼指定為 GUID。" />
+		<Item text="方法 " url="manifest/method" Scope="excel, word, powerpoint, access, project" SEODescription="指定適用於 Office 的 JavaScript API 中，為了啟用您的 Office 增益集所需的個別方法。" />
+		<Item text="方法" url="manifest/methods" Scope="excel, word, powerpoint, access, project" SEODescription="指定適用於 Office 的 JavaScript API 中，為了啟用您的 Office 增益集所需的方法清單。" />
+		<Item text="OfficeApp" url="manifest/officeapp" SEODescription="Office 增益集資訊清單中的根項目。" />
+		<Item text="Override" url="manifest/override" SEODescription="提供指定其他的地區設定的設定值的方法。" />
+		<Item text="權限" url="manifest/permissions" SEODescription="指定您 Office 增益集的 API 存取層級；您應該根據「最低權限」原則來要求各項權限。" />
+		<Item text="PhoneSettings" url="manifest/phonesettings" SEODescription="指定您的郵件增益集用在手機上時的來源位置和可套用的控制項設定。" />
+		<Item text="ProviderName" url="manifest/providername" SEODescription="將開發此 Office 增益集的個人或公司的名稱，指定為不超過 125 個字元的字串。" />
+		<Item text="QueryUri" url="manifest/queryuri" Scope="excel, word, powerpoint, access, project" SEODescription="指定字典查詢服務端點的 URL。" />
+		<Item text="RequestedHeight" url="manifest/requestedheight" Scope="excel, powerpoint, access" SEODescription="以像素為單位，指定內容增益集的初始高度，可介於 32 到 1000 像素之間。" />
+		<Item text="RequestedWidth" url="manifest/requestedwidth" Scope="excel, powerpoint, access" SEODescription="以像素為單位，指定內容增益集的初始寬度，可介於 32 到 1000 像素之間。" />
+		<Item text="需求" url="manifest/requirements" SEODescription="指定適用於 Office 的 JavaScript API 需求 (需求集合和/或方法) 中，為了啟用您的 Office 增益集所需的最小集合。" />
+		<Item text="規則" url="manifest/rule" Scope="outlook" SEODescription="指定要針對此郵件增益集評估的啟用規則。" />
+		<Item text="Set" url="manifest/set" SEODescription="指定適用於 Office 的 JavaScript API 中，為了啟用您的 Office 增益集所需的需求集合。" />
+		<Item text="Sets" url="manifest/sets" SEODescription="指定適用於 Office 的 JavaScript API 中，為了啟用您的 Office 增益集所需的最小子集合。" />
+		<Item text="SourceLocation" url="manifest/sourcelocation" SEODescription="將您 Office 增益集的來源檔位置，指定為 URL，長度介於 1 到 2018 個字元。" />
+		<Item text="SupportUrl" url="manifest/supporturl" SEODescription="指定提供您增益集的支援資訊的網頁 URL。" />
+		<Item text="TabletSettings" url="manifest/tabletsettings" Scope="outlook" SEODescription="指定您的郵件增益集用在平板電腦上時，可套用的控制項設定。" />
+		<Item text="TargetDialect" url="manifest/targetdialect" Scope="excel, word, powerpoint, project" SEODescription="定義由本字典支援的區域性語言，以文化名稱字串表示。" />
+		<Item text="TargetDialects" url="manifest/targetdialects" Scope="excel, word, powerpoint, project" SEODescription="定義由本字典支援的各種區域性語言。" />
+		<Item text="版本" url="manifest/version" SEODescription="指定您 Office 增益集的版本。" />
+		<Item text="VersionOverrides" url="manifest/versionoverrides" Scope="excel, word, powerpoint" SEODescription="根元素，其包含增益集實作的增益集命令的資訊。">
+			<Item text="動作" url="manifest/action" Scope="excel, word, powerpoint" SEODescription="指定使用者選取的按鈕或功能表控制項時所執行的動作。" />
+			<Item text="控制項" url="manifest/control" SEODescription="指定使用者選取的按鈕或功能表時所執行的控制項。" />
+			<Item text="CustomTab" url="manifest/customtab" Scope="excel, word, powerpoint" SEODescription="指定增益集命令的索引標籤和群組。" />
+			<Item text="ExtensionPoint" url="manifest/extensionpoint" Scope="excel, word, powerpoint" SEODescription="定義增益集公開功能的位置。" />
+			<Item text="FormFactor" url="manifest/formfactor" Scope="excel, word, powerpoint" SEODescription="為指定外觀尺寸的增益集指定設定。" />
+			<Item text="FunctionFile" url="manifest/functionfile" Scope="excel, word, powerpoint" SEODescription="透過增益集命令為增益集所公開的作業指定原始程式碼檔，以執行 JavaScript 函式而非顯示 UI。" />
+			<Item text="GetStarted" url="manifest/getstarted" Scope="excel, word, powerpoint" SEODescription="提供在 Word、Excel 及 PowerPoint 主應用程式中安裝增益集時，顯示的圖說文字所使用的資訊。" />
+			<Item text="Group" url="manifest/group" Scope="excel, word, powerpoint" SEODescription="定義索引標籤中的一群使用者介面擴充點。" />
+			<Item text="主機" url="manifest/hosts" Scope="excel, word, powerpoint" SEODescription="指定您 Office 增益集所支援的 Office 主應用程式類型。" />
+			<Item text="圖示" url="manifest/icon" Scope="excel, word, powerpoint" SEODescription="定義按鈕和功能表控制項的影像元素。" />
+			<Item text="OfficeMenu" url="manifest/officemenu" Scope="excel, word, powerpoint" SEODescription="定義要新增至 Office 內容功能表的控制項的集合。" />
+			<Item text="OfficeTab" url="manifest/officetab" Scope="excel, word, powerpoint" SEODescription="指定要用於增益集命令的預先存在的索引標籤。" />
+			<Item text="資源" url="manifest/resources" Scope="excel, word, powerpoint" SEODescription="包含圖示、字串，和 VersionOverrides 節點的 URL。" />
+			<Item text="Supertip" url="manifest/supertip" Scope="excel, word, powerpoint" SEODescription="定義豐富的工具提示 (包括標題和描述)。" />
+		</Item>
 	</Item>
-  </Item>
-  
-  <Item text="Word" url="word/word-add-ins-reference-overview" Scope="word" SEODescription="提供 Word Javascript API 的概觀。">
-    <Item text="本文" url="word/body" SEODescription="代表文件或區段的內文。" />
-    <Item text="BreakType" url="word/breaktype" FriendlyUrl="word/referencebreaktype" Scope="word" SEODescription="指定中斷符號的形式。" />
-    <Item text="ContentControl" url="word/contentcontrol" FriendlyUrl="word/referencecontentcontrol" Scope="word" SEODescription="代表內容控制項。內容控制項是指文件中具有界限且可能具有標籤的區域，這些區域會做為特定內容類型的容器。" />
-    <Item text="ContentControlCollection" url="word/contentcontrolcollection" FriendlyUrl="word/referencecontentcontrolcollection" Scope="word" SEODescription="包含 ContentControl 物件的集合。內容控制項是指文件中具有界限且可能具有標籤的區域，這些區域會做為特定內容類型的容器。" />
-    <Item text="文件" url="word/document" FriendlyUrl="word/referencedocument" Scope="word" SEODescription="包含一或多個區段、內容控制項，以及包含文件內容的內文。" />
-    <Item text="錯誤" url="word/error" FriendlyUrl="word/referenceerror" Scope="word" SEODescription="表示當您使用 Word JavaScript API 時發生的錯誤。" />
-	<Item text="字型" url="word/font" FriendlyUrl="word/referencefont" Scope="word" SEODescription="代表字型。" />
-    <Item text="InlinePicture" url="word/inlinepicture" FriendlyUrl="word/referenceinlinepicture" Scope="word" SEODescription="代表文字間圖片。" />
-    <Item text="InlinePictureCollection" url="word/inlinepicturecollection" FriendlyUrl="word/referenceinlinepicturecollection" Scope="word" SEODescription="包含 inlinePicture 物件的集合。" />
-    <Item text="LoadOption" url="word/loadoption" SEODescription="指定當呼叫 context.sync() 時要載入的分頁資訊和屬性。" />
-    <Item text="段落" url="word/paragraph" FriendlyUrl="word/referenceparagraph" Scope="word" SEODescription="代表選取範圍、範圍、內容控制項或文件內文中的單一段落。" />
-    <Item text="ParagraphCollection" url="word/paragraphcollection" FriendlyUrl="word/referenceparagraphcollection" Scope="word" SEODescription="包含 paragraph 物件的集合。" />
-    <Item text="範圍" url="word/range" SEODescription="代表文件中的連續區域。" />
-    <Item text="RequestContext" url="word/requestcontext" SEODescription="可協助從 Word 增益集向 Word 應用程式提出要求，因為這兩個應用程式在不同的處理程序中執行。" />
-    <Item text="SearchOptions" url="word/searchoptions" FriendlyUrl="word/referencesearchoptions" Scope="word" SEODescription="指定搜尋作業中要包含的選項。" />
-    <Item text="SearchResultCollection" url="word/searchresultcollection" FriendlyUrl="word/referencesearchresultcollection" Scope="word" SEODescription="包含 Range 物件的集合，作為搜尋作業的結果。" />
-    <Item text="章節" url="word/section" FriendlyUrl="word/referencesection" Scope="word" SEODescription="代表 Word 文件中的區段。" />
-    <Item text="SectionCollection" url="word/sectioncollection" FriendlyUrl="word/referencesectioncollection" Scope="word" SEODescription="包含文件的 Section 物件集合。" />
-	<Item text="Word JavaScript API 需求集" url="requirement-sets/word-api-requirement-sets" Scope="word" SEODescription="深入了解 Word 需求集、支援需求集的 Office 主應用程式，以及這些應用程式的組建或版本號碼。" />
-  </Item>
-  
-  <Item text="Excel" url="excel" Scope="excel">
-    <Item text="應用程式" url="excel/application" SEODescription="代表管理活頁簿的 Excel 應用程式。" />
-    <Item text="Binding" url="excel/binding" SEODescription="代表活頁簿中定義的 Office.js 繫結。" />
-    <Item text="BindingCollection" url="excel/bindingcollection" SEODescription="代表屬於活頁簿一部份的所有 binding 物件集合。" />
-    <Item text="圖表" url="excel/chart" SEODescription="代表活頁簿中的 chart 物件。" />
-    <Item text="ChartAreaFormat" url="excel/chartareaformat" SEODescription="封裝整個圖表區域的格式屬性。" />
-    <Item text="ChartAxes" url="excel/chartaxes" SEODescription="代表圖表座標軸。" />
-    <Item text="ChartAxis" url="excel/chartaxis" SEODescription="代表圖表中的單個座標軸。" />
-    <Item text="ChartAxisFormat" url="excel/chartaxisformat" SEODescription="封裝圖表座標軸的格式屬性。" />
-    <Item text="ChartAxisTitle" url="excel/chartaxistitle" SEODescription="代表圖表座標軸的標題。" />
-    <Item text="ChartAxisTitleFormat" url="excel/chartaxistitleformat" SEODescription="代表圖表座標軸標題格式。" />
-    <Item text="ChartCollection" url="excel/chartcollection" SEODescription="工作表上所有 chart 物件的集合。" />
-    <Item text="ChartDataLabelFormat" url="excel/chartdatalabelformat" SEODescription="封裝圖表資料標籤的格式屬性。" />
-    <Item text="ChartDataLabels" url="excel/chartdatalabels" SEODescription="代表圖表點上所有資料標籤的集合。" />
-    <Item text="ChartFill" url="excel/chartfill" SEODescription="代表圖表項目的填滿格式。" />
-    <Item text="ChartFont" url="excel/chartfont" SEODescription="代表圖表物件的字型屬性 (字型名稱、字型大小、色彩等)。" />
-    <Item text="ChartGridlines" url="excel/chartgridlines" SEODescription="代表圖表座標軸上的主要或次要格線。" />
-    <Item text="ChartGridlinesFormat" url="excel/chartgridlinesformat" SEODescription="封裝圖表格線的格式屬性。" />
-    <Item text="ChartLegend" url="excel/chartlegend" SEODescription="代表圖表中的圖例。" />
-    <Item text="ChartLegendFormat" url="excel/chartlegendformat" SEODescription="封裝圖表圖例的格式屬性。" />
-    <Item text="ChartLineFormat" url="excel/chartlineformat" SEODescription="封裝線條元素的格式設定選項。" />
-    <Item text="ChartPoint" url="excel/chartpoint" SEODescription="封裝線條元素的格式設定選項。" />
-    <Item text="ChartPointFormat" url="excel/chartpointformat" SEODescription="代表圖表中的數列點。" />
-    <Item text="ChartPointsCollection" url="excel/chartpointscollection" SEODescription="代表圖表點的 formatting 物件。" />
-    <Item text="ChartSeries" url="excel/chartseries" SEODescription="圖表內數列中所有圖表點的集合。" />
-    <Item text="ChartSeriesCollection" url="excel/chartseriescollection" SEODescription="封裝圖表數列的格式屬性。" />
-    <Item text="ChartSeriesFormat" url="excel/chartseriesformat" SEODescription="封裝圖表數列的格式屬性。" />
-    <Item text="ChartTitle" url="excel/charttitle" SEODescription="代表圖表的圖表標題物件。" />
-    <Item text="ChartTitleFormat" url="excel/charttitleformat" SEODescription="可供您存取圖表標題的 Office Art 格式設定。" />
-    <Item text="錯誤" url="excel/error" SEODescription="表示當您使用 Excel JavaScript API 時發生的錯誤。" />
-	<Item text="篩選" url="excel/filter" SEODescription="管理表格欄位的篩選。" />
-    <Item text="LoadOption" url="excel/loadoption" SEODescription="代表一個可以傳遞至 load 方法的物件，以指定在執行 sync() 方法 (用以同步處理 Excel 物件和增益集內相對應 JavaScript proxy 物件之間的狀態) 時要載入的屬性集和關聯。" />
-    <Item text="NamedItem" url="excel/nameditem" SEODescription="代表某個儲存格範圍或值的已定義名稱。" />
-    <Item text="NamedItemCollection" url="excel/nameditemcollection" SEODescription="屬於活頁簿一部份的所有 NamedItem 物件的集合。" />
-    <Item text="範圍" url="excel/range" SEODescription="代表一組一或多個連續儲存格，例如儲存格、列、欄或儲存格區塊等。" />
-    <Item text="RangeBorder" url="excel/rangeborder" SEODescription="代表物件的框線。" />
-    <Item text="RangeBorderCollection" url="excel/rangebordercollection" SEODescription="代表構成範圍框線的 border 物件。" />
-    <Item text="RangeFill" url="excel/rangefill" SEODescription="代表 range 物件的背景。" />
-    <Item text="RangeFont" url="excel/rangefont" SEODescription="代表物件的字型屬性 (字型名稱、字型大小、色彩等)。" />
-    <Item text="RangeFormat" url="excel/rangeformat" SEODescription="格式物件，其中封裝了範圍的字型、填滿、框線、對齊方式及其他屬性。" />
-    <Item text="RangeSort" url="excel/rangesort" SEODescription="管理在 Range 物件上的排序作業。" />
-    <Item text="Requestcontext" url="excel/requestcontext" SEODescription="可協助向 Excel 應用程式提出要求。" />
-    <Item text="表格" url="excel/table" SEODescription="代表 Excel 表格。" />
-    <Item text="TableCollection" url="excel/tablecollection" SEODescription="代表屬於活頁簿一部份的所有表格集合。" />
-    <Item text="TableColumn" url="excel/tablecolumn" SEODescription="代表表格中的一欄。" />
-    <Item text="TableColumnCollection" url="excel/tablecolumncollection" SEODescription="代表屬於表格一部份的所有欄集合。" />
-    <Item text="TableRow" url="excel/tablerow" SEODescription="代表表格中的一列。" />
-    <Item text="TableRowCollection" url="excel/tablerowcollection" SEODescription="代表屬於表格一部份的所有列集合。" />
-    <Item text="TableSort" url="excel/tablesort" SEODescription="管理在 Table 物件上的排序作業。" />
-    <Item text="TrackedObjectsCollection" url="excel/trackedobjectscollection" SEODescription="可讓增益集跨 sync() 批次管理 Range 物件參考。" />
-    <Item text="活頁簿" url="excel/workbook" SEODescription="包含相關的活頁簿物件，例如工作表、表格、範圍等等。" />
-    <Item text="工作表" url="excel/worksheet" SEODescription="表示包含資料、表格和圖表的儲存格的格線。" />
-    <Item text="WorksheetCollection" url="excel/worksheetcollection" SEODescription="代表屬於活頁簿一部份的 worksheet 物件集合。" />
-    <Item text="WorksheetFunctions" url="excel/functions" SEODescription="做為可從 JavaScript 或 REST 中呼叫之 Excel 工作表函數的容器。" />
-    <Item text="WorksheetProtection" url="excel/worksheetprotection" SEODescription="代表 Sheet 物件的保護。" />
-	<Item text="Excel JavaScript API 需求集合" url="requirement-sets/excel-api-requirement-sets" Scope="excel" SEODescription="深入了解 Excel 需求集、支援需求集的 Office 主應用程式，以及這些應用程式的組建或版本號碼。" />
-  </Item>
-  
-  <Item text="Outlook" url="outlook" Scope="Outlook">
+	<Item text="Word" url="word/word-add-ins-reference-overview" Scope="word" SEODescription="提供 Word Javascript API 的概觀。">
+		<Item text="本文" url="word/body" SEODescription="代表文件或區段的內文。" />
+		<Item text="BreakType" url="word/breaktype" FriendlyUrl="word/referencebreaktype" Scope="word" SEODescription="指定中斷符號的形式。" />
+		<Item text="ContentControl" url="word/contentcontrol" FriendlyUrl="word/referencecontentcontrol" Scope="word" SEODescription="代表內容控制項。內容控制項是指文件中具有界限且可能具有標籤的區域，這些區域會做為特定內容類型的容器。" />
+		<Item text="ContentControlCollection" url="word/contentcontrolcollection" FriendlyUrl="word/referencecontentcontrolcollection" Scope="word" SEODescription="包含 ContentControl 物件的集合。內容控制項是指文件中具有界限且可能具有標籤的區域，這些區域會做為特定內容類型的容器。" />
+		<Item text="文件" url="word/document" FriendlyUrl="word/referencedocument" Scope="word" SEODescription="包含一或多個區段、內容控制項，以及包含文件內容的內文。" />
+		<Item text="錯誤" url="word/error" FriendlyUrl="word/referenceerror" Scope="word" SEODescription="表示當您使用 Word JavaScript API 時發生的錯誤。" />
+		<Item text="字型" url="word/font" FriendlyUrl="word/referencefont" Scope="word" SEODescription="代表字型。" />
+		<Item text="InlinePicture" url="word/inlinepicture" FriendlyUrl="word/referenceinlinepicture" Scope="word" SEODescription="代表文字間圖片。" />
+		<Item text="InlinePictureCollection" url="word/inlinepicturecollection" FriendlyUrl="word/referenceinlinepicturecollection" Scope="word" SEODescription="包含 inlinePicture 物件的集合。" />
+		<Item text="LoadOption" url="word/loadoption" SEODescription="指定當呼叫 context.sync() 時要載入的分頁資訊和屬性。" />
+		<Item text="段落" url="word/paragraph" FriendlyUrl="word/referenceparagraph" Scope="word" SEODescription="代表選取範圍、範圍、內容控制項或文件內文中的單一段落。" />
+		<Item text="ParagraphCollection" url="word/paragraphcollection" FriendlyUrl="word/referenceparagraphcollection" Scope="word" SEODescription="包含 paragraph 物件的集合。" />
+		<Item text="範圍" url="word/range" SEODescription="代表文件中的連續區域。" />
+		<Item text="RequestContext" url="word/requestcontext" SEODescription="可協助從 Word 增益集向 Word 應用程式提出要求，因為這兩個應用程式在不同的處理程序中執行。" />
+		<Item text="SearchOptions" url="word/searchoptions" FriendlyUrl="word/referencesearchoptions" Scope="word" SEODescription="指定搜尋作業中要包含的選項。" />
+		<Item text="SearchResultCollection" url="word/searchresultcollection" FriendlyUrl="word/referencesearchresultcollection" Scope="word" SEODescription="包含 Range 物件的集合，作為搜尋作業的結果。" />
+		<Item text="章節" url="word/section" FriendlyUrl="word/referencesection" Scope="word" SEODescription="代表 Word 文件中的區段。" />
+		<Item text="SectionCollection" url="word/sectioncollection" FriendlyUrl="word/referencesectioncollection" Scope="word" SEODescription="包含文件的 Section 物件集合。" />
+		<Item text="Word JavaScript API 需求集" url="requirement-sets/word-api-requirement-sets" Scope="word" SEODescription="深入了解 Word 需求集、支援需求集的 Office 主應用程式，以及這些應用程式的組建或版本號碼。" />
+	</Item>
+	<Item text="Excel" url="excel" Scope="excel">
+		<Item text="應用程式" url="excel/application" SEODescription="代表管理活頁簿的 Excel 應用程式。" />
+		<Item text="Binding" url="excel/binding" SEODescription="代表活頁簿中定義的 Office.js 繫結。" />
+		<Item text="BindingCollection" url="excel/bindingcollection" SEODescription="代表屬於活頁簿一部份的所有 binding 物件集合。" />
+		<Item text="圖表" url="excel/chart" SEODescription="代表活頁簿中的 chart 物件。" />
+		<Item text="ChartAreaFormat" url="excel/chartareaformat" SEODescription="封裝整個圖表區域的格式屬性。" />
+		<Item text="ChartAxes" url="excel/chartaxes" SEODescription="代表圖表座標軸。" />
+		<Item text="ChartAxis" url="excel/chartaxis" SEODescription="代表圖表中的單個座標軸。" />
+		<Item text="ChartAxisFormat" url="excel/chartaxisformat" SEODescription="封裝圖表座標軸的格式屬性。" />
+		<Item text="ChartAxisTitle" url="excel/chartaxistitle" SEODescription="代表圖表座標軸的標題。" />
+		<Item text="ChartAxisTitleFormat" url="excel/chartaxistitleformat" SEODescription="代表圖表座標軸標題格式。" />
+		<Item text="ChartCollection" url="excel/chartcollection" SEODescription="工作表上所有 chart 物件的集合。" />
+		<Item text="ChartDataLabelFormat" url="excel/chartdatalabelformat" SEODescription="封裝圖表資料標籤的格式屬性。" />
+		<Item text="ChartDataLabels" url="excel/chartdatalabels" SEODescription="代表圖表點上所有資料標籤的集合。" />
+		<Item text="ChartFill" url="excel/chartfill" SEODescription="代表圖表項目的填滿格式。" />
+		<Item text="ChartFont" url="excel/chartfont" SEODescription="代表圖表物件的字型屬性 (字型名稱、字型大小、色彩等)。" />
+		<Item text="ChartGridlines" url="excel/chartgridlines" SEODescription="代表圖表座標軸上的主要或次要格線。" />
+		<Item text="ChartGridlinesFormat" url="excel/chartgridlinesformat" SEODescription="封裝圖表格線的格式屬性。" />
+		<Item text="ChartLegend" url="excel/chartlegend" SEODescription="代表圖表中的圖例。" />
+		<Item text="ChartLegendFormat" url="excel/chartlegendformat" SEODescription="封裝圖表圖例的格式屬性。" />
+		<Item text="ChartLineFormat" url="excel/chartlineformat" SEODescription="封裝線條元素的格式設定選項。" />
+		<Item text="ChartPoint" url="excel/chartpoint" SEODescription="封裝線條元素的格式設定選項。" />
+		<Item text="ChartPointFormat" url="excel/chartpointformat" SEODescription="代表圖表中的數列點。" />
+		<Item text="ChartPointsCollection" url="excel/chartpointscollection" SEODescription="代表圖表點的 formatting 物件。" />
+		<Item text="ChartSeries" url="excel/chartseries" SEODescription="圖表內數列中所有圖表點的集合。" />
+		<Item text="ChartSeriesCollection" url="excel/chartseriescollection" SEODescription="封裝圖表數列的格式屬性。" />
+		<Item text="ChartSeriesFormat" url="excel/chartseriesformat" SEODescription="封裝圖表數列的格式屬性。" />
+		<Item text="ChartTitle" url="excel/charttitle" SEODescription="代表圖表的圖表標題物件。" />
+		<Item text="ChartTitleFormat" url="excel/charttitleformat" SEODescription="可供您存取圖表標題的 Office Art 格式設定。" />
+		<Item text="錯誤" url="excel/error" SEODescription="表示當您使用 Excel JavaScript API 時發生的錯誤。" />
+		<Item text="篩選" url="excel/filter" SEODescription="管理表格欄位的篩選。" />
+		<Item text="LoadOption" url="excel/loadoption" SEODescription="代表一個可以傳遞至 load 方法的物件，以指定在執行 sync() 方法 (用以同步處理 Excel 物件和增益集內相對應 JavaScript proxy 物件之間的狀態) 時要載入的屬性集和關聯。" />
+		<Item text="NamedItem" url="excel/nameditem" SEODescription="代表某個儲存格範圍或值的已定義名稱。" />
+		<Item text="NamedItemCollection" url="excel/nameditemcollection" SEODescription="屬於活頁簿一部份的所有 NamedItem 物件的集合。" />
+		<Item text="範圍" url="excel/range" SEODescription="代表一組一或多個連續儲存格，例如儲存格、列、欄或儲存格區塊等。" />
+		<Item text="RangeBorder" url="excel/rangeborder" SEODescription="代表物件的框線。" />
+		<Item text="RangeBorderCollection" url="excel/rangebordercollection" SEODescription="代表構成範圍框線的 border 物件。" />
+		<Item text="RangeFill" url="excel/rangefill" SEODescription="代表 range 物件的背景。" />
+		<Item text="RangeFont" url="excel/rangefont" SEODescription="代表物件的字型屬性 (字型名稱、字型大小、色彩等)。" />
+		<Item text="RangeFormat" url="excel/rangeformat" SEODescription="格式物件，其中封裝了範圍的字型、填滿、框線、對齊方式及其他屬性。" />
+		<Item text="RangeSort" url="excel/rangesort" SEODescription="管理在 Range 物件上的排序作業。" />
+		<Item text="Requestcontext" url="excel/requestcontext" SEODescription="可協助向 Excel 應用程式提出要求。" />
+		<Item text="表格" url="excel/table" SEODescription="代表 Excel 表格。" />
+		<Item text="TableCollection" url="excel/tablecollection" SEODescription="代表屬於活頁簿一部份的所有表格集合。" />
+		<Item text="TableColumn" url="excel/tablecolumn" SEODescription="代表表格中的一欄。" />
+		<Item text="TableColumnCollection" url="excel/tablecolumncollection" SEODescription="代表屬於表格一部份的所有欄集合。" />
+		<Item text="TableRow" url="excel/tablerow" SEODescription="代表表格中的一列。" />
+		<Item text="TableRowCollection" url="excel/tablerowcollection" SEODescription="代表屬於表格一部份的所有列集合。" />
+		<Item text="TableSort" url="excel/tablesort" SEODescription="管理在 Table 物件上的排序作業。" />
+		<Item text="TrackedObjectsCollection" url="excel/trackedobjectscollection" SEODescription="可讓增益集跨 sync() 批次管理 Range 物件參考。" />
+		<Item text="活頁簿" url="excel/workbook" SEODescription="包含相關的活頁簿物件，例如工作表、表格、範圍等等。" />
+		<Item text="工作表" url="excel/worksheet" SEODescription="表示包含資料、表格和圖表的儲存格的格線。" />
+		<Item text="WorksheetCollection" url="excel/worksheetcollection" SEODescription="代表屬於活頁簿一部份的 worksheet 物件集合。" />
+		<Item text="WorksheetFunctions" url="excel/functions" SEODescription="做為可從 JavaScript 或 REST 中呼叫之 Excel 工作表函數的容器。" />
+		<Item text="WorksheetProtection" url="excel/worksheetprotection" SEODescription="代表 Sheet 物件的保護。" />
+		<Item text="Excel JavaScript API 需求集合" url="requirement-sets/excel-api-requirement-sets" Scope="excel" SEODescription="深入了解 Excel 需求集、支援需求集的 Office 主應用程式，以及這些應用程式的組建或版本號碼。" />
+	</Item>
+	<Item text="Outlook" url="outlook" Scope="Outlook">
 		<Item text="1.1" url="outlook/1.1/index" Version="V1.1">
-		  <Item text="物件模型" url="outlook/1.1" Version="V1.1">
-		    <Item text="Office.context" url="outlook/1.1/Office.context" Version="V1.1" />
-		    <Item text="Office.context.mailbox" url="outlook/1.1/Office.context.mailbox" Version="V1.1" />
-		    <Item text="Office.context.mailbox.diagnostics" url="outlook/1.1/Office.context.mailbox.diagnostics" Version="V1.1" />
-		    <Item text="Office.context.mailbox.item" url="outlook/1.1/Office.context.mailbox.item" Version="V1.1" />
-		    <Item text="Office.context.mailbox.userProfile" url="outlook/1.1/Office.context.mailbox.userProfile" Version="V1.1" />
-		   
-		  </Item>
-		  <Item text="複雜類型" url="outlook/1.1" Version="V1.1">
-		    <Item text="本文" url="outlook/1.1/Body" Version="V1.1" />
-		    <Item text="CustomProperties" url="outlook/1.1/CustomProperties" Version="V1.1" />
-		    <Item text="位置" url="outlook/1.1/Location" Version="V1.1" />
-		    <Item text="收件者" url="outlook/1.1/Recipients" Version="V1.1" />
-		    <Item text="RoamingSettings" url="outlook/1.1/RoamingSettings" Version="V1.1" />
-		    <Item text="主旨" url="outlook/1.1/Subject" Version="V1.1" />
-		    <Item text="時間" url="outlook/1.1/Time" Version="V1.1" />
-		  </Item>
-		  <Item text="簡單類型" url="outlook/1.1/simple-types" Version="V1.1" />
-       <!-- <Item text="AsyncResult" url="outlook/simple-types#asyncresult" Version="V1.1"  />
+			<Item text="物件模型" url="outlook/1.1" Version="V1.1">
+				<Item text="Office.context" url="outlook/1.1/Office.context" Version="V1.1" />
+				<Item text="Office.context.mailbox" url="outlook/1.1/Office.context.mailbox" Version="V1.1" />
+				<Item text="Office.context.mailbox.diagnostics" url="outlook/1.1/Office.context.mailbox.diagnostics" Version="V1.1" />
+				<Item text="Office.context.mailbox.item" url="outlook/1.1/Office.context.mailbox.item" Version="V1.1" />
+				<Item text="Office.context.mailbox.userProfile" url="outlook/1.1/Office.context.mailbox.userProfile" Version="V1.1" />
+			</Item>
+			<Item text="複雜類型" url="outlook/1.1" Version="V1.1">
+				<Item text="本文" url="outlook/1.1/Body" Version="V1.1" />
+				<Item text="CustomProperties" url="outlook/1.1/CustomProperties" Version="V1.1" />
+				<Item text="位置" url="outlook/1.1/Location" Version="V1.1" />
+				<Item text="收件者" url="outlook/1.1/Recipients" Version="V1.1" />
+				<Item text="RoamingSettings" url="outlook/1.1/RoamingSettings" Version="V1.1" />
+				<Item text="主旨" url="outlook/1.1/Subject" Version="V1.1" />
+				<Item text="時間" url="outlook/1.1/Time" Version="V1.1" />
+			</Item>
+			<Item text="簡單類型" url="outlook/1.1/simple-types" Version="V1.1" />
+			<!-- <Item text="AsyncResult" url="outlook/simple-types#asyncresult" Version="V1.1"  />
         <Item text="AttachmentDetails" url="outlook/simple-types#attachmentdetails" Version="V1.1"  />
         <Item text="Contact" url="outlook/simple-types#contact" Version="V1.1"  />
         <Item text="EmailAddressDetails" url="outlook/simple-types#emailaddressdetails" Version="V1.1"  />
@@ -179,8 +167,8 @@
         <Item text="PhoneNumber" url="outlook/simple-types#phonenumber" Version="V1.1"  />
         <Item text="TaskSuggestion" url="outlook/simple-types#tasksuggestion" Version="V1.1"  />
     </Item>-->
-		  <Item text="列舉" url="outlook/1.1/Office.MailboxEnums" Version="V1.1" />  
-      <!--<Item text="Office.AsyncResultStatus" url="outlook/Office#asyncresultstatus-string" Version="V1.1"  />
+			<Item text="列舉" url="outlook/1.1/Office.MailboxEnums" Version="V1.1" />
+			<!--<Item text="Office.AsyncResultStatus" url="outlook/Office#asyncresultstatus-string" Version="V1.1"  />
       <Item text="Office.CoercionType" url="outlook/Office#coerciontype-string" Version="V1.1"  />
       <Item text="Office.MailboxEnums.AttachmentType" url="outlook/Office.MailboxEnums#attachmenttype-string" Version="V1.1"  />
       <Item text="Office.MailboxEnums.EntityType" url="outlook/Office.MailboxEnums#entitytype-string" Version="V1.1"  />
@@ -188,69 +176,67 @@
       <Item text="Office.MailboxEnums.RecipientType" url="outlook/Office.MailboxEnums#recipienttype-string" Version="V1.1"  />
       <Item text="Office.MailboxEnums.ResponseType" url="outlook/Office.MailboxEnums#responsetype-string" Version="V1.1"  />
       <Item text="Office.MailboxEnums.SourceProperty" url="outlook/Office#sourceproperty-string" Version="V1.1"  />-->
-    </Item>   
-    <Item text="1.2" url="outlook/1.2/index" Version="V1.2">
-	    <Item text="物件模型" url="outlook/1.2" Version="V1.2">
-		    <Item text="Office.context" url="outlook/1.2/Office.context" Version="V1.2" />
-		    <Item text="Office.context.mailbox" url="outlook/1.2/Office.context.mailbox" Version="V1.2" />
-        <Item text="Office.context.mailbox.diagnostics" url="outlook/1.2/Office.context.mailbox.diagnostics" Version="V1.2" />
-		    <Item text="Office.context.mailbox.item" url="outlook/1.2/Office.context.mailbox.item" Version="V1.2" />
-		    <Item text="Office.context.mailbox.userProfile" url="outlook/1.2/Office.context.mailbox.userProfile" Version="V1.2" />
-		  </Item>
-		  <Item text="複雜類型" url="outlook/1.2" Version="V1.2">
-		    <Item text="本文" url="outlook/1.2/Body" Version="V1.2" />
-		    <Item text="CustomProperties" url="outlook/1.2/CustomProperties" Version="V1.2" />
-		  <Item text="位置" url="outlook/1.2/Location" Version="V1.2" />
-		    <Item text="收件者" url="outlook/1.2/Recipients" Version="V1.2" />
-		    <Item text="RoamingSettings" url="outlook/1.2/RoamingSettings" Version="V1.2" />
-		    <Item text="主旨" url="outlook/1.2/Subject" Version="V1.2" />
-		    <Item text="時間" url="outlook/1.2/Time" Version="V1.2" />
-		  </Item>
-		  <Item text="簡單類型" url="outlook/1.2/simple-types" Version="V1.2" SEODescription="表示 Mailbox API 的簡單型別。" />
-        <Item text="AsyncResult" url="outlook/simple-types#asyncresult" Version="V1.2" />
-        <Item text="AttachmentDetails" url="outlook/simple-types#attachmentdetails" Version="V1.2" />
-        <Item text="連絡人" url="outlook/simple-types#contact" Version="V1.2" />
-        <Item text="EmailAddressDetails" url="outlook/simple-types#emailaddressdetails" Version="V1.2" />
-        <Item text="EmailUser" url="outlook/simple-types#emailuser" Version="V1.2" />
-        <Item text="實體" url="outlook/simple-types#entities" Version="V1.2" />
-        <Item text="LocalClientTime" url="outlook/simple-types#localclienttime" Version="V1.2" />
-        <Item text="MeetingSuggestion" url="outlook/simple-types#contact" Version="V1.2" />
-        <Item text="PhoneNumber" url="outlook/simple-types#phonenumber" Version="V1.2" />
-        <Item text="TaskSuggestion" url="outlook/simple-types#tasksuggestion" Version="V1.2" />
-      <Item text="列舉" url="outlook/1.2/Office.MailboxEnums" Version="V1.2" SEODescription="表示 Mailbox API 的列舉型別。" />  
-        <Item text="Office.AsyncResultStatus" url="outlook/Office#asyncresultstatus-string" Version="V1.2" />
-        <Item text="Office.CoercionType" url="outlook/Office#coerciontype-string" Version="V1.2" />
-        <Item text="Office.MailboxEnums.AttachmentType" url="outlook/Office.MailboxEnums#attachmenttype-string" Version="V1.2" />
-        <Item text="Office.MailboxEnums.EntityType" url="outlook/Office.MailboxEnums#entitytype-string" Version="V1.2" />
-        <Item text="Office.MailboxEnums.ItemType" url="outlook/Office.MailboxEnums#itemtype-string" Version="V1.2" />
-        <Item text="Office.MailboxEnums.RecipientType" url="outlook/Office.MailboxEnums#recipienttype-string" Version="V1.2" />
-        <Item text="Office.MailboxEnums.ResponseType" url="outlook/Office.MailboxEnums#responsetype-string" Version="V1.2" />
-        <Item text="Office.MailboxEnums.SourceProperty" url="outlook/Office#sourceproperty-string" Version="V1.2" /> 
-     </Item>
-    
-    <!-- V1.3 or latest. This doesn't have a url with the version number-->
-		<Item text="物件模型" url="outlook" Version="V1.3">
-		<Item text="Office" url="outlook/Office" Version="V1.3" SEODescription="Office 命名空間會提供共用的介面，可為所有 Office 應用程式中的增益集所使用。" />
-		<Item text="Office.context" url="outlook/Office.context" Version="V1.3" SEODescription="Office.context 命名空間會提供共用的介面，可為所有 Office 應用程式中的增益集所使用。" />
-		  <Item text="Office.context.mailbox.diagnostics" url="outlook/Office.context.mailbox.diagnostics" Version="V1.3" SEODescription="提供診斷資訊給 Outlook 增益集。" />
-		  <Item text="Office.context.mailbox" url="outlook/Office.context.mailbox" Version="V1.3" SEODescription="提供用於存取 Microsoft Outlook 和網頁型 Outlook 的 Outlook 增益集物件模型。" />
-		  <Item text="Office.context.mailbox.item" url="outlook/Office.context.mailbox.item" Version="V1.3" SEODescription="項目命名空間用來存取目前所選的訊息、會議邀請或約會。您可以使用 itemType 屬性來判斷項目的型別。" />
-		  <Item text="Office.context.mailbox.userProfile" url="outlook/Office.context.mailbox.userProfile" Version="V1.3" SEODescription="提供使用者信箱設定檔的存取。" />
+		</Item>
+		<Item text="1.2" url="outlook/1.2/index" Version="V1.2">
+			<Item text="物件模型" url="outlook/1.2" Version="V1.2">
+				<Item text="Office.context" url="outlook/1.2/Office.context" Version="V1.2" />
+				<Item text="Office.context.mailbox" url="outlook/1.2/Office.context.mailbox" Version="V1.2" />
+				<Item text="Office.context.mailbox.diagnostics" url="outlook/1.2/Office.context.mailbox.diagnostics" Version="V1.2" />
+				<Item text="Office.context.mailbox.item" url="outlook/1.2/Office.context.mailbox.item" Version="V1.2" />
+				<Item text="Office.context.mailbox.userProfile" url="outlook/1.2/Office.context.mailbox.userProfile" Version="V1.2" />
 			</Item>
+			<Item text="複雜類型" url="outlook/1.2" Version="V1.2">
+				<Item text="本文" url="outlook/1.2/Body" Version="V1.2" />
+				<Item text="CustomProperties" url="outlook/1.2/CustomProperties" Version="V1.2" />
+				<Item text="位置" url="outlook/1.2/Location" Version="V1.2" />
+				<Item text="收件者" url="outlook/1.2/Recipients" Version="V1.2" />
+				<Item text="RoamingSettings" url="outlook/1.2/RoamingSettings" Version="V1.2" />
+				<Item text="主旨" url="outlook/1.2/Subject" Version="V1.2" />
+				<Item text="時間" url="outlook/1.2/Time" Version="V1.2" />
+			</Item>
+			<Item text="簡單類型" url="outlook/1.2/simple-types" Version="V1.2" SEODescription="表示 Mailbox API 的簡單型別。" />
+			<Item text="AsyncResult" url="outlook/simple-types#asyncresult" Version="V1.2" />
+			<Item text="AttachmentDetails" url="outlook/simple-types#attachmentdetails" Version="V1.2" />
+			<Item text="連絡人" url="outlook/simple-types#contact" Version="V1.2" />
+			<Item text="EmailAddressDetails" url="outlook/simple-types#emailaddressdetails" Version="V1.2" />
+			<Item text="EmailUser" url="outlook/simple-types#emailuser" Version="V1.2" />
+			<Item text="實體" url="outlook/simple-types#entities" Version="V1.2" />
+			<Item text="LocalClientTime" url="outlook/simple-types#localclienttime" Version="V1.2" />
+			<Item text="MeetingSuggestion" url="outlook/simple-types#contact" Version="V1.2" />
+			<Item text="PhoneNumber" url="outlook/simple-types#phonenumber" Version="V1.2" />
+			<Item text="TaskSuggestion" url="outlook/simple-types#tasksuggestion" Version="V1.2" />
+			<Item text="列舉" url="outlook/1.2/Office.MailboxEnums" Version="V1.2" SEODescription="表示 Mailbox API 的列舉型別。" />
+			<Item text="Office.AsyncResultStatus" url="outlook/Office#asyncresultstatus-string" Version="V1.2" />
+			<Item text="Office.CoercionType" url="outlook/Office#coerciontype-string" Version="V1.2" />
+			<Item text="Office.MailboxEnums.AttachmentType" url="outlook/Office.MailboxEnums#attachmenttype-string" Version="V1.2" />
+			<Item text="Office.MailboxEnums.EntityType" url="outlook/Office.MailboxEnums#entitytype-string" Version="V1.2" />
+			<Item text="Office.MailboxEnums.ItemType" url="outlook/Office.MailboxEnums#itemtype-string" Version="V1.2" />
+			<Item text="Office.MailboxEnums.RecipientType" url="outlook/Office.MailboxEnums#recipienttype-string" Version="V1.2" />
+			<Item text="Office.MailboxEnums.ResponseType" url="outlook/Office.MailboxEnums#responsetype-string" Version="V1.2" />
+			<Item text="Office.MailboxEnums.SourceProperty" url="outlook/Office#sourceproperty-string" Version="V1.2" />
+		</Item>
+		<!-- V1.3 or latest. This doesn't have a url with the version number-->
+		<Item text="物件模型" url="outlook" Version="V1.3">
+			<Item text="Office" url="outlook/Office" Version="V1.3" SEODescription="Office 命名空間會提供共用的介面，可為所有 Office 應用程式中的增益集所使用。" />
+			<Item text="Office.context" url="outlook/Office.context" Version="V1.3" SEODescription="Office.context 命名空間會提供共用的介面，可為所有 Office 應用程式中的增益集所使用。" />
+			<Item text="Office.context.mailbox.diagnostics" url="outlook/Office.context.mailbox.diagnostics" Version="V1.3" SEODescription="提供診斷資訊給 Outlook 增益集。" />
+			<Item text="Office.context.mailbox" url="outlook/Office.context.mailbox" Version="V1.3" SEODescription="提供用於存取 Microsoft Outlook 和網頁型 Outlook 的 Outlook 增益集物件模型。" />
+			<Item text="Office.context.mailbox.item" url="outlook/Office.context.mailbox.item" Version="V1.3" SEODescription="項目命名空間用來存取目前所選的訊息、會議邀請或約會。您可以使用 itemType 屬性來判斷項目的型別。" />
+			<Item text="Office.context.mailbox.userProfile" url="outlook/Office.context.mailbox.userProfile" Version="V1.3" SEODescription="提供使用者信箱設定檔的存取。" />
+		</Item>
 		<Item text="複雜類型" url="outlook" Version="V1.3">
-		  <Item text="本文" url="outlook/Body" Version="V1.3" SEODescription="本文物件會提供新增和更新訊息或約會內容的方法。" />
-		  <Item text="CustomProperties" url="outlook/CustomProperties" Version="V1.3" SEODescription="CustomProperties 物件代表特定項目所特有的和適用於 Outlook 的郵件增益集所特有的自訂屬性。" />
-			<Item text="事件" url="outlook/Event" Version="V1.3" SEODescription="事件物件會作為參數傳遞給由無 UI 的指令按鈕所叫用的增益集函數。" />	
+			<Item text="本文" url="outlook/Body" Version="V1.3" SEODescription="本文物件會提供新增和更新訊息或約會內容的方法。" />
+			<Item text="CustomProperties" url="outlook/CustomProperties" Version="V1.3" SEODescription="CustomProperties 物件代表特定項目所特有的和適用於 Outlook 的郵件增益集所特有的自訂屬性。" />
+			<Item text="事件" url="outlook/Event" Version="V1.3" SEODescription="事件物件會作為參數傳遞給由無 UI 的指令按鈕所叫用的增益集函數。" />
 			<Item text="位置" url="outlook/Location" Version="V1.3" SEODescription="提供在 Outlook 增益集中取得及設定會議地點的方法。" />
-			<Item text="NotificationMessages" url="outlook/NotificationMessages" Version="V1.3" SEODescription="NotificationMessages 物件會作為 notificationMessages 項目的屬性傳回。" />	
+			<Item text="NotificationMessages" url="outlook/NotificationMessages" Version="V1.3" SEODescription="NotificationMessages 物件會作為 notificationMessages 項目的屬性傳回。" />
 			<Item text="收件者" url="outlook/Recipients" Version="V1.3" SEODescription="郵件收件者的相關資訊。" />
-		  <Item text="RoamingSettings" url="outlook/RoamingSettings" Version="V1.3" SEODescription="使用 RoamingSettings 物件的方法所建立的設定，會按照每個增益集和每位使用者來儲存。" />
-		  <Item text="主旨" url="outlook/Subject" Version="V1.3" SEODescription="提供在 Outlook 增益集中取得及設定約會或訊息主旨的方法。" />
-		  <Item text="時間" url="outlook/Time" Version="V1.3" SEODescription="Time 物件會作為撰寫模式中約會的 Start 或 End 屬性傳回。" />
+			<Item text="RoamingSettings" url="outlook/RoamingSettings" Version="V1.3" SEODescription="使用 RoamingSettings 物件的方法所建立的設定，會按照每個增益集和每位使用者來儲存。" />
+			<Item text="主旨" url="outlook/Subject" Version="V1.3" SEODescription="提供在 Outlook 增益集中取得及設定約會或訊息主旨的方法。" />
+			<Item text="時間" url="outlook/Time" Version="V1.3" SEODescription="Time 物件會作為撰寫模式中約會的 Start 或 End 屬性傳回。" />
 		</Item>
 		<Item text="簡單類型" url="outlook/simple-types" Version="V1.3">
-      
-      <!--
+			<!--
         <Item text="AsyncResult" url="outlook/simple-types#asyncresult" Version="V1.3"  />
         <Item text="AttachmentDetails" url="outlook/simple-types#attachmentdetails" Version="V1.3"  />
         <Item text="Contact" url="outlook/simple-types#contact" Version="V1.3"  />
@@ -263,9 +249,9 @@
         <Item text="PhoneNumber" url="outlook/simple-types#phonenumber" Version="V1.3"  />
         <Item text="TaskSuggestion" url="outlook/simple-types#tasksuggestion" Version="V1.3"  />
         -->
-    </Item>
-		<Item text="列舉" url="outlook/Office.MailboxEnums" Version="V1.3">  
-      <!--
+		</Item>
+		<Item text="列舉" url="outlook/Office.MailboxEnums" Version="V1.3">
+			<!--
       <Item text="Office.AsyncResultStatus" url="outlook/Office#asyncresultstatus-string" Version="V1.3"  />
       <Item text="Office.CoercionType" url="outlook/Office#coerciontype-string" Version="V1.3"  />
       <Item text="Office.MailboxEnums.AttachmentType" url="outlook/Office.MailboxEnums#attachmenttype-string" Version="V1.3"  />
@@ -276,263 +262,274 @@
       <Item text="Office.MailboxEnums.ResponseType" url="outlook/Office.MailboxEnums#responsetype-string" Version="V1.3"  />
       <Item text="Office.MailboxEnums.SourceProperty" url="outlook/Office#sourceproperty-string" Version="V1.3"  />
         -->
-    </Item>
-    <Item text="了解 API 需求集合" url="outlook/tutorial-api-requirement-sets" Version="V1.3" SEODescription="適用於 Outlook 的 API 需求集合" />
-  </Item>
-   
-  <Item text="OneNote" url="onenote/onenote-add-ins-javascript-reference" Scope="onenote">
-    <Item text="應用程式" url="onenote/application" SEODescription="OneNote 的增益集參考。" />
-    <Item text="錯誤" url="onenote/error" SEODescription="OneNote 的增益集參考。" />
-	<Item text="筆記本" url="onenote/notebook" SEODescription="OneNote 的增益集參考。" />
-    <Item text="Notebookcollection" url="onenote/notebookcollection" SEODescription="OneNote 的增益集參考。" />
-    <Item text="頁面" url="onenote/page" SEODescription="OneNote 的增益集參考。" />
-    <Item text="Pagecollection" url="onenote/pagecollection" SEODescription="OneNote 的增益集參考。" />
-    <Item text="Pagecontent" url="onenote/pagecontent" SEODescription="OneNote 的增益集參考。" />
-    <Item text="Pagecontentcollection" url="onenote/pagecontentcollection" SEODescription="OneNote 的增益集參考。" />
-    <Item text="段落" url="onenote/paragraph" SEODescription="OneNote 的增益集參考。" />
-    <Item text="Paragraphcollection" url="onenote/paragraphcollection" SEODescription="OneNote 的增益集參考。" />
-    <Item text="Richtext" url="onenote/richtext" SEODescription="OneNote 的增益集參考。" />
-    <Item text="章節" url="onenote/section" SEODescription="OneNote 的增益集參考。" />
-    <Item text="Sectioncollection" url="onenote/sectioncollection" SEODescription="OneNote 的增益集參考。" />
-    <Item text="Sectiongroup" url="onenote/sectiongroup" SEODescription="OneNote 的增益集參考。" />
-    <Item text="Sectiongroupcollection" url="onenote/sectiongroupcollection" SEODescription="OneNote 的增益集參考。" />
-    <Item text="大綱" url="onenote/outline" SEODescription="OneNote 的增益集參考。" />
-    <Item text="影像" url="onenote/image" SEODescription="OneNote 的增益集參考。" />
-	<Item text="OneNote JavaScript API 需求集合" url="requirement-sets/onenote-api-requirement-sets" SEODescription="深入了解 OneNote 需求集、支援需求集的 Office 主應用程式，以及組建版本或可用性日期。" />
-  </Item>  
-  <Item text="共用 API" url="shared/shared-api">
-    <Item text="JavaScript API for Office" url="javascript-api-for-office" SEODescription="適用於 Office 的 JavaScript API 包括物件、方法、屬性、事件和列舉型別，您可以用於您的 Office 增益集程式碼中。" />
-	<Item text="適用於 Office 的 JavaScript API 中的變更項目" url="what's-changed-in-the-javascript-api-for-office" SEODescription="適用於 Office 的 JavaScript API 會定期以新的或更新的物件、方法、屬性、事件和列舉型別更新，來擴充您 Office 增益集的功能。" />
-	<Item text="Office 通用需求集合" url="requirement-sets/office-add-in-requirement-sets" SEODescription="需求集合是 API 成員的具名群組。Office 增益集使用資訊清單中所指定的需求集合，或使用執行階段檢查，以判定 Office 主應用程式是否支援增益集所需的的 API。" />
-	<Item text="適用於 Office 的 JavaScript API 錯誤代碼" url="javascript-api-for-office-error-codes" SEODescription="您使用適用於 Office 的 JavaScript API (Office.js) 時可能遇到的錯誤訊息。" />
-	<Item text="列舉" url="shared/enumerations" FriendlyUrl="reference/enumerationsenumerations">
-      <Item text="ActiveView 列舉" url="shared/activeview-enumeration" FriendlyUrl="reference/enumerationsactiveview-enumeration" Scope="powerpoint" SEODescription="指定文件的使用中檢視狀態，例如使用者是否可以編輯文件。" />
-      <Item text="AsyncResultStatus 列舉" url="shared/asyncresultstatus-enumeration" FriendlyUrl="reference/enumerationsasyncresultstatus-enumeration" Scope="Access, Excel, Word" SEODescription="指定非同步呼叫的結果。" />
-      <Item text="BindingType 列舉" url="shared/bindingtype-enumeration" FriendlyUrl="reference/enumerationsbindingtype-enumeration" Scope="Access, Excel, Word" SEODescription="指定應傳回的繫結物件類型。" />
-      <Item text="CoercionType 列舉" url="shared/coerciontype-enumeration" FriendlyUrl="reference/enumerationscoerciontype-enumeration" SEODescription="指定如何強制轉型所傳回或由叫用方法設定的資料。" />
-      <Item text="CustomXMLNodeType 列舉" url="shared/customxmlnodetype-enumeration" FriendlyUrl="reference/enumerationscustomxmlnodetype-enumeration" Scope="Word" SEODescription="指定節點類型。" />
-      <Item text="DocumentMode 列舉" url="shared/documentmode-enumeration" FriendlyUrl="reference/enumerationsdocumentmode-enumeration" Scope="Excel, PowerPoint, Project, Word" SEODescription="指定關聯的應用程式中的文件是否為唯讀或讀寫。" />
-      <Item text="EventType 列舉" url="shared/eventtype-enumeration" FriendlyUrl="reference/enumerationseventtype-enumeration" Scope="Excel, PowerPoint, Project, Word" SEODescription="指定引發的事件種類。由 EventNameEventArgs 物件的類型屬性所傳回。" />
-      <Item text="FileType 列舉" url="shared/filetype-enumeration" FriendlyUrl="reference/enumerationsfiletype-enumeration" Scope="PowerPoint, Word" SEODescription="指定文件要傳回的格式。" />
-      <Item text="FilterType 列舉" url="shared/filtertype-enumeration" FriendlyUrl="reference/enumerationsfiltertype-enumeration" Scope="Excel, Project, Word" SEODescription="指定擷取資料時，是否從主應用程式套用篩選條件。" />
-      <Item text="GoToType 列舉" url="shared/gototype-enumeration" FriendlyUrl="reference/enumerationsgototype-enumeration" Scope="Excel, PowerPoint, Word" SEODescription="指定要瀏覽至的位置或物件類型。" />
-      <Item text="InitializationReason 列舉" url="shared/initializationreason-enumeration" FriendlyUrl="reference/enumerationsinitializationreason-enumeration" Scope="Excel, Project, Word" SEODescription="指定增益集是否剛插入或之前已經包含在文件中。" />
-      <Item text="ProjectProjectFields 列舉" url="shared/projectprojectfields-enumeration" FriendlyUrl="reference/enumerationsprojectprojectfields-enumeration" Scope="project" SEODescription="指定可作為 getProjectFieldAsync 方法參數的專案欄位。" />
-      <Item text="ProjectResourceFields 列舉" url="shared/projectresourcefields-enumeration" FriendlyUrl="reference/enumerationsprojectresourcefields-enumeration" Scope="project" SEODescription="指定可作為 getResourceFieldAsync 方法參數的資源欄位。" />
-      <Item text="ProjectTaskFields 列舉" url="shared/projecttaskfields-enumeration" FriendlyUrl="reference/enumerationsprojecttaskfields-enumeration" Scope="project" SEODescription="指定可作為 getTaskFieldAsync 方法參數的工作欄位。" />
-      <Item text="ProjectViewTypes 列舉" url="shared/projectviewtypes-enumeration" FriendlyUrl="reference/enumerationsprojectviewtypes-enumeration" Scope="project" SEODescription="指定 getSelectedViewAsync 方法可以辨識的指定檢視類型。" />
-      <Item text="SelectionMode 列舉" url="shared/selectionmode-enumeration" FriendlyUrl="reference/enumerationsselectionmode-enumeration" Scope="project" SEODescription="選取圖片並將 Word UI 導覽至該處。SelectionMode 值可以是 Select、Start 或 End。" />
-      <Item text="Table 列舉" url="shared/table-enumeration" Scope="excel" SEODescription="指定儲存格的列舉值︰表格格式設定方法的 cellFormat 參數中的屬性。" />
-      <Item text="ValueFormat 列舉" url="shared/valueformat-enumeration" Scope="Excel, Project, Word" SEODescription="指定叫用方法所傳回的值，例如數字和日期，是否以其套用的格式設定傳回。" />
-      </Item>
-    <Item text="AsyncResult" url="shared/asyncresult">
-      <Item text="AsyncResult.asyncContext" url="shared/asyncresult.asynccontext" SEODescription="以非同步方式取得自訂 XML 組件中 XML 節點的文字。" />
-      <Item text="AsyncResult.error" url="shared/asyncresult.error" SEODescription="如果發生任何錯誤，取得提供錯誤描述的 Error 物件。" />
-      <Item text="AsyncResult.status" url="shared/asyncresult.status" SEODescription="取得非同步作業的狀態。" />
-      <Item text="AsyncResult.value" url="shared/asyncresult.value" SEODescription="如果有的話，請取得這個非同步作業的裝載或內容。" />
-    </Item>
-    <Item text="內文 " url="shared/context">
-      <Item text="office.context" url="shared/office.context" SEODescription="取得內容物件，表示增益集的執行階段環境 " />
-      <Item text="office.context.commerceAllowed " url="shared/office.context.commerceallowed" FriendlyUrl="reference/common/contextoffice.context.commerceallowed" SEODescription="取得關於增益集是否在允許連結到外部付款系統的平台上執行的資訊。" />
-      <Item text="office.context.contentLanguage" url="shared/office.context.contentlanguage" SEODescription="取得使用者指定用於編輯文件或項目的地區設定 (語言)。" />
-      <Item text="office.context.displaylanguage" url="shared/office.context.displaylanguage" SEODescription="取得使用者為 Office 主應用程式 UI 指定的地區設定 (語言)。" />
-      <Item text="office.context.touchEnabled" url="shared/office.context.touchenabled" FriendlyUrl="reference/common/contextoffice.context.touchenabled" SEODescription="取得關於增益集是否在具有觸控功能的 Office 主應用程式中執行的資訊。" />
-      <Item text="office.context.officetheme" url="shared/office.context.officetheme" SEODescription="提供 Office 佈景主題色彩屬性的存取。" />
-      <Item text="office.context.bodyBackgroundColor" url="shared/office.context.bodybackgroundcolor" FriendlyUrl="reference/common/contextoffice.context.bodybackgroundcolor" SEOKeyword="OL" SEODescription="取得 Office 佈景主題內容背景色彩。" />
-      <Item text="office.context.bodyForegroundColor" url="shared/office.context.bodyforegroundcolor" FriendlyUrl="reference/common/contextoffice.context.bodyforegroundcolor" SEOKeyword="OL" SEODescription="取得 Office 佈景主題內容前景色彩。" />
-      <Item text="office.context.controlbackgroundcolor" url="shared/office.context.controlbackgroundcolor" SEODescription="取得 Office 佈景主題控制項的背景色彩。" />
-      <Item text="office.context.controlforegroundcolor" url="shared/office.context.controlforegroundcolor" SEODescription="取得 Office 佈景主題控制項的前景色彩。" />
-      <Item text="office.context.document" url="shared/office.context.document" SEODescription="取得代表與增益集互動之文件的物件。" />
-      <Item text="office.context.mailbox" url="shared/office.context.mailbox" SEODescription="取得提供特別針對 Outlook 增益集 API 成員存取的信箱物件。" />
-      <Item text="office.context.roamingsettings" url="shared/office.context.roamingsettings" SEODescription="取得代表自訂設定或儲存至使用者信箱之 Outlook 增益集狀態的物件。" />
-    </Item>
-    <Item text="Binding" url="shared/binding" Scope="access, excel, word">
-	    <Item text="Binding.addHandlerAsync" url="shared/binding.addhandlerasync" SEODescription="加入指定的事件類型繫結的處理常式。" />
-      <Item text="Binding.bindingDataChanged 事件" url="shared/binding.bindingdatachangedevent" SEODescription="繫結內的資料變更時，就會發生。" />
-      
-      <!--<Item text="bindingDataChangedEventArgs object" url="shared/binding.bindingdatachangedeventargs" FriendlyUrl="reference/common/binding-object/data-changed-event/argsbinding.bindingdatachangedeventargs"    />
+		</Item>
+		<Item text="了解 API 需求集合" url="outlook/tutorial-api-requirement-sets" Version="V1.3" SEODescription="適用於 Outlook 的 API 需求集合" />
+	</Item>
+	<Item text="OneNote" url="onenote/onenote-add-ins-javascript-reference" Scope="onenote">
+		<Item text="應用程式" url="onenote/application" SEODescription="OneNote 的增益集參考。" />
+		<Item text="錯誤" url="onenote/error" SEODescription="OneNote 的增益集參考。" />
+		<Item text="筆記本" url="onenote/notebook" SEODescription="OneNote 的增益集參考。" />
+		<Item text="Notebookcollection" url="onenote/notebookcollection" SEODescription="OneNote 的增益集參考。" />
+		<Item text="頁面" url="onenote/page" SEODescription="OneNote 的增益集參考。" />
+		<Item text="Pagecollection" url="onenote/pagecollection" SEODescription="OneNote 的增益集參考。" />
+		<Item text="Pagecontent" url="onenote/pagecontent" SEODescription="OneNote 的增益集參考。" />
+		<Item text="Pagecontentcollection" url="onenote/pagecontentcollection" SEODescription="OneNote 的增益集參考。" />
+		<Item text="段落" url="onenote/paragraph" SEODescription="OneNote 的增益集參考。" />
+		<Item text="Paragraphcollection" url="onenote/paragraphcollection" SEODescription="OneNote 的增益集參考。" />
+		<Item text="Richtext" url="onenote/richtext" SEODescription="OneNote 的增益集參考。" />
+		<Item text="章節" url="onenote/section" SEODescription="OneNote 的增益集參考。" />
+		<Item text="Sectioncollection" url="onenote/sectioncollection" SEODescription="OneNote 的增益集參考。" />
+		<Item text="Sectiongroup" url="onenote/sectiongroup" SEODescription="OneNote 的增益集參考。" />
+		<Item text="Sectiongroupcollection" url="onenote/sectiongroupcollection" SEODescription="OneNote 的增益集參考。" />
+		<Item text="大綱" url="onenote/outline" SEODescription="OneNote 的增益集參考。" />
+		<Item text="影像" url="onenote/image" SEODescription="OneNote 的增益集參考。" />
+		<Item text="OneNote JavaScript API 需求集合" url="requirement-sets/onenote-api-requirement-sets" SEODescription="深入了解 OneNote 需求集、支援需求集的 Office 主應用程式，以及組建版本或可用性日期。" />
+	</Item>
+	<Item text="Visio" url="visio/visio-javascript-reference-overview" Scope="visio">
+		<Item text="應用程式" url="visio/application" SEODescription="Visio JavaScript API 參考資料。" />
+		<Item text="文件" url="visio/document" SEODescription="Visio JavaScript API 參考資料。" />
+		<Item text="超連結" url="visio/hyperlink" SEODescription="Visio JavaScript API 參考資料。" />
+		<Item text="HyperlinkCollection" url="visio/hyperlinkcollection" SEODescription="Visio JavaScript API 參考資料。" />
+		<Item text="LoadOption" url="visio/loadoption" SEODescription="Visio JavaScript API 參考資料。" />
+		<Item text="Page" url="visio/page" SEODescription="Visio JavaScript API 參考資料。" />
+		<Item text="PageCollection" url="visio/pagecollection" SEODescription="Visio JavaScript API 參考資料。" />
+		<Item text="PageView" url="visio/pageview" SEODescription="Visio JavaScript API 參考資料。" />
+		<Item text="Shape" url="visio/shape" SEODescription="Visio JavaScript API 參考資料。" />
+		<Item text="ShapeCollection" url="visio/shapecollection" SEODescription="Visio JavaScript API 參考資料。" />
+		<Item text="ShapeDataItem" url="visio/shapedataitem" SEODescription="Visio JavaScript API 參考資料。" />
+		<Item text="ShapeDataItemCollection" url="visio/shapedataitemcollection" SEODescription="Visio JavaScript API 參考資料。" />
+		<Item text="ShapeView" url="visio/shapeview" SEODescription="Visio JavaScript API 參考資料。" />
+	</Item>
+	<Item text="共用 API" url="shared/shared-api">
+		<Item text="JavaScript API for Office" url="javascript-api-for-office" SEODescription="適用於 Office 的 JavaScript API 包括物件、方法、屬性、事件和列舉型別，您可以用於您的 Office 增益集程式碼中。" />
+		<Item text="適用於 Office 的 JavaScript API 中的變更項目" url="what's-changed-in-the-javascript-api-for-office" SEODescription="適用於 Office 的 JavaScript API 會定期以新的或更新的物件、方法、屬性、事件和列舉型別更新，來擴充您 Office 增益集的功能。" />
+		<Item text="Office 通用需求集合" url="requirement-sets/office-add-in-requirement-sets" SEODescription="需求集合是 API 成員的具名群組。Office 增益集使用資訊清單中所指定的需求集合，或使用執行階段檢查，以判定 Office 主應用程式是否支援增益集所需的的 API。" />
+		<Item text="適用於 Office 的 JavaScript API 錯誤代碼" url="javascript-api-for-office-error-codes" SEODescription="您使用適用於 Office 的 JavaScript API (Office.js) 時可能遇到的錯誤訊息。" />
+		<Item text="列舉" url="shared/enumerations" FriendlyUrl="reference/enumerationsenumerations">
+			<Item text="ActiveView 列舉" url="shared/activeview-enumeration" FriendlyUrl="reference/enumerationsactiveview-enumeration" Scope="powerpoint" SEODescription="指定文件的使用中檢視狀態，例如使用者是否可以編輯文件。" />
+			<Item text="AsyncResultStatus 列舉" url="shared/asyncresultstatus-enumeration" FriendlyUrl="reference/enumerationsasyncresultstatus-enumeration" Scope="Access, Excel, Word" SEODescription="指定非同步呼叫的結果。" />
+			<Item text="BindingType 列舉" url="shared/bindingtype-enumeration" FriendlyUrl="reference/enumerationsbindingtype-enumeration" Scope="Access, Excel, Word" SEODescription="指定應傳回的繫結物件類型。" />
+			<Item text="CoercionType 列舉" url="shared/coerciontype-enumeration" FriendlyUrl="reference/enumerationscoerciontype-enumeration" SEODescription="指定如何強制轉型所傳回或由叫用方法設定的資料。" />
+			<Item text="CustomXMLNodeType 列舉" url="shared/customxmlnodetype-enumeration" FriendlyUrl="reference/enumerationscustomxmlnodetype-enumeration" Scope="Word" SEODescription="指定節點類型。" />
+			<Item text="DocumentMode 列舉" url="shared/documentmode-enumeration" FriendlyUrl="reference/enumerationsdocumentmode-enumeration" Scope="Excel, PowerPoint, Project, Word" SEODescription="指定關聯的應用程式中的文件是否為唯讀或讀寫。" />
+			<Item text="EventType 列舉" url="shared/eventtype-enumeration" FriendlyUrl="reference/enumerationseventtype-enumeration" Scope="Excel, PowerPoint, Project, Word" SEODescription="指定引發的事件種類。由 EventNameEventArgs 物件的類型屬性所傳回。" />
+			<Item text="FileType 列舉" url="shared/filetype-enumeration" FriendlyUrl="reference/enumerationsfiletype-enumeration" Scope="PowerPoint, Word" SEODescription="指定文件要傳回的格式。" />
+			<Item text="FilterType 列舉" url="shared/filtertype-enumeration" FriendlyUrl="reference/enumerationsfiltertype-enumeration" Scope="Excel, Project, Word" SEODescription="指定擷取資料時，是否從主應用程式套用篩選條件。" />
+			<Item text="GoToType 列舉" url="shared/gototype-enumeration" FriendlyUrl="reference/enumerationsgototype-enumeration" Scope="Excel, PowerPoint, Word" SEODescription="指定要瀏覽至的位置或物件類型。" />
+			<Item text="InitializationReason 列舉" url="shared/initializationreason-enumeration" FriendlyUrl="reference/enumerationsinitializationreason-enumeration" Scope="Excel, Project, Word" SEODescription="指定增益集是否剛插入或之前已經包含在文件中。" />
+			<Item text="ProjectProjectFields 列舉" url="shared/projectprojectfields-enumeration" FriendlyUrl="reference/enumerationsprojectprojectfields-enumeration" Scope="project" SEODescription="指定可作為 getProjectFieldAsync 方法參數的專案欄位。" />
+			<Item text="ProjectResourceFields 列舉" url="shared/projectresourcefields-enumeration" FriendlyUrl="reference/enumerationsprojectresourcefields-enumeration" Scope="project" SEODescription="指定可作為 getResourceFieldAsync 方法參數的資源欄位。" />
+			<Item text="ProjectTaskFields 列舉" url="shared/projecttaskfields-enumeration" FriendlyUrl="reference/enumerationsprojecttaskfields-enumeration" Scope="project" SEODescription="指定可作為 getTaskFieldAsync 方法參數的工作欄位。" />
+			<Item text="ProjectViewTypes 列舉" url="shared/projectviewtypes-enumeration" FriendlyUrl="reference/enumerationsprojectviewtypes-enumeration" Scope="project" SEODescription="指定 getSelectedViewAsync 方法可以辨識的指定檢視類型。" />
+			<Item text="SelectionMode 列舉" url="shared/selectionmode-enumeration" FriendlyUrl="reference/enumerationsselectionmode-enumeration" Scope="project" SEODescription="選取圖片並將 Word UI 導覽至該處。SelectionMode 值可以是 Select、Start 或 End。" />
+			<Item text="Table 列舉" url="shared/table-enumeration" Scope="excel" SEODescription="指定儲存格的列舉值︰表格格式設定方法的 cellFormat 參數中的屬性。" />
+			<Item text="ValueFormat 列舉" url="shared/valueformat-enumeration" Scope="Excel, Project, Word" SEODescription="指定叫用方法所傳回的值，例如數字和日期，是否以其套用的格式設定傳回。" />
+		</Item>
+		<Item text="AsyncResult" url="shared/asyncresult">
+			<Item text="AsyncResult.asyncContext" url="shared/asyncresult.asynccontext" SEODescription="以非同步方式取得自訂 XML 組件中 XML 節點的文字。" />
+			<Item text="AsyncResult.error" url="shared/asyncresult.error" SEODescription="如果發生任何錯誤，取得提供錯誤描述的 Error 物件。" />
+			<Item text="AsyncResult.status" url="shared/asyncresult.status" SEODescription="取得非同步作業的狀態。" />
+			<Item text="AsyncResult.value" url="shared/asyncresult.value" SEODescription="如果有的話，請取得這個非同步作業的裝載或內容。" />
+		</Item>
+		<Item text="內文 " url="shared/context">
+			<Item text="office.context" url="shared/office.context" SEODescription="取得內容物件，表示增益集的執行階段環境 " />
+			<Item text="office.context.commerceAllowed " url="shared/office.context.commerceallowed" FriendlyUrl="reference/common/contextoffice.context.commerceallowed" SEODescription="取得關於增益集是否在允許連結到外部付款系統的平台上執行的資訊。" />
+			<Item text="office.context.contentLanguage" url="shared/office.context.contentlanguage" SEODescription="取得使用者指定用於編輯文件或項目的地區設定 (語言)。" />
+			<Item text="office.context.displaylanguage" url="shared/office.context.displaylanguage" SEODescription="取得使用者為 Office 主應用程式 UI 指定的地區設定 (語言)。" />
+			<Item text="office.context.touchEnabled" url="shared/office.context.touchenabled" FriendlyUrl="reference/common/contextoffice.context.touchenabled" SEODescription="取得關於增益集是否在具有觸控功能的 Office 主應用程式中執行的資訊。" />
+			<Item text="office.context.officetheme" url="shared/office.context.officetheme" SEODescription="提供 Office 佈景主題色彩屬性的存取。" />
+			<Item text="office.context.bodyBackgroundColor" url="shared/office.context.bodybackgroundcolor" FriendlyUrl="reference/common/contextoffice.context.bodybackgroundcolor" SEOKeyword="OL" SEODescription="取得 Office 佈景主題內容背景色彩。" />
+			<Item text="office.context.bodyForegroundColor" url="shared/office.context.bodyforegroundcolor" FriendlyUrl="reference/common/contextoffice.context.bodyforegroundcolor" SEOKeyword="OL" SEODescription="取得 Office 佈景主題內容前景色彩。" />
+			<Item text="office.context.controlbackgroundcolor" url="shared/office.context.controlbackgroundcolor" SEODescription="取得 Office 佈景主題控制項的背景色彩。" />
+			<Item text="office.context.controlforegroundcolor" url="shared/office.context.controlforegroundcolor" SEODescription="取得 Office 佈景主題控制項的前景色彩。" />
+			<Item text="office.context.document" url="shared/office.context.document" SEODescription="取得代表與增益集互動之文件的物件。" />
+			<Item text="office.context.mailbox" url="shared/office.context.mailbox" SEODescription="取得提供特別針對 Outlook 增益集 API 成員存取的信箱物件。" />
+			<Item text="office.context.roamingsettings" url="shared/office.context.roamingsettings" SEODescription="取得代表自訂設定或儲存至使用者信箱之 Outlook 增益集狀態的物件。" />
+		</Item>
+		<Item text="Binding" url="shared/binding" Scope="access, excel, word">
+			<Item text="Binding.addHandlerAsync" url="shared/binding.addhandlerasync" SEODescription="加入指定的事件類型繫結的處理常式。" />
+			<Item text="Binding.bindingDataChanged 事件" url="shared/binding.bindingdatachangedevent" SEODescription="繫結內的資料變更時，就會發生。" />
+			<!--<Item text="bindingDataChangedEventArgs object" url="shared/binding.bindingdatachangedeventargs" FriendlyUrl="reference/common/binding-object/data-changed-event/argsbinding.bindingdatachangedeventargs"    />
         <Item text="type " url="shared/binding.bindingdatachangedeventargs.type" FriendlyUrl="reference/common/binding-object/data-changed-event/argsbinding.bindingdatachangedeventargs.type"    />
         <Item text="binding " url="shared/binding.bindingdatachangedeventargs.binding" FriendlyUrl="reference/common/binding-object/data-changed-event/argsbinding.bindingdatachangedeventargs.binding"    />
       <Item text="bindingselectionchangedevent.binding " url="shared/binding.bindingselectionchangedevent.binding" FriendlyUrl="reference/common/binding-object/selection-changed-event-argsbinding.bindingselectionchangedevent.binding"    />
       -->
-      
-      <Item text="Binding.bindingSelectionChanged 事件" url="shared/binding.bindingselectionchangedevent" FriendlyUrl="reference/common/binding-object/selection-changed-eventbinding.bindingselectionchangedevent">
-        <Item text="columnCount" url="shared/binding.bindingselectionchangedevent.columncount" FriendlyUrl="reference/common/binding-object/selection-changed-event-argsbinding.bindingselectionchangedevent.columncount" SEODescription="取得選取的資料欄數目。" />
-        <Item text="rowCount" url="shared/binding.bindingselectionchangedevent.rowcount" FriendlyUrl="reference/common/binding-object/selection-changed-event-argsbinding.bindingselectionchangedevent.rowcount" SEODescription="取得選取的資料列數目。" />
-        <Item text="startColumn" url="shared/binding.bindingselectionchangedevent.startcolumn" FriendlyUrl="reference/common/binding-object/selection-changed-event-argsbinding.bindingselectionchangedevent.startcolumn" SEODescription="取得選取範圍首欄的索引 (以零為基礎)。" />
-        <Item text="startRow" url="shared/binding.bindingselectionchangedevent.startrow" FriendlyUrl="reference/common/binding-object/selection-changed-event-argsbinding.bindingselectionchangedevent.startrow" SEODescription="取得選取範圍首列的索引 (以零為基礎)。" />
-      </Item>
-      <!--<Item text="binding.bindingSelectionChangedeventargs" url="shared/binding.bindingselectionchangedeventargs"  />
+			<Item text="Binding.bindingSelectionChanged 事件" url="shared/binding.bindingselectionchangedevent" FriendlyUrl="reference/common/binding-object/selection-changed-eventbinding.bindingselectionchangedevent">
+				<Item text="columnCount" url="shared/binding.bindingselectionchangedevent.columncount" FriendlyUrl="reference/common/binding-object/selection-changed-event-argsbinding.bindingselectionchangedevent.columncount" SEODescription="取得選取的資料欄數目。" />
+				<Item text="rowCount" url="shared/binding.bindingselectionchangedevent.rowcount" FriendlyUrl="reference/common/binding-object/selection-changed-event-argsbinding.bindingselectionchangedevent.rowcount" SEODescription="取得選取的資料列數目。" />
+				<Item text="startColumn" url="shared/binding.bindingselectionchangedevent.startcolumn" FriendlyUrl="reference/common/binding-object/selection-changed-event-argsbinding.bindingselectionchangedevent.startcolumn" SEODescription="取得選取範圍首欄的索引 (以零為基礎)。" />
+				<Item text="startRow" url="shared/binding.bindingselectionchangedevent.startrow" FriendlyUrl="reference/common/binding-object/selection-changed-event-argsbinding.bindingselectionchangedevent.startrow" SEODescription="取得選取範圍首列的索引 (以零為基礎)。" />
+			</Item>
+			<!--<Item text="binding.bindingSelectionChangedeventargs" url="shared/binding.bindingselectionchangedeventargs"  />
         <Item text="type" url="shared/binding.bindingselectionchangedevent.type"  />
       -->
-      <Item text="文件" url="shared/binding.document" SEODescription="抽象類別，代表繫結至文件的某個區段。" />
-      <Item text="getDataAsync" url="shared/binding.getdataasync" FriendlyUrl="reference/common/binding-objectbinding.getdataasync" SEODescription="傳回包含在繫結的資料。" />
-      <Item text="id" url="shared/binding.id" FriendlyUrl="reference/common/binding-objectbinding.id" SEODescription="取得物件的識別碼。" />
-      <Item text="類型" url="shared/binding.type" FriendlyUrl="reference/common/binding-objectbinding.type" SEODescription="取得繫結的類型。" />
-      <Item text="MatrixBinding" url="shared/binding.matrixbinding">
-        <Item text="rowcount" url="shared/binding.matrixbinding.rowcount" SEODescription="以整數值在矩陣資料結構中，取得資料列的數目。" />
-        <Item text="columnCount" url="shared/binding.matrixbinding.columncount" FriendlyUrl="reference/common/binding-object/matrixbinding-objectbinding.matrixbinding.columncount" SEODescription="以整數值在矩陣資料結構中，取得資料欄的數目。" />
-      </Item>
-      <Item text="removeHandlerAsync" url="shared/binding.removehandlerasync" FriendlyUrl="reference/common/binding-objectbinding.removehandlerasync" SEODescription="移除指定的事件類型繫結中所指定的處理常式。" />
-      <Item text="setDataAsync" url="shared/binding.setdataasync" FriendlyUrl="reference/common/binding-objectbinding.setdataasync" SEODescription="將資料寫入指定的繫結物件所代表文件的繫結區段。" />
-      <Item text="TableBinding" url="shared/binding.tablebinding">
-        <Item text="addColumnsAsync" url="shared/binding.tablebinding.addcolumnsasync" FriendlyUrl="reference/common/binding-object/tablebinding-objectbinding.tablebinding.addcolumnsasync" SEODescription="將資料欄和值加入表格中。" />
-        <Item text="addRowsAsync" url="shared/binding.tablebinding.addrowsasync" FriendlyUrl="reference/common/binding-object/tablebinding-objectbinding.tablebinding.addrowsasync" SEODescription="將資料列和值加入表格中。" />
-        <Item text="clearFormatsAsync" url="shared/binding.tablebinding.clearformatsasync" SEODescription="清除繫結檔案上的格式設定。" />
-        <Item text="columnCount" url="shared/binding.tablebinding.columncount" SEODescription="以整數值在矩陣資料結構中，取得資料欄的數目。" />
-        <Item text="deleteAllDataValuesAsync" url="shared/binding.tablebinding.deletealldatavaluesasync" SEODescription="刪除表格中所有非標題列及其值，為主應用程式適當地移動。" />
-        <Item text="hasHeaders" url="shared/binding.tablebinding.hasheaders" SEODescription="取得關於資料表是否具有標頭的資訊。" />
-        <Item text="rowCount" url="shared/binding.tablebinding.rowcount" SEODescription="以整數值取得表格中的列數。" />
-        <Item text="setFormatsAsync" url="shared/binding.tablebinding.setformatsasync" FriendlyUrl="reference/common/binding-object/tablebinding-objectbinding.tablebinding.setformatsasync" SEODescription="設定或更新指定項目和繫結表格中資料的格式設定。" Scope="excel" />
-        <Item text="setTableOptionsAsync" url="shared/binding.tablebinding.settableoptionsasync" FriendlyUrl="reference/common/binding-object/tablebinding-objectbinding.tablebinding.settableoptionsasync" SEODescription="更新繫結表格上的表格格式設定選項。" Scope="excel" />
-      </Item>
-      <Item text="TextBinding" url="shared/binding.textbinding" />
-    </Item>
-    <Item text="Bindings" url="shared/bindings.bindings" Scope="access, excel, word">
-      <Item text="addFromNamedItemAsync" url="shared/bindings.addfromnameditemasync" SEODescription="將繫結加入至文件中的具名項目。" />
-      <Item text="addFromPromptAsync" url="shared/bindings.addfrompromptasync" SEODescription="顯示 UI，讓使用者可指定要繫結的選取範圍。" />
-      <Item text="addFromSelectionAsync" url="shared/bindings.addfromselectionasync" SEODescription="加入繫結至文件中目前選取範圍所指定的類型的繫結物件。" />
-      <Item text="文件" url="shared/bindings.document" FriendlyUrl="reference/common/bindings-objectbindings.document" SEODescription="抽象類別，代表繫結至文件的某個區段。" />
-      <Item text="getAllAsync" url="shared/bindings.getallasync" FriendlyUrl="reference/common/bindings-objectbindings.getallasync" SEODescription="取得先前所建立的所有繫結。" />
-      <Item text="getByIdAsync" url="shared/bindings.getbyidasync" FriendlyUrl="reference/common/bindings-objectbindings.getbyidasync" SEODescription="藉由其識別碼取得指定的繫結。" />
-      <Item text="releaseByIdAsync" url="shared/bindings.releasebyidasync" FriendlyUrl="reference/common/bindings-objectbindings.releasebyidasync" SEODescription=" 移除指定的繫結。" />
-    </Item>
-    <Item text="CustomXmlNode" url="shared/customxmlnode.customxmlnode" FriendlyUrl="reference/common/customxmlnode-objectcustomxmlnode.customxmlnode" SEOKeyword="JavaScript API for Office" Scope="word">
-      <Item text="baseName " url="shared/customxmlnode.basename" FriendlyUrl="reference/common/customxmlnode-objectcustomxmlnode.basename" SEOKeyword="JavaScript API for Office" Scope="word" SEODescription="取得節點的基本名稱，但不含命名空間前置詞 (如果有的話)。" />
-      <Item text="getNodesAsync " url="shared/customxmlnode.getnodesasync" FriendlyUrl="reference/common/customxmlnode-objectcustomxmlnode.getnodesasync" SEOKeyword="JavaScript API for Office" Scope="word" SEODescription=" 以非同步方式取得節點，做為符合相對的 XPath 運算式的 CustomXMLNode 物件的陣列。" />
-      <Item text="getNodeValueAsync " url="shared/customxmlnode.getnodevalueasync" FriendlyUrl="reference/common/customxmlnode-objectcustomxmlnode.getnodevalueasync" SEOKeyword="JavaScript API for Office" Scope="word" SEODescription="以非同步方式取得節點的值。" />
-      <Item text="getTextAsync " url="shared/customxmlnode.gettextasync" FriendlyUrl="reference/common/customxmlnode-objectcustomxmlnode.gettextasync" SEOKeyword="JavaScript API for Office" Scope="word" SEODescription="以非同步方式取得節點的文字。" />
-      <Item text="getXmlAsync " url="shared/customxmlnode.getxmlasync" FriendlyUrl="reference/common/customxmlnode-objectcustomxmlnode.getxmlasync" SEOKeyword="JavaScript API for Office" Scope="word" SEODescription="以非同步方式取得節點的 XML。" />
-      <Item text="namespaceUri " url="shared/customxmlnode.namespaceuri" FriendlyUrl="reference/common/customxmlnode-objectcustomxmlnode.namespaceuri" SEOKeyword="JavaScript API for Office" Scope="word" SEODescription="以非同步方式取得節點的命名空間。" />
-      <Item text="nodeType " url="shared/customxmlnode.nodetype" FriendlyUrl="reference/common/customxmlnode-objectcustomxmlnode.nodetype" SEOKeyword="JavaScript API for Office" Scope="word" SEODescription="以非同步方式取得節點的類型。" />
-      <Item text="setNodeValueAsync " url="shared/customxmlnode.setnodevalueasync" FriendlyUrl="reference/common/customxmlnode-objectcustomxmlnode.setnodevalueasync" SEOKeyword="JavaScript API for Office" Scope="word" SEODescription="以非同步方式取得節點的值。" />
-      <Item text="setTextAsync " url="shared/customxmlnode.settextasync" FriendlyUrl="reference/common/customxmlnode-objectcustomxmlnode.settextasync" SEOKeyword="JavaScript API for Office" Scope="word" SEODescription="以非同步方式取得節點的設定文字。" />
-      <Item text="setXmlAsync " url="shared/customxmlnode.setxmlasync" FriendlyUrl="reference/common/customxmlnode-objectcustomxmlnode.setxmlasync" Scope="word" SEODescription="以非同步方式取得節點的設定 XML。" />
-    </Item> 
-    <Item text="CustomXmlPart" url="shared/customxmlpart.customxmlpart" FriendlyUrl="reference/common/customxmlpart-objectcustomxmlpart.customxmlpart" SEODescription="代表 CustomXMLParts 集合中的單一 CustomXMLPart。" Scope="word">    
-      <Item text="addHandlerAsync" url="shared/customxmlpart.addhandlerasync" FriendlyUrl="reference/common/customxmlpart-objectcustomxmlpart.addhandlerasync" SEODescription="新增 CustomXmlPart 物件事件的事件處理常式。" Scope="word" />
-      <Item text="builtIn" url="shared/customxmlpart.builtin" FriendlyUrl="reference/common/customxmlpart-objectcustomxmlpart.builtin" SEODescription="取得一個值，指出 CustomXMLPart 是否為內建的。" Scope="word" />
-      <Item text="deleteAsync" url="shared/customxmlpart.deleteasync" FriendlyUrl="reference/common/customxmlpart-objectcustomxmlpart.deleteasync" SEODescription="以非同步方式從集合中刪除這個自訂 XML 組件。" Scope="word" />
-      <Item text="getNodesAsync" url="shared/customxmlpart.getnodesasync" FriendlyUrl="reference/common/customxmlpart-objectcustomxmlpart.getnodesasync" SEODescription="以非同步方式從這個自訂 XML 組件中，取得任何符合指定 XPath 的 CustomXmlNodes。" Scope="word" />
-      <Item text="getXmlAsync" url="shared/customxmlpart.getxmlasync" FriendlyUrl="reference/common/customxmlpart-objectcustomxmlpart.getxmlasync" SEODescription="以非同步方式取得此自訂 XML 組件內的 XML。" Scope="word" />
-      <Item text="id" url="shared/customxmlpart.id" FriendlyUrl="reference/common/customxmlpart-objectcustomxmlpart.id" SEODescription="取得 CustomXMLPart 的 GUID" Scope="word" />
-      <Item text="isUndoRedo" url="shared/customxmlpart.isundoredo" FriendlyUrl="reference/common/customxmlpart-objectcustomxmlpart.isundoredo" SEODescription="取得關於使用者是否將刪除節點，當做 [復原/取消復原] 動作的一部分的資訊。" Scope="word" />
-      <Item text="namespaceManager" url="shared/customxmlpart.namespacemanager" FriendlyUrl="reference/common/customxmlpart-objectcustomxmlpart.namespacemanager" SEODescription="取得針對目前 CustomXMLPart 所用的命名空間前置詞對應集合 (CustomXMLPrefixMappings)。" Scope="word" />
-      <Item text="newNode" url="shared/customxmlpart.newnode" FriendlyUrl="reference/common/customxmlpart-objectcustomxmlpart.newnode" SEODescription="取得剛加入至 CustomXMLPart 物件的節點。" Scope="word" />
-      <Item text="nodeDeleted 事件" url="shared/customxmlpart.nodedeleted.event" FriendlyUrl="reference/common/customxmlpart-objectcustomxmlpart.nodedeleted.event" SEODescription="刪除節點時，就會發生。" Scope="word" />
-      <!--<Item text="NodeDeletedEventArgs object" url="shared/customxmlpart.nodedeletedeventargs" FriendlyUrl="reference/common/customxmlpart-objectcustomxmlpart.nodedeletedeventargs" SEODescription="Provides information about the deleted node that raised the nodeDeleted event." Scope="word"  />-->
-      <Item text="nodeInserted 事件" url="shared/customxmlpart.nodeinserted.event" FriendlyUrl="reference/common/customxmlpart-objectcustomxmlpart.nodeinserted.event" SEODescription="插入節點時，就會發生。" Scope="word" />
-      <!--<Item text="NodeInsertedEventArgs object" url="shared/customxmlpart.nodeinsertedeventargs" FriendlyUrl="reference/common/customxmlpart-objectcustomxmlpart.nodeinsertedeventargs" SEODescription="Provides information about the inserted node that raised the nodeInserted event." Scope="word"  />-->
-      <Item text="nodeReplaced 事件" url="shared/customxmlpart.nodereplaced.event" FriendlyUrl="reference/common/customxmlpart-objectcustomxmlpart.nodereplaced.event" SEODescription="取代節點時，就會發生。" Scope="word" />
-      <!--<Item text="NodeReplacedEventArgs object" url="shared/customxmlpart.nodereplacedeventargs" FriendlyUrl="reference/common/customxmlpart-objectcustomxmlpart.nodereplacedeventargs" SEODescription="Provides information about the replaced node that raised the nodeReplaced event." Scope="word"  />-->
-      <Item text="oldNextSibling" url="shared/customxmlpart.oldnextsibling" FriendlyUrl="reference/common/customxmlpart-objectcustomxmlpart.oldnextsibling" SEODescription="取得剛從 CustomXMLPart 物件中刪除的節點，先前的下個同層級。" Scope="word" />
-      <Item text="oldNode" url="shared/customxmlpart.oldnode" FriendlyUrl="reference/common/customxmlpart-objectcustomxmlpart.oldnode" SEODescription="取得剛從 CustomXmlPart 物件中刪除的節點。" Scope="word" />
-      <Item text="removeHandlerAsync" url="shared/customxmlpart.removehandlerasync" FriendlyUrl="reference/common/customxmlpart-objectcustomxmlpart.removehandlerasync" SEODescription="移除 CustomXmlPart 物件事件的事件處理常式。" Scope="word" />
-    </Item>
-    <Item text="CustomXmlParts" url="shared/customxmlparts.customxmlparts" FriendlyUrl="reference/common/customxmlparts-objectcustomxmlparts.customxmlparts" SEODescription="代表 CustomXMLPart 物件的集合。" Scope="word">
-    <Item text="addAsync" url="shared/customxmlparts.addasync" FriendlyUrl="reference/common/customxmlparts-objectcustomxmlparts.addasync" SEODescription="以非同步方式將新的自訂 XML 組件加入至檔案中。" Scope="word" />
-    <Item text="getByIdAsync" url="shared/customxmlparts.getbyidasync" FriendlyUrl="reference/common/customxmlparts-objectcustomxmlparts.getbyidasync" SEODescription="以非同步方式根據其 ID 取得自訂 XML 組件。" Scope="word" />
-    <Item text="getByNamespaceAsync" url="shared/customxmlparts.getbynamespaceasync" FriendlyUrl="reference/common/customxmlparts-objectcustomxmlparts.getbynamespaceasync" SEODescription="以非同步方式取得符合指定的命名空間的自訂 XML 組件陣列。" Scope="word" />
-    </Item>
-    <Item text="CustomXmlPrefixMappings" url="shared/customxmlprefixmappings.customxmlprefixmappings" FriendlyUrl="reference/common/customxmlprefixmappings-objectcustomxmlprefixmappings.customxmlprefixmappings" SEODescription="代表自訂命名空間前置詞對應的集合。" Scope="word">
-      <Item text="addNamespaceAsync" url="shared/customxmlprefixmappings.addnamespaceasync" FriendlyUrl="reference/common/customxmlprefixmappings-objectcustomxmlprefixmappings.addnamespaceasync" SEODescription="以非同步的方式加入查詢項目時所使用的命名空間對應的前置詞。" Scope="word" />
-      <Item text="getNamespaceAsync" url="shared/customxmlprefixmappings.getnamespaceasync" FriendlyUrl="reference/common/customxmlprefixmappings-objectcustomxmlprefixmappings.getnamespaceasync" SEODescription="以非同步方式取得對應至指定的前置詞的命名空間。" Scope="word" />
-      <Item text="getPrefixAsync" url="shared/customxmlprefixmappings.getprefixasync" FriendlyUrl="reference/common/customxmlprefixmappings-objectcustomxmlprefixmappings.getprefixasync" SEODescription="以非同步方式取得指定的命名空間前置詞。" Scope="word" />
-    </Item>
-    <Item text="Document" url="shared/document" SEODescription="適用於 Office 的 JavaScript API 的 Document API 子集合包括物件、方法、屬性和事件，您可以用於與文件相關聯的 Office 增益集中。" Scope="access, excel, powerpoint, project, word">
-      <Item text="ActiveViewChanged event" url="shared/document.activeviewchanged" FriendlyUrl="reference/common/document/activeviewchangeddocument.activeviewchanged" SEODescription="使用者變更文件目前的檢視時，就會發生。" Scope="powerpoint" />
-      <!--<Item text="DocumentActiveViewChangedEventArgs object" url="shared/document.activeviewchangedeventargs" FriendlyUrl="reference/common/document/activeviewchangedeventargs-object/document.activeviewchangedeventargs" SEODescription="Provides information about the view that raised the ActiveViewChanged event." Scope="powerpoint"  />
+			<Item text="文件" url="shared/binding.document" SEODescription="抽象類別，代表繫結至文件的某個區段。" />
+			<Item text="getDataAsync" url="shared/binding.getdataasync" FriendlyUrl="reference/common/binding-objectbinding.getdataasync" SEODescription="傳回包含在繫結的資料。" />
+			<Item text="id" url="shared/binding.id" FriendlyUrl="reference/common/binding-objectbinding.id" SEODescription="取得物件的識別碼。" />
+			<Item text="類型" url="shared/binding.type" FriendlyUrl="reference/common/binding-objectbinding.type" SEODescription="取得繫結的類型。" />
+			<Item text="MatrixBinding" url="shared/binding.matrixbinding">
+				<Item text="rowcount" url="shared/binding.matrixbinding.rowcount" SEODescription="以整數值在矩陣資料結構中，取得資料列的數目。" />
+				<Item text="columnCount" url="shared/binding.matrixbinding.columncount" FriendlyUrl="reference/common/binding-object/matrixbinding-objectbinding.matrixbinding.columncount" SEODescription="以整數值在矩陣資料結構中，取得資料欄的數目。" />
+			</Item>
+			<Item text="removeHandlerAsync" url="shared/binding.removehandlerasync" FriendlyUrl="reference/common/binding-objectbinding.removehandlerasync" SEODescription="移除指定的事件類型繫結中所指定的處理常式。" />
+			<Item text="setDataAsync" url="shared/binding.setdataasync" FriendlyUrl="reference/common/binding-objectbinding.setdataasync" SEODescription="將資料寫入指定的繫結物件所代表文件的繫結區段。" />
+			<Item text="TableBinding" url="shared/binding.tablebinding">
+				<Item text="addColumnsAsync" url="shared/binding.tablebinding.addcolumnsasync" FriendlyUrl="reference/common/binding-object/tablebinding-objectbinding.tablebinding.addcolumnsasync" SEODescription="將資料欄和值加入表格中。" />
+				<Item text="addRowsAsync" url="shared/binding.tablebinding.addrowsasync" FriendlyUrl="reference/common/binding-object/tablebinding-objectbinding.tablebinding.addrowsasync" SEODescription="將資料列和值加入表格中。" />
+				<Item text="clearFormatsAsync" url="shared/binding.tablebinding.clearformatsasync" SEODescription="清除繫結檔案上的格式設定。" />
+				<Item text="columnCount" url="shared/binding.tablebinding.columncount" SEODescription="以整數值在矩陣資料結構中，取得資料欄的數目。" />
+				<Item text="deleteAllDataValuesAsync" url="shared/binding.tablebinding.deletealldatavaluesasync" SEODescription="刪除表格中所有非標題列及其值，為主應用程式適當地移動。" />
+				<Item text="hasHeaders" url="shared/binding.tablebinding.hasheaders" SEODescription="取得關於資料表是否具有標頭的資訊。" />
+				<Item text="rowCount" url="shared/binding.tablebinding.rowcount" SEODescription="以整數值取得表格中的列數。" />
+				<Item text="setFormatsAsync" url="shared/binding.tablebinding.setformatsasync" FriendlyUrl="reference/common/binding-object/tablebinding-objectbinding.tablebinding.setformatsasync" SEODescription="設定或更新指定項目和繫結表格中資料的格式設定。" Scope="excel" />
+				<Item text="setTableOptionsAsync" url="shared/binding.tablebinding.settableoptionsasync" FriendlyUrl="reference/common/binding-object/tablebinding-objectbinding.tablebinding.settableoptionsasync" SEODescription="更新繫結表格上的表格格式設定選項。" Scope="excel" />
+			</Item>
+			<Item text="TextBinding" url="shared/binding.textbinding" />
+		</Item>
+		<Item text="Bindings" url="shared/bindings.bindings" Scope="access, excel, word">
+			<Item text="addFromNamedItemAsync" url="shared/bindings.addfromnameditemasync" SEODescription="將繫結加入至文件中的具名項目。" />
+			<Item text="addFromPromptAsync" url="shared/bindings.addfrompromptasync" SEODescription="顯示 UI，讓使用者可指定要繫結的選取範圍。" />
+			<Item text="addFromSelectionAsync" url="shared/bindings.addfromselectionasync" SEODescription="加入繫結至文件中目前選取範圍所指定的類型的繫結物件。" />
+			<Item text="文件" url="shared/bindings.document" FriendlyUrl="reference/common/bindings-objectbindings.document" SEODescription="抽象類別，代表繫結至文件的某個區段。" />
+			<Item text="getAllAsync" url="shared/bindings.getallasync" FriendlyUrl="reference/common/bindings-objectbindings.getallasync" SEODescription="取得先前所建立的所有繫結。" />
+			<Item text="getByIdAsync" url="shared/bindings.getbyidasync" FriendlyUrl="reference/common/bindings-objectbindings.getbyidasync" SEODescription="藉由其識別碼取得指定的繫結。" />
+			<Item text="releaseByIdAsync" url="shared/bindings.releasebyidasync" FriendlyUrl="reference/common/bindings-objectbindings.releasebyidasync" SEODescription=" 移除指定的繫結。" />
+		</Item>
+		<Item text="CustomXmlNode" url="shared/customxmlnode.customxmlnode" FriendlyUrl="reference/common/customxmlnode-objectcustomxmlnode.customxmlnode" SEOKeyword="JavaScript API for Office" Scope="word">
+			<Item text="baseName " url="shared/customxmlnode.basename" FriendlyUrl="reference/common/customxmlnode-objectcustomxmlnode.basename" SEOKeyword="JavaScript API for Office" Scope="word" SEODescription="取得節點的基本名稱，但不含命名空間前置詞 (如果有的話)。" />
+			<Item text="getNodesAsync " url="shared/customxmlnode.getnodesasync" FriendlyUrl="reference/common/customxmlnode-objectcustomxmlnode.getnodesasync" SEOKeyword="JavaScript API for Office" Scope="word" SEODescription=" 以非同步方式取得節點，做為符合相對的 XPath 運算式的 CustomXMLNode 物件的陣列。" />
+			<Item text="getNodeValueAsync " url="shared/customxmlnode.getnodevalueasync" FriendlyUrl="reference/common/customxmlnode-objectcustomxmlnode.getnodevalueasync" SEOKeyword="JavaScript API for Office" Scope="word" SEODescription="以非同步方式取得節點的值。" />
+			<Item text="getTextAsync " url="shared/customxmlnode.gettextasync" FriendlyUrl="reference/common/customxmlnode-objectcustomxmlnode.gettextasync" SEOKeyword="JavaScript API for Office" Scope="word" SEODescription="以非同步方式取得節點的文字。" />
+			<Item text="getXmlAsync " url="shared/customxmlnode.getxmlasync" FriendlyUrl="reference/common/customxmlnode-objectcustomxmlnode.getxmlasync" SEOKeyword="JavaScript API for Office" Scope="word" SEODescription="以非同步方式取得節點的 XML。" />
+			<Item text="namespaceUri " url="shared/customxmlnode.namespaceuri" FriendlyUrl="reference/common/customxmlnode-objectcustomxmlnode.namespaceuri" SEOKeyword="JavaScript API for Office" Scope="word" SEODescription="以非同步方式取得節點的命名空間。" />
+			<Item text="nodeType " url="shared/customxmlnode.nodetype" FriendlyUrl="reference/common/customxmlnode-objectcustomxmlnode.nodetype" SEOKeyword="JavaScript API for Office" Scope="word" SEODescription="以非同步方式取得節點的類型。" />
+			<Item text="setNodeValueAsync " url="shared/customxmlnode.setnodevalueasync" FriendlyUrl="reference/common/customxmlnode-objectcustomxmlnode.setnodevalueasync" SEOKeyword="JavaScript API for Office" Scope="word" SEODescription="以非同步方式取得節點的值。" />
+			<Item text="setTextAsync " url="shared/customxmlnode.settextasync" FriendlyUrl="reference/common/customxmlnode-objectcustomxmlnode.settextasync" SEOKeyword="JavaScript API for Office" Scope="word" SEODescription="以非同步方式取得節點的設定文字。" />
+			<Item text="setXmlAsync " url="shared/customxmlnode.setxmlasync" FriendlyUrl="reference/common/customxmlnode-objectcustomxmlnode.setxmlasync" Scope="word" SEODescription="以非同步方式取得節點的設定 XML。" />
+		</Item>
+		<Item text="CustomXmlPart" url="shared/customxmlpart.customxmlpart" FriendlyUrl="reference/common/customxmlpart-objectcustomxmlpart.customxmlpart" SEODescription="代表 CustomXMLParts 集合中的單一 CustomXMLPart。" Scope="word">
+			<Item text="addHandlerAsync" url="shared/customxmlpart.addhandlerasync" FriendlyUrl="reference/common/customxmlpart-objectcustomxmlpart.addhandlerasync" SEODescription="新增 CustomXmlPart 物件事件的事件處理常式。" Scope="word" />
+			<Item text="builtIn" url="shared/customxmlpart.builtin" FriendlyUrl="reference/common/customxmlpart-objectcustomxmlpart.builtin" SEODescription="取得一個值，指出 CustomXMLPart 是否為內建的。" Scope="word" />
+			<Item text="deleteAsync" url="shared/customxmlpart.deleteasync" FriendlyUrl="reference/common/customxmlpart-objectcustomxmlpart.deleteasync" SEODescription="以非同步方式從集合中刪除這個自訂 XML 組件。" Scope="word" />
+			<Item text="getNodesAsync" url="shared/customxmlpart.getnodesasync" FriendlyUrl="reference/common/customxmlpart-objectcustomxmlpart.getnodesasync" SEODescription="以非同步方式從這個自訂 XML 組件中，取得任何符合指定 XPath 的 CustomXmlNodes。" Scope="word" />
+			<Item text="getXmlAsync" url="shared/customxmlpart.getxmlasync" FriendlyUrl="reference/common/customxmlpart-objectcustomxmlpart.getxmlasync" SEODescription="以非同步方式取得此自訂 XML 組件內的 XML。" Scope="word" />
+			<Item text="id" url="shared/customxmlpart.id" FriendlyUrl="reference/common/customxmlpart-objectcustomxmlpart.id" SEODescription="取得 CustomXMLPart 的 GUID" Scope="word" />
+			<Item text="isUndoRedo" url="shared/customxmlpart.isundoredo" FriendlyUrl="reference/common/customxmlpart-objectcustomxmlpart.isundoredo" SEODescription="取得關於使用者是否將刪除節點，當做 [復原/取消復原] 動作的一部分的資訊。" Scope="word" />
+			<Item text="namespaceManager" url="shared/customxmlpart.namespacemanager" FriendlyUrl="reference/common/customxmlpart-objectcustomxmlpart.namespacemanager" SEODescription="取得針對目前 CustomXMLPart 所用的命名空間前置詞對應集合 (CustomXMLPrefixMappings)。" Scope="word" />
+			<Item text="newNode" url="shared/customxmlpart.newnode" FriendlyUrl="reference/common/customxmlpart-objectcustomxmlpart.newnode" SEODescription="取得剛加入至 CustomXMLPart 物件的節點。" Scope="word" />
+			<Item text="nodeDeleted 事件" url="shared/customxmlpart.nodedeleted.event" FriendlyUrl="reference/common/customxmlpart-objectcustomxmlpart.nodedeleted.event" SEODescription="刪除節點時，就會發生。" Scope="word" />
+			<!--<Item text="NodeDeletedEventArgs object" url="shared/customxmlpart.nodedeletedeventargs" FriendlyUrl="reference/common/customxmlpart-objectcustomxmlpart.nodedeletedeventargs" SEODescription="Provides information about the deleted node that raised the nodeDeleted event." Scope="word"  />-->
+			<Item text="nodeInserted 事件" url="shared/customxmlpart.nodeinserted.event" FriendlyUrl="reference/common/customxmlpart-objectcustomxmlpart.nodeinserted.event" SEODescription="插入節點時，就會發生。" Scope="word" />
+			<!--<Item text="NodeInsertedEventArgs object" url="shared/customxmlpart.nodeinsertedeventargs" FriendlyUrl="reference/common/customxmlpart-objectcustomxmlpart.nodeinsertedeventargs" SEODescription="Provides information about the inserted node that raised the nodeInserted event." Scope="word"  />-->
+			<Item text="nodeReplaced 事件" url="shared/customxmlpart.nodereplaced.event" FriendlyUrl="reference/common/customxmlpart-objectcustomxmlpart.nodereplaced.event" SEODescription="取代節點時，就會發生。" Scope="word" />
+			<!--<Item text="NodeReplacedEventArgs object" url="shared/customxmlpart.nodereplacedeventargs" FriendlyUrl="reference/common/customxmlpart-objectcustomxmlpart.nodereplacedeventargs" SEODescription="Provides information about the replaced node that raised the nodeReplaced event." Scope="word"  />-->
+			<Item text="oldNextSibling" url="shared/customxmlpart.oldnextsibling" FriendlyUrl="reference/common/customxmlpart-objectcustomxmlpart.oldnextsibling" SEODescription="取得剛從 CustomXMLPart 物件中刪除的節點，先前的下個同層級。" Scope="word" />
+			<Item text="oldNode" url="shared/customxmlpart.oldnode" FriendlyUrl="reference/common/customxmlpart-objectcustomxmlpart.oldnode" SEODescription="取得剛從 CustomXmlPart 物件中刪除的節點。" Scope="word" />
+			<Item text="removeHandlerAsync" url="shared/customxmlpart.removehandlerasync" FriendlyUrl="reference/common/customxmlpart-objectcustomxmlpart.removehandlerasync" SEODescription="移除 CustomXmlPart 物件事件的事件處理常式。" Scope="word" />
+		</Item>
+		<Item text="CustomXmlParts" url="shared/customxmlparts.customxmlparts" FriendlyUrl="reference/common/customxmlparts-objectcustomxmlparts.customxmlparts" SEODescription="代表 CustomXMLPart 物件的集合。" Scope="word">
+			<Item text="addAsync" url="shared/customxmlparts.addasync" FriendlyUrl="reference/common/customxmlparts-objectcustomxmlparts.addasync" SEODescription="以非同步方式將新的自訂 XML 組件加入至檔案中。" Scope="word" />
+			<Item text="getByIdAsync" url="shared/customxmlparts.getbyidasync" FriendlyUrl="reference/common/customxmlparts-objectcustomxmlparts.getbyidasync" SEODescription="以非同步方式根據其 ID 取得自訂 XML 組件。" Scope="word" />
+			<Item text="getByNamespaceAsync" url="shared/customxmlparts.getbynamespaceasync" FriendlyUrl="reference/common/customxmlparts-objectcustomxmlparts.getbynamespaceasync" SEODescription="以非同步方式取得符合指定的命名空間的自訂 XML 組件陣列。" Scope="word" />
+		</Item>
+		<Item text="CustomXmlPrefixMappings" url="shared/customxmlprefixmappings.customxmlprefixmappings" FriendlyUrl="reference/common/customxmlprefixmappings-objectcustomxmlprefixmappings.customxmlprefixmappings" SEODescription="代表自訂命名空間前置詞對應的集合。" Scope="word">
+			<Item text="addNamespaceAsync" url="shared/customxmlprefixmappings.addnamespaceasync" FriendlyUrl="reference/common/customxmlprefixmappings-objectcustomxmlprefixmappings.addnamespaceasync" SEODescription="以非同步的方式加入查詢項目時所使用的命名空間對應的前置詞。" Scope="word" />
+			<Item text="getNamespaceAsync" url="shared/customxmlprefixmappings.getnamespaceasync" FriendlyUrl="reference/common/customxmlprefixmappings-objectcustomxmlprefixmappings.getnamespaceasync" SEODescription="以非同步方式取得對應至指定的前置詞的命名空間。" Scope="word" />
+			<Item text="getPrefixAsync" url="shared/customxmlprefixmappings.getprefixasync" FriendlyUrl="reference/common/customxmlprefixmappings-objectcustomxmlprefixmappings.getprefixasync" SEODescription="以非同步方式取得指定的命名空間前置詞。" Scope="word" />
+		</Item>
+		<Item text="Document" url="shared/document" SEODescription="適用於 Office 的 JavaScript API 的 Document API 子集合包括物件、方法、屬性和事件，您可以用於與文件相關聯的 Office 增益集中。" Scope="access, excel, powerpoint, project, word">
+			<Item text="ActiveViewChanged event" url="shared/document.activeviewchanged" FriendlyUrl="reference/common/document/activeviewchangeddocument.activeviewchanged" SEODescription="使用者變更文件目前的檢視時，就會發生。" Scope="powerpoint" />
+			<!--<Item text="DocumentActiveViewChangedEventArgs object" url="shared/document.activeviewchangedeventargs" FriendlyUrl="reference/common/document/activeviewchangedeventargs-object/document.activeviewchangedeventargs" SEODescription="Provides information about the view that raised the ActiveViewChanged event." Scope="powerpoint"  />
       <Item text="activeView " url="shared/document.activeviewchangedeventargs.activeview" FriendlyUrl="reference/common/document/activeviewchangedeventargs-object/document.activeviewchangedeventargs.activeview" SEODescription="&quot;Gets an  **ActiveView** enumeration value that identifies the state of the active view of the document" Scope="powerpoint"  />
       <Item text="type " url="shared/document.activeviewchangedeventargs.type" FriendlyUrl="reference/common/document/activeviewchangedeventargs-object/document.activeviewchangedeventargs.type" SEODescription="Gets an EventType enumeration value that identifies the kind of event that was raised." Scope="powerpoint"  />
       -->
-      <Item text="addHandlerAsync" url="shared/document.addhandlerasync" FriendlyUrl="reference/common/documentdocument.addhandlerasync" SEODescription="新增 Document 物件事件的事件處理常式。" />
-      <Item text="bindings" url="shared/document.bindings" FriendlyUrl="reference/common/documentdocument.bindings" SEODescription="代表增益集在文件中所具有的繫結。" />
-      <Item text="customXmlParts" url="shared/document.customxmlparts" FriendlyUrl="reference/common/documentdocument.customxmlparts" SEODescription="取得在文件中代表自訂 XML 組件的物件。" Scope="word" />
-      <Item text="getActiveViewAsync" url="shared/document.getactiveviewasync" FriendlyUrl="reference/common/documentdocument.getactiveviewasync" SEODescription="傳回簡報的目前檢視狀態 (編輯或讀取)。" />
-      <Item text="getFileAsync" url="shared/document.getfileasync" FriendlyUrl="reference/common/documentdocument.getfileasync" SEODescription="傳回與 Office 增益集相關聯的文件檔案。" />
-      <Item text="getFilePropertiesAsync" url="shared/document.getfilepropertiesasync" FriendlyUrl="reference/common/documentdocument.getfilepropertiesasync" SEODescription="取得目前文件的檔案屬性。" />
-      <Item text="getselecteddataasync" url="shared/document.getselecteddataasync" SEODescription="以非同步方式取得檢視中目前的選取範圍內，一或多個儲存格中所包含的資料文字值。" />
-      <Item text="goToByIdAsync" url="shared/document.gotobyidasync" SEODescription="移至文件中指定的物件或位置。" />
-      <Item text="模式" url="shared/document.mode" SEODescription="實驗室的目前模式，為編輯模式或檢視模式。" />
-      <Item text="removeHandlerAsync" url="shared/document.removehandlerasync" SEODescription="移除指定的事件類型繫結中所指定的處理常式。" />
-      <Item text="selectionChanged event" url="shared/document.selectionchanged.event" SEODescription="提供引發 SelectionChanged 事件的文件資訊。" />
-      <!--<Item text="document " url="shared/document.selectionchangedeventargs.document"  />
+			<Item text="addHandlerAsync" url="shared/document.addhandlerasync" FriendlyUrl="reference/common/documentdocument.addhandlerasync" SEODescription="新增 Document 物件事件的事件處理常式。" />
+			<Item text="bindings" url="shared/document.bindings" FriendlyUrl="reference/common/documentdocument.bindings" SEODescription="代表增益集在文件中所具有的繫結。" />
+			<Item text="customXmlParts" url="shared/document.customxmlparts" FriendlyUrl="reference/common/documentdocument.customxmlparts" SEODescription="取得在文件中代表自訂 XML 組件的物件。" Scope="word" />
+			<Item text="getActiveViewAsync" url="shared/document.getactiveviewasync" FriendlyUrl="reference/common/documentdocument.getactiveviewasync" SEODescription="傳回簡報的目前檢視狀態 (編輯或讀取)。" />
+			<Item text="getFileAsync" url="shared/document.getfileasync" FriendlyUrl="reference/common/documentdocument.getfileasync" SEODescription="傳回與 Office 增益集相關聯的文件檔案。" />
+			<Item text="getFilePropertiesAsync" url="shared/document.getfilepropertiesasync" FriendlyUrl="reference/common/documentdocument.getfilepropertiesasync" SEODescription="取得目前文件的檔案屬性。" />
+			<Item text="getselecteddataasync" url="shared/document.getselecteddataasync" SEODescription="以非同步方式取得檢視中目前的選取範圍內，一或多個儲存格中所包含的資料文字值。" />
+			<Item text="goToByIdAsync" url="shared/document.gotobyidasync" SEODescription="移至文件中指定的物件或位置。" />
+			<Item text="模式" url="shared/document.mode" SEODescription="實驗室的目前模式，為編輯模式或檢視模式。" />
+			<Item text="removeHandlerAsync" url="shared/document.removehandlerasync" SEODescription="移除指定的事件類型繫結中所指定的處理常式。" />
+			<Item text="selectionChanged event" url="shared/document.selectionchanged.event" SEODescription="提供引發 SelectionChanged 事件的文件資訊。" />
+			<!--<Item text="document " url="shared/document.selectionchangedeventargs.document"  />
       <Item text="documentSelectionChangedEventArgs object"   />
       <Item text="type " url="shared/document.selectionchangedeventargs.type"  />-->
-      <Item text="setSelectedDataAsync" url="shared/document.setselecteddataasync" SEODescription="將資料寫入文件中目前的選取範圍。" />
-      <Item text="設定" url="shared/document.settings" SEODescription="代表以名稱/值對儲存在主文件中，工作窗格或內容增益集的自訂設定。" />
-      <Item text="URL" url="shared/document.url" SEODescription="取得主應用程式目前已開啟的文件 URL。" />
-    </Item>
-    <Item text="錯誤" url="shared/error">
-      <Item text="error.code" url="shared/error.code" SEODescription="取得錯誤的數字代碼。" />
-      <Item text="error.message" url="shared/error.message" SEODescription="取得錯誤的詳細描述。" />
-      <Item text="error.name" url="shared/error.name" SEODescription="取得錯誤的名稱。" />
-    </Item>
-    <Item text="檔案" url="shared/file">
-      <Item text="closeAsync" url="shared/file.closeasync" FriendlyUrl="reference/common/filefile.closeasync" SEODescription="關閉文件檔案。" />
-      <Item text="getSliceAsync" url="shared/file.getsliceasync" FriendlyUrl="reference/common/filefile.getsliceasync" SEODescription=" 傳回指定的配量。" />
-      <Item text="Size" url="shared/file.size" FriendlyUrl="reference/common/filefile.size" SEODescription="傳回指定的大小。" />
-      <Item text="sliceCount" url="shared/file.slicecount" FriendlyUrl="reference/common/filefile.slicecount" SEODescription="傳回指定的計數。" />
-    </Item>
-    <Item text="Office" url="shared/office">
-      <Item text="cast.item" url="shared/office.cast.item" Scope="outlook" SEODescription="提供撰寫或讀取模式訊息和約會專用的 IntelliSense。" />
-      <Item text="初始化事件" url="shared/office.initialize" SEODescription="已載入執行階段環境，且增益集準備好開始與裝載它的文件互動時，就會發生" />
-      <Item text="select" url="shared/office.select" FriendlyUrl="reference/common/officeoffice.select" SEODescription="選取裝載的文件。" />
-      <Item text="useShortNamespace" url="shared/office.useshortnamespace" FriendlyUrl="reference/common/officeoffice.useshortnamespace" SEODescription="切換完整的 Microsoft.Office.WebExtension 命名空間之 Office 別名的開和關。" />
-    </Item>
-    <Item text="ProjectDocument" url="shared/projectdocument.projectdocument" FriendlyUrl="reference/common/projectdocumentprojectdocument.projectdocument" Scope="project">
-      <Item text="addHandlerAsync" url="shared/projectdocument.addhandlerasync" FriendlyUrl="reference/common/projectdocumentprojectdocument.addhandlerasync" Scope="project" SEODescription="以非同步方式將事件處理常式加入 ProjectDocument 物件中的事件。" />
-      <Item text="getMaxResourceIndexAsync" url="shared/projectdocument.getmaxresourceindexasync" FriendlyUrl="reference/common/projectdocumentprojectdocument.getmaxresourceindexasync" Scope="project" SEODescription="以非同步方式取得目前專案中資源集合的最大索引。" />
-      <Item text="getMaxTaskIndexAsync" url="shared/projectdocument.getmaxtaskindexasync" FriendlyUrl="reference/common/projectdocumentprojectdocument.getmaxtaskindexasync" Scope="project" SEODescription="以非同步方式取得目前專案中工作集合的最大索引。" />
-      <Item text="getProjectFieldAsync" url="shared/projectdocument.getprojectfieldasync" FriendlyUrl="reference/common/projectdocumentprojectdocument.getprojectfieldasync" Scope="project" SEODescription="以非同步方式取得使用中專案指定欄位的值。" />
-      <Item text="getResourceByIndexAsync" url="shared/projectdocument.getresourcebyindexasync" FriendlyUrl="reference/common/projectdocumentprojectdocument.getresourcebyindexasync" Scope="project" SEODescription="以非同步方式取得資源集合中具有指定索引的資源 GUID。" />
-      <Item text="getResourceFieldAsync" url="shared/projectdocument.getresourcefieldasync" FriendlyUrl="reference/common/projectdocumentprojectdocument.getresourcefieldasync" Scope="project" SEODescription="以非同步方式取得指定資源的指定欄位值。" />
-      <Item text="getSelectedDataAsync" url="shared/projectdocument.getselecteddataasync" FriendlyUrl="reference/common/projectdocumentprojectdocument.getselecteddataasync" Scope="project" SEODescription="以非同步方式取得甘特圖中目前的選取範圍內，一或多個儲存格中所包含的資料。" />
-      <Item text="getSelectedResourceAsync" url="shared/projectdocument.getselectedresourceasync" FriendlyUrl="reference/common/projectdocumentprojectdocument.getselectedresourceasync" Scope="project" SEODescription="以非同步方式取得所選取資源的 GUID。" />
-      <Item text="getSelectedTaskAsync" url="shared/projectdocument.getselectedtaskasync" FriendlyUrl="reference/common/projectdocumentprojectdocument.getselectedtaskasync" Scope="project" SEODescription="以非同步方式取得所選取工作的 GUID。" />
-      <Item text="getSelectedViewAsync" url="shared/projectdocument.getselectedviewasync" FriendlyUrl="reference/common/projectdocumentprojectdocument.getselectedviewasync" Scope="project" SEODescription="以非同步方式取得使用中檢視的名稱與檢視類型。" />
-      <Item text="getTaskAsync" url="shared/projectdocument.gettaskasync" FriendlyUrl="reference/common/projectdocumentprojectdocument.gettaskasync" Scope="project" SEODescription="以非同步方式取得工作名稱、指派給該工作的資源，和同步的 SharePoint 工作清單中工作的識別碼。" />
-      <Item text="getTaskByIndexAsync" url="shared/projectdocument.gettaskbyindexasync" FriendlyUrl="reference/common/projectdocumentprojectdocument.gettaskbyindexasync" Scope="project" SEODescription="以非同步方式取得工作集合中具有指定索引的工作 GUID。" />
-      <Item text="getTaskFieldAsync" url="shared/projectdocument.gettaskfieldasync" FriendlyUrl="reference/common/projectdocumentprojectdocument.gettaskfieldasync" Scope="project" SEODescription="以非同步方式取得指定工作的指定欄位值。" />
-      <Item text="getWSSUrlAsync" url="shared/projectdocument.getwssurlasync" FriendlyUrl="reference/common/projectdocumentprojectdocument.getwssurlasync" Scope="project" SEODescription="以非同步方式取得同步化 SharePoint 工作清單的 URL。" />
-      <Item text="removeHandlerAsync" url="shared/projectdocument.removehandlerasync" FriendlyUrl="reference/common/projectdocumentprojectdocument.removehandlerasync" Scope="project" SEODescription=" 以非同步方式移除 ProjectDocument 物件中事件的事件處理常式。" />
-      <Item text="ResourceSelectionChanged event" url="shared/projectdocument.resourceselectionchanged.event" FriendlyUrl="reference/common/projectdocumentprojectdocument.resourceselectionchanged.event" Scope="project" SEODescription="以非同步方式設定指定資源的指定欄位值。" />
-      <Item text="setResourceFieldAsync" url="shared/projectdocument.setresourcefieldasync" FriendlyUrl="reference/common/projectdocumentprojectdocument.setresourcefieldasync" Scope="project" SEODescription="以非同步方式設定指定工作的指定資源欄位值。" />
-      <Item text="setTaskFieldAsync" url="shared/projectdocument.settaskfieldasync" FriendlyUrl="reference/common/projectdocumentprojectdocument.settaskfieldasync" Scope="project" SEODescription="以非同步方式設定指定工作的指定欄位值。" />
-      <Item text="TaskSelectionChanged event" url="shared/projectdocument.taskselectionchanged.event" FriendlyUrl="reference/common/projectdocumentprojectdocument.taskselectionchanged.event" Scope="project" SEODescription="使用中專案的工作選取變更時，就會發生。" />
-      <Item text="ViewSelectionChanged 事件" url="shared/projectdocument.viewselectionchanged.event" FriendlyUrl="reference/common/projectdocumentprojectdocument.viewselectionchanged.event" Scope="project" SEODescription="使用中專案的使用中檢視變更時，就會發生。" />
-    </Item>
-    <Item text="設定 " url="shared/settings" Scope="Access, Excel, PowerPoint, Word">
-      <Item text="addHandlerAsync" url="shared/settings.addhandlerasync" FriendlyUrl="reference/common/settingssettings.addhandlerasync" Scope="excel" SEODescription="新增 settingsChanged 事件的事件處理常式。" />
-      <Item text="get" url="shared/settings.get" FriendlyUrl="reference/common/settingssettings.get" SEODescription="擷取指定的設定。" />
-      <Item text="refreshAsync" url="shared/settings.refreshasync" FriendlyUrl="reference/common/settingssettings.refreshasync" SEODescription="讀取保存在文件內的所有設定，並重新整理保留在記憶體中，這些設定的增益集複本。" />
-      <Item text="removeHandlerAsync" url="shared/settings.remove" FriendlyUrl="reference/common/settingssettings.remove" SEODescription="移除 settingsChanged 事件的事件處理常式。" />
-      <Item text="remove" url="shared/settings.removehandlerasync" FriendlyUrl="reference/common/settingssettings.removehandlerasync" SEODescription="移除指定的設定。" />
-      <Item text="saveAsync" url="shared/settings.saveasync" FriendlyUrl="reference/common/settingssettings.saveasync" />
-      <Item text="set" url="shared/settings.set" FriendlyUrl="reference/common/settingssettings.set" SEODescription="設定或建立設定。" />
-      <Item text="settingsChanged 事件" url="shared/settings.settingschangedevent" FriendlyUrl="reference/common/settings/settingschanged-eventsettings.settingschangedevent" SEODescription="設定變更時，就會發生。" />
-      <Item text="settings.settingschangedeventargs" url="shared/settings.settingschangedeventargs" SEODescription="設定變更時，就會發生" />
-      <Item text="設定" url="shared/settings.settingschangedeventargs.setting" FriendlyUrl="reference/common/settings/settingschanged-event/args/settings.settingschangedeventargs.setting" SEODescription="指定此設定的預設值 " />
-      <Item text="類型" url="shared/settings.settingschangedeventargs.type" FriendlyUrl="reference/office.js/settings/settingschanged-event/args/settings.settingschangedeventargs.type" SEODescription="指定此設定的預設類型 " />
-  </Item>
-    <Item text="配量" url="shared/slice" Scope="powerpoint, word">
-    <Item text="資料" url="shared/slice.data" SEODescription="取得檔案配量的未經處理資料。" />
-    <Item text="index" url="shared/slice.index" SEODescription="取得檔案配量的索引。" /> 
-    <Item text="Size" url="shared/slice.size" SEODescription="取得配量大小，以位元組為單位。" />
-    </Item>
-    <Item text="TableData" url="shared/tabledata" Scope="excel, word">
-      <Item text="headers" url="shared/tabledata.headers" SEODescription="取得或設定資料表中的標頭" /> 
-      <Item text="rows" url="shared/tabledata.rows" SEODescription="取得或設定資料表中的資料列。" />
-    </Item>
-    <Item text="event.completed" url="shared/event.completed" FriendlyUrl="reference/common/officeevent.completed" Scope="outlook" SEODescription="增益集叫用的回呼，可讓 Outlook 知道此作業已完成。" />
-    <Item text="event.source.id" url="shared/event.source.id" FriendlyUrl="reference/common/officeevent.source.id" Scope="outlook" SEODescription="取得觸發呼叫此函數的控制項識別碼。" />
-    <Item text="Office UI" url="shared/officeui" Scope="outlook, excel, word, powerpoint" SEODescription="提供物件和方法用來建立增益集的 UI 元件。">
-    	<Item text="Dialog 物件" url="shared/officeui.dialog" Scope="outlook, excel, word, powerpoint" SEODescription="呼叫 displayDialogAsync 方法時傳回的物件。" />
-    	<Item text="DisplayDialog 方法" url="shared/officeui.displaydialogasync" Scope="outlook, excel, word, powerpoint" SEODescription="顯示 Office 主機內的 Web 對話方塊。" />
-    	<Item text="MessageParent 方法" url="shared/officeui.messageparent" Scope="outlook, excel, word, powerpoint" SEODescription="從對話方塊將訊息傳遞至其父系/opener 頁面。" />
-		<Item text="對話方塊 API 需求集合" url="requirement-sets/dialog-api-requirement-sets" Scope="outlook, excel, word, powerpoint" SEODescription="深入了解對話方塊 API 需求集合、支援需求集合的 Office 主應用程式，以及 Office 應用程式的組建或版本號碼。" />
-    </Item>
-  </Item>
-  <Item text="Open 規格" url="openspec" Scope="Excel, PowerPoint, Word, Outlook, OneNote" SEODescription="深入了解持續設計 API 的努力，並提供意見反應" />
-  
+			<Item text="setSelectedDataAsync" url="shared/document.setselecteddataasync" SEODescription="將資料寫入文件中目前的選取範圍。" />
+			<Item text="設定" url="shared/document.settings" SEODescription="代表以名稱/值對儲存在主文件中，工作窗格或內容增益集的自訂設定。" />
+			<Item text="URL" url="shared/document.url" SEODescription="取得主應用程式目前已開啟的文件 URL。" />
+		</Item>
+		<Item text="錯誤" url="shared/error">
+			<Item text="error.code" url="shared/error.code" SEODescription="取得錯誤的數字代碼。" />
+			<Item text="error.message" url="shared/error.message" SEODescription="取得錯誤的詳細描述。" />
+			<Item text="error.name" url="shared/error.name" SEODescription="取得錯誤的名稱。" />
+		</Item>
+		<Item text="檔案" url="shared/file">
+			<Item text="closeAsync" url="shared/file.closeasync" FriendlyUrl="reference/common/filefile.closeasync" SEODescription="關閉文件檔案。" />
+			<Item text="getSliceAsync" url="shared/file.getsliceasync" FriendlyUrl="reference/common/filefile.getsliceasync" SEODescription=" 傳回指定的配量。" />
+			<Item text="Size" url="shared/file.size" FriendlyUrl="reference/common/filefile.size" SEODescription="傳回指定的大小。" />
+			<Item text="sliceCount" url="shared/file.slicecount" FriendlyUrl="reference/common/filefile.slicecount" SEODescription="傳回指定的計數。" />
+		</Item>
+		<Item text="Office" url="shared/office">
+			<Item text="cast.item" url="shared/office.cast.item" Scope="outlook" SEODescription="提供撰寫或讀取模式訊息和約會專用的 IntelliSense。" />
+			<Item text="初始化事件" url="shared/office.initialize" SEODescription="已載入執行階段環境，且增益集準備好開始與裝載它的文件互動時，就會發生" />
+			<Item text="select" url="shared/office.select" FriendlyUrl="reference/common/officeoffice.select" SEODescription="選取裝載的文件。" />
+			<Item text="useShortNamespace" url="shared/office.useshortnamespace" FriendlyUrl="reference/common/officeoffice.useshortnamespace" SEODescription="切換完整的 Microsoft.Office.WebExtension 命名空間之 Office 別名的開和關。" />
+		</Item>
+		<Item text="ProjectDocument" url="shared/projectdocument.projectdocument" FriendlyUrl="reference/common/projectdocumentprojectdocument.projectdocument" Scope="project">
+			<Item text="addHandlerAsync" url="shared/projectdocument.addhandlerasync" FriendlyUrl="reference/common/projectdocumentprojectdocument.addhandlerasync" Scope="project" SEODescription="以非同步方式將事件處理常式加入 ProjectDocument 物件中的事件。" />
+			<Item text="getMaxResourceIndexAsync" url="shared/projectdocument.getmaxresourceindexasync" FriendlyUrl="reference/common/projectdocumentprojectdocument.getmaxresourceindexasync" Scope="project" SEODescription="以非同步方式取得目前專案中資源集合的最大索引。" />
+			<Item text="getMaxTaskIndexAsync" url="shared/projectdocument.getmaxtaskindexasync" FriendlyUrl="reference/common/projectdocumentprojectdocument.getmaxtaskindexasync" Scope="project" SEODescription="以非同步方式取得目前專案中工作集合的最大索引。" />
+			<Item text="getProjectFieldAsync" url="shared/projectdocument.getprojectfieldasync" FriendlyUrl="reference/common/projectdocumentprojectdocument.getprojectfieldasync" Scope="project" SEODescription="以非同步方式取得使用中專案指定欄位的值。" />
+			<Item text="getResourceByIndexAsync" url="shared/projectdocument.getresourcebyindexasync" FriendlyUrl="reference/common/projectdocumentprojectdocument.getresourcebyindexasync" Scope="project" SEODescription="以非同步方式取得資源集合中具有指定索引的資源 GUID。" />
+			<Item text="getResourceFieldAsync" url="shared/projectdocument.getresourcefieldasync" FriendlyUrl="reference/common/projectdocumentprojectdocument.getresourcefieldasync" Scope="project" SEODescription="以非同步方式取得指定資源的指定欄位值。" />
+			<Item text="getSelectedDataAsync" url="shared/projectdocument.getselecteddataasync" FriendlyUrl="reference/common/projectdocumentprojectdocument.getselecteddataasync" Scope="project" SEODescription="以非同步方式取得甘特圖中目前的選取範圍內，一或多個儲存格中所包含的資料。" />
+			<Item text="getSelectedResourceAsync" url="shared/projectdocument.getselectedresourceasync" FriendlyUrl="reference/common/projectdocumentprojectdocument.getselectedresourceasync" Scope="project" SEODescription="以非同步方式取得所選取資源的 GUID。" />
+			<Item text="getSelectedTaskAsync" url="shared/projectdocument.getselectedtaskasync" FriendlyUrl="reference/common/projectdocumentprojectdocument.getselectedtaskasync" Scope="project" SEODescription="以非同步方式取得所選取工作的 GUID。" />
+			<Item text="getSelectedViewAsync" url="shared/projectdocument.getselectedviewasync" FriendlyUrl="reference/common/projectdocumentprojectdocument.getselectedviewasync" Scope="project" SEODescription="以非同步方式取得使用中檢視的名稱與檢視類型。" />
+			<Item text="getTaskAsync" url="shared/projectdocument.gettaskasync" FriendlyUrl="reference/common/projectdocumentprojectdocument.gettaskasync" Scope="project" SEODescription="以非同步方式取得工作名稱、指派給該工作的資源，和同步的 SharePoint 工作清單中工作的識別碼。" />
+			<Item text="getTaskByIndexAsync" url="shared/projectdocument.gettaskbyindexasync" FriendlyUrl="reference/common/projectdocumentprojectdocument.gettaskbyindexasync" Scope="project" SEODescription="以非同步方式取得工作集合中具有指定索引的工作 GUID。" />
+			<Item text="getTaskFieldAsync" url="shared/projectdocument.gettaskfieldasync" FriendlyUrl="reference/common/projectdocumentprojectdocument.gettaskfieldasync" Scope="project" SEODescription="以非同步方式取得指定工作的指定欄位值。" />
+			<Item text="getWSSUrlAsync" url="shared/projectdocument.getwssurlasync" FriendlyUrl="reference/common/projectdocumentprojectdocument.getwssurlasync" Scope="project" SEODescription="以非同步方式取得同步化 SharePoint 工作清單的 URL。" />
+			<Item text="removeHandlerAsync" url="shared/projectdocument.removehandlerasync" FriendlyUrl="reference/common/projectdocumentprojectdocument.removehandlerasync" Scope="project" SEODescription=" 以非同步方式移除 ProjectDocument 物件中事件的事件處理常式。" />
+			<Item text="ResourceSelectionChanged event" url="shared/projectdocument.resourceselectionchanged.event" FriendlyUrl="reference/common/projectdocumentprojectdocument.resourceselectionchanged.event" Scope="project" SEODescription="以非同步方式設定指定資源的指定欄位值。" />
+			<Item text="setResourceFieldAsync" url="shared/projectdocument.setresourcefieldasync" FriendlyUrl="reference/common/projectdocumentprojectdocument.setresourcefieldasync" Scope="project" SEODescription="以非同步方式設定指定工作的指定資源欄位值。" />
+			<Item text="setTaskFieldAsync" url="shared/projectdocument.settaskfieldasync" FriendlyUrl="reference/common/projectdocumentprojectdocument.settaskfieldasync" Scope="project" SEODescription="以非同步方式設定指定工作的指定欄位值。" />
+			<Item text="TaskSelectionChanged event" url="shared/projectdocument.taskselectionchanged.event" FriendlyUrl="reference/common/projectdocumentprojectdocument.taskselectionchanged.event" Scope="project" SEODescription="使用中專案的工作選取變更時，就會發生。" />
+			<Item text="ViewSelectionChanged 事件" url="shared/projectdocument.viewselectionchanged.event" FriendlyUrl="reference/common/projectdocumentprojectdocument.viewselectionchanged.event" Scope="project" SEODescription="使用中專案的使用中檢視變更時，就會發生。" />
+		</Item>
+		<Item text="設定 " url="shared/settings" Scope="Access, Excel, PowerPoint, Word">
+			<Item text="addHandlerAsync" url="shared/settings.addhandlerasync" FriendlyUrl="reference/common/settingssettings.addhandlerasync" Scope="excel" SEODescription="新增 settingsChanged 事件的事件處理常式。" />
+			<Item text="get" url="shared/settings.get" FriendlyUrl="reference/common/settingssettings.get" SEODescription="擷取指定的設定。" />
+			<Item text="refreshAsync" url="shared/settings.refreshasync" FriendlyUrl="reference/common/settingssettings.refreshasync" SEODescription="讀取保存在文件內的所有設定，並重新整理保留在記憶體中，這些設定的增益集複本。" />
+			<Item text="removeHandlerAsync" url="shared/settings.remove" FriendlyUrl="reference/common/settingssettings.remove" SEODescription="移除 settingsChanged 事件的事件處理常式。" />
+			<Item text="remove" url="shared/settings.removehandlerasync" FriendlyUrl="reference/common/settingssettings.removehandlerasync" SEODescription="移除指定的設定。" />
+			<Item text="saveAsync" url="shared/settings.saveasync" FriendlyUrl="reference/common/settingssettings.saveasync" />
+			<Item text="set" url="shared/settings.set" FriendlyUrl="reference/common/settingssettings.set" SEODescription="設定或建立設定。" />
+			<Item text="settingsChanged 事件" url="shared/settings.settingschangedevent" FriendlyUrl="reference/common/settings/settingschanged-eventsettings.settingschangedevent" SEODescription="設定變更時，就會發生。" />
+			<Item text="settings.settingschangedeventargs" url="shared/settings.settingschangedeventargs" SEODescription="設定變更時，就會發生" />
+			<Item text="設定" url="shared/settings.settingschangedeventargs.setting" FriendlyUrl="reference/common/settings/settingschanged-event/args/settings.settingschangedeventargs.setting" SEODescription="指定此設定的預設值 " />
+			<Item text="類型" url="shared/settings.settingschangedeventargs.type" FriendlyUrl="reference/office.js/settings/settingschanged-event/args/settings.settingschangedeventargs.type" SEODescription="指定此設定的預設類型 " />
+		</Item>
+		<Item text="配量" url="shared/slice" Scope="powerpoint, word">
+			<Item text="資料" url="shared/slice.data" SEODescription="取得檔案配量的未經處理資料。" />
+			<Item text="index" url="shared/slice.index" SEODescription="取得檔案配量的索引。" />
+			<Item text="Size" url="shared/slice.size" SEODescription="取得配量大小，以位元組為單位。" />
+		</Item>
+		<Item text="TableData" url="shared/tabledata" Scope="excel, word">
+			<Item text="headers" url="shared/tabledata.headers" SEODescription="取得或設定資料表中的標頭" />
+			<Item text="rows" url="shared/tabledata.rows" SEODescription="取得或設定資料表中的資料列。" />
+		</Item>
+		<Item text="event.completed" url="shared/event.completed" FriendlyUrl="reference/common/officeevent.completed" Scope="outlook" SEODescription="增益集叫用的回呼，可讓 Outlook 知道此作業已完成。" />
+		<Item text="event.source.id" url="shared/event.source.id" FriendlyUrl="reference/common/officeevent.source.id" Scope="outlook" SEODescription="取得觸發呼叫此函數的控制項識別碼。" />
+		<Item text="Office UI" url="shared/officeui" Scope="outlook, excel, word, powerpoint" SEODescription="提供物件和方法用來建立增益集的 UI 元件。">
+			<Item text="Dialog 物件" url="shared/officeui.dialog" Scope="outlook, excel, word, powerpoint" SEODescription="呼叫 displayDialogAsync 方法時傳回的物件。" />
+			<Item text="DisplayDialog 方法" url="shared/officeui.displaydialogasync" Scope="outlook, excel, word, powerpoint" SEODescription="顯示 Office 主機內的 Web 對話方塊。" />
+			<Item text="MessageParent 方法" url="shared/officeui.messageparent" Scope="outlook, excel, word, powerpoint" SEODescription="從對話方塊將訊息傳遞至其父系/opener 頁面。" />
+			<Item text="對話方塊 API 需求集合" url="requirement-sets/dialog-api-requirement-sets" Scope="outlook, excel, word, powerpoint" SEODescription="深入了解對話方塊 API 需求集合、支援需求集合的 Office 主應用程式，以及 Office 應用程式的組建或版本號碼。" />
+		</Item>
+	</Item>
+	<Item text="Open 規格" url="openspec" Scope="Excel, PowerPoint, Word, Outlook, OneNote" SEODescription="深入了解持續設計 API 的努力，並提供意見反應" />
 </Menu>

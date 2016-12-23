@@ -1,5 +1,5 @@
 
-# <a name="referencing-the-javascript-api-for-office-library-from-its-content-delivery-network-(cdn)"></a>從其內容傳遞網路 (CDN) 參考適用於 Office 的 JavaScript API
+# <a name="referencing-the-javascript-api-for-office-library-from-its-content-delivery-network-cdn"></a>從其內容傳遞網路 (CDN) 參考適用於 Office 的 JavaScript API
 
 
 [JavaScript API for Office](../../reference/javascript-api-for-office.md) 程式庫包含 Office.js 檔案和關聯的主應用程式特定的 .js 檔案，例如 Excel-15.js 和 Outlook-15.js。 
@@ -11,7 +11,7 @@
 <script src="https://appsforoffice.microsoft.com/lib/1/hosted/Office.js" type="text/javascript"></script>
 ```
 
-CDN URL 中的 `/1/` 前面的 `office.js` 會指定使用 Office.js 第 1 版的最新的累加版本。因為適用於 Office 的 JavaScript API 會維護回溯相容性，最新的版本會繼續支援第 1 版之前導入的 API 成員。如果您需要升級現有專案，請參閱 [更新您的適用於 Office 的 JavaScript API 和資訊清單結構描述檔案的版本] (../docs/develop/update-your-javascript-api-for-office-and-manifest-schema-version.md)。 
+CDN URL 中 `office.js` 前面的 `/1/` 指定要使用 Office.js 版本 1 內最新的累加版本。因為適用於 Office 的 JavaScript API 保有回溯相容性，最新版本會繼續支援稍早在版本 1 中推出的 API 成員。如果您需要升級現有專案，請參閱[更新適用於 Office 的 JavaScript API 和資訊清單結構描述檔案的版本](../docs/develop/update-your-javascript-api-for-office-and-manifest-schema-version.md)。 
 
 如果您計劃從 Office 市集發佈 Office 增益集，您必須使用這個 CDN 參考。本機參考僅適用於內部、開發和偵錯案例。
 

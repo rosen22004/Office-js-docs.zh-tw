@@ -35,10 +35,9 @@
 		<Item text="定義增益集命令" url="outlook/manifests/define-add-in-commands" SEODescription="使用增益集資訊清單中的 VersionOverrides 元素來定義增益集命令。" />
 		<Item text="指定 Office 主機" url="overview/specify-office-hosts-and-api-requirements" SEODescription="了解如何指定資訊清單中的 Office 主機和 API 需求。" /> 	
 		<Item text="要求用於內容和工作窗格增益集的 API 權限" url="develop/requesting-permissions-for-api-use-in-content-and-task-pane-add-ins" SEODescription="指定在您的資訊清單中存取增益集所需的 API 層級。" />
-		<Item text="更新 API 和資訊清單的版本" url="develop/update-your-javascript-api-for-office-and-manifest-schema-version" SEODescription="將 JavaScript 檔案 (Office.js 和應用程式專屬 .js 檔案) 和在 Office 增益集專案中所使用的增益集資訊清單驗證檔案更新至 1.1 版。" />
-		<Item text="使用執行階段記錄來偵錯您的資訊清單" url="develop/use-runtime-logging-to-debug-manifest" SEODescription="使用執行階段記錄來偵錯 Office 增益集的資訊清單。" />
+		<Item text="更新 API 和資訊清單的版本" url="develop/update-your-javascript-api-for-office-and-manifest-schema-version" SEODescription="將 JavaScript 檔案 (Office.js 和應用程式專屬 .js 檔案) 和在 Office 增益集專案中所使用的增益集資訊清單驗證檔案更新至 1.1 版。" />		
 	</Item>	
-	<Item text="Office JavaScript API" url="develop/understanding-the-javascript-api-for-office" SEODescription="了解適用於 Office 的 JavaScript API (在 Office.js 檔案中實作) 的功能區域。">
+	<Item text="Office API JavaScript" url="develop/understanding-the-javascript-api-for-office" SEODescription="了解適用於 Office 的 JavaScript API (在 Office.js 檔案中實作) 的功能區域。">
 		<Item text="內容和工作窗格增益集的支援" url="develop/support-for-task-pane-and-content-add-ins" SEODescription="說明可以在您的內容中宣告的不同權限層級，或工作窗格增益集的資訊清單，以指定您的增益集功能所需要的 JavaScript API 存取的層級。" />
 		<Item text="參考 Office.js" url="develop/referencing-the-javascript-api-for-office-library-from-its-cdn" SEODescription="從 Office 程式庫的內容傳遞網路 (CDN) 位置參考 Office 程式庫 (Office.js 和相關聯的應用程式專屬 .js 檔案) 的 JavaScript API。" />
 		<Item text="載入 Office.js" url="develop/loading-the-dom-and-runtime-environment" SEODescription="增益集必須確定載入 DOM 和 Office 增益集的執行階段環境，才能執行它自己的自訂邏輯。" />
@@ -51,7 +50,7 @@
 	<Item text="當地語系化" url="develop/localization" SEODescription="提供 Office 增益集的地區特定內容，包括 UI 字串、增益集名稱、描述、圖示、來源檔案和日期/時間格式。" />
     <Item text="效能" url="develop/resource-limits-and-performance-optimization" SEODescription="將資源使用量限制套用至您的 Office 增益集，並最佳化增益集的效能。" />
   </Item>
-  <Item text="測試" url="testing">
+  <Item text="測試及偵錯" url="testing">
     	<Item text="側載 Office 增益集來進行測試" url="testing/create-a-network-shared-folder-catalog-for-task-pane-and-content-add-ins" SEODescription="安裝在 Windows 上執行的 Office 增益集來進行測試。" Scope="Excel, Word, PowerPoint, Project, Access" />
 		<Item text="在 Office Online 中側載 Office 增益集來進行測試" url="testing/sideload-office-add-ins-for-testing" SEODescription="請參閱如何將增益集載入 Office 應用程式中來進行測試。" />
 	    <Item text="側載 Outlook 增益集來進行測試" url="testing/sideload-outlook-add-ins-for-testing" SEODescription="安裝 Outlook 增益集來進行測試" />
@@ -60,11 +59,13 @@
     	<Item text="在 Office Online 中偵錯" url="testing/debug-add-ins-in-office-online" SEODescription="使用 Office Online 偵錯增益集而不在 Windows 平台上執行 Office - 例如，如果您正在 Mac 上進行開發。" />
     	<Item text="在 iPad 和 Mac 上偵錯" url="testing/debug-office-add-ins-on-ipad-and-mac" SEODescription="使用 Weinre 遠端網站檢查器偵錯 iPad 或 Mac 上執行的 Office 增益集。" />
         <Item text="使用者錯誤的疑難排解" url="testing/testing-and-troubleshooting" SEODescription="針對您的使用者關於 Office 增益集的問題進行疑難排解。" />
+		<Item text="驗證與排解資訊清單的問題" url="testing/troubleshoot-manifest" SEODescription="排解 Office 增益集資訊清單的問題。" />
 	</Item>
   <Item text="發佈" url="publish/publish">
     <Item text="在 Microsoft Azure 上主控 Office 增益集" url="publish/host-an-office-add-in-on-microsoft-azure" SEODescription="使用 Visual Studio 2015 和 Microsoft Office 開發者工具來發行，然後在 Microsoft Azure 上裝載 Office 增益集。" />
     <Item text="使用 Napa 或 Visual Studio 來封裝您的增益集" url="publish/package-your-add-in-using-napa-or-visual-studio" SEODescription="封裝您的 Office 增益集以準備進行發佈。" />
     <Item text="發佈工作窗格和內容增益集至增益集目錄" url="publish/publish-task-pane-and-content-add-ins-to-an-add-in-catalog" SEODescription="設定 Office 用戶端，讓增益集可在 [Office 增益集] 對話方塊中使用" />
+	<Item text="將增益集提交至 Office 市集" url="https://msdn.microsoft.com/en-us/library/office/jj220037.aspx" IsExternal="true" />
   </Item>
   
   <Item text="Word" url="word/word-add-ins-programming-overview" SEODescription="使用 JavaScript API 來建置 Word 增益集。" Scope="word">
@@ -146,4 +147,5 @@
   <Item text="Access" url="access" Scope="access">
     <Item text="Access Web App 增益集" url="access/access-web-app-add-ins" SEOKeyword="Access 增益集" SEODescription="建立具有自訂 HTML 和 JavaScript 的延伸 Access Web App 的 Office 增益集。" Scope="access" />
   </Item>
+  <Item text="JavaScript API 參照" url="https://dev.office.com/reference/add-ins/javascript-api-for-office" IsExternal="true" />
 </Menu>

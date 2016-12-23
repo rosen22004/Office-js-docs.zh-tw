@@ -21,12 +21,12 @@ Outlook 增益集啟動是內容相關且根據增益集資訊清單中的啟動
     
 - 如果您可以在 Outlook 上測試增益集，可以使用下列使用 Outlook 物件模型和 Visual Basic 編輯器的簡單偵錯技巧︰
     
-      1. 首先，請確認已啟用 Outlook 的巨集。依序選擇 **[檔案]**、**[選項]**、**[信任中心]**、**[信任中心設定]**、**[巨集設定]**。確保在信任中心內選取 **[所有巨集的通知]**。您在 Outlook 啟動期間應該也已選取 **[啟用巨集]**。
+      1. 首先，請確認已啟用 Outlook 的巨集。依序選擇 [檔案]****、[選項]****、[信任中心]****、[信任中心設定]****、[巨集設定]****。確保在信任中心內選取 [所有巨集的通知]****。您在 Outlook 啟動期間應該也已選取 [啟用巨集]****。
     
-      2. 在功能區的 **[開發人員]** 索引標籤中，選擇 **[Visual Basic]**。
+      2. 在功能區的 [開發人員]**** 索引標籤中，選擇 [Visual Basic]****。
     
      >**附註**  找不到**開發人員**索引標籤嗎？請參閱[作法：在功能區顯示開發人員索引標籤](http://msdn.microsoft.com/en-us/library/ce7cb641-44f2-4a40-867e-a7d88f8e98a9%28Office.15%29.aspx)，以將它開啟。
-	 3.在 Visual Basic 編輯器中，依序選擇 **[檢視]**、**[即時運算]** 視窗。
+	  3.在 Visual Basic 編輯器中，依序選擇 [檢視]****、[即時運算]**** 視窗。
     
       4. 在 [即時運算] 視窗中輸入下列項目來顯示 Exchange Server 的版本。傳回值的主要版本必須等於或大於 15。
     
@@ -60,11 +60,11 @@ Outlook 增益集啟動是內容相關且根據增益集資訊清單中的啟動
 使用下列方法之一來確認是否已停用增益集︰ 
 
 
-- 在 Outlook Web App 中，直接登入電子郵件帳號，選擇 [設定] 圖示，然後選擇 **[管理增益集]** 以前往 Exchange 系統管理中心，您可以在其中確認增益集是否已啟用。
+- 在 Outlook Web App 中，直接登入電子郵件帳號，選擇 [設定] 圖示，然後選擇 [管理增益集]**** 以前往 Exchange 系統管理中心，您可以在其中確認增益集是否已啟用。
     
-- 在 Outlook 中，移至 Backstage 檢視，然後選擇 **[管理增益集]**。登入 Exchange 系統管理中心以確認增益集是否已啟用。
+- 在 Outlook 中，移至 Backstage 檢視，然後選擇 [管理增益集]****。登入 Exchange 系統管理中心以確認增益集是否已啟用。
     
-- 在 Outlook for Mac 中，在增益集列中選擇 **[管理增益集]**。登入 Exchange 系統管理中心以確認增益集是否已啟用。
+- 在 Outlook for Mac 中，在增益集列中選擇 [管理增益集]****。登入 Exchange 系統管理中心以確認增益集是否已啟用。
     
 
 ## <a name="does-the-tested-item-support-outlook-add-ins-is-the-selected-item-delivered-by-a-version-of-exchange-server-that-is-at-least-exchange-2013"></a>測試的項目是否支援 Outlook 增益集？Exchange Server 版本所提供的選取項目是否至少為 Exchange 2013？
@@ -135,7 +135,7 @@ Outlook 增益集啟動是內容相關且根據增益集資訊清單中的啟動
     
 5. 如果資訊清單不在快取中，請檢查 Outlook 是否確實成功從 Exchange Server 讀取資訊清單。若要這樣做，請使用 Windows 事件檢視器︰
     
-      1. 在 **[Windows 記錄檔]** 下，選擇 **[應用程式]**。
+      1. 在 [Windows 記錄檔]**** 下，選擇 [應用程式]****。
     
       2. 尋找合理的最近事件，其中事件識別碼等於 63，表示 Outlook 從 Exchange Server 下載資訊清單。
     
@@ -159,7 +159,7 @@ Outlook 增益集啟動是內容相關且根據增益集資訊清單中的啟動
 
 ## <a name="is-the-add-in-manifest-valid"></a>此增益集資訊清單是否有效？
 
-請嘗試使用 [執行階段記錄](https://dev.office.com/docs/add-ins/develop/use-runtime-logging-to-debug-manifest)來偵錯增益集資訊清單的問題。
+請參閱[驗證與排解資訊清單的問題](../testing/troubleshoot-manifest.md)以對增益集資訊清單的問題進行偵錯。
 
 ## <a name="are-you-using-the-appropriate-activation-rules"></a>您是否使用適當的啟動規則？
 
@@ -200,13 +200,13 @@ Outlook 豐富型用戶端會使用不同於 Outlook Web App 和裝置用 OWA �
 如果您使用 **ItemHasRegularExpressionMatch** 啟用規則，請驗證 **PropertyName** 屬性的值是否如您選取的項目所預期。以下是偵錯對應屬性的一些祕訣︰
 
 
-- 如果選取的項目是郵件，且您在 **PropertyName** 屬性中指定 **BodyAsHTML**，則開啟郵件，然後選擇 **[檢視原始檔]** 來驗證該項目的 HTML 表示中的郵件本文。
+- 如果選取的項目是郵件，且您在 **PropertyName** 屬性中指定 **BodyAsHTML**，則開啟郵件，然後選擇 [檢視原始檔]**** 來驗證該項目的 HTML 表示中的郵件本文。
     
 - 如果選取的項目是約會，或如果啟動規則在 **PropertyName** 中指定 **BodyAsPlaintext**，您可以在 Outlook for Windows 中使用 Outlook 物件模型和 Visual Basic 編輯器：
     
-      1. 確定已啟用巨集且 **[開發人員]** 索引標籤會顯示在 Outlook 的功能區中。如果您不確定如何執行這項操作，請參閱[使用者信箱的 Exchange Server 版本是否至少為 Exchange 2013？](#troubleshootingmailapps)下的步驟 1 和 2。
+      1. 確定已啟用巨集且 [開發人員]**** 索引標籤會顯示在 Outlook 的功能區中。如果您不確定如何執行這項操作，請參閱[使用者信箱的 Exchange Server 版本是否至少為 Exchange 2013？](#troubleshootingmailapps)下的步驟 1 和 2。
     
-      2. 在 Visual Basic 編輯器中，依序選擇 **[檢視]**、**[即時運算]** 視窗。
+      2. 在 Visual Basic 編輯器中，依序選擇 [檢視]****、[即時運算]**** 視窗。
     
       3. 輸入下列項目以根據案例顯示不同的屬性。 
     
@@ -295,6 +295,6 @@ Outlook 豐富型用戶端會使用不同於 Outlook Web App 和裝置用 OWA �
     
 - [MailApp complexType](http://msdn.microsoft.com/en-us/library/696b9fcf-cd10-3f20-4d49-86d3690c887a%28Office.15%29.aspx)
     
-- - [使用執行階段記錄來偵錯資訊清單](https://dev.office.com/docs/add-ins/develop/use-runtime-logging-to-debug-manifest)
+- [驗證與排解資訊清單的問題](../testing/troubleshoot-manifest.md)
     
 

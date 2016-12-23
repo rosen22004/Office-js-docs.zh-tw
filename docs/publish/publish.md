@@ -9,7 +9,8 @@
 - [SharePoint 目錄](publish-task-pane-and-content-add-ins-to-an-add-in-catalog.md) - 能做為開發程序的一部分來測試增益集，或在內部部署環境中將增益集散發給組織中的使用者。
 
 可用的選項視您鎖定的 Office 主應用程式和建立的增益集類型而定。
->**附註：**建立增益集時，如果您打算[發佈](../publish/publish.md)增益集至 Office 市集中，請確定您符合 [Office 市集驗證原則](https://msdn.microsoft.com/en-us/library/jj220035.aspx)。例如，若要通過驗證，增益集必須可以在所有的平台上運作，其平台支援您在資訊清單內 Requirements 元素中所定義的方法 (請參閱 [區段 4.12](https://msdn.microsoft.com/en-us/library/jj220035.aspx#Anchor_3))。
+
+>**附註：**建立增益集時，如果您打算[發佈](../publish/publish.md)增益集至 Office 市集中，請確定您符合 [Office 市集驗證原則](https://msdn.microsoft.com/en-us/library/jj220035.aspx)。例如，若要通過驗證，增益集必須可以在所有支援您定義的方法的平台上運作 (如需詳細資料，請參閱 [4.12 節](https://msdn.microsoft.com/en-us/library/jj220035.aspx#Anchor_3)與 [Office 增益集主應用程式與可用性頁面](https://dev.office.com/add-in-availability))。
 
 ## <a name="deployment-options-for-word-excel-and-powerpoint-add-ins"></a>Word、Excel 及 PowerPoint 增益集的部署選項
 

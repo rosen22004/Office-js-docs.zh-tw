@@ -16,7 +16,8 @@ Office 增益集的 XML 資訊清單檔案，描述了當使用者安裝並將�
     
 - 若為 Outlook 增益集，請定義規則來指定內容，以便在其中啟動，並與郵件、約會或會議要求項目互動。
 
->**附註：**建立增益集時，如果您打算[發佈](../publish/publish.md)增益集至 Office 市集中，請確定您符合 [Office 市集驗證原則](https://msdn.microsoft.com/en-us/library/jj220035.aspx)。例如，若要通過驗證，增益集必須可以在所有的平台上運作，其平台支援您在資訊清單內 Requirements 元素中所定義的方法 (請參閱 [區段 4.12](https://msdn.microsoft.com/en-us/library/jj220035.aspx#Anchor_3))。
+>**附註：**建立增益集時，如果您打算[發佈](../publish/publish.md)增益集至 Office 市集中，請確定您符合 [Office 市集驗證原則](https://msdn.microsoft.com/en-us/library/jj220035.aspx)。例如，若要通過驗證，增益集必須可以在所有支援您定義的方法的平台上運作 (如需詳細資料，請參閱 [4.12 節](https://msdn.microsoft.com/en-us/library/jj220035.aspx#Anchor_3)與 [Office 增益集主應用程式與可用性頁面](https://dev.office.com/add-in-availability))。
+
 
 ## <a name="required-elements"></a>必要元素
 
@@ -59,21 +60,6 @@ Office 增益集的 XML 資訊清單檔案，描述了當使用者安裝並將�
 |[*Hosts](http://msdn.microsoft.com/library/f9a739c1-3daf-c03a-2bd9-4a2a6b870101%28Office.15%29.aspx)||X|
 
 *加入至 Office 增益集資訊清單結構描述 1.1 版。
-
-
-## <a name="validate-the-office-add-ins-manifest"></a>驗證 Office 增益集的資訊清單
-
-若要協助確定說明 Office 增益集的資訊清單檔案是完整且正確，請針對 [XML 結構描述定義 (XSD) 檔案](https://github.com/OfficeDev/office-js-docs/tree/master/docs/overview/schemas)驗證它。您可以使用 XML 結構描述驗證工具或 [Visual Studio](../get-started/create-and-debug-office-add-ins-in-visual-studio.md) 來驗證資訊清單。 
-
-若要使用 Visual Studio，請移至 [組建] > [發佈]，然後選擇執行驗證檢查****。
-
-若要使用命令列的 XML 結構描述驗證工具來驗證您的資訊清單︰
-
-1.  安裝 [tar](https://www.gnu.org/software/tar/) 和 [libxml](http://xmlsoft.org/FAQ.html) (如果尚未安裝)。 
-2.  執行下列命令。以路徑 XSD_FILE 替換資訊清單 XSD 檔案，也以路徑 XML_FILE 替換資訊清單 XML 檔案。
-
-    xmllint --noout --架構 XSD_FILE XML_FILE
-
 
 
 ## <a name="specify-domains-you-want-to-open-in-the-add-in-window"></a>指定您想要在增益集視窗中開啟的網域
@@ -435,6 +421,10 @@ Office 增益集的 XML 資訊清單檔案，描述了當使用者安裝並將�
 
 ```
 
+## <a name="validate-and-troubleshoot-issues-with-your-manifest"></a>驗證與排解資訊清單的問題
+
+如要疑難排解資訊清單的問題，請參閱[驗證與排解資訊清單的問題](../../docs/testing/troubleshoot-manifest.md)。您可以在此找到如何根據 [XML 結構描述定義 (XSD)](https://github.com/OfficeDev/office-js-docs/tree/master/docs/overview/schemas) 驗證資訊清單的資訊，以及如何使用執行階段記錄來偵錯資訊清單的資訊。
+
 ## <a name="additional-resources"></a>其他資源
 
 
@@ -442,5 +432,5 @@ Office 增益集的 XML 資訊清單檔案，描述了當使用者安裝並將�
 - [指定 Office 主應用程式和 API 需求](../../docs/overview/specify-office-hosts-and-api-requirements.md)
 - [Office 增益集的當地語系化](../../docs/develop/localization.md)
 - [Office 增益集資訊清單的結構描述參考](https://github.com/OfficeDev/office-js-docs/tree/master/docs/overview/schemas)
-- [使用執行階段記錄來偵錯您的資訊清單](../develop/use-runtime-logging-to-debug-manifest.md)
+- [驗證與排解資訊清單的問題](../../docs/testing/troubleshoot-manifest.md)
 
