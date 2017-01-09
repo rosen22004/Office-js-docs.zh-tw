@@ -7,12 +7,13 @@
 
 ## <a name="properties"></a>屬性
 
-無
+| 屬性	 | 類型	 |描述| 意見反應|
+|:---------------|:--------|:----------|:---|
+|縮放|int|GetSet 頁面的縮放層級。|[移至](https://github.com/OfficeDev/office-js-docs/issues/new?title=Visio-pageView-zoom)|
 
 ## <a name="relationships"></a>關聯性
-| 關聯性 | 類型	   |描述| 意見反應|
-|:---------------|:--------|:----------|:---|
-|縮放|[雙精確度](double.md)|GetSet 頁面的縮放層級。|[移至](https://github.com/OfficeDev/office-js-docs/issues/new?title=Visio-pageView-zoom)|
+
+無
 
 ## <a name="methods"></a>方法
 
@@ -70,7 +71,7 @@ pageViewObject.fitToWindow();
 無
 
 #### <a name="returns"></a>傳回
-無效
+void
 
 ### <a name="isshapeinviewportshape-shape"></a>isShapeInViewport(Shape:圖形)
 檢查圖形是否在頁面檢視內。

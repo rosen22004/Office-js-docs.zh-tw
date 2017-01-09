@@ -38,7 +38,7 @@ Word JavaScript API 1.4 更新包含重要的附加元件，包括︰
 * 資料表合併儲存格
 * 資料表合併列與分割資料行
 
-**請參閱 [Word JS API 1.4 頁面](https://github.com/OfficeDev/office-js-docs/tree/WordJs_1.4_Openspec/word)來深入了解並提供您的意見反應。**
+**請參閱 [Word JS API 1.4 頁面](https://github.com/OfficeDev/office-js-docs/tree/WordJs_1.4_OpenSpec)來深入了解並提供您的意見反應。**
 
 ## <a name="host-platform-information-and-diagnostic-information"></a>主機、平台資訊及診斷資訊 
 若要向程式開發人員提供增益集執行階段環境的資訊及診斷資訊，請參閱 Office.Context 物件的已規劃新增項目。 

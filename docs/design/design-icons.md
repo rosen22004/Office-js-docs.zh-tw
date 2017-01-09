@@ -44,6 +44,10 @@ Office 2016 桌面圖示是點陣圖影像。不同的大小將會根據使用�
 - 64 像素 (建議使用)
 - 80 像素 (必要)  
 
+請確定針對每個大小重繪您的圖示，而不要壓縮圖示以調整大小。
+
+![顯示建議調整圖示大小，而不是壓縮圖示的圖例](../../images/icon_resizing.png)
+
 <!--
 The following table shows the icon sizes that render for different modes at different DPI settings.
 
