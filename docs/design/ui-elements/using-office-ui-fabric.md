@@ -1,5 +1,5 @@
 
-#<a name="use-office-ui-fabric-in-office-addins"></a>在 Office 增益集中使用 Office UI Fabric
+#<a name="use-office-ui-fabric-261-in-office-add-ins"></a>在 Office 增益集中使用 Office UI Fabric 2.6.1
 
 如果您要建置 Office 增益集，我們鼓勵您使用 [Office UI Fabric](https://github.com/OfficeDev/Office-UI-Fabric)來建立使用者經驗。下列步驟會引導您了解使用 Fabric 的基本知識。  
 

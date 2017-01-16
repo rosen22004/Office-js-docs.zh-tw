@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Menu xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" SupportedProduct="|Word|Excel|Outlook|PowerPoint|OneNote|Project|Access" SupportedVersion="|V1.1|V1.2|V1.3|">
   <Item text="概觀" url="overview">
-    <Item text="平台概觀" url="overview/office-add-ins" SEODescription="深入了解 Office 增益集，可讓您的解決方案成為 Office 原生的一部分，跨越 Windows、Office Online、Mac 和 IPad。" />
+    <Item text="平台概觀" url="overview/office-add-ins" SEODescription="深入了解 Office 增益集，可讓您的解決方案成為 Office 原生的一部分，跨越 Windows、Office Online、Mac 和 iPad。" />
 	<Item text="執行增益集的需求" url="overview/requirements-for-running-office-add-ins" SEODescription="深入了解執行 Office 增益集的軟體及裝置需求。" />	
 	<Item text="增益集開發的最佳作法" url="overview/add-in-development-best-practices" SEODescription="套用最佳作法來建置最佳化使用者經驗的 Office 增益集。" />
 	</Item>
@@ -16,7 +16,7 @@
       	<Item text="內容增益集的版面配置" url="design/ui-elements/layout-for-content-add-ins" SEODescription="運用建議的設計配置，可為您的內容增益集建立一致的外觀和風格。" />
       	<Item text="工作窗格增益集的版面配置" url="design/ui-elements/layout-for-task-pane-add-ins" SEODescription="運用建議的設計配置，可為您的工作窗格增益集建立一致的外觀和風格。" />
       	<Item text="Outlook 增益集的版面配置" url="design/ui-elements/layouts-for-outlook-add-ins" SEODescription="將這些版面配置用於郵件增益集" Scope="outlook" />
-      	<Item text="使用 Office UI Fabric" url="design/ui-elements/using-office-ui-fabric" SEODescription="會引導您了解使用 Fabric 的基本知識。" />
+      	<Item text="使用 Office UI Fabric JS" url="design/ui-elements/using-office-ui-fabric-js" SEODescription="會引導您了解使用 Fabric JS 的基本知識。" />
       </Item>	
     	<Item text="UX 設計模式" url="design/ux-design-patterns" SEODescription="使用 Office 增益集的 UX 設計模式範本，建立 UI 擴充功能。" />
 	<Item text="Excel、Word 和 PowerPoint 的增益集命令" url="design/add-in-commands" SEODescription="使用增益集中的增益集命令來延伸 Excel、Word 和 PowerPoint 中的預設 Office 使用者介面。" />
@@ -54,7 +54,7 @@
     	<Item text="側載 Office 增益集來進行測試" url="testing/create-a-network-shared-folder-catalog-for-task-pane-and-content-add-ins" SEODescription="安裝在 Windows 上執行的 Office 增益集來進行測試。" Scope="Excel, Word, PowerPoint, Project, Access" />
 		<Item text="在 Office Online 中側載 Office 增益集來進行測試" url="testing/sideload-office-add-ins-for-testing" SEODescription="請參閱如何將增益集載入 Office 應用程式中來進行測試。" />
 	    <Item text="側載 Outlook 增益集來進行測試" url="testing/sideload-outlook-add-ins-for-testing" SEODescription="安裝 Outlook 增益集來進行測試" />
-    	<Item text="在 IPad 和 Mac 上側載" url="testing/sideload-an-office-add-in-on-ipad-and-mac" SEODescription="側載 Office 增益集到 iPad 或 Mac 以測試其如何在 Office for iOS 或 Office for Mac 中執行。" />
+    	<Item text="在 iPad 和 Mac 上側載" url="testing/sideload-an-office-add-in-on-ipad-and-mac" SEODescription="側載 Office 增益集到 iPad 或 Mac 以測試其如何在 Office for iOS 或 Office for Mac 中執行。" />
     	<Item text="使用 F12 開發人員工具進行偵錯" url="testing/debug-add-ins-using-f12-developer-tools-on-windows-10" SEODescription="使用 Windows 10 上的 F12 開發人員工具的偵錯工具來偵錯 Office 增益集。" />
     	<Item text="在 Office Online 中偵錯" url="testing/debug-add-ins-in-office-online" SEODescription="使用 Office Online 偵錯增益集而不在 Windows 平台上執行 Office - 例如，如果您正在 Mac 上進行開發。" />
     	<Item text="在 iPad 和 Mac 上偵錯" url="testing/debug-office-add-ins-on-ipad-and-mac" SEODescription="使用 Weinre 遠端網站檢查器偵錯 iPad 或 Mac 上執行的 Office 增益集。" />
@@ -90,10 +90,11 @@
     <Item text="內容相關的 Outlook 增益集" url="outlook/contextual-outlook-add-ins" SEODescription="根據郵件或約會中的指定文字啟動 Outlook 增益集。" Scope="outlook" />
     <Item text="模組延伸 Outlook 增益集" url="outlook/extension-module-outlook-add-ins" FriendlyUrl="outlookmodule-extension-outlook-add-ins" Scope="outlook" SEODescription="透過新增模組延伸到導覽列來擴充 Outlook UI。" /> 
 	<Item text="API" url="outlook/apis" SEODescription="了解如何指定 Outlook 增益集所需的 API。" Scope="outlook" />
-	<Item text="資訊清單" url="overview/add-in-manifests" Scope="outlook" SEODescription="使用 XML 資訊清單來指定如何啟動增益集。">
-      <Item text="資訊清單" url="outlook/manifests/manifests" SEODescription="建立 Outlook 增益集讀取或撰寫表單的資訊清單。" Scope="outlook" /><Item text="啟動規則" url="outlook/manifests/activation-rules" FriendlyUrl="outlook/manifestsactivation-rules" SEODescription="定義 Outlook 增益集資訊清單中的啟動規則，以指定 Outlook 何時要顯示增益集。" Scope="outlook" />
+	<Item text="資訊清單" url="outlook/manifests/manifests" Scope="outlook" SEODescription="建立 Outlook 增益集讀取或撰寫表單的資訊清單。">
+      <Item text="啟動規則" url="outlook/manifests/activation-rules" FriendlyUrl="outlook/manifestsactivation-rules" SEODescription="定義 Outlook 增益集資訊清單中的啟動規則，以指定 Outlook 何時要顯示增益集。" Scope="outlook" />
       <Item text="定義增益集命令" url="outlook/manifests/define-add-in-commands" SEODescription="使用 Outlook 增益集資訊清單中的 VersionOverrides 元素來定義增益集命令。" Scope="outlook" />
-  	</Item>
+      <Item text="可釘選的工作窗格" url="outlook/manifests/pinnable-taskpane" SEODescription="在 Outlook 增益集中實作可釘選的工作窗格。" Scope="outlook" />
+  </Item>
   <Item text="取得並設定讀取或撰寫格式的項目資料" url="outlook/item-data" SEODescription="深入了解取得或設定在 Outlook 增益集中的約會或郵件上資料的方法" Scope="outlook" />
 	<Item text="取得和設定增益集的中繼資料" url="outlook/metadata-for-an-outlook-add-in" SEODescription="學習如何載入和儲存僅 Outlook 增益集可以存取 (透過漫遊設定和自訂屬性) 的自訂資料。" Scope="outlook" />
 	<Item text="隱私權和安全性" url="outlook/privacy-and-security" SEODescription="使用者" Scope="outlook">

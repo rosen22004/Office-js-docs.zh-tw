@@ -15,12 +15,14 @@
 |  [FunctionName](#functionname) |    指定要執行的函式名稱。 |
 |  [SourceLocation](#sourcelocation) |    指定此動作的來源檔案位置。 |
 |  [TaskpaneId](#taskpaneid) | 指定工作窗格容器的識別碼。|
+|  [SupportsPinning](#supportspinning) | 指定可支援釘選的工作窗格，其能在使用者變更選取項目時，仍維持工作窗格的開啟狀態。|
   
 
-## <a name="xsi:type"></a>xsi:type
+## <a name="xsitype"></a>xsi:type
 這個屬性會指定當使用者選取按鈕時執行的動作種類。它可以是下列其中一項：
-- ExecuteFunction
-- ShowTaskpane
+
+- `ExecuteFunction`
+- `ShowTaskpane`
 
 ## <a name="functionname"></a>FunctionName
 
@@ -28,7 +30,7 @@
 
 ```xml
 <Action xsi:type="ExecuteFunction">
-    <FunctionName>getSubject</FunctionName>
+  <FunctionName>getSubject</FunctionName>
 </Action>
 ```
 
@@ -36,9 +38,9 @@
 當 **xsi:type** 為 "ShowTaskpane" 的必要元素。指定此動作的來源檔案位置。**resid** 屬性必須設定為 **Resources** 的 **Urls** 元素中，[Url](./resources.md#urls) 元素的 [id](./resources.md) 屬性值。
 
 ```xml
- <Action xsi:type="ShowTaskpane">
-    <SourceLocation resid="readTaskPaneUrl" />
-  </Action>
+<Action xsi:type="ShowTaskpane">
+  <SourceLocation resid="readTaskPaneUrl" />
+</Action>
 ```  
 
 ## <a name="taskpaneid"></a>TaskpaneId
@@ -46,17 +48,29 @@
 
 >**附註︰**Outlook 中已不支援此項目。
 
-下列範例顯示兩個「動作」共用相同的 TaskpaneId。 
+下列範例顯示兩個「動作」共用相同的 **TaskpaneId**。 
 
 
 ```xml
- <Action xsi:type="ShowTaskpane">
-    <TaskpaneId>MyPane</TaskpaneId>
-    <SourceLocation resid="aTaskPaneUrl" />
-  </Action>
+<Action xsi:type="ShowTaskpane">
+  <TaskpaneId>MyPane</TaskpaneId>
+  <SourceLocation resid="aTaskPaneUrl" />
+</Action>
 
-  <Action xsi:type="ShowTaskpane">
-    <TaskpaneId>MyPane</TaskpaneId>
-    <SourceLocation resid="anotherTaskPaneUrl" />
-  </Action>
+<Action xsi:type="ShowTaskpane">
+  <TaskpaneId>MyPane</TaskpaneId>
+  <SourceLocation resid="anotherTaskPaneUrl" />
+</Action>
 ```  
+
+## <a name="supportspinning"></a>SupportsPinning
+當 **xsi:type** 為「ShowTaskpane」的選擇性元素。包含 [VersionOverrides](./versionoverrides.md) 的元素必須具備 `VersionOverridesV1_1` 的 `xsi:type` 屬性值。加入此項附有 `true` 值的元素以支援工作窗格釘選。使用者將能夠「釘選」工作窗格，在變更選取項目時，使其仍維持開啟狀態。
+
+>**附註：**目前僅有 Outlook 2016 可支援此元素。
+
+```xml
+<Action xsi:type="ShowTaskpane">
+  <SourceLocation resid="readTaskPaneUrl" />
+  <SupportsPinning>true</SupportsPinning>
+</Action>
+```
