@@ -6,7 +6,7 @@
 
 | 屬性	     | 類型	   |描述| 需求集合|
 |:---------------|:--------|:----------|:----|
-|count|int|傳回工作表中的圖表數目。唯讀。|[1.1](../requirement-sets/excel-api-requirement-sets.md)|
+|Count|int|傳回工作表中的圖表數目。唯讀。|[1.1](../requirement-sets/excel-api-requirement-sets.md)|
 |items|[Chart[]](chart.md)|Chart 物件的集合。唯讀。|[1.1](../requirement-sets/excel-api-requirement-sets.md)|
 
 _請參閱屬性存取[範例。](#property-access-examples)_
@@ -39,9 +39,14 @@ chartCollectionObject.add(type, sourceData, seriesBy);
 #### <a name="parameters"></a>參數
 | 參數	    | 類型	   |描述|
 |:---------------|:--------|:----------|:---|
-|類型|string|代表圖表的類型。可能的值為：ColumnClustered、ColumnStacked、ColumnStacked100、BarClustered、BarStacked、BarStacked100、LineStacked、LineStacked100、LineMarkers、LineMarkersStacked、LineMarkersStacked100、PieOfPie 等。|
+|類型|string|代表圖表的類型。請參閱下方提供之可能適用的表格類型。|
 |sourceData|Range|對應到來源資料的 Range 物件。|
 |seriesBy|string|選用。指定在圖表中使用欄或列作為資料數列的方法。可能的值為：Auto、Columns、Rows|
+
+**以下是有效的表格類型：**
+
+`ColumnClustered`, `ColumnStacked`, `ColumnStacked100`, `_3DColumnClustered`, `_3DColumnStacked`, `_3DColumnStacked100`, `BarClustered`, `BarStacked`, `BarStacked100`, `_3DBarClustered`, `_3DBarStacked`, `_3DBarStacked100`, `LineStacked`, `LineStacked100`, `LineMarkers`, `LineMarkersStacked`, `LineMarkersStacked100`, `PieOfPie`, `PieExploded`, `_3DPieExploded`, `BarOfPie`, `XYScatterSmooth`, `XYScatterSmoothNoMarkers`, `XYScatterLines`, `XYScatterLinesNoMarkers`, `AreaStacked`, `AreaStacked100`, `_3DAreaStacked`, `_3DAreaStacked100`, `DoughnutExploded`, `RadarMarkers`, `RadarFilled`, `Surface`, `SurfaceWireframe`, `SurfaceTopView`, `SurfaceTopViewWireframe`, `Bubble`, `Bubble3DEffect`, `StockHLC`, `StockOHLC`, `StockVHLC`, `StockVOHLC`, `CylinderColClustered`, `CylinderColStacked`, `CylinderColStacked100`, `CylinderBarClustered`, `CylinderBarStacked`, `CylinderBarStacked100`, `CylinderCol`, `ConeColClustered`, `ConeColStacked`, `ConeColStacked100`, `ConeBarClustered`, `ConeBarStacked`, `ConeBarStacked100`, `ConeCol`, `PyramidColClustered`, `PyramidColStacked`, `PyramidColStacked100`, `PyramidBarClustered`, `PyramidBarStacked`, `PyramidBarStacked100`, `PyramidCol`, `_3DColumn`, `Line`, `_3DLine`, `_3DPie`, `Pie`, `XYScatter`, `_3DArea`, `Area`, `Doughnut`, `Radar`
+
 
 #### <a name="returns"></a>傳回
 [Chart](chart.md)

@@ -16,9 +16,9 @@
       	<Item text="內容增益集的版面配置" url="design/ui-elements/layout-for-content-add-ins" SEODescription="運用建議的設計配置，可為您的內容增益集建立一致的外觀和風格。" />
       	<Item text="工作窗格增益集的版面配置" url="design/ui-elements/layout-for-task-pane-add-ins" SEODescription="運用建議的設計配置，可為您的工作窗格增益集建立一致的外觀和風格。" />
       	<Item text="Outlook 增益集的版面配置" url="design/ui-elements/layouts-for-outlook-add-ins" SEODescription="將這些版面配置用於郵件增益集" Scope="outlook" />
-      	<Item text="使用 Office UI Fabric JS" url="design/ui-elements/using-office-ui-fabric-js" SEODescription="會引導您了解使用 Fabric JS 的基本知識。" />
       </Item>	
-    	<Item text="UX 設計模式" url="design/ux-design-patterns" SEODescription="使用 Office 增益集的 UX 設計模式範本，建立 UI 擴充功能。" />
+    	<Item text="使用 Office UI Fabric JS" url="design/using-office-ui-fabric-js" SEODescription="會引導您了解使用 Fabric JS 的基本知識。" />
+		<Item text="UX 設計模式" url="design/ux-design-patterns" SEODescription="使用 Office 增益集的 UX 設計模式範本，建立 UI 擴充功能。" />
 	<Item text="Excel、Word 和 PowerPoint 的增益集命令" url="design/add-in-commands" SEODescription="使用增益集中的增益集命令來延伸 Excel、Word 和 PowerPoint 中的預設 Office 使用者介面。" />
   	<Item text="設計增益集命令的設計圖示" url="design/design-icons" SEODescription="設計增益集命令的設計圖示與 Office UI 緊密整合。" />
 	<Item text="資料視覺效果樣式指導方針" url="design/data-visualization-guidelines" SEODescription="提供 Office 增益集中的資料視覺效果指導方針。" />
@@ -148,5 +148,5 @@
   <Item text="Access" url="access" Scope="access">
     <Item text="Access Web App 增益集" url="access/access-web-app-add-ins" SEOKeyword="Access 增益集" SEODescription="建立具有自訂 HTML 和 JavaScript 的延伸 Access Web App 的 Office 增益集。" Scope="access" />
   </Item>
-  <Item text="JavaScript API 參照" url="https://dev.office.com/reference/add-ins/javascript-api-for-office" IsExternal="true" />
+
 </Menu>

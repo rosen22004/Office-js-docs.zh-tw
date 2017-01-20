@@ -1,6 +1,6 @@
 # <a name="functionfile-element"></a>FunctionFile 元素
 
-透過增益集命令為增益集所公開的作業指定原始程式碼檔，以執行 JavaScript 函式而非顯示 UI。**FunctionFile** 元素是 [FormFactor](./formfactor.md) 的子元素。**FunctionFile** 元素的 **resid** 屬性是設定為 **Resources** 元素中 **Url** 元素的 **id** 屬性，包含要包含或載入無 UI 增益集命令按鈕所使用的所有 JavaScript 函式的 HTML 檔案的 URL，如 [Control 元素](control.md)所定義。
+透過增益集命令為增益集所公開的作業指定原始程式碼檔，以執行 JavaScript 函式而非顯示 UI。**FunctionFile** 元素是 [DesktopFormFactor](./desktopformfactor.md) 的子元素。**FunctionFile** 元素的 **resid** 屬性是設定為 **Resources** 元素中 **Url** 元素的 **id** 屬性，包含要包含或載入無 UI 增益集命令按鈕所使用的所有 JavaScript 函式的 HTML 檔案的 URL，如 [Control 元素](control.md)所定義。
 
 下列是 **FunctionFile** 元素的範例。
 

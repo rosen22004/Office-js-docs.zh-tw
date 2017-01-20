@@ -4,6 +4,8 @@ _適用於：Word 2016、Word for iPad、Word for Mac_
 
 Word JavaScript API 屬於 Office 增益集程式設計模型的一部分，用於延伸 Office 應用程式。增益集程式設計模型會使用 Web 應用程式來將您的延伸模組裝載至 Word。您現在可以利用您偏好的任何 Web 平台或語言來延伸 Word。
 
+> **附註**：若您打算開發適用於 Word 2013 的增益集，您將會需要使用共用 [Office Javascript API]( https://dev.office.com/docs/add-ins/word/word-add-ins-programming-overview#javascript-apis-for-word)。您可以[在此](https://dev.office.com/add-in-availability)深入了解有關平台及不同 API 的資訊。除非叫出的主題僅適用於 Word 2016，否則應該適用於不同主機上。
+
 Word 增益集在 Word 內執行，並可使用 Word 2016 提供的 Word JavaScript API 來與文件內容互動。在幕後，建立增益集包含兩個部分：1) 可裝載於任何地方的 Web 應用程式，以及 2) Word 用來探索 Web 應用程式裝載位置的[增益集資訊清單](../../docs/overview/add-in-manifests.md) (資訊清單所提供的資訊不只於此，您可以在[程式設計概觀](word-add-ins-programming-overview.md)中閱讀更多資訊)。
 
 >**Word 增益集 = manifest.xml + Web 應用程式**
@@ -11,7 +13,7 @@ Word 增益集在 Word 內執行，並可使用 Word 2016 提供的 Word JavaScr
 ### <a name="set-it-up"></a>進行設定
 本節中，您將建立一個簡單 Web 應用程式以及應用程式資訊清單。此 Web 應用程式可讓您在 Word 文件中加入重複使用文字。
 
-1- 在本機磁碟機上建立名為 BoilerplateAddin 的的資料夾 (例如 C:\\BoilerplateAddin)。將下列步驟建立的所有檔案儲存至這個資料夾。
+1- 在本機磁碟機上建立名為 BoilerplateAddin 的資料夾 (例如 C:\\BoilerplateAddin)。將下列步驟建立的所有檔案儲存至這個資料夾。
 
 2- 為增益集檢視建立名為 home.html 的檔案。此增益集將有三個按鈕，選取按鈕時就會加入重複使用文字。將下列程式碼貼至 home.html 中。
 
@@ -178,19 +180,19 @@ Word 增益集在 Word 內執行，並可使用 Word 2016 提供的 Word JavaScr
 #### <a name="try-this-out-in-word-2016-for-windows"></a>在 Word 2016 for Windows 嘗試此工作
 
 1. 啟動 Word 並開啟一個文件。
-2. 選擇 [檔案] 索引標籤，然後選擇 [選項]。
-3. 選擇 [信任中心]，然後選擇 [信任中心設定] 按鈕。
-4. 選擇 [受信任的增益集目錄]。
-5. 在 [目錄 URL] 方塊中，輸入包含 BoilerplateManifest.xml 的資料夾共用的路徑，然後選擇 [新增目錄]。
-6. 選取 [顯示於功能表中] 核取方塊，然後選擇 [確定]。
+2. 選擇 [檔案]**** 索引標籤，然後選擇 [選項]****。
+3. 選擇 [信任中心]****，然後選擇 [信任中心設定]**** 按鈕。
+4. 選擇 [受信任的增益集目錄]****。
+5. 在 [目錄 URL]**** 方塊中，輸入包含 BoilerplateManifest.xml 的資料夾共用的路徑，然後選擇 [新增目錄]****。
+6. 選取 [顯示於功能表中]**** 核取方塊，然後選擇 [確定]****。
 7. 接著會顯示訊息，通知您下次啟動 Office 時就會套用您的設定。關閉並重新啟動 Word。
 
 現在您可以執行您建立的增益集了。依照下列步驟，查看它如何運作：
 
 1. 開啟 Word 文件。
-2. 在 Word 2016 的 [插入] 索引標籤上，選擇 [我的增益集]。
-3. 選取 [共用資料夾] 索引標籤。
-4. 選擇 [Boilerplate content]，然後選取 [插入]。
+2. 在 Word 2016 的 [插入]**** 索引標籤上，選擇 [我的增益集]****。
+3. 選取 [共用資料夾]**** 索引標籤。
+4. 選擇 [Boilerplate content]****，然後選取 [插入]****。
 5. 增益集會在一個工作窗格中載入。請參閱圖 1，了解其載入後的外觀。
 6. 選取按鈕，即可將重複使用文字輸入 Word 文件中。
 

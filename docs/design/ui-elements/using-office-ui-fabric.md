@@ -3,6 +3,8 @@
 
 如果您要建置 Office 增益集，我們鼓勵您使用 [Office UI Fabric](https://github.com/OfficeDev/Office-UI-Fabric)來建立使用者經驗。下列步驟會引導您了解使用 Fabric 的基本知識。  
 
+> **附註：**如需 Office UI Fabric JS 的相關資訊，請參閱[在 Office 增益集中使用 Office UI Fabric](https://dev.office.com/docs/add-ins/design/using-office-ui-fabric-js)。
+
 ##<a name="1-set-up-fabric"></a>1.設定 Fabric
 將下列命令行加入您的 HTML 標題區段，以從 CDN 參考 Fabric。
 

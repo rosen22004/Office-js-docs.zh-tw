@@ -1,6 +1,6 @@
 # <a name="extensionpoint-element"></a>ExtensionPoint 元素
 
- 在 Office UI 中定義增益集公開功能的位置。**ExtensionPoint** 元素是 [FormFactor](./formfactor.md) 的子元素。 
+ 在 Office UI 中定義增益集公開功能的位置。**ExtensionPoint** 元素是 [DesktopFormFactor](./desktopformfactor.md) 的子元素。 
 
 ## <a name="attributes"></a>屬性
 
@@ -9,7 +9,7 @@
 |  **xsi:type**  |  是  | 所定義的擴充點型別。|
 
 
-## <a name="extension-points-for-word-excel-powerpoint-and-onenote-addin-commands"></a>Word、Excel、PowerPoint 及 OneNote 增益集命令的擴充點
+## <a name="extension-points-for-word-excel-powerpoint-and-onenote-add-in-commands"></a>Word、Excel、PowerPoint 及 OneNote 增益集命令的擴充點
 
 - **PrimaryCommandSurface** - Office 中的功能區。
 - **ContextMenu** - 當您以滑鼠右鍵按一下 Office UI 時所顯示的快顯功能表。
@@ -66,13 +66,13 @@
 |**Tooltip**|選用。群組的工具提示。**resid** 屬性必須設為 **String** 元素的 **id** 屬性值。**String** 元素是 **LongStrings** 元素的子元素，為 **Resources** 元素的子元素。|
 |**Control**|每個群組至少需要一個控制項。**Control** 元素可以是 **Button** 或 **Menu**。使用 **Menu** 指定按鈕控制項的下拉式清單。目前僅支援按鈕和功能表。請參閱[按鈕控制項](#button-controls)和[功能表控制項](#menu-controls)小節以取得詳細資訊。<br/>**附註**  若要使疑難排解更加容易，我們建議一次加入一個 **Control** 元素和相關的 **Resources** 子元素。
 
-## <a name="extension-points-for-outlook-addin-commands"></a>Outlook 增益集命令的擴充點
+## <a name="extension-points-for-outlook-add-in-commands"></a>Outlook 增益集命令的擴充點
 
 - [MessageReadCommandSurface](#messagereadcommandsurface) 
 - [MessageComposeCommandSurface](#messagecomposecommandsurface) 
 - [AppointmentOrganizerCommandSurface](#appointmentorganizercommandsurface) 
 - [AppointmentAttendeeCommandSurface](#appointmentattendeecommandsurface)
-- [Module](#module) (只能在 [DesktopFormFactor](./formfactor.md) 中使用。)
+- [Module](#module) (只能在 [DesktopFormFactor](./desktopformfactor.md) 中使用。)
 
 ### <a name="messagereadcommandsurface"></a>MessageReadCommandSurface
 這個擴充點會將按鈕放在郵件讀取檢視的命令介面中。在 Outlook 桌面中，這將會出現在功能區。

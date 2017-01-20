@@ -49,10 +49,10 @@
 
 |  元素 |  必要  |  描述  |
 |:-----|:-----|:-----|
-|  [FormFactor](./formfactor.md)    |  是   |  定義受影響的表單係數。 |
+|  [DesktopFormFactor](./desktopformfactor.md)    |  是   |  為桌面外觀尺寸定義設定。 |
 
 
-### <a name="xsi:type"></a>xsi:type
+### <a name="xsitype"></a>xsi:type
 控制也套用包含的設定的 Office 主應用程式 (Word、Excel、PowerPoint、Outlook、OneNote)。此值必須是下列任一項：
 
 - `Document` (Word)

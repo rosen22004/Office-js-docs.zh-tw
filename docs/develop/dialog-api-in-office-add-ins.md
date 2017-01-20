@@ -155,7 +155,10 @@ if (loginSuccess) {
 }
 ```
 
-如需使用條件式傳訊的範例，請參閱[使用 Auth0 服務以簡化社交網路帳戶登入的 Office 增益集](https://github.com/OfficeDev/Office-Add-in-Auth0)範例。
+如需使用條件式傳訊的範例，請參閱 
+
+- [使用 Auth0 服務以簡化社交網路帳戶登入的 Office 增益集](https://github.com/OfficeDev/Office-Add-in-Auth0)
+- [使用 OAuth.io 服務以簡化熱門線上服務存取權的 Office 增益集](https://github.com/OfficeDev/Office-Add-in-OAuth.io)
 
 主網頁中的處理常式程式碼會使用 `messageType` 屬性值進行分支，如下列範例所示。請注意，`showUserName` 函式與上述範例相同，而 `showNotification` 函式會在主頁面的 UI 中顯示錯誤。 
 
@@ -302,7 +305,10 @@ var clientID = localStorage.getItem("clientID");
 // var clientID = localStorage.clientID;
 ```
 
-如需以此方式使用本機儲存體的範例增益集，請參閱[使用 Auth0 服務以簡化社交網路帳戶登入的 Office 增益集](https://github.com/OfficeDev/Office-Add-in-Auth0)範例。
+如需以此方式使用本機儲存體的範例增益集，請參閱︰ 
+
+- [使用 Auth0 服務以簡化社交網路帳戶登入的 Office 增益集](https://github.com/OfficeDev/Office-Add-in-Auth0)
+- [使用 OAuth.io 服務以簡化熱門線上服務存取權的 Office 增益集](https://github.com/OfficeDev/Office-Add-in-OAuth.io)
 
 ### <a name="using-query-parameters"></a>使用查詢參數
 
@@ -353,7 +359,7 @@ Office.context.ui.displayDialogAsync('https://myAddinDomain/myDialog.html?client
 
 #### <a name="addressing-slow-network"></a>處理慢速網路
 
-如果網路或識別提供者的速度緩慢，則當使用者選取 UI 以開啟對話方塊時，對話方塊可能不會立即開啟。這可能會讓人以為毫無動靜。為了確保擁有更佳的體驗，請讓對話方塊中所開啟的第一頁成為增益集的網域中所裝載的本機頁面；也就是主視窗的網域。這個頁面可以顯示簡單的 UI：「請稍候，正在重新導向至可讓您登入 *NAME-OF-PROVIDER* 的頁面。」 
+如果網路或識別提供者的速度緩慢，則當使用者選取 UI 元素以開啟對話方塊時，對話方塊可能不會立即開啟。這可能會讓人以為毫無動靜。為了確保擁有更佳的體驗，請讓對話方塊中所開啟的第一頁成為增益集的網域中所裝載的本機頁面；也就是主視窗的網域。這個頁面可以顯示簡單的 UI：「請稍候，正在重新導向至可讓您登入 *NAME-OF-PROVIDER* 的頁面。」 
 
 此頁面中的程式碼會使用傳遞至對話方塊的資訊 (如[將資訊傳遞至對話方塊](#passing-information-to-the-dialog-box)中所述)，以便建構識別提供者的登入頁面 URL。然後會重新導向至登入頁面。在此設計中，提供者的頁面不是對話方塊中所開啟的第一頁，因此不需要在增益集資訊清單的 `<AppDomains>` 區段中列出提供者的網域
 
@@ -386,6 +392,7 @@ Office.context.ui.displayDialogAsync('https://myAddinDomain/myDialog.html?client
 
 - [使用 Microsoft Graph 在 PowerPoint 增益集中插入 Excel 圖表](https://github.com/OfficeDev/PowerPoint-Add-in-Microsoft-Graph-ASPNET-InsertChart) - 在資料庫中儲存存取權杖。
 - [採用 ASP.NET 和 QuickBooks 的 Excel 增益集](https://github.com/OfficeDev/Excel-Add-in-ASPNET-QuickBooks) - 在 `messageParent` 中傳遞存取權杖。
+- [使用 OAuth.io 服務以簡化熱門線上服務存取權的 Office 增益集](https://github.com/OfficeDev/Office-Add-in-OAuth.io)
 
 #### <a name="more-information-about-authentication-and-authorization-in-add-ins"></a>如需增益集驗證和授權的詳細資訊
 

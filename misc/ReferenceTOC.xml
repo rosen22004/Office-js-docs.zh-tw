@@ -8,7 +8,7 @@
 		<Item text="CitationText" url="manifest/citationtext" SEODescription="指定此字典的引文重複使用文字。" />
 		<Item text="DefaultLocale" url="manifest/defaultlocale" SEODescription="指定增益集中字串使用之地區設定的預設文化特性名稱。" />
 		<Item text="DefaultSettings" url="manifest/defaultsettings" SEODescription="指定您的內容或工作窗格增益集的預設來源位置和其他的預設設定。" />
-		<Item text="說明" url="manifest/description" SEODescription="將您 Office 增益集的描述指定為不超過 250 個字元的字串。" />
+		<Item text="描述" url="manifest/description" SEODescription="將您 Office 增益集的描述指定為不超過 250 個字元的字串。" />
 		<Item text="DesktopSettings" url="manifest/desktopsettings" Scope="outlook" SEODescription="指定您的郵件增益集用在桌上型電腦時的來源位置和可套用的控制項設定。" />
 		<Item text="Dictionary" url="manifest/dictionary" Scope="excel, word, powerpoint, project" SEODescription="定義會套用至實作其他字典支援的工作窗格增益集設定。" />
 		<Item text="DictionaryHomePage" url="manifest/dictionaryhomepage" Scope="excel, word, powerpoint, project" SEODescription="指定字典首頁的 URL。" />
@@ -47,7 +47,7 @@
 			<Item text="控制項" url="manifest/control" SEODescription="指定使用者選取的按鈕或功能表時所執行的控制項。" />
 			<Item text="CustomTab" url="manifest/customtab" Scope="excel, word, powerpoint" SEODescription="指定增益集命令的索引標籤和群組。" />
 			<Item text="ExtensionPoint" url="manifest/extensionpoint" Scope="excel, word, powerpoint" SEODescription="定義增益集公開功能的位置。" />
-			<Item text="FormFactor" url="manifest/formfactor" Scope="excel, word, powerpoint" SEODescription="為指定外觀尺寸的增益集指定設定。" />
+			<Item text="DesktopFormFactor" url="manifest/desktopformfactor" Scope="excel, word, powerpoint" SEODescription="為指定外觀尺寸的增益集指定設定。" />
 			<Item text="FunctionFile" url="manifest/functionfile" Scope="excel, word, powerpoint" SEODescription="透過增益集命令為增益集所公開的作業指定原始程式碼檔，以執行 JavaScript 函式而非顯示 UI。" />
 			<Item text="GetStarted" url="manifest/getstarted" Scope="excel, word, powerpoint" SEODescription="提供在 Word、Excel 及 PowerPoint 主應用程式中安裝增益集時，顯示的圖說文字所使用的資訊。" />
 			<Item text="Group" url="manifest/group" Scope="excel, word, powerpoint" SEODescription="定義索引標籤中的一群使用者介面擴充點。" />
@@ -303,7 +303,7 @@
 	<Item text="共用 API" url="shared/shared-api">
 		<Item text="JavaScript API for Office" url="javascript-api-for-office" SEODescription="適用於 Office 的 JavaScript API 包括物件、方法、屬性、事件和列舉型別，您可以用於您的 Office 增益集程式碼中。" />
 		<Item text="適用於 Office 的 JavaScript API 中的變更項目" url="what's-changed-in-the-javascript-api-for-office" SEODescription="適用於 Office 的 JavaScript API 會定期以新的或更新的物件、方法、屬性、事件和列舉型別更新，來擴充您 Office 增益集的功能。" />
-		<Item text="Office 通用需求集合" url="requirement-sets/office-add-in-requirement-sets" SEODescription="需求集合是 API 成員的具名群組。Office 增益集使用資訊清單中所指定的需求集合，或使用執行階段檢查，以判定 Office 主應用程式是否支援增益集所需的的 API。" />
+		<Item text="Office 通用需求集合" url="requirement-sets/office-add-in-requirement-sets" SEODescription="需求集合是 API 成員的具名群組。Office 增益集使用資訊清單中所指定的需求集合，或使用執行階段檢查，以判定 Office 主應用程式是否支援增益集所需的 API。" />
 		<Item text="適用於 Office 的 JavaScript API 錯誤代碼" url="javascript-api-for-office-error-codes" SEODescription="您使用適用於 Office 的 JavaScript API (Office.js) 時可能遇到的錯誤訊息。" />
 		<Item text="列舉" url="shared/enumerations" FriendlyUrl="reference/enumerationsenumerations">
 			<Item text="ActiveView 列舉" url="shared/activeview-enumeration" FriendlyUrl="reference/enumerationsactiveview-enumeration" Scope="powerpoint" SEODescription="指定文件的使用中檢視狀態，例如使用者是否可以編輯文件。" />
@@ -474,7 +474,7 @@
 		</Item>
 		<Item text="Office" url="shared/office">
 			<Item text="cast.item" url="shared/office.cast.item" Scope="outlook" SEODescription="提供撰寫或讀取模式訊息和約會專用的 IntelliSense。" />
-			<Item text="初始化事件" url="shared/office.initialize" SEODescription="已載入執行階段環境，且增益集準備好開始與裝載它的文件互動時，就會發生" />
+			<Item text="初始化事件" url="shared/office.initialize" SEODescription="已載入執行階段環境，且增益集準備好開始與應用程式和裝載它的文件互動時，就會發生" />
 			<Item text="select" url="shared/office.select" FriendlyUrl="reference/common/officeoffice.select" SEODescription="選取裝載的文件。" />
 			<Item text="useShortNamespace" url="shared/office.useshortnamespace" FriendlyUrl="reference/common/officeoffice.useshortnamespace" SEODescription="切換完整的 Microsoft.Office.WebExtension 命名空間之 Office 別名的開和關。" />
 		</Item>

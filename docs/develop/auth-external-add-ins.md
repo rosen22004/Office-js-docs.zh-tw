@@ -35,10 +35,9 @@ OAuth 的基本概念是應用程式可以是本身的安全性主體，就像�
 
 許多程式庫可用於以不同語言和架構來實作授權程式碼流程。如需詳細資訊，請參閱本文稍後的**程式庫**章節。
 
-### <a name="relay/proxy-functions"></a>轉送/Proxy 函式
+### <a name="relayproxy-functions"></a>轉送/Proxy 函式
 
-您甚至可以搭配使用授權程式碼流程與無伺服器 Web 應用程式，方法是在簡單的函式中儲存*用戶端 ID*和*用戶端密碼*值，該函式裝載於如 [Azure Functions](https://azure.microsoft.com/en-us/services/functions) 或 [Amazon Lambda](https://aws.amazon.com/lambda) 的服務。
-函式交換適當*存取權杖*的指定程式碼，並將它轉送回用戶端。這種方法的安全性取決於函式存取權的受保護程度。
+您甚至可以搭配使用授權程式碼流程與無伺服器 Web 應用程式，方法是在簡單的函式中儲存*用戶端 ID*和*用戶端密碼*值，該函式裝載於如 [Azure Functions](https://azure.microsoft.com/en-us/services/functions) 或 [Amazon Lambda](https://aws.amazon.com/lambda) 的服務。函式交換適當*存取權杖*的指定程式碼，並將它轉送回用戶端。這種方法的安全性取決於函式存取權的受保護程度。
 
 若要使用這項技術，您的增益集會顯示 UI/快顯功能表，以顯示線上服務的登入畫面 (例如 Google、Facebook 等等)。當使用者登入，並授與增益集權限給她在線上服務的資源時，開發人員就會收到可以再傳送給線上函式的程式碼。本文中的 **Middleman 服務**中說明的服務使用類似這個的流程。 
 
@@ -56,12 +55,16 @@ OAuth 的基本概念是應用程式可以是本身的安全性主體，就像�
 
 ## <a name="middleman-services"></a>Middleman 服務
 
-您的增益集可以使用 middleman 服務，例如 Auth0，提供許多受歡迎線上服務的存取權杖，或是簡化啟用增益集的社交登入程序，或是兩者。使用極少的程式碼，增益集可以使用用戶端指令碼或伺服器端程式碼，以連接到 middleman，它會傳送回線上服務的任何必要權杖。所有的授權實作程式碼位於 middleman 服務。 
+您的增益集可以使用 middleman 服務，例如 OAuth.io 或 Auth0，提供許多受歡迎線上服務的存取權杖，或是簡化啟用增益集的社交登入程序，或是兩者。使用極少的程式碼，增益集可以使用用戶端指令碼或伺服器端程式碼，以連接到 middleman，它會傳送回線上服務的任何必要權杖。所有的授權實作程式碼位於 middleman 服務。 
 
 我們有一個範例，使用 Auth0 以啟用具有 Facebook、Google 和 Microsoft 帳戶的社交登入︰
 
 [Office-Add-in-Auth0](https://github.com/OfficeDev/Office-Add-in-Auth0)
 
-## <a name="what-is-cors?"></a>什麼是 CORS？
+我們有個使用 OAuth.io 取得來自 Facebook 及 Google 權杖的範例︰
+
+[Office-Add-in-OAuth.io](https://github.com/OfficeDev/Office-Add-in-OAuth.io)
+
+## <a name="what-is-cors"></a>什麼是 CORS？
 
 CORS 代表[跨原始來源資源共用](https://developer.mozilla.org/en-US/docs/Web/HTTP/Access_control_CORS)。如需有關如何使用增益集內的 CORS 的詳細資訊，請參閱[解決 Office 增益集中的相同原始來源原則的限制](http://dev.office.com/docs/add-ins/develop/addressing-same-origin-policy-limitations)。
