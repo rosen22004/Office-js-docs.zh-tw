@@ -10,7 +10,7 @@
 - 為增益集中的一些工作，提供更多的螢幕空間或甚至提供全螢幕。
 - 裝載受限於工作窗格而太小的影片。
 
->**附註：**由於重疊 UI 可能造成使用者困擾，所以避免從工作窗格開啟對話方塊，除非您的案例這麼要求。在考慮如何使用工作窗格的介面區時，請考慮工作窗格可以是索引標籤式窗格。如需範例，請參閱 [Excel 增益集 JavaScriptSalesTracker](https://github.com/OfficeDev/Excel-Add-in-JavaScript-SalesTracker) 範例。
+>**附註：**由於重疊 UI 可能造成使用者困擾，所以避免從工作窗格開啟對話方塊，除非您的案例這麼要求。當您在考慮如何使用工作窗格的介面區時，請注意工作窗格可以是索引標籤式窗格。如需範例，請參閱 [Excel 增益集 JavaScriptSalesTracker](https://github.com/OfficeDev/Excel-Add-in-JavaScript-SalesTracker) 範例。
 
 下圖顯示對話方塊的範例。 
 
@@ -24,7 +24,7 @@ Office JavaScript API 以一個 [Dialog](../../reference/shared/officeui.dialog.
 
 ### <a name="opening-a-dialog-box"></a>開啟對話方塊
 
-若要開啟對話方塊，您在工作窗格中的程式碼會呼叫 [displayDialogAsync](../../reference/shared/officeui.displaydialogasync.md) 方法，並將應該開啟的頁面 URL 傳遞給它。以下是簡單的範例。
+若要開啟對話方塊，您在工作窗格中的程式碼會呼叫 [displayDialogAsync](../../reference/shared/officeui.displaydialogasync.md) 方法，並將應該開啟的資源 URL 傳遞給它。這通常是網頁，但它可能是 MVC 應用程式中的控制站方法、路由、Web 服務方法或任何其他資源。在本文中，「網頁」或「網站」是指對話方塊中的資源。以下是簡單的範例。
 
 ```js
 Office.context.ui.displayDialogAsync('https://myAddinDomain/myDialog.html'); 
@@ -33,9 +33,9 @@ Office.context.ui.displayDialogAsync('https://myAddinDomain/myDialog.html');
 > **附註：**
 
 > - 此 URL 會使用 HTTP**S** 通訊協定。對於在一個對話方塊中載入的所有頁面 (而不只是所載入的第一頁)，這是必要的。
-> - 此網域與主頁面的網域相同，可以是工作窗格中的頁面或增益集命令的[函式檔案](https://dev.office.com/reference/add-ins/manifest/functionfile)。對於在對話方塊中載入的第一頁而言，這並費必要，但如果第一頁不在您增益集的相同網域中，您必須在增益集資訊清單的 [`<AppDomains>`](../../reference/manifest/appdomains.md) 元素中列出該網域。
+> - 此網域與主頁面的網域相同，可以是工作窗格中的頁面或增益集命令的[函式檔案](https://dev.office.com/reference/add-ins/manifest/functionfile)。這是必要的︰傳遞至 `displayDialogAsync` 方法的網頁、控制站方法或其他資源必須與裝載網頁在相同的網域。 
 
-載入第一頁之後，使用者可以前往使用 HTTPS 的任何網站。您也可以將第一頁設計成立即重新導向至另一個網站。 
+載入第一頁 (或其他資源) 之後，使用者可以前往使用 HTTPS 的任何網站 (或其他資源)。您也可以將第一頁設計成立即重新導向至另一個網站。 
 
 根據預設，對話方塊將會佔裝置畫面高度和寬度的 80%，但是您可以將設定物件傳遞至此方法以設定不同的百分比，如下列範例所示。
 
@@ -48,6 +48,20 @@ Office.context.ui.displayDialogAsync('https://myDomain/myDialog.html', {height: 
 將兩個值設為 100%，可取得實際的全螢幕經驗。(有效上限為 99.5%，而視窗仍可移動並可調整大小。)
 
 >**附註：**只可以從主應用程式視窗開啟一個對話方塊。嘗試開啟另一個對話方塊會產生錯誤。(如需詳細資訊，請參閱[來自 displayDialogAsync 的錯誤](#errors-from-displaydialogAsync)。)因此，如果使用者從工作窗格開啟一個對話方塊，便無法從工作窗格中的不同頁面開啟第二個對話方塊。不過，若從[增益集命令](https://dev.office.com/docs/add-ins/design/add-in-commands)開啟對話方塊，此命令會在每次選取時開啟新的 (但看不見的) HTML 檔案。這會建立新的 (看不見的) 主視窗，因此每個這類視窗都可以啟動自己的對話方塊。 
+
+### <a name="take-advantage-of-a-performance-option-in-office-online"></a>善用 Office Online 中的效能選項
+
+`displayInIframe` 屬性是組態物件中的額外屬性，您可以將它傳遞至 `displayDialogAsync`。當這個屬性設為 `true` 且增益集在 Office Online 中開啟的文件執行時，對話方塊會以浮動 iframe 而不是獨立的視窗開啟，讓它可以更快速開啟。以下為範例。
+
+```js
+Office.context.ui.displayDialogAsync('https://myDomain/myDialog.html', {height: 30, width: 20, displayInIframe; true}); 
+```
+
+預設值是 `false`，也就是與完全省略屬性相同。
+
+如果增益集不是在 Office Online 中執行，會忽略 `displayInIframe`，但其存在也無礙。
+
+> **附註：**如果對話方塊會在任何時間重新導向至無法在 iframe 中開啟的網頁，則您***不***應該使用`displayInIframe: true`。例如，許多常用 Web 服務的登入網頁 (例如 Google 和 Microsoft 帳戶) 無法在 iframe 中開啟。 
 
 ### <a name="sending-information-from-the-dialog-box-to-the-host-page"></a>將對話方塊中的資訊傳送到主頁面
 
@@ -217,7 +231,7 @@ function processMessage(arg) {
 
 |代碼編號|意義|
 |:-----|:-----|
-|12004|傳遞至 `displayDialogAsync` 的 URL 網域不受信任。此網域必須與主頁面 (包括通訊協定和連接埠號碼) 的網域相同，**或**必須已在增益集資訊清單的 `<AppDomains>` 區段中登錄。|
+|12004|傳遞至 `displayDialogAsync` 的 URL 網域不受信任。網域必須與主機頁面 (包括通訊協定和連接埠號碼) 的網域相同。|
 |12005|傳送至 `displayDialogAsync` 的 URL 使用 HTTP 通訊協定。HTTPS 為必填。(部分 Office 版本中，傳回的 12005 錯誤訊息與傳回的 12004 錯誤相同。)|
 |12007|已經從這個主視窗開啟對話方塊。主視窗 (如工作窗格) 一次只能開啟一個對話方塊。|
 
@@ -267,8 +281,7 @@ function processDialogEvent(arg) {
             showNotification("The dialog box has been directed to a page that it cannot find or load, or the URL syntax is invalid.");
             break;
         case 12003:
-            showNotification("The dialog box has been directed to a URL with the HTTP protocol. HTTPS is required.");
-            break;
+            showNotification("The dialog box has been directed to a URL with the HTTP protocol. HTTPS is required.");            break;
         case 12006:
             showNotification("Dialog closed.");
             break;
@@ -281,7 +294,7 @@ function processDialogEvent(arg) {
 
 如需以此方式處理錯誤的範例增益集，請參閱 [Office 增益集對話方塊 API 範例](https://github.com/OfficeDev/Office-Add-in-Dialog-API-Simple-Example)。
 
-  
+ 
 ## <a name="passing-information-to-the-dialog-box"></a>將資訊傳遞至對話方塊
 
 主頁面有時候必須將資訊傳送至對話方塊。主要有兩個方法可以這麼做：
@@ -322,7 +335,7 @@ Office.context.ui.displayDialogAsync('https://myAddinDomain/myDialog.html?client
 
 對話視窗中的程式碼可以剖析 URL 並讀取參數值。
 
->**附註：**Office 會自動將名為 `_host_info` 的查詢參數新增至已傳遞給 `displayDialogAsync` 的 URL。(它會附加在您的自訂查詢參數之後 (如果有的話)。但不會附加到對話方塊所瀏覽的任何後續 URL。)Microsoft 未來可能會變更此值的內容，或完全予以移除，因此您的程式碼應該不會讀取它。系統會將相同的值新增至對話方塊的工作階段儲存體。同樣地，*您的程式碼應該不會讀取也不會寫入這個值*。
+ 會自動將名為 `_host_info` 的查詢參數新增至已傳遞給 `displayDialogAsync` 的 URL。(它會附加在您的自訂查詢參數之後 (如果有的話)。但不會附加到對話方塊所瀏覽的任何後續 URL。)Microsoft 未來可能會變更此值的內容，或完全予以移除，因此您的程式碼應該不會讀取它。系統會將相同的值新增至對話方塊的工作階段儲存體。同樣地，您的程式碼應該不會讀取也不會寫入這個值。*&nbsp*
 
 ## <a name="using-the-dialog-apis-to-show-a-video"></a>使用對話方塊 API 顯示影片
 
@@ -335,8 +348,7 @@ Office.context.ui.displayDialogAsync('https://myAddinDomain/myDialog.html?client
             frameborder="0" allowfullscreen>
         </iframe>
 
-2.  video.dialogbox.html 頁面必須位於與主頁面相同的網域中，
-3.   或位於已在增益集資訊清單的 `<AppDomains>` 區段中註冊的網域。
+2.  video.dialogbox.html 頁面必須位於與主頁面相同的網域中。
 3.  在主頁面中使用 `displayDialogAsync` 呼叫，以開啟 video.dialogbox.html。
 4.  如果增益集必須知道使用者何時關閉對話方塊，請註冊 `DialogEventReceived` 事件的處理常式並處理 12006 事件。如需詳細資訊，請參閱[對話視窗中的錯誤和事件](#errors-and-events-in-the-dialog-window)一節。
 
@@ -346,27 +358,22 @@ Office.context.ui.displayDialogAsync('https://myAddinDomain/myDialog.html?client
 
 ## <a name="using-the-dialog-apis-in-an-authentication-flow"></a>在驗證流程中使用對話方塊 API
 
-「對話方塊 API」的主要案例是要能夠向不允許在 iframe 中開啟其登入頁面的資源或識別提供者 (例如 Microsoft 帳戶、Office 365、Google 和 Facebook) 進行驗證。以下是簡單和典型的驗證流量︰
+「對話方塊 API」的主要案例是要能夠向不允許在 iframe 中開啟其登入頁面的資源或識別提供者 (例如 Microsoft 帳戶、Office 365、Google 和 Facebook) 進行驗證。 
 
-1. 使用者在主頁面上選取要登入的 UI 元素。此元素的處理常式會呼叫 `displayDialogAsync`，並傳遞識別提供者的登入頁面 URL。因為這是在對話方塊中開啟的第一頁，而且沒有與主視窗相同的網域，所以其網域必須列在增益集資訊清單的 `<AppDomains>` 區段中。**此 URL 包含一個查詢參數，可告訴識別提供者在使用者登入特定頁面後重新導向對話視窗。在本文中，我們將此頁面稱為 "redirectPage.html"。(*這必須是與主視窗位於相同網域的頁面*，因為對話視窗傳遞登入嘗試結果的唯一方法就是呼叫 `messageParent`，但只能在與主視窗位於相同網域的頁面上呼叫。) 
+>**附註：**當您在此情況下使用「對話方塊 API」時，*不要*在呼叫中使用 `displayInIframe: true` 選項來 `displayDialogAsync`。請參閱本文稍早關於此選項的詳細資訊。 
+
+以下是簡單和典型的驗證流量。 
+
+1. 對話方塊中所開啟的第一頁是增益集的網域中所裝載的本機頁面 (或其他資源)；也就是主視窗的網域。這個頁面可以顯示簡單的 UI：「請稍候，正在重新導向至可讓您登入 *NAME-OF-PROVIDER* 的頁面。」此頁面中的程式碼會使用傳遞至對話方塊的資訊 (如[將資訊傳遞至對話方塊](#passing-information-to-the-dialog-box)中所述)，以便建構識別提供者的登入頁面 URL。 
+2. 然後對話方塊視窗會重新導向至登入頁面。此 URL 包含一個查詢參數，可告訴識別提供者在使用者登入特定頁面後重新導向對話視窗。在本文中，我們將此頁面稱為 "redirectPage.html"。(*這必須是與主視窗位於相同網域的頁面*，因為對話視窗傳遞登入嘗試結果的唯一方法就是呼叫 `messageParent`，但只能在與主視窗位於相同網域的頁面上呼叫。) 
 2. 識別提供者的服務會處理從對話視窗傳入的 GET 要求。如果使用者已經登入，它會立即將視窗重新導向至 redirectPage.html，並將使用者資料納入為查詢參數。如果使用者尚未登入，則提供者的登入頁面會出現在視窗中，使用者即可登入。對於大部分的提供者而言，如果使用者無法成功，則提供者會在對話視窗中顯示錯誤頁面，而且不會重新導向至 redirectPage.html。使用者必須選取角落的 **X** 來關閉視窗。如果使用者順利登入，則對話視窗會重新導向至 redirectPage.html，而且使用者資料會納入為查詢參數。
 3. 當 redirectPage.html 頁面開啟時，它會呼叫 `messageParent` 向主頁面報告成功或失敗，並選擇性地報告使用者資料或錯誤資料。 
 4. `DialogMessageReceived` 事件會在主頁面中觸發，而其處理常式會關閉對話視窗，並選擇性地進行其他訊息處理。 
 
-如需使用此模式的範例增益集，請參閱[採用 ASP.NET 和 QuickBooks 的 Excel 增益集](https://github.com/OfficeDev/Excel-Add-in-ASPNET-QuickBooks)
-
-### <a name="alternate-authentication-and-authorization-scenarios"></a>替代的驗證和授權案例
-
-#### <a name="addressing-slow-network"></a>處理慢速網路
-
-如果網路或識別提供者的速度緩慢，則當使用者選取 UI 元素以開啟對話方塊時，對話方塊可能不會立即開啟。這可能會讓人以為毫無動靜。為了確保擁有更佳的體驗，請讓對話方塊中所開啟的第一頁成為增益集的網域中所裝載的本機頁面；也就是主視窗的網域。這個頁面可以顯示簡單的 UI：「請稍候，正在重新導向至可讓您登入 *NAME-OF-PROVIDER* 的頁面。」 
-
-此頁面中的程式碼會使用傳遞至對話方塊的資訊 (如[將資訊傳遞至對話方塊](#passing-information-to-the-dialog-box)中所述)，以便建構識別提供者的登入頁面 URL。然後會重新導向至登入頁面。在此設計中，提供者的頁面不是對話方塊中所開啟的第一頁，因此不需要在增益集資訊清單的 `<AppDomains>` 區段中列出提供者的網域
-
 如需使用此模式的範例增益集，請參閱︰
 
-- [使用 Microsoft Graph 在 PowerPoint 增益集中插入 Excel 圖表](https://github.com/OfficeDev/PowerPoint-Add-in-Microsoft-Graph-ASPNET-InsertChart)
-- [適用於 AngularJS 的 Office 增益集 Office 365 用戶端驗證](https://github.com/OfficeDev/Word-Add-in-AngularJS-Client-OAuth)。
+- [使用 Microsoft Graph 在 PowerPoint 增益集中插入 Excel 圖表](https://github.com/OfficeDev/PowerPoint-Add-in-Microsoft-Graph-ASPNET-InsertChart)：一開始在對話方塊視窗中開啟的資源是控制站方法，沒有其本身的任何檢視。會重新導向至 Office 365 登入頁面。
+- [適用於 AngularJS 的 Office 增益集 Office 365 用戶端驗證](https://github.com/OfficeDev/Word-Add-in-AngularJS-Client-OAuth)：一開始在對話方塊視窗中開啟的資源是網頁。 
 
 #### <a name="supporting-multiple-identity-providers"></a>支援多個識別提供者
 
@@ -391,7 +398,6 @@ Office.context.ui.displayDialogAsync('https://myAddinDomain/myDialog.html?client
 下列範例將「對話方塊 API」用於以下目的︰
 
 - [使用 Microsoft Graph 在 PowerPoint 增益集中插入 Excel 圖表](https://github.com/OfficeDev/PowerPoint-Add-in-Microsoft-Graph-ASPNET-InsertChart) - 在資料庫中儲存存取權杖。
-- [採用 ASP.NET 和 QuickBooks 的 Excel 增益集](https://github.com/OfficeDev/Excel-Add-in-ASPNET-QuickBooks) - 在 `messageParent` 中傳遞存取權杖。
 - [使用 OAuth.io 服務以簡化熱門線上服務存取權的 Office 增益集](https://github.com/OfficeDev/Office-Add-in-OAuth.io)
 
 #### <a name="more-information-about-authentication-and-authorization-in-add-ins"></a>如需增益集驗證和授權的詳細資訊

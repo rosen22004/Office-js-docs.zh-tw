@@ -1,4 +1,4 @@
-# <a name="richtext-object-(javascript-api-for-onenote)"></a>RichText 物件 (適用於 OneNote 的 JavaScript API)
+# <a name="richtext-object-javascript-api-for-onenote"></a>RichText 物件 (適用於 OneNote 的 JavaScript API)
 
 _適用於：OneNote Online_  
 
@@ -9,8 +9,9 @@ _適用於：OneNote Online_
 
 | 屬性	     | 類型	   |描述|意見反應|
 |:---------------|:--------|:----------|:-------|
-|id|字串|取得 RichText 物件的識別碼。唯讀。|[移至](https://github.com/OfficeDev/office-js-docs/issues/new?title=OneNote-richText-id)|
-|text|string|取得 RichText 物件的文字內容。唯讀。|[移至](https://github.com/OfficeDev/office-js-docs/issues/new?title=OneNote-richText-text)|
+|id|string|取得 RichText 物件的識別碼。唯讀。|[移至](https://github.com/OfficeDev/office-js-docs/issues/new?title=OneNote-richText-id)|
+|languageId|string|文字的語言識別碼。唯讀。|[移至](https://github.com/OfficeDev/office-js-docs/issues/new?title=OneNote-richText-languageId)|
+|text|字串|取得 RichText 物件的文字內容。唯讀。|[移至](https://github.com/OfficeDev/office-js-docs/issues/new?title=OneNote-richText-text)|
 
 _請參閱屬性存取[範例。](#property-access-examples)_
 
@@ -23,12 +24,27 @@ _請參閱屬性存取[範例。](#property-access-examples)_
 
 | 方法           | 傳回類型    |描述| 意見反應|
 |:---------------|:--------|:----------|:-------|
+|[getHtml()](#gethtml)|string|取得 RTF 文字的 HTML|[移至](https://github.com/OfficeDev/office-js-docs/issues/new?title=OneNote-richText-getHtml)|
 |[load(param: object)](#loadparam-object)|void|以參數中指定的屬性和物件值填滿 JavaScript 層中建立的 Proxy 物件。|[移至](https://github.com/OfficeDev/office-js-docs/issues/new?title=OneNote-richText-load)|
 
 ## <a name="method-details"></a>方法詳細資料
 
 
-### <a name="load(param:-object)"></a>load(param: object)
+### <a name="gethtml"></a>getHtml()
+取得 RTF 文字的 HTML
+
+#### <a name="syntax"></a>語法
+```js
+richTextObject.getHtml();
+```
+
+#### <a name="parameters"></a>參數
+無
+
+#### <a name="returns"></a>傳回
+string
+
+### <a name="loadparam-object"></a>load(param: object)
 以參數中指定的屬性和物件值填滿 JavaScript 層中建立的 Proxy 物件。
 
 #### <a name="syntax"></a>語法
@@ -37,7 +53,7 @@ object.load(param);
 ```
 
 #### <a name="parameters"></a>參數
-| 參數	    | 類型	   |描述|
+| 參數	    | 類型   |描述|
 |:---------------|:--------|:----------|
 |param|物件|選用。接受參數與關聯性名稱，做為分隔字串或陣列。或者提供 [loadOption](loadoption.md) 物件。|
 

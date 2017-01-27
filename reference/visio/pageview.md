@@ -1,7 +1,7 @@
 # <a name="pageview-object-javascript-api-for-visio"></a>PageView 物件 (適用於 Visio 的 JavaScript API)
 
 適用於：_Visio Online_
->**附註：**Visio JavaScript API 目前是預覽模式，可能有所異動。Visio JavaScript API 目前不支援在生產環境中使用。
+>**附註：**Visio JavaScript API 目前在預覽或生產環境中不提供使用。
 
 代表 PageView 類別。
 
@@ -36,7 +36,7 @@ pageViewObject.centerViewportOnShape(ShapeId);
 ```
 
 #### <a name="parameters"></a>參數
-| 參數	    | 類型	   |描述|
+| 參數	    | 類型   |描述|
 |:---------------|:--------|:----------|:---|
 |ShapeId|數字|顯示在畫面中間的 ShapeId。|
 
@@ -82,7 +82,7 @@ pageViewObject.isShapeInViewport(Shape);
 ```
 
 #### <a name="parameters"></a>參數
-| 參數	    | 類型	   |描述|
+| 參數	    | 類型   |描述|
 |:---------------|:--------|:----------|:---|
 |Shape|Shape|要檢查的圖形。|
 
@@ -98,7 +98,7 @@ object.load(param);
 ```
 
 #### <a name="parameters"></a>參數
-| 參數	    | 類型	   |描述|
+| 參數	    | 類型   |描述|
 |:---------------|:--------|:----------|:---|
 |param|物件|選用。接受參數與關聯性名稱，做為分隔字串或陣列。或者提供 [loadOption](loadoption.md) 物件。|
 
@@ -106,7 +106,7 @@ object.load(param);
 無效
 
 #### <a name="parameters"></a>參數
-| 參數	    | 類型	   |描述|
+| 參數	    | 類型   |描述|
 |:---------------|:--------|:----------|:---|
 |位置|位置|位置物件，在檢視內指定頁面的新位置。|
 

@@ -1,7 +1,7 @@
-﻿# <a name="shape-object-javascript-api-for-visio"></a>圖形物件 (適用於 Visio 的 JavaScript API)
+# <a name="shape-object-javascript-api-for-visio"></a>圖形物件 (適用於 Visio 的 JavaScript API)
 
 適用於：_Visio Online_
->**附註：**Visio JavaScript API 目前是預覽模式，可能有所異動。Visio JavaScript API 目前不支援在生產環境中使用。
+>**附註：**Visio JavaScript API 目前在預覽或生產環境中不提供使用。
 
 代表圖形類別。
 
@@ -9,7 +9,7 @@
 
 | 屬性	     | 類型	   |描述| 意見反應|
 |:---------------|:--------|:----------|:---|
-|id|Int|圖形的識別碼。唯讀。|[移至](https://github.com/OfficeDev/office-js-docs/issues/new?title=Visio-shape-id)|
+|id|int|圖形的識別碼。唯讀。|[移至](https://github.com/OfficeDev/office-js-docs/issues/new?title=Visio-shape-id)|
 |name|string|圖形的名稱。唯讀。|[移至](https://github.com/OfficeDev/office-js-docs/issues/new?title=Visio-shape-name)|
 |選取|bool|如圖形已選取，則傳回 True。使用者可以設定 True 以明確選取圖形。|[移至](https://github.com/OfficeDev/office-js-docs/issues/new?title=Visio-shape-select)|
 |text|string|圖形的文字。唯讀。|[移至](https://github.com/OfficeDev/office-js-docs/issues/new?title=Visio-shape-text)|
@@ -41,7 +41,7 @@ object.load(param);
 ```
 
 #### <a name="parameters"></a>參數
-| 參數	    | 類型	   |描述|
+| 參數	    | 類型   |描述|
 |:---------------|:--------|:----------|:---|
 |param|物件|選用。接受參數與關聯性名稱，做為分隔字串或陣列。或者提供 [loadOption](loadoption.md) 物件。|
 

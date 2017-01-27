@@ -1,7 +1,7 @@
 # <a name="hyperlinkcollection-object-javascript-api-for-visio"></a>HyperlinkCollection 物件 (適用於 Visio 的 JavaScript API)
 
 適用於：_Visio Online_
->**附註：**Visio JavaScript API 目前是預覽模式，可能有所異動。Visio JavaScript API 目前不支援在生產環境中使用。
+>**附註：**Visio JavaScript API 目前在預覽或生產環境中不提供使用。
 
 代表超連結集合。
 
@@ -51,7 +51,7 @@ hyperlinkCollectionObject.getItem(Key);
 ```
 
 #### <a name="parameters"></a>參數
-| 參數	    | 類型	   |描述|
+| 參數	    | 類型   |描述|
 |:---------------|:--------|:----------|:---|
 |機碼|number 或 string|機碼是要擷取之超連結的名稱或索引。|
 
@@ -67,7 +67,7 @@ object.load(param);
 ```
 
 #### <a name="parameters"></a>參數
-| 參數	    | 類型	   |描述|
+| 參數	    | 類型   |描述|
 |:---------------|:--------|:----------|:---|
 |param|物件|選用。接受參數與關聯性名稱，做為分隔字串或陣列。或者提供 [loadOption](loadoption.md) 物件。|
 

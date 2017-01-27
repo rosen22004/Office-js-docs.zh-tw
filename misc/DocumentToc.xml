@@ -4,6 +4,7 @@
     <Item text="平台概觀" url="overview/office-add-ins" SEODescription="深入了解 Office 增益集，可讓您的解決方案成為 Office 原生的一部分，跨越 Windows、Office Online、Mac 和 iPad。" />
 	<Item text="執行增益集的需求" url="overview/requirements-for-running-office-add-ins" SEODescription="深入了解執行 Office 增益集的軟體及裝置需求。" />	
 	<Item text="增益集開發的最佳作法" url="overview/add-in-development-best-practices" SEODescription="套用最佳作法來建置最佳化使用者經驗的 Office 增益集。" />
+	<Item text="主應用程式和平台可用性" url="https://dev.office.com/add-in-availability" IsExternal="true" />
 	</Item>
   <Item text="開始使用" url="get-started">
     <Item text="使用 Visual Studio" url="get-started/create-and-debug-office-add-ins-in-visual-studio" SEODescription="開始使用 Visual Studio 建置 Office 增益集" />
@@ -148,5 +149,5 @@
   <Item text="Access" url="access" Scope="access">
     <Item text="Access Web App 增益集" url="access/access-web-app-add-ins" SEOKeyword="Access 增益集" SEODescription="建立具有自訂 HTML 和 JavaScript 的延伸 Access Web App 的 Office 增益集。" Scope="access" />
   </Item>
-
+<Item text="JavaScript API 參照" url="https://dev.office.com/reference/add-ins/javascript-api-for-office" IsExternal="true" />
 </Menu>

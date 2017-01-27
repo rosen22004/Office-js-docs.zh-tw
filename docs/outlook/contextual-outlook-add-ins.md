@@ -14,6 +14,8 @@
     
 目前，關聯式增益集僅限於 Outlook Web App。
 
+>**附註：**關聯式增益集不支援增益集命令。
+
 ## <a name="how-to-make-a-contextual-add-in"></a>如何製作關聯式增益集
 
 若要製作關聯式增益集，其增益集資訊清單必須指定可啟動它的實體或規則運算式。實體可以是 [Entities](../../reference/outlook/simple-types.md) 物件中的任何屬性。因此，增益集資訊清單必須包含 **ItemHasKnownEntity** 或 **ItemHasRegularExpressionMatch**類型的規則。下列範例顯示如何指定電話號碼的實體︰

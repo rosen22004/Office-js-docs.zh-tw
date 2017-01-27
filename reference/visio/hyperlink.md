@@ -1,7 +1,7 @@
-﻿# <a name="hyperlink-object-javascript-api-for-visio"></a>超連結物件 (適用於 Visio 的 JavaScript API)
+# <a name="hyperlink-object-javascript-api-for-visio"></a>超連結物件 (適用於 Visio 的 JavaScript API)
 
 適用於：_Visio Online_
->**附註：**Visio JavaScript API 目前是預覽模式，可能有所異動。Visio JavaScript API 目前不支援在生產環境中使用。
+>**附註：**Visio JavaScript API 目前在預覽或生產環境中不提供使用。
 
 代表超連結。
 
@@ -9,9 +9,9 @@
 
 | 屬性	     | 類型	   |描述| 意見反應|
 |:---------------|:--------|:----------|:---|
-|地址|string|取得超連結物件的位址。唯讀。|[移至](https://github.com/OfficeDev/office-js-docs/issues/new?title=Visio-hyperlink-address)|
+|地址|字串|取得超連結物件的位址。唯讀。|[移至](https://github.com/OfficeDev/office-js-docs/issues/new?title=Visio-hyperlink-address)|
 |Description|string|取得超連結的描述。唯讀。|[移至](https://github.com/OfficeDev/office-js-docs/issues/new?title=Visio-hyperlink-description)|
-|subAddress|string|取得超連結物件的子位址。唯讀。|[移至](https://github.com/OfficeDev/office-js-docs/issues/new?title=Visio-hyperlink-subAddress)|
+|subAddress|字串|取得超連結物件的子位址。唯讀。|[移至](https://github.com/OfficeDev/office-js-docs/issues/new?title=Visio-hyperlink-subAddress)|
 
 _請參閱屬性存取[範例。](#property-access-examples)_
 
@@ -37,7 +37,7 @@ object.load(param);
 ```
 
 #### <a name="parameters"></a>參數
-| 參數	    | 類型	   |描述|
+| 參數	    | 類型   |描述|
 |:---------------|:--------|:----------|:---|
 |param|物件|選用。接受參數與關聯性名稱，做為分隔字串或陣列。或者提供 [loadOption](loadoption.md) 物件。|
 
