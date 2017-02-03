@@ -9,17 +9,17 @@
 |Word、Excel、PowerPoint|1.1|1.1|
 |Outlook|信箱 1.4|信箱 1.4|
 
-此方法只有在 Word、Excel 或 PowerPoint 增益集的 DialogAPI [需求集](../../docs/overview/specify-office-hosts-and-api-requirements.md)，以及在 Outlook 信箱需求集 1.4 中才可用。若要指定 DialogAPI 需求集，請使用資訊清單中的下列項目。
+此方法只有在 Word、Excel 或 PowerPoint 增益集的 DialogAPI [需求集合](../../docs/overview/specify-office-hosts-and-api-requirements.md)，以及在 Outlook 信箱需求集合 1.4 中才可用。若要指定 DialogAPI 需求集合，請使用資訊清單中的下列項目。
 
 ```xml
 <Requirements> 
   <Sets DefaultMinVersion="1.1"> 
-    <Set Name="DialogAPI"/> 
+    <Set Name="DialogApi"/> 
   </Sets> 
 </Requirements> 
 ```
 
-若要指定信箱 1.4 需求集，請使用資訊清單中的下列項目。
+若要指定信箱 1.4 需求集合，請使用資訊清單中的下列項目。
 
 ```xml
 <Requirements> 
@@ -32,7 +32,7 @@
 若要在 Word、Excel 或 PowerPoint 增益集中的執行階段偵測這個 API，請使用下列程式碼。
 
 ```js
-if (Office.context.requirements.isSetSupported('DialogAPI', 1.1)) {  
+if (Office.context.requirements.isSetSupported('DialogApi', 1.1)) {  
   // Use Office UI methods; 
 } else { 
   // Alternate path 

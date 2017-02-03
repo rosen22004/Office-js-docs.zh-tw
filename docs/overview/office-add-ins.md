@@ -12,7 +12,7 @@ Office 增益集使用 HTML、CSS 及 JavaScript 之類的 web 技術，讓您�
     
 **Office 增益集可在多種 Office 版本上執行**包含 Office for Windows Desktop、Office Online、Mac 版 Office 以及 iPad 版 Office。
 
->**附註：**建立增益集時，如果您打算[發佈](../publish/publish.md)增益集至 Office 市集中，請確定您符合 [Office 市集驗證原則](https://msdn.microsoft.com/en-us/library/jj220035.aspx)。例如，若要通過驗證，增益集必須可以在所有支援您定義的方法的平台上運作 (如需詳細資料，請參閱 [4.12 節](https://msdn.microsoft.com/en-us/library/jj220035.aspx#Anchor_3)與 [Office 增益集主應用程式與可用性頁面](https://dev.office.com/add-in-availability))。
+>**附註：**建立增益集時，如果您打算[發佈](../publish/publish.md)增益集至 Office 市集中，請確定您符合 [Office 市集驗證原則 ](https://msdn.microsoft.com/en-us/library/jj220035.aspx)。例如，若要通過驗證，增益集**必須可以在所有支援您定義的方法的平台上運作** (如需詳細資料，請參閱 [4.12 節](https://msdn.microsoft.com/en-us/library/jj220035.aspx#Anchor_3)與 [Office 增益集主應用程式與可用性頁面 ](https://dev.office.com/add-in-availability))。
 
 
 如需目前 Office 增益集受支援所在的高階檢視，請參閱 [Office 增益集主應用程式和平台可用性](http://dev.office.com/add-in-availability)頁面。 

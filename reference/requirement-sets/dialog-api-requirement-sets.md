@@ -7,16 +7,19 @@ Office 增益集執行多個版本的 Office。下表列出對話方塊 API 需�
 
 |  需求集合  |  Office 2013 for Windows | Office 2016 for Windows*   |  Office 2016 for iPad  |  Mac 版 Office 2016  | Office Online  |  Office Online 伺服器  |
 |:-----|-----|:-----|:-----|:-----|:-----|:-----|
-| DialogApi 1.1  | 組建 15.0.4855.1000 或更新版本 | 版本 1602 (組建 6741.0000) 或更新版本 | 1.22 或更新版本 | 15.20 或更新版本| 我們正在完成它。 | 版本 1608 (組建 7601.6800) 或更新版本|
+| DialogApi 1.1  | 組建 15.0.4855.1000 或更新版本 | 版本 1602 (組建 6741.0000) 或更新版本 | 1.22 或更新版本 | 15.20 或更新版本| 2017 年 1 月 | 版本 1608 (組建 7601.6800) 或更新版本|
 
 >**附註：**透過 MSI 安裝的 Office 2016 組建編號是 16.0.4266.1001。若要使用對話方塊 API，請執行 Office 更新以取得最新版本。 
 
 若要瞭解關於版本、組建編號及 Office Online Server 的詳細資訊，請參閱︰
 
-- [Office 365 用戶端的更新通道版本和組建編號](https://technet.microsoft.com/en-us/library/mt592918.aspx)
+- 
+  [Office 365 用戶端的更新通道版本和組建編號](https://technet.microsoft.com/en-us/library/mt592918.aspx)
 - [我使用的是哪個版本的 Office？](https://support.office.com/en-us/article/What-version-of-Office-am-I-using-932788b8-a3ce-44bf-bb09-e334518b8b19?ui=en-US&rs=en-US&ad=US&fromAR=1)
-- [您可以在其中找到 Office 365 用戶端應用程式的版本和組建編號](https://technet.microsoft.com/en-us/library/mt592918.aspx#Anchor_1)
-- [Office Online Server 概觀](https://technet.microsoft.com/en-us/library/jj219437(v=office.16).aspx)
+- 
+  [您可以在其中找到 Office 365 用戶端應用程式的版本和組建編號](https://technet.microsoft.com/en-us/library/mt592918.aspx#Anchor_1)
+- 
+  [Office Online Server 概觀](https://technet.microsoft.com/en-us/library/jj219437(v=office.16).aspx)
 
 ## <a name="office-common-api-requirement-sets"></a>Office 通用 API 需求集合
 如需通用 API 需求集合的詳細資訊，請參閱 [Office 通用 API 需求集合](office-add-in-requirement-sets.md)。

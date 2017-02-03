@@ -54,7 +54,7 @@ Office.context.ui.displayDialogAsync('https://myDomain/myDialog.html', {height: 
 `displayInIframe` 屬性是組態物件中的額外屬性，您可以將它傳遞至 `displayDialogAsync`。當這個屬性設為 `true` 且增益集在 Office Online 中開啟的文件執行時，對話方塊會以浮動 iframe 而不是獨立的視窗開啟，讓它可以更快速開啟。以下為範例。
 
 ```js
-Office.context.ui.displayDialogAsync('https://myDomain/myDialog.html', {height: 30, width: 20, displayInIframe; true}); 
+Office.context.ui.displayDialogAsync('https://myDomain/myDialog.html', {height: 30, width: 20, displayInIframe: true}); 
 ```
 
 預設值是 `false`，也就是與完全省略屬性相同。
@@ -331,11 +331,11 @@ var clientID = localStorage.getItem("clientID");
 Office.context.ui.displayDialogAsync('https://myAddinDomain/myDialog.html?clientID=15963ac5-314f-4d9b-b5a1-ccb2f1aea248'); 
 ```
 
-如需使用此技術的範例，請參閱[使用 Microsoft Graph 在 PowerPoint 增益集中插入 Excel 圖表](https://github.com/OfficeDev/PowerPoint-Add-in-Microsoft-Graph-ASPNET-InsertChart)。
+如需使用此技術的範例，請參閱[透過 PowerPoint 增益集使用 Microsoft Graph 插入 Excel 圖表](https://github.com/OfficeDev/PowerPoint-Add-in-Microsoft-Graph-ASPNET-InsertChart)。
 
 對話視窗中的程式碼可以剖析 URL 並讀取參數值。
 
- 會自動將名為 `_host_info` 的查詢參數新增至已傳遞給 `displayDialogAsync` 的 URL。(它會附加在您的自訂查詢參數之後 (如果有的話)。但不會附加到對話方塊所瀏覽的任何後續 URL。)Microsoft 未來可能會變更此值的內容，或完全予以移除，因此您的程式碼應該不會讀取它。系統會將相同的值新增至對話方塊的工作階段儲存體。同樣地，您的程式碼應該不會讀取也不會寫入這個值。*&nbsp*
+> **注意**：Office 會自動將名為 `_host_info` 的查詢參數新增至傳遞給 `displayDialogAsync` 的 URL。(它會附加在您的自訂查詢參數之後 (如果有的話)。但不會附加到對話方塊所瀏覽的任何後續 URL。)Microsoft 未來可能會變更此值的內容，或完全予以移除，因此您的程式碼應該不會讀取它。系統會將相同的值新增至對話方塊的工作階段儲存體。同樣地，*您的程式碼應該不會讀取也不會寫入這個值*。
 
 ## <a name="using-the-dialog-apis-to-show-a-video"></a>使用對話方塊 API 顯示影片
 
@@ -360,7 +360,7 @@ Office.context.ui.displayDialogAsync('https://myAddinDomain/myDialog.html?client
 
 「對話方塊 API」的主要案例是要能夠向不允許在 iframe 中開啟其登入頁面的資源或識別提供者 (例如 Microsoft 帳戶、Office 365、Google 和 Facebook) 進行驗證。 
 
->**附註：**當您在此情況下使用「對話方塊 API」時，*不要*在呼叫中使用 `displayInIframe: true` 選項來 `displayDialogAsync`。請參閱本文稍早關於此選項的詳細資訊。 
+>**注意：**當您在此情況下使用「對話方塊 API」時，*不要*在呼叫中使用 `displayInIframe: true` 選項來 `displayDialogAsync`。請參閱本文稍早關於此選項的詳細資訊。 
 
 以下是簡單和典型的驗證流量。 
 

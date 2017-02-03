@@ -214,13 +214,43 @@ tsd install
 - [側載 Outlook 增益集來進行測試](../outlook/testing-and-tips.md)
     
 
-## <a name="debugging-your-office-add-in"></a>偵錯 Office 增益集
+## <a name="debug-your-add-in"></a>對您的增益集進行偵錯
 
-偵錯增益集有不同的方式︰
+您可以使用以下各種方式對增益集進行偵錯：
 
+- 從工作窗格附加偵錯工具 (Windows 版 Office 2016)。
+- 使用瀏覽器的開發人員工具。
+- 使用 Windows 10 中的 F12 開發人員工具。
 
-- 您可以使用 Office Web 用戶端，然後開啟瀏覽器的開發人員工具並偵錯增益集，就像任何其他用戶端 JavaScript 應用程式一樣。 
-- 如果您在 Windows 10 上使用桌面版 Office，您可以[在 Windows 10 上使用 F12 開發人員工具偵錯增益集](../testing/debug-add-ins-using-f12-developer-tools-on-windows-10.md)。
+### <a name="attach-debugger-from-the-task-pane"></a>從工作窗格附加偵錯工具
+
+在 Windows 版 Office 2016 組建 77xx.xxxx 或更新版本中，您可以從工作窗格附加偵錯工具。 
+
+若要啟動 **[附加偵錯工具]**，請選擇工作窗格右上角以啟用 **[特質]** 功能表 (下圖紅色圓圈處)。   
+
+![[附加偵錯工具] 功能表的螢幕擷取畫面](../../images/attach-debugger.png)
+
+選取 **[附加偵錯工具]**。此動作會啟動 **[Visual Studio Just-in-Time 偵錯工具]** 對話方塊 (如下圖所示)。 
+
+![[Visual Studio JIT 偵錯工具] 對話方塊的螢幕擷取畫面](../../images/visual-studio-debugger.png)
+
+接下來您就可以在 Visual Studio 中附加偵錯工具並進行偵錯。   
+
+  >  **注意**：[Visual Studio 2015](https://www.visualstudio.com/downloads/) (具有 [Update 3](https://msdn.microsoft.com/en-us/library/mt752379.aspx)) 是目前唯一支援的偵錯工具。若未安裝 Visual Studio，當您選取 **[附加偵錯工具]** 選項時，系統不會有任何動作。  
+  
+如需詳細資訊，請參閱下列各主題：
+
+-   若要在 Visual Studio 中啟動及使用 DOM 總管，請參閱[使用新的專案範本打造美觀的 Office App](https://blogs.msdn.microsoft.com/officeapps/2013/04/16/building-great-looking-apps-for-office-using-the-new-project-templates)  部落格文章中[祕訣和訣竅](https://blogs.msdn.microsoft.com/officeapps/2013/04/16/building-great-looking-apps-for-office-using-the-new-project-templates/#tips_tricks)小節的祕訣 4。
+-   若要設定中斷點，請參閱[使用中斷點](https://msdn.microsoft.com/en-US/library/5557y8b4.aspx)。
+-   若要使用 F12，請參閱[使用 F12 開發人員工具](https://msdn.microsoft.com/en-us/library/bg182326(v=vs.85).aspx)。
+
+### <a name="browser-developer-tools"></a>瀏覽器開發人員工具 
+
+您可以使用 Office Web 用戶端，然後開啟瀏覽器的開發人員工具來偵錯增益集，就像對任何其他用戶端 JavaScript 應用程式進行偵錯一樣。 
+
+### <a name="f12-developer-tools-on-windows-10"></a>Windows 10 的 F12 開發人員工具
+
+如果您在 Windows 10 上使用 Office 電腦版用戶端，您可以[使用 Windows 10 的 F12 開發人員工具偵錯增益集](../testing/debug-add-ins-using-f12-developer-tools-on-windows-10.md)。
     
 ## <a name="additional-resources"></a>其他資源
 

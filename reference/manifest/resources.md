@@ -13,22 +13,24 @@
 |  **ShortStrings** |  string  |  **Label** 和 **Title** 元素的文字。每個 **String** 包含最多 125 個字元。|
 |  **LongStrings**  |  string  | **Description** 屬性的文字。每個 **String** 包含最多 250 個字元。|
 
->**附註**  您必須在 **Image** 和 **Url** 元素中，為所有 URL 使用安全通訊端層 (SSL)。
+>**注意**：您必須在 **Image** 和 **Url** 元素中，為所有 URL 使用安全通訊端層 (SSL)。
 
 ### <a name="images"></a>影像
 每個圖示必須要有三個 **Images** 元素，三種必要大小各一個︰
+
 - 16x16
 - 32x32
 - 80x80
 
 也支援下列其他的大小，但非必要︰
+
 - 20x20
 - 24x24
 - 40x40
 - 48x48
 - 64x64
 
-> **重要事項：** Outlook 需要針對效能目的的快取影像資源的能力。基於這個理由，裝載影像資源的伺服器不能將任何 CACHE-CONTROL 指示詞新增至回應標頭。這會導致 Outlook 自動取代一般或預設影像。    
+> **重要事項：**為了提升效能，Outlook 需要快取影像資源的能力。因此，裝載影像資源的伺服器不能將任何 CACHE-CONTROL 指示詞新增至回應標頭。這會導致 Outlook 自動取代一般或預設影像。    
 
 
 ## <a name="resources-examples"></a>資源範例 
@@ -36,14 +38,14 @@
 ```XML
 <Resources>
       <bt:Images>
-        <bt:Image id="icon1_16x16" DefaultValue="https://www.contoso.com/Images/icon_default.png">
-          <bt:Override Locale="ja-jp" Value="https://www.contoso.com/Images/ja-jp16-icon_default.png" />
+        <bt:Image id="icon1_16x16" DefaultValue="https://www.contoso.com/icon_default.png">
+          <bt:Override Locale="ja-jp" Value="https://www.contoso.com/ja-jp16-icon_default.png" />
         </bt:Image>
-        <bt:Image id="icon1_32x32" DefaultValue="https://www.contoso.com/Images/icon_default.png">
-          <bt:Override Locale="ja-jp" Value="https://www.contoso.com/Images/ja-jp32-icon_default.png" />
+        <bt:Image id="icon1_32x32" DefaultValue="https://www.contoso.com/icon_default.png">
+          <bt:Override Locale="ja-jp" Value="https://www.contoso.com/ja-jp32-icon_default.png" />
         </bt:Image>
-        <bt:Image id="icon1_80x80" DefaultValue="https://www.contoso.com/Images/icon_default.png">
-          <bt:Override Locale="ja-jp" Value="https://www.contoso.com/Images/ja-jp80-icon_default.png" />
+        <bt:Image id="icon1_80x80" DefaultValue="https://www.contoso.com/icon_default.png">
+          <bt:Override Locale="ja-jp" Value="https://www.contoso.com/ja-jp80-icon_default.png" />
         </bt:Image>
       </bt:Images>
       <bt:Urls>
@@ -69,9 +71,9 @@
 <Resources>
   <bt:Images>
     <!-- Blue icon -->
-    <bt:Image id="blue-icon-16" DefaultValue="YOUR_WEB_SERVER/images/blue-16.png"/>
-    <bt:Image id="blue-icon-32" DefaultValue="YOUR_WEB_SERVER/images/blue-32.png"/>
-    <bt:Image id="blue-icon-80" DefaultValue="YOUR_WEB_SERVER/images/blue-80.png"/>
+    <bt:Image id="blue-icon-16" DefaultValue="YOUR_WEB_SERVER/blue-16.png"/>
+    <bt:Image id="blue-icon-32" DefaultValue="YOUR_WEB_SERVER//blue-32.png"/>
+    <bt:Image id="blue-icon-80" DefaultValue="YOUR_WEB_SERVER/blue-80.png"/>
   </bt:Images>
   <bt:Urls>
     <bt:Url id="functionFile" DefaultValue="YOUR_WEB_SERVER/FunctionFile/Functions.html"/>

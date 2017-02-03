@@ -12,6 +12,8 @@
 
 `SupportsPinning` 元素是在 VersionOverrides 1.1 版結構描述中定義，因此您需要加入可同時適用於 1.0 及 1.1 版的 [VersionOverrides](../../../reference/manifest/versionoverrides.md) 元素。
 
+> **注意：**如果您打算將 Outlook 增益集[發佈](../../publish/publish.md)至 Office 市集，為了能通過 [Office 市集驗證 ](https://msdn.microsoft.com/en-us/library/jj220035.aspx)，在您使用 **SupportsPinning** 元素時，您的增益集內容不可以是固定的，且它必須清楚顯示信箱中已開啟或選定的郵件之相關資料。
+
 ```xml
 <!-- Task pane button -->
 <Control xsi:type="Button" id="msgReadOpenPaneButton">
@@ -32,7 +34,7 @@
 </Control>
 ```
 
-如需完整的範例，請參閱 [command-demo 資訊清單](https://github.com/jasonjoh/command-demo/blob/master/command-demo-manifest.xml)內的 `msgReadOpenPaneButton` 控制。
+如需完整的範例，請參閱 [command-demo 資訊清單](https://github.com/jasonjoh/command-demo/blob/master/command-demo-manifest.xml)內的 `msgReadOpenPaneButton` 控制項。
 
 ## <a name="handling-ui-updates-based-on-currently-selected-message"></a>根據目前所選訊息來處理 UI 更新
 
