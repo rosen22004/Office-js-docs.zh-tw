@@ -19,7 +19,7 @@
     
 - 增益集的 XML 資訊清單檔案 (GetDoc_App.xml)，可在共用網路資料夾或增益集目錄上使用。資訊清單檔必須指向先前所述的 HTML 檔案的位置。
     
-您也可以使用 Visual Studio 2015 或 Napa Office 365 Development Tools 來建立 PowerPoint 或 Word 的增益集。如需有關如何建立 Office 增益集的詳細資訊，請參閱表 1。
+您也可以使用 Visual Studio 2015 來建立 PowerPoint 或 Word 的增益集。 
 
 
 ### <a name="core-concepts-to-know-for-creating-a-task-pane-add-in"></a>建立工作窗格增益集需要了解的核心概念
@@ -135,7 +135,7 @@ input [type="submit"], input[type="button"]
 ## <a name="add-the-javascript-to-get-the-document"></a>加入 JavaScript 以取得文件
 
 
-在增益集的程式碼中，[Office.initialize](../../reference/shared/office.initialize.md) 事件的處理常式會將處理常式加入至表單上 [提交] 按鈕的 click 事件，並通知使用者增益集已就緒。
+在增益集的程式碼中，[Office.initialize](../../reference/shared/office.initialize.md) 事件的處理常式會將處理常式加入至表單上 [提交]**** 按鈕的 click 事件，並通知使用者增益集已就緒。
 
 下列程式碼範例示範 **Office.initialize** 事件的事件處理常式以及 helper 函式 `updateStatus`，用於寫入至狀態 div。
 
@@ -166,7 +166,7 @@ function updateStatus(message) {
 
 
 
-當您在 UI 中選擇 [提交] 按鈕時，增益集會呼叫 `sendFile` 函式，其包含對 [Document.getFileAsync](../../reference/shared/document.getfileasync.md) 方法的呼叫。**getFileAsync** 方法會使用非同步模式，類似於適用於 Office 的 JavaScript API 中的其他方法。它有一個必要參數 _fileType_，和兩個選擇性參數，_options_ 和 _callback_。 
+當您在 UI 中選擇 [提交]**** 按鈕時，增益集會呼叫 `sendFile` 函式，其包含對 [Document.getFileAsync](../../reference/shared/document.getfileasync.md) 方法的呼叫。**getFileAsync** 方法會使用非同步模式，類似於適用於 Office 的 JavaScript API 中的其他方法。它有一個必要參數 _fileType_，和兩個選擇性參數，_options_ 和 _callback_。 
 
 _fileType_ 參數預期 [FileType](../../reference/shared/filetype-enumeration.md) 列舉的三個常數之一：**Office.FileType.Compressed** ("compressed")、**Office.FileType.PDF** ("pdf") 或 **Office.FileType.Text** ("text")。PowerPoint 只支援 **Compressed** 作為引數；Word 支援全部三個。當您傳入 **fileType** 參數的 _Compressed_ 時，**getFileAsync** 方法會在本機電腦上建立檔案的暫存副本，傳回文件作為 PowerPoint 2013 簡報檔案 (*.pptx) 或 Word 2013 文件檔案 (*.docx)。
 

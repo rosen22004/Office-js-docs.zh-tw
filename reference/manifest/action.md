@@ -64,6 +64,7 @@
 ```  
 
 ## <a name="supportspinning"></a>SupportsPinning
+
 當 **xsi:type** 為「ShowTaskpane」的選擇性元素。包含 [VersionOverrides](./versionoverrides.md) 的元素必須具備 `VersionOverridesV1_1` 的 `xsi:type` 屬性值。加入此項附有 `true` 值的元素以支援工作窗格釘選。使用者將能夠「釘選」工作窗格，在變更選取項目時，使其仍維持開啟狀態。如需詳細資訊，請參閱[在 Outlook 中實作可釘選的工作窗格](../../docs/outlook/manifests/pinnable-taskpane)。
 
 > **附註**：目前僅有 Windows 版 Outlook 2016 (組建 7628.1000 或更新版本) 支援 SupportsPinning。

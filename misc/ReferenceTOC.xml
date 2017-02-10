@@ -11,8 +11,7 @@
 		<Item text="描述" url="manifest/description" SEODescription="將您 Office 增益集的描述指定為不超過 250 個字元的字串。" />
 		<Item text="DesktopSettings" url="manifest/desktopsettings" Scope="outlook" SEODescription="指定您的郵件增益集用在桌上型電腦時的來源位置和可套用的控制項設定。" />
 		<Item text="Dictionary" url="manifest/dictionary" Scope="excel, word, powerpoint, project" SEODescription="定義會套用至實作其他字典支援的工作窗格增益集設定。" />
-		<Item text="DictionaryHomePage" url="manifest/dictionaryhomepage" Scope="excel, word, powerpoint, project" SEODescription="指定字典首頁的 URL。" />
-		<Item text="DictionaryName" url="manifest/dictionaryname" Scope="excel, word, powerpoint, project" SEODescription="指定此字典的名稱。" />
+		<Item text="DictionaryHomePage" url="manifest/dictionaryhomepage" Scope="excel, word, powerpoint, project" SEODescription="指定字典首頁的 URL。" />		<Item text="DictionaryName" url="manifest/dictionaryname" Scope="excel, word, powerpoint, project" SEODescription="指定此字典的名稱。" />
 		<Item text="DisableEntityHighlighting" url="manifest/disableentityhighlighting" Scope="outlook" SEODescription="指定是否要關閉您郵件增益集的實體醒目提示功能。" />
 		<Item text="DisplayName" url="manifest/displayname" SEODescription="將您 Office 增益集的名稱指定為多達 125 個字元的字串。" />
 		<Item text="Form" url="manifest/form" Scope="outlook" SEODescription="在特定裝置 (桌上型電腦、平板電腦或手機) 上執行您的郵件增益集時，會定義表單的 UX 設定。" />
@@ -42,21 +41,23 @@
 		<Item text="TargetDialect" url="manifest/targetdialect" Scope="excel, word, powerpoint, project" SEODescription="定義由本字典支援的區域性語言，以文化名稱字串表示。" />
 		<Item text="TargetDialects" url="manifest/targetdialects" Scope="excel, word, powerpoint, project" SEODescription="定義由本字典支援的各種區域性語言。" />
 		<Item text="版本" url="manifest/version" SEODescription="指定您 Office 增益集的版本。" />
-		<Item text="VersionOverrides" url="manifest/versionoverrides" Scope="excel, word, powerpoint" SEODescription="根元素，其包含增益集實作的增益集命令的資訊。">
-			<Item text="動作" url="manifest/action" Scope="excel, word, powerpoint" SEODescription="指定使用者選取的按鈕或功能表控制項時所執行的動作。" />
+		<Item text="VersionOverrides" url="manifest/versionoverrides" Scope="excel, word, powerpoint, outlook" SEODescription="根元素，其包含增益集實作的增益集命令的資訊。">
+			<Item text="動作" url="manifest/action" Scope="excel, word, powerpoint, outlook" SEODescription="指定使用者選取的按鈕或功能表控制項時所執行的動作。" />
 			<Item text="控制項" url="manifest/control" SEODescription="指定使用者選取的按鈕或功能表時所執行的控制項。" />
-			<Item text="CustomTab" url="manifest/customtab" Scope="excel, word, powerpoint" SEODescription="指定增益集命令的索引標籤和群組。" />
-			<Item text="ExtensionPoint" url="manifest/extensionpoint" Scope="excel, word, powerpoint" SEODescription="定義增益集公開功能的位置。" />
-			<Item text="DesktopFormFactor" url="manifest/desktopformfactor" Scope="excel, word, powerpoint" SEODescription="為指定外觀尺寸的增益集指定設定。" />
-			<Item text="FunctionFile" url="manifest/functionfile" Scope="excel, word, powerpoint" SEODescription="透過增益集命令為增益集所公開的作業指定原始程式碼檔，以執行 JavaScript 函式而非顯示 UI。" />
+
+			<Item text="CustomTab" url="manifest/customtab" Scope="excel, word, powerpoint, outlook" SEODescription="指定增益集命令的索引標籤和群組。" />
+			<Item text="ExtensionPoint" url="manifest/extensionpoint" Scope="excel, word, powerpoint, outlook" SEODescription="定義增益集公開功能的位置。" />
+			<Item text="FormFactor" url="manifest/formfactor" Scope="excel, word, powerpoint" SEODescription="為指定外觀尺寸的增益集指定設定。" />
+			<Item text="FunctionFile" url="manifest/functionfile" Scope="excel, word, powerpoint, outlook" SEODescription="透過增益集命令為增益集所公開的作業指定原始程式碼檔，以執行 JavaScript 函式而非顯示 UI。" />
 			<Item text="GetStarted" url="manifest/getstarted" Scope="excel, word, powerpoint" SEODescription="提供在 Word、Excel 及 PowerPoint 主應用程式中安裝增益集時，顯示的圖說文字所使用的資訊。" />
-			<Item text="Group" url="manifest/group" Scope="excel, word, powerpoint" SEODescription="定義索引標籤中的一群使用者介面擴充點。" />
-			<Item text="主機" url="manifest/hosts" Scope="excel, word, powerpoint" SEODescription="指定您 Office 增益集所支援的 Office 主應用程式類型。" />
-			<Item text="圖示" url="manifest/icon" Scope="excel, word, powerpoint" SEODescription="定義按鈕和功能表控制項的影像元素。" />
+			<Item text="Group" url="manifest/group" Scope="excel, word, powerpoint, outlook" SEODescription="定義索引標籤中的一群使用者介面擴充點。" />
+			<Item text="主機" url="manifest/hosts" Scope="excel, word, powerpoint, outlook" SEODescription="指定您 Office 增益集所支援的 Office 主應用程式類型。" />
+			<Item text="圖示" url="manifest/icon" Scope="excel, word, powerpoint, outlook" SEODescription="定義按鈕和功能表控制項的影像元素。" />
+      <Item text="MobileFormFactor" url="manifest/mobileformfactor" Scope="outlook" SEODescription="為行動裝置外觀尺寸的增益集指定設定。" />
 			<Item text="OfficeMenu" url="manifest/officemenu" Scope="excel, word, powerpoint" SEODescription="定義要新增至 Office 內容功能表的控制項的集合。" />
-			<Item text="OfficeTab" url="manifest/officetab" Scope="excel, word, powerpoint" SEODescription="指定要用於增益集命令的預先存在的索引標籤。" />
-			<Item text="資源" url="manifest/resources" Scope="excel, word, powerpoint" SEODescription="包含圖示、字串，和 VersionOverrides 節點的 URL。" />
-			<Item text="Supertip" url="manifest/supertip" Scope="excel, word, powerpoint" SEODescription="定義豐富的工具提示 (包括標題和描述)。" />
+			<Item text="OfficeTab" url="manifest/officetab" Scope="excel, word, powerpoint, outlook" SEODescription="指定要用於增益集命令的預先存在的索引標籤。" />
+			<Item text="資源" url="manifest/resources" Scope="excel, word, powerpoint, outlook" SEODescription="包含圖示、字串，和 VersionOverrides 節點的 URL。" />
+			<Item text="Supertip" url="manifest/supertip" Scope="excel, word, powerpoint, outlook" SEODescription="定義豐富的工具提示 (包括標題和描述)。" />
 		</Item>
 	</Item>
 	<Item text="Word" url="word/word-add-ins-reference-overview" Scope="word" SEODescription="提供 Word Javascript API 的概觀。">

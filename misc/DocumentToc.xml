@@ -9,7 +9,6 @@
   <Item text="開始使用" url="get-started">
     <Item text="使用 Visual Studio" url="get-started/create-and-debug-office-add-ins-in-visual-studio" SEODescription="開始使用 Visual Studio 建置 Office 增益集" />
 	  <Item text="使用任何編輯器" url="get-started/create-an-office-add-in-using-any-editor" SEODescription="開始使用任何編輯器，在 Mac 或 Windows 電腦上建置 Office 增益集。" />
-    <Item text="使用 Napa" url="get-started/create-an-office-add-in-with-napa" SEODescription="透過使用 Napa Office 365 開發工具，從您的瀏覽器建立基本的內容、工作窗格，或適用於Excel、Outlook、PowerPoint、Project 或 Word 的 Outlook 增益集，來開始使用 Office 增益集。" />
   </Item>
   <Item text="設計" url="design/add-in-design">
       <Item text="UI 元素" url="design/ui-elements/ui-elements" SEODescription="使用增益集命令、Fabric UI，以及自訂的 HTML 介面來製作令人讚嘆的增益集使用者介面。">
@@ -23,6 +22,7 @@
 	<Item text="Excel、Word 和 PowerPoint 的增益集命令" url="design/add-in-commands" SEODescription="使用增益集中的增益集命令來延伸 Excel、Word 和 PowerPoint 中的預設 Office 使用者介面。" />
   	<Item text="設計增益集命令的設計圖示" url="design/design-icons" SEODescription="設計增益集命令的設計圖示與 Office UI 緊密整合。" />
 	<Item text="資料視覺效果樣式指導方針" url="design/data-visualization-guidelines" SEODescription="提供 Office 增益集中的資料視覺效果指導方針。" />
+	<Item text="使用性測試" url="design/usability-testing" />
     	<Item text="語音指導方針" url="design/voice-guidelines" SEODescription="尋找 Office 增益集 UI 文字中使用語音的指導方針" />
     	<Item text="協助工具指導方針" url="design/accessibility-guidelines" SEODescription="了解如何讓所有使用者存取您的 Office 增益集。" />
     </Item>
@@ -64,7 +64,7 @@
 	</Item>
   <Item text="發佈" url="publish/publish">
     <Item text="在 Microsoft Azure 上主控 Office 增益集" url="publish/host-an-office-add-in-on-microsoft-azure" SEODescription="使用 Visual Studio 2015 和 Microsoft Office 開發者工具來發行，然後在 Microsoft Azure 上裝載 Office 增益集。" />
-    <Item text="使用 Napa 或 Visual Studio 來封裝您的增益集" url="publish/package-your-add-in-using-napa-or-visual-studio" SEODescription="封裝您的 Office 增益集以準備進行發佈。" />
+    <Item text="使用 Visual Studio 來封裝您的增益集" url="publish/package-your-add-in-using-visual-studio" SEODescription="封裝您的 Office 增益集以準備進行發佈。" />
     <Item text="發佈工作窗格和內容增益集至增益集目錄" url="publish/publish-task-pane-and-content-add-ins-to-an-add-in-catalog" SEODescription="設定 Office 用戶端，讓增益集可在 [Office 增益集] 對話方塊中使用" />
 	<Item text="將增益集提交至 Office 市集" url="https://msdn.microsoft.com/en-us/library/office/jj220037.aspx" IsExternal="true" />
   </Item>
@@ -87,48 +87,53 @@
   
   <Item text="Outlook" url="outlook/outlook-add-ins" SEODescription="在讀取或撰寫模式中建立 Outlook 增益集。" Scope="outlook">
     <Item text="概觀" url="outlook/overview" SEODescription="深入了解 Outlook 增益集的架構和功能。" Scope="outlook" />
+    <Item text="Outlook 增益集設計指導方針" url="outlook/outlook-addin-design" SEODescription="了解如何設定 Outlook 增益集。" Scope="outlook" />
     <Item text="Outlook 的增益集命令" url="outlook/add-in-commands-for-outlook" SEODescription="使用增益集命令將 Outlook 增益集與 Outlook 使用者介面整合。" Scope="outlook" />
-    <Item text="內容相關的 Outlook 增益集" url="outlook/contextual-outlook-add-ins" SEODescription="根據郵件或約會中的指定文字啟動 Outlook 增益集。" Scope="outlook" />
+    <Item text="Outlook Mobile 的增益集" url="outlook/outlook-mobile-addins" SEODescription="了解如何開發 Outlook Mobile 的增益集。" Scope="outlook" />
+    <Item text="關聯式 Outlook 增益集" url="outlook/contextual-outlook-add-ins" SEODescription="根據郵件或約會中的指定文字啟動 Outlook 增益集。" Scope="outlook" />
     <Item text="模組延伸 Outlook 增益集" url="outlook/extension-module-outlook-add-ins" FriendlyUrl="outlookmodule-extension-outlook-add-ins" Scope="outlook" SEODescription="透過新增模組延伸到導覽列來擴充 Outlook UI。" /> 
-	<Item text="API" url="outlook/apis" SEODescription="了解如何指定 Outlook 增益集所需的 API。" Scope="outlook" />
-	<Item text="資訊清單" url="outlook/manifests/manifests" Scope="outlook" SEODescription="建立 Outlook 增益集讀取或撰寫表單的資訊清單。">
-      <Item text="啟動規則" url="outlook/manifests/activation-rules" FriendlyUrl="outlook/manifestsactivation-rules" SEODescription="定義 Outlook 增益集資訊清單中的啟動規則，以指定 Outlook 何時要顯示增益集。" Scope="outlook" />
-      <Item text="定義增益集命令" url="outlook/manifests/define-add-in-commands" SEODescription="使用 Outlook 增益集資訊清單中的 VersionOverrides 元素來定義增益集命令。" Scope="outlook" />
-      <Item text="可釘選的工作窗格" url="outlook/manifests/pinnable-taskpane" SEODescription="在 Outlook 增益集中實作可釘選的工作窗格。" Scope="outlook" />
-  </Item>
-  <Item text="取得並設定讀取或撰寫格式的項目資料" url="outlook/item-data" SEODescription="深入了解取得或設定在 Outlook 增益集中的約會或郵件上資料的方法" Scope="outlook" />
-	<Item text="取得和設定增益集的中繼資料" url="outlook/metadata-for-an-outlook-add-in" SEODescription="學習如何載入和儲存僅 Outlook 增益集可以存取 (透過漫遊設定和自訂屬性) 的自訂資料。" Scope="outlook" />
-	<Item text="隱私權和安全性" url="outlook/privacy-and-security" SEODescription="使用者" Scope="outlook">
-		<Item text="了解 Outlook 增益集的權限" url="outlook/understanding-outlook-add-in-permissions" SEODescription="在 Outlook 增益集資訊清單中指定權限等級。" />
+    <Item text="可釘選的工作窗格" url="outlook/manifests/pinnable-taskpane" SEODescription="在 Outlook 增益集中實作可釘選的工作窗格。" Scope="outlook" />
+	  <Item text="API" url="outlook/apis" SEODescription="了解如何指定 Outlook 增益集所需的 API。" Scope="outlook" />
+    <Item text="資訊清單" url="outlook/manifests/manifests" Scope="outlook" SEODescription="建立 Outlook 增益集讀取或撰寫表單的資訊清單。">
+        <Item text="啟動規則" url="outlook/manifests/activation-rules" FriendlyUrl="outlook/manifestsactivation-rules" SEODescription="定義 Outlook 增益集資訊清單中的啟動規則，以指定 Outlook 何時要顯示增益集。" Scope="outlook" />
+        <Item text="定義增益集命令" url="outlook/manifests/define-add-in-commands" SEODescription="使用 Outlook 增益集資訊清單中的 VersionOverrides 元素來定義增益集命令。" Scope="outlook" />
+        <Item text="新增 Outlook Mobile 支援" url="outlook/manifests/add-mobile-support" SEODescription="了解如何將 Outlook Mobile 支援新增至您的增益集。" Scope="outlook" />
     </Item>
-	<Item text="讀取案例" url="outlook/read-scenario" SEODescription="建置讀取案例的 Outlook 增益集，並尋找可用 API 功能的資訊。" Scope="outlook">
-		<Item text="使用規則運算式來顯示 Outlook 增益集" url="outlook/use-regular-expressions-to-show-an-outlook-add-in" SEODescription="了解如何使用規則運算式來指定要在讀取案例中相關的 Outlook 增益集準則，以及 Outlook 應在使用者介面中顯示增益集。" Scope="outlook" />
-		<Item text="使項目中的字串與已知的實體相符" url="outlook/match-strings-in-an-item-as-well-known-entities" SEODescription="辨識特定字串模式以啟動 Outlook 增益集，或有利於這些字串比對的進一步處理。" Scope="outlook" />
-		<Item text="從項目擷取實體字串" url="outlook/extract-entity-strings-from-an-item" SEODescription="辨識特定字串模式以啟動 Outlook 增益集，或有利於這些字串比對的進一步處理。" Scope="outlook" />
-		<Item text="取得 Outlook 項目的附件" url="outlook/get-attachments-of-an-outlook-item" SEODescription="使用 Outlook 增益集啟用服務來取得來自 Exchange 伺服器的附件。" Scope="outlook" />
-	</Item>
-	<Item text="撰寫案例" url="outlook/compose-scenario" SEODescription="建置讀取案例的 Outlook 增益集，並尋找可用 API 功能的資訊。" Scope="outlook">
-		<Item text="新增及移除撰寫格式項目的附件" url="outlook/add-and-remove-attachments-to-an-item-in-a-compose-form" SEODescription="請參閱使用非同步方法及 Outlook 增益集的 Exchange Web Services (EWS) ID 新增附件至使用者正在 Outlook 中撰寫的項目的 JavaScript 範例。" Scope="outlook" /><Item text="取得並設定撰寫格式的項目資料" url="outlook/get-and-set-item-data-in-a-compose-form" FriendlyUrl="outlook/composeget-and-set-item-data-in-a-compose-form" SEODescription="了解如何取得或設定在 Outlook 增益集中撰寫案例內項目的各種屬性" Scope="outlook" />
-		<Item text="取得、設定或新增收件者" url="outlook/get-set-or-add-recipients" />
-		<Item text="取得或設定主旨" url="outlook/get-or-set-the-subject" SEODescription="了解使用者在撰寫 Outlook 中的約會或郵件時，如何從 Outlook 增益集取得或設定主旨。" Scope="outlook" />
-		<Item text="將資料插入本文" url="outlook/insert-data-in-the-body" SEODescription="了解如何在使用者從 Outlook 增益集所撰寫的約會或郵件的本文中插入資料。" Scope="outlook" />	
-		<Item text="取得或設定約會的地點。" url="outlook/get-or-set-the-location-of-an-appointment" SEODescription="了解使用者在撰寫 Outlook 中的約會時，如何從 Outlook 增益集取得或設定位置。" Scope="outlook" />
-		<Item text="取得或設定約會的時間" url="outlook/get-or-set-the-time-of-an-appointment" SEODescription="了解如何從 Outlook 增益集取得或設定約會的時間。" Scope="outlook" />
-	</Item>
-	<Item text="呼叫 Web 服務" url="outlook/web-services" SEODescription="了解如何從 Outlook 的 Outlook 增益集呼叫 EWS 或其他 Web 服務。" Scope="outlook" />
-	<Item text="驗證" url="outlook/authentication" SEODescription="了解如何使用 Exchange 2013 識別權杖來驗證您的 Outlook 增益集。" Scope="outlook">
-		<Item text="識別權杖的內容" url="outlook/inside-the-identity-token" SEODescription="了解 Exchange 2013 識別權杖中所包含內容。" Scope="outlook" />
-		<Item text="使用識別權杖來呼叫服務" url="outlook/call-a-service-by-using-an-identity-token" SEODescription="了解如何使用識別權杖將您 Outlook 增益集客戶的電子郵件帳戶連結至 Web 服務所提供的資訊。" Scope="outlook" />
-		<Item text="使用權杖驗證程式庫" url="outlook/use-the-token-validation-library" SEODescription="了解如何使用 EWS 管理的 API 驗證程式庫來驗證 Exchange 識別權杖。" Scope="outlook" />
-		<Item text="驗證識別權杖" url="outlook/validate-an-identity-token" SEODescription="了解如何使用識別權杖將您 Outlook 增益集客戶的電子郵件帳戶連結至 Web 服務所提供的資訊。" Scope="outlook" />
-		<Item text="使用 PHP 來驗證識別權杖" url="outlook/use-php-to-validate-an-identity-token" SEODescription="了解如何使用 PHP 來驗證可將您 Outlook 增益集客戶的電子郵件帳戶連結至您的服務所提供資訊的 Exchange 2013 識別權杖。" Scope="outlook" />
-		<Item text="使用識別權杖來驗證使用者" url="outlook/authenticate-a-user-with-an-identity-token" SEODescription="請參閱程式碼範例，其顯示驗證物件如何符合由具有一組服務憑證的識別權杖所表示的唯一識別。" Scope="outlook" /></Item>
-	<Item text="測試及秘訣" url="outlook/testing-and-tips" FriendlyUrl="outlook/testingtesting-and-tips" Scope="outlook">
-		<Item text="比較 Outlook 增益集在 Mac 版 Outlook 中的支援" url="outlook/compare-outlook-add-in-support-in-outlook-for-mac" SEOKeyword="移至 dev.office.com 的連結不正確。 我已修復資料表中的項目符號清單。" Scope="outlook" />
-		<Item text="處理 Outlook 增益集中日期值的秘訣" url="outlook/tips-for-handling-date-values-in-outlook-add-ins" Scope="outlook" SEODescription="使用 Date 物件在 Outlook 增益集中處理日期值。" />
-		<Item text="適用於 Outlook 增益集的 JavaScript API 和啟動的限制" url="outlook/limits-for-activation-and-javascript-api-for-outlook-add-ins" Scope="outlook" SEODescription="請確定 Outlook 增益集能夠一直符合啟動和 API 使用方針。" />
-		<Item text="Outlook 增益集啟動的疑難排解" url="outlook/troubleshoot-outlook-add-in-activation" SEODescription="Outlook 增益集啟動是內容相關且根據增益集資訊清單中的規則。探索已安裝的增益集可能無法在 Outlook 中啟動的原因。" Scope="outlook" />
-	 </Item>  
+    <Item text="呼叫 Outlook REST API" url="outlook/use-rest-api" SEODescription="了解如何從 Outlook 增益集驗證並呼叫 REST API。" Scope="outlook" />
+    <Item text="取得並設定讀取或撰寫格式的項目資料" url="outlook/item-data" SEODescription="深入了解取得或設定在 Outlook 增益集中的約會或郵件上資料的方法" Scope="outlook" />
+    <Item text="取得和設定增益集的中繼資料" url="outlook/metadata-for-an-outlook-add-in" SEODescription="學習如何載入和儲存僅 Outlook 增益集可以存取 (透過漫遊設定和自訂屬性) 的自訂資料。" Scope="outlook" />
+    <Item text="隱私權和安全性" url="outlook/privacy-and-security" SEODescription="使用者" Scope="outlook">
+      <Item text="了解 Outlook 增益集的權限" url="outlook/understanding-outlook-add-in-permissions" SEODescription="在 Outlook 增益集資訊清單中指定權限等級。" />
+    </Item>
+    <Item text="讀取案例" url="outlook/read-scenario" SEODescription="建置讀取案例的 Outlook 增益集，並尋找可用 API 功能的資訊。" Scope="outlook">
+      <Item text="使用規則運算式來顯示 Outlook 增益集" url="outlook/use-regular-expressions-to-show-an-outlook-add-in" SEODescription="了解如何使用規則運算式來指定要在讀取案例中相關的 Outlook 增益集準則，以及 Outlook 應在使用者介面中顯示增益集。" Scope="outlook" />
+      <Item text="使項目中的字串與已知的實體相符" url="outlook/match-strings-in-an-item-as-well-known-entities" SEODescription="辨識特定字串模式以啟動 Outlook 增益集，或有利於這些字串比對的進一步處理。" Scope="outlook" />
+      <Item text="從項目擷取實體字串" url="outlook/extract-entity-strings-from-an-item" SEODescription="辨識特定字串模式以啟動 Outlook 增益集，或有利於這些字串比對的進一步處理。" Scope="outlook" />
+      <Item text="取得 Outlook 項目的附件" url="outlook/get-attachments-of-an-outlook-item" SEODescription="使用 Outlook 增益集啟用服務來取得來自 Exchange 伺服器的附件。" Scope="outlook" />
+    </Item>
+    <Item text="撰寫案例" url="outlook/compose-scenario" SEODescription="建置讀取案例的 Outlook 增益集，並尋找可用 API 功能的資訊。" Scope="outlook">
+      <Item text="新增及移除撰寫格式項目的附件" url="outlook/add-and-remove-attachments-to-an-item-in-a-compose-form" SEODescription="請參閱使用非同步方法及 Outlook 增益集的 Exchange Web Services (EWS) ID 新增附件至使用者正在 Outlook 中撰寫的項目的 JavaScript 範例。" Scope="outlook" /><Item text="取得並設定撰寫格式的項目資料" url="outlook/get-and-set-item-data-in-a-compose-form" FriendlyUrl="outlook/composeget-and-set-item-data-in-a-compose-form" SEODescription="了解如何取得或設定在 Outlook 增益集中撰寫案例內項目的各種屬性" Scope="outlook" />
+      <Item text="取得、設定或新增收件者" url="outlook/get-set-or-add-recipients" />
+      <Item text="取得或設定主旨" url="outlook/get-or-set-the-subject" SEODescription="了解使用者在撰寫 Outlook 中的約會或郵件時，如何從 Outlook 增益集取得或設定主旨。" Scope="outlook" />
+      <Item text="將資料插入本文" url="outlook/insert-data-in-the-body" SEODescription="了解如何在使用者從 Outlook 增益集所撰寫的約會或郵件的本文中插入資料。" Scope="outlook" />	
+      <Item text="取得或設定約會的地點。" url="outlook/get-or-set-the-location-of-an-appointment" SEODescription="了解使用者在撰寫 Outlook 中的約會時，如何從 Outlook 增益集取得或設定位置。" Scope="outlook" />
+      <Item text="取得或設定約會的時間" url="outlook/get-or-set-the-time-of-an-appointment" SEODescription="了解如何從 Outlook 增益集取得或設定約會的時間。" Scope="outlook" />
+    </Item>
+	  <Item text="呼叫 Web 服務" url="outlook/web-services" SEODescription="了解如何從 Outlook 的 Outlook 增益集呼叫 EWS 或其他 Web 服務。" Scope="outlook" />
+    <Item text="驗證" url="outlook/authentication" SEODescription="了解如何使用 Exchange 2013 識別權杖來驗證您的 Outlook 增益集。" Scope="outlook">
+      <Item text="識別權杖的內容" url="outlook/inside-the-identity-token" SEODescription="了解 Exchange 2013 識別權杖中所包含內容。" Scope="outlook" />
+      <Item text="使用識別權杖來呼叫服務" url="outlook/call-a-service-by-using-an-identity-token" SEODescription="了解如何使用識別權杖將您 Outlook 增益集客戶的電子郵件帳戶連結至 Web 服務所提供的資訊。" Scope="outlook" />
+      <Item text="使用權杖驗證程式庫" url="outlook/use-the-token-validation-library" SEODescription="了解如何使用 EWS 管理的 API 驗證程式庫來驗證 Exchange 識別權杖。" Scope="outlook" />
+      <Item text="驗證識別權杖" url="outlook/validate-an-identity-token" SEODescription="了解如何使用識別權杖將您 Outlook 增益集客戶的電子郵件帳戶連結至 Web 服務所提供的資訊。" Scope="outlook" />
+      <Item text="使用 PHP 來驗證識別權杖" url="outlook/use-php-to-validate-an-identity-token" SEODescription="了解如何使用 PHP 來驗證可將您 Outlook 增益集客戶的電子郵件帳戶連結至您的服務所提供資訊的 Exchange 2013 識別權杖。" Scope="outlook" />
+      <Item text="使用識別權杖來驗證使用者" url="outlook/authenticate-a-user-with-an-identity-token" SEODescription="請參閱程式碼範例，其顯示驗證物件如何符合由具有一組服務憑證的識別權杖所表示的唯一識別。" Scope="outlook" />    
+    </Item>
+    <Item text="測試及秘訣" url="outlook/testing-and-tips" FriendlyUrl="outlook/testingtesting-and-tips" Scope="outlook">
+      <Item text="比較 Outlook 增益集在 Mac 版 Outlook 中的支援" url="outlook/compare-outlook-add-in-support-in-outlook-for-mac" SEOKeyword="移至 dev.office.com 的連結不正確。 我已修復資料表中的項目符號清單。" Scope="outlook" />
+      <Item text="處理 Outlook 增益集中日期值的秘訣" url="outlook/tips-for-handling-date-values-in-outlook-add-ins" Scope="outlook" SEODescription="使用 Date 物件在 Outlook 增益集中處理日期值。" />
+      <Item text="適用於 Outlook 增益集的 JavaScript API 和啟動的限制" url="outlook/limits-for-activation-and-javascript-api-for-outlook-add-ins" Scope="outlook" SEODescription="請確定 Outlook 增益集能夠一直符合啟動和 API 使用方針。" />
+      <Item text="Outlook 增益集啟動的疑難排解" url="outlook/troubleshoot-outlook-add-in-activation" SEODescription="Outlook 增益集啟動是內容相關且根據增益集資訊清單中的規則。探索已安裝的增益集可能無法在 Outlook 中啟動的原因。" Scope="outlook" />
+    </Item>  
 	</Item>
   <Item text="PowerPoint" url="powerpoint/powerpoint-add-ins" Scope="powerpoint">
 	<Item text="使用您 PowerPoint 增益集的文件佈景主題" url="powerpoint/use-document-themes-in-your-powerpoint-add-ins" Scope="powerpoint" SEODescription="將佈景主題套用至您的 PowerPoint 增益集" />

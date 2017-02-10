@@ -1,5 +1,5 @@
-# <a name="group-element"></a>群組元素
-定義索引標籤中的一群使用者介面擴充點。在 [自訂] 索引標籤上，增益集可以建立最多 10 個群組。每個群組僅限於 6 個控制項，無論其出現在哪一個索引標籤。增益集僅限於一個自訂索引標籤。
+# <a name="group-element"></a>Group 元素
+定義索引標籤中的一群 UI 控制項。在 [自訂] 索引標籤上，增益集可以建立最多 10 個群組。每個群組僅限於 6 個控制項，無論其出現在哪一個索引標籤。增益集僅限於一個自訂索引標籤。
 
 ## <a name="attributes"></a>屬性
 
@@ -20,7 +20,7 @@
 必要。群組的標籤。**resid** 屬性必須設定為  **Resources** 元素的 **ShortStrings** 元素中，[String](./resources.md#shortstrings) 元素的 [id](./resources.md) 屬性值。
 
 ## <a name="control"></a>控制項
-一個群組至少需要一個控制項。目前僅支援按鈕[](./control.md#button-control)和功能表[](./control.md#menu-dropdown-button-controls)。 
+一個群組至少需要一個控制項。
 
 ```xml
 <Group id="msgreadCustomTab.grp1">

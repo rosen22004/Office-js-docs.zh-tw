@@ -1,4 +1,4 @@
-# <a name="paragraph-object-(javascript-api-for-onenote)"></a>Paragraph 物件 (適用於 OneNote 的 JavaScript API)
+﻿# <a name="paragraph-object-javascript-api-for-onenote"></a>Paragraph 物件 (適用於 OneNote 的 JavaScript API)
 
 _適用於：OneNote Online_  
 
@@ -42,7 +42,7 @@ _請參閱屬性存取[範例。](#property-access-examples)_
 ## <a name="method-details"></a>方法詳細資料
 
 
-### <a name="delete()"></a>delete()
+### <a name="delete"></a>delete()
 刪除段落
 
 #### <a name="syntax"></a>語法
@@ -94,7 +94,7 @@ OneNote.run(function (context) {
 ```
 
 
-### <a name="inserthtmlassibling(insertlocation:-string,-html:-string)"></a>insertHtmlAsSibling(insertLocation: string, html: string)
+### <a name="inserthtmlassiblinginsertlocation-string-html-string"></a>insertHtmlAsSibling(insertLocation: string, html: string)
 插入指定的 HTML 內容
 
 #### <a name="syntax"></a>語法
@@ -103,7 +103,7 @@ paragraphObject.insertHtmlAsSibling(insertLocation, html);
 ```
 
 #### <a name="parameters"></a>參數
-| 參數	    | 類型	   |描述|
+| 參數	    | 類型   |描述|
 |:---------------|:--------|:----------|
 |insertLocation|string|新內容與目前段落的相對位置。可能的值為：之前、之後|
 |HTML|string|HTML 字串，描述內容的視覺化呈現。請參閱 OneNote 增益集 JavaScript API 的[支援的 HTML](../../docs/onenote/onenote-add-ins-page-content.md#supported-html)。|
@@ -148,7 +148,7 @@ OneNote.run(function (context) {
 ```
 
 
-### <a name="insertimageassibling(insertlocation:-string,-base64encodedimage:-string,-width:-double,-height:-double)"></a>insertImageAsSibling(insertLocation: string, base64EncodedImage: string, width: double, height: double)
+### <a name="insertimageassiblinginsertlocation-string-base64encodedimage-string-width-double-height-double"></a>insertImageAsSibling(insertLocation: string, base64EncodedImage: string, width: double, height: double)
 在指定插入位置插入影像。
 
 #### <a name="syntax"></a>語法
@@ -157,12 +157,12 @@ paragraphObject.insertImageAsSibling(insertLocation, base64EncodedImage, width, 
 ```
 
 #### <a name="parameters"></a>參數
-| 參數	    | 類型	   |描述|
+| 參數	    | 類型   |描述|
 |:---------------|:--------|:----------|
 |insertLocation|string|表格與目前段落的相對位置。可能的值為：之前、之後|
 |base64EncodedImage|string|要附加的 HTML 字串。|
-|width|double|選用。以點為單位的寬度。預設值為 null，且會遵守影像寬度。|
-|height|double|選用。以點為單位的高度。預設值為 null，且會遵守影像高度。|
+|width|雙精確度|選用。以點為單位的寬度。預設值為 null，且會遵守影像寬度。|
+|Height|雙精確度|選用。以點為單位的高度。預設值為 null，且會遵守影像高度。|
 
 #### <a name="returns"></a>傳回
 [Image](image.md)
@@ -204,7 +204,7 @@ OneNote.run(function (context) {
 ```
 
 
-### <a name="insertrichtextassibling(insertlocation:-string,-paragraphtext:-string)"></a>insertRichTextAsSibling(insertLocation: string, paragraphText: string)
+### <a name="insertrichtextassiblinginsertlocation-string-paragraphtext-string"></a>insertRichTextAsSibling(insertLocation: string, paragraphText: string)
 在指定插入位置插入段落文字。
 
 #### <a name="syntax"></a>語法
@@ -213,7 +213,7 @@ paragraphObject.insertRichTextAsSibling(insertLocation, paragraphText);
 ```
 
 #### <a name="parameters"></a>參數
-| 參數	    | 類型	   |描述|
+| 參數	    | 類型   |描述|
 |:---------------|:--------|:----------|
 |insertLocation|string|表格與目前段落的相對位置。可能的值為：之前、之後|
 |paragraphText|string|要附加的 HTML 字串。|
@@ -258,7 +258,7 @@ OneNote.run(function (context) {
 ```
 
 
-### <a name="inserttableassibling(insertlocation:-string,-rowcount:-number,-columncount:-number,-values:-string[][])"></a>insertTableAsSibling(insertLocation: string, rowCount: number, columnCount: number, values: string[][])
+### <a name="inserttableassiblinginsertlocation-string-rowcount-number-columncount-number-values-string"></a>insertTableAsSibling(insertLocation: string, rowCount: number, columnCount: number, values: string[][])
 將具有指定列和欄數的表格新增到目前段落之前或之後。
 
 #### <a name="syntax"></a>語法
@@ -267,7 +267,7 @@ paragraphObject.insertTableAsSibling(insertLocation, rowCount, columnCount, valu
 ```
 
 #### <a name="parameters"></a>參數
-| 參數	    | 類型	   |描述|
+| 參數	    | 類型   |描述|
 |:---------------|:--------|:----------|
 |insertLocation|string|表格與目前段落的相對位置。可能的值為：之前、之後|
 |rowCount|number|表格中的列數。|
@@ -277,7 +277,7 @@ paragraphObject.insertTableAsSibling(insertLocation, rowCount, columnCount, valu
 #### <a name="returns"></a>傳回
 [Table](table.md)
 
-### <a name="load(param:-object)"></a>load(param: object)
+### <a name="loadparam-object"></a>load(param: object)
 以參數中指定的屬性和物件值填滿 JavaScript 層中建立的 Proxy 物件。
 
 #### <a name="syntax"></a>語法
@@ -286,7 +286,7 @@ object.load(param);
 ```
 
 #### <a name="parameters"></a>參數
-| 參數	    | 類型	   |描述|
+| 參數	    | 類型   |描述|
 |:---------------|:--------|:----------|
 |param|物件|選用。接受參數與關聯性名稱，做為分隔字串或陣列。或者提供 [loadOption](loadoption.md) 物件。|
 

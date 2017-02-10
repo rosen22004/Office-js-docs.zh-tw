@@ -1,4 +1,4 @@
-﻿
+
 
 # <a name="item"></a>項目
 
@@ -34,7 +34,7 @@ Office.initialize = function () {
 
 ### <a name="members"></a>成員
 
-#### <a name="attachments-arrayattachmentdetailssimpletypesmdattachmentdetails"></a>附件：Array.<[AttachmentDetails](simple-types.md#attachmentdetails)>
+#### <a name="attachments-arrayattachmentdetailssimple-typesmdattachmentdetails"></a>附件：Array.<[AttachmentDetails](simple-types.md#attachmentdetails)>
 
 取得項目附件的陣列。僅限閱讀模式。
 
@@ -122,11 +122,11 @@ function callback(asyncResult) {
 
 ##### <a name="read-mode"></a>閱讀模式
 
-`cc` 屬性傳回陣列，包含郵件 [副本] 列上所列出每個收件者的 `EmailAddressDetails` 物件。這個集合限制最多為 100 名成員。
+`cc` 屬性傳回陣列，包含郵件 [副本]**** 列上所列出每個收件者的 `EmailAddressDetails` 物件。這個集合限制最多為 100 名成員。
 
 ##### <a name="compose-mode"></a>撰寫模式
 
-`cc` 屬性傳回 `Recipients` 物件，提供方法來管理郵件 [副本] 列上的收件者。
+`cc` 屬性傳回 `Recipients` 物件，提供方法來管理郵件 [副本]**** 列上的收件者。
 
 ##### <a name="type"></a>類型：
 
@@ -196,6 +196,8 @@ var created = Office.context.mailbox.item.dateTimeCreated;
 
 取得項目上次修改的日期與時間。僅限閱讀模式。
 
+> **附註：**iOS 版 Outlook 或 Android 版 Outlook 不支援這個成員。
+
 ##### <a name="type"></a>類型：
 
 *   日期
@@ -263,7 +265,7 @@ Office.context.mailbox.item.end.setAsync(endTime, options, function(result) {
 });
 ```
 
-#### <a name="from-emailaddressdetailssimpletypesmdemailaddressdetails"></a>寄件者︰[EmailAddressDetails](simple-types.md#emailaddressdetails)
+#### <a name="from-emailaddressdetailssimple-typesmdemailaddressdetails"></a>寄件者︰[EmailAddressDetails](simple-types.md#emailaddressdetails)
 
 取得郵件寄件者的電子郵件地址。僅限閱讀模式。
 
@@ -366,7 +368,7 @@ if (itemId === null || itemId == undefined) {
 }
 ```
 
-####  <a name="itemtype-officemailboxenumsitemtypeofficemailboxenumsmditemtypestring"></a>itemType :[Office.MailboxEnums.ItemType](Office.MailboxEnums.md#itemtype-string)
+####  <a name="itemtype-officemailboxenumsitemtypeofficemailboxenumsmditemtype-string"></a>itemType :[Office.MailboxEnums.ItemType](Office.MailboxEnums.md#itemtype-string)
 
 取得執行個體所表示的項目類型。
 
@@ -469,7 +471,7 @@ var normalizedSubject = Office.context.mailbox.item.normalizedSubject;
 |[最低權限等級](../../docs/outlook/understanding-outlook-add-in-permissions.md)| ReadItem|
 |適用的 Outlook 模式| 撰寫或讀取|
 |[收件者](Recipients.md)|
-####  <a name="optionalattendees-arrayemailaddressdetailssimpletypesmdemailaddressdetails"></a>optionalAttendees：Array.<[EmailAddressDetails](simple-types.md#emailaddressdetails)>
+####  <a name="optionalattendees-arrayemailaddressdetailssimple-typesmdemailaddressdetails"></a>optionalAttendees：Array.<[EmailAddressDetails](simple-types.md#emailaddressdetails)>
 取得或設定列席者的電子郵件地址清單。
 
 ##### <a name="read-mode"></a>閱讀模式
@@ -503,7 +505,7 @@ function callback(asyncResult) {
 }
 ```
 
-#### <a name="organizer-emailaddressdetailssimpletypesmdemailaddressdetails"></a>召集人︰[EmailAddressDetails](simple-types.md#emailaddressdetails)
+#### <a name="organizer-emailaddressdetailssimple-typesmdemailaddressdetails"></a>召集人︰[EmailAddressDetails](simple-types.md#emailaddressdetails)
 
 取得指定會議的會議召集人電子郵件地址。僅限閱讀模式。
 
@@ -526,7 +528,7 @@ var organizerName = Office.context.mailbox.item.organizer.displayName;
 var organizerAddress = Office.context.mailbox.item.organizer.emailAddress;
 ```
 
-####  <a name="requiredattendees-arrayemailaddressdetailssimpletypesmdemailaddressdetailsrecipientsrecipientsmd"></a>requiredAttendees：Array.<[EmailAddressDetails](simple-types.md#emailaddressdetails)>|[收件者](Recipients.md)
+####  <a name="requiredattendees-arrayemailaddressdetailssimple-typesmdemailaddressdetailsrecipientsrecipientsmd"></a>requiredAttendees：Array.<[EmailAddressDetails](simple-types.md#emailaddressdetails)>|[收件者](Recipients.md)
 
 取得或設定出席者的電子郵件地址清單。
 
@@ -561,9 +563,11 @@ function callback(asyncResult) {
 }
 ```
 
-#### <a name="resources-emailaddressdetailssimpletypesmdemailaddressdetails"></a>資源：[EmailAddressDetails](simple-types.md#emailaddressdetails)
+#### <a name="resources-emailaddressdetailssimple-typesmdemailaddressdetails"></a>資源：[EmailAddressDetails](simple-types.md#emailaddressdetails)
 
 取得約會所需的資源。僅限閱讀模式。
+
+> **附註：**iOS 版 Outlook 或 Android 版 Outlook 不支援這個成員。
 
 ##### <a name="type"></a>類型：
 
@@ -576,7 +580,7 @@ function callback(asyncResult) {
 |[最低信箱需求集合版本](./tutorial-api-requirement-sets.md)| 1.0|
 |[最低權限等級](../../docs/outlook/understanding-outlook-add-in-permissions.md)| ReadItem|
 |適用的 Outlook 模式| 讀取|
-#### <a name="sender-emailaddressdetailssimpletypesmdemailaddressdetails"></a>寄件者︰[EmailAddressDetails](simple-types.md#emailaddressdetails)
+#### <a name="sender-emailaddressdetailssimple-typesmdemailaddressdetails"></a>寄件者︰[EmailAddressDetails](simple-types.md#emailaddressdetails)
 
 取得電子郵件訊息的寄件者電子郵件地址。僅限閱讀模式。
 
@@ -693,11 +697,11 @@ function callback(asyncResult) {
 
 ##### <a name="read-mode"></a>閱讀模式
 
-`to` 屬性傳回陣列，包含郵件 [收件者] 列上所列出每個收件者的 `EmailAddressDetails` 物件。這個集合限制最多為 100 名成員。
+`to` 屬性傳回陣列，包含郵件 [收件者]**** 列上所列出每個收件者的 `EmailAddressDetails` 物件。這個集合限制最多為 100 名成員。
 
 ##### <a name="compose-mode"></a>撰寫模式
 
-`to` 屬性傳回 `Recipients` 物件，提供方法來管理郵件 [收件者] 列上的收件者。
+`to` 屬性傳回 `Recipients` 物件，提供方法來管理郵件 [收件者]**** 列上的收件者。
 
 ##### <a name="type"></a>類型：
 
@@ -732,13 +736,13 @@ function callback(asyncResult) {
 
 您可以隨後以 [`removeAttachmentAsync`](Office.context.mailbox.item.md#removeattachmentasyncattachmentid-options-callback) 方法使用識別碼，以便在相同的工作階段中移除附件。
 
-##### <a name="parametersremoveattachmentasyncattachmentidoptionscallback"></a>參數：removeattachmentasyncattachmentid-options-callback
+##### <a name="parametersremoveattachmentasyncattachmentid-options-callback"></a>參數：removeattachmentasyncattachmentid-options-callback
 |名稱| 類型	| 屬性| 描述|
 |---|---|---|---|
 |`uri`| 字串||提供要附加至郵件或約會的檔案位置 URI。最大長度為 2048 個字元。|
 |`attachmentName`| 字串||正在上傳附件時，會顯示附件名稱。最大長度為 255 個字元。|
 |`options`| 物件| &lt;選擇性&gt;|物件常值包含下列一個或多個屬性。<br/><br/>**屬性**<br/><table class="nested-table"><thead><tr><th>名稱</th><th>類型	</th><th>屬性</th><th>描述</th></tr></thead><tbody><tr><td><code>asyncContext</code></td><td>物件</td><td>&lt;選擇性&gt;</td><td>開發人員可提供任何他們想要在回呼方法中存取的物件。</td></tr></tbody></table>|
-|`callback`| 函數| &lt;選擇性&gt;|當方法完成時，在 `callback` 參數中傳遞的函數會以單一參數 `asyncResult`，也就是 [`AsyncResult`](simple-types.md#asyncresult) 物件進行呼叫。 <br/>一旦成功，附件識別碼會在 `asyncResult.value` 屬性中提供。<br/>如果上載附件失敗，`asyncResult` 物件將包含 `Error` 物件，提供錯誤的描述。<br/><table class="nested-table"><thead><tr><th>錯誤碼</th><th>說明</th></tr></thead><tbody><tr><td><code>AttachmentSizeExceeded</code></td><td>附件大於允許大小。</td></tr><tr><td><code>FileTypeNotSupported</code></td><td>附件具有不允許的副檔名。</td></tr><tr><td><code>NumberOfAttachmentsExceeded</code></td><td>郵件或約會有太多的附件。</td></tr></tbody></table>|
+|`callback`| 函數| &lt;選擇性&gt;|當方法完成時，在 `callback` 參數中傳遞的函數會以單一參數 `asyncResult`，也就是 [`AsyncResult`](simple-types.md#asyncresult) 物件進行呼叫。 <br/>一旦成功，附件識別碼會在 `asyncResult.value` 屬性中提供。<br/>如果上載附件失敗，`asyncResult` 物件將包含 `Error` 物件，提供錯誤的描述。<br/><table class="nested-table"><thead><tr><th>錯誤碼</th><th>描述</th></tr></thead><tbody><tr><td><code>AttachmentSizeExceeded</code></td><td>附件大於允許大小。</td></tr><tr><td><code>FileTypeNotSupported</code></td><td>附件具有不允許的副檔名。</td></tr><tr><td><code>NumberOfAttachmentsExceeded</code></td><td>郵件或約會有太多的附件。</td></tr></tbody></table>|
 
 ##### <a name="requirements"></a>需求
 
@@ -785,7 +789,7 @@ function addAttachment() {
 |`itemId`| 字串||要附加的項目 Exchange 識別碼。最大長度為 100 個字元。|
 |`attachmentName`| 字串||要附加的項目主旨。最大長度為 255 個字元。|
 |`options`| 物件| &lt;選擇性&gt;|物件常值包含下列一個或多個屬性。<br/><br/>**屬性**<br/><table class="nested-table"><thead><tr><th>名稱</th><th>類型	</th><th>屬性</th><th>描述</th></tr></thead><tbody><tr><td><code>asyncContext</code></td><td>物件</td><td>&lt;選擇性&gt;</td><td>開發人員可提供任何他們想要在回呼方法中存取的物件。</td></tr></tbody></table>|
-|`callback`| 函數| &lt;選擇性&gt;|當方法完成時，在 `callback` 參數中傳遞的函數會以單一參數 `asyncResult`，也就是 [`AsyncResult`](simple-types.md#asyncresult) 物件進行呼叫。 <br/>一旦成功，附件識別碼會在 `asyncResult.value` 屬性中提供。<br/>如果新增附件失敗，`asyncResult` 物件將包含 `Error` 物件，提供錯誤的描述。<br/><table class="nested-table"><thead><tr><th>錯誤碼</th><th>說明</th></tr></thead><tbody><tr><td><code>NumberOfAttachmentsExceeded</code></td><td>郵件或約會有太多的附件。</td></tr></tbody></table>|
+|`callback`| 函數| &lt;選擇性&gt;|當方法完成時，在 `callback` 參數中傳遞的函數會以單一參數 `asyncResult`，也就是 [`AsyncResult`](simple-types.md#asyncresult) 物件進行呼叫。 <br/>一旦成功，附件識別碼會在 `asyncResult.value` 屬性中提供。<br/>如果新增附件失敗，`asyncResult` 物件將包含 `Error` 物件，提供錯誤的描述。<br/><table class="nested-table"><thead><tr><th>錯誤碼</th><th>描述</th></tr></thead><tbody><tr><td><code>NumberOfAttachmentsExceeded</code></td><td>郵件或約會有太多的附件。</td></tr></tbody></table>|
 
 ##### <a name="requirements"></a>需求
 
@@ -839,6 +843,8 @@ function addAttachment() {
 
 顯示包含所選郵件的寄件者和所有收件者或召集人，以及所選約會的所有出席者的回覆表單。
 
+> **附註：**iOS 版 Outlook 或 Android 版 Outlook 不支援這個方法。
+
 在 Outlook Web App 中，回覆表單會顯示為 3 欄式檢視中的彈出式表單，以及在 2 欄或 1 欄式檢視中的快顯表單。
 
 如果任何字串參數超過限制，`displayReplyAllForm` 會拋出例外狀況。
@@ -847,7 +853,7 @@ function addAttachment() {
 
 ##### <a name="parameters"></a>參數：
 
-|名稱| 類型	| 說明|
+|名稱| 類型	| 描述|
 |---|---|---|
 |`formData`| 字串 &#124; 物件|包含文字和 HTML，且代表回覆表單本文的字串。字串限制為 32 KB。<br/>**或**<br/>包含本文或附件資料和回呼函數的物件。物件定義如下：<br/><br/>**屬性**<br/><table class="nested-table"><thead><tr><th>名稱</th><th>類型	</th><th>屬性</th><th>描述</th></tr></thead><tbody><tr><td><code>htmlBody</code></td><td>字串</td><td>&lt;選用&gt;</td><td>包含文字和 HTML，且代表回覆表單本文的字串。字串限制為 32 KB。</td></tr><tr><td><code>attachments</code></td><td>陣列。&lt;物件&gt;</td><td>&lt;選用&gt;</td><td>JSON 物件的陣列，該物件是檔案或項目附件。<br/><br/><strong>屬性</strong><br/><table class="nested-table"><thead><tr><th>名稱</th><th>類型	</th><th>描述</th></tr></thead><tbody><tr><td><code>type</code></td><td>字串</td><td>指出附件的類型。對於檔案附件必須是 <code>file</code>，或者對於項目附件必須是 <code>item</code>。</td></tr><tr><td><code>name</code></td><td>字串</td><td>包含附件名稱的字串，最多 255 個字元長度。</td></tr><tr><td><code>url</code></td><td>字串</td><td>只有在 <code>type</code> 設定為 <code>file</code> 時使用。檔案的位置的 URI。</td></tr><tr><td><code>itemId</code></td><td>字串</td><td>只有在 <code>type</code> 設定為 <code>item</code> 時使用。附件的 EWS 項目識別碼。這是最多 100 個字元的字串。</td></tr></tbody></table></td></tr><tr><td><code>callback</code></td><td>函數</td><td>&lt;選用&gt;</td><td>當方法完成時，在 <code>callback</code> 參數中傳遞的函數會以單一參數 <code>asyncResult</code>，也就是 <a href="simple-types.md#asyncresult"><code>AsyncResult</code></a> 物件進行呼叫。如需詳細資訊，請參閱<a href="tutorial-asynchronous.html">使用非同步方法</a>。</td></tr></tbody></table>|
 
@@ -947,6 +953,8 @@ Office.context.mailbox.item.displayReplyAllForm(
 
 顯示只包含所選郵件的寄件者或所選約會召集人的回覆表單。
 
+> **附註：**iOS 版 Outlook 或 Android 版 Outlook 不支援這個方法。
+
 在 Outlook Web App 中，回覆表單會顯示為 3 欄式檢視中的彈出式表單，以及在 2 欄或 1 欄式檢視中的快顯表單。
 
 如果任何字串參數超過限制，`displayReplyForm` 會拋出例外狀況。
@@ -955,7 +963,7 @@ Office.context.mailbox.item.displayReplyAllForm(
 
 ##### <a name="parameters"></a>參數：
 
-|名稱| 類型	| 說明|
+|名稱| 類型	| 描述|
 |---|---|---|
 |`formData`| 字串 &#124; 物件|包含文字和 HTML，且代表回覆表單本文的字串。字串限制為 32 KB。<br/>**或**<br/>包含本文或附件資料和回呼函數的物件。物件定義如下：<br/><br/>**屬性**<br/><table class="nested-table"><thead><tr><th>名稱</th><th>類型	</th><th>屬性</th><th>描述</th></tr></thead><tbody><tr><td><code>htmlBody</code></td><td>字串</td><td>&lt;選用&gt;</td><td>包含文字和 HTML，且代表回覆表單本文的字串。字串限制為 32 KB。</td></tr><tr><td><code>attachments</code></td><td>陣列。&lt;物件&gt;</td><td>&lt;選用&gt;</td><td>JSON 物件的陣列，該物件是檔案或項目附件。<br/><br/><strong>屬性</strong><br/><table class="nested-table"><thead><tr><th>名稱</th><th>類型	</th><th>描述</th></tr></thead><tbody><tr><td><code>type</code></td><td>字串</td><td>指出附件的類型。對於檔案附件必須是 <code>file</code>，或者對於項目附件必須是 <code>item</code>。</td></tr><tr><td><code>name</code></td><td>字串</td><td>只有在 <code>type</code> 設定為 <code>file</code> 時使用。包含附件名稱的字串，最多 255 個字元長度。</td></tr><tr><td><code>url</code></td><td>字串</td><td>只有在 <code>type</code> 設定為 <code>file</code> 時使用。檔案的位置的 URI。</td></tr><tr><td><code>itemId</code></td><td>字串</td><td>只有在 <code>type</code> 設定為 <code>item</code> 時使用。附件的 EWS 項目識別碼。這是最多 100 個字元的字串。</td></tr></tbody></table></td></tr><tr><td><code>callback</code></td><td>函數</td><td>&lt;選用&gt;</td><td>當方法完成時，在 <code>callback</code> 參數中傳遞的函數會以單一參數 <code>asyncResult</code>，也就是 <a href="simple-types.md#asyncresult"><code>AsyncResult</code></a> 物件進行呼叫。如需詳細資訊，請參閱<a href="tutorial-asynchronous.html">使用非同步方法</a>。</td></tr></tbody></table>|
 
@@ -1051,9 +1059,11 @@ Office.context.mailbox.item.displayReplyForm(
 });
 ```
 
-#### <a name="getentities-entitiessimpletypesmdentities"></a>getEntities() → {[實體](simple-types.md#entities)}
+#### <a name="getentities--entitiessimple-typesmdentities"></a>getEntities() → {[實體](simple-types.md#entities)}
 
 取得在選取項目中所找到的實體。
+
+> **附註：**iOS 版 Outlook 或 Android 版 Outlook 不支援這個方法。
 
 ##### <a name="requirements"></a>需求
 
@@ -1065,8 +1075,7 @@ Office.context.mailbox.item.displayReplyForm(
 
 ##### <a name="returns"></a>傳回：
 
-類型：
-[實體](simple-types.md#entities)
+類型：[實體](simple-types.md#entities)
 
 ##### <a name="example"></a>範例
 
@@ -1076,9 +1085,11 @@ Office.context.mailbox.item.displayReplyForm(
 var contacts = Office.context.mailbox.item.getEntities().contacts;
 ```
 
-#### <a name="getentitiesbytypeentitytype-nullable-arraystringcontactsimpletypesmdcontactmeetingsuggestionsimpletypesmdmeetingsuggestionphonenumbersimpletypesmdphonenumbertasksuggestionsimpletypesmdtasksuggestion"></a>getEntitiesByType(entityType) → (可為 null) {Array.<(String|[Contact](simple-types.md#contact)|[MeetingSuggestion](simple-types.md#meetingsuggestion)|[PhoneNumber](simple-types.md#phonenumber)|[TaskSuggestion](simple-types.md#tasksuggestion))>}
+#### <a name="getentitiesbytypeentitytype--nullable-arraystringcontactsimple-typesmdcontactmeetingsuggestionsimple-typesmdmeetingsuggestionphonenumbersimple-typesmdphonenumbertasksuggestionsimple-typesmdtasksuggestion"></a>getEntitiesByType(entityType) → (可為 null) {Array.<(String|[Contact](simple-types.md#contact)|[MeetingSuggestion](simple-types.md#meetingsuggestion)|[PhoneNumber](simple-types.md#phonenumber)|[TaskSuggestion](simple-types.md#tasksuggestion))>}
 
 取得指定實體類型 (在選取項目中所找到) 的所有實體陣列。
+
+> **附註：**iOS 版 Outlook 或 Android 版 Outlook 不支援這個方法。
 
 ##### <a name="parameters"></a>參數：
 
@@ -1130,10 +1141,13 @@ Office.initialize = function () {
 }
 ```
 
-#### <a name="getfilteredentitiesbynamename-nullable-arraystringcontactsimpletypesmdcontactmeetingsuggestionsimpletypesmdmeetingsuggestionphonenumbersimpletypesmdphonenumbertasksuggestionsimpletypesmdtasksuggestion"></a>getFilteredEntitiesByName(name) → (可為 null) {Array.<(String|[Contact](simple-types.md#contact)|[MeetingSuggestion](simple-types.md#meetingsuggestion)|[PhoneNumber](simple-types.md#phonenumber)|[TaskSuggestion](simple-types.md#tasksuggestion))>}
+#### <a name="getfilteredentitiesbynamename--nullable-arraystringcontactsimple-typesmdcontactmeetingsuggestionsimple-typesmdmeetingsuggestionphonenumbersimple-typesmdphonenumbertasksuggestionsimple-typesmdtasksuggestion"></a>getFilteredEntitiesByName(name) → (可為 null) {Array.<(String|[Contact](simple-types.md#contact)|[MeetingSuggestion](simple-types.md#meetingsuggestion)|[PhoneNumber](simple-types.md#phonenumber)|[TaskSuggestion](simple-types.md#tasksuggestion))>}
 
 在選取項目中傳回已知實體，該項目會傳遞在資訊清單 XML 檔案中定義的命名篩選。
 
+> **附註：**iOS 版 Outlook 或 Android 版 Outlook 不支援這個方法。
+
+
   `getFilteredEntitiesByName` 方法傳回符合規則運算式的實體，該運算式是在資訊清單 XML 檔案的 [ItemHasKnownEntity](https://msdn.microsoft.com/en-us/library/office/fp161166.aspx) 規則項目中所定義，該規則元素具有指定的 `FilterName` 元素值。
 
 ##### <a name="parameters"></a>參數：
@@ -1154,12 +1168,13 @@ Office.initialize = function () {
 
 如果資訊清單中沒有任何 `ItemHasKnownEntity` 項目是具有符合 `name` 參數的 `FilterName` 項目值，則方法會傳回 `null`。如果 `name` 參數不符合資訊清單中的 `ItemHasKnownEntity` 項目，但在目前相符的項目中沒有實體，則方法會傳回空陣列。
 
-類型：
-Array.<(String|[Contact](simple-types.md#contact)|[MeetingSuggestion](simple-types.md#meetingsuggestion)|[PhoneNumber](simple-types.md#phonenumber)|[TaskSuggestion](simple-types.md#tasksuggestion))>
+類型：Array.<(String|[Contact](simple-types.md#contact)|[MeetingSuggestion](simple-types.md#meetingsuggestion)|[PhoneNumber](simple-types.md#phonenumber)|[TaskSuggestion](simple-types.md#tasksuggestion))>
 
-#### <a name="getregexmatches-object"></a>getRegExMatches() → {物件}
+#### <a name="getregexmatches--object"></a>getRegExMatches() → {物件}
 
 在選取項目中傳回符合規則運算式的字串值，該值是在資訊清單 XML 檔中所定義。
+
+> **附註：**iOS 版 Outlook 或 Android 版 Outlook 不支援這個方法。
 
 `getRegExMatches` 方法傳回符合規則運算式的字串，該運算式是在資訊清單 XML 檔案的每個 `ItemHasRegularExpressionMatch` 或 `ItemHasKnownEntity` 規則項目中所定義。對於 `ItemHasRegularExpressionMatch` 規則，相符的字串必須出現在由該規則所指定之項目的屬性中。`PropertyName` 簡單類型定義所支援的屬性。
 
@@ -1198,10 +1213,12 @@ Array.<(String|[Contact](simple-types.md#contact)|[MeetingSuggestion](simple-typ
 
 物件包含符合規則運算式的字串陣列，該運算式是在資訊清單 XML 檔案中所定義。每個陣列名稱等於相符 `ItemHasRegularExpressionMatch` 規則 `RegExName` 屬性或相符 `ItemHasKnownEntity` 規則 `FilterName` 屬性的相對應值。
 
-<dl class="param-type">
-
-<dt>類型</dt>
-
+<dl class="param-type">
+
+<dt>
+類型</dt>
+
+
 <dd>物件</dd>
 
 </dl>
@@ -1216,9 +1233,11 @@ var fruits = allMatches.fruits;
 var veges = allMatches.veggies;
 ```
 
-#### <a name="getregexmatchesbynamename-nullable-arraystring"></a>getRegExMatchesByName(name) → (可為 null) {Array.<String>}
+#### <a name="getregexmatchesbynamename--nullable-arraystring"></a>getRegExMatchesByName(name) → (可為 null) {Array.<String>}
 
 在選取項目中傳回符合命名規則運算式的字串值，該值是在資訊清單 XML 檔中所定義。
+
+> **附註：**iOS 版 Outlook 或 Android 版 Outlook 不支援這個方法。
 
 `getRegExMatchesByName` 方法傳回符合規則運算式的字串，該運算式是在資訊清單 XML 檔案的 `ItemHasRegularExpressionMatch` 規則項目中所定義，該規則項目具有指定的 `RegExName` 項目值。
 
@@ -1228,7 +1247,7 @@ var veges = allMatches.veggies;
 
 |名稱| 類型	| 描述|
 |---|---|---|
-|`name`| 字串|定義要符合篩選的 `ItemHasRegularExpressionMatch` 規則項目名稱。|
+|`name`| 字串|定義要符合篩選的 `ItemHasRegularExpressionMatch` 規則元素名稱。|
 
 ##### <a name="requirements"></a>需求
 
@@ -1242,10 +1261,12 @@ var veges = allMatches.veggies;
 
 陣列包含符合規則運算式的字串，該運算式是在資訊清單 XML 檔案內所定義。
 
-<dl class="param-type">
-
-<dt>類型</dt>
-
+<dl class="param-type">
+
+<dt>
+類型</dt>
+
+
 <dd>陣列。<String></dd>
 
 </dl>
@@ -1257,7 +1278,7 @@ var fruits = Office.context.mailbox.item.getRegExMatchesByName("fruits");
 var veggies = Office.context.mailbox.item.getRegExMatchesByName("veggies");
 ```
 
-####  <a name="getselecteddataasynccoerciontype-options-callback-string"></a>getSelectedDataAsync(coercionType, [options], callback) → {String}
+####  <a name="getselecteddataasynccoerciontype-options-callback--string"></a>getSelectedDataAsync(coercionType, [options], callback) → {String}
 
 以非同步方式從郵件主旨或本文傳回選取資料。
 
@@ -1285,7 +1306,13 @@ var veggies = Office.context.mailbox.item.getRegExMatchesByName("veggies");
 
 選取的資料當做字串，是由 `coercionType` 決定格式。
 
-<dl class="param-type"><dt>類型</dt><dd>字串</dd>
+<dl class="param-type">
+
+<dt>
+類型</dt>
+
+
+<dd>字串</dd>
 
 </dl>
 
@@ -1321,8 +1348,7 @@ function setCallback(asyncResult) {
 |---|---|---|---|
 |`callback`| 函數||當方法完成時，在 `callback` 參數中傳遞的函數會以單一參數 `asyncResult`，也就是 [`AsyncResult`](simple-types.md#asyncresult) 物件進行呼叫。
 
-提供自訂屬性，做為在 `asyncResult.value` 屬性中的 [`CustomProperties`](CustomProperties.md) 物件。這個物件可用來取得、設定和移除來自項目的自訂屬性，並將變更儲存回伺服器的自訂屬性集。| 
-|`userContext`| 物件| &lt;選用&gt;|開發人員可以提供任何他們想要在回呼函數中存取的物件。這個物件可由回呼函數中的 `asyncResult.asyncContext` 屬性來進行存取。|
+提供自訂屬性，做為在 `asyncResult.value` 屬性中的 [`CustomProperties`](CustomProperties.md) 物件。這個物件可用來取得、設定和移除來自項目的自訂屬性，並將變更儲存回伺服器的自訂屬性集。| |`userContext`| 物件| &lt;選用&gt;|開發人員可以提供任何他們想要在回呼函數中存取的物件。這個物件可由回呼函數中的 `asyncResult.asyncContext` 屬性來進行存取。|
 
 ##### <a name="requirements"></a>需求
 
@@ -1371,7 +1397,7 @@ function saveCallback(asyncResult) {
 |---|---|---|---|
 |`attachmentId`| 字串||要移除的附件識別碼。字串的最大長度為 100 個字元。|
 |`options`| 物件| &lt;選擇性&gt;|物件常值包含下列一個或多個屬性。<br/><br/>**屬性**<br/><table class="nested-table"><thead><tr><th>名稱</th><th>類型	</th><th>屬性</th><th>描述</th></tr></thead><tbody><tr><td><code>asyncContext</code></td><td>物件</td><td>&lt;選擇性&gt;</td><td>開發人員可提供任何他們想要在回呼方法中存取的物件。</td></tr></tbody></table>|
-|`callback`| 函數| &lt;選擇性&gt;|當方法完成時，在 `callback` 參數中傳遞的函數會以單一參數 `asyncResult`，也就是 [`AsyncResult`](simple-types.md#asyncresult) 物件進行呼叫。 <br/>如果附件移除失敗，`asyncResult.error` 屬性將會包含錯誤碼與失敗原因。<br/><table class="nested-table"><thead><tr><th>錯誤碼</th><th>說明</th></tr></thead><tbody><tr><td><code>InvalidAttachmentId</code></td><td>附件識別碼不存在。</td></tr></tbody></table>|
+|`callback`| 函數| &lt;選擇性&gt;|當方法完成時，在 `callback` 參數中傳遞的函數會以單一參數 `asyncResult`，也就是 [`AsyncResult`](simple-types.md#asyncresult) 物件進行呼叫。 <br/>如果附件移除失敗，`asyncResult.error` 屬性將會包含錯誤碼與失敗原因。<br/><table class="nested-table"><thead><tr><th>錯誤碼</th><th>描述</th></tr></thead><tbody><tr><td><code>InvalidAttachmentId</code></td><td>附件識別碼不存在。</td></tr></tbody></table>|
 
 ##### <a name="requirements"></a>需求
 

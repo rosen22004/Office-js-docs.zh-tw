@@ -33,7 +33,7 @@ Labs.js 程式庫做為 office.js 程式庫頂端的抽象層 (Office 增益集�
 
 第一個步驟是申請 Office 365 開發人員網站。這可讓您先裝載和測試實驗室，再將其提交給 Office 市集。網站可讓您將增益集發佈至 Office Mix，並在真實的環境中進行測試。
 
-如需詳細資訊，請參閱[在 Office 365 上設定 SharePoint 增益集的開發環境](http://msdn.microsoft.com/library/b22ce52a-ae9e-4831-9b68-c9210af6dc54%28Office.15%29.aspx)。您只需要遵循前兩個步驟；可選擇安裝 "Napa" 開發人員工具。
+如需詳細資訊，請參閱[在 Office 365 上設定 SharePoint 增益集的開發環境](http://msdn.microsoft.com/library/b22ce52a-ae9e-4831-9b68-c9210af6dc54%28Office.15%29.aspx)。 
 
 
 ### <a name="set-up-an-app-catalog-on-sharepoint-online"></a>在 SharePoint Online 上設定應用程式目錄
@@ -59,21 +59,21 @@ Labs.js 程式庫做為 office.js 程式庫頂端的抽象層 (Office 增益集�
 
 我們加入了範例資訊清單 "SampleManifest.xml"。如需資訊清單結構描述的詳細資訊，以及結構描述定義的連結，請參閱 [Office 增益集的 XML 資訊清單](../../../docs/overview/add-in-manifests.md)。
 
-若要將資訊清單上載至 SharePoint 網站，請先瀏覽到您的應用程式目錄，通常位於 URL <code>https://\<your site\>/sites/AppCatalog</code>。然後，選擇 [新增應用程式] 按鈕，並依照步驟來上載您的應用程式資訊清單。
+若要將資訊清單上載至 SharePoint 網站，請先瀏覽到您的應用程式目錄，通常位於 URL <code>https://\<your site\>/sites/AppCatalog</code>。然後，選擇 [新增應用程式]**** 按鈕，並依照步驟來上載您的應用程式資訊清單。
 
 
 ### <a name="update-your-powerpoint-2013-catalog"></a>更新您的 PowerPoint 2013 目錄
 
 接著更新您的 PowerPoint 2013 目錄。您之後可使用您的開發人員帳戶登入。
 
-更新 PowerPoint 2013 目錄以啟動。啟動 PowerPoint 2013 並瀏覽功能表路徑 [檔案 > 選項 > 信任中心 > 信任中心設定 > 信任應用程式目錄]。從那裡，將參考加入至您的應用程式目錄，然後選擇 [確定]。PowerPoint 2013 會要求您先登出，讓變更生效。登出。
+更新 PowerPoint 2013 目錄以啟動。啟動 PowerPoint 2013 並瀏覽功能表路徑 [檔案 > 選項 > 信任中心 > 信任中心設定 > 信任應用程式目錄]****。從那裡，將參考加入至您的應用程式目錄，然後選擇 [確定]****。PowerPoint 2013 會要求您先登出，讓變更生效。登出。
 
 最後，使用開發人員帳戶再重新登入。選擇 PowerPoint 2013 右上角的登入名稱，並使用您的開發人員帳戶登入。您現在可以插入您的增益集。
 
 
-### <a name="insert,-publish,-and-view-your-app"></a>插入、發佈及檢視您的應用程式
+### <a name="insert-publish-and-view-your-app"></a>插入、發佈及檢視您的應用程式
 
-若要將增益集插入目錄中，請選擇 [插入] 功能區，然後選擇 [應用程式] 區段中的 [存放區]。選擇 [我的組織]，且您會在增益集類別中看到增益集。選擇增益集，選取 [插入]，並將增益集 (實驗室) 插入 PowerPoint 2013 文件中。
+若要將增益集插入目錄中，請選擇 [插入]**** 功能區，然後選擇 [應用程式]**** 區段中的 [存放區]****。選擇 [我的組織]****，且您會在增益集類別中看到增益集。選擇增益集，選取 [插入]****，並將增益集 (實驗室) 插入 PowerPoint 2013 文件中。
 
 現在您也可以利用所有可用的 Office Mix 功能，使用新實驗室發佈課程。
 

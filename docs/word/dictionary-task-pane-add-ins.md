@@ -1,22 +1,19 @@
-﻿
-# <a name="create-a-dictionary-task-pane-addin"></a>建立字典工作窗格增益集
+
+# <a name="create-a-dictionary-task-pane-add-in"></a>建立字典工作窗格增益集
 
 
 本文將告訴您工作窗格增益集的範例，並隨附 Web 服務來提供使用者在 Word 2013 文件中目前選取範圍的字典定義或同義字。 
 
 字典 Office 增益集是根據標準的工作窗格增益集，包含額外的功能以支援查詢和顯示字典 XML Web 服務的定義 (除了 Office 應用程式的 UI 中的其他位置)。 
 
-在典型的字典工作窗格增益集，使用者在他們的文件中選取單字或片語，增益集背後的 JavaScript 邏輯接著會將此選項傳遞至字典提供者的 XML Web 服務。接著會更新字典提供者的網頁，向使用者顯示選項的定義。
-XML Web 服務元件最多會以 OfficeDefinitions XML 結構描述所定義的格式傳回定義，隨後在裝載 Office 應用程式的 UI中，向其他位置的使用者顯示。
-圖 1 顯示在 Word 2013 中執行的 Bing 品牌字典增益集的選項和顯示經驗。
+在典型的字典工作窗格增益集，使用者在他們的文件中選取單字或片語，增益集背後的 JavaScript 邏輯接著會將此選項傳遞至字典提供者的 XML Web 服務。接著會更新字典提供者的網頁，向使用者顯示選項的定義。XML Web 服務元件最多會以 OfficeDefinitions XML 結構描述所定義的格式傳回定義，隨後在裝載 Office 應用程式的 UI中，向其他位置的使用者顯示。圖 1 顯示在 Word 2013 中執行的 Bing 品牌字典增益集的選項和顯示經驗。
 
 **圖 1.顯示所選字定義的字典增益集**
 
 
 ![A dictionary app displaying a definition](../../images/DictionaryAgave01.jpg)
 
-取決於您按一下字典增益集的 HTML UI 的 [查看更多] 連結以顯示工作窗格中的詳細資訊，或開啟另一個瀏覽器視窗來顯示所選單字或片語的完整網頁。圖 2 顯示 [定義] 內容功能表命令，可讓使用者快速啟動安裝字典。
-數字 3 到 5 會顯示 Office UI 中的位置，其中的字典 XML 服務可用於在 Word 2013 中提供定義。
+取決於您按一下字典增益集的 HTML UI 的 [查看更多]**** 連結以顯示工作窗格中的詳細資訊，或開啟另一個瀏覽器視窗來顯示所選單字或片語的完整網頁。圖 2 顯示 [定義]**** 內容功能表命令，可讓使用者快速啟動安裝字典。數字 3 到 5 會顯示 Office UI 中的位置，其中的字典 XML 服務可用於在 Word 2013 中提供定義。
 
 **圖 2.定義在內容功能表中的命令**
 
@@ -181,7 +178,7 @@ public class WebService : System.Web.Services.WebService {
 ```
 
 
-## <a name="creating-the-components-of-a-dictionary-addin"></a>建立字典增益集的元件
+## <a name="creating-the-components-of-a-dictionary-add-in"></a>建立字典增益集的元件
 
 
 字典增益集包含三個主要元件檔案。
@@ -194,7 +191,7 @@ public class WebService : System.Web.Services.WebService {
 - JavaScript 檔案，其提供邏輯以取得文件的使用者選項、傳回選項做為 Web 服務的查詢，然後在增益集的 UI 中顯示傳回的結果。
     
 
-### <a name="creating-a-dictionary-addins-manifest-file"></a>建立字典增益集的資訊清單檔
+### <a name="creating-a-dictionary-add-ins-manifest-file"></a>建立字典增益集的資訊清單檔
 
 以下是字典增益集的範例資訊清單檔。
 
@@ -202,7 +199,7 @@ public class WebService : System.Web.Services.WebService {
 ```XML
 <?xml version="1.0" encoding="utf-8"?>
 <OfficeApp xmlns="http://schemas.microsoft.com/office/appforoffice/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="TaskPaneApp">
-  <Id>DemoDict</Id>
+  <Id>7164e750-dc86-49c0-b548-1bac57abdc7c</Id>
   <Version>15.0</Version>
   <ProviderName>Microsoft Office Demo Dictionary</ProviderName>
   <DefaultLocale>en-us</DefaultLocale>
@@ -444,7 +441,7 @@ public class WebService : System.Web.Services.WebService {
 ```
 
 
-### <a name="creating-a-dictionary-addins-html-user-interface"></a>建立字典增益集的 HTML 使用者介面
+### <a name="creating-a-dictionary-add-ins-html-user-interface"></a>建立字典增益集的 HTML 使用者介面
 
 
 下列兩個範例顯示「示範字典」增益集之 UI 的 HTML 和 CSS 檔案。若要檢視 UI 在增益集的工作窗格中的顯示方式，請參閱程式碼下方的圖 6。若要查看 Dictionary.js 檔案中的 JavaScript 實作如何為此 HTML UI 提供程式設計邏輯，請參閱緊接本節後面的「撰寫 JavaScript 實作 」。

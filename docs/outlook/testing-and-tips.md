@@ -34,32 +34,31 @@
 
 ### <a name="installing-an-add-in-in-an-outlook-rich-client"></a>在 Outlook 豐富型用戶端中安裝增益集
 
-如果您的信箱位於 Exchange Online、Exchange 2013 或更新版本上，您可以安裝增益集。在 Outlook for Windows 中，您可以透過 Office Fluent Backstage 檢視安裝增益集。選擇 [檔案] 和 [管理增益集]。這可讓您登入 Exchange 系統管理中心。登入後，繼續下一節的步驟 4 中的安裝程序。
+如果您的信箱位於 Exchange Online、Exchange 2013 或更新版本上，您可以安裝增益集。在 Outlook for Windows 中，您可以透過 Office Fluent Backstage 檢視安裝增益集。選擇 [檔案]**** 和 [管理增益集]****。這可讓您登入 Exchange 系統管理中心。登入後，繼續下一節的步驟 4 中的安裝程序。
 
-在 Outlook for Mac 中，選擇增益集列右端的 [管理增益集] 然後登入 Exchange 系統管理中心。繼續進行下一節中的步驟 4。
+在 Outlook for Mac 中，選擇增益集列右端的 [管理增益集]**** 然後登入 Exchange 系統管理中心。繼續進行下一節中的步驟 4。
 
 
-### <a name="installing-an-add-in-by-using-outlook-web-app-or-outlook.com"></a>使用 Outlook Web App 或 Outlook.com 安裝增益集
+### <a name="installing-an-add-in-by-using-outlook-web-app-or-outlookcom"></a>使用 Outlook Web App 或 Outlook.com 安裝增益集
 
 若要使用 Outlook Web App (OWA) 安裝 Outlook 增益集，請依照下列步驟執行︰
 
 
 1. 瀏覽至您組織的 OWA URL 或 Outlook.com 並登入。
     
-2. 在右上角選擇齒輪圖示，然後選擇 [管理增益集]。
+2. 在右上角選擇齒輪圖示，然後選擇 [管理增益集]****。
     
 3. 選取加號 ( **+**) 來新增新的增益集。
     
-4. 從下拉式清單中，選取 [從檔案新增]，假設您已本機資料夾上儲存資訊清單。
+4. 從下拉式清單中，選取 [從檔案新增]****，假設您已本機資料夾上儲存資訊清單。
     
-5. 瀏覽至資訊清單的檔案路徑，然後選取 [安裝]。
+5. 瀏覽至資訊清單的檔案路徑，然後選取 [安裝]****。
     
-6. 選取視窗右上角的使用者名稱，然後選取 [我的郵件] 以切換到您的電子郵件來測試增益集。
+6. 選取視窗右上角的使用者名稱，然後選取 [我的郵件]**** 以切換到您的電子郵件來測試增益集。
     
 
 >**附註**  如果您不使用下列其中一項來開發增益集︰ 
 - Office 365 開發人員租用戶
-- Napa Office 365 Development Tools
 - Visual Studio
 
 而且，如果您的 Exchange Server 沒有至少「我的自訂應用程式」角色，則您僅可以從 Office 市集安裝增益集。為了測試增益集，或藉由指定增益集資訊清單的 URL 或檔案名稱安裝一般增益集，您應該要求您的 Exchange 系統管理員提供必要的權限。
@@ -74,7 +73,7 @@ Exchange 系統管理員可以執行下列 PowerShell cmdlet 為單一使用者�
 
 如需「我的自訂應用程式」角色的詳細資訊，請參閱[我的自訂應用程式角色](http://technet.microsoft.com/en-us/library/aa0321b3-2ec0-4694-875b-7a93d3d99089%28EXCHG.150%29.aspx)。 
 
-使用 Office 365、Napa 或 Visual Studio 來開發增益集會為您指派組織系統管理員角色，讓您可藉由檔案或 EAC 中的 URL，或藉由 Powershell cmdlets 安裝增益集。
+使用 Office 365 或 Visual Studio 來開發增益集會為您指派組織系統管理員角色，讓您可藉由檔案或 EAC 中的 URL，或藉由 Powershell cmdlets 安裝增益集。
 
 
 ### <a name="installing-an-add-in-by-using-remote-powershell"></a>使用遠端 PowerShell 安裝增益集

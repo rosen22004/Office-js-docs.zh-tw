@@ -15,7 +15,7 @@
 對所有類型的增益集 (內容、Outlook，和工作窗格增益集和增益集命令)，您需要將增益集的網頁檔案部署到 Web 伺服器或 Web 裝載服務，例如 [Microsoft Azure](../publish/host-an-office-add-in-on-microsoft-azure.md)。
 
 
- >**附註：**在 Visual Studio 中開發和偵錯增益集時，Visual Studio 會在本機使用 IIS Express 部署和執行增益集的網頁檔案，而且您不需要其他 Web 伺服器。同樣地，當您在瀏覽器中使用 Napa 開發及偵錯時，它會從您用來登入 Napa 的帳戶所相關的儲存體來部署並執行增益集的網頁檔案。
+ >**附註：** 在 Visual Studio 中開發和偵錯增益集時，Visual Studio 會在本機使用 IIS Express 部署和執行增益集的網頁檔案，而且您不需要其他 Web 伺服器。 
 
 對於內容和工作窗格增益集，在支援的 Office 主機應用程式 (Access Web 應用程式、Word、Excel、PowerPoint 或 Project) 中，您在 SharePoint 上還需要[增益集目錄](../publish/publish-task-pane-and-content-add-ins-to-an-add-in-catalog.md)以上載增益集的 XML 資訊清單檔案。
 

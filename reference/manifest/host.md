@@ -49,7 +49,8 @@
 
 |  元素 |  必要  |  描述  |
 |:-----|:-----|:-----|
-|  [DesktopFormFactor](./desktopformfactor.md)    |  是   |  為桌面外觀尺寸定義設定。 |
+|  [DesktopFormFactor](./desktopformfactor.md)    |  是   |  為桌上型電腦外觀尺寸定義設定。 |
+|  [MobileFormFactor](./mobileformfactor.md)    |  否   |  為行動裝置外觀尺寸定義設定。**附註︰**只有 iOS 版 Outlook 支援此元素。 |
 
 
 ### <a name="xsitype"></a>xsi:type

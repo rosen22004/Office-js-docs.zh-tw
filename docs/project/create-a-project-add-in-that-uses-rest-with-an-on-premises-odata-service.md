@@ -19,13 +19,12 @@
      >**附註**  Project Standard 2013 還可以主控工作窗格增益集，但無法登入到 Project Web App。
 - 隨附 Office Developer Tools for Visual Studio 的 Visual Studio 2015 包括用於建立 Office 和 SharePoint 增益集的範本。請確定您已安裝最新版的 Office 開發人員工具；請參閱 _Office 增益集和 SharePoint 下載_的[工具](http://msdn.microsoft.com/en-us/office/apps/fp123627.aspx)一節 。
     
-     >**附註**  Napa 無法用來建立 Project 2013 工作窗格增益集。
 - 本文的程序和程式碼範例可存取本機網域中 Project Server 2013 的 **ProjectData** 服務。本文中的 jQuery 方法不適用於 Project Online。
     
     驗證您的開發電腦可存取 **ProjectData** 服務。
     
 
-### <a name="procedure-1.-to-verify-that-the-projectdata-service-is-accessible"></a>程序 1.確定可存取 ProjectData 服務
+### <a name="procedure-1-to-verify-that-the-projectdata-service-is-accessible"></a>程序 1.確定可存取 ProjectData 服務
 
 
 1- 若要讓您的瀏覽器直接顯示 REST 查詢的 XML 資料，請關閉摘要讀取檢視。如需如何在 Internet Explorer 中執行這項操作的詳細資訊，請參閱[查詢專案報告資料的 OData 摘要](http://msdn.microsoft.com/library/3eafda3b-f006-48be-baa6-961b2ed9fe01%28Office.15%29.aspx)中的程序 1、步驟 4。
@@ -62,28 +61,28 @@ Office Developer Tools for Visual Studio 包括 Project 2013 的工作窗格增�
 - Web 專案名為 **HelloProjectODataWeb**。它可以在工作窗格中包含網頁、JavaScript 檔案、CSS 檔案、影像、參考和 Web 內容的組態檔。Web 專案選定 .NET Framework 4。程序 4 和 5 顯示如何修改 Web 專案中的檔案，以建立 **HelloProjectOData** 增益集的功能。
     
 
-### <a name="procedure-2.-to-create-the-helloprojectodata-add-in-for-project"></a>程序 2.建立 Project 的 HelloProjectOData 增益集
+### <a name="procedure-2-to-create-the-helloprojectodata-add-in-for-project"></a>程序 2.建立 Project 的 HelloProjectOData 增益集
 
 
-1. 以系統管理員身分執行 Visual Studio 2015，然後在 [開始] 頁面上選擇 [新專案]。
+1. 以系統管理員身分執行 Visual Studio 2015，然後在 [開始] 頁面上選擇 [新專案]****。
     
-2. 在 [新專案] 對話方塊方塊中，依序展開 [範本]、[Visual C#] 和 [Office/SharePoint] 節點，然後選取 [Office 增益集]。在中間窗格的目標架構下拉式清單中選取 [.NET Framework 4.5.2]，然後選取 [Office 增益集] (請參閱下一個螢幕擷取畫面)。
+2. 在 [新專案]**** 對話方塊方塊中，依序展開 [範本]****、[Visual C#]**** 和 [Office/SharePoint]**** 節點，然後選取 [Office 增益集]****。在中間窗格的目標架構下拉式清單中選取 [.NET Framework 4.5.2]****，然後選取 [Office 增益集]**** (請參閱下一個螢幕擷取畫面)。
     
-3. 若要將這兩個 Visual Studio 專案放在相同的目錄，請選取 [建立解決方案的目錄]，然後瀏覽至您要的位置。
+3. 若要將這兩個 Visual Studio 專案放在相同的目錄，請選取 [建立解決方案的目錄]****，然後瀏覽至您要的位置。
     
-4. 在 [名稱] 欄位中鍵入 HelloProjectOData，然後選擇 [確定]。
+4. 在 [名稱]**** 欄位中鍵入 HelloProjectOData，然後選擇 [確定]****。
     
     **建立 Office 增益集**
 
     ![建立 Office 2013 的應用程式](../../images/pj15_HelloProjectOData_CreatingApp.png)
 
-5. 在 [選擇增益集類型] 對話方塊中，選取 [工作窗格]，然後選擇 [下一步] (請參閱下一個螢幕擷取畫面)。
+5. 在 [選擇增益集類型]**** 對話方塊中，選取 [工作窗格]****，然後選擇 [下一步]**** (請參閱下一個螢幕擷取畫面)。
     
     **選擇要建立的增益集類型**
 
     ![選擇要建立的應用程式類型](../../images/pj15_HelloProjectOData_ChooseProject.png)
 
-6. 在 [選擇主應用程式] 對話方塊中，清除 [專案] 核取方塊以外的所有核取方塊 (請參閱下一個螢幕擷取畫面)，然後選擇 [完成]。
+6. 在 [選擇主應用程式]**** 對話方塊中，清除 [專案]**** 核取方塊以外的所有核取方塊 (請參閱下一個螢幕擷取畫面)，然後選擇 [完成]****。
     
     **選擇主應用程式**
 
@@ -102,7 +101,7 @@ Office Developer Tools for Visual Studio 包括 Project 2013 的工作窗格增�
 如需資訊清單的詳細資訊，請參閱 [Office 增益集的 XML 資訊清單](../../docs/overview/add-in-manifests.md)和 [Office 增益集資訊清單的結構描述參考 (v1.1)](../overview/add-in-manifests.md)。
 
 
-### <a name="procedure-3.-to-modify-the-add-in-manifest"></a>程序 3.修改增益集資訊清單
+### <a name="procedure-3-to-modify-the-add-in-manifest"></a>程序 3.修改增益集資訊清單
 
 
 1. 在 Visual Studio 中，開啟 HelloProjectOData.xml 檔案。
@@ -111,13 +110,13 @@ Office Developer Tools for Visual Studio 包括 Project 2013 的工作窗格增�
     
 3. 預設描述也是 "HelloProjectOData"。例如，將 Description 元素的預設值變更為 [測試 ProjectData 服務的 REST 查詢]。
     
-4. 在功能區的 [專案] 索引標籤的 [Office 增益集] 下拉式清單中，新增要顯示的圖示。您可以在 Visual Studio 解決方案中加入圖示檔，或使用圖示的 URL。 
+4. 在功能區的 [專案]**** 索引標籤的 [Office 增益集]**** 下拉式清單中，新增要顯示的圖示。您可以在 Visual Studio 解決方案中加入圖示檔，或使用圖示的 URL。 
 
 下列步驟示範如何將圖示檔加入至 Visual Studio 解決方案︰
     
-1. 在 [方案總管] 中，移至名為 Images 的資料夾。
+1. 在 [方案總管]**** 中，移至名為 Images 的資料夾。
     
-2. 若要顯示在 [Office 增益集] 下拉式清單中，圖示必須是 32 x 32 像素。例如，安裝 Project 2013 SDK，然後選擇 [Images] 資料夾，並從 SDK 中新增下列檔案︰`\Samples\Apps\HelloProjectOData\HelloProjectODataWeb\Images\NewIcon.png`
+2. 若要顯示在 [Office 增益集]**** 下拉式清單中，圖示必須是 32 x 32 像素。例如，安裝 Project 2013 SDK，然後選擇 [Images]**** 資料夾，並從 SDK 中新增下列檔案︰`\Samples\Apps\HelloProjectOData\HelloProjectODataWeb\Images\NewIcon.png`
     
     Alternately, use your own 32 x 32 icon; or, copy the following image to a file named NewIcon.png, and then add that file to the  `HelloProjectODataWeb\Images` folder: ![HelloProjectOData 應用程式的圖示](../../images/pj15_HelloProjectData_NewIcon.jpg)
 
@@ -153,9 +152,9 @@ Office Developer Tools for Visual Studio 包括 Project 2013 的工作窗格增�
 
 - 副標題可表示作業的一般功能或類型，例如 **ODATA REST QUERY**。
     
-- [取得 ProjectData 端點] 按鈕會呼叫 **setOdataUrl** 函式來取得 **ProjectData** 服務的端點，並將它顯示在文字方塊中。如果 Project 未連線 Project Web App，增益集就會呼叫錯誤處理常式來顯示快顯錯誤訊息。
+- [取得 ProjectData 端點]**** 按鈕會呼叫 **setOdataUrl** 函式來取得 **ProjectData** 服務的端點，並將它顯示在文字方塊中。如果 Project 未連線 Project Web App，增益集就會呼叫錯誤處理常式來顯示快顯錯誤訊息。
     
-- 在增益集取得有效的 OData 端點之前，會停用 [比較所有專案] 按鈕。選取按鈕時，它會呼叫 **retrieveOData** 函式，其使用 REST 查詢，從 **ProjectData** 服務取得專案成本和工作資料。
+- 在增益集取得有效的 OData 端點之前，會停用 [比較所有專案]**** 按鈕。選取按鈕時，它會呼叫 **retrieveOData** 函式，其使用 REST 查詢，從 **ProjectData** 服務取得專案成本和工作資料。
     
 - 資料表會顯示專案成本、實際成本、工作及完成百分比的平均值。資料表也會比較目前使用中專案值與平均值。如果目前的值大於所有專案的平均值，值會顯示成紅色。如果目前的值小於平均值，值會顯示成綠色。如果無法使用目前值，資料表格會顯示藍色的 **NA**。
     
@@ -164,7 +163,7 @@ Office Developer Tools for Visual Studio 包括 Project 2013 的工作窗格增�
      >**附註**  在這個範例中，從已發佈的值衍生使用中專案的成本和工作資料。如果您變更專案中的值，直到發佈專案後，**ProjectData** 服務才能反映該變更。
 
 
-### <a name="procedure-4.-to-create-the-html-content"></a>程序 4.建立 HTML 內容
+### <a name="procedure-4-to-create-the-html-content"></a>程序 4.建立 HTML 內容
 
 1. 在 Home.html 檔案的 **head** 元素中，為增益集使用的 CSS 檔案加入任何其他 **link** 元素。Visual Studio 專案範本包括可使用於自訂 CSS 樣式的 App.css 檔案的連結。
     
@@ -276,12 +275,12 @@ Office Developer Tools for Visual Studio 包括 Project 2013 的工作窗格增�
 
 Project 工作窗格增益集的範本包括預設的初始化程式碼，其目的是針對一般的 Office 2013 增益集中的文件資料，示範基本的取得和設定動作。由於 Project 2013 不支援寫入使用中專案的動作，且 **HelloProjectOData** 增益集不會使用 **getSelectedDataAsync** 方法，因此您可以刪除 **Office.initialize** 函式內的指令碼，並刪除預設的 HelloProjectOData.js 檔中的 **setData** 函式和 **getData** 函式。
 
-JavaScript 包含 REST 查詢的全域常數，和幾個函式中使用的全域變數。[取得 ProjectData 端點] 按鈕會呼叫 **setOdataUrl** 函式以初始化全域變數，並判斷 Project 是否連線 Project Web App。
+JavaScript 包含 REST 查詢的全域常數，和幾個函式中使用的全域變數。[取得 ProjectData 端點]**** 按鈕會呼叫 **setOdataUrl** 函式以初始化全域變數，並判斷 Project 是否連線 Project Web App。
 
-HelloProjectOData.js 檔案的其餘部分包括兩個函式︰使用者選取 [比較所有專案] 時所呼叫的 **retrieveOData** 函式；以及 **parseODataResult** 函式，可用來計算平均值，然後在比較資料表中填入色彩和單位的格式設定值。
+HelloProjectOData.js 檔案的其餘部分包括兩個函式︰使用者選取 [比較所有專案]**** 時所呼叫的 **retrieveOData** 函式；以及 **parseODataResult** 函式，可用來計算平均值，然後在比較資料表中填入色彩和單位的格式設定值。
 
 
-### <a name="procedure-5.-to-create-the-javascript-code"></a>程序 5.建立 JavaScript 程式碼
+### <a name="procedure-5-to-create-the-javascript-code"></a>程序 5.建立 JavaScript 程式碼
 
 
 1. 刪除預設 HelloProjectOData.js 檔案中的所有程式碼，然後再新增全域變數和 **Office.initialize** 函式。全部大寫的變數名稱表示它們是常數；在這個範例中，它們稍後會搭配 **_pwa** 變數來建立 REST 查詢。
@@ -306,7 +305,7 @@ HelloProjectOData.js 檔案的其餘部分包括兩個函式︰使用者選取 [
     }
 ```
 
-2. 新增 **setOdataUrl** 和相關函式。**setOdataUrl** 函式呼叫 **getProjectGuid** 和 **getDocumentUrl** 來初始化全域變數。在 [getProjectFieldAsync](../../reference/shared/projectdocument.getprojectfieldasync.md) 方法中，_callback_ 參數的匿名函式可啟用 [比較所有專案] 按鈕，方式是在 jQuery 程式庫中使用 **removeAttr** 方法，然後顯示 **ProjectData** 服務的 URL。如果 Project 未連線 Project Web App，函式會擲回錯誤來顯示快顯錯誤訊息。SurfaceErrors.js 檔案包含 **throwError** 方法。
+2. 新增 **setOdataUrl** 和相關函式。**setOdataUrl** 函式呼叫 **getProjectGuid** 和 **getDocumentUrl** 來初始化全域變數。在 [getProjectFieldAsync](../../reference/shared/projectdocument.getprojectfieldasync.md) 方法中，_callback_ 參數的匿名函式可啟用 [比較所有專案]**** 按鈕，方式是在 jQuery 程式庫中使用 **removeAttr** 方法，然後顯示 **ProjectData** 服務的 URL。如果 Project 未連線 Project Web App，函式會擲回錯誤來顯示快顯錯誤訊息。SurfaceErrors.js 檔案包含 **throwError** 方法。
     
      >**附註**  如果您在 Project Server 電腦上執行 Visual Studio，若要使用 **F5** 偵錯，將初始化 **_pwa** 全域變數那行程式碼之後的程式碼取消註解。若要啟用在 Project Server 電腦上偵錯時使用 jQuery **ajax** 方法，您必須設定 PWA URL 的 **localhost** 值。如果您在遠端電腦上執行 Visual Studio，則不需要 **localhost** URL。在您部署增益集之前，請先註解化該程式碼。
 
@@ -552,9 +551,9 @@ HelloProjectOData.js 檔案的其餘部分包括兩個函式︰使用者選取 [
 若要使用 Visual Studio 2015 來測試和偵錯 **HelloProjectOData** 增益集，Project Professional 2013 必須安裝在開發電腦上。若要啟用不同的測試案例，請確定可以選擇為本機電腦上的檔案開啟 Project，或將 Project 與 Project Web App 連線。例如，執行下列步驟︰
 
 
-1. 在功能區的 [檔案] 索引標籤上，選擇 Backstage 檢視的 [資訊] 索引標籤，然後選擇 [管理帳戶]。
+1. 在功能區的 [檔案]**** 索引標籤上，選擇 Backstage 檢視的 [資訊]**** 索引標籤，然後選擇 [管理帳戶]****。
     
-2. 在 [Project Web App 帳戶] 對話方塊中，除了本機的**電腦**帳戶外，[可用帳戶] 清單還能擁有多個 Project Web App 帳戶。在 [啟動時] 區段中，選取 [選擇一個帳戶]。
+2. 在 [Project Web App 帳戶]**** 對話方塊中，除了本機的**電腦**帳戶外，[可用帳戶]**** 清單還能擁有多個 Project Web App 帳戶。在 [啟動時]**** 區段中，選取 [選擇一個帳戶]****。
     
 3. 關閉 Project，使 Visual Studio 可啟動它以偵錯增益集。
     
@@ -563,31 +562,31 @@ HelloProjectOData.js 檔案的其餘部分包括兩個函式︰使用者選取 [
 
 - 從 Visual Studio 執行增益集，然後從包含成本和工作資料的 Project Web App 中開啟已發佈的專案。確認增益集顯示 **ProjectData** 端點，並在資料表中正確顯示成本與工作資料。您可以使用 **odataText** 控制項的輸出來檢查 REST 查詢及其他資訊。
     
-- 再次執行增益集，您可在啟動 Project 時，於 [登入] 對話方塊中選擇本機電腦設定檔。開啟本機的 .mpp 檔案，然後測試增益集。確認當您嘗試取得 **ProjectData** 端點時，增益集顯示錯誤訊息。
+- 再次執行增益集，您可在啟動 Project 時，於 [登入]**** 對話方塊中選擇本機電腦設定檔。開啟本機的 .mpp 檔案，然後測試增益集。確認當您嘗試取得 **ProjectData** 端點時，增益集顯示錯誤訊息。
     
 - 重新執行增益集來建立專案，其中包含具有成本和工作資料的工作。您可以將專案儲存到 Project Web App，但不要發佈它。確認增益集顯示 Project Server 的資料，但針對目前的專案顯示 **NA**。
     
 
-### <a name="procedure-6.-to-test-the-add-in"></a>程序 6.測試增益集
+### <a name="procedure-6-to-test-the-add-in"></a>程序 6.測試增益集
 
 
 1. 執行 Project Professional 2013，連線 Project Web App，然後建立測試專案。將工作指派給本機資源或企業資源，設定一些工作的完成百分比的各種值，然後發佈專案。結束 Project，可讓 Visual Studio 啟動 Project 來偵錯增益集。
     
 2. 在 Visual Studio 中，按下 **F5**。登入 Project Web App，然後開啟前一個步驟所建立的專案。您可以在唯讀模式或編輯模式下開啟專案。
     
-3. 在功能區的 [專案] 索引標籤，於 [Office 增益集] 下拉式清單中選取 [Hello ProjectData] (見圖 4)。[比較所有專案] 按鈕應該停用。
+3. 在功能區的 [專案]**** 索引標籤，於 [Office 增益集]**** 下拉式清單中選取 [Hello ProjectData]**** (見圖 4)。[比較所有專案]**** 按鈕應該停用。
     
     **圖 4.啟動 HelloProjectOData 增益集**
 
-    ![測試 HelloProjectOData 應用程式](../../images/pj15_HelloProjectData_TestTheApp.png)
+    ![Testing the HelloProjectOData app](../../images/pj15_HelloProjectData_TestTheApp.png)
 
-4. 在 [Hello ProjectData] 工作窗格中，選取 [取得 ProjectData 端點]。**projectDataEndPoint** 行應顯示 **ProjectData** 服務的 URL，且必須啟用 [比較所有專案] 按鈕 (見圖 5)。
+4. 在 [Hello ProjectData]**** 工作窗格中，選取 [取得 ProjectData 端點]****。**projectDataEndPoint** 行應顯示 **ProjectData** 服務的 URL，且必須啟用 [比較所有專案]**** 按鈕 (見圖 5)。
     
-5. 選取 [比較所有專案]。增益集從 **ProjectData** 服務擷取資料時可能會暫停，然後應該會在資料表中顯示格式化的平均值和目前值。
+5. 選取 [比較所有專案]****。增益集從 **ProjectData** 服務擷取資料時可能會暫停，然後應該會在資料表中顯示格式化的平均值和目前值。
     
     ** 圖 5.檢視 REST 查詢的結果**
 
-    ![檢視 REST 查詢的結果](../../images/pj15_HelloProjectData_RESTresults.gif)
+    ![Viewing results of the REST query](../../images/pj15_HelloProjectData_RESTresults.gif)
 
 6. 檢查文字方塊中的輸出。它應該會顯示文件路徑、REST 查詢、 狀態資訊，以及呼叫 **ajax** 和 **parseODataResult** 所導出的 JSON 結果。輸出有助於瞭解、建立和偵錯 **parseODataResult** 方法中的程式碼，例如 `projCost += Number(res.d.results[i].ProjectCost);`。
     
@@ -641,32 +640,31 @@ HelloProjectOData.js 檔案的其餘部分包括兩個函式︰使用者選取 [
         ]}}
 ```
 
-7. 停止偵錯 (按下 **Shift + F5**)，然後再按 **F5** 以執行 Project 的新執行個體。在 [登入] 對話框中，選取本機**電腦**設定檔 (非 Project Web App)。建立或開啟本機 project.mpp 檔案，開啟 [Hello ProjectData] 工作窗格，然後再選取 [取得 ProjectData 端點]。增益集應該會顯示**沒有連線!** 錯誤 (見圖 6)，且 [比較所有專案] 按鈕應保持停用。
+7. 停止偵錯 (按下 **Shift + F5**)，然後再按 **F5** 以執行 Project 的新執行個體。在 [登入]**** 對話框中，選取本機**電腦**設定檔 (非 Project Web App)。建立或開啟本機 project.mpp 檔案，開啟 [Hello ProjectData]**** 工作窗格，然後再選取 [取得 ProjectData 端點]****。增益集應該會顯示**沒有連線!** 錯誤 (見圖 6)，且 [比較所有專案]**** 按鈕應保持停用。
     
     **圖 6.在沒有 Project Web App 連線的情況下使用增益集**
 
-    ![在沒有 Project Web App 連線的情況下使用應用程式](../../images/pj15_HelloProjectData_NoConnection.gif)
+    ![Using the app without a Project Web App connection](../../images/pj15_HelloProjectData_NoConnection.gif)
 
 8. 停止偵錯，然後再按 **F5**。登入 Project Web App，然後建立一個包含成本和工作資料的專案。您可以儲存專案，但不要發佈它。
     
-    在 **Hello ProjectData** 工作窗格中，當選取 [比較所有專案]，您應該會在 [目前] 欄的欄位看見藍色的 **NA** (看圖 7)。
+    在 **Hello ProjectData** 工作窗格中，當選取 [比較所有專案]****，您應該會在 **** [目前] 欄的欄位看見藍色的 **NA** (看圖 7)。
     
 
     **圖 7.比較未發佈的專案與其他專案**
 
-    ![比較未發佈的專案與其他專案](../../images/pj15_HelloProjectData_NotPublished.gif)
+    ![Comparing an unpublished project with others](../../images/pj15_HelloProjectData_NotPublished.gif)
 
 即使您的增益集在前一個測試中運作正常，也應該執行其他測試。例如：
 
-- 從 Project Web App 開啟沒有工作之成本或工作資料的專案。您應該會在 [目前] 資料行的欄位中看到零值。
+- 從 Project Web App 開啟沒有工作之成本或工作資料的專案。您應該會在 [目前]**** 資料行的欄位中看到零值。
     
 - 測試沒有工作的專案。
     
 - 如果修改並發佈增益集，您應該使用已發佈的增益集重新執行類似的測試。如需其他考量，請參閱[後續步驟](#next-steps)。
     
 
- >
-  **附註**  在 **ProjectData** 服務的一個查詢中可傳回的資料量有限制；資料量隨實體而不同。例如，**Projects** 實體集的每個查詢的預設上限為 100 個專案，但 **Risks** 實體集的預設限制為 200。對於實際執行安裝，應該修改 **HelloProjectOData** 範例中的程式碼，以啟用 100 個以上專案的查詢。如需詳細資訊，請參閱[後續步驟](#next-steps)和[查詢專案報告資料的 OData 摘要](http://msdn.microsoft.com/library/3eafda3b-f006-48be-baa6-961b2ed9fe01%28Office.15%29.aspx)。
+ >**附註**  在 **ProjectData** 服務的一個查詢中可傳回的資料量有限制；資料量隨實體而不同。例如，**Projects** 實體集的每個查詢的預設上限為 100 個專案，但 **Risks** 實體集的預設限制為 200。對於實際執行安裝，應該修改 **HelloProjectOData** 範例中的程式碼，以啟用 100 個以上專案的查詢。如需詳細資訊，請參閱[後續步驟](#next-steps)和[查詢專案報告資料的 OData 摘要](http://msdn.microsoft.com/library/3eafda3b-f006-48be-baa6-961b2ed9fe01%28Office.15%29.aspx)。
 
 
 ## <a name="example-code-for-the-helloprojectodata-add-in"></a>HelloProjectOData 增益集的程式碼範例
@@ -1129,7 +1127,7 @@ Table styles
 
 - 重新撰寫 **retrieveOData** 函式以啟用超過 100 個專案的查詢。例如，您可以使用 `~/ProjectData/Projects()/$count` 查詢取得專案數目，並在 REST 查詢中使用 _$skip_ 運算子和 _$top_ 運算子以取得專案資料。在迴圈中執行多個查詢，然後平均每個查詢的資料。專案資料的每個查詢格式為 `~/ProjectData/Projects()?skip= [numSkipped]&amp;$top=100&amp;$filter=[filter]&amp;$select=[field1,field2, ???????]`。
     
-    如需詳細資訊，請參閱[使用 REST 端點的 OData 系統查詢選項](http://msdn.microsoft.com/library/8a938b9b-7fdb-45a3-a04c-4d2d5cf2e353.aspx)。您也可以使用 Windows PowerShell 中的 [Set-SPProjectOdataConfiguration](http://technet.microsoft.com/library/jj219516%28v=office.15%29.aspx) 命令，來覆寫 **Projects** 實體集 (或 33 個實體集中任何一個) 的查詢預設頁面大小。請參閱 [ProjectData - Project OData 服務參考](http://msdn.microsoft.com/library/1ed14ee9-1a1a-4960-9b66-c24ef92cdf6b%28Office.15%29.aspx)。
+    For more information, see [OData System Query Options Using the REST Endpoint](http://msdn.microsoft.com/library/8a938b9b-7fdb-45a3-a04c-4d2d5cf2e353.aspx). You can also use the [Set-SPProjectOdataConfiguration](http://technet.microsoft.com/library/jj219516%28v=office.15%29.aspx) command in Windows PowerShell to override the default page size for a query of the **Projects** entity set (or any of the 33 entity sets). See [ProjectData - Project OData service reference](http://msdn.microsoft.com/library/1ed14ee9-1a1a-4960-9b66-c24ef92cdf6b%28Office.15%29.aspx).
     
 - 若要部署增益集，請參閱[發佈 Office 增益集](../publish/publish.md)。
     
@@ -1142,8 +1140,7 @@ Table styles
     
 - [使用文字編輯器來建立第一個 Project 2013 的工作窗格增益集](../project/create-your-first-task-pane-add-in-for-project-by-using-a-text-editor.md)
     
-- 
-  [ProjectData - Project OData 服務參考](http://msdn.microsoft.com/library/1ed14ee9-1a1a-4960-9b66-c24ef92cdf6b%28Office.15%29.aspx)
+- [ProjectData - Project OData 服務參考](http://msdn.microsoft.com/library/1ed14ee9-1a1a-4960-9b66-c24ef92cdf6b%28Office.15%29.aspx)
     
 - [Office 增益集的 XML 資訊清單](../../docs/overview/add-in-manifests.md)
     

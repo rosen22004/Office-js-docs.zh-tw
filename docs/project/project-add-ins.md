@@ -1,4 +1,4 @@
-﻿
+
 # <a name="task-pane-add-ins-for-project"></a>Project 的工作窗格增益集
 
 
@@ -47,9 +47,6 @@ Project 增益集的 JavaScript 程式庫包含  **Office** 命名空間別名�
 
 對於複雜的自訂應用程式，且為了更容易偵錯，我們建議您使用 Visual Studio 2015 來開發增益集的網站。Visual Studio 2015 包含增益集專案的範本，您可以在其中選擇增益集種類 (工作窗格、內容或郵件) 和主應用程式 (Project、Word、Excel 或 Outlook)。如需整合 Project Online 資料的範例，請參閱 MSDN 上專案程式設計部落格中的[將 Project 工作窗格增益集連線至 PWA](http://blogs.msdn.com/b/project_programmability/archive/2012/11/02/connecting-a-project-task-pane-app-to-pwa.aspx)。
 
-
- >**附註**  Project 2013版本不支援 Napa。
-
 安裝 Project 2013 SDK 下載時，`\Samples\Apps\` 子目錄包含下列範例增益集︰
 
 
@@ -66,7 +63,7 @@ Project 增益集的 JavaScript 程式庫包含  **Office** 命名空間別名�
 資訊清單檔會指定增益集網頁或 Web 應用程式的 URL，增益集種類 (Project 的工作窗格)、其他語言及地區設定之內容的選擇性 URL，及其他屬性。
 
 
-### <a name="procedure-1.-to-create-the-add-in-manifest-file-for-bing-search"></a>程序 1.建立 Bing 搜尋的增益集資訊清單檔案
+### <a name="procedure-1-to-create-the-add-in-manifest-file-for-bing-search"></a>程序 1.建立 Bing 搜尋的增益集資訊清單檔案
 
 
 - 在本機目錄中建立 XML 檔案。XML 檔案包含 **OfficeApp** 元素和子元素，[Office 增益集的 XML 資訊清單](../../docs/overview/add-in-manifests.md)中有說明。例如，建立名為 BingSearch.xml 且包含下列 XML 的檔案。
@@ -101,7 +98,7 @@ Project 增益集的 JavaScript 程式庫包含  **Office** 命名空間別名�
   - 在 **OfficeApp** 元素中，`xsi:type="TaskPaneApp"` 屬性指定增益集是工作窗格類型。
   - **Id** 元素是 UUID，且必須是唯一的。
   - **Version** 元素是增益集的版本。**ProviderName** 元素是提供增益集的公司或開發人員的名稱。 **DefaultLocale** 元素指定資訊清單中字串的預設地區設定。
-  - [DisplayName] 元素是 Project 2013 功能區的 [檢視] 索引標籤中，[工作窗格增益集] 下拉式清單中顯示的名稱。值最多可以包含 32 個字元。
+  - [DisplayName]**** 元素是 Project 2013 功能區的 [檢視]**** 索引標籤中，[工作窗格增益集]**** 下拉式清單中顯示的名稱。值最多可以包含 32 個字元。
   - **Description** 元素包含預設地區設定的增益集描述。值最多可以包含 2000 個字元。
   - **Capabilities** 元素包含指定主應用程式的一或多個 **Capability** 子元素。
   - **DefaultSettings** 元素包含 **SourceLocation** 元素，其指定檔案共用上 HTML 檔案的路徑，或增益集使用之網頁的 URL。工作窗格增益集會忽略 **RequestedHeight** 元素和 **RequestedWidth** 元素。
@@ -145,7 +142,7 @@ Project 增益集的 JavaScript 程式庫包含  **Office** 命名空間別名�
 
 在 Project 2013 中，您可以在檔案共用或私用增益集目錄中，將增益集安裝為獨立解決方案。您也可以在公用 Office 市集中檢閱並購買增益集。
 
-一個檔案共用可以有多個增益集資訊清單 XML 檔案和子目錄。您可以新增或移除資訊清單的目錄位置和目錄，方法是在 Project 2013 中使用 [信任中心] 的 [受信任的增益集目錄] 索引標籤。若要在 Project 中顯示增益集，資訊清單中的 **SourceLocation** 元素必須指向現有的網站或 HTML 來源檔案。
+一個檔案共用可以有多個增益集資訊清單 XML 檔案和子目錄。您可以新增或移除資訊清單的目錄位置和目錄，方法是在 Project 2013 中使用 [信任中心]**** 的 [受信任的增益集目錄]**** 索引標籤。若要在 Project 中顯示增益集，資訊清單中的 **SourceLocation** 元素必須指向現有的網站或 HTML 來源檔案。
 
 
  >**附註**  Internet Explorer 9 或更新版本必須安裝，但不一定是預設瀏覽器。Office 增益集需要 Internet Explorer 9 中的元件。預設瀏覽器可為 Internet Explorer 9、Safari 5.0.6、Firefox 5、Chrome 13 或其中一個瀏覽器的更新版本。
@@ -153,7 +150,7 @@ Project 增益集的 JavaScript 程式庫包含  **Office** 命名空間別名�
 在程序 2 中，Bing 搜尋增益集會安裝在 Project 2013 安裝所在的本機電腦上。不過，因為增益集基礎結構並不直接使用本機檔案路徑，例如 `C:\Project\AppManifests`，因此您可以在本機電腦上建立網路共用。如果您喜歡，您可以在遠端電腦上建立檔案共用。
 
 
-### <a name="procedure-2.-to-install-the-bing-search-add-in"></a>程序 2.安裝 Bing 搜尋增益集
+### <a name="procedure-2-to-install-the-bing-search-add-in"></a>程序 2.安裝 Bing 搜尋增益集
 
 
 1. 建立增益集資訊清單的本機目錄。例如，建立 `C:\Project\AppManifests` 目錄。
@@ -162,31 +159,31 @@ Project 增益集的 JavaScript 程式庫包含  **Office** 命名空間別名�
     
 3. 將 BingSearch.xml 資訊清單檔案複製到 `C:\Project\AppManifests` 目錄。
     
-4. 在 Project 2013 中，開啟 [專案選項] 對話方塊，選擇 [信任中心]，然後選擇 [信任中心設定]。
+4. 在 Project 2013 中，開啟 [專案選項]**** 對話方塊，選擇 [信任中心]****，然後選擇 [信任中心設定]****。
     
-5. 在 [信任中心] 對話方塊的左窗格中，選擇 [受信任的增益集目錄]。
+5. 在 [信任中心]**** 對話方塊的左窗格中，選擇 [受信任的增益集目錄]****。
     
-6. 在 [受信任的增益集目錄] 窗格中 (見圖 1)，於 [目錄 Url] 文字方塊中加入 `\\ServerName\AppManifests` 路徑，選擇 [新增目錄]，然後選擇 [確定]。
+6. 在 [受信任的增益集目錄]**** 窗格中 (見圖 1)，於 [目錄 Url]**** 文字方塊中加入 `\\ServerName\AppManifests` 路徑，選擇 [新增目錄]****，然後選擇 [確定]****。
     
-     >**附註**  圖 1 在 [受信任目錄位址] 清單顯示 2 個檔案共用和 1 個私人目錄的假設 URL。只能有一個檔案共用可以是預設的檔案共用，且只有一個目錄的 URL 可以是預設目錄。例如，如果您設定 `\\Server2\AppManifests` 為預設值，專案會清除 `\\ServerName\AppManifests` [預設] 核取方塊。如果您變更預設選項時，可以選擇 [清除] 來移除已安裝的增益集，然後再重新啟動專案。如果您在專案開啟時，將增益集新增到預設檔案共用或 SharePoint 目錄，您應該重新啟動專案。
+     >**附註**  圖 1 在 [受信任目錄位址] ****清單顯示 2 個檔案共用和 1 個私人目錄的假設 URL。只能有一個檔案共用可以是預設的檔案共用，且只有一個目錄的 URL 可以是預設目錄。例如，如果您設定 `\\Server2\AppManifests` 為預設值，專案會清除 `\\ServerName\AppManifests` [預設]**** 核取方塊。如果您變更預設選項時，可以選擇 [清除]**** 來移除已安裝的增益集，然後再重新啟動專案。如果您在專案開啟時，將增益集新增到預設檔案共用或 SharePoint 目錄，您應該重新啟動專案。
 
     **圖 1.使用信任中心以新增增益集資訊清單目錄**
 
-    ![使用信任中心以新增應用程式資訊清單](../../images/pj15_AgaveOverview_TrustCenter.PNG)
+    ![Using the Trust Center to add app manifests](../../images/pj15_AgaveOverview_TrustCenter.PNG)
 
-7. 在 [專案] 功能區中，選擇 [Office 增益集] 下拉功能表，然後選擇 [全部查看]。在 [插入增益集] 對話方塊中，選擇 [共用資料夾] (見圖 2)。
+7. 在 [專案]**** 功能區中，選擇 [Office 增益集]**** 下拉功能表，然後選擇 [全部查看]****。在 [插入增益集]**** 對話方塊中，選擇 [共用資料夾]**** (見圖 2)。
     
     **圖 2.啟動檔案共用上的增益集**
 
-    ![啟動檔案共用上的 Office 應用程式](../../images/pj15_AgaveOverview_StartAgaveApp.PNG)
+    ![Starting an Office app that is on a file share](../../images/pj15_AgaveOverview_StartAgaveApp.PNG)
 
-8. 選取 [Bing 搜尋] 增益集，然後選擇 [插入]。
+8. 選取 [Bing 搜尋] 增益集，然後選擇 [插入]****。
     
 Bing 搜尋增益集顯示在工作窗格中，如圖 3 所示。您可以手動調整工作窗格大小，並使用 Bing 搜尋增益集。
 
 **圖 3.使用 Bing 搜尋增益集**
 
-![使用 Bing 搜尋應用程式](../../images/pj15_AgaveOverview_BingSearch.gif)
+![Using the Bing Search app](../../images/pj15_AgaveOverview_BingSearch.gif)
 
 
 ## <a name="distributing-project-add-ins"></a>散發 Project 增益集

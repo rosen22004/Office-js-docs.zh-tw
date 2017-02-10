@@ -24,13 +24,15 @@
 
 ### <a name="members"></a>成員
 
-#### <a name="ewsurl-:string"></a>ewsUrl︰字串
+#### <a name="ewsurl-string"></a>ewsUrl︰字串
 
 取得這個電子郵件帳戶的 Exchange Web 服務 (EWS) 端點的 URL。僅限閱讀模式。
 
+> **附註：**iOS 版 Outlook 或 Android 版 Outlook 不支援這個成員。
+
 遠端服務可以使用 `ewsUrl` 的值，來將 EWS 呼叫至使用者信箱。例如，您可以建立遠端服務以[從選取項目取得附件](https://msdn.microsoft.com/EN-US/library/office/dn148008.aspx)。
 
-##### <a name="type:"></a>類型：
+##### <a name="type"></a>類型：
 
 *   字串
 
@@ -44,7 +46,7 @@
 
 ### <a name="methods"></a>方法
 
-####  <a name="converttolocalclienttime(timevalue)-→-{[localclienttime](simple-types.md#localclienttime)}"></a>convertToLocalClientTime(timeValue) → {[LocalClientTime](simple-types.md#localclienttime)}
+####  <a name="converttolocalclienttimetimevalue--localclienttimesimple-typesmdlocalclienttime"></a>convertToLocalClientTime(timeValue) → {[LocalClientTime](simple-types.md#localclienttime)}
 
 取得包含在本機用戶端時間中時間資訊的字典。
 
@@ -52,7 +54,7 @@
 
 如果郵件應用程式是在 Outlook 中執行，`convertToLocalClientTime` 方法會傳回字典物件，內含設定為用戶端電腦時區的值。如果郵件應用程式是在 Outlook Web App 中執行，`convertToLocalClientTime` 方法會傳回字典物件，內含設定為 EAC中指定時區的值。
 
-##### <a name="parameters:"></a>參數：
+##### <a name="parameters"></a>參數：
 
 |名稱| 類型	| 描述|
 |---|---|---|
@@ -66,17 +68,17 @@
 |[最低權限等級](../../../docs/outlook/understanding-outlook-add-in-permissions.md)| ReadItem|
 |適用的 Outlook 模式| 撰寫或讀取|
 
-##### <a name="returns:"></a>傳回：
+##### <a name="returns"></a>傳回：
 
 類型：[LocalClientTime](simple-types.md#localclienttime)
 
-####  <a name="converttoutcclienttime(input)-→-{date}"></a>convertToUtcClientTime(input) → {Date}
+####  <a name="converttoutcclienttimeinput--date"></a>convertToUtcClientTime(input) → {Date}
 
 取得來自字典包含時間資訊的日期物件。
 
 `convertToUtcClientTime` 方法會將包含本機日期和時間的字典，轉換至具有本機正確日期和時間值的日期物件。
 
-##### <a name="parameters:"></a>參數：
+##### <a name="parameters"></a>參數：
 
 |名稱| 類型	| 描述|
 |---|---|---|
@@ -90,7 +92,7 @@
 |[最低權限等級](../../../docs/outlook/understanding-outlook-add-in-permissions.md)| ReadItem|
 |適用的 Outlook 模式| 撰寫或讀取|
 
-##### <a name="returns:"></a>傳回：
+##### <a name="returns"></a>傳回：
 
 以 UTC 表示時間的日期物件。
 
@@ -104,9 +106,11 @@
 
 </dl>
 
-####  <a name="displayappointmentform(itemid)"></a>displayAppointmentForm(itemId)
+####  <a name="displayappointmentformitemid"></a>displayAppointmentForm(itemId)
 
 顯示現有的行事曆約會。
+
+> **附註：**iOS 版 Outlook 或 Android 版 Outlook 不支援這個方法。
 
 `displayAppointmentForm` 方法會在桌面上的新視窗或是在行動裝置上的對話方塊，開啟現有的行事曆約會。
 
@@ -116,7 +120,7 @@
 
 如果指定的項目識別碼無法識別現有的約會，會在用戶端電腦或裝置上開啟空白窗格，而且不會傳回錯誤訊息。
 
-##### <a name="parameters:"></a>參數：
+##### <a name="parameters"></a>參數：
 
 |名稱| 類型	| 描述|
 |---|---|---|
@@ -136,9 +140,11 @@
 Office.context.mailbox.displayAppointmentForm(appointmentId);
 ```
 
-####  <a name="displaymessageform(itemid)"></a>displayMessageForm(itemId)
+####  <a name="displaymessageformitemid"></a>displayMessageForm(itemId)
 
 顯示現有的郵件。
+
+> **附註：**iOS 版 Outlook 或 Android 版 Outlook 不支援這個方法。
 
 `displayMessageForm` 方法會在桌面上的新視窗，或是在行動裝置上的對話方塊，開啟現有郵件。
 
@@ -148,7 +154,7 @@ Office.context.mailbox.displayAppointmentForm(appointmentId);
 
 請勿將 `displayMessageForm` 與表示約會的 `itemId` 一起使用。使用 `displayAppointmentForm` 方法來顯示現有約會，並使用 `displayNewAppointmentForm` 來顯示表單，以建立新的約會。
 
-##### <a name="parameters:"></a>參數：
+##### <a name="parameters"></a>參數：
 
 |名稱| 類型	| 描述|
 |---|---|---|
@@ -168,19 +174,21 @@ Office.context.mailbox.displayAppointmentForm(appointmentId);
 Office.context.mailbox.displayMessageForm(messageId);
 ```
 
-#### <a name="displaynewappointmentform(parameters)"></a>displayNewAppointmentForm(parameters)
+#### <a name="displaynewappointmentformparameters"></a>displayNewAppointmentForm(parameters)
 
 顯示表單來建立新的行事曆約會。
 
+> **附註：**iOS 版 Outlook 或 Android 版 Outlook 不支援這個方法。
+
 `displayNewAppointmentForm` 方法會開啟表單，讓使用者建立新的約會或會議。如果指定參數，會將參數的內容自動填入約會表單欄位。
 
-在 Outlook Web App 和 OWA for Devices 中，這個方法永遠會顯示帶有出席者欄位的表單。如果您未指定任何出席者作為輸入引數，則方法會顯示帶有 [儲存] 按鈕的表單。如果您已指定出席者，表單會包括出席者和 [傳送] 按鈕。
+在 Outlook Web App 和 OWA for Devices 中，這個方法永遠會顯示帶有出席者欄位的表單。如果您未指定任何出席者作為輸入引數，則方法會顯示帶有 [儲存]**** 按鈕的表單。如果您已指定出席者，表單會包括出席者和 [傳送]**** 按鈕。
 
-在 Outlook 豐富型用戶端和 Outlook RT 中，如果您在 `requiredAttendees`、`optionalAttendees` 或 `resources` 參數中指定任何出席者或資源，這個方法會顯示帶有 [傳送] 按鈕的會議表單。如果您不指定任何收件者，這個方法會顯示帶有 [儲存 & 關閉] 按鈕的約會表單。
+在 Outlook 豐富型用戶端和 Outlook RT 中，如果您在 `requiredAttendees`、`optionalAttendees` 或 `resources` 參數中指定任何出席者或資源，這個方法會顯示帶有 [傳送]**** 按鈕的會議表單。如果您不指定任何收件者，這個方法會顯示帶有 [儲存 & 關閉]**** 按鈕的約會表單。
 
 如果任何參數超過指定的大小限制，或指定未知的參數名稱，則會拋出例外狀況。
 
-##### <a name="parameters:"></a>參數：
+##### <a name="parameters"></a>參數：
 
 |名稱| 類型	| 描述|
 |---|---|---|
@@ -214,7 +222,7 @@ Office.context.mailbox.displayNewAppointmentForm(
   });
 ```
 
-#### <a name="getcallbacktokenasync(callback,-[usercontext])"></a>getCallbackTokenAsync(callback, [userContext])
+#### <a name="getcallbacktokenasynccallback-usercontext"></a>getCallbackTokenAsync(callback, [userContext])
 
 取得包含用來從 Exchange Server 取得附件或項目權杖的字串。
 
@@ -224,7 +232,7 @@ Office.context.mailbox.displayNewAppointmentForm(
 
 您的應用程式必須在資訊清單中具有所指定的 **ReadItem** 權限，來呼叫 `getCallbackTokenAsync` 方法。
 
-##### <a name="parameters:"></a>參數：
+##### <a name="parameters"></a>參數：
 
 |名稱| 類型	| 屬性| 描述|
 |---|---|---|---|
@@ -252,14 +260,14 @@ function cb(asyncResult) {
 }
 ```
 
-####  <a name="getuseridentitytokenasync(callback,-[usercontext])"></a>getUserIdentityTokenAsync(callback, [userContext])
+####  <a name="getuseridentitytokenasynccallback-usercontext"></a>getUserIdentityTokenAsync(callback, [userContext])
 
 取得用來識別使用者及 Office 增益集的權杖。
 
 
   `getUserIdentityTokenAsync` 方法會傳回權杖，可用來識別和[驗證增益集和協力廠商系統的使用者](https://msdn.microsoft.com/EN-US/library/office/fp179828.aspx)。
 
-##### <a name="parameters:"></a>參數：
+##### <a name="parameters"></a>參數：
 
 |名稱| 類型	| 屬性| 描述|
 |---|---|---|---|
@@ -287,9 +295,11 @@ function cb(asyncResult) {
 }
 ```
 
-####  <a name="makeewsrequestasync(data,-callback,-[usercontext])"></a>makeEwsRequestAsync(data, callback, [userContext])
+####  <a name="makeewsrequestasyncdata-callback-usercontext"></a>makeEwsRequestAsync(data, callback, [userContext])
 
 在裝載使用者信箱的 Exchange Server 上，對 Exchange Web 服務 (EWS) 提出非同步要求。
+
+> **附註：**iOS 版 Outlook 或 Android 版 Outlook 不支援這個方法。
 
 `makeEwsRequestAsync` 方法會代表增益集將 EWS 要求傳送到 Exchange。
 
@@ -315,7 +325,7 @@ XML 要求必須指定 UTF-8 編碼。
 
 當郵件應用程式在 Outlook 網頁版中執行時，您不需要設定編碼值。您可以使用 mailbox.diagnostics.hostName 屬性，來決定郵件應用程式是否正在 Outlook 或在 Outlook 網頁版中執行。您可以使用 mailbox.diagnostics.hostVersion 屬性，來決定所執行的 Outlook 版本。
 
-##### <a name="parameters:"></a>參數：
+##### <a name="parameters"></a>參數：
 
 |名稱| 類型	| 屬性| 描述|
 |---|---|---|---|
