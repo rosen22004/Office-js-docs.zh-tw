@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Menu xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" SupportedProduct="|Word|Excel|Outlook|OneNote|PowerPoint|Project|Access|" SupportedVersion="|V1.3|V1.2|V1.1|">
-	<Item text="資訊清單" url="manifest">
+<Menu xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" SupportedProduct="|Word|Excel|Outlook|OneNote|PowerPoint|Project|Access|Visio" SupportedVersion="|V1.3|V1.2|V1.1|">
+	<Item text="資訊清單" url="manifest" Scope="excel, word, powerpoint, project, outlook, onenote, access">
 		<Item text="AllowSnapshot" url="manifest/allowsnapshot" Scope="excel, powerpoint" SEODescription="指定是否要將內容增益集的快照影像與主文件一起儲存。" />
 		<Item text="AlternateId" url="manifest/alternateid" Scope="excel, word, powerpoint, access, project" SEODescription="指定由 Office 市集所發行的 Office 增益集替代識別碼。" />
 		<Item text="AppDomain" url="manifest/appdomain" SEODescription="指定會用來在增益集視窗中載入頁面的其他網域。" />
@@ -286,7 +286,22 @@
 		<Item text="影像" url="onenote/image" SEODescription="OneNote 的增益集參考。" />
 		<Item text="OneNote JavaScript API 需求集合" url="requirement-sets/onenote-api-requirement-sets" SEODescription="深入了解 OneNote 需求集、支援需求集的 Office 主應用程式，以及組建版本或可用性日期。" />
 	</Item>
-	<Item text="共用 API" url="shared/shared-api">
+	<Item text="Visio" url="visio/visio-javascript-reference-overview" Scope="visio"> 
+		<Item text="應用程式" url="visio/application" SEODescription="Visio JavaScript API 參考資料。" /> 
+		<Item text="文件" url="visio/document" SEODescription="Visio JavaScript API 參考資料。" /> 
+		<Item text="超連結" url="visio/hyperlink" SEODescription="Visio JavaScript API 參考資料。" /> 
+		<Item text="HyperlinkCollection" url="visio/hyperlinkcollection" SEODescription="Visio JavaScript API 參考資料。" /> 
+		<Item text="LoadOption" url="visio/loadoption" SEODescription="Visio JavaScript API 參考資料。" /> 
+		<Item text="Page" url="visio/page" SEODescription="Visio JavaScript API 參考資料。" /> 
+		<Item text="PageCollection" url="visio/pagecollection" SEODescription="Visio JavaScript API 參考資料。" /> 
+		<Item text="PageView" url="visio/pageview" SEODescription="Visio JavaScript API 參考資料。" /> 
+		<Item text="Shape" url="visio/shape" SEODescription="Visio JavaScript API 參考資料。" /> 
+		<Item text="ShapeCollection" url="visio/shapecollection" SEODescription="Visio JavaScript API 參考資料。" /> 
+		<Item text="ShapeDataItem" url="visio/shapedataitem" SEODescription="Visio JavaScript API 參考資料。" /> 
+		<Item text="ShapeDataItemCollection" url="visio/shapedataitemcollection" SEODescription="Visio JavaScript API 參考資料。" /> 
+		<Item text="ShapeView" url="visio/shapeview" SEODescription="Visio JavaScript API 參考資料。" /> 
+	</Item> 
+	<Item text="共用 API" url="shared/shared-api" Scope="excel, word, powerpoint, project, outlook, onenote, access">
 		<Item text="JavaScript API for Office" url="javascript-api-for-office" SEODescription="適用於 Office 的 JavaScript API 包括物件、方法、屬性、事件和列舉型別，您可以用於您的 Office 增益集程式碼中。" />
 		<Item text="適用於 Office 的 JavaScript API 中的變更項目" url="what's-changed-in-the-javascript-api-for-office" SEODescription="適用於 Office 的 JavaScript API 會定期以新的或更新的物件、方法、屬性、事件和列舉型別更新，來擴充您 Office 增益集的功能。" />
 		<Item text="Office 通用需求集合" url="requirement-sets/office-add-in-requirement-sets" SEODescription="需求集合是 API 成員的具名群組。Office 增益集使用資訊清單中所指定的需求集合，或使用執行階段檢查，以判定 Office 主應用程式是否支援增益集所需的 API。" />

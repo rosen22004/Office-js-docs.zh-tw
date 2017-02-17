@@ -1,7 +1,7 @@
-# <a name="shapeview-object-javascript-api-for-visio"></a>ShapeView 物件 (適用於 Visio 的 JavaScript API)
+﻿# <a name="shapeview-object-javascript-api-for-visio"></a>ShapeView 物件 (適用於 Visio 的 JavaScript API)
 
 適用於：_Visio Online_
->**附註：**Visio JavaScript API 目前在預覽或生產環境中不提供使用。
+>**附註：**Visio JavaScript API 目前是預覽模式，可能有所異動。Visio JavaScript API 目前不支援在生產環境中使用。
 
 代表 ShapeView 類別。
 
@@ -32,10 +32,10 @@ shapeViewObject.addOverlay(OverlayType, Content, HorizontalAlignment, VerticalAl
 ```
 
 #### <a name="parameters"></a>參數
-| 參數	    | 類型   |描述|
+| 參數	       | 類型    |描述|
 |:---------------|:--------|:----------|:---|
 |OverlayType|OverlayType|重疊類型 - 文字、影像。|
-|內容|字串|重疊內容。|
+|內容|string|重疊內容。|
 |HorizontalAlignment|HorizontalAlignment|重疊水平對齊 - 靠左、置中、靠右|
 |VerticalAlignment|VerticalAlignment|重疊垂直對齊 - 靠上、置中、靠右|
 |寬度|數字|重疊寬度。|
@@ -53,7 +53,7 @@ object.load(param);
 ```
 
 #### <a name="parameters"></a>參數
-| 參數	    | 類型   |描述|
+| 參數	       | 類型    |描述|
 |:---------------|:--------|:----------|:---|
 |param|物件|選用。接受參數與關聯性名稱，做為分隔字串或陣列。或者提供 [loadOption](loadoption.md) 物件。|
 
@@ -69,7 +69,7 @@ shapeViewObject.removeOverlay(OverlayId);
 ```
 
 #### <a name="parameters"></a>參數
-| 參數	    | 類型   |描述|
+| 參數	       | 類型    |描述|
 |:---------------|:--------|:----------|:---|
 |OverlayId|number|重疊 ID。從圖形移除特定的重疊 ID。|
 

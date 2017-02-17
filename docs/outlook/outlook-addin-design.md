@@ -16,6 +16,8 @@
 
     應使用 Outlook 執行所在平台的原生模式來設計增益集。若要達成此目標，請務必遵守及實作每個平台所提出的互動和視覺效果指導方針。Outlook 有其自己的指導方針，也一定要將其列入考量。設計完善的增益集會適當地融合您的經驗、平台及 Outlook。
 
+    這表示您的增益集在 iOS 版 Outlook 和 Android 版 Outlook 上執行時的視覺化方式會不同 (當我們推行該支援時)。我們建議您採用 [Framework7](https://framework7.io/)，以協助您使用樣式設定。我們將會公佈更新的指導分針，尤其是針對 Android，因為我們未來會啟動 Android 版 Outlook 的增益集支援。
+
 3. **使用愉快並充分了解細節**
 
     人們享受使用功能性與外觀兼具的產品。您可以精心打造您已仔細考量每個互動和視覺效果細節的體驗，以確保您的增益集廣受歡迎。完成工作的必要步驟並需清楚而相關。在理想的情況下，任何動作最好不要超過按一下或兩下滑鼠。盡量不要讓使用者離開完成動作的情境。使用者應該能夠輕易地進出您的增益集，並返回她先前所做的動作。增益集不是要花太多時間的目的地，它可增強我們的核心功能。如果表現得當，增益集可協助我們達成讓使用者更具生產力的目標。
@@ -28,9 +30,9 @@
 
 > **附註：**雖然上述原則適用於所有的端點/平台，但下列模式和範例則專用於 iOS 平台上的行動裝置增益集。
 
-為了協助您建立一個設計完善的增益集，我們有一些[範本](https://github.com/OfficeDev/Office-Add-in-UX-Design-Patterns/tree/master/Helpful%20Templates/Outlook%20Mobile/iOS)，其中包含在 Outlook Mobile 環境中運作的 iOS 行動模式。運用這些特定模式，有助於確保增益集為 iOS 平台和 Outlook Mobile 的原生增益集。這些模式也會詳述如下。雖不詳盡，但這是當我們發現協力廠商想納入其增益集中的其他範例時將持續建置程式庫的開頭。  
+為了協助您建立一個設計完善的增益集，我們有一些[範本](https://github.com/OfficeDev/Office-Add-in-UX-Design-Patterns/tree/master/Helpful%20Templates/Outlook%20Mobile)，其中包含在 Outlook Mobile 環境中運作的 iOS 行動模式。運用這些特定模式，有助於確保增益集為 iOS 平台和 Outlook Mobile 的原生增益集。這些模式也會詳述如下。雖不詳盡，但這是當我們發現協力廠商想納入其增益集中的其他範例時將持續建置程式庫的開頭。  
 
-### <a name="overview"></a>概觀
+### <a name="overview"></a>Overview
 
 典型增益集是由下列元件組成。
 

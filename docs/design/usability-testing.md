@@ -14,11 +14,11 @@
 
 > **附註：**我們建議您在多種平台上測試您的增益集可用性。若要[將增益集發佈至 Office 市集](https://msdn.microsoft.com/en-us/library/office/jj220037.aspx)，它必須能在所有[支援您所定義之方法的平台](https://dev.office.com/add-in-availability)上運作。
 
-## <a name="1---sign-up-for-a-testing-service"></a>1. 註冊測試服務。
+## <a name="1----sign-up-for-a-testing-service"></a>1.  註冊測試服務
 
 如需詳細資訊，請參閱[發佈遠端使用者測試選取線上的工具](https://www.nngroup.com/articles/unmoderated-user-testing-tools/)。
 
-## <a name="2-develop-your-research-questions"></a>2.開發您的研究問題。
+## <a name="2-develop-your-research-questions"></a>2.開發您的研究問題
  
 研究問題可定義您的研究目標，並引導您的測試計劃。您的問題可協助您找出所要招募的參與者以及他們即將執行的工作。讓您的研究問題儘可能明確。您也可以設法回答更廣泛的問題。
  
@@ -47,38 +47,38 @@
 
 如需詳細資訊，請參閱[撰寫有效的問題](http://help.usertesting.com/customer/en/portal/articles/2077663-writing-effective-questions)。
  
-## <a name="3-identify-participants-to-target"></a>3.找出要鎖定的參與者。
+## <a name="3-identify-participants-to-target"></a>3.找出目標參與者
  
 遠端測試服務可讓您控制測試參與者的許多特性。仔細思考您要鎖定的使用者種類。在資料收集的初期階段中，最好能招募各種不同的參與者，以找出更明顯的可用性問題。稍後，您可能會選擇以進階 Office 使用者、特定職業或特定年齡層等群組為目標。
  
-## <a name="4-create-the-participant-screener"></a>4.建立參與者過濾程式。
+## <a name="4-create-the-participant-screener"></a>4.建立參與者過濾程式
  
 過濾程式是一組問題和需求，您會將其呈現給預期的測試參與者，以針對您的測試過濾這些參與者。請記住，UserTesting.com 等服務的參與者在完成測試時能獲得財務利益。如果您想要從測試中排除某些使用者，最好在過濾程式中包含一些陷阱題。 
  
 例如，如果您想要尋找熟悉 GitHub 的參與者，以篩選掉可能不合適的使用者，請在可能的答案清單中包含捏造的答案。
 
 **您熟悉下列哪一個原始程式碼儲存機制？**  
- a.SourceShelf  [*拒絕*]  
- b.CodeContainer  [*拒絕*]  
- c.GitHub  [*必須選取*]  
- d.BitBucket  [可以選取]**  
- e.CloudForge  [*可以選取*]  
+ a.  SourceShelf  [*拒絕*]  
+ b.  CodeContainer  [*拒絕*]  
+ c.  GitHub  [*必須選取*]  
+ d.  BitBucket  [可以選取]**  
+ e.  CloudForge  [*可以選取*]  
 
 
 如果您打算測試即時的增益集組建，下列問題可以篩選出能夠執行這項操作的使用者。 
 
    **這項測試要求您具備 Microsoft PowerPoint 2016。是否具備 PowerPoint 2016？**  
-   a. 是 [必須選取]**  
-   b. 否 [拒絕]**  
-   c. 我不知道 [*拒絕*]  
+   a.  是 [必須選取]**  
+   b.  否 [拒絕]**  
+   c.  我不知道 [*拒絕*]  
 
    **這項測試會要求您安裝免費的 PowerPoint 2016 增益集，並建立免費的帳戶才能加以使用。您是否願意安裝增益集並建立免費帳戶？**  
-    a.是 [必須選取]**  
-    b.否 [拒絕]**  
+    a.  是 [必須選取]**  
+    b.  否 [拒絕]**  
 
 如需詳細資訊，請參閱[過濾程式問題最佳作法](http://help.usertesting.com/customer/en/portal/articles/2077835-screener-question-best-practices)。
  
-## <a name="5-create-tasks-and-questions-for-participants"></a>5.為參與者建立工作和問題。
+## <a name="5-create-tasks-and-questions-for-participants"></a>5.為參與者建立工作和問題
  
 請試著設定您想測試之項目的優先順序，以便限制參與者的工作和問題數目。有些服務只會針對某一段時間付款給參與者，所以您要確定不會超時。
 
@@ -90,7 +90,7 @@
 
 如需詳細資訊，請參閱[撰寫完美的工作](http://help.usertesting.com/customer/en/portal/articles/2077824-writing-great-tasks)。
 
-## <a name="6-create-a-prototype-to-match-the-tasks-and-questions"></a>6.建立原型以符合相關工作和問題。
+## <a name="6-create-a-prototype-to-match-the-tasks-and-questions"></a>6.建立原型以符合工作和問題
  
 您可以測試即時增益集，也可以測試原型。請記住，如果您想要測試即時增益集，您需要過濾出具備 Office 2016、願意安裝增益集，而且願意註冊帳戶 (除非您為他們提供登入認證) 的參與者。您必須接著確定，他們已成功安裝您的增益集。 
 
@@ -109,15 +109,15 @@
 
 您可以在任何互動和視覺效果逼真度層級上測試原型。若為更複雜的連結和互動功能，請考慮 [InVision](https://www.invisionapp.com) 等原型工具。如果您只想測試靜態畫面，您在線上裝載影像並將對應的 URL 傳送給參與者，或將線上 PowerPoint 簡報的連結提供給他們。 
 
-## <a name="7-run-a-pilot-test"></a>7.執行試驗測試。
+## <a name="7-run-a-pilot-test"></a>7.執行測驗測試
 
 要弄清楚原型和您的工作/問題清單可能有點棘手。使用者有可能被工作所混淆，也可能迷失於原型中。您應該以 1-3 名使用者執行試驗測試，以解決不可避免的測試格式問題。這有助於確保您的問題清楚明暸、原型設定正確，而且您會擷取所要尋找的資料類型。
 
-## <a name="8-run-the-test"></a>8.執行測試。
+## <a name="8-run-the-test"></a>8.執行測試
 
 安排您的測試之後，您會在參與者完成測試時收到電子郵件通知。除非您已鎖定特定群組的參與者，否則測試通常會在幾個小時內完成。
 
-## <a name="9-analyze-results"></a>9.分析結果。
+## <a name="9-analyze-results"></a>9.分析結果
 
 這就是您嘗試讓所收集資料發揮效用的時候。觀看測試影片時，將使用者的問題和成果記錄下來。避免在檢視所有結果前，嘗試解譯資料的意義。 
 

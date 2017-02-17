@@ -1,7 +1,7 @@
-# <a name="document-object-javascript-api-for-visio"></a>Document 物件 (適用於 Visio 的 JavaScript API)
+﻿# <a name="document-object-javascript-api-for-visio"></a>Document 物件 (適用於 Visio 的 JavaScript API)
 
 適用於：_Visio Online_
->**附註：**Visio JavaScript API 目前在預覽或生產環境中不提供使用。
+>**附註：**Visio JavaScript API 目前是預覽模式，可能有所異動。Visio JavaScript API 目前不支援在生產環境中使用。
 
 代表文件類別。
 
@@ -10,7 +10,7 @@
 無
 
 ## <a name="relationships"></a>關聯性
-| 關聯性 | 類型	   |描述| 意見反應|
+| 關聯性 | 類型	    |描述| 意見反應|
 |:---------------|:--------|:----------|:---|
 |應用程式|[應用程式](application.md)|代表包含此文件的 Visio 應用程式執行個體。唯讀。|[移至](https://github.com/OfficeDev/office-js-docs/issues/new?title=Visio-document-application)|
 |pages|[PageCollection](pagecollection.md)|代表與文件關聯的頁面集合。唯讀。|[移至](https://github.com/OfficeDev/office-js-docs/issues/new?title=Visio-document-pages)|
@@ -67,7 +67,7 @@ object.load(param);
 ```
 
 #### <a name="parameters"></a>參數
-| 參數	    | 類型   |描述|
+| 參數	       | 類型    |描述|
 |:---------------|:--------|:----------|:---|
 |param|物件|選用。接受參數與關聯性名稱，做為分隔字串或陣列。或者提供 [loadOption](loadoption.md) 物件。|
 
@@ -83,9 +83,9 @@ documentObject.setActivePage(PageName);
 ```
 
 #### <a name="parameters"></a>參數
-| 參數	    | 類型   |描述|
+| 參數	       | 類型    |描述|
 |:---------------|:--------|:----------|:---|
-|PageName|字串|頁面名稱|
+|PageName|string|頁面名稱|
 
 #### <a name="returns"></a>傳回
 void

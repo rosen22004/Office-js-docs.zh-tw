@@ -1,13 +1,13 @@
-# <a name="shapedataitemcollection-object-javascript-api-for-visio"></a>ShapeDataItemCollection 物件 (適用於 Visio 的 JavaScript API)
+﻿# <a name="shapedataitemcollection-object-javascript-api-for-visio"></a>ShapeDataItemCollection 物件 (適用於 Visio 的 JavaScript API)
 
 適用於：_Visio Online_
->**附註：**Visio JavaScript API 目前在預覽或生產環境中不提供使用。
+>**附註：**Visio JavaScript API 目前是預覽模式，可能有所異動。Visio JavaScript API 目前不支援在生產環境中使用。
 
 代表指定圖形的 ShapeDataItemCollection。
 
 ## <a name="properties"></a>屬性
 
-| 屬性	     | 類型	   |描述| 意見反應|
+| 屬性	       | 類型	    |描述| 意見反應|
 |:---------------|:--------|:----------|:---|
 |項目|[ShapeDataItem[]](shapedataitem.md)|ShapeDataItem 物件的集合。唯讀。|[移至](https://github.com/OfficeDev/office-js-docs/issues/new?title=Visio-shapeDataItemCollection-items)|
 
@@ -51,9 +51,9 @@ shapeDataItemCollectionObject.getItem(key);
 ```
 
 #### <a name="parameters"></a>參數
-| 參數	    | 類型   |描述|
+| 參數	       | 類型    |描述|
 |:---------------|:--------|:----------|:---|
-|索引鍵|字串|機碼是要擷取之 ShapeDataItem 的名稱。|
+|索引鍵|string|機碼是要擷取之 ShapeDataItem 的名稱。|
 
 #### <a name="returns"></a>傳回
 [ShapeDataItem](shapedataitem.md)
@@ -67,7 +67,7 @@ object.load(param);
 ```
 
 #### <a name="parameters"></a>參數
-| 參數	    | 類型   |描述|
+| 參數	       | 類型    |描述|
 |:---------------|:--------|:----------|:---|
 |param|物件|選用。接受參數與關聯性名稱，做為分隔字串或陣列。或者提供 [loadOption](loadoption.md) 物件。|
 

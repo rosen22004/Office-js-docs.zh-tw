@@ -36,14 +36,14 @@ Office 增益集受到增益集執行階段環境、多層權限模型以及效�
 
 **圖 1.在 Windows 架構的桌面及平板電腦用戶端中的 Office 增益集執行階段環境**
 
-![豐富型用戶端基礎結構](../../images/DK2_AgaveOverview02.png)
+![Rich-client infrastructure](../../images/DK2_AgaveOverview02.png)
 
 如圖 2 所示，在 OS X Mac 桌面上，增益集網頁是主控在沙箱化的 WebKit 執行階段主應用程式處理程序內，這有助於提供類似層級的安全性和效能保護。 
 
 
 **圖 2.在 OS X Mac 用戶端中的 Office 增益集執行階段環境**
 
-![在 OS X Mac 上的 Office 執行階段環境的應用程式](../../images/DK2_AgaveOverview_Mac_02.png)
+![Apps for Office runtime environment on OS X Mac](../../images/DK2_AgaveOverview_Mac_02.png)
 
 Office 增益集執行階段會讓處理序間通訊、JavaScript API 呼叫和事件的轉譯成為原生交易，以及 UI 遠端支援，以讓增益集在文件內、在工作窗格中或相鄰的電子郵件訊息、會議邀請或約會中轉譯。
 
@@ -55,7 +55,7 @@ Office 增益集執行階段會讓處理序間通訊、JavaScript API 呼叫和�
 
 **圖 3.在 Office 網頁用戶端中支援 Office 增益集的基礎結構**
 
-![網頁用戶端基礎結構](../../images/DK2_AgaveOverview03.png)
+![Web-client infrastructure](../../images/DK2_AgaveOverview03.png)
 
 
 ## <a name="add-in-integrity-in-the-office-store"></a>Office 市集中的增益集完整性
@@ -72,12 +72,12 @@ Office 增益集執行階段會讓處理序間通訊、JavaScript API 呼叫和�
 - 支援可用增益集的使用者檢閱系統，以提升自我監督的社群。
     
 
-## <a name="addressing-end-users'-privacy-concerns"></a>解決使用者的隱私權疑慮
+## <a name="addressing-end-users-privacy-concerns"></a>解決使用者的隱私權疑慮
 
 這一節將討論使用 Office 增益集時使用者的隱私權疑慮。首先，它從客戶 (使用者) 的觀點說明 Office 增益集平台所提供的保護。然後，它提供身為開發人員的您如何支援使用者的期望，以及如何安全地處理使用者的個人識別資訊 (PII) 的指導方針。 
 
 
-### <a name="end-users'-perspective"></a>使用者的觀點
+### <a name="end-users-perspective"></a>使用者的觀點
 
 Office 增益集是使用在瀏覽器控制項或 **iframe** 中執行的 Web 技術所建置。因此，使用增益集就像在網際網路或內部網路上瀏覽網站。增益集可以在組織外部 (如果您從 Office 市集取得增益集) 或內部 (如果您從 Exchange Server 增益集目錄、SharePoint 增益集目錄或組織網路上的檔案共用取得增益集)。增益集對網路的存取有限，而大部分的增益集可以讀取或寫入至作用中的文件或郵件項目。在使用者或系統管理員安裝或啟動增益集之前，增益集平台會套用某些條件約束。但是，如同任何擴充性模型，在啟動不明的增益集之前，使用者應該要小心。
 
@@ -90,7 +90,7 @@ Office 增益集是使用在瀏覽器控制項或 **iframe** 中執行的 Web �
     
 - 共用文件時，使用者也會共用已插入或與該文件相關聯的增益集。如果使用者開啟包含使用者之前尚未使用過之增益集的文件時，主應用程式就會提示使用者授與增益集在文件中執行的權限。在組織環境中，如果文件來自外部來源，則 Office 主應用程式也會提示使用者。
     
-- 使用者可以啟用或停用對 Office 市集的存取。針對內容和工作窗格增益集，使用者會從主控 Office 用戶端上的**信任中心** (從 [檔案]  >  [選項] >  [信任中心]  >  [信任中心設定]  > [受信任的增益集目錄] 開啟) 管理對信任的增益集和目錄的存取。若為 Outlook 增益集，使用可以藉由選擇 [管理增益集] 按鈕來管理增益集︰在 Windows 版 Outlook 中，選擇 [檔案] >  [管理增益集]。在 Mac 版 Outlook 中，選擇增益集列上的 [管理增益集] 按鈕。在 Outlook Web App 中，選擇 [設定] 功能表 (齒輪圖示) > [管理增益集]。系統管理員也可以[使用群組原則](http://technet.microsoft.com/en-us/library/jj219429.aspx#BKMK_Managing)管理此存取。
+- 使用者可以啟用或停用對 Office 市集的存取。針對內容和工作窗格增益集，使用者會從主控 Office 用戶端上的**信任中心** (從 [檔案]****  >  [選項]**** >  [信任中心]****  >  [信任中心設定]****  > [受信任的增益集目錄]**** 開啟) 管理對信任的增益集和目錄的存取。若為 Outlook 增益集，使用可以藉由選擇 [管理增益集]**** 按鈕來管理增益集︰在 Windows 版 Outlook 中，選擇 [檔案] **** >  [管理增益集]****。在 Mac 版 Outlook 中，選擇增益集列上的 [管理增益集]**** 按鈕。在 Outlook Web App 中，選擇 [設定]**** 功能表 (齒輪圖示) > [管理增益集]****。系統管理員也可以[使用群組原則](http://technet.microsoft.com/en-us/library/jj219429.aspx#BKMK_Managing)管理此存取。
     
 - 增益集平台的設計可透過下列方式為使用者提供安全性和效能︰
     
@@ -115,7 +115,7 @@ Office 增益集是使用在瀏覽器控制項或 **iframe** 中執行的 Web �
 - 如果您儲存使用者的 PII，請確定您顯示這件事，並提供方法讓使用者檢查並將它刪除。如果您提交增益集至 Office 市集，您可以概述您所收集的資料，以及資料在隱私權聲明中的使用方式。
     
 
-## <a name="developers'-permission-choices-and-security-practices"></a>開發人員的權限選擇和安全性作法
+## <a name="developers-permission-choices-and-security-practices"></a>開發人員的權限選擇和安全性作法
 
 請遵循這些一般指導方針，來支援 Office 增益集的安全性模型，並對每個增益集類型向下切入其他詳細資料。
 
@@ -209,7 +209,7 @@ Exchange 與 SharePoint 提供用戶端 Proxy，以啟用跨網域存取。一�
 - 請參閱[開發安全的增益集](http://msdn.microsoft.com/en-us/library/windows/apps/hh849625.aspx)，以取得建立更安全的 Web 解決方案的更多最佳做法。
     
 
-### <a name="tips-to-prevent-"clickjacking""></a>防止 "Clickjacking" 的提示
+### <a name="tips-to-prevent-clickjacking"></a>防止 "Clickjacking" 的提示
 
 因為在具有 Office Online 主應用程式的瀏覽器中執行時，Office 增益集在 iframe 中轉譯，請使用下列提示將 [clickjacking](http://en.wikipedia.org/wiki/Clickjacking) 的風險降至最低，這是一種駭客用來欺騙使用者透露機密資訊的技術。
 
@@ -226,7 +226,7 @@ Exchange 與 SharePoint 提供用戶端 Proxy，以啟用跨網域存取。一�
     
 - 傳送文字訊息給使用者，其中包含使用者可以在增益集中輸入的確認碼。
     
-- 開啟包含確認提示的新瀏覽器視窗。
+- 在新的瀏覽器視窗中，開啟無法 iframed 頁面的確認對話方塊。這通常是由登入頁面使用的模式。使用 [dialog api](https://dev.office.com/docs/add-ins/develop/dialog-api-in-office-add-ins) 來建立新的對話方塊。 
     
 此外，請確定您用於連絡使用者的位址不是由潛在攻擊者提供。例如，針對付款確認，請使用記載的獲授權使用者帳戶的位址。
 
@@ -242,9 +242,9 @@ Exchange 與 SharePoint 提供用戶端 Proxy，以啟用跨網域存取。一�
     
     若要確定增益集不使用 HTTP 傳遞內容，測試增益集時，開發人員應該要確定在 Internet Explorer 中選取下列設定值，且測試案例中沒有出現安全性警告︰
     
-      - 確定 [網際網路] 區域的 [顯示混合的內容] 安全性設定是設為 [提示]。您可以這麼做：在 Internet Explorer 中選取下列︰在 [網際網路選項] 對話方塊的 [安全性]索引標籤中，選取 [網際網路] 區域，選取 [自訂層級]，捲動以尋找 [顯示混合的內容]，然後選取 [提示] (如果還未選取)。
+      - 確定 [網際網路]**** 區域的 [顯示混合的內容]**** 安全性設定是設為 [提示]****。您可以這麼做：在 Internet Explorer 中選取下列︰在 [網際網路選項]**** 對話方塊的 [安全性]****索引標籤中，選取 [網際網路]**** 區域，選取 [自訂層級]****，捲動以尋找 [顯示混合的內容]****，然後選取 [提示]**** (如果還未選取)。
     
-  - 請確定 [網際網路選項] 對話方塊的 [進階] 索引標籤中已選取 [切換安全性與非安全性模式時發出警告]。
+  - 請確定 [網際網路選項]**** 對話方塊的 [進階]**** 索引標籤中已選取 [切換安全性與非安全性模式時發出警告]****。
     
 - 為了確定該增益集不會使用過多的 CPU 核心或記憶體資源，並且造成用戶端電腦上任何的拒絕服務，增益集平台會建立資源使用量限制。做為測試的一部分，開發人員應該驗證增益集是否在資源使用量限制內執行。 
     
@@ -263,7 +263,7 @@ Exchange 與 SharePoint 提供用戶端 Proxy，以啟用跨網域存取。一�
 除了資源使用量規則，Outlook 增益集的開發人員也應該要確定其增益集會觀察用於指定啟動規則及使用 JavaScript API 的限制。如需詳細資訊，請參閱[適用於 Outlook 增益集的 JavaScript API 和啟動的限制](http://msdn.microsoft.com/library/e0c9e3d0-517e-4333-b8bd-e169c51a07f6.aspx)。
 
 
-## <a name="it-administrators'-control"></a>IT 系統管理員的控制項
+## <a name="it-administrators-control"></a>IT 系統管理員的控制項
 
 在公司設定中，IT 系統管理員對於啟用或停用 Office 市集和任何私人目錄的存取擁有最終授權。 
 
@@ -271,20 +271,15 @@ Exchange 與 SharePoint 提供用戶端 Proxy，以啟用跨網域存取。一�
 ## <a name="additional-resources"></a>其他資源
 
 
-- 
-  [要求用於內容和工作窗格增益集的 API 權限](http://msdn.microsoft.com/library/da2efadc-4ebf-45fe-be39-397ac1eb1dbd.aspx)
+- [要求用於內容和工作窗格增益集的 API 權限](http://msdn.microsoft.com/library/da2efadc-4ebf-45fe-be39-397ac1eb1dbd.aspx)
     
-- 
-  [Outlook 增益集的隱私權、權限和安全性](http://msdn.microsoft.com/library/44208fc4-05d4-42d8-ab20-faa89624de1c.aspx)
+- [Outlook 增益集的隱私權、權限和安全性](http://msdn.microsoft.com/library/44208fc4-05d4-42d8-ab20-faa89624de1c.aspx)
     
-- 
-  [了解 Outlook 增益集的權限](http://msdn.microsoft.com/library/5bca69f2-b287-4e19-8f0f-78d896b2a3d3.aspx)
+- [了解 Outlook 增益集的權限](http://msdn.microsoft.com/library/5bca69f2-b287-4e19-8f0f-78d896b2a3d3.aspx)
     
-- 
-  [適用於 Outlook 增益集的 JavaScript API 和啟動的限制](http://msdn.microsoft.com/library/e0c9e3d0-517e-4333-b8bd-e169c51a07f6.aspx)
+- [適用於 Outlook 增益集的 JavaScript API 和啟動的限制](http://msdn.microsoft.com/library/e0c9e3d0-517e-4333-b8bd-e169c51a07f6.aspx)
     
-- 
-  [解決 Office 增益集中的相同原始來源原則的限制](http://msdn.microsoft.com/library/36c800ae-1dda-4ea8-a558-37c89ffb161b.aspx)
+- [解決 Office 增益集中的相同原始來源原則的限制](http://msdn.microsoft.com/library/36c800ae-1dda-4ea8-a558-37c89ffb161b.aspx)
     
 - [相同原始來源的原則](http://www.w3.org/Security/wiki/Same_Origin_Policy)
     

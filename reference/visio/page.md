@@ -1,20 +1,20 @@
-# <a name="page-object-javascript-api-for-visio"></a>Page 物件 (適用於 Visio 的 JavaScript API)
+﻿# <a name="page-object-javascript-api-for-visio"></a>Page 物件 (適用於 Visio 的 JavaScript API)
 
 適用於：_Visio Online_
->**附註：**Visio JavaScript API 目前在預覽或生產環境中不提供使用。
+>**附註：**Visio JavaScript API 目前是預覽模式，可能有所異動。Visio JavaScript API 目前不支援在生產環境中使用。
 
 代表頁面類別。
 
 ## <a name="properties"></a>屬性
 
-| 屬性	     | 類型	   |描述| 意見反應|
+| 屬性	       | 類型	    |描述| 意見反應|
 |:---------------|:--------|:----------|:---|
 |索引|int|頁面索引。唯讀。|[移至](https://github.com/OfficeDev/office-js-docs/issues/new?title=Visio-page-index)|
 |isBackground|bool|不論是背景頁面與否。唯讀。|[移至](https://github.com/OfficeDev/office-js-docs/issues/new?title=Visio-page-isBackground)|
-|name|字串|頁面名稱。唯讀。|[移至](https://github.com/OfficeDev/office-js-docs/issues/new?title=Visio-page-name)|
+|name|string|頁面名稱。唯讀。|[移至](https://github.com/OfficeDev/office-js-docs/issues/new?title=Visio-page-name)|
 
 ## <a name="relationships"></a>關聯性
-| 關聯性 | 類型	   |描述| 意見反應|
+| 關聯性 | 類型	    |描述| 意見反應|
 |:---------------|:--------|:----------|:---|
 |圖形|[ShapeCollection](shapecollection.md)|頁面內的圖形。唯讀。|[移至](https://github.com/OfficeDev/office-js-docs/issues/new?title=Visio-page-shapes)|
 |檢視|[PageView](pageview.md)|傳回頁面的檢視。唯讀。|[移至](https://github.com/OfficeDev/office-js-docs/issues/new?title=Visio-page-view)|
@@ -52,7 +52,7 @@ object.load(param);
 ```
 
 #### <a name="parameters"></a>參數
-| 參數	    | 類型   |描述|
+| 參數	       | 類型    |描述|
 |:---------------|:--------|:----------|:---|
 |param|物件|選用。接受參數與關聯性名稱，做為分隔字串或陣列。或者提供 [loadOption](loadoption.md) 物件。|
 
