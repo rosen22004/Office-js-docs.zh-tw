@@ -172,7 +172,7 @@ if (Office.context.requirements.isSetSupported(RequirementSetName , VersionNumbe
 ```js
 if (Office.context.requirements.isSetSupported('WordApi', 1.1)
 {
-    // Run code that provides additional functionality using the JavaScript API for Word when the add-in runs in Word 2016.
+       // Run code that provides additional functionality using the JavaScript API for Word when the add-in runs in Word 2016.
 }
 else if (Office.context.requirements.isSetSupported('CustomXmlParts')
 {
@@ -213,7 +213,7 @@ if (Office.context.document.setSelectedDataAsync)
 
 - [Office 增益集的 XML 資訊清單](../../docs/overview/add-in-manifests.md)
     
-- [Office 增益集需求集合](../../reference/office-add-in-requirement-sets.md)
+- [Office 增益集需求集合](../../reference/requirement-sets/office-add-in-requirement-sets.md)
     
 - [Word-Add-in-Get-Set-EditOpen-XML ](https://github.com/OfficeDev/Word-Add-in-Get-Set-EditOpen-XML)
     

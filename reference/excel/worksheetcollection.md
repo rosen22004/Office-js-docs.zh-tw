@@ -4,9 +4,9 @@
 
 ## <a name="properties"></a>屬性
 
-| 屬性	     | 類型	   |描述| 需求集合|
+| 屬性	       | 類型	    |描述| 需求集合|
 |:---------------|:--------|:----------|:----|
-|items|[Worksheet[]](worksheet.md)|Worksheet 物件的集合。唯讀。|[1.1](../requirement-sets/excel-api-requirement-sets.md)|
+|項目|[Worksheet[]](worksheet.md)|Worksheet 物件的集合。唯讀。|[1.1](../requirement-sets/excel-api-requirement-sets.md)|
 
 _請參閱屬性存取[範例。](#property-access-examples)_
 
@@ -21,7 +21,7 @@ _請參閱屬性存取[範例。](#property-access-examples)_
 |[add(name: string)](#addname-string)|[Worksheet](worksheet.md)|將新的工作表加入活頁簿中。工作表會加入至現有工作表的結尾處。如果您想要啟動新加入的工作表，請對其呼叫 ".activate()。|[1.1](../requirement-sets/excel-api-requirement-sets.md)|
 |[getActiveWorksheet()](#getactiveworksheet)|[Worksheet](worksheet.md)|取得活頁簿中目前作用中的工作表。|[1.1](../requirement-sets/excel-api-requirement-sets.md)|
 |[getItem(key: string)](#getitemkey-string)|[Worksheet](worksheet.md)|使用其名稱或 ID 取得 worksheet 物件。|[1.1](../requirement-sets/excel-api-requirement-sets.md)|
-|[getItemOrNull(key: string)](#getitemornullkey-string)|[Worksheet](worksheet.md)|使用其名稱或 ID 取得 worksheet 物件。如果工作表不存在，傳回物件的 isNull 屬性為 true。|[1.3](../requirement-sets/excel-api-requirement-sets.md)|
+|[getItemOrNullObject(key: string)](#getitemornullkey-string)|[Worksheet](worksheet.md)|使用其名稱或 ID 取得 worksheet 物件。如果工作表不存在，傳回物件的 isNull 屬性為 true。|[1.4](../requirement-sets/excel-api-requirement-sets.md)|
 |[load(param: object)](#loadparam-object)|void|以參數中指定的屬性和物件值填滿 JavaScript 層中建立的 Proxy 物件。|[1.1](../requirement-sets/excel-api-requirement-sets.md)|
 
 ## <a name="method-details"></a>方法詳細資料
@@ -36,7 +36,7 @@ worksheetCollectionObject.add(name);
 ```
 
 #### <a name="parameters"></a>參數
-| 參數	    | 類型	   |描述|
+| 參數	       | 類型    |描述|
 |:---------------|:--------|:----------|:---|
 |Name|string|選用。要加入的工作表的名稱。若指定，名稱應為唯一的。若不指定，Excel 會自行決定新工作表的名稱。|
 
@@ -103,7 +103,7 @@ worksheetCollectionObject.getItem(key);
 ```
 
 #### <a name="parameters"></a>參數
-| 參數	    | 類型	   |描述|
+| 參數	       | 類型    |描述|
 |:---------------|:--------|:----------|:---|
 |索引鍵|string|工作表的名稱或 ID。|
 
@@ -119,7 +119,7 @@ worksheetCollectionObject.getItemOrNull(key);
 ```
 
 #### <a name="parameters"></a>參數
-| 參數	    | 類型	   |描述|
+| 參數	       | 類型    |描述|
 |:---------------|:--------|:----------|:---|
 |索引鍵|string|工作表的名稱或 ID。|
 
@@ -135,7 +135,7 @@ object.load(param);
 ```
 
 #### <a name="parameters"></a>參數
-| 參數	    | 類型	   |描述|
+| 參數	       | 類型    |描述|
 |:---------------|:--------|:----------|:---|
 |param|物件|選用。接受參數與關聯性名稱，做為分隔字串或陣列。或者提供 [loadOption](loadoption.md) 物件。|
 
