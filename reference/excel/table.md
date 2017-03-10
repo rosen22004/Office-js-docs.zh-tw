@@ -1,10 +1,10 @@
-# <a name="table-object-javascript-api-for-excel"></a>Table 物件 (適用於 Excel 的 JavaScript API)
+﻿# <a name="table-object-javascript-api-for-excel"></a>Table 物件 (適用於 Excel 的 JavaScript API)
 
-表示 Excel 表格。
+代表 Excel 表格。
 
 ## <a name="properties"></a>屬性
 
-| 屬性	     | 類型	   |描述| 需求集合|
+| 屬性	       | 類型	    |描述| 需求集合|
 |:---------------|:--------|:----------|:----|
 |highlightFirstColumn|bool|指出第一個資料行是否包含特殊格式。|[1.3](../requirement-sets/excel-api-requirement-sets.md)|
 |highlightLastColumn|bool|指出最後一個資料行是否包含特殊格式。|[1.3](../requirement-sets/excel-api-requirement-sets.md)|
@@ -20,7 +20,7 @@
 _請參閱屬性存取[範例。](#property-access-examples)_
 
 ## <a name="relationships"></a>關聯性
-| 關聯性 | 類型	   |描述| 需求集合|
+| 關聯性 | 類型	    |描述| 需求集合|
 |:---------------|:--------|:----------|:----|
 |columns|[TableColumnCollection](tablecolumncollection.md)|傳回表格中所有欄的集合。唯讀。|[1.1](../requirement-sets/excel-api-requirement-sets.md)|
 |rows|[TableRowCollection](tablerowcollection.md)|傳回表格中所有列的集合。唯讀。|[1.1](../requirement-sets/excel-api-requirement-sets.md)|
@@ -38,7 +38,6 @@ _請參閱屬性存取[範例。](#property-access-examples)_
 |[getHeaderRowRange()](#getheaderrowrange)|[Range](range.md)|取得與表格的標題列相關的範圍物件。|[1.1](../requirement-sets/excel-api-requirement-sets.md)|
 |[getRange()](#getrange)|[Range](range.md)|取得與整個表格相關的範圍物件。|[1.1](../requirement-sets/excel-api-requirement-sets.md)|
 |[getTotalRowRange()](#gettotalrowrange)|[Range](range.md)|取得與表格的合計列相關的範圍物件。|[1.1](../requirement-sets/excel-api-requirement-sets.md)|
-|[load(param: object)](#loadparam-object)|void|以參數中指定的屬性和物件值填滿 JavaScript 層中建立的 Proxy 物件。|[1.1](../requirement-sets/excel-api-requirement-sets.md)|
 |[reapplyFilters()](#reapplyfilters)|void|重新套用目前在資料表上的所有篩選器。|[1.2](../requirement-sets/excel-api-requirement-sets.md)|
 
 ## <a name="method-details"></a>方法詳細資料
@@ -202,7 +201,7 @@ Excel.run(function (ctx) {
     var tableName = 'Table1';
     var table = ctx.workbook.tables.getItem(tableName);
     var tableRange = table.getRange();
-    tableRange.load('address'); 
+    tableRange.load('address');    
     return ctx.sync().then(function() {
             console.log(tableRange.address);
     });
@@ -235,7 +234,7 @@ Excel.run(function (ctx) {
     var tableName = 'Table1';
     var table = ctx.workbook.tables.getItem(tableName);
     var tableTotalsRange = table.getTotalRowRange();
-    tableTotalsRange.load('address');   
+    tableTotalsRange.load('address');    
     return ctx.sync().then(function() {
             console.log(tableTotalsRange.address);
     });
@@ -247,22 +246,6 @@ Excel.run(function (ctx) {
 });
 ```
 
-
-### <a name="loadparam-object"></a>load(param: object)
-以參數中指定的屬性和物件值填滿 JavaScript 層中建立的 Proxy 物件。
-
-#### <a name="syntax"></a>語法
-```js
-object.load(param);
-```
-
-#### <a name="parameters"></a>參數
-| 參數	    | 類型	   |描述|
-|:---------------|:--------|:----------|:---|
-|param|物件|選用。接受參數與關聯性名稱，做為分隔字串或陣列。或者提供 [loadOption](loadoption.md) 物件。|
-
-#### <a name="returns"></a>傳回
-void
 
 ### <a name="reapplyfilters"></a>reapplyFilters()
 重新套用目前在資料表上的所有篩選器。

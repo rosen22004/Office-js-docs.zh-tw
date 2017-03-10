@@ -1,16 +1,17 @@
 ﻿# <a name="shapedataitem-object-javascript-api-for-visio"></a>ShapeDataItem 物件 (適用於 Visio 的 JavaScript API)
 
 適用於：_Visio Online_
->**附註：**Visio JavaScript API 目前是預覽模式，可能有所異動。Visio JavaScript API 目前不支援在生產環境中使用。
 
 代表 ShapeDataItem。
 
 ## <a name="properties"></a>屬性
 
-| 屬性	       | 類型	    |描述| 意見反應|
-|:---------------|:--------|:----------|:---|
-|標籤|string|指定圖形資料項目標籤的字串。唯讀。|[移至](https://github.com/OfficeDev/office-js-docs/issues/new?title=Visio-shapeDataItem-label)|
-|值|string|指定圖形資料項目值的字串。唯讀。|[移至](https://github.com/OfficeDev/office-js-docs/issues/new?title=Visio-shapeDataItem-value)|
+| 屬性	       | 類型	    |描述|
+|:---------------|:--------|:----------|
+|格式|string|指定圖形資料項目格式的字串。唯讀。|
+|formattedValue|string|指定圖形資料項目的格式化值的字串。唯讀。|
+|標籤|string|指定圖形資料項目標籤的字串。唯讀。|
+|數值|string|指定圖形資料項目值的字串。唯讀。|
 
 _請參閱屬性存取[範例。](#property-access-examples)_
 
@@ -20,9 +21,9 @@ _請參閱屬性存取[範例。](#property-access-examples)_
 
 ## <a name="methods"></a>方法
 
-| 方法           | 傳回類型    |描述| 意見反應|
-|:---------------|:--------|:----------|:---|
-|[load(param: object)](#loadparam-object)|void|以參數中指定的屬性和物件值填滿 JavaScript 層中建立的 Proxy 物件。|[移至](https://github.com/OfficeDev/office-js-docs/issues/new?title=Visio-shapeDataItem-load)|
+| 方法           | 傳回類型    |描述|
+|:---------------|:--------|:----------|
+|[load(param: object)](#loadparam-object)|void|以參數中指定的屬性和物件值填滿 JavaScript 層中建立的 Proxy 物件。|
 
 ## <a name="method-details"></a>方法詳細資料
 

@@ -40,7 +40,7 @@ void
 
 ```js
 Excel.run(function (ctx) { 
-    var gridlines = ctx.workbook.worksheets.getItem("Sheet1").charts.getItem("Chart1").axes.valueAxis.majorGridlines;   
+    var gridlines = ctx.workbook.worksheets.getItem("Sheet1").charts.getItem("Chart1").axes.valueAxis.majorGridlines;    
     gridlines.format.line.clear();
     return ctx.sync().then(function() {
             console.log("Chart Major Gridlines Format Cleared");
@@ -62,7 +62,7 @@ chartFillObject.setSolidColor(color);
 ```
 
 #### <a name="parameters"></a>參數
-| 參數	    | 類型	   |描述|
+| 參數	       | 類型    |描述|
 |:---------------|:--------|:----------|:---|
 |Color|string|代表框線色彩的 HTML 色彩代碼，顯示為 #RRGGBB 格式 (例如 "FFA500") 或具名 HTML 色彩 (例如 "orange")。|
 
@@ -75,7 +75,7 @@ void
 
 ```js
 Excel.run(function (ctx) { 
-    var chart = ctx.workbook.worksheets.getItem("Sheet1").charts.getItem("Chart1"); 
+    var chart = ctx.workbook.worksheets.getItem("Sheet1").charts.getItem("Chart1");    
 
     chart.format.fill.setSolidColor("#FF0000");
 

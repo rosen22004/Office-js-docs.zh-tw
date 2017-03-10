@@ -3,9 +3,9 @@
 您可以使用 Excel JavaScript API 來建置 Excel 2016 的增益集。下列清單顯示 API 中可用的高層次 Excel 物件。每個物件頁面連結都會描述物件可用的屬性、關聯性和方法。請瀏覽連結以了解詳細資訊。
 
 * [Workbook](../../reference/excel/workbook.md)：這是最上層物件，包含相關的活頁簿物件，例如工作表、表格、範圍等等。也可以用來列出相關的參考。
-* [Worksheet](../../reference/excel/worksheet.md)：Worksheets 集合的成員。Worksheets 集合包含活頁簿中的所有 Worksheet 物件。
-    * [Worksheet 集合](../../reference/excel/worksheetcollection.md)：屬於活頁簿一部份的所有 Worksheet 物件的集合。
-* [Range](../../reference/excel/range.md)：代表儲存格、列、欄，或是包含一個或多個連續儲存格區塊的儲存格選取範圍。
+* [工作表](../../reference/excel/worksheet.md)：工作表集合的成員。工作表集合包含活頁簿中的所有 Worksheet 物件。
+    * [工作表集合](../../reference/excel/worksheetcollection.md)：屬於活頁簿一部份的所有 Worksheet 物件的集合。
+* [範圍](../../reference/excel/range.md)：代表儲存格、列、欄，或是包含一個或多個連續儲存格區塊的儲存格選取範圍。
 * [Table](../../reference/excel/table.md)：代表分類儲存格的集合，可讓您輕鬆管理資料。
     * [Table 集合](../../reference/excel/tablecollection.md)：活頁簿或工作表中的表格集合。
     * [TableColumn 集合](../../reference/excel/tablecolumncollection.md)：表格中所有欄的集合。

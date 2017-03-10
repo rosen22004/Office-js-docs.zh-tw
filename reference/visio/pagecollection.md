@@ -1,15 +1,14 @@
 # <a name="pagecollection-object-javascript-api-for-visio"></a>PageCollection 物件 (適用於 Visio 的 JavaScript API)
 
 適用於：_Visio Online_
->**附註：**Visio JavaScript API 目前是預覽模式，可能有所異動。Visio JavaScript API 目前不支援在生產環境中使用。
 
 代表屬於文件一部份的頁面物件集合。
 
 ## <a name="properties"></a>屬性
 
-| 屬性	       | 類型	    |描述| 意見反應|
-|:---------------|:--------|:----------|:---|
-|項目|[Page[]](page.md)|Page 物件的集合。唯讀。|[移至](https://github.com/OfficeDev/office-js-docs/issues/new?title=Visio-pageCollection-items)|
+| 屬性	       | 類型	    |描述|
+|:---------------|:--------|:----------|
+|項目|[Page[]](page.md)|Page 物件的集合。唯讀。|
 
 ## <a name="relationships"></a>關聯性
 無
@@ -17,11 +16,11 @@
 
 ## <a name="methods"></a>方法
 
-| 方法           | 傳回類型    |描述| 意見反應|
-|:---------------|:--------|:----------|:---|
-|[getCount()](#getcount)|Int|取得集合中的頁面數目。|[移至](https://github.com/OfficeDev/office-js-docs/issues/new?title=Visio-pageCollection-getCount)|
-|[getItem(key: number 或 string)](#getitemkey-number-or-string)|[頁面](page.md)|取得使用其機碼 (名稱或 ID) 的頁面。|[移至](https://github.com/OfficeDev/office-js-docs/issues/new?title=Visio-pageCollection-getItem)|
-|[load(param: object)](#loadparam-object)|void|以參數中指定的屬性和物件值填滿 JavaScript 層中建立的 Proxy 物件。|[移至](https://github.com/OfficeDev/office-js-docs/issues/new?title=Visio-pageCollection-load)|
+| 方法           | 傳回類型    |描述|
+|:---------------|:--------|:----------|
+|[getCount()](#getcount)|Int|取得集合中的頁面數目。|
+|[getItem(key: number 或 string)](#getitemkey-number-or-string)|[頁面](page.md)|取得使用其機碼 (名稱或 ID) 的頁面。|
+|[load(param: object)](#loadparam-object)|void|以參數中指定的屬性和物件值填滿 JavaScript 層中建立的 Proxy 物件。|
 
 ## <a name="method-details"></a>方法詳細資料
 

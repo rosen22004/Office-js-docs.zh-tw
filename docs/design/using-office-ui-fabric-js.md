@@ -16,9 +16,9 @@ Fabric 由數個專案所組成︰
 ##<a name="1-add-the-fabric-cdn-references"></a>1.新增 Fabric CDN 參考
 若要從 CDN 參考 Fabric，新增下列 HTML 程式碼到您的頁面。
 
-    <link rel="stylesheet" href="https://static2.sharepointonline.com/files/fabric/office-ui-fabric-js/1.2.0/css/fabric.min.css">
-    <link rel="stylesheet" href="https://static2.sharepointonline.com/files/fabric/office-ui-fabric-js/1.2.0/css/fabric.components.min.css">
-    <script src="https://static2.sharepointonline.com/files/fabric/office-ui-fabric-js/1.2.0/js/fabric.min.js"></script>
+    <link rel="stylesheet" href="https://static2.sharepointonline.com/files/fabric/office-ui-fabric-js/1.4.0/css/fabric.min.css">
+    <link rel="stylesheet" href="https://static2.sharepointonline.com/files/fabric/office-ui-fabric-js/1.4.0/css/fabric.components.min.css">
+    <script src="https://static2.sharepointonline.com/files/fabric/office-ui-fabric-js/1.4.0/js/fabric.min.js"></script>
 
 僅以上步驟。現在您已準備好可在增益集中使用 Fabric。 
 
@@ -37,26 +37,26 @@ Fabric 提供了多種您可用於增益集中的 UX 元件，例如：按鈕或
 
 > **附註：**我們將陸續新增其他元件。 
 
-- [階層連結](https://github.com/OfficeDev/office-ui-fabric-js/blob/master/ghdocs/components/Breadcrumb.md)
-- [按鈕](https://github.com/OfficeDev/office-ui-fabric-js/blob/master/ghdocs/components/Button.md)
-- [核取方塊](https://github.com/OfficeDev/office-ui-fabric-js/blob/master/ghdocs/components/CheckBox.md)
-- [ChoiceFieldGroup](https://github.com/OfficeDev/office-ui-fabric-js/blob/master/ghdocs/components/ChoiceFieldGroup.md)
-- [日期選擇器](https://github.com/OfficeDev/office-ui-fabric-js/blob/master/ghdocs/components/DatePicker.md) (如需示範如何在增益集中實作日期選擇器的範例，請參閱 [Excel 銷售追蹤器](https://github.com/OfficeDev/Excel-Add-in-JavaScript-SalesTracker) 程式碼範例)。
-- [下拉式清單](https://github.com/OfficeDev/office-ui-fabric-js/blob/master/ghdocs/components/Dropdown.md)
-- [標籤](https://github.com/OfficeDev/office-ui-fabric-js/blob/master/ghdocs/components/Label.md)
-- [連結](https://github.com/OfficeDev/office-ui-fabric-js/blob/master/ghdocs/components/Link.md)
-- [清單](https://github.com/OfficeDev/office-ui-fabric-js/blob/master/ghdocs/components/List.md) (考慮在 CSS 中變更元件的預設樣式)。
-- [MessageBanner](https://github.com/OfficeDev/office-ui-fabric-js/blob/master/ghdocs/components/MessageBanner.md)
-- [MessageBar](https://github.com/OfficeDev/office-ui-fabric-js/blob/master/ghdocs/components/MessageBar.md)
-- [重疊](https://github.com/OfficeDev/office-ui-fabric-js/blob/master/ghdocs/components/Overlay.md)
-- [面板](https://github.com/OfficeDev/office-ui-fabric-js/blob/master/ghdocs/components/Panel.md)
-- [樞紐](https://github.com/OfficeDev/office-ui-fabric-js/blob/master/ghdocs/components/Pivot.md)
-- [ProgressIndicator](https://github.com/OfficeDev/office-ui-fabric-js/blob/master/ghdocs/components/ProgressIndicator.md)
-- [Searchbox](https://github.com/OfficeDev/office-ui-fabric-js/blob/master/ghdocs/components/SearchBox.md)
-- [載入狀態圓環](https://github.com/OfficeDev/office-ui-fabric-js/blob/master/ghdocs/components/Spinner.md)
-- [表格](https://github.com/OfficeDev/office-ui-fabric-js/blob/master/ghdocs/components/Table.md)
-- [TextField](https://github.com/OfficeDev/office-ui-fabric-js/blob/master/ghdocs/components/TextField.md)
-- [切換](https://github.com/OfficeDev/office-ui-fabric-js/blob/master/ghdocs/components/Toggle.md)
+- [階層連結](https://dev.office.com/fabric-js/Components/Breadcrumb/Breadcrumb.html)
+- [按鈕](https://dev.office.com/fabric-js/Components/Button/Button.html) (考慮在您的增益集中使用不同的小按鈕。)
+- [核取方塊](https://dev.office.com/fabric-js/Components/CheckBox/CheckBox.html)
+- [ChoiceFieldGroup](https://dev.office.com/fabric-js/Components/ChoiceFieldGroup/ChoiceFieldGroup.html)
+- [日期選擇器](https://dev.office.com/fabric-js/Components/DatePicker/DatePicker.html) (如需示範如何在增益集中實作日期選擇器的範例，請參閱 [Excel 銷售追蹤器](https://github.com/OfficeDev/Excel-Add-in-JavaScript-SalesTracker) 程式碼範例)。
+- [下拉式清單](https://dev.office.com/fabric-js/Components/Dropdown/Dropdown.html)
+- [標籤](https://dev.office.com/fabric-js/Components/Label/Label.html)
+- [連結](https://dev.office.com/fabric-js/Components/Link/Link.html)
+- [清單](https://dev.office.com/fabric-js/Components/List/List.html) (考慮在 CSS 中變更元件的預設樣式)。
+- [MessageBanner](https://dev.office.com/fabric-js/Components/MessageBanner/MessageBanner.html)
+- [MessageBar](https://dev.office.com/fabric-js/Components/MessageBar/MessageBar.html)
+- [重疊](https://dev.office.com/fabric-js/Components/Overlay/Overlay.html)
+- [面板](https://dev.office.com/fabric-js/Components/Panel/Panel.html)
+- [樞紐](https://dev.office.com/fabric-js/Components/Pivot/Pivot.html)
+- [ProgressIndicator](https://dev.office.com/fabric-js/Components/ProgressIndicator/ProgressIndicator.html)
+- [Searchbox](https://dev.office.com/fabric-js/Components/SearchBox/SearchBox.html)
+- [載入狀態圓環](https://dev.office.com/fabric-js/Components/Spinner/Spinner.html)
+- [表格](https://dev.office.com/fabric-js/Components/Table/Table.html)
+- [TextField](https://dev.office.com/fabric-js/Components/TextField/TextField.html)
+- [切換](https://dev.office.com/fabric-js/Components/Toggle/Toggle.html)
    
 ## <a name="updating-your-add-in-to-use-fabric-js"></a>更新您的增益集以使用 Fabric JS
 若您已在使用舊版 Office UI Fabric 且想改為使用 Fabric JS，請確保會深入了解、整合及測試增益集內的新元件。請記住以下幾點，對於規劃更新時會有所助益：

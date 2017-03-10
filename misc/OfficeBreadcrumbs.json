@@ -11,6 +11,13 @@
             "Title": "Office JavaScript API 參考",
             "URL": "/reference/add-ins/javascript-api-for-office",
             "Index":  "/reference/add-ins/"
+		},
+        {
+
+            "Title": "提交至 Office 市集",
+            "URL": "https://dev.office.com/officestore/docs/submit-add-ins-and-web-apps-to-the-office-store",
+            "Index":  "/officestore/docs/"
+
         }
         
     ]

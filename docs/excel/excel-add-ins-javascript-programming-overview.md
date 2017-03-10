@@ -36,8 +36,7 @@ Run 方法發生在 RequestContext 中，並傳回一項承諾 (通常就是 ctx
 
 Load() 方法是用於填入在增益集 JavaScript 層中建立的 proxy 物件。舉例來說，當工作表嘗試擷取物件時，會先在 JavaScript 層中建立一個本機 proxy 物件。這種物件可用來佇列其屬性設定以及叫用方法。不過，若要讀取物件屬性或關聯，則需先叫用 load() 和 sync() 方法。Load() 方法會發生在屬性中以及在呼叫 sync() 方法時需要載入的關聯中。
 
-_語法：_
-
+_語法︰_
 ```js
 object.load(string: properties);
 //or
@@ -45,9 +44,9 @@ object.load(array: properties);
 //or
 object.load({loadOption});
 ```
-其中：
+其中，
 
-* `properties` 是要載入的屬性和/或關聯性名稱清單，以逗點分隔的字串或名稱陣列來指定。如需詳細資訊，請參閱每個物件下方的 .load() 方法。
+`properties` 是要載入的屬性和/或關聯性名稱清單，以逗點分隔的字串或名稱陣列來指定。如需詳細資訊，請參閱每個物件下方的 .load() 方法。
 * `loadOption` 指定的物件用於描述 selection、expansion、top 和 skip 選項。如需詳細資訊，請參閱物件載入[選項](../../reference/excel/loadoption.md)。
 
 ## <a name="example-write-values-from-an-array-to-a-range-object"></a>範例：從陣列中寫入值到範圍物件
@@ -57,7 +56,7 @@ object.load({loadOption});
 Excel.run() 包含指示批次。在此批次中會建立一個 proxy 物件，參考作用中工作表上的範圍 (位址 A1:B2)。這個 proxy range 物件的值是在本機設定。為了讀回此值，命令會指示將 range 的 `text` 屬性載入至 proxy 物件。所有這些命令都會排入佇列，並在呼叫 ctx.sync() 後執行。Sync() 方法會傳回一項可用來將其鏈結至其他作業的承諾。
 
 ```js
-// Run a batch operation against the Excel object model. Use the context argument to get access to the Excel document.
+l// Run a batch operation against the Excel object model. Use the context argument to get access to the Excel document.
 Excel.run(function (ctx) {
 
     // Create a proxy object for the sheet
@@ -67,7 +66,7 @@ Excel.run(function (ctx) {
                  ["Type", "Estimate"],
                  ["Transportation", 1670]
                  ];
-    // Create a proxy object for the range
+.    // Create a proxy object for the range
     var range = sheet.getRange("A1:B2");
 
     // Assign array value to the proxy object's values property.
@@ -93,8 +92,8 @@ Excel.run(function (ctx) {
 // Run a batch operation against the Excel object model. Use the context argument to get access to the Excel document.
 Excel.run(function (ctx) {
 
-    // Create a proxy object for the range
-    var range = ctx.workbook.worksheets.getActiveWorksheet().getRange("A1:A2");
+    // Create a proxy object for the range and load the values property
+    var range = ctx.workbook.worksheets.getActiveWorksheet().getRange("A1:A2").load("values");
 
     // Synchronizes the state between JavaScript proxy objects and real objects in Excel by executing instructions queued on the context
     return ctx.sync().then(function() {
@@ -335,13 +334,13 @@ Excel.run(function (ctx) {
 |InvalidBinding  |由於先前的更新，此物件繫結不再有效。|
 |InvalidSelection|目前的選取範圍對這項作業無效。|
 |Unauthenticated |必要的驗證資訊遺失或無效。|
-|AccessDenied   |您不能執行要求的作業。|
-|ItemNotFound   |要求的資源不存在。|
+|AccessDenied    |您不能執行要求的作業。|
+|ItemNotFound    |要求的資源不存在。|
 |ActivityLimitReached|已達到活動上限。|
 |GeneralException|處理要求時發生內部錯誤。|
 |NotImplemented  |要求的功能未實作。|
 |ServiceNotAvailable|服務無法使用。|
-|Conflict	   |因為發生衝突，無法處理要求。|
+|Conflict	    |因為發生衝突，無法處理要求。|
 |ItemAlreadyExists|欲建立的資源已經存在。|
 |UnsupportedOperation|不支援所嘗試的操作。|
 |RequestAborted|要求在執行階段中止。|

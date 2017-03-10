@@ -1,7 +1,5 @@
 # <a name="object-load-options-javascript-api-for-visio"></a>物件載入選項 (適用於 Visio 的 JavaScript API)
 
->**附註：**Visio JavaScript API 目前是預覽模式，可能有所異動。Visio JavaScript API 目前不支援在生產環境中使用。
-
 代表可以傳遞至 Load 方法的物件，以指定在執行 **sync()** 方法 (用以同步處理 Visio 物件和對應的 JavaScript Proxy 物件之間的狀態) 時要載入的屬性集和關聯。此物件需要 Select 和 Expand 參數等選項，以指定要載入至物件的屬性集，同時也允許在集合上分頁。
 
 也可以提供包含要載入之屬性和關聯的字串，或提供包含要載入之屬性和關聯清單的陣列。請參閱下列的範例。

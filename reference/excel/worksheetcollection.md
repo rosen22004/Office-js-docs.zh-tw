@@ -1,6 +1,6 @@
 # <a name="worksheetcollection-object-javascript-api-for-excel"></a>WorksheetCollection 物件 (適用於 Excel 的 JavaScript API)
 
-代表屬於活頁簿一部份的 worksheet 物件集合。
+代表屬於活頁簿一部份的 Worksheet 物件集合。
 
 ## <a name="properties"></a>屬性
 
@@ -20,9 +20,9 @@ _請參閱屬性存取[範例。](#property-access-examples)_
 |:---------------|:--------|:----------|:----|
 |[add(name: string)](#addname-string)|[Worksheet](worksheet.md)|將新的工作表加入活頁簿中。工作表會加入至現有工作表的結尾處。如果您想要啟動新加入的工作表，請對其呼叫 ".activate()。|[1.1](../requirement-sets/excel-api-requirement-sets.md)|
 |[getActiveWorksheet()](#getactiveworksheet)|[Worksheet](worksheet.md)|取得活頁簿中目前作用中的工作表。|[1.1](../requirement-sets/excel-api-requirement-sets.md)|
+|[getCount(visibleOnly: bool)](#getcountvisibleonly-bool)|Int|取得集合中的工作表數目。|[1.4](../requirement-sets/excel-api-requirement-sets.md)|
 |[getItem(key: string)](#getitemkey-string)|[Worksheet](worksheet.md)|使用其名稱或 ID 取得 worksheet 物件。|[1.1](../requirement-sets/excel-api-requirement-sets.md)|
-|[getItemOrNullObject(key: string)](#getitemornullkey-string)|[Worksheet](worksheet.md)|使用其名稱或 ID 取得 worksheet 物件。如果工作表不存在，傳回物件的 isNull 屬性為 true。|[1.4](../requirement-sets/excel-api-requirement-sets.md)|
-|[load(param: object)](#loadparam-object)|void|以參數中指定的屬性和物件值填滿 JavaScript 層中建立的 Proxy 物件。|[1.1](../requirement-sets/excel-api-requirement-sets.md)|
+|[getItemOrNullObject(key: string)](#getitemornullobjectkey-string)|[Worksheet](worksheet.md)|使用其名稱或 ID 取得 worksheet 物件。如果工作表不存在，會傳回 null 物件。|[1.4](../requirement-sets/excel-api-requirement-sets.md)|
 
 ## <a name="method-details"></a>方法詳細資料
 
@@ -94,6 +94,22 @@ Excel.run(function (ctx) {
 ```
 
 
+### <a name="getcountvisibleonly-bool"></a>getCount(visibleOnly: bool)
+取得集合中的工作表數目。
+
+#### <a name="syntax"></a>語法
+```js
+worksheetCollectionObject.getCount(visibleOnly);
+```
+
+#### <a name="parameters"></a>參數
+| 參數	       | 類型    |描述|
+|:---------------|:--------|:----------|:---|
+|visibleOnly|bool|選用。如果設定為 true，則僅傳回可見的工作表。 |
+
+#### <a name="returns"></a>傳回
+Int
+
 ### <a name="getitemkey-string"></a>getItem(key: string)
 使用其名稱或 ID 取得 worksheet 物件。
 
@@ -108,14 +124,14 @@ worksheetCollectionObject.getItem(key);
 |索引鍵|string|工作表的名稱或 ID。|
 
 #### <a name="returns"></a>傳回
-[Worksheet](worksheet.md)
+[工作表](worksheet.md)
 
-### <a name="getitemornullkey-string"></a>getItemOrNull(key: string)
-使用其名稱或 ID 取得 worksheet 物件。如果工作表不存在，傳回物件的 isNull 屬性為 true。
+### <a name="getitemornullobjectkey-string"></a>getItemOrNullObject(key: string)
+使用其名稱或 ID 取得 worksheet 物件。如果工作表不存在，會傳回 null 物件。
 
 #### <a name="syntax"></a>語法
 ```js
-worksheetCollectionObject.getItemOrNull(key);
+worksheetCollectionObject.getItemOrNullObject(key);
 ```
 
 #### <a name="parameters"></a>參數
@@ -124,23 +140,7 @@ worksheetCollectionObject.getItemOrNull(key);
 |索引鍵|string|工作表的名稱或 ID。|
 
 #### <a name="returns"></a>傳回
-[Worksheet](worksheet.md)
-
-### <a name="loadparam-object"></a>load(param: object)
-以參數中指定的屬性和物件值填滿 JavaScript 層中建立的 Proxy 物件。
-
-#### <a name="syntax"></a>語法
-```js
-object.load(param);
-```
-
-#### <a name="parameters"></a>參數
-| 參數	       | 類型    |描述|
-|:---------------|:--------|:----------|:---|
-|param|物件|選用。接受參數與關聯性名稱，做為分隔字串或陣列。或者提供 [loadOption](loadoption.md) 物件。|
-
-#### <a name="returns"></a>傳回
-void
+[工作表](worksheet.md)
 ### <a name="property-access-examples"></a>屬性存取範例
 ```js
 Excel.run(function (ctx) { 

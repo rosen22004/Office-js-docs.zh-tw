@@ -1,7 +1,6 @@
 ﻿# <a name="shapeview-object-javascript-api-for-visio"></a>ShapeView 物件 (適用於 Visio 的 JavaScript API)
 
 適用於：_Visio Online_
->**附註：**Visio JavaScript API 目前是預覽模式，可能有所異動。Visio JavaScript API 目前不支援在生產環境中使用。
 
 代表 ShapeView 類別。
 
@@ -10,15 +9,17 @@
 無
 
 ## <a name="relationships"></a>關聯性
-無
+| 關聯性 | 類型	    |描述|
+|:---------------|:--------|:----------|
+|螢光筆|[螢光筆](highlight.md)|代表圖形旁邊的螢光筆。|
 
 ## <a name="methods"></a>方法
 
-| 方法           | 傳回類型    |描述| 意見反應|
-|:---------------|:--------|:----------|:---|
-|[addOverlay(OverlayType:OverlayType、內容：字串、HorizontalAlignment︰HorizontalAlignment、VerticalAlignment：VerticalAlignment、寬度：數字、高度：數字)](#addoverlayoverlaytype-overlaytype-content-string-horizontalalignment-horizontalalignment-verticalalignment-verticalalignment-width-number-height-number)|int|在圖形頂部新增重疊。|[移至](https://github.com/OfficeDev/office-js-docs/issues/new?title=Visio-shapeView-addOverlay)|
-|[load(param: object)](#loadparam-object)|void|以參數中指定的屬性和物件值填滿 JavaScript 層中建立的 Proxy 物件。|[移至](https://github.com/OfficeDev/office-js-docs/issues/new?title=Visio-shapeView-load)|
-|[removeOverlay(OverlayId: number)](#removeoverlayoverlayid-number)|無效|移除圖形上的特定重疊或所有重疊。|[移至](https://github.com/OfficeDev/office-js-docs/issues/new?title=Visio-shapeView-removeOverlay)|
+| 方法           | 傳回類型    |描述|
+|:---------------|:--------|:----------|
+|[addOverlay(OverlayType:OverlayType、內容：字串、HorizontalAlignment︰HorizontalAlignment、VerticalAlignment：VerticalAlignment、寬度：數字、高度：數字)](#addoverlayoverlaytype-overlaytype-content-string-horizontalalignment-horizontalalignment-verticalalignment-verticalalignment-width-number-height-number)|Int|在圖形頂部新增重疊。|
+|[load(param: object)](#loadparam-object)|void|以參數中指定的屬性和物件值填滿 JavaScript 層中建立的 Proxy 物件。|
+|[removeOverlay(OverlayId: number)](#removeoverlayoverlayid-number)|無效|移除圖形上的特定重疊或所有重疊。|
 
 ## <a name="method-details"></a>方法詳細資料
 
@@ -75,6 +76,20 @@ shapeViewObject.removeOverlay(OverlayId);
 
 #### <a name="returns"></a>傳回
 void
+### <a name="property-access-examples"></a>屬性存取範例
+```js
+Visio.run(function (ctx) { 
+    var activePage = ctx.document.getActivePage();
+    var shape = activePage.shapes.getItem(0);
+    shape.view.highlight = { color: "#E7E7E7", width: 100 };
+    return ctx.sync();
+}).catch(function(error) {
+        console.log("Error: " + error);
+        if (error instanceof OfficeExtension.Error) {
+            console.log("Debug info: " + JSON.stringify(error.debugInfo));
+        }
+});
+```
 
 ### <a name="property-access-examples"></a>屬性存取範例
 ```js

@@ -1,18 +1,18 @@
-﻿# <a name="tablesort-object-javascript-api-for-excel"></a>TableSort 物件 (適用於 Excel 的 JavaScript API)
+# <a name="tablesort-object-javascript-api-for-excel"></a>TableSort 物件 (適用於 Excel 的 JavaScript API)
 
 管理在 Table 物件上的排序作業。
 
 ## <a name="properties"></a>屬性
 
-| 屬性	     | 類型	   |描述| 需求集合|
+| 屬性	       | 類型	    |描述| 需求集合|
 |:---------------|:--------|:----------|:----|
 |matchCase|bool|表示大小寫會影響料表的最後排序。唯讀。|[1.2](../requirement-sets/excel-api-requirement-sets.md)|
-|method|string|表示最後用於排序資料表的中文字元排序方法。唯讀。可能的值為：PinYin、StrokeCount。|[1.2](../requirement-sets/excel-api-requirement-sets.md)|
+|method|string|表示最後用於排序資料表的中文字元排序方法。唯讀。可能的值為：拼音、StrokeCount。|[1.2](../requirement-sets/excel-api-requirement-sets.md)|
 
 ## <a name="relationships"></a>關聯性
-| 關聯性 | 類型	   |描述| 需求集合|
+| 關聯性 | 類型	    |描述| 需求集合|
 |:---------------|:--------|:----------|:----|
-|fields|[SortField](sortfield.md)|表示用於最後排序資料表的目前條件。唯讀。|[1.2](../requirement-sets/excel-api-requirement-sets.md)|
+|欄位|[SortField](sortfield.md)|表示用於最後排序資料表的目前條件。唯讀。|[1.2](../requirement-sets/excel-api-requirement-sets.md)|
 
 ## <a name="methods"></a>方法
 
@@ -20,7 +20,6 @@
 |:---------------|:--------|:----------|:----|
 |[apply(fields:SortField[], matchCase: bool, method: string)](#applyfields-sortfield-matchcase-bool-method-string)|void|執行排序作業。|[1.2](../requirement-sets/excel-api-requirement-sets.md)|
 |[clear()](#clear)|void|清除資料表上目前的排序。雖然這不會修改資料表的順序，它會清除標頭按鈕的狀態。|[1.2](../requirement-sets/excel-api-requirement-sets.md)|
-|[load(param: object)](#loadparam-object)|void|以參數中指定的屬性和物件值填滿 JavaScript 層中建立的 Proxy 物件。|[1.1](../requirement-sets/excel-api-requirement-sets.md)|
 |[reapply()](#reapply)|void|將目前的排序參數重新套用至資料表。|[1.2](../requirement-sets/excel-api-requirement-sets.md)|
 
 ## <a name="method-details"></a>方法詳細資料
@@ -35,7 +34,7 @@ tableSortObject.apply(fields, matchCase, method);
 ```
 
 #### <a name="parameters"></a>參數
-| 參數	    | 類型	   |描述|
+| 參數	       | 類型    |描述|
 |:---------------|:--------|:----------|:---|
 |欄位|SortField[]|用來排序的條件清單。|
 |matchCase|bool|選擇性。是否有大小寫影響的字串排序。|
@@ -74,22 +73,6 @@ tableSortObject.clear();
 
 #### <a name="parameters"></a>參數
 無
-
-#### <a name="returns"></a>傳回
-void
-
-### <a name="loadparam-object"></a>load(param: object)
-以參數中指定的屬性和物件值填滿 JavaScript 層中建立的 Proxy 物件。
-
-#### <a name="syntax"></a>語法
-```js
-object.load(param);
-```
-
-#### <a name="parameters"></a>參數
-| 參數	    | 類型	   |描述|
-|:---------------|:--------|:----------|:---|
-|param|物件|選用。接受參數與關聯性名稱，做為分隔字串或陣列。或者提供 [loadOption](loadoption.md) 物件。|
 
 #### <a name="returns"></a>傳回
 void

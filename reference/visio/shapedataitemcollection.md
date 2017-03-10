@@ -1,15 +1,14 @@
 ﻿# <a name="shapedataitemcollection-object-javascript-api-for-visio"></a>ShapeDataItemCollection 物件 (適用於 Visio 的 JavaScript API)
 
 適用於：_Visio Online_
->**附註：**Visio JavaScript API 目前是預覽模式，可能有所異動。Visio JavaScript API 目前不支援在生產環境中使用。
 
 代表指定圖形的 ShapeDataItemCollection。
 
 ## <a name="properties"></a>屬性
 
-| 屬性	       | 類型	    |描述| 意見反應|
-|:---------------|:--------|:----------|:---|
-|項目|[ShapeDataItem[]](shapedataitem.md)|ShapeDataItem 物件的集合。唯讀。|[移至](https://github.com/OfficeDev/office-js-docs/issues/new?title=Visio-shapeDataItemCollection-items)|
+| 屬性	       | 類型	    |描述|
+|:---------------|:--------|:----------|
+|項目|[ShapeDataItem[]](shapedataitem.md)|ShapeDataItem 物件的集合。唯讀。|
 
 _請參閱屬性存取[範例。](#property-access-examples)_
 
@@ -19,11 +18,11 @@ _請參閱屬性存取[範例。](#property-access-examples)_
 
 ## <a name="methods"></a>方法
 
-| 方法           | 傳回類型    |描述| 意見反應|
-|:---------------|:--------|:----------|:---|
-|[getCount()](#getcount)|Int|取得圖形資料項目的數目。|[移至](https://github.com/OfficeDev/office-js-docs/issues/new?title=Visio-shapeDataItemCollection-getCount)|
-|[getItem(key: string)](#getitemkey-string)|[ShapeDataItem](shapedataitem.md)|取得使用其名稱的 ShapeDataItem。|[移至](https://github.com/OfficeDev/office-js-docs/issues/new?title=Visio-shapeDataItemCollection-getItem)|
-|[load(param: object)](#loadparam-object)|void|以參數中指定的屬性和物件值填滿 JavaScript 層中建立的 Proxy 物件。|[移至](https://github.com/OfficeDev/office-js-docs/issues/new?title=Visio-shapeDataItemCollection-load)|
+| 方法           | 傳回類型    |描述|
+|:---------------|:--------|:----------|
+|[getCount()](#getcount)|Int|取得圖形資料項目的數目。|
+|[getItem(key: string)](#getitemkey-string)|[ShapeDataItem](shapedataitem.md)|取得使用其名稱的 ShapeDataItem。|
+|[load(param: object)](#loadparam-object)|void|以參數中指定的屬性和物件值填滿 JavaScript 層中建立的 Proxy 物件。|
 
 ## <a name="method-details"></a>方法詳細資料
 

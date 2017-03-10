@@ -1,22 +1,22 @@
-# <a name="tablecolumn-object-javascript-api-for-excel"></a>TableColumn 物件 (適用於 Excel 的 JavaScript API)
+﻿# <a name="tablecolumn-object-javascript-api-for-excel"></a>TableColumn 物件 (適用於 Excel 的 JavaScript API)
 
 代表表格中的一欄。
 
 ## <a name="properties"></a>屬性
 
-| 屬性	     | 類型	   |描述| 需求集合|
+| 屬性	       | 類型	    |描述| 需求集合|
 |:---------------|:--------|:----------|:----|
-|id|int|傳回可在表格內識別欄的唯一索引鍵。唯讀。|[1.1](../requirement-sets/excel-api-requirement-sets.md)|
-|index|int|傳回表格欄集合內欄的索引編號。以 0 開始編製索引。唯讀。|[1.1](../requirement-sets/excel-api-requirement-sets.md)|
-|name|string|傳回表格欄的名稱。唯讀。|[1.1](../requirement-sets/excel-api-requirement-sets.md)|
+|id|Int|傳回可在表格內識別欄的唯一索引鍵。唯讀。|[1.1](../requirement-sets/excel-api-requirement-sets.md)|
+|index|Int|傳回表格欄集合內欄的索引編號。以 0 開始編製索引。唯讀。|[1.1](../requirement-sets/excel-api-requirement-sets.md)|
+|name|string|代表表格欄的名稱。|[1.1](../requirement-sets/excel-api-requirement-sets.md)|
 |values|object[][]|代表所指定範圍的原始值。傳回的資料可能是 string、number 或 boolean 類型。包含錯誤的儲存格會傳回錯誤字串。|[1.1](../requirement-sets/excel-api-requirement-sets.md)|
 
 _請參閱屬性存取[範例。](#property-access-examples)_
 
 ## <a name="relationships"></a>關聯性
-| 關聯性 | 類型	   |描述| 需求集合|
+| 關聯性 | 類型	    |描述| 需求集合|
 |:---------------|:--------|:----------|:----|
-|filter|[Filter](filter.md)|擷取套用至資料行的篩選器。唯讀。|[1.2](../requirement-sets/excel-api-requirement-sets.md)|
+|篩選|[Filter](filter.md)|擷取套用至資料行的篩選器。唯讀。|[1.2](../requirement-sets/excel-api-requirement-sets.md)|
 
 ## <a name="methods"></a>方法
 
@@ -27,7 +27,6 @@ _請參閱屬性存取[範例。](#property-access-examples)_
 |[getHeaderRowRange()](#getheaderrowrange)|[Range](range.md)|取得與欄的標題列相關的範圍物件。|[1.1](../requirement-sets/excel-api-requirement-sets.md)|
 |[getRange()](#getrange)|[Range](range.md)|取得與整個欄相關的範圍物件。|[1.1](../requirement-sets/excel-api-requirement-sets.md)|
 |[getTotalRowRange()](#gettotalrowrange)|[Range](range.md)|取得與欄的合計列相關的範圍物件。|[1.1](../requirement-sets/excel-api-requirement-sets.md)|
-|[load(param: object)](#loadparam-object)|void|以參數中指定的屬性和物件值填滿 JavaScript 層中建立的 Proxy 物件。|[1.1](../requirement-sets/excel-api-requirement-sets.md)|
 
 ## <a name="method-details"></a>方法詳細資料
 
@@ -196,22 +195,6 @@ Excel.run(function (ctx) {
 });
 ```
 
-
-### <a name="loadparam-object"></a>load(param: object)
-以參數中指定的屬性和物件值填滿 JavaScript 層中建立的 Proxy 物件。
-
-#### <a name="syntax"></a>語法
-```js
-object.load(param);
-```
-
-#### <a name="parameters"></a>參數
-| 參數	    | 類型	   |描述|
-|:---------------|:--------|:----------|:---|
-|param|物件|選用。接受參數與關聯性名稱，做為分隔字串或陣列。或者提供 [loadOption](loadoption.md) 物件。|
-
-#### <a name="returns"></a>傳回
-void
 ### <a name="property-access-examples"></a>屬性存取範例
 
 ```js

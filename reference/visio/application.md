@@ -1,15 +1,14 @@
 # <a name="application-object-javascript-api-for-visio"></a>應用程式物件 (適用於 Visio 的 JavaScript API)
 
 適用於：_Visio Online_
->**附註：**Visio JavaScript API 目前是預覽模式，可能有所異動。Visio JavaScript API 目前不支援在生產環境中使用。
 
 代表應用程式。
 
 ## <a name="properties"></a>屬性
 
-| 屬性	       | 類型	    |描述| 意見反應|
-|:---------------|:--------|:----------|:---|
-|showToolbars|bool|顯示或隱藏標準工具列。|[移至](https://github.com/OfficeDev/office-js-docs/issues/new?title=Visio-application-showToolbars)|
+| 屬性	       | 類型	    |描述|
+|:---------------|:--------|:----------|
+|showToolbars|bool|顯示或隱藏標準工具列。|
 
 _請參閱屬性存取[範例。](#property-access-examples)_
 
@@ -19,9 +18,9 @@ _請參閱屬性存取[範例。](#property-access-examples)_
 
 ## <a name="methods"></a>方法
 
-| 方法           | 傳回類型    |描述| 意見反應|
-|:---------------|:--------|:----------|:---|
-|[load(param: object)](#loadparam-object)|void|以參數中指定的屬性和物件值填滿 JavaScript 層中建立的 Proxy 物件。|[移至](https://github.com/OfficeDev/office-js-docs/issues/new?title=Visio-application-load)|
+| 方法           | 傳回類型    |描述|
+|:---------------|:--------|:----------|
+|[load(param: object)](#loadparam-object)|void|以參數中指定的屬性和物件值填滿 JavaScript 層中建立的 Proxy 物件。|
 
 ## <a name="method-details"></a>方法詳細資料
 

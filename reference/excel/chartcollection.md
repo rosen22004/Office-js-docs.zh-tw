@@ -4,7 +4,7 @@
 
 ## <a name="properties"></a>屬性
 
-| 屬性	     | 類型	   |描述| 需求集合|
+| 屬性	       | 類型	    |描述| 需求集合|
 |:---------------|:--------|:----------|:----|
 |Count|int|傳回工作表中的圖表數目。唯讀。|[1.1](../requirement-sets/excel-api-requirement-sets.md)|
 |items|[Chart[]](chart.md)|Chart 物件的集合。唯讀。|[1.1](../requirement-sets/excel-api-requirement-sets.md)|
@@ -20,10 +20,10 @@ _請參閱屬性存取[範例。](#property-access-examples)_
 | 方法           | 傳回類型    |描述| 需求集合|
 |:---------------|:--------|:----------|:----|
 |[add(type: string, sourceData:Range, seriesBy: string)](#addtype-string-sourcedata-range-seriesby-string)|[Chart](chart.md)|建立新圖表。|[1.1](../requirement-sets/excel-api-requirement-sets.md)|
+|[getCount()](#getcount)|Int|傳回工作表中的圖表數目。|[1.4](../requirement-sets/excel-api-requirement-sets.md)|
 |[getItem(name: string)](#getitemname-string)|[Chart](chart.md)|使用其名稱取得圖表。如果有多個圖表具有相同的名稱，則會傳回第一個圖表。|[1.1](../requirement-sets/excel-api-requirement-sets.md)|
 |[getItemAt(index: number)](#getitematindex-number)|[Chart](chart.md)|根據圖表在集合中的位置，取得圖表。|[1.1](../requirement-sets/excel-api-requirement-sets.md)|
-|[getItemOrNull(name: string)](#getitemornullname-string)|[Chart](chart.md)|使用其名稱取得圖表。如果有多個圖表具有相同的名稱，則會傳回第一個圖表。|[1.3](../requirement-sets/excel-api-requirement-sets.md)|
-|[load(param: object)](#loadparam-object)|void|以參數中指定的屬性和物件值填滿 JavaScript 層中建立的 Proxy 物件。|[1.1](../requirement-sets/excel-api-requirement-sets.md)|
+|[getItemOrNullObject(name: string)](#getitemornullobjectname-string)|[圖表](chart.md)|使用其名稱取得圖表。如果有多個圖表具有相同的名稱，則會傳回第一個圖表。|[1.4](../requirement-sets/excel-api-requirement-sets.md)|
 
 ## <a name="method-details"></a>方法詳細資料
 
@@ -37,16 +37,11 @@ chartCollectionObject.add(type, sourceData, seriesBy);
 ```
 
 #### <a name="parameters"></a>參數
-| 參數	    | 類型	   |描述|
+| 參數	       | 類型    |描述|
 |:---------------|:--------|:----------|:---|
-|類型|string|代表圖表的類型。請參閱下方提供之可能適用的表格類型。|
+|類型|string|代表圖表的類型。可能的值為：ColumnClustered、ColumnStacked、ColumnStacked100、BarClustered、BarStacked、BarStacked100、LineStacked、LineStacked100、LineMarkers、LineMarkersStacked、LineMarkersStacked100、PieOfPie 等。|
 |sourceData|Range|對應到來源資料的 Range 物件。|
 |seriesBy|string|選用。指定在圖表中使用欄或列作為資料數列的方法。可能的值為：Auto、Columns、Rows|
-
-**以下是有效的表格類型：**
-
-`ColumnClustered`, `ColumnStacked`, `ColumnStacked100`, `_3DColumnClustered`, `_3DColumnStacked`, `_3DColumnStacked100`, `BarClustered`, `BarStacked`, `BarStacked100`, `_3DBarClustered`, `_3DBarStacked`, `_3DBarStacked100`, `LineStacked`, `LineStacked100`, `LineMarkers`, `LineMarkersStacked`, `LineMarkersStacked100`, `PieOfPie`, `PieExploded`, `_3DPieExploded`, `BarOfPie`, `XYScatterSmooth`, `XYScatterSmoothNoMarkers`, `XYScatterLines`, `XYScatterLinesNoMarkers`, `AreaStacked`, `AreaStacked100`, `_3DAreaStacked`, `_3DAreaStacked100`, `DoughnutExploded`, `RadarMarkers`, `RadarFilled`, `Surface`, `SurfaceWireframe`, `SurfaceTopView`, `SurfaceTopViewWireframe`, `Bubble`, `Bubble3DEffect`, `StockHLC`, `StockOHLC`, `StockVHLC`, `StockVOHLC`, `CylinderColClustered`, `CylinderColStacked`, `CylinderColStacked100`, `CylinderBarClustered`, `CylinderBarStacked`, `CylinderBarStacked100`, `CylinderCol`, `ConeColClustered`, `ConeColStacked`, `ConeColStacked100`, `ConeBarClustered`, `ConeBarStacked`, `ConeBarStacked100`, `ConeCol`, `PyramidColClustered`, `PyramidColStacked`, `PyramidColStacked100`, `PyramidBarClustered`, `PyramidBarStacked`, `PyramidBarStacked100`, `PyramidCol`, `_3DColumn`, `Line`, `_3DLine`, `_3DPie`, `Pie`, `XYScatter`, `_3DArea`, `Area`, `Doughnut`, `Radar`
-
 
 #### <a name="returns"></a>傳回
 [Chart](chart.md)
@@ -61,7 +56,7 @@ Excel.run(function (ctx) {
     var range = ctx.workbook.worksheets.getItem(sheetName)
         .getRange(rangeSelection);
     var chart = ctx.workbook.worksheets.getItem(sheetName)
-        .charts.add("ColumnClustered", range, "auto");  return ctx.sync().then(function() {
+        .charts.add("ColumnClustered", range, "auto");    return ctx.sync().then(function() {
             console.log("New Chart Added");
     });
 }).catch(function(error) {
@@ -73,6 +68,20 @@ Excel.run(function (ctx) {
 ```
 
 
+### <a name="getcount"></a>getCount()
+傳回工作表中的圖表數目。
+
+#### <a name="syntax"></a>語法
+```js
+chartCollectionObject.getCount();
+```
+
+#### <a name="parameters"></a>參數
+無
+
+#### <a name="returns"></a>傳回
+Int
+
 ### <a name="getitemname-string"></a>getItem(name: string)
 使用其名稱取得圖表。如果有多個圖表具有相同的名稱，則會傳回第一個圖表。
 
@@ -82,7 +91,7 @@ chartCollectionObject.getItem(name);
 ```
 
 #### <a name="parameters"></a>參數
-| 參數	    | 類型	   |描述|
+| 參數	       | 類型    |描述|
 |:---------------|:--------|:----------|:---|
 |Name|string|要擷取之圖表的名稱。|
 
@@ -153,7 +162,7 @@ chartCollectionObject.getItemAt(index);
 ```
 
 #### <a name="parameters"></a>參數
-| 參數	    | 類型	   |描述|
+| 參數	       | 類型    |描述|
 |:---------------|:--------|:----------|:---|
 |index|number|要擷取之物件的索引值。以 0 開始編製索引。|
 
@@ -178,37 +187,21 @@ Excel.run(function (ctx) {
 ```
 
 
-### <a name="getitemornullname-string"></a>getItemOrNull(name: string)
+### <a name="getitemornullobjectname-string"></a>getItemOrNullObject(name: string)
 使用其名稱取得圖表。如果有多個圖表具有相同的名稱，則會傳回第一個圖表。
 
 #### <a name="syntax"></a>語法
 ```js
-chartCollectionObject.getItemOrNull(name);
+chartCollectionObject.getItemOrNullObject(name);
 ```
 
 #### <a name="parameters"></a>參數
-| 參數	    | 類型	   |描述|
+| 參數	       | 類型    |描述|
 |:---------------|:--------|:----------|:---|
 |Name|string|要擷取之圖表的名稱。|
 
 #### <a name="returns"></a>傳回
-[Chart](chart.md)
-
-### <a name="loadparam-object"></a>load(param: object)
-以參數中指定的屬性和物件值填滿 JavaScript 層中建立的 Proxy 物件。
-
-#### <a name="syntax"></a>語法
-```js
-object.load(param);
-```
-
-#### <a name="parameters"></a>參數
-| 參數	    | 類型	   |描述|
-|:---------------|:--------|:----------|:---|
-|param|物件|選用。接受參數與關聯性名稱，做為分隔字串或陣列。或者提供 [loadOption](loadoption.md) 物件。|
-
-#### <a name="returns"></a>傳回
-void
+[圖表](chart.md)
 ### <a name="property-access-examples"></a>屬性存取範例
 
 ```js

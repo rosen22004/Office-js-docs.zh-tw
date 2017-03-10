@@ -1,12 +1,12 @@
 # <a name="rangebordercollection-object-javascript-api-for-excel"></a>RangeBorderCollection 物件 (適用於 Excel 的 JavaScript API)
 
-代表構成範圍框線的 border 物件。
+代表構成範圍框線的 Border 物件。
 
 ## <a name="properties"></a>屬性
 
-| 屬性	     | 類型	   |描述| 需求集合|
+| 屬性	       | 類型	    |描述| 需求集合|
 |:---------------|:--------|:----------|:----|
-|count|int|集合中的 border 物件數目。唯讀。|[1.1](../requirement-sets/excel-api-requirement-sets.md)|
+|Count|int|集合中的 border 物件數目。唯讀。|[1.1](../requirement-sets/excel-api-requirement-sets.md)|
 |items|[RangeBorder[]](rangeborder.md)|RangeBorder 物件的集合。唯讀。|[1.1](../requirement-sets/excel-api-requirement-sets.md)|
 
 _請參閱屬性存取[範例。](#property-access-examples)_
@@ -21,7 +21,6 @@ _請參閱屬性存取[範例。](#property-access-examples)_
 |:---------------|:--------|:----------|:----|
 |[getItem(index: string)](#getitemindex-string)|[RangeBorder](rangeborder.md)|使用名稱取得 border 物件|[1.1](../requirement-sets/excel-api-requirement-sets.md)|
 |[getItemAt(index: number)](#getitematindex-number)|[RangeBorder](rangeborder.md)|使用索引取得 border 物件|[1.1](../requirement-sets/excel-api-requirement-sets.md)|
-|[load(param: object)](#loadparam-object)|void|以參數中指定的屬性和物件值填滿 JavaScript 層中建立的 Proxy 物件。|[1.1](../requirement-sets/excel-api-requirement-sets.md)|
 
 ## <a name="method-details"></a>方法詳細資料
 
@@ -35,7 +34,7 @@ rangeBorderCollectionObject.getItem(index);
 ```
 
 #### <a name="parameters"></a>參數
-| 參數	    | 類型	   |描述|
+| 參數	       | 類型    |描述|
 |:---------------|:--------|:----------|:---|
 |index|string|要擷取之 border 物件的索引值。可能的值為：EdgeTop、EdgeBottom、EdgeLeft、EdgeRight、InsideVertical、InsideHorizontal、DiagonalDown、DiagonalUp|
 
@@ -95,7 +94,7 @@ rangeBorderCollectionObject.getItemAt(index);
 ```
 
 #### <a name="parameters"></a>參數
-| 參數	    | 類型	   |描述|
+| 參數	       | 類型    |描述|
 |:---------------|:--------|:----------|:---|
 |index|number|要擷取之物件的索引值。以 0 開始編製索引。|
 
@@ -123,22 +122,6 @@ Excel.run(function (ctx) {
 });
 ```
 
-
-### <a name="loadparam-object"></a>load(param: object)
-以參數中指定的屬性和物件值填滿 JavaScript 層中建立的 Proxy 物件。
-
-#### <a name="syntax"></a>語法
-```js
-object.load(param);
-```
-
-#### <a name="parameters"></a>參數
-| 參數	    | 類型	   |描述|
-|:---------------|:--------|:----------|:---|
-|param|物件|選用。接受參數與關聯性名稱，做為分隔字串或陣列。或者提供 [loadOption](loadoption.md) 物件。|
-
-#### <a name="returns"></a>傳回
-void
 ### <a name="property-access-examples"></a>屬性存取範例
 
 ```js

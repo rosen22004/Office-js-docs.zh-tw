@@ -1,28 +1,29 @@
 # <a name="pageview-object-javascript-api-for-visio"></a>PageView 物件 (適用於 Visio 的 JavaScript API)
 
 適用於：_Visio Online_
->**附註：**Visio JavaScript API 目前是預覽模式，可能有所異動。Visio JavaScript API 目前不支援在生產環境中使用。
 
 代表 PageView 類別。
 
 ## <a name="properties"></a>屬性
 
-| 屬性	 | 類型	 |描述| 意見反應|
-|:---------------|:--------|:----------|:---|
-|縮放|int|GetSet 頁面的縮放層級。|[移至](https://github.com/OfficeDev/office-js-docs/issues/new?title=Visio-pageView-zoom)|
+| 屬性	 | 類型	 |描述|
+|:---------------|:--------|:----------|
+|縮放|int|GetSet 頁面的縮放層級。|
 
 ## <a name="relationships"></a>關聯性
-
 無
 
 ## <a name="methods"></a>方法
 
-| 方法           | 傳回類型    |描述| 意見反應|
-|:---------------|:--------|:----------|:---|
-|[centerViewportOnShape(ShapeId: number)](#centerviewportonshapeshapeid-number)|無效|移動瀏覽 Visio 繪圖以將指定的圖形放在檢視的中心。|[移至](https://github.com/OfficeDev/office-js-docs/issues/new?title=Visio-pageView-centerViewportOnShape)|
-|[fitToWindow()](#fittowindow)|無效|依目前視窗調整頁面大小。|[移至](https://github.com/OfficeDev/office-js-docs/issues/new?title=Visio-pageView-fitToWindow)|
-|[isShapeInViewport(Shape:Shape)](#isshapeinviewportshape-shape)|bool|檢查圖形是否在頁面檢視內。|[移至](https://github.com/OfficeDev/office-js-docs/issues/new?title=Visio-pageView-isShapeInViewport)|
-|[load(param: object)](#loadparam-object)|void|以參數中指定的屬性和物件值填滿 JavaScript 層中建立的 Proxy 物件。|[移至](https://github.com/OfficeDev/office-js-docs/issues/new?title=Visio-pageView-load)|
+| 方法           | 傳回類型    |描述|
+|:---------------|:--------|:----------|
+|[centerViewportOnShape(ShapeId: number)](#centerviewportonshapeshapeid-number)|無效|移動瀏覽 Visio 繪圖以將指定的圖形放在檢視的中心。|
+|[fitToWindow()](#fittowindow)|無效|依目前視窗調整頁面大小。|
+|[getPosition()](#getposition)|[位置](position.md)|傳回在檢視內指定頁面位置的位置物件。|
+|[getSelection()](#getselection)|[選取範圍](selection.md)|代表頁面內的選取範圍。|
+|[isShapeInViewport(Shape:Shape)](#isshapeinviewportshape-shape)|bool|檢查圖形是否在頁面檢視內。|
+|[load(param: object)](#loadparam-object)|void|以參數中指定的屬性和物件值填滿 JavaScript 層中建立的 Proxy 物件。|
+|[setPosition(Position:Position)](#setpositionposition-position)|void|在檢視內指定頁面位置。|
 
 ## <a name="method-details"></a>方法詳細資料
 
@@ -73,6 +74,34 @@ pageViewObject.fitToWindow();
 #### <a name="returns"></a>傳回
 void
 
+### <a name="getposition"></a>getPosition()
+傳回在檢視內指定頁面位置的位置物件。
+
+#### <a name="syntax"></a>語法
+```js
+pageViewObject.getPosition();
+```
+
+#### <a name="parameters"></a>參數
+無
+
+#### <a name="returns"></a>傳回
+[位置](position.md)
+
+### <a name="getselection"></a>getSelection()
+代表頁面內的選取範圍。
+
+#### <a name="syntax"></a>語法
+```js
+pageViewObject.getSelection();
+```
+
+#### <a name="parameters"></a>參數
+無
+
+#### <a name="returns"></a>傳回
+[選取範圍](selection.md)
+
 ### <a name="isshapeinviewportshape-shape"></a>isShapeInViewport(Shape:圖形)
 檢查圖形是否在頁面檢視內。
 
@@ -103,7 +132,15 @@ object.load(param);
 |param|物件|選用。接受參數與關聯性名稱，做為分隔字串或陣列。或者提供 [loadOption](loadoption.md) 物件。|
 
 #### <a name="returns"></a>傳回
-無效
+void
+
+### <a name="setpositionposition-position"></a>setPosition(Position:Position)
+在檢視內指定頁面位置。
+
+#### <a name="syntax"></a>語法
+```js
+pageViewObject.setPosition(Position);
+```
 
 #### <a name="parameters"></a>參數
 | 參數	       | 類型    |描述|

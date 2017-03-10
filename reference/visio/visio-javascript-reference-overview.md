@@ -1,7 +1,5 @@
 # <a name="visio-javascript-apis-reference"></a>Visio JavaScript API 參考資料
 
->**附註：**Visio JavaScript API 目前是預覽模式，可能有所異動。Visio JavaScript API 目前不支援在生產環境中使用。 
-
 您可以使用 Visio JavaScript API 以在 SharePoint Online 中內嵌 Visio 圖表。內嵌 Visio 圖表是儲存在 SharePoint 文件庫及顯示在 SharePoint 頁面上的圖表。若要內嵌 Visio 圖表，可將圖表顯示在 HTML &lt;Iframe&gt; 元素中。然後，您可以使用 Visio JavaScript API 以程式設計方式與內嵌圖表搭配使用。
 
 ![搭配使用 SharePoint 頁面上 Iframe 中的 Visio 圖表及指令碼編輯器網頁組件](../../images/visio-api-block-diagram.png)
