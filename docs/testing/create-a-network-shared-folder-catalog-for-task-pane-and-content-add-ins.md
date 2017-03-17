@@ -3,11 +3,11 @@
 
 您可以在執行於 Windows 上的 Office 用戶端中安裝 Office 增益集以供測試，方式為使用共用資料夾目錄來發佈資訊清單到網路檔案共用。 
 
->**附註：**若要在 Office Online 中測試 Office 增益集，請參閱[在 Office Online 中側載 Office 增益集來進行測試](sideload-office-add-ins-for-testing.md)。若要在 iPad 或 Mac 上測試增益集，請參閱[在 iPad 和 Mac 上側載 Office 增益集來進行測試](sideload-an-office-add-in-on-ipad-and-mac.md )。若要測試 Outlook 增益集，請參閱[側載 Outlook 增益集來進行測試](sideload-outlook-add-ins-for-testing.md )。
+如果您測試的不是 Windows 上的 Word、Excel 或 PowerPoint 增益集，請參閱下列其中一個主題來側載增益集︰
 
-僅部署資訊清單檔案至共用資料夾目錄。將 Web 應用程式本身部署到網頁伺服器，並在資訊清單檔的 **SourceLocation** 元素中指定 URL。
-
- >**重要：**為了協助增益集更安全的存取外部資料和服務，增益集應使用安全的通訊協定 (例如超文字傳輸通訊協定安全性 (HTTPS)) 以連接至外部資料和服務。如果增益集使用增益集命令，您必須使用 HTTPS。
+- [在 Office Online 中側載 Office 增益集來進行測試](sideload-office-add-ins-for-testing.md)
+- [在 iPad 和 Mac 上側載 Office 增益集來進行測試](sideload-an-office-add-in-on-ipad-and-mac.md )
+- [側載 Outlook 增益集來進行測試](sideload-outlook-add-ins-for-testing.md )
 
 以下影片會帶您了解在 Office 桌面或 Office 線上側載增益集的程序。
 
@@ -46,7 +46,9 @@
 ## <a name="sideload-your-add-in"></a>側載增益集
 
 
-1. 將您測試的任何增益集的資訊清單檔案放置到共用資料夾目錄中。
+1. 將您測試的任何增益集的資訊清單檔案放置到共用資料夾目錄中。請注意，您是將 Web 應用程式本身部署到 Web 伺服器。請務必在資訊清單檔的 **SourceLocation** 元素指定 URL。
+
+    >**重要事項：**為了協助增益集更安全的存取外部資料和服務，增益集應使用安全的通訊協定 (例如超文字傳輸通訊協定安全性 (HTTPS)) 以連接至外部資料和服務。如果增益集使用增益集命令，您必須使用 HTTPS。
 
 2. 在 Excel、Word 或 PowerPoint 中，選取功能區的 [插入]**** 索引標籤上的 [我的增益集]****。
 

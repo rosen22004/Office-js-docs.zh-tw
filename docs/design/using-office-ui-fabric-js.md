@@ -38,7 +38,7 @@ Fabric 提供了多種您可用於增益集中的 UX 元件，例如：按鈕或
 > **附註：**我們將陸續新增其他元件。 
 
 - [階層連結](https://dev.office.com/fabric-js/Components/Breadcrumb/Breadcrumb.html)
-- [按鈕](https://dev.office.com/fabric-js/Components/Button/Button.html) (考慮在您的增益集中使用不同的小按鈕。)
+- [按鈕](https://dev.office.com/fabric-js/Components/Button/Button.html) (考慮在您的增益集中使用不同的小按鈕。將 16px 邊框間距新增至小按鈕，以確保在觸控式裝置上的 40px 最小觸控目標。)
 - [核取方塊](https://dev.office.com/fabric-js/Components/CheckBox/CheckBox.html)
 - [ChoiceFieldGroup](https://dev.office.com/fabric-js/Components/ChoiceFieldGroup/ChoiceFieldGroup.html)
 - [日期選擇器](https://dev.office.com/fabric-js/Components/DatePicker/DatePicker.html) (如需示範如何在增益集中實作日期選擇器的範例，請參閱 [Excel 銷售追蹤器](https://github.com/OfficeDev/Excel-Add-in-JavaScript-SalesTracker) 程式碼範例)。

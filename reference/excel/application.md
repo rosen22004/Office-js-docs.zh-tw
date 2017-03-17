@@ -19,7 +19,7 @@ _請參閱屬性存取[範例。](#property-access-examples)_
 | 方法           | 傳回類型    |描述| 需求集合|
 |:---------------|:--------|:----------|:----|
 |[calculate(calculationType: string)](#calculatecalculationtype-string)|void|重新計算 Excel 中所有目前開啟的活頁簿。|[1.1](../requirement-sets/excel-api-requirement-sets.md)|
-|[suspendCalculationUntilNextSync()](#suspendcalculationuntilnextsync)|void|暫止計算直至呼叫下一個 "context.sync()"。一旦設定，開發人員便有責任重新計算活頁簿，以確保能夠傳播任何相依性。|[1.4](../requirement-sets/excel-api-requirement-sets.md)|
+
 
 ## <a name="method-details"></a>方法詳細資料
 
@@ -52,20 +52,6 @@ Excel.run(function (ctx) {
         }
 });
 ```
-
-### <a name="suspendcalculationuntilnextsync"></a>suspendCalculationUntilNextSync()
-暫止計算直至呼叫下一個 "context.sync()"。一旦設定，開發人員便有責任重新計算活頁簿，以確保能夠傳播任何相依性。
-
-#### <a name="syntax"></a>語法
-```js
-applicationObject.suspendCalculationUntilNextSync();
-```
-
-#### <a name="parameters"></a>參數
-無
-
-#### <a name="returns"></a>傳回
-void
 ### <a name="property-access-examples"></a>屬性存取範例
 ```js
 Excel.run(function (ctx) {

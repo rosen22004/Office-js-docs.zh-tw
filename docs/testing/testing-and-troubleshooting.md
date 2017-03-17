@@ -1,4 +1,3 @@
-
 # <a name="troubleshoot-user-errors-with-office-add-ins"></a>疑難排解 Office 增益集的使用者錯誤
 
 使用者有時候可能會在使用您開發的 Office 增益集時發生問題。例如，增益集無法載入或無法存取。使用本文的資訊，協助解決使用者會遇到的 Office 增益集的常見問題。 
@@ -49,19 +48,40 @@
 
 請參閱[驗證與排解資訊清單的問題](troubleshoot-manifest.md)以對增益集資訊清單的問題進行偵錯。
 
+## <a name="add-in-dialog-box-cannot-be-displayed"></a>無法顯示增益集對話方塊
+
+使用 Office 增益集時，會詢問使用者是否顯示對話方塊。使用者選擇 [允許]**** 時，便會出現下列錯誤訊息︰
+
+「您瀏覽器的安全性設定導致我們無法建立對話方塊。請嘗試其他瀏覽器，或設定瀏覽器為讓顯示在網址列的 [URL] 和網域位於相同的安全性區域。」
+
+![對話方塊錯誤訊息螢幕擷取畫面](http://i.imgur.com/3mqmlgE.png)
+
+|**受影響的瀏覽器**|**受影響的平台**|
+|:--------------------|:---------------------|
+|Internet Explorer、Microsoft Edge|Office Online|
+
+若要解決這個問題，一般使用者或系統管理員可以在 Internet Explorer 中將增益集的網域加入至受信任網站清單。無論您使用的是 Internet Explorer 或 Microsoft Edge 瀏覽器，請遵循相同的程序。
+
+>**重要事項：**如果您不信任該增益集，請勿將該增益集的 URL 新增至受信任的網站清單。
+
+若要將 URL 新增至受信任的網站清單：
+
+1. 在 Internet Explorer 中，選擇 [工具] 按鈕，然後移至 [網際網路選項] **** >  [安全性]****。
+2. 選取 [受信任的網站]**** 區域，然後選擇 [網站]****。
+3. 輸入錯誤訊息中出現的 URL，並選擇 [新增]****。
+4. 請試著再次使用增益集。如果問題持續發生，請確認其他安全性區域的設定，並確定增益集網域的區域與 Office 應用程式的網址列中顯示的 URL 相同。
+
+在快顯模式中使用對話方塊 API 時，會發生這個問題。若要避免發生這個問題，請使用 [displayInFrame](../../reference/shared/officeui.displaydialogasync) 旗標。這需要您的網頁支援 iframe 內顯示。下列範例顯示如何使用旗標。
+
+```js
+
+Office.context.ui.displayDialogAsync(startAddress, {displayInFrame:true}, callback);
+```
+
 ## <a name="additional-resources"></a>其他資源
 
-
-
-- [在 Office Online 中偵錯增益集](../testing/debug-add-ins-in-office-online.md)
-    
-- [在 iPad 和 Mac 上側載 Office 增益集](../testing/sideload-an-office-add-in-on-ipad-and-mac.md)
-    
-- [在 iPad 和 Mac 上偵錯 Office 增益集](../testing/debug-office-add-ins-on-ipad-and-mac.md)
-    
-- [在 Visual Studio 中建立和偵錯 Office 增益集](../../docs/get-started/create-and-debug-office-add-ins-in-visual-studio.md)
-    
-- [部署和安裝 Outlook 增益集以進行測試](../outlook/testing-and-tips.md)
-    
+- [在 Office Online 中偵錯增益集](../testing/debug-add-ins-in-office-online.md) 
+- [在 iPad 和 Mac 上側載 Office 增益集](../testing/sideload-an-office-add-in-on-ipad-and-mac.md)  
+- [在 iPad 和 Mac 上對 Office 增益集進行偵錯](../testing/debug-office-add-ins-on-ipad-and-mac.md)  
 - [驗證與排解資訊清單的問題](troubleshoot-manifest.md)
     

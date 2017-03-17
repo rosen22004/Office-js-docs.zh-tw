@@ -3,7 +3,7 @@
 
 >**重要！**SharePoint 的增益集目錄不支援在 [增益集資訊清單](../overview/add-in-manifests.md) 之 VersionOverrides 節點實作的增益集功能，例如增益集命令。 
 
->如果您的目標是雲端或混合式環境，建議您透過 [Admin 中心預覽](https://support.office.com/en-ie/article/Deploy-Office-Add-ins-in-the-Office-365-new-Admin-Center-737e8c86-be63-44d7-bf02-492fa7cd9c3f?ui=en-US&rs=en-IE&ad=IE) 使用**集中式部署**來發佈您的增益集。
+>如果您的目標是雲端或混合式環境，建議您透過 [Admin 中心 (預覽)](publish/publish.md#office-365-admin-center-preview-deployment) 使用**集中式部署**來發佈您的增益集。
 
 增益集目錄是 SharePoint Web 應用程式或 SharePoint Online 租用中的專用網站集合，其裝載 Office 和 SharePoint 增益集的文件庫。系統管理員可以將 Office 增益集資訊清單檔案，上載到其組織的增益集目錄。當系統管理員將增益集目錄註冊為信任的目錄時，使用者可以從 Office 用戶端應用程式中的插入 UI 插入增益集。
 
