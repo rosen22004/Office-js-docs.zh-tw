@@ -271,6 +271,8 @@ Office.context.mailbox.item.end.setAsync(endTime, options, function(result) {
 
 `from` 和 [`sender`](Office.context.mailbox.item.md#sender) 屬性代表同一個人，除非郵件是由代理人所傳送。在此情況下，`from` 屬性表示委派人，而寄件者屬性即表示代理人。
 
+> **附註：**在 `from` 屬性中，`EmailAddressDetails` 物件的 `recipientType` 屬性為 `undefined`。
+
 ##### <a name="type"></a>類型：
 
 *   [EmailAddressDetails](simple-types.md#emailaddressdetails)
@@ -570,6 +572,8 @@ function callback(asyncResult) {
 取得電子郵件訊息的寄件者電子郵件地址。僅限閱讀模式。
 
 [`from`](Office.context.mailbox.item.md#from) 和 `sender` 屬性代表同一個人，除非郵件是由代理人所傳送。在此情況下，`from` 屬性表示委派人，而寄件者屬性即表示代理人。
+
+> **附註：**在 `sender` 屬性中，`EmailAddressDetails` 物件的 `recipientType` 屬性為 `undefined`。
 
 ##### <a name="type"></a>類型：
 

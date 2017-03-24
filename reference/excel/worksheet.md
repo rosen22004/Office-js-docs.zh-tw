@@ -1,4 +1,4 @@
-﻿# <a name="worksheet-object-javascript-api-for-excel"></a>Worksheet 物件 (適用於 Excel 的 JavaScript API)
+# <a name="worksheet-object-javascript-api-for-excel"></a>Worksheet 物件 (適用於 Excel 的 JavaScript API)
 
 Excel 工作表是一組儲存格方格。它可以包含資料、表格、圖表等。
 
@@ -30,8 +30,8 @@ _請參閱屬性存取[範例。](#property-access-examples)_
 |[delete()](#delete)|void|從活頁簿中刪除工作表。|[1.1](../requirement-sets/excel-api-requirement-sets.md)|
 |[getCell(row: number, column: number)](#getcellrow-number-column-number)|[Range](range.md)|根據列和欄數，取得包含單一儲存格的範圍物件。只要儲存格保持在工作表方格中，此儲存格可以位於其父範圍的界限之外。|[1.1](../requirement-sets/excel-api-requirement-sets.md)|
 |[getRange(address: string)](#getrangeaddress-string)|[Range](range.md)|取得由位址或名稱指定的範圍物件。|[1.1](../requirement-sets/excel-api-requirement-sets.md)|
-|[getUsedRange(valuesOnly: [ApiSet(Version)](#getusedrangevaluesonly-apisetversion)|[範圍](range.md)|使用的範圍是最小範圍，其中包含具有值或獲指派格式設定的任何儲存格。如果整個工作表空白，則此函數會傳回左上角儲存格 (亦即不會**擲回錯誤)。|[1.1](../requirement-sets/excel-api-requirement-sets.md)|
-|[getUsedRangeOrNullObject(valuesOnly: bool)](#getusedrangeornullobjectvaluesonly-bool)|[範圍](range.md)|使用的範圍是最小範圍，其中包含具有值或獲指派格式設定的任何儲存格。如果整個工作表空白，則此函數會傳回 null 物件。|[1.4](../requirement-sets/excel-api-requirement-sets.md)|
+|[getUsedRange(valuesOnly: bool)](#getusedrangevaluesonly-bool)|[Range](range.md)|使用的範圍是最小範圍，其中包含具有值或獲指派格式設定的任何儲存格。如果整個工作表空白，則此函數會傳回左上角儲存格 (亦即不會**擲回錯誤)。|[1.1](../requirement-sets/excel-api-requirement-sets.md)|
+|[getUsedRangeOrNullObject(valuesOnly: bool)](#getusedrangeornullobjectvaluesonly-bool)|[Range](range.md)|使用的範圍是最小範圍，其中包含具有值或獲指派格式設定的任何儲存格。如果整個工作表空白，則此函數會傳回 null 物件。|[1.4](../requirement-sets/excel-api-requirement-sets.md)|
 
 ## <a name="method-details"></a>方法詳細資料
 
@@ -192,7 +192,7 @@ Excel.run(function (ctx) {
 });
 ```
 
-### <a name="getusedrangevaluesonly-apisetversion"></a>getUsedRange(valuesOnly: [ApiSet(Version)
+### <a name="getusedrangevaluesonly-bool"></a>getUsedRange(valuesOnly: bool)
 使用的範圍是最小範圍，其中包含具有值或獲指派格式設定的任何儲存格。如果整個工作表空白，則此函數會傳回左上角儲存格 (亦即不會**擲回錯誤)。
 
 #### <a name="syntax"></a>語法

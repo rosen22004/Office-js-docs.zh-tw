@@ -4,6 +4,10 @@
 
 Word 增益集可在多種 Office 版本上執行，包含 Office 2016 for Windows、iPad 版 Office、Mac 版 Office 以及 Office Online。下表列出 Word 需求集、支援需求集的 Office 主應用程式，以及這些應用程式的組建或版本號碼。
 
+> 針對標示為 Beta 的需求集合，使用指定版本 (或更新版本) 的 Office 軟體並使用 CDN 的 Beta 程式庫：https://appsforoffice.microsoft.com/lib/beta/hosted/office.js
+
+> 不是列為 Beta 的項目通常已可使用，您可以繼續使用生產 CDN 程式庫︰https://appsforoffice.microsoft.com/lib/1/hosted/office.js
+
 |  需求集合  |   Office 2016 for Windows*  |  Office 2016 for iPad  |  Mac 版 Office 2016  | Office Online  | Office Online 伺服器  |
 |:-----|-----|:-----|:-----|:-----|:-----|
 | WordApi 1.3  | 在預覽中，版本 1605 (組建 6925.1000) 或更新版本| 在預覽中，2016 年 5 月，1.22 或更新版本 | 在預覽中，15.22 或更新版本| 在預覽中 ||

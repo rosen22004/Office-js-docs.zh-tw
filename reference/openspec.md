@@ -46,5 +46,5 @@ Word JavaScript API 1.4 更新包含重要的附加元件，包括︰
 ## <a name="single-sign-on-capability"></a>單一登入功能 
 探索在 Office 增益集 ([此處](https://github.com/OfficeDev/office-js-docs/tree/Addin_SSO_OpenSpec)) 中啟用單一登入的初始設計 
 
-**請參閱 [Office 內容新增規格](https://github.com/OfficeDev/office-js-docs/tree/ContextAdditions_OpenSpec) 以深入了解並提供您的意見反應。**
+**請參閱[單一登入規格](https://github.com/OfficeDev/office-js-docs/tree/Addin_SSO_OpenSpec)來深入了解並提供您的意見反映。**
 

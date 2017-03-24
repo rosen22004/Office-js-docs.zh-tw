@@ -43,7 +43,7 @@ if (item.somePropertyOrFunction !== undefined) {
 | 用戶端 | 支援的 API 需求集合 |
 | --- | --- |
 | Outlook 2016 for Windows | 1.1, 1.2, 1.3, 1.4 |
-| Outlook 2016 for Mac | 1.1 |
+| Outlook 2016 for Mac | 1.1, 1.2, 1.3, 1.4 |
 | Outlook 2013 for Windows | 1.1, 1.2, 1.3 |
 | Outlook 網頁版 (Office 365 和 Outlook.com) | 1.1, 1.2, 1.3, 1.4 |
 | Outlook Web App (Exchange 2013 On-Premise) | 1.1 |
