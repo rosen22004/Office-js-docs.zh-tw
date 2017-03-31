@@ -1,11 +1,11 @@
 
 
-# <a name="settingschangedeventargs.settings-property"></a>SettingsChangedEventArgs.settings 屬性
+# <a name="settingschangedeventargssettings-property"></a>SettingsChangedEventArgs.settings 屬性
 取得代表引發 **settingsChanged** 事件之設定的 **Settings** 物件。
 
 |||
 |:-----|:-----|
-|**主應用程式︰**|Excel|
+|**主應用程式︰**|Excel、Word|
 |**可用於[需求集合](../../docs/overview/specify-office-hosts-and-api-requirements.md)**|設定|
 |**上次變更於**|1.0|
 
@@ -30,7 +30,8 @@ var mySettings = eventArgsObj.settings;
 
 ||**Office for Windows desktop**|**Office Online (在瀏覽器中)**|**Office for iPad**|
 |:-----|:-----|:-----|:-----|
-|**Excel**||Y||
+|**Excel**||是||
+|**Word**|Y|Y||
 
 |||
 |:-----|:-----|

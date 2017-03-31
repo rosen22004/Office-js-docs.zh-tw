@@ -4,7 +4,7 @@
 
 此處所描述的功能可能處於不同的開發階段，例如早期設計或公開預覽。當功能可以正常使用時，內容將會從這個頁面中移除，而我們將會更新說明文件以包含新功能的詳細資料。 
 
-_**重要事項：**此處所列的功能仍在設計和檢閱階段，尚無法使用。這些功能和 API 可能有所異動。_
+>**重要事項：**此處所列的功能仍在設計和檢閱階段，尚無法使用。這些功能和 API 可能有所異動。
 
 ## <a name="visio-javascript-apis"></a>Visio JavaScript API
 Visio Online 是在網路上檢視並共用 Visio 圖表的新方法。您可以使用 Visio JavaScript API 1.1 來擴充 Visio Online 的功能。對內嵌在 SharePoint 網頁中的 Visio 圖表使用這些 API。請注意，Visio JavaScript API 目前並未套用於 [Office 增益集](https://dev.office.com/docs/add-ins/overview/office-add-ins)。
@@ -20,7 +20,7 @@ Visio Online 是在網路上檢視並共用 Visio 圖表的新方法。您可以
 Word JavaScript API 1.3 更新包含了自從引進此 API 以後，我們所實作最大的一組變更。透過新的 API，您將能夠︰ 
 
 * 建立並存取清單物件
-* 建立並存取資料表物件
+* 建立並存取表格物件
 * 有更多可用來存取並比較範圍物件的選項
 * 文件屬性
 
@@ -35,16 +35,16 @@ Word JavaScript API 1.4 更新包含重要的附加元件，包括︰
 * 使用承諾型語法的設定 API
 * 使用承諾型語法的自訂 XML 文件
 * 插入書籤 
-* 資料表合併儲存格
-* 資料表列合併與資料行分割
+* 表格合併儲存格
+* 表格資料列合併與資料行分割
 
 **請參閱 [Word JS API 1.4 開啟設計頁面](https://github.com/OfficeDev/office-js-docs/tree/WordJs_1.4_OpenSpec)來深入了解並提供您的意見反應。**
 
 ## <a name="host-platform-information-and-diagnostic-information"></a>主機、平台資訊及診斷資訊 
-若要向程式開發人員提供增益集執行階段環境的資訊及診斷資訊，請參閱 Office.Context 物件的已規劃[新增項目](https://github.com/OfficeDev/office-js-docs/tree/ContextAdditions_OpenSpec)。 
+請參閱計劃 [Office.Context 物件的新增項目](https://github.com/OfficeDev/office-js-docs/tree/ContextAdditions_OpenSpec)。這些更新會提供增益集執行階段環境資訊以及診斷資訊。 
 
 ## <a name="single-sign-on-capability"></a>單一登入功能 
-探索在 Office 增益集 ([此處](https://github.com/OfficeDev/office-js-docs/tree/Addin_SSO_OpenSpec)) 中啟用單一登入的初始設計 
+在 Office 增益集中，探索啟用單一登入的初始設計。
 
 **請參閱[單一登入規格](https://github.com/OfficeDev/office-js-docs/tree/Addin_SSO_OpenSpec)來深入了解並提供您的意見反映。**
 

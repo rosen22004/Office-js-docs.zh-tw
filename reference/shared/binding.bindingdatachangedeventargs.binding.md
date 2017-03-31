@@ -1,5 +1,5 @@
 
-# <a name="bindingdatachangedeventargs.binding-property"></a>BindingDataChangedEventArgs.binding 屬性
+# <a name="bindingdatachangedeventargsbinding-property"></a>BindingDataChangedEventArgs.binding 屬性
 取得代表引發 **DataChanged** 事件之繫結的 [Binding](../../reference/shared/binding.bindingdatachangedevent.md) 物件。
 
 |||
@@ -32,7 +32,7 @@ var myBinding = eventArgsObj.binding;
 |:-----|:-----|:-----|:-----|
 |**Access**||Y||
 |**Excel**|Y|Y|Y|
-|**Word**|Y||Y|
+|**Word**|Y|Y|Y|
 
 |||
 |:-----|:-----|

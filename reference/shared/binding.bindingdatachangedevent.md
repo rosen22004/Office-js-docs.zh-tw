@@ -1,5 +1,5 @@
 
-# <a name="binding.bindingdatachanged-event"></a>Binding.bindingDataChanged 事件
+# <a name="bindingbindingdatachanged-event"></a>Binding.bindingDataChanged 事件
 繫結內的資料變更時，就會發生。
 
 |||
@@ -53,7 +53,7 @@ function write(message){
 |:-----|:-----|:-----|:-----|
 |**Access**||Y||
 |**Excel**|Y|Y|Y|
-|**Word**|Y||Y|
+|**Word**|Y|Y|Y|
 
 |||
 |:-----|:-----|

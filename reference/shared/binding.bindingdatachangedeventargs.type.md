@@ -1,5 +1,5 @@
 
-# <a name="bindingdatachangedeventargs.type-property"></a>BindingDataChangedEventArgs.type 屬性
+# <a name="bindingdatachangedeventargstype-property"></a>BindingDataChangedEventArgs.type 屬性
 取得可識別所引發事件類型的 **EventType** 列舉值。
 
 |||
@@ -32,7 +32,7 @@ var myEvent = eventArgsObj.type;
 |:-----|:-----|:-----|:-----|
 |**Access**||Y||
 |**Excel**|Y|Y|Y|
-|**Word**|Y||Y|
+|**Word**|Y|Y|Y|
 
 |||
 |:-----|:-----|

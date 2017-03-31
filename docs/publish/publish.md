@@ -100,7 +100,7 @@ Outlook 增益集部署必要條件：
 ## <a name="additional-resources"></a>其他資源
 
 - [部署和安裝 Outlook 增益集以進行測試](../outlook/testing-and-tips.md) 
-- [將增益集和 Web 應用程式提交至 Office 市集][Office 市集]
+- [提交至 Office 市集][Office 市集]
 - [Office 增益集的設計指導方針](../design/add-in-design)
 - [建立有效的 Office 市集增益集](https://msdn.microsoft.com/en-us/library/jj635874.aspx)
 - [疑難排解 Office 增益集的使用者錯誤](../testing/testing-and-troubleshooting.md)

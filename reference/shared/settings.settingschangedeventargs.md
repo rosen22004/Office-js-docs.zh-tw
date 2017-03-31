@@ -1,9 +1,9 @@
-# <a name="settings.settingschangedeventargs-object"></a>Settings.settingschangedeventargs 物件
+# <a name="settingssettingschangedeventargs-object"></a>Settings.settingschangedeventargs 物件
 提供引發 [settingsChanged 事件](settings.settingschangedevent.md)的設定相關資訊。
 
 |||
 |:-----|:-----|
-|**主應用程式︰**|Access、Excel |
+|**主應用程式︰**|Access、Excel、Word|
 |**可用於[需求集合](../../docs/overview/specify-office-hosts-and-api-requirements.md)**|設定|
 |**上次變更於**|1.0|
 
@@ -43,8 +43,8 @@ Office.EventType.SettingsChanged
 
 ||**Office for Windows desktop**|**Office Online (在瀏覽器中)**|**Office for iPad**|
 |:-----|:-----|:-----|:-----|
-|**Excel**||Y||
-
+|**Excel**||是||
+|**Word**|Y|Y||
 
 |||
 |:-----|:-----|
