@@ -1,6 +1,6 @@
 # <a name="create-add-ins-for-access-web-apps"></a>建立 Access Web App 的增益集
 
-
+>我們不再建議您在 SharePoint 中建立並使用 Access Web 應用程式。作為 Access Web 應用程式的替代方案，我們建議您使用 [Microsoft PowerApps](https://powerapps.microsoft.com/) 來建置 Web 和行動裝置的無程式碼商務解決方案。
 
 本文將說明如何使用 Visual Studio 2015 來開發以 Access Web App 目標的 Office 增益集。
 

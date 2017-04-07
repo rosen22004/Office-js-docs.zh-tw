@@ -1,17 +1,18 @@
 # <a name="excel-javascript-api-requirement-sets"></a>Excel JavaScript API 需求集合
 
-需求集合是 API 成員的具名群組。Office 增益集使用資訊清單中所指定的需求集合，或使用執行階段檢查，以判定 Office 主應用程式是否支援增益集所需的的 API。如需詳細資訊，請參閱[指定 Office 主應用程式及 API 需求](../../docs/overview/specify-office-hosts-and-api-requirements.md)。
+需求集合是 API 成員的具名群組。Office 增益集使用資訊清單中所指定的需求集合，或使用執行階段檢查，以判定 Office 主應用程式是否支援增益集所需的 API。如需詳細資訊，請參閱[指定 Office 主應用程式及 API 需求](../../docs/overview/specify-office-hosts-and-api-requirements.md)。
 
 Excel 增益集可在多種 Office 版本上執行，包含 Office 2016 for Windows、iPad 版 Office、Mac 版 Office 以及 Office Online。下表列出 Excel 需求集合、支援需求集合的 Office 主應用程式，以及這些應用程式的組建或版本號碼。
 
-> 針對標示為 *Beta* 的需求集合，使用指定版本 (或更新版本) 的 Office 軟體並使用 CDN 的 Beta 程式庫：https://appsforoffice.microsoft.com/lib/beta/hosted/office.js
+> **注意**：列為 **beta** 的任何 API 表示還沒就緒供生產用途。提供它們的目的是要讓開發人員可以在測試與開發環境中試用它們。並非意欲用於生產/商務重要文件。 
 
-> 不是列為 *Beta* 的項目通常已可使用，您可以繼續使用生產 CDN 程式庫︰https://appsforoffice.microsoft.com/lib/1/hosted/office.js
+> 針對標示為 *Beta* 的需求集合，使用指定版本 (或更新版本) 的 Office 軟體並使用 CDN 的 Beta 程式庫：https://appsforoffice.microsoft.com/lib/beta/hosted/office.js。不是列為 *Beta* 的項目通常已可使用，您可以繼續使用生產 CDN 程式庫：https://appsforoffice.microsoft.com/lib/1/hosted/office.js
 
-|  需求集合  |  Office 2016 for Windows*  |  Office 2016 for iPad  |  Mac 版 Office 2016  | Office Online  |  Office Online 伺服器  |
+|  需求集合  |  Office 2016 for Windows*  |  Office 2016 for iPad  |  Mac 版 Office 2016  | Office Online  |  Office Online Server  |
 |:-----|-----|:-----|:-----|:-----|:-----|
-| ExcelApi 1.5 **Beta**  | 版本 1702 (建置 TBD) 或更新版本| 即將推出 |  即將推出| 即將推出 | 即將推出|
-| ExcelApi 1.4 **Beta** | 版本 1702 (建置 TBD) 或更新版本| 即將推出 |  即將推出| 即將推出 | 即將推出|
+| ExcelApi 1.6 **Beta**  | 版本 1702 (建置 TBD) 或更新版本| 即將推出 |  即將推出| 2017 年 3 月 | 即將推出|
+| ExcelApi 1.5 **Beta**  | 版本 1702 (建置 TBD) 或更新版本| 即將推出 |  即將推出| 2017 年 3 月 | 即將推出|
+| ExcelApi 1.4 | 版本 1701 (組建 7870.2024) 或更新版本| 即將推出 |  即將推出| 2017 年 1 月 | 即將推出|
 | ExcelApi 1.3  | 版本 1608 (組建 7369.2055) 或更新版本| 1.27 或更新版本 |  15.27 或更新版本| 2016 年 9 月 | 版本 1608 (組建 7601.6800) 或更新版本|
 | ExcelApi 1.2  | 版本 1601 (組建 6741.2088) 或更新版本 | 1.21 或更新版本 | 15.22 或更新版本| 2016 年 1 月 ||
 | ExcelApi 1.1  | 版本 1509 (組建 4266.1001) 或更新版本 | 1.19 或更新版本 | 15.20 或更新版本| 2016 年 1 月 ||
@@ -25,8 +26,86 @@ Excel 增益集可在多種 Office 版本上執行，包含 Office 2016 for Wind
 - [您可以在其中找到 Office 365 用戶端應用程式的版本和組建編號](https://technet.microsoft.com/en-us/library/mt592918.aspx#Anchor_1)
 - [Office Online Server 概觀](https://technet.microsoft.com/en-us/library/jj219437(v=office.16).aspx)
 
+## <a name="runtime-requirement-support-check"></a>執行階段需求支援檢查
+
+在執行階段期間，增益集可以藉由執行下列檢查來檢查特定主機是否支援 API 需求集合： 
+
+```js
+if (Office.context.requirements.isSetSupported('ExcelApi', 1.3) === true) {
+  /// perform actions
+}
+else {
+  /// provide alternate flow/logic
+}
+```
+
+## <a name="manifest-based-requirement-support-check"></a>基於資訊清單的需求支援檢查
+
+在增益集資訊清單中使用 Requirements 元素來指定增益集必須使用的關鍵需求集合或 API 成員。如果 Office 主機或平台不支援 Requirements 元素中指定的需求集合或 API 成員，增益集將不會在該主機或平台上執行，且不會顯示在我的增益集中。相反地，我們建議您將增益集設為可在 Office 主機的所有平台上執行，例如 Excel for Windows、Excel Online 和 Excel for iPad。若要使增益集能在所有 Office 主機和平台上使用，請使用執行階段檢查而非 Requirements 元素。
+
+下列程式碼範例會顯示支援 ExcelApi 需求集合 1.3 版的所有 Office 主應用程式中載入的增益集。
+
+```xml
+<Requirements>
+   <Sets DefaultMinVersion="1.3">
+      <Set Name="ExcelApi" MinVersion="1.3"/>
+   </Sets>
+</Requirements>
+```
+
 ## <a name="office-common-api-requirement-sets"></a>Office 通用 API 需求集合
 如需通用 API 需求集合的詳細資訊，請參閱 [Office 通用 API 需求集合](office-add-in-requirement-sets.md)。
+
+## <a name="upcoming-excel-16-release-features"></a>即將推出的 Excel 1.6 版功能
+
+### <a name="conditional-formatting"></a>設定格式化的條件
+
+介紹範圍的[設定格式化的條件](https://github.com/OfficeDev/office-js-docs/blob/ExcelJs_OpenSpec/reference/excel/conditionalformat.md)。允許下列類型的設定格式化的條件：
+
+* 色階
+* 資料列
+* 圖示集
+* 自訂
+
+此外：
+* 傳回設定格式化的條件要套用的目標範圍。
+* 移除設定格式化的條件。
+* 提供優先順序和 stopifTrue 功能
+* 取得特定範圍上所有設定格式化的條件上的集合。
+* 清除目前指定範圍中的所有設定格式化的條件。
+
+如 API 的詳細資訊，請參閱 Excel API [開啟規格](https://github.com/OfficeDev/office-js-docs/tree/ExcelJs_OpenSpec)。 
+
+## <a name="upcoming-excel-15-release-features"></a>即將推出的 Excel 1.5 版功能
+
+### <a name="custom-xml-part"></a>自訂 XML 組件
+
+* 新增活頁簿物件的自訂 XML 組件集合。
+* 使用 ID 取得自訂 XML 組件
+* 取得命名空間符合指定命名空間的自訂 XML 組件的新範圍集合。
+* 取得與組件相關聯的 XML 字串。
+* 提供組件的識別碼和命名空間。
+* 將新的自訂 XML 組件新增至活頁簿中。
+* 設定整個 XML 組件。
+* 刪除自訂 XML 組件。
+* 利用依 xpath 識別的元素所指定的名稱刪除屬性。
+* 依 xpath 查詢 XML 內容。
+* 插入、更新和刪除屬性。
+
+**參考實作：**請參閱[這裡](https://github.com/mandren/Excel-CustomXMLPart-Demo)，以取得顯示如何在增益集中使用自訂 XML 組件的參考實作。
+
+### <a name="others"></a>其他
+* `range.getSurroundingRegion()` 傳回 Range 物件，此物件代表此範圍的周圍區域。周圍區域是相對於此範圍，依空白資料列和空白資料行的任何組合所限定的範圍。
+* `getNextColumn()` 和 `getPreviousColumn()`、`getLast() 針對表格欄。
+* `getActiveWorksheet()` 在活頁簿上。
+* `getRange(address: string)` 在活頁簿之外。
+* `getBoundingRange(ranges: [])` 取得包含所提供範圍的最小範圍物件。例如，"B2:C5" 和 "D10:E15" 之間的週框範圍是 "B2:E15"。
+* `getCount()` 針對各種集合，例如具名的項目、工作表、資料表等等，以取得集合中項目的數量。 `workbook.worksheets.getCount()`
+* `getFirst()` 和 `getLast()`，並取得各種集合，例如工作表、資料行、資料表欄、圖表點、範圍檢視集合上的最後一個。
+* `getNext()` 和 `getPrevious()` 針對工作表、表格欄集合。
+* `getRangeR1C1()` 取得以特定列索引和欄索引為開頭，並跨越特定數目的列和欄的範圍物件。
+
+如 API 的詳細資訊，請參閱 Excel API [開啟規格](https://github.com/OfficeDev/office-js-docs/tree/ExcelJs_OpenSpec)。 
 
 ## <a name="whats-new-in-excel-javascript-api-14"></a>Excel JavaScript API 1.4 的新功能
 以下是需求集合 1.3 中 Excel JavaScript API 的新功能。
@@ -36,10 +115,10 @@ Excel 增益集可在多種 Office 版本上執行，包含 Office 2016 for Wind
 新屬性
 * `comment`
 * `scope` 工作表或活頁簿設定範圍項目
-* `worksheet`傳回具名項目限於其中的工作表。
+* `worksheet` 傳回具名項目限於其中的工作表。
 
 新方法
-* `add(name: string, reference: Range or string, comment: string)`新增名稱至指定範圍的集合。
+* `add(name: string, reference: Range or string, comment: string)` 新增名稱至指定範圍的集合。
 * `addFormulaLocal(name: string, formula: string, comment: string)` 使用使用者的公式地區設定，新增名稱至指定範圍的集合。
 
 ### <a name="settings-api-in-in-excel-namespace"></a>Excel 命名空間中的設定 API
@@ -58,14 +137,8 @@ API 包括 `getItem()` 以透過機碼取得設定項目和 `add()` 以將指定
 
 `worksheet.GetItemOrNullObject()`
 
-### <a name="suspend-calculation"></a>擱置計算
-擱置計算 (application.suspendCalculationUntilNextSync()) 直到呼叫下一個 "context.sync()"。一旦設定，開發人員便有責任重新計算活頁簿，以確保能夠傳播任何相依性。
-
-此外，我們正在修正沒有重新計算已修改儲存格的 F9 重新計算錯誤。
-
 |物件| 新功能| 描述|需求集合|
 |:----|:----|:----|:----|
-|[應用程式](../excel/application.md)|_方法_ > [suspendCalculationUntilNextSync()](../excel/application.md#suspendcalculationuntilnextsync)|擱置計算直至呼叫下一個 "context.sync()"。一旦設定，開發人員便有責任重新計算活頁簿，以確保能夠傳播任何相依性。|1.4|
 |[bindingCollection](../excel/bindingcollection.md)|_方法_ > [getCount()](../excel/bindingcollection.md#getcount)|取得集合中的繫結數目。|1.4|
 |[bindingCollection](../excel/bindingcollection.md)|_方法_ > [getItemOrNullObject(id: string)](../excel/bindingcollection.md#getitemornullobjectid-string)|依 ID 取得 Binding 物件。如果 Binding 物件不存在，會傳回 null 物件。|1.4|
 |[chartCollection](../excel/chartcollection.md)|_方法_ > [getCount()](../excel/chartcollection.md#getcount)|傳回工作表中的圖表數目。|1.4|

@@ -1151,8 +1151,7 @@ Office.initialize = function () {
 
 > **附註：**iOS 版 Outlook 或 Android 版 Outlook 不支援這個方法。
 
-
-  `getFilteredEntitiesByName` 方法傳回符合規則運算式的實體，該運算式是在資訊清單 XML 檔案的 [ItemHasKnownEntity](https://msdn.microsoft.com/en-us/library/office/fp161166.aspx) 規則項目中所定義，該規則元素具有指定的 `FilterName` 元素值。
+`getFilteredEntitiesByName` 方法傳回符合規則運算式的實體，該運算式是在資訊清單 XML 檔案的 [ItemHasKnownEntity](https://msdn.microsoft.com/en-us/library/office/fp161166.aspx) 規則項目中所定義，該規則元素具有指定的 `FilterName` 元素值。
 
 ##### <a name="parameters"></a>參數：
 
@@ -1431,6 +1430,8 @@ Office.context.mailbox.item.removeAttachmentAsync(
 以非同步方式儲存項目。
 
 叫用時，這個方法會將目前郵件儲存為草稿，並透過回呼方法傳回項目識別碼。在 Outlook Web App 或在連線模式的 Outlook 中，項目會儲存到伺服器。在 Outlook 中快取模式中，項目會儲存到本機的快取中。
+
+> **附註：**Mac Outlook 在撰寫模式的會議中不支援 `saveAsync`。在 Mac Outlook 中的會議呼叫 `saveAsync` 會傳回錯誤。
 
 ##### <a name="parameters"></a>參數：
 

@@ -29,6 +29,7 @@
   <Item text="開發" url="develop">
 	<Item text="增益集開發生命週期" url="develop/add-in-development-lifecycle" SEODescription="計劃端對端程序來開發工作窗格、內容和 Outlook 增益集以擴充 Office 應用程式。" />
 	<Item text="安裝最新的 Office 版本" url="develop/install-latest-office-version" SEODescription="了解如何加入宣告來取得最新的 Office 版本。" />
+	<Item text="了解 Office 版本" url="develop/office-versions" />
 	<Item text="開發適用於 iPad 的增益集" url="develop/develop-office-add-ins-for-the-ipad" SEODescription="讓您的 Office 增益集可供 iPad 版 Office 使用。" />
 	<Item text="使用 Angular 2 建立增益集的祕訣" url="develop/add-ins-with-angular2" SEODescription="使用 Angular 2 來開發 Office 增益集。" />
 	<Item text="使用對話方塊 API" url="develop/dialog-api-in-office-add-ins" SEODescription="使用 [對話方塊 API] 在 Office 增益集中開啟對話方塊。" />
@@ -39,6 +40,7 @@
 		<Item text="更新 API 和資訊清單的版本" url="develop/update-your-javascript-api-for-office-and-manifest-schema-version" SEODescription="將 JavaScript 檔案 (Office.js 和應用程式專屬 .js 檔案) 和在 Office 增益集專案中所使用的增益集資訊清單驗證檔案更新至 1.1 版。" />		
 	</Item>	
 	<Item text="Office API JavaScript" url="develop/understanding-the-javascript-api-for-office" SEODescription="了解適用於 Office 的 JavaScript API (在 Office.js 檔案中實作) 的功能區域。">
+		<Item text="Office.js 版本" url="develop/office-js-versioning" />
 		<Item text="內容和工作窗格增益集的支援" url="develop/support-for-task-pane-and-content-add-ins" SEODescription="說明可以在您的內容中宣告的不同權限層級，或工作窗格增益集的資訊清單，以指定您的增益集功能所需要的 JavaScript API 存取的層級。" />
 		<Item text="參考 Office.js" url="develop/referencing-the-javascript-api-for-office-library-from-its-cdn" SEODescription="從 Office 程式庫的內容傳遞網路 (CDN) 位置參考 Office 程式庫 (Office.js 和相關聯的應用程式專屬 .js 檔案) 的 JavaScript API。" />
 		<Item text="載入 Office.js" url="develop/loading-the-dom-and-runtime-environment" SEODescription="增益集必須確定載入 DOM 和 Office 增益集的執行階段環境，才能執行它自己的自訂邏輯。" />
@@ -50,6 +52,7 @@
 	<Item text="處理相同來源的原則限制" url="develop/addressing-same-origin-policy-limitations" SEODescription="提供解決相同來源的原則限制方法的簡要概觀，以避免從一個網域載入的指令碼取得或操作來自 Office 增益集的另一個網域中的文件內容。" />
 	<Item text="當地語系化" url="develop/localization" SEODescription="提供 Office 增益集的地區特定內容，包括 UI 字串、增益集名稱、描述、圖示、來源檔案和日期/時間格式。" />
     <Item text="效能" url="develop/resource-limits-and-performance-optimization" SEODescription="將資源使用量限制套用至您的 Office 增益集，並最佳化增益集的效能。" />
+	<Item text="實作詳細資料" url="develop/implementation-details" />
   </Item>
   <Item text="測試及偵錯" url="testing">
     	<Item text="側載 Office 增益集來進行測試" url="testing/create-a-network-shared-folder-catalog-for-task-pane-and-content-add-ins" SEODescription="安裝在 Windows 上執行的 Office 增益集來進行測試。" Scope="Excel, Word, PowerPoint, Project, Access" />

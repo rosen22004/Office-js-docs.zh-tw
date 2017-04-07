@@ -1,6 +1,6 @@
 # <a name="word-javascript-api-requirement-sets"></a>Word JavaScript API 需求集
 
-需求集合是 API 成員的具名群組。Office 增益集使用資訊清單中所指定的需求集合，或使用執行階段檢查，以判定 Office 主應用程式是否支援增益集所需的的 API。如需詳細資訊，請參閱[指定 Office 主應用程式及 API 需求](../../docs/overview/specify-office-hosts-and-api-requirements.md)。
+需求集合是 API 成員的具名群組。Office 增益集使用資訊清單中所指定的需求集合，或使用執行階段檢查，以判定 Office 主應用程式是否支援增益集所需的 API。如需詳細資訊，請參閱[指定 Office 主應用程式及 API 需求](../../docs/overview/specify-office-hosts-and-api-requirements.md)。
 
 Word 增益集可在多種 Office 版本上執行，包含 Office 2016 for Windows、iPad 版 Office、Mac 版 Office 以及 Office Online。下表列出 Word 需求集、支援需求集的 Office 主應用程式，以及這些應用程式的組建或版本號碼。
 
@@ -8,9 +8,9 @@ Word 增益集可在多種 Office 版本上執行，包含 Office 2016 for Windo
 
 > 不是列為 Beta 的項目通常已可使用，您可以繼續使用生產 CDN 程式庫︰https://appsforoffice.microsoft.com/lib/1/hosted/office.js
 
-|  需求集合  |   Office 2016 for Windows*  |  Office 2016 for iPad  |  Mac 版 Office 2016  | Office Online  | Office Online 伺服器  |
+|  需求集合  |   Office 2016 for Windows*  |  Office 2016 for iPad  |  Mac 版 Office 2016  | Office Online  | Office Online Server  |
 |:-----|-----|:-----|:-----|:-----|:-----|
-| WordApi 1.3  | 在預覽中，版本 1605 (組建 6925.1000) 或更新版本| 在預覽中，2016 年 5 月，1.22 或更新版本 | 在預覽中，15.22 或更新版本| 在預覽中 ||
+| WordApi 1.3 **Beta** | 版本 1605 (組建 6925.1000) 或更新版本| 2016 年 5 月，1.22 或更新版本 | 15.22 或更新版本| 在預覽中。 ||
 | WordApi 1.2  | 2015 年 12 月更新，版本 1601 (組建 6568.1000) 或更新版本 | 2016 年 1 月，1.18 或更新版本 | 2016 年 1 月，15.19 或更新版本| 2016 年 9 月 | |
 | WordApi 1.1  | 版本 1509 (組建 4266.1001) 或更新版本| 2016 年 1 月，1.18 或更新版本 | 2016 年 1 月，15.19 或更新版本| 2016 年 9 月 | |
 

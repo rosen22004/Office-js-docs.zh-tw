@@ -9,7 +9,7 @@
 |Word、Excel、PowerPoint|1.1|1.1|
 |Outlook|信箱 1.4|信箱 1.4|
 
-此方法只有在 Word、Excel 或 PowerPoint 增益集的 DialogAPI [需求集合](../../docs/overview/specify-office-hosts-and-api-requirements.md)，以及在 Outlook 信箱需求集合 1.4 中才可用。若要指定 DialogAPI 需求集合，請使用資訊清單中的下列項目。
+此方法只有在 Word、Excel 或 PowerPoint 增益集的 DialogApi [需求集合](../../docs/overview/specify-office-hosts-and-api-requirements.md)，以及在 Outlook 信箱需求集合 1.4 中才可用。若要指定 DialogAPI 需求集合，請使用資訊清單中的下列項目。
 
 ```xml
 <Requirements> 
@@ -81,7 +81,7 @@ Office.context.ui.displayDialogAsync(startAddress, options, callback);
  
 ## <a name="parameters"></a>參數
 
-| 參數	    | 類型   |描述|
+| 參數	       | 類型    |描述|
 |:---------------|:--------|:----------|
 |startAddress|字串|接受在對話方塊中開啟的初始 HTTPS(TLS) URL。 <ul><li>初始頁面必須位於與父系頁面相同的網域。初始頁面載入之後，您可以移至其他網域。</li><li>任何呼叫 [office.context.ui.messageParent](officeui.messageparent.md) 的頁面必須位於與父系頁面相同的網域。</li></ul>|
 |選項|物件|選擇性。接受 options 物件，以定義對話方塊的行為。|
@@ -91,11 +91,11 @@ Office.context.ui.displayDialogAsync(startAddress, options, callback);
 下列組態選項可用於對話方塊。
 
 
-| 屬性     | 類型	   |描述|
+| 屬性       | 類型	    |描述|
 |:---------------|:--------|:----------|
 |**width**|int|選用。將對話方塊的寬度定義為目前顯示的百分比。預設值為 80%。最小解析為 250 像素。|
 |**height**|int|選用。將對話方塊的高度定義為目前顯示的百分比。預設值為 80%。最小解析為 150 像素。|
-|**displayInIframe**|bool|選用。決定對話方塊是否應該在 IFrame 內顯示。**此設定僅適用於 Office Online 用戶端**，桌面用戶端會忽略此設定。可能的值如下：<ul><li>False (預設值) - 對話方塊會顯示為新的瀏覽器視窗 (快顯視窗)。針對無法在 IFrame 中顯示的驗證頁面建議使用此選項。 </li><li>True - 對話方塊會顯示為與 IFrame 浮動重疊。這對於使用者經驗與效能是最佳選項。</li>|
+|**displayInIframe**|bool|選用。決定對話方塊是否應該在 IFrame 內顯示。**此設定僅適用於 Office Online 用戶端**，且其他平台會忽略此設定。可能的值如下：<ul><li>False (預設值) - 對話方塊會顯示為新的瀏覽器視窗 (快顯視窗)。針對無法在 IFrame 中顯示的驗證頁面建議使用此選項。 </li><li>True - 對話方塊會顯示為與 IFrame 浮動重疊。這對於使用者經驗與效能是最佳選項。</li>|
 
 
 ## <a name="callback-value"></a>回呼值
