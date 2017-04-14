@@ -2,21 +2,42 @@
 
 使用這些方法來驗證和排解資訊清單的問題。 
 
+- [使用 Office 增益集驗證程式驗證 Office 增益集資訊清單](validate-the-office-add-ins-manifest-against-validator)    
 - [根據 XML 結構描述驗證 Office 增益集資訊清單](validate-the-office-add-ins-manifest-against-the-xml-schema)
 - [使用執行階段記錄來偵錯 Office 增益集的資訊清單](use-runtime-logging-to-debug-the-manifest-for-your-office-add-in)
 
+## <a name="validate-your-manifest-with-the-office-add-in-validator"></a>使用 Office 增益集驗證程式驗證資訊清單
+若要協助確定說明 Office 增益集的資訊清單檔案是完整且正確，請以 [Office 增益集驗證程式](https://github.com/OfficeDev/office-addin-validator)驗證它。
+
+若要使用 Office 增益集驗證程式驗證資訊清單：
+
+1. 安裝 [Node.js](https://nodejs.org/download/)。 
+2. 開啟命令提示 / 終端機做為管理員，並使用下列命令安裝 Office 增益集驗證程式和其全域相依性︰
+
+    ```
+    npm install -g office-addin-validator
+    ```
+    
+    > **附註：**如果您已安裝 Yo Office，升級至最新版本，驗證程式將會安裝做為其相依性。
+
+3. 執行下列命令以驗證資訊清單。以資訊清單 XML 檔案的路徑取代 MANIFEST.XML。
+
+    ```
+    validate-office-addin MANIFEST.XML
+    ```
+
+
 ## <a name="validate-your-manifest-against-the-xml-schema"></a>根據 XML 結構描述驗證您的資訊清單
 
-若要協助確定說明 Office 增益集的資訊清單檔案是完整且正確，請針對 [XML 結構描述定義 (XSD) 檔案](https://github.com/OfficeDev/office-js-docs/tree/master/docs/overview/schemas)驗證它。您可以使用 XML 結構描述驗證工具或 [Visual Studio](../get-started/create-and-debug-office-add-ins-in-visual-studio.md) 來驗證資訊清單。 
-
-若要使用 Visual Studio，請移至 [組建] > [發佈]，然後選擇執行驗證檢查****。
+若要協助確定資訊清單檔案遵循正確的結構描述，請針對 [XML 結構描述定義 (XSD)](https://github.com/OfficeDev/office-js-docs/tree/master/docs/overview/schemas) 檔案驗證它。您可以使用 XML 結構描述驗證工具來執行這項驗證。 
 
 若要使用命令列的 XML 結構描述驗證工具來驗證您的資訊清單︰
 
-1.  安裝 [tar](https://www.gnu.org/software/tar/) 和 [libxml](http://xmlsoft.org/FAQ.html) (如果尚未安裝)。 
-2.  執行下列命令。以路徑 XSD_FILE 替換資訊清單 XSD 檔案，也以路徑 XML_FILE 替換資訊清單 XML 檔案。
-
-    xmllint --noout --架構 XSD_FILE XML_FILE
+1.    安裝 [tar](https://www.gnu.org/software/tar/) 和 [libxml](http://xmlsoft.org/FAQ.html) (如果尚未安裝)。 
+2.    執行下列命令。以路徑 XSD_FILE 替換資訊清單 XSD 檔案，也以路徑 XML_FILE 替換資訊清單 XML 檔案。
+    ```
+    xmllint --noout --schema XSD_FILE XML_FILE
+    ```
 
 ## <a name="use-runtime-logging-to-debug-your-add-in-manifest"></a>使用執行階段記錄來偵錯您的增益集資訊清單
 
@@ -56,8 +77,8 @@
 
 在記錄檔中，您可能會看到混淆不清或分類錯誤的訊息。例如：
 
-- 系統將 `Unexpected Parsed manifest targeting different host` 之前的 `Medium   Current host not in add-in's host list` 訊息不當分類為錯誤。
-- 如果您看到 `Unexpected    Add-in is missing required manifest fields  DisplayName` 訊息且該訊息不含 SolutionId，該項錯誤很有可能與您正在偵錯的增益集無關。 
+- 系統將 `Unexpected    Parsed manifest targeting different host` 之前的 `Medium    Current host not in add-in's host list` 訊息不當分類為錯誤。
+- 如果您看到 `Unexpected    Add-in is missing required manifest fields    DisplayName` 訊息且該訊息不含 SolutionId，該項錯誤很有可能與您正在偵錯的增益集無關。 
 - 從系統的觀點看來，所有 `Monitorable` 訊息都應該是錯誤。有時候，它們會指出資訊清單發生問題，如系統略過拼字錯誤但未造成資訊清單失敗的元素。 
 
 ## <a name="additional-resources"></a>其他資源

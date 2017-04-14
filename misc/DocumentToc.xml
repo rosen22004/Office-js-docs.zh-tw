@@ -68,7 +68,8 @@
   <Item text="發佈" url="publish/publish">
     <Item text="在 Microsoft Azure 上主控 Office 增益集" url="publish/host-an-office-add-in-on-microsoft-azure" SEODescription="使用 Visual Studio 2015 和 Microsoft Office 開發者工具來發行，然後在 Microsoft Azure 上裝載 Office 增益集。" />
     <Item text="使用 Visual Studio 來封裝您的增益集" url="publish/package-your-add-in-using-visual-studio" SEODescription="封裝您的 Office 增益集以準備進行發佈。" />
-    <Item text="發佈工作窗格和內容增益集至增益集目錄" url="publish/publish-task-pane-and-content-add-ins-to-an-add-in-catalog" SEODescription="設定 Office 用戶端，讓增益集可在 [Office 增益集] 對話方塊中使用" />
+    <Item text="透過集中式部署發佈增益集" url="publish/centralized-deployment" />
+	<Item text="發佈工作窗格和內容增益集至增益集目錄" url="publish/publish-task-pane-and-content-add-ins-to-an-add-in-catalog" SEODescription="設定 Office 用戶端，讓增益集可在 [Office 增益集] 對話方塊中使用" />
 	<Item text="將增益集提交至 Office 市集" url="https://dev.office.com/officestore/docs/submit-add-ins-and-web-apps-to-the-office-store" IsExternal="true" />
 	<Item text="Office 市集驗證原則" url="https://dev.office.com/officestore/docs/validation-policies" IsExternal="true" />
   </Item>

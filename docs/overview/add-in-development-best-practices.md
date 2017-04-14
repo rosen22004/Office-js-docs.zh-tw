@@ -74,7 +74,7 @@
 
 
 
-- 請確定增益集的外觀及操作能夠補充 Office 經驗。使用 [Office UI 結構](https://dev.office.com/fabric)。
+- 請確定增益集的外觀及操作能夠補充 Office 經驗。使用 [Office UI Fabric](https://dev.office.com/fabric)。
 
 - 內容優先於 chrome。避免無法提升使用者經驗的多餘 UI 項目，最大化使用空間。
 
@@ -110,7 +110,7 @@
 - 使用 [sideloading](../testing/sideload-an-office-add-in-on-ipad-and-mac.md) 在實際裝置上測試增益集。
 
 
- >**附註：**如果您對您的設計元素使用 [Office UI 結構](https://github.com/OfficeDev/Office-UI-Fabric)，這些元素中有很多都已處理妥善。
+ >**附註：**如果您對您的設計元素使用 [Office UI Fabric](https://github.com/OfficeDev/Office-UI-Fabric)，這些元素中有很多都已處理妥善。
 
 
 ## <a name="optimize-and-monitor-add-in-performance"></a>最佳化及監視增益集效能

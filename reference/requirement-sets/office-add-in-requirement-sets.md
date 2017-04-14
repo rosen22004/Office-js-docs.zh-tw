@@ -4,6 +4,8 @@
 
 如需 Office 主應用程式在何處支援增益集的詳細資訊，請參閱 [Office 增益集主應用程式和平台可用性](https://dev.office.com/add-in-availability)。
 
+>**重要事項：**我們不再建議您在 SharePoint 中建立並使用 Access Web 應用程式和資料庫。作為 Access Web 應用程式的替代方案，我們建議您使用 [Microsoft PowerApps](https://powerapps.microsoft.com/) 來建置 Web 和行動裝置的無程式碼商務解決方案。
+
 ## <a name="host-specific-api-requirement-sets"></a>主應用程式特定 API 需求集合
 
 如需有關 Excel、Word、OneNote、Outlook 及對話方塊 API 需求集合的詳細資訊，請參閱︰

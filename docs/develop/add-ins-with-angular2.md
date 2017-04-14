@@ -1,4 +1,4 @@
-﻿# <a name="tips-for-creating-office-addins-with-angular-2"></a>使用 Angular 2 建立 Office 增益集的祕訣 
+# <a name="tips-for-creating-office-add-ins-with-angular-2"></a>使用 Angular 2 建立 Office 增益集的祕訣 
 
 本文提供使用 Angular 2 建立 Office 增益集做為單一頁面應用程式的指引。
 
@@ -89,7 +89,7 @@ Angular 2 會使用 RxJS (Reactive Extensions for JavaScript)，而 RxJS 會引�
 
 ### <a name="pushing-instead-of-pulling"></a>推送而非提取
 
-您的程式碼會藉由將 `Promise` 物件指派給變數來進行「提取」，但 `Observable` 物件會將其值「推送」至訂閱 `Observable` 的物件。訂閱者為 `Observer` 物件。推送架構的好處是新成員可隨著時間加入至 `Observable` 陣列。加入新成員後，所有訂閱 `Observable` 的 `Observer` 物件就會收到通知。 
+您的程式碼會藉由將 `Promise` 物件指派給變數來進行「提取」，但 `Observable` 物件會將其值「推送」至訂閱* *`Observable` 的物件。訂閱者為 `Observer` 物件。推送架構的好處是新成員可隨著時間加入至 `Observable` 陣列。加入新成員後，所有訂閱 `Observable` 的 `Observer` 物件就會收到通知。 
 
 `Observer` 是設定為利用函式處理每個新物件 (稱為「下一頁」物件)。(它也設定為回應錯誤和完成通知。請參閱下一節中的範例)。基於這個理由，`Observable` 物件可使用於比 `Promise` 物件更廣泛的案例。例如，除了從 AJAX 呼叫傳回 `Observable` (您可以傳回 `Promise` 的方法) 以外，還可以從事件處理常式傳回 `Observable`，例如「變更」文字方塊的事件處理常式。每次使用者在方塊中輸入文字時，所有訂閱的 `Observer` 物件都會使用最新的文字及/或應用程式的目前狀態立即反應做為輸入。 
 

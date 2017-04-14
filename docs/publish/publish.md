@@ -6,14 +6,17 @@
 |**方法**|**Use...**|
 |:---------|:------------|
 |[側載](../testing/create-a-network-shared-folder-catalog-for-task-pane-and-content-add-ins.md)|能做為部署程序的一部分，測試增益集在 Windows、Office Online、iPad 或 Mac 上的執行狀況。|
-|[Office 365 系統管理中心 (預覽)](#office-365-admin-center-preview)|將增益集散發給雲端或混合部署中貴組織的使用者。|
-|[Office 市集]|將增益集公開散發給使用者。|
+|[集中式部署](centralized-deployment.md)|將增益集散發給雲端或混合部署中貴組織的使用者。|
+|[Office Store](https://dev.office.com/officestore/docs/submit-to-the-office-store)|將增益集公開散發給使用者。|
 |[SharePoint 目錄](publish-task-pane-and-content-add-ins-to-an-add-in-catalog.md)|將增益集散發給內部部署中貴組織的使用者。|
 |[Exchange 伺服器](#outlook-add-in-deployment)|在內部部署或線上環境中，將 Outlook 增益集散發給使用者。|
 
 可用的選項視您鎖定的 Office 主應用程式和建立的增益集類型而定。
 
 >**附註：**如果您打算將增益集發佈至 Office 市集中，請確定您符合 [Office 市集驗證原則](https://msdn.microsoft.com/en-us/library/jj220035.aspx)。例如，若要通過驗證，增益集必須可以在所有支援所定義方法的平台上運作 (如需詳細資料，請參閱 [4.12 節](https://dev.office.com/officestore/docs/validation-policies#4-apps-and-add-ins-behave-predictably)與 [Office 增益集主應用程式與可用性頁面](https://dev.office.com/add-in-availability))。
+
+如需使用者如何取得、插入及執行增益集的相關資訊，請參閱[開始試用 Office 增益集](https://support.office.com/en-ie/article/Start-using-your-Office-Add-in-82e665c4-6700-4b56-a3f3-ef5441996862?ui=en-US&rs=en-IE&ad=IE)。
+
 
 ## <a name="deployment-options-for-word-excel-and-powerpoint-add-ins"></a>Word、Excel 及 PowerPoint 增益集的部署選項
 
@@ -33,49 +36,12 @@
 | 命令  | X           | X               | X            |
 
 
-如需使用者如何取得、插入及執行增益集的相關資訊，請參閱[開始試用 Office 增益集](https://support.office.com/en-ie/article/Start-using-your-Office-Add-in-82e665c4-6700-4b56-a3f3-ef5441996862?ui=en-US&rs=en-IE&ad=IE)。
+## <a name="centralized-deployment-via-the-office-365-admin-center-preview"></a>透過 Office 365 系統管理中心 (預覽) 的集中式部署
 
-## <a name="office-365-admin-center-preview-deployment"></a>Office 365 系統管理中心 (預覽) 部署
+管理使用者可透過 Office 365 系統管理中心，輕鬆將 Word、Excel 及 PowerPoint 增益集部署至其組織內的使用者或群組。使用者可立即在 Office 應用程式中使用透過系統管理中心部署的增益集，而無需進行用戶端設定。您可以透過集中式部署，部署內部增益集以及 ISV 提供的增益集。
 
-管理使用者可透過 Office 365 系統管理中心，輕鬆將 Word、Excel 及 PowerPoint 增益集部署至其組織內的使用者或群組。使用者可立即在 Office 應用程式中使用透過系統管理中心部署的增益集，而無需進行用戶端設定。您可以透過系統管理中心，部署內部增益集以及 ISV 提供增益集。
+如需詳細資訊，請參閱[使用集中式部署發佈增益集](centralized-deployment.md)。
 
-系統管理中心目前支援下列案例：
-
-- 將新增及更新增益集集中部署至個人、群組或組織。
-- 支援多重平台，包括 Windows 和 Office Online，與 Mac (即將推出)。
-- 英文語言和全球租用戶的部署。
-- 雲端託管增益集部署。
-- Office 應用程式啟動時的自動安裝。
-- 防火牆內裝載的增益集 URL。
-- Office 市集增益集的部署 (即將推出)。
-
-<!--
-The admin center also includes a pre-deployment validation checking service.
--->
-
-增益集部署案例的未來投資會著重在 Office 365 系統管理中心。如果您的組織符合所有必要條件，我們建議您透過系統管理中心，將增益集部署至您的組織。
-
-### <a name="prerequisites-for-admin-center-deployment"></a>系統管理中心部署的必要條件 
-
-如果您的組織符合下列條件，您可以透過系統管理中心部署增益集︰
-
-- 使用者執行的是 Office 2016 組建 7070 或更新版本。
-- 使用者透過公司或學校帳戶登入 Office 2016。
-- 您的組織使用的是 Azure Active Directory (Azure AD) 身分識別服務。
-
-系統管理中心不支援下列項目：
-
-- Office 2013 中以 Word、Excel 或 PowerPoint 為目標的增益集。
-- 內部部署目錄服務。
-- SharePoint 增益集部署。
-- 增益集部署至 Office Online Server。
-- COM/VSTO 增益集的部署。
-
-若要部署 SharePoint 增益集或以 Office 2013 為目標的增益集，使用 [SharePoint 增益集目錄](publish-task-pane-and-content-add-ins-to-an-add-in-catalog.md)。
-
->**重要！**SharePoint 增益集目錄不支援在增益集資訊清單之 [VersionOverrides](../../reference/manifest/versionoverrides.md) 節點實作的增益集功能，例如[增益集命令](../design/add-in-commands.md)。 
-
-若要部署 COM/VSTO 增益集，使用 ClickOnce 或 Windows Installer。如需詳細資訊，請參閱[部署 Office 解決方案](https://msdn.microsoft.com/en-us/library/bb386179.aspx)。
 
 ## <a name="sharepoint-catalog-deployment"></a>SharePoint 目錄部署
 
@@ -107,3 +73,4 @@ Outlook 增益集部署必要條件：
 
 [Office 市集]: http://msdn.microsoft.com/library/ff075782-1303-4517-91cc-b3d730e9b9ae%28Office.15%29.aspx
 [Office Add-in host and platform availability]: http://dev.office.com/add-in-availability
+ 

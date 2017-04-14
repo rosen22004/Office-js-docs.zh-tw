@@ -14,7 +14,7 @@ Office 2016 API 新浪潮的核心是「要求內容」－它是您接收做為 
 >**附註：**Git 是特別適合的版本控制類比，因為本機變更會與儲存機制完美隔離：在您執行本機狀態的 `git push` 之前，儲存機制有*皆不會知道*所做的相關變更！新 Office.js 模型的「要求內容」和 Proxy 物件幾乎完全相同：在開發人員發出 `context.sync()` 命令之前，文件完全不會知道！  
 
 
-「要求內容」會保有兩個陣列，讓它進行其作業。**物件路徑** 一個 if：如何自另一個物件衍生一個物件的說明 (亦即「使用參數值 `2` 在 <insert-some-preceding-object-path> 上*呼叫方法`getRow`，以便衍生此物件*」)。另一個則用於**動作** (亦即，*將物件路徑 #xyz 所描述之物件上名為 "color" 的屬性設定為 "purple" 值*)。對於那些熟悉「命令」設計模式的人員，帶著代表特定動作配方物件的概念應該很熟悉。
+「要求內容」會保有兩個陣列，讓它進行其作業。一個針對**物件路徑**：如何自一個物件衍生一個物件的說明 (亦即「*使用參數值 `2` 在 <insert-some-preceding-object-path> 上呼叫方法 `getRow`，以便衍生此物件*」)。另一個則用於**動作** (亦即，*將物件路徑 #xyz 所描述之物件上名為 "color" 的屬性設定為 "purple" 值*)。對於那些熟悉「命令」設計模式的人員，帶著代表特定動作配方物件的概念應該很熟悉。
 
 在「要求內容」上是單一的根物件，將它連接至基礎物件模型。針對 Excel，這個物件是 `workbook`；針對 Word，它是 `document`。您可以從其上藉由在該根 Proxy 物件，或在它的任何下階上呼叫方法來衍生新物件。例如，若要取得名為 "Report" 的工作表，您會要求 `workbook` 物件提供其 `worksheets` 屬性 (它會傳回對應於文件中工作表集合的 Proxy 物件)，然後使用 `worksheets` 呼叫 `getItem("Report")` 方法，以取得與所需的 "Report" 工作表對應的 Proxy 物件。每個物件會帶有其原始「要求內容」的連結，它會依序會持續追蹤每個物件的路徑資訊：也就是說，誰是這個新物件的父系，以及建立它時的情況 (*是屬性或方法呼叫是？是否傳遞任何參數？*)。
 
@@ -28,7 +28,7 @@ Office 2016 API 新浪潮的核心是「要求內容」－它是您接收做為 
         let range = context.workbook.getSelectedRange();
         range.clear();
         let thirdRow = range.getRow(2);
-        firstRow.format.fill.color = "purple";
+        thirdRow.format.fill.color = "purple";
 
         await context.sync();
     }).catch(OfficeHelpers.Utilities.log);
@@ -108,7 +108,7 @@ Office 2016 API 新浪潮的核心是「要求內容」－它是您接收做為 
 ~~~
 
 
-行 **#5** -- `firstRow.format.fill.color = "purple"` -- 包裝了幾個 API 呼叫。我們藉由遵循 `thirdRow` 變數的 `format` 屬性來開始建立 [anonymous] 格式物件。我們再對 [anonymous] 填滿物件執行相同的動作。兩者都遵循之前的相同模式，為每一個建立物件路徑和具現化動作。但之後，在達到想要的物件時，我們在物件上執行另一個影響文件的動作：將第三個資料列的填滿色彩設定為紫色 (請參閱下方的動作 "**A6**")：
+行 **#5** -- `thirdRow.format.fill.color = "purple"` -- 包裝了幾個 API 呼叫。我們藉由遵循 `thirdRow` 變數的 `format` 屬性來開始建立 [anonymous] 格式物件。我們再對 [anonymous] 填滿物件執行相同的動作。兩者都遵循之前的相同模式，為每一個建立物件路徑和具現化動作。但之後，在達到想要的物件時，我們在物件上執行另一個影響文件的動作：將第三個資料列的填滿色彩設定為紫色 (請參閱下方的動作 "**A6**")：
 
 ~~~
     objectPaths:

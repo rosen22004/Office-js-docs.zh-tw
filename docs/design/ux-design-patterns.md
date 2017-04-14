@@ -6,7 +6,7 @@ UX 設計模式專案的功用：
 
 * 為常見客戶案例套用解決方案。
 * 套用設計最佳做法。
-* 納入 [Office UI 結構](https://dev.office.com/fabric#/get-started)元件與樣式。
+* 納入 [Office UI Fabric](https://dev.office.com/fabric#/get-started)元件與樣式。
 * 建置以視覺化方式整合預設 Office UI 的增益集。  
 
 ## <a name="using-the-ux-design-patterns"></a>使用 UX 設計模式
@@ -18,7 +18,7 @@ UX 設計模式專案的功用：
 1. 下載 [UX 設計模式](https://github.com/OfficeDev/Office-Add-in-UX-Design-Patterns)。
 2. 使用 [Word](https://github.com/OfficeDev/Office-Add-in-UX-Design-Patterns/blob/master/Helpful%20Templates/AddIn_Template_Word_Desktop_reference.pdf)、[Excel](https://github.com/OfficeDev/Office-Add-in-UX-Design-Patterns/blob/master/Helpful%20Templates/AddIn_Template_Excel_Desktop_reference.pdf) 或 [PowerPoint](https://github.com/OfficeDev/Office-Add-in-UX-Design-Patterns/blob/master/Helpful%20Templates/AddIn_Template_PowerPoint_Desktop_reference.pdf) 範本來模擬桌面或平板電腦的擴充點。
 3. 複製及修改 [UX 設計模式](https://github.com/OfficeDev/Office-Add-in-UX-Design-Patterns/tree/master/Patterns)以滿足您的特定需求。
-4. 若要瀏覽 [Office UI 結構圖示主要工作表](https://github.com/OfficeDev/Office-Add-in-UX-Design-Patterns/blob/master/Helpful%20Templates/OfficeUIFabric_icon_mastersheet.pdf)、檢視 Word、Excel 及 PowerPoint 的擴充點 (如 [Excel iPad](https://github.com/OfficeDev/Office-Add-in-UX-Design-Patterns/blob/master/Helpful%20Templates/AddIn_Template_Excel_iPad_reference.pdf) 和 [Excel Windows Desktop](https://github.com/OfficeDev/Office-Add-in-UX-Design-Patterns/blob/master/Helpful%20Templates/AddIn_Template_Excel_Desktop_reference.pdf))，或[完成增益集命令的圖示](https://github.com/OfficeDev/Office-Add-in-UX-Design-Patterns/blob/master/Helpful%20Templates/Icon_production.pdf)，請參閱範本。
+4. 若要瀏覽 [Office UI Fabric 圖示主要工作表](https://github.com/OfficeDev/Office-Add-in-UX-Design-Patterns/blob/master/Helpful%20Templates/OfficeUIFabric_icon_mastersheet.pdf)、檢視 Word、Excel 及 PowerPoint 的擴充點 (如 [Excel iPad](https://github.com/OfficeDev/Office-Add-in-UX-Design-Patterns/blob/master/Helpful%20Templates/AddIn_Template_Excel_iPad_reference.pdf) 和 [Excel Windows Desktop](https://github.com/OfficeDev/Office-Add-in-UX-Design-Patterns/blob/master/Helpful%20Templates/AddIn_Template_Excel_Desktop_reference.pdf))，或[完成增益集命令的圖示](https://github.com/OfficeDev/Office-Add-in-UX-Design-Patterns/blob/master/Helpful%20Templates/Icon_production.pdf)，請參閱範本。
 
 若要新增原始原始碼︰
 
@@ -64,8 +64,7 @@ UX 設計模式專案的功用：
     * [逐步解說規格](https://github.com/OfficeDev/Office-Add-in-Design-Patterns/blob/master/Patterns/FirstRun_PagingPanel.md)
     * [逐步解說程式碼](https://github.com/OfficeDev/Office-Add-in-UX-Design-Patterns-Code/tree/master/templates/first-run/walkthrough)
 
-
-  [Office 市集](https://msdn.microsoft.com/en-us/library/office/jj220033.aspx)具有管理增益集試用版的系統，但是如果您想要控制增益集試用版體驗的 UI，請使用下列模式︰
+[Office 市集](https://msdn.microsoft.com/en-us/library/office/jj220033.aspx)具有管理增益集試用版的系統，但是如果您想要控制增益集試用版體驗的 UI，請使用下列模式︰
 
 * **試用版** - 向使用者示範如何開始使用增益集試用版。
     * [試用版規格](https://github.com/OfficeDev/Office-Add-in-Design-Patterns/blob/master/Patterns/FirstRun_TrialVersion.md)
@@ -141,7 +140,7 @@ UX 設計模式專案的功用：
 </tr>
  </table>
 
-### <a name="notifications"></a>通知
+### <a name="notifications"></a>Notifications
 
 增益集可以透過多種方法通知使用者有關事件 (例如錯誤) 或進度的資訊。以下是可用的通知範本︰ 
 
@@ -191,7 +190,7 @@ UX 設計模式專案的功用：
 * **Typeramp 對話方塊** - 顯示具有文字內容的對話方塊。您可以使用 Typeramp 對話方塊，向使用者顯示費盡心思的資訊。 
     * [Typeramp 對話方塊規格](https://github.com/OfficeDev/Office-Add-in-UX-Design-Patterns/blob/master/Patterns/Client_Dialog.md)
     * [Typeramp 對話方塊程式碼](https://github.com/OfficeDev/Office-Add-in-UX-Design-Patterns-Code/tree/master/templates/dialog/typeramp)
-* **警示對話方塊** - 向使用者顯示具有重要資訊的警示方塊，例如錯誤或通知。  
+* **警示對話方塊** - 向使用者顯示具有重要資訊的警示方塊，例如錯誤或通知。     
     * [警示對話方塊規格](https://github.com/OfficeDev/Office-Add-in-UX-Design-Patterns/blob/master/Patterns/Client_Dialog.md)
     * [警示對話方塊程式碼](https://github.com/OfficeDev/Office-Add-in-UX-Design-Patterns-Code/tree/master/templates/dialog/alert)
 * **瀏覽對話方塊** - 顯示具有瀏覽的對話方塊。使用瀏覽對話方塊允許使用者在不同的內容之間瀏覽。 
@@ -255,4 +254,4 @@ UX 設計模式專案的功用：
 ## <a name="additional-resources"></a>其他資源
 
 * [開發 Office 增益集的最佳做法](https://dev.office.com/docs/add-ins/overview/add-in-development-best-practices)
-* [Office UI 結構](http://dev.office.com/fabric/)
+* [Office UI Fabric](http://dev.office.com/fabric/)

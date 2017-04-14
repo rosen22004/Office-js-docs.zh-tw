@@ -16,8 +16,7 @@ Office 增益集提供可讓使用者在 Office 用戶端中存取的內容相�
 
 - **讓使用者能掌控操作**。讓使用者可以掌控其經驗、了解重要的決定，並能輕鬆回復增益集執行的動作。 
 
-- 
-  **為所有平台和輸入方法進行設計**。增益集應設計為可在 Office 支援的所有平台上運作，增益集 UX 也應最佳化為可在各種平台和外觀尺寸上運作。支援滑鼠/鍵盤和觸控輸入裝置，並確保自訂 HTML UI 能快速回應以適應不同的外觀尺寸。如需詳細資訊，請參閱[觸控](https://msdn.microsoft.com/EN-US/library/mt590883.aspx#bk_Touch)。 
+- **為所有平台和輸入方法進行設計**。增益集應設計為可在 Office 支援的所有平台上運作，增益集 UX 也應最佳化為可在各種平台和外觀尺寸上運作。支援滑鼠/鍵盤和觸控輸入裝置，並確保自訂 HTML UI 能快速回應以適應不同的外觀尺寸。如需詳細資訊，請參閱[觸控](https://msdn.microsoft.com/EN-US/library/mt590883.aspx#bk_Touch)。 
 
 
 ## <a name="design-language"></a>設計語言
@@ -34,7 +33,7 @@ Office 增益集提供可讓使用者在 Office 用戶端中存取的內容相�
 
 ## <a name="ux-design-patterns"></a>UX 設計模式
 
-為了協助您建立增益集的第一級使用者經驗，我們會提供說明常見 UX 設計模式的範本。這些範本反映[最佳作法](https://dev.office.com/docs/add-ins/overview/add-in-development-best-practices)，建立令人讚嘆、世界級的增益集，並包含初次執行體驗、商標元素，以及使用者通知的的模式。他們使用 [Office UI 結構](https://dev.office.com/fabric)元件與樣式，而且包括會自然擴充 Office UI 的元素。
+為了協助您建立增益集的第一級使用者經驗，我們會提供說明常見 UX 設計模式的範本。這些範本反映[最佳作法](https://dev.office.com/docs/add-ins/overview/add-in-development-best-practices)，建立令人讚嘆、世界級的增益集，並包含初次執行體驗、商標元素，以及使用者通知的的模式。他們使用 [Office UI Fabric](https://dev.office.com/fabric)元件與樣式，而且包括會自然擴充 Office UI 的元素。
 
 若要存取範本，請參閱 [Office 增益集的 UX 設計模式](https://github.com/OfficeDev/Office-Add-in-UX-Design-Patterns) repo。Adobe Illustrator 檔案也是可用的；您可以下載並更新它們以反映出您自己的設計。您也可以從 [Office 增益集的 UX 設計模式程式碼](https://github.com/OfficeDev/Office-Add-in-UX-Design-Patterns-Code) repo，將程式碼檔案複製到增益集專案，並視需要自訂它們。 
 
@@ -49,5 +48,5 @@ Office 增益集提供可讓使用者在 Office 用戶端中存取的內容相�
 
 ## <a name="additional-resources"></a>其他資源
 
-- [Office UI 結構](https://dev.office.com/fabric) 
+- [Office UI Fabric](https://dev.office.com/fabric) 
 
