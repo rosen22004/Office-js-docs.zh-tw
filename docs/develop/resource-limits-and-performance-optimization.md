@@ -11,11 +11,11 @@
 執行階段的資源使用量限制適用於所有類型的 Office 增益集。這些限制有助於確保您的使用者的效能，並減少拒絕服務攻擊。請務必在您的目標主應用程式上使用可能的資料範圍測試 Office 增益集，並對下列執行階段使用量限制衡量效能︰
 
 
--  **CPU 核心使用量** - 90% 的單一 CPU 核心使用量臨界值，在預設的 5 秒間隔中觀察到三次。
+-  **CPU 核心使用量** - 90% 的單一 CPU 核心使用量閾值，在預設的 5 秒間隔中就觀察到三次。
     
     主豐富型用戶端檢查 CPU 核心使用量的預設間隔為每 5 秒一次。如果主用戶端偵測到增益集的 CPU 核心使用量的超出臨界值，它會顯示訊息，詢問使用者是否要繼續執行增益集。如果使用者選擇要繼續，則在該編輯工作階段期間，主用戶端不會再詢問使用者。如果使用者執行需要大量 CPU 的增益集，系統管理員可能想要使用 **AlertInterval** 登錄機碼，以提高臨界值來減少這項警告訊息的顯示機率。
     
--  **記憶體使用量** - 根據裝置上的可用實體記憶體，動態決定的預設記憶體使用量臨界值。
+-  **記憶體使用量** - 根據裝置上的可用實體記憶體動態決定的預設記憶體使用量閾值。
     
     根據預設，當主豐富型用戶端偵測到裝置上的實體記憶體使用量佔超過 80% 的可用記憶體，則用戶端開始監視增益集的記憶體使用量，包含文件層級的內容和工作窗格增益集，以及信箱層級的 Outlook 增益集。在 5 秒的預設間隔內，如果在文件或信箱層級的一組增益集的實體記憶體使用量超過 50%，用戶端會警告使用者。這個記憶體使用量限制控管實體而不是虛擬記憶體的使用量，以確保 RAM 容量有限的裝置效能。系統管理員可以使用 **MemoryAlertThreshold** Windows 登錄機碼做為全域設定，利用明確限制覆寫此動態設定，或使用 **AlertInterval** 機碼做為全域設定，調整警示間隔。
     
@@ -23,7 +23,7 @@
     
     系統管理員可以使用 **RestartManagerRetryLimit** 登錄機碼來調整損毀的臨界值。
     
--  **應用程式封鎖** - 增益集的未回應臨界值延長為 5 秒。
+-  **應用程式封鎖** - 增益集的未回應閾值延長為 5 秒。
     
     這會影響增益集和主應用程式的使用者體驗。在這種情況下，主應用程式會自動重新啟動所有使用中的文件或信箱增益集 (如果適用)，並警告使用者哪些增益集沒有回應。若增益集執行長時間工作時沒有定期釋出處理資源，則增益集可能達到此臨界值。有一些技巧可確保不要發生中斷的問題。系統管理員無法覆寫這個臨界值。
     
@@ -37,11 +37,11 @@
     
       -  **規則運算式回應時間** - 預設閾值為 1,000 毫秒，讓 Outlook 評估 Outlook 增益集的資訊清單中的所有規則運算式。超過閾值會導致 Outlook 稍後重試評估。
     
-        使用群組原則或 Windows 登錄中的應用程式特定設定，系統管理員可以調整此 **OutlookActivationAlertThreshold** 設定中的預設臨界值 1,000 毫秒。如需詳細資訊，請參閱[覆寫 Office 增益集效能的資源使用量設定](http://msdn.microsoft.com/library/da14ec8c-5075-4035-a951-fc3c2b15c04b%28Office.15%29.aspx)。
+        Using a group policy or application-specific setting in the Windows registry, administrators can adjust this default threshold value of 1,000 milliseconds in the  **OutlookActivationAlertThreshold** setting. For more information, see [Overriding resource usage settings for performance of Office Add-ins](http://msdn.microsoft.com/library/da14ec8c-5075-4035-a951-fc3c2b15c04b%28Office.15%29.aspx).
     
   -  **規則運算式重新評估** - 預設上限為三次，讓 Outlook 重新評估資訊清單中的所有規則運算式。如果這三次評估因超過適用的閾值 (預設值 1,000 毫秒或 **OutlookActivationAlertThreshold** 指定的值，如果 Windows 登錄存在該設定) 而失敗，Outlook 會停用 Outlook 增益集。Exchange 系統管理中心顯示已停用的狀態，並且增益集對於在 Outlook 豐富型用戶端、Outlook Web App 和 OWA for Devices 中使用已停用。
     
-    使用群組原則或 Windows 登錄中的應用程式特定設定，系統管理員可以調整此 **OutlookActivationManagerRetryLimit** 設定中的重試評估次數。如需詳細資訊，請參閱[覆寫 Office 增益集效能的資源使用量設定](http://msdn.microsoft.com/library/da14ec8c-5075-4035-a951-fc3c2b15c04b%28Office.15%29.aspx)。
+    Using a group policy or application-specific setting in the Windows registry, administrators can adjust this number of times to retry evaluation in the  **OutlookActivationManagerRetryLimit** setting. For more information, see [Overriding resource usage settings for performance of Office Add-ins](http://msdn.microsoft.com/library/da14ec8c-5075-4035-a951-fc3c2b15c04b%28Office.15%29.aspx).
     
 
     **工作窗格和內容增益集**
@@ -93,9 +93,9 @@ Office 提供的遙測記錄，可維護本機電腦上執行的 Office 方案�
 
 - 在增益集需要從未繫結的資料集讀取大量資料的案例中，從資料表中讀取資料時，您可以套用分頁，或減少每一個較短的讀取作業中資料的大小，而非嘗試在單一作業中完成讀取。 
     
-    針對 JavaScript 和 jQuery 程式碼範例，其中顯示可能為未繫結資料上長時間執行和需要大量 CPU 的輸入和輸出作業系列發生中斷，請參閱[如何在大量 JavaScript 處理時讓瀏覽器重獲控制權？](http://stackoverflow.com/questions/210821/how-can-i-give-control-back-briefly-to-the-browser-during-intensive-javascript)此範例使用全域物件的 [setTimeout](http://msdn.microsoft.com/en-us/library/ie/ms536753%28v=vs.85%29.aspx) 方法，限制輸入和輸出的期間。它也會處理的定義區塊中的資料，而不是隨機的未繫結資料。
+    For a JavaScript and jQuery code sample that shows breaking up a potentially long-running and CPU-intensive series of inputting and outputting operations on unbounded data, see [How can I give control back (briefly) to the browser during intensive JavaScript processing?](http://stackoverflow.com/questions/210821/how-can-i-give-control-back-briefly-to-the-browser-during-intensive-javascript). This example uses the [setTimeout](http://msdn.microsoft.com/en-us/library/ie/ms536753%28v=vs.85%29.aspx) method of the global object to limit the duration of input and output. It also handles the data in defined chunks instead of randomly unbounded data.
     
-- 如果增益集使用需要大量 CPU 的演算法來處理大量資料，您可以使用 Web 背景工作在背景處理長時間執行的工作，同時在前景執行不同的指令碼，例如在使用者介面中顯示進度。Web 背景工作不會封鎖使用者活動，並允許 HTML 頁面保持回應。如需 Web 背景工作的範例，請參閱 [Web 背景工作的基本概念](http://www.mdl5rocks.com/en/tutorials/workers/basics/)。如需 Internet Explorer Web 背景工作 API 的詳細資訊，請參閱 [Web 背景工作](http://msdn.microsoft.com/en-us/library/IE/hh772807%28v=vs.85%29.aspx)。
+- 如果增益集使用需要大量 CPU 的演算法來處理大量資料，您可以使用 Web 背景工作在背景處理長時間執行的工作，同時在前景執行不同的指令碼，例如在使用者介面中顯示進度。Web 背景工作不會封鎖使用者活動，並允許 HTML 頁面保持回應。如需 Web 背景工作的範例，請參閱 [Web 背景工作的基本概念](https://www.html5rocks.com/en/tutorials/workers/basics/)。如需 Internet Explorer Web 背景工作 API 的詳細資訊，請參閱 [Web 背景工作](http://msdn.microsoft.com/en-us/library/IE/hh772807%28v=vs.85%29.aspx)。
     
 - 如果增益集使用需要大量 CPU 的演算法，但您可以將資料輸入或輸出分割成較小的集，請考慮建立 Web 服務，將資料傳遞至 Web 服務以卸載 CPU，並等候非同步回撥。
     

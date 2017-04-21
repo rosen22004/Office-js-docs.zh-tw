@@ -6,8 +6,8 @@
 如果您測試的不是 Windows 上的 Word、Excel 或 PowerPoint 增益集，請參閱下列其中一個主題來側載增益集︰
 
 - [在 Office Online 中側載 Office 增益集來進行測試](sideload-office-add-ins-for-testing.md)
-- [在 iPad 和 Mac 上側載 Office 增益集來進行測試](sideload-an-office-add-in-on-ipad-and-mac.md )
-- [側載 Outlook 增益集來進行測試](sideload-outlook-add-ins-for-testing.md )
+- [在 iPad 和 Mac 上側載 Office 增益集來進行測試](sideload-an-office-add-in-on-ipad-and-mac.md)
+- [側載 Outlook 增益集來進行測試](sideload-outlook-add-ins-for-testing.md)
 
 以下影片會帶您了解在 Office 桌面或 Office 線上側載增益集的程序。
 

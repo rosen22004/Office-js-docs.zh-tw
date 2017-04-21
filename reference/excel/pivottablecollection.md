@@ -4,7 +4,7 @@
 
 ## <a name="properties"></a>屬性
 
-| 屬性	       | 類型	    |描述| 需求集合|
+| 屬性       | 類型	    |描述| 需求集合|
 |:---------------|:--------|:----------|:----|
 |項目|[PivotTable[]](pivottable.md)|pivotTable 物件的集合。唯讀。|[1.3](../requirement-sets/excel-api-requirement-sets.md)|
 
@@ -50,7 +50,7 @@ pivotTableCollectionObject.getItem(name);
 
 #### <a name="parameters"></a>參數
 | 參數	       | 類型    |描述|
-|:---------------|:--------|:----------|:---|
+|:---------------|:--------|:----------|
 |Name|string|要擷取之樞紐分析表的名稱。|
 
 #### <a name="returns"></a>傳回
@@ -66,7 +66,7 @@ pivotTableCollectionObject.getItemOrNullObject(name);
 
 #### <a name="parameters"></a>參數
 | 參數	       | 類型    |描述|
-|:---------------|:--------|:----------|:---|
+|:---------------|:--------|:----------|
 |Name|string|要擷取之樞紐分析表的名稱。|
 
 #### <a name="returns"></a>傳回

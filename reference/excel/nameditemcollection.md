@@ -4,7 +4,7 @@
 
 ## <a name="properties"></a>屬性
 
-| 屬性	       | 類型	    |描述| 需求集合|
+| 屬性       | 類型	    |描述| 需求集合|
 |:---------------|:--------|:----------|:----|
 |項目|[NamedItem[]](nameditem.md)|NamedItem 物件的集合。唯讀。|[1.1](../requirement-sets/excel-api-requirement-sets.md)|
 
@@ -37,7 +37,7 @@ namedItemCollectionObject.add(name, reference, comment);
 
 #### <a name="parameters"></a>參數
 | 參數	       | 類型    |描述|
-|:---------------|:--------|:----------|:---|
+|:---------------|:--------|:----------|
 |Name|string|具名項目的名稱。|
 |參考資料|Range 或 string|名稱參照的公式或範圍。|
 |註解|string|選用。與具名項目相關的註解|
@@ -55,7 +55,7 @@ namedItemCollectionObject.addFormulaLocal(name, formula, comment);
 
 #### <a name="parameters"></a>參數
 | 參數	       | 類型    |描述|
-|:---------------|:--------|:----------|:---|
+|:---------------|:--------|:----------|
 |Name|string|具名項目的「名稱」。|
 |公式|string|位於名稱參照的使用者地區設定的公式。|
 |註解|string|選用。與具名項目相關的註解|
@@ -87,7 +87,7 @@ namedItemCollectionObject.getItem(name);
 
 #### <a name="parameters"></a>參數
 | 參數	       | 類型    |描述|
-|:---------------|:--------|:----------|:---|
+|:---------------|:--------|:----------|
 |Name|string|nameditem 名稱。|
 
 #### <a name="returns"></a>傳回
@@ -120,7 +120,7 @@ namedItemCollectionObject.getItemOrNullObject(name);
 
 #### <a name="parameters"></a>參數
 | 參數	       | 類型    |描述|
-|:---------------|:--------|:----------|:---|
+|:---------------|:--------|:----------|
 |Name|string|nameditem 名稱。|
 
 #### <a name="returns"></a>傳回

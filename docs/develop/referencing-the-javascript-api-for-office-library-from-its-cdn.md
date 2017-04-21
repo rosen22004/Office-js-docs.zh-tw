@@ -11,7 +11,7 @@
 <script src="https://appsforoffice.microsoft.com/lib/1/hosted/Office.js" type="text/javascript"></script>
 ```
 
-CDN URL 中 `office.js` 前面的 `/1/` 指定 Office.js 版本 1 內最新的累加版本。因為適用於 Office 的 JavaScript API 保有回溯相容性，最新版本會繼續支援稍早在版本 1 中推出的 API 成員。如果您需要升級現有專案，請參閱[更新適用於 Office 的 JavaScript API 和資訊清單結構描述檔案的版本](../docs/develop/update-your-javascript-api-for-office-and-manifest-schema-version.md)。 
+CDN URL 中 `office.js` 前面的 `/1/` 指定 Office.js 版本 1 內最新的累加版本。因為適用於 Office 的 JavaScript API 保有回溯相容性，最新版本會繼續支援稍早在版本 1 中推出的 API 成員。如果您需要升級現有專案，請參閱[更新適用於 Office 的 JavaScript API 和資訊清單結構描述檔案的版本](update-your-javascript-api-for-office-and-manifest-schema-version.md)。 
 
 如果您計劃從 Office 市集發佈 Office 增益集，您必須使用這個 CDN 參考。本機參考僅適用於內部、開發和偵錯案例。
 

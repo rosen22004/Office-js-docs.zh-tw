@@ -107,7 +107,7 @@ Beta 端點有一些需要注意的地方：
 此時應該大致上對應於：
 
 * 看見 API 列於文件中，不再列於「開啟規格」下。
-* 看見其 IntelliSense 列於公共位置中，例如 [DefinitelyTyped](https://github.com/DefinitelyTyped/DefinitelyTyped/blob/master/office-js/index.d.ts)。
+* 看見其 IntelliSense 列於公共位置中，例如 [DefinitelyTyped](https://github.com/DefinitelyTyped/DefinitelyTyped/blob/master/types/office-js/index.d.ts)。
 
 請注意，某些平台可能會超前其他平台，通常是桌面版領先。因此，只因為 `isSetSupported` 在桌面版上傳回 `true`，並不表示它在同時一定會在 Mac 上傳回 `true` (雖然它一般會如此，在一個月或兩個月內)。但實作的不同步調，正是為什麼在一開始便需要 `isSetSupported` (和/或資訊清單式需求規格) 的原因。只要使用 `isSetSupported` 將任何啟動功能括在一起，或新增資訊清單需求，您應該不需要擔心什麼時候將什麼 API 提供使用；當功能在指定的平台上提供使用時，您的增益集將能夠在該處「直接運作」。
 

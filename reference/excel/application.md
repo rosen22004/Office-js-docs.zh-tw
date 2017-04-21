@@ -4,7 +4,7 @@
 
 ## <a name="properties"></a>屬性
 
-| 屬性	       | 類型	    |描述| 需求集合|
+| 屬性       | 類型	    |描述| 需求集合|
 |:---------------|:--------|:----------|:----|
 |calculationMode|string|傳回活頁簿中使用的計算模式。唯讀。可能的值為：`Automatic` Excel 會控制重新計算；`AutomaticExceptTables` Excel 會控制重新計算，但會忽略表格中的變更；`Manual`計算會在使用者要求時完成。|[1.1](../requirement-sets/excel-api-requirement-sets.md)|
 
@@ -34,7 +34,7 @@ applicationObject.calculate(calculationType);
 
 #### <a name="parameters"></a>參數
 | 參數	       | 類型    |描述|
-|:---------------|:--------|:----------|:---|
+|:---------------|:--------|:----------|
 |calculationType|string|指定要使用的計算類型。可能的值為：`Recalculate` 會重新計算 Excel 標示為「已變更」的所有儲存格 (即動態或已變更資料的相依)，和以程式設計方式標示為「已變更」的儲存格。`Full`這會將所有儲存格標示為「已變更」並重新計算。`FullRebuild`這會強制重建整個計算鏈結，將所有儲存格標示為「已變更」並重新計算。|
 
 #### <a name="returns"></a>傳回

@@ -19,7 +19,7 @@
     
 - 增益集的 XML 資訊清單檔案 (GetDoc_App.xml)，可在共用網路資料夾或增益集目錄上使用。資訊清單檔必須指向先前所述的 HTML 檔案的位置。
     
-您也可以使用 [Visual Studio 2015](get-started/create-and-debug-office-add-ins-in-visual-studio) 或[任何編輯器](get-started/create-an-office-add-in-using-any-editor)來建立 PowerPoint 或 Word 的增益集。 
+您也可以使用 [Visual Studio](../get-started/create-and-debug-office-add-ins-in-visual-studio.md) 或[任何編輯器](../get-started/create-an-office-add-in-using-any-editor.md)來建立 PowerPoint 或 Word 的增益集。 
 
 
 ### <a name="core-concepts-to-know-for-creating-a-task-pane-add-in"></a>建立工作窗格增益集需要了解的核心概念

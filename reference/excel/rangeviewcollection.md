@@ -4,7 +4,7 @@
 
 ## <a name="properties"></a>屬性
 
-| 屬性	       | 類型	    |描述| 需求集合|
+| 屬性       | 類型	    |描述| 需求集合|
 |:---------------|:--------|:----------|:----|
 |項目|[RangeView[]](rangeview.md)|rangeView 物件的集合。唯讀。|[1.3](../requirement-sets/excel-api-requirement-sets.md)|
 
@@ -48,7 +48,7 @@ rangeViewCollectionObject.getItemAt(index);
 
 #### <a name="parameters"></a>參數
 | 參數	       | 類型    |描述|
-|:---------------|:--------|:----------|:---|
+|:---------------|:--------|:----------|
 |index|number|可見資料列的索引。|
 
 #### <a name="returns"></a>傳回

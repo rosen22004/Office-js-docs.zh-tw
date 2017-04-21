@@ -4,7 +4,7 @@
 
 |||
 |:-----|:-----|
-|**主應用程式︰**Access、Excel、PowerPoint、Project、Word、Word Online|**增益集類型：** 內容、工作窗格|
+|**主應用程式︰**Access、Excel、PowerPoint、Project、Word、Word Online|**增益集類型：**內容、工作窗格|
 |**可用於[需求集合](../../docs/overview/specify-office-hosts-and-api-requirements.md)**|Selection|
 |**上次變更於**|1.1|
 
@@ -15,11 +15,61 @@ Office.context.document.setSelectedDataAsync(data [, options], callback(asyncRes
 
 ## <a name="parameters"></a>參數
 
-|**名稱**|**類型**|**描述**|**支援附註**|
-|:-----|:-----|:-----|:-----|
-| _data_|資料可以是下列任何資料型別：<ul><li><b>字串</b> (Office.CoercionType.Text) - 僅適用於 Excel、Excel Online、PowerPoint、PowerPoint Online、Word 和 Word Online。</li><li>陣列的<b>陣列</b> (Office.CoercionType.Matrix) - 僅適用於 Excel、Word 和 Word Online。</li><li>[TableData](../../reference/shared/tabledata.md) (Office.CoercionType.Table) - 僅適用於 Access、Excel、Word 和 Word Online</li><li><b>HTML</b>  (Office.CoercionType.Html) - 僅適用於 Word 和 Word Online。</li><li><b>Office Open XML</b>  (Office.CoercionType.Ooxml) - 僅適用於 Word 和 Word Online。</li><li><b>Base64 已編碼影像資料流</b>  (Office.CoercionType.Image) - 僅適用於 PowerPoint 和 Word。</li></ul>|要在目前選取範圍中設定的資料。必要。|**上次變更於：**1.1。支援 Access 內容增益集需要 **Selection** 需求集合 1.1 或 更高版本。支援設定影像資料需要 **ImageCoercion** 需求集合 1.1 或更高版本。若要針對應用程式啟動進行此設定，請使用：<br/><br/>`<Requirements>`<br/>&nbsp;&nbsp;`<Sets DefaultMinVersion="1.1">`<br/>&nbsp;&nbsp;&nbsp;&nbsp;`<Set Name="ImageCoercion"/>`<br/>&nbsp;&nbsp;`</Sets>`<br/>`</Requirements>`<br/><br/>ImageCoercion 功能的執行階段偵測可以利用下列程式碼執行︰<br/><br/>`if (Office.context.requirements.isSetSupported('ImageCoercion', '1.1')) {)) {`<br/>&nbsp;&nbsp;&nbsp;&nbsp;`// insertViaImageCoercion();`<br/>`} else {`<br/>&nbsp;&nbsp;&nbsp;&nbsp;`// insertViaOoxml();`<br/>`}`|
-| _options_|**object**|指定一組[選擇性參數](../../docs/develop/asynchronous-programming-in-office-add-ins.md#passing-optional-parameters-to-asynchronous-methods)。Options 物件可以包含下列屬性以設定選項︰<br/><ul><li>coercionType (<b><a href="735eaab6-5e31-4bc2-add5-9d378900a31b.htm">CoercionType </a></b>) - 指定如何強制轉型要設定的資料。如果未設定此選項，會設定 Office.CoercionType.Text 的預設值 coercionType。</li><li>tableOptions (<b>object</b> ) - 對於插入的表格，機碼值配對的清單，指定 <a href="http://msdn.microsoft.com/library/46b05707-b350-41be-b6b8-311799c71a33(Office.15).aspx" target="_blank">表格格式設定選項</a>，例如，標題列、總計列，以及帶狀資料列。 </li><li>cellFormat (<b>object</b> ) - 對於插入的表格，機碼值配對的清單，指定欄、列或儲存格的範圍，以及要套用至該範圍的<a href="http://msdn.microsoft.com/library/46b05707-b350-41be-b6b8-311799c71a33(Office.15).aspx" target="_blank">儲存格格式設定</a>。 </li><li>imageLeft (<b>number</b> ) - 此選項適用於插入影像。表示與 PowerPoint 投影片左側相關聯的插入位置，及其與 Excel 中目前選取之儲存的關聯。Word 會忽略此值。此值以點為單位。</li><li>imageTop (<b>number</b> ) - 此選項適用於插入影像。表示與 PowerPoint 投影片頂端相關聯的插入位置，及其與 Excel 中目前選取之儲存的關聯。Word 會忽略此值。此值以點為單位。</li><li>imageWidth (<b>number</b> ) - 此選項適用於插入影像。表示影像寬度。如果已提供此選項，卻沒有 imageHeight，則影像將會縮放至符合影像寬度的值。如果已提供影像寬度與影像高度，則會視情況調整影像大小。如果未提供影像高度或寬度，則會使用預設的影像大小和外觀比例。此值以點為單位。</li><li>imageHeight (<b>number</b> ) - 此選項適用於插入影像。表示影像高度。如果已提供此選項，卻沒有 imageWidth，則影像將會縮放至符合影像高度的值。如果已提供影像寬度與影像高度，則會視情況調整影像大小。如果未提供影像高度或寬度，則會使用預設的影像大小和外觀比例。此值以點為單位。</li><li>asyncContext (<b>object \| value</b> ) - <a href="540c114f-0398-425c-baf3-7363f2f6bc47.htm">AsyncResult</a> 物件之 asyncContext 屬性上可用的使用者定義物件。當回呼是具名函數時，使用此物件以將物件或值提供給 <b>AsyncResult</b>。</li></ul>|_tableOptions_ 和 _cellFormat_ 選項已在 v1.1 新增，並且在 Excel 2013 和 Excel Online 中支援。<br/><br/>_imageLeft_ 和 _ImageTop_ 在 Excel 和 PowerPoint 中支援。|
-| _callback_|**object**|回呼傳回時所叫用的函數，其唯一的參數為 **AsyncResult** 類型。||
+|名稱       | 類型	  | 描述
+|:----------|:------|:-----
+| 資料      |物件 | 資料可以是任何受支援的 [coercision 類型](#coerciontype)
+| 選項   |物件 | 指定一組[選擇性參數](#options)
+| 回呼  |物件 | [AsyncResult](../../reference/shared/asyncresult.md) 物件 
+
+
+
+## <a name="options"></a>選項
+```js
+{
+    coercionType: '',
+    tableOptions: [],
+    cellFormat: [],
+    imageLeft: 0,
+    imageTop: 0,
+    imageWidth: 0,
+    imageHeight: 0,
+    asyncContext
+}
+```
+
+### <a name="coerciontype"></a>coercionType
+Office.js 支援下列強制型轉類型。請注意，並非所有主機都支援所有強制型轉類型。 
+
+|名稱                       |Access |Excel  |Word   |PowerPoint
+|:--------------------------|:-----:|:-----:|:-----:|:---------:|
+|Office.CoercionType.Text   |       |   X   |   X   |   X       |
+|Office.CoercionType.Matrix |       |   X   |   X   |           |
+|Office.CoercionType.Table  |   X   |   X   |   X   |           |
+|Office.CoercionType.Html   |       |       |   X   |           |
+|Office.CoercionType.Ooxml  |       |       |   X   |           |
+|Office.CoercionType.Image  |       |   X   |   X   |   X       |
+
+### <a name="tableoptions-object"></a>tableOptions (object)
+對於插入的表格，指定表格格式化選項的機碼值組清單，例如標題列、總計列，以及帶狀資料列。(在 1.1 新增)
+
+### <a name="cellformat-object"></a>cellFormat (object)
+對於插入的表格，指定資料欄、資料列之範圍的機碼值組清單，或套用該範圍的儲存格及儲存格格式。(在 1.1 新增)
+
+### <a name="imageleft-number"></a>imageLeft (number)
+此選項適用於插入影像。表示與 PowerPoint 投影片左側相關聯的插入位置，及其與 Excel 中目前選取之儲存的關聯。Word 會忽略此值。此值以點為單位。
+
+### <a name="imagetop-number"></a>imageTop (number)
+此選項適用於插入影像。表示與 PowerPoint 投影片頂端相關聯的插入位置，及其與 Excel 中目前選取之儲存的關聯。Word 會忽略此值。此值以點為單位。
+
+### <a name="imagewidth-number"></a>imageWidth (number)
+此選項適用於插入影像。表示影像寬度。如果已提供此選項，卻沒有 imageHeight，則影像將會縮放至符合影像寬度的值。如果已提供影像寬度與影像高度，則會視情況調整影像大小。如果未提供影像高度或寬度，則會使用預設的影像大小和外觀比例。此值以點為單位。
+
+### <a name="imageheight-number"></a>imageHeight (number)
+此選項適用於插入影像。表示影像高度。如果已提供此選項，卻沒有 imageWidth，則影像將會縮放至符合影像高度的值。如果已提供影像寬度與影像高度，則會視情況調整影像大小。如果未提供影像高度或寬度，則會使用預設的影像大小和外觀比例。此值以點為單位。
+
+### <a name="asynccontext-object--value"></a>asyncContext (object | value)
+AsyncResult 物件之 asyncContext 屬性上可用的使用者定義物件。當回呼是具名函數時，使用此物件以將物件或值提供給 AsyncResult。
+
 
 ## <a name="callback-value"></a>回呼值
 
@@ -49,13 +99,13 @@ Office.context.document.setSelectedDataAsync(data [, options], callback(asyncRes
     
     
     
-     **附註︰**在 Excel 中，如果您在針對 _data_ 參數傳遞的 **TableData** 物件中指定公式，您可能不會得到預期的結果，因為 Excel 的「導出資料行」功能會自動複製資料欄中的公式。當您希望將包含公式的_資料_寫入選取的表格時，如果要解決此問題，請嘗試將資料指定為陣列的陣列 (而非 **TableData** 物件)，並將 _coercionType_ 指定為 **Microsoft.Office.Matrix** 或 “matrix”。
+     >**附註︰**在 Excel 中，如果您在針對 _data_ 參數傳遞的 **TableData** 物件中指定公式，您可能不會得到預期的結果，因為 Excel 的「導出資料行」功能會自動複製資料欄中的公式。當您希望將包含公式的_資料_寫入選取的表格時，如果要解決此問題，請嘗試將資料指定為陣列的陣列 (而非 **TableData** 物件)，並將 _coercionType_ 指定為 **Microsoft.Office.Matrix** 或 “matrix”。
     
- **特定應用程式行為**
+### <a name="application-specific-behaviors"></a>特定應用程式行為
 
 此外，將資料寫入選取範圍時，會套用這些應用程式特定的動作。
 
- **對於 Word**
+#### <a name="word"></a>Word
 
 
 - 如果沒有任何選取，而且插入點位於有效位置，則指定的 _data_ 會插入在如下所示的插入點：
@@ -75,7 +125,7 @@ Office.context.document.setSelectedDataAsync(data [, options], callback(asyncRes
     
 -  **插入影像**：插入的影像會放置內嵌。會忽略 **ImageLeft** 和 **imageTop** 參數。影像外觀比例永遠鎖定。如果僅提供 **imageWidth** 和 **imageHeight** 其中一個參數，其他值將會自動縮放以保持原始外觀比例。
     
- **對於 Excel**
+#### <a name="excel"></a>Excel
 
 
 - 如果選取單一儲存格：
@@ -94,7 +144,7 @@ Office.context.document.setSelectedDataAsync(data [, options], callback(asyncRes
     
 在其他情況下，會傳回錯誤。
 
- **對於 Excel Online**
+#### <a name="excel-online"></a>Excel Online
 
 除了 Excel 上述行為以外，在 Excel Online 中寫入資料時，會套用下列限制。 
 
@@ -111,7 +161,7 @@ Office.context.document.setSelectedDataAsync(data [, options], callback(asyncRes
     function (asyncResult){});
 ```
 
- **對於 PowerPoint**
+#### <a name="powerpoint"></a>PowerPoint
 
 插入的影像是浮動的。位置 **imageLeft** 和 **imageTop** 參數是選擇性的，但如果已提供，則兩者皆應該出現。如果提供單一值，則會忽略它。允許 **imageLeft** 和 **imageTop** 負值，並可將影像位置設定在投影片外。如果未提供任何選擇性參數，而且投影片有預留位置，則影像將取代投影片中的預留位置。影像外觀比例已鎖定，除非提供 **imageWidth** 和 **imageHeight** 參數。如果僅提供 **imageWidth** 和 **imageHeight** 其中一個參數，其他值將會自動縮放以保持原始外觀比例。
 
@@ -263,6 +313,28 @@ function insertPictureAtSelection(base64EncodedImageStr) {
 |**增益集類型**|內容、工作窗格|
 |**文件庫**|Office.js|
 |**命名空間**|Office|
+
+## <a name="support-notes"></a>支援附註
+**上次變更於：**1.1 支援 Access 的內容增益集需要**選取**需求集合 1.1 或更新版本。支援設定影像資料需要 **ImageCoercion** 需求集合 1.1 或更新版本。若要針對應用程式啟動進行此設定，請使用：
+
+```xml
+<Requirements>
+    <Sets DefaultMinVersion="1.1">
+        <Set Name="ImageCoercion"/>
+    </Sets>
+</Requirements>
+```
+
+ImageCoercion 功能的執行階段偵測可以利用下列程式碼執行︰
+
+```javascript
+if (Office.context.requirements.isSetSupported('ImageCoercion', '1.1')) {)) {
+    // insertViaImageCoercion();
+} 
+else {
+    // insertViaOoxml();
+}
+```
 
 ## <a name="support-history"></a>支援歷程記錄
 

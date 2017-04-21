@@ -4,7 +4,7 @@
 
 ## <a name="properties"></a>屬性
 
-| 屬性	       | 類型	    |描述| 需求集合|
+| 屬性       | 類型	    |描述| 需求集合|
 |:---------------|:--------|:----------|:----|
 |Count|int|傳回集合中的數列數目。唯讀。|[1.1](../requirement-sets/excel-api-requirement-sets.md)|
 |items|[ChartSeries[]](chartseries.md)|ChartSeries 物件的集合。唯讀。|[1.1](../requirement-sets/excel-api-requirement-sets.md)|
@@ -49,7 +49,7 @@ chartSeriesCollectionObject.getItemAt(index);
 
 #### <a name="parameters"></a>參數
 | 參數	       | 類型    |描述|
-|:---------------|:--------|:----------|:---|
+|:---------------|:--------|:----------|
 |index|number|要擷取之物件的索引值。以 0 開始編製索引。|
 
 #### <a name="returns"></a>傳回

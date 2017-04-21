@@ -4,7 +4,7 @@
 
 ## <a name="properties"></a>屬性
 
-| 屬性	       | 類型	    |描述| 需求集合|
+| 屬性       | 類型	    |描述| 需求集合|
 |:---------------|:--------|:----------|:----|
 |Count|int|傳回工作表中的圖表數目。唯讀。|[1.1](../requirement-sets/excel-api-requirement-sets.md)|
 |items|[Chart[]](chart.md)|Chart 物件的集合。唯讀。|[1.1](../requirement-sets/excel-api-requirement-sets.md)|
@@ -23,7 +23,7 @@ _請參閱屬性存取[範例。](#property-access-examples)_
 |[getCount()](#getcount)|Int|傳回工作表中的圖表數目。|[1.4](../requirement-sets/excel-api-requirement-sets.md)|
 |[getItem(name: string)](#getitemname-string)|[Chart](chart.md)|使用其名稱取得圖表。如果有多個圖表具有相同的名稱，則會傳回第一個圖表。|[1.1](../requirement-sets/excel-api-requirement-sets.md)|
 |[getItemAt(index: number)](#getitematindex-number)|[Chart](chart.md)|根據圖表在集合中的位置，取得圖表。|[1.1](../requirement-sets/excel-api-requirement-sets.md)|
-|[getItemOrNullObject(name: string)](#getitemornullobjectname-string)|[圖表](chart.md)|使用其名稱取得圖表。如果有多個圖表具有相同的名稱，則會傳回第一個圖表。|[1.4](../requirement-sets/excel-api-requirement-sets.md)|
+|[getItemOrNullObject(name: string)](#getitemornullobjectname-string)|[Chart](chart.md)|使用其名稱取得圖表。如果有多個圖表具有相同的名稱，則會傳回第一個圖表。|[1.4](../requirement-sets/excel-api-requirement-sets.md)|
 
 ## <a name="method-details"></a>方法詳細資料
 
@@ -38,7 +38,7 @@ chartCollectionObject.add(type, sourceData, seriesBy);
 
 #### <a name="parameters"></a>參數
 | 參數	       | 類型    |描述|
-|:---------------|:--------|:----------|:---|
+|:---------------|:--------|:----------|
 |類型|string|代表圖表的類型。可能的值為：ColumnClustered、ColumnStacked、ColumnStacked100、BarClustered、BarStacked、BarStacked100、LineStacked、LineStacked100、LineMarkers、LineMarkersStacked、LineMarkersStacked100、PieOfPie 等。|
 |sourceData|Range|對應到來源資料的 Range 物件。|
 |seriesBy|string|選用。指定在圖表中使用欄或列作為資料數列的方法。可能的值為：Auto、Columns、Rows|
@@ -92,7 +92,7 @@ chartCollectionObject.getItem(name);
 
 #### <a name="parameters"></a>參數
 | 參數	       | 類型    |描述|
-|:---------------|:--------|:----------|:---|
+|:---------------|:--------|:----------|
 |Name|string|要擷取之圖表的名稱。|
 
 #### <a name="returns"></a>傳回
@@ -163,7 +163,7 @@ chartCollectionObject.getItemAt(index);
 
 #### <a name="parameters"></a>參數
 | 參數	       | 類型    |描述|
-|:---------------|:--------|:----------|:---|
+|:---------------|:--------|:----------|
 |index|number|要擷取之物件的索引值。以 0 開始編製索引。|
 
 #### <a name="returns"></a>傳回
@@ -197,7 +197,7 @@ chartCollectionObject.getItemOrNullObject(name);
 
 #### <a name="parameters"></a>參數
 | 參數	       | 類型    |描述|
-|:---------------|:--------|:----------|:---|
+|:---------------|:--------|:----------|
 |Name|string|要擷取之圖表的名稱。|
 
 #### <a name="returns"></a>傳回

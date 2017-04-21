@@ -4,7 +4,7 @@
 
 ## <a name="properties"></a>屬性
 
-| 屬性	       | 類型	    |描述| 需求集合|
+| 屬性       | 類型	    |描述| 需求集合|
 |:---------------|:--------|:----------|:----|
 |項目|[Worksheet[]](worksheet.md)|Worksheet 物件的集合。唯讀。|[1.1](../requirement-sets/excel-api-requirement-sets.md)|
 
@@ -37,7 +37,7 @@ worksheetCollectionObject.add(name);
 
 #### <a name="parameters"></a>參數
 | 參數	       | 類型    |描述|
-|:---------------|:--------|:----------|:---|
+|:---------------|:--------|:----------|
 |Name|string|選用。要加入的工作表的名稱。若指定，名稱應為唯一的。若不指定，Excel 會自行決定新工作表的名稱。|
 
 #### <a name="returns"></a>傳回
@@ -104,7 +104,7 @@ worksheetCollectionObject.getCount(visibleOnly);
 
 #### <a name="parameters"></a>參數
 | 參數	       | 類型    |描述|
-|:---------------|:--------|:----------|:---|
+|:---------------|:--------|:----------|
 |visibleOnly|bool|選用。如果設定為 true，則僅傳回可見的工作表。 |
 
 #### <a name="returns"></a>傳回
@@ -120,7 +120,7 @@ worksheetCollectionObject.getItem(key);
 
 #### <a name="parameters"></a>參數
 | 參數	       | 類型    |描述|
-|:---------------|:--------|:----------|:---|
+|:---------------|:--------|:----------|
 |索引鍵|string|工作表的名稱或 ID。|
 
 #### <a name="returns"></a>傳回
@@ -136,7 +136,7 @@ worksheetCollectionObject.getItemOrNullObject(key);
 
 #### <a name="parameters"></a>參數
 | 參數	       | 類型    |描述|
-|:---------------|:--------|:----------|:---|
+|:---------------|:--------|:----------|
 |索引鍵|string|工作表的名稱或 ID。|
 
 #### <a name="returns"></a>傳回

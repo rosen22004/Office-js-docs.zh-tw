@@ -1,10 +1,10 @@
-﻿# <a name="bindingcollection-object-javascript-api-for-excel"></a>BindingCollection 物件 (適用於 Excel 的 JavaScript API)
+# <a name="bindingcollection-object-javascript-api-for-excel"></a>BindingCollection 物件 (適用於 Excel 的 JavaScript API)
 
 代表屬於活頁簿一部份的所有 Binding 物件集合。
 
 ## <a name="properties"></a>屬性
 
-| 屬性	       | 類型	    |描述| 需求集合|
+| 屬性       | 類型	    |描述| 需求集合|
 |:---------------|:--------|:----------|:----|
 |Count|int|傳回集合中的繫結數目。唯讀。|[1.1](../requirement-sets/excel-api-requirement-sets.md)|
 |items|[Binding[]](binding.md)|Binding 物件的集合。唯讀。|[1.1](../requirement-sets/excel-api-requirement-sets.md)|
@@ -25,7 +25,7 @@ _請參閱屬性存取[範例。](#property-access-examples)_
 |[getCount()](#getcount)|Int|取得集合中的繫結數目。|[1.4](../requirement-sets/excel-api-requirement-sets.md)|
 |[getItem(id: string)](#getitemid-string)|[Binding](binding.md)|依 ID 取得 binding 物件。|[1.1](../requirement-sets/excel-api-requirement-sets.md)|
 |[getItemAt(index: number)](#getitematindex-number)|[Binding](binding.md)|根據繫結在項目陣列中的位置，取得 binding 物件。|[1.1](../requirement-sets/excel-api-requirement-sets.md)|
-|[getItemOrNullObject(id: string)](#getitemornullobjectid-string)|[繫結](binding.md)|依 ID 取得 Binding 物件。如果 Binding 物件不存在，會傳回 null 物件。|[1.4](../requirement-sets/excel-api-requirement-sets.md)|
+|[getItemOrNullObject(id: string)](#getitemornullobjectid-string)|[Binding](binding.md)|依 ID 取得 Binding 物件。如果 Binding 物件不存在，會傳回 null 物件。|[1.4](../requirement-sets/excel-api-requirement-sets.md)|
 
 ## <a name="method-details"></a>方法詳細資料
 
@@ -40,7 +40,7 @@ bindingCollectionObject.add(range, bindingType, id);
 
 #### <a name="parameters"></a>參數
 | 參數	       | 類型    |描述|
-|:---------------|:--------|:----------|:---|
+|:---------------|:--------|:----------|
 |range|Range 或 string|繫結所繫結到的範圍。可以為 Excel Range 物件或 string。如果為 string，則必須包含完整位置，包含工作表名稱|
 |bindingType|string|繫結的類型。可能的值為：Range、Table、Text|
 |id|string|繫結的名稱。|
@@ -58,7 +58,7 @@ bindingCollectionObject.addFromNamedItem(name, bindingType, id);
 
 #### <a name="parameters"></a>參數
 | 參數	       | 類型    |描述|
-|:---------------|:--------|:----------|:---|
+|:---------------|:--------|:----------|
 |Name|string|建立繫結的名稱。|
 |bindingType|string|繫結的類型。可能的值為：Range、Table、Text|
 |id|string|繫結的名稱。|
@@ -76,7 +76,7 @@ bindingCollectionObject.addFromSelection(bindingType, id);
 
 #### <a name="parameters"></a>參數
 | 參數	       | 類型    |描述|
-|:---------------|:--------|:----------|:---|
+|:---------------|:--------|:----------|
 |bindingType|string|繫結的類型。可能的值為：Range、Table、Text|
 |id|string|繫結的名稱。|
 
@@ -107,7 +107,7 @@ bindingCollectionObject.getItem(id);
 
 #### <a name="parameters"></a>參數
 | 參數	       | 類型    |描述|
-|:---------------|:--------|:----------|:---|
+|:---------------|:--------|:----------|
 |id|string|要擷取之 binding 物件的 ID。|
 
 #### <a name="returns"></a>傳回
@@ -187,7 +187,7 @@ bindingCollectionObject.getItemAt(index);
 
 #### <a name="parameters"></a>參數
 | 參數	       | 類型    |描述|
-|:---------------|:--------|:----------|:---|
+|:---------------|:--------|:----------|
 |index|number|要擷取之物件的索引值。以 0 開始編製索引。|
 
 #### <a name="returns"></a>傳回
@@ -221,7 +221,7 @@ bindingCollectionObject.getItemOrNullObject(id);
 
 #### <a name="parameters"></a>參數
 | 參數	       | 類型    |描述|
-|:---------------|:--------|:----------|:---|
+|:---------------|:--------|:----------|
 |id|string|要擷取之 binding 物件的 ID。|
 
 #### <a name="returns"></a>傳回

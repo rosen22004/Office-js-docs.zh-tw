@@ -4,12 +4,12 @@
 
 ## <a name="properties"></a>屬性
 
-| 屬性	       | 類型	    |描述| 需求集合|
+| 屬性       | 類型	    |描述| 需求集合|
 |:---------------|:--------|:----------|:----|
 |protected|bool|表示工作表是否受到保護。唯讀。唯讀。|[1.2](../requirement-sets/excel-api-requirement-sets.md)|
 
 ## <a name="relationships"></a>關聯性
-| 關聯性 | 類型	    |描述| 需求集合|
+| 關聯性 | 類型    |描述| 需求集合|
 |:---------------|:--------|:----------|:----|
 |選項|[WorksheetProtectionOptions](worksheetprotectionoptions.md)|工作表保護選項。唯讀。唯讀。|[1.2](../requirement-sets/excel-api-requirement-sets.md)|
 
@@ -17,7 +17,7 @@
 
 | 方法           | 傳回類型    |描述| 需求集合|
 |:---------------|:--------|:----------|:----|
-|[protect(options:WorksheetProtectionOptions)](#protectoptions-worksheetprotectionoptions)|無效|保護工作表。如果工作表已經受到保護，則會失敗。|[1.2](../requirement-sets/excel-api-requirement-sets.md)|
+|[protect(options:WorksheetProtectionOptions)](#protectoptions-worksheetprotectionoptions)|void|保護工作表。如果工作表已經受到保護，則會失敗。|[1.2](../requirement-sets/excel-api-requirement-sets.md)|
 |[unprotect()](#unprotect)|void|取消保護工作表。|[1.2](../requirement-sets/excel-api-requirement-sets.md)|
 
 ## <a name="method-details"></a>方法詳細資料
@@ -33,7 +33,7 @@ worksheetProtectionObject.protect(options);
 
 #### <a name="parameters"></a>參數
 | 參數	       | 類型    |描述|
-|:---------------|:--------|:----------|:---|
+|:---------------|:--------|:----------|
 |選項|WorksheetProtectionOptions|選擇性。工作表保護選項。|
 
 #### <a name="returns"></a>傳回

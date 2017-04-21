@@ -4,7 +4,7 @@
 
 ## <a name="properties"></a>屬性
 
-| 屬性	       | 類型	    |描述| 需求集合|
+| 屬性       | 類型	    |描述| 需求集合|
 |:---------------|:--------|:----------|:----|
 |Count|int|集合中的 border 物件數目。唯讀。|[1.1](../requirement-sets/excel-api-requirement-sets.md)|
 |items|[RangeBorder[]](rangeborder.md)|RangeBorder 物件的集合。唯讀。|[1.1](../requirement-sets/excel-api-requirement-sets.md)|
@@ -35,7 +35,7 @@ rangeBorderCollectionObject.getItem(index);
 
 #### <a name="parameters"></a>參數
 | 參數	       | 類型    |描述|
-|:---------------|:--------|:----------|:---|
+|:---------------|:--------|:----------|
 |index|string|要擷取之 border 物件的索引值。可能的值為：EdgeTop、EdgeBottom、EdgeLeft、EdgeRight、InsideVertical、InsideHorizontal、DiagonalDown、DiagonalUp|
 
 #### <a name="returns"></a>傳回
@@ -95,7 +95,7 @@ rangeBorderCollectionObject.getItemAt(index);
 
 #### <a name="parameters"></a>參數
 | 參數	       | 類型    |描述|
-|:---------------|:--------|:----------|:---|
+|:---------------|:--------|:----------|
 |index|number|要擷取之物件的索引值。以 0 開始編製索引。|
 
 #### <a name="returns"></a>傳回

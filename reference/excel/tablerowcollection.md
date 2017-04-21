@@ -4,7 +4,7 @@
 
 ## <a name="properties"></a>屬性
 
-| 屬性	       | 類型	    |描述| 需求集合|
+| 屬性       | 類型	    |描述| 需求集合|
 |:---------------|:--------|:----------|:----|
 |Count|int|傳回表格中的列數。唯讀。|[1.1](../requirement-sets/excel-api-requirement-sets.md)|
 |items|[TableRow[]](tablerow.md)|TableRow 物件的集合。唯讀。|[1.1](../requirement-sets/excel-api-requirement-sets.md)|
@@ -19,7 +19,7 @@ _請參閱屬性存取[範例。](#property-access-examples)_
 
 | 方法           | 傳回類型    |描述| 需求集合|
 |:---------------|:--------|:----------|:----|
-|[add(index: number, values: (boolean 或 string 或 number)[][])](#addindex-number-values-boolean-or-string-or-number)|[TableRow](tablerow.md)|新增一或多個資料列至表格中。傳回的物件將會在新增列的頂端。|[1.1](../requirement-sets/excel-api-requirement-sets.md)|
+|[add(index: number, values: (boolean 或 string 或 number)[][])](#addindex-number-values-boolean-or-string-or-number)|[TableRow](tablerow.md)|新增一或多個資料列至表格中。傳回的物件將會在新增資料列的頂端。|[1.1](../requirement-sets/excel-api-requirement-sets.md)|
 |[getCount()](#getcount)|Int|取得表格中的列數。|[1.4](../requirement-sets/excel-api-requirement-sets.md)|
 |[getItemAt(index: number)](#getitematindex-number)|[TableRow](tablerow.md)|根據列在集合中的位置，取得列。|[1.1](../requirement-sets/excel-api-requirement-sets.md)|
 
@@ -36,7 +36,7 @@ tableRowCollectionObject.add(index, values);
 
 #### <a name="parameters"></a>參數
 | 參數	       | 類型    |描述|
-|:---------------|:--------|:----------|:---|
+|:---------------|:--------|:----------|
 |index|數字|選用。指定新列的相對位置。如果是 null 或 -1，則會加入至結尾處。插入列下方的任何列都會向下移。以 0 開始編製索引。|
 |values|(boolean or string or number)[][]|選用。表格列中未格式化值的 2 維陣列。|
 
@@ -86,7 +86,7 @@ tableRowCollectionObject.getItemAt(index);
 
 #### <a name="parameters"></a>參數
 | 參數	       | 類型    |描述|
-|:---------------|:--------|:----------|:---|
+|:---------------|:--------|:----------|
 |index|number|要擷取之物件的索引值。以 0 開始編製索引。|
 
 #### <a name="returns"></a>傳回

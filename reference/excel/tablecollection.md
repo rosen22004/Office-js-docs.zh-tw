@@ -4,7 +4,7 @@
 
 ## <a name="properties"></a>屬性
 
-| 屬性	       | 類型	    |描述| 需求集合|
+| 屬性       | 類型	    |描述| 需求集合|
 |:---------------|:--------|:----------|:----|
 |Count|int|傳回工作表中的表格數目。唯讀。|[1.1](../requirement-sets/excel-api-requirement-sets.md)|
 |items|[Table[]](table.md)|Table 物件的集合。唯讀。|[1.1](../requirement-sets/excel-api-requirement-sets.md)|
@@ -23,7 +23,7 @@ _請參閱屬性存取[範例。](#property-access-examples)_
 |[getCount()](#getcount)|Int|取得集合中的表格數目。|[1.4](../requirement-sets/excel-api-requirement-sets.md)|
 |[getItem(key: number 或 string)](#getitemkey-number-or-string)|[Table](table.md)|依名稱或識別碼取得資料表。|[1.1](../requirement-sets/excel-api-requirement-sets.md)|
 |[getItemAt(index: number)](#getitematindex-number)|[Table](table.md)|根據表格在集合中的位置，取得表格。|[1.1](../requirement-sets/excel-api-requirement-sets.md)|
-|[getItemOrNullObject(key: number 或 string)](#getitemornullobjectkey-number-or-string)|[表格](table.md)|依名稱或 ID 取得表格。如果表格不存在，會傳回 null 物件。|[1.4](../requirement-sets/excel-api-requirement-sets.md)|
+|[getItemOrNullObject(key: number 或 string)](#getitemornullobjectkey-number-or-string)|[Table](table.md)|依名稱或 ID 取得表格。如果表格不存在，會傳回 null 物件。|[1.4](../requirement-sets/excel-api-requirement-sets.md)|
 
 ## <a name="method-details"></a>方法詳細資料
 
@@ -38,7 +38,7 @@ tableCollectionObject.add(address, hasHeaders);
 
 #### <a name="parameters"></a>參數
 | 參數	       | 類型    |描述|
-|:---------------|:--------|:----------|:---|
+|:---------------|:--------|:----------|
 |位址|[object|代表資料來源的 Range 物件、字串位址或範圍名稱。如果位址不含工作表名稱，則會使用目前作用中的工作表。如為 1.1，使用字串參數；如為 1.3 ，則亦可接受 Range 物件。|
 |hasHeaders|bool|布林值，指出是要匯入的資料是否具有欄標籤。如果來源不含標頭 (亦即此屬性設為 false)，Excel 會自動產生標頭，並將資料向下移一列。|
 
@@ -86,7 +86,7 @@ tableCollectionObject.getItem(key);
 
 #### <a name="parameters"></a>參數
 | 參數	       | 類型    |描述|
-|:---------------|:--------|:----------|:---|
+|:---------------|:--------|:----------|
 |key|number 或 string|要擷取之表格的名稱或 ID。|
 
 #### <a name="returns"></a>傳回
@@ -139,7 +139,7 @@ tableCollectionObject.getItemAt(index);
 
 #### <a name="parameters"></a>參數
 | 參數	       | 類型    |描述|
-|:---------------|:--------|:----------|:---|
+|:---------------|:--------|:----------|
 |index|number|要擷取之物件的索引值。以 0 開始編製索引。|
 
 #### <a name="returns"></a>傳回
@@ -173,7 +173,7 @@ tableCollectionObject.getItemOrNullObject(key);
 
 #### <a name="parameters"></a>參數
 | 參數	       | 類型    |描述|
-|:---------------|:--------|:----------|:---|
+|:---------------|:--------|:----------|
 |key|number 或 string|要擷取之表格的名稱或 ID。|
 
 #### <a name="returns"></a>傳回

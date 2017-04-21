@@ -4,13 +4,13 @@
 
 ## <a name="properties"></a>屬性
 
-| 屬性	       | 類型	    |描述| 需求集合|
+| 屬性       | 類型	    |描述| 需求集合|
 |:---------------|:--------|:----------|:----|
 |matchCase|bool|表示大小寫會影響料表的最後排序。唯讀。|[1.2](../requirement-sets/excel-api-requirement-sets.md)|
 |method|string|表示最後用於排序資料表的中文字元排序方法。唯讀。可能的值為：拼音、StrokeCount。|[1.2](../requirement-sets/excel-api-requirement-sets.md)|
 
 ## <a name="relationships"></a>關聯性
-| 關聯性 | 類型	    |描述| 需求集合|
+| 關聯性 | 類型    |描述| 需求集合|
 |:---------------|:--------|:----------|:----|
 |欄位|[SortField](sortfield.md)|表示用於最後排序資料表的目前條件。唯讀。|[1.2](../requirement-sets/excel-api-requirement-sets.md)|
 
@@ -35,7 +35,7 @@ tableSortObject.apply(fields, matchCase, method);
 
 #### <a name="parameters"></a>參數
 | 參數	       | 類型    |描述|
-|:---------------|:--------|:----------|:---|
+|:---------------|:--------|:----------|
 |欄位|SortField[]|用來排序的條件清單。|
 |matchCase|bool|選擇性。是否有大小寫影響的字串排序。|
 |方法|string|選擇性。適用於中文字元的排序方法。可能的值為：拼音、StrokeCount|

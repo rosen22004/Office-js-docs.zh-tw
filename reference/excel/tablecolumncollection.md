@@ -4,7 +4,7 @@
 
 ## <a name="properties"></a>屬性
 
-| 屬性	       | 類型	    |描述| 需求集合|
+| 屬性       | 類型	    |描述| 需求集合|
 |:---------------|:--------|:----------|:----|
 |Count|int|傳回表格中的欄數。唯讀。|[1.1](../requirement-sets/excel-api-requirement-sets.md)|
 |items|[TableColumn[]](tablecolumn.md)|TableColumn 物件的集合。唯讀。|[1.1](../requirement-sets/excel-api-requirement-sets.md)|
@@ -38,7 +38,7 @@ tableColumnCollectionObject.add(index, values, name);
 
 #### <a name="parameters"></a>參數
 | 參數	       | 類型    |描述|
-|:---------------|:--------|:----------|:---|
+|:---------------|:--------|:----------|
 |index|數字|選用。指定新欄的相對位置。如果是 null 或 -1，則會加入至結尾處。索引較高的欄將會移至側邊。以 0 開始編製索引。|
 |values|(boolean or string or number)[][]|選用。表格欄中未格式化值的 2 維陣列。|
 |名稱|string|選用。指定新欄的名稱。如果是 null，則會使用預設名稱。|
@@ -90,7 +90,7 @@ tableColumnCollectionObject.getItem(key);
 
 #### <a name="parameters"></a>參數
 | 參數	       | 類型    |描述|
-|:---------------|:--------|:----------|:---|
+|:---------------|:--------|:----------|
 |key|number 或 string| 欄名稱或 ID。|
 
 #### <a name="returns"></a>傳回
@@ -140,7 +140,7 @@ tableColumnCollectionObject.getItemAt(index);
 
 #### <a name="parameters"></a>參數
 | 參數	       | 類型    |描述|
-|:---------------|:--------|:----------|:---|
+|:---------------|:--------|:----------|
 |index|number|要擷取之物件的索引值。以 0 開始編製索引。|
 
 #### <a name="returns"></a>傳回
@@ -172,7 +172,7 @@ tableColumnCollectionObject.getItemOrNullObject(key);
 
 #### <a name="parameters"></a>參數
 | 參數	       | 類型    |描述|
-|:---------------|:--------|:----------|:---|
+|:---------------|:--------|:----------|
 |key|number 或 string| 欄名稱或 ID。|
 
 #### <a name="returns"></a>傳回

@@ -71,7 +71,7 @@
 3. 輸入錯誤訊息中出現的 URL，並選擇 [新增]****。
 4. 請試著再次使用增益集。如果問題持續發生，請確認其他安全性區域的設定，並確定增益集網域的區域與 Office 應用程式的網址列中顯示的 URL 相同。
 
-在快顯模式中使用對話方塊 API 時，會發生這個問題。若要避免發生這個問題，請使用 [displayInFrame](../../reference/shared/officeui.displaydialogasync) 旗標。這需要您的網頁支援 iframe 內顯示。下列範例顯示如何使用旗標。
+在快顯模式中使用對話方塊 API 時，會發生這個問題。若要避免發生這個問題，請使用 [displayInFrame](../../reference/shared/officeui.displaydialogasync.md) 旗標。這需要您的網頁支援 iframe 內顯示。下列範例顯示如何使用旗標。
 
 ```js
 

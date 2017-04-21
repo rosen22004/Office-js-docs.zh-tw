@@ -5,6 +5,7 @@
 	<Item text="執行增益集的需求" url="overview/requirements-for-running-office-add-ins" SEODescription="深入了解執行 Office 增益集的軟體及裝置需求。" />	
 	<Item text="增益集開發的最佳作法" url="overview/add-in-development-best-practices" SEODescription="套用最佳作法來建置最佳化使用者經驗的 Office 增益集。" />
 	<Item text="主應用程式和平台可用性" url="https://dev.office.com/add-in-availability" IsExternal="true" />
+	<Item text="變更記錄" url="overview/add-in-changelog" />
 	</Item>
   <Item text="開始使用" url="get-started">
     <Item text="使用 Visual Studio" url="get-started/create-and-debug-office-add-ins-in-visual-studio" SEODescription="開始使用 Visual Studio 建置 Office 增益集" />

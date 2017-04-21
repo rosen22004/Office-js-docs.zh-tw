@@ -7,7 +7,7 @@
 無
 
 ## <a name="relationships"></a>關聯性
-| 關聯性 | 類型	    |描述| 需求集合|
+| 關聯性 | 類型    |描述| 需求集合|
 |:---------------|:--------|:----------|:----|
 |準則|[FilterCriteria](filtercriteria.md)|目前在指定的欄位上套用的篩選。唯讀。|[1.2](../requirement-sets/excel-api-requirement-sets.md)|
 
@@ -41,7 +41,7 @@ filterObject.apply(criteria);
 
 #### <a name="parameters"></a>參數
 | 參數	       | 類型    |描述|
-|:---------------|:--------|:----------|:---|
+|:---------------|:--------|:----------|
 |準則|FilterCriteria|要套用的準則。|
 
 #### <a name="returns"></a>傳回
@@ -57,7 +57,7 @@ filterObject.applyBottomItemsFilter(count);
 
 #### <a name="parameters"></a>參數
 | 參數	       | 類型    |描述|
-|:---------------|:--------|:----------|:---|
+|:---------------|:--------|:----------|
 |Count|number|從下至上顯示的元素數目。|
 
 #### <a name="returns"></a>傳回
@@ -73,7 +73,7 @@ filterObject.applyBottomPercentFilter(percent);
 
 #### <a name="parameters"></a>參數
 | 參數	       | 類型    |描述|
-|:---------------|:--------|:----------|:---|
+|:---------------|:--------|:----------|
 |百分比|number|從下至上顯示的元素百分比。|
 
 #### <a name="returns"></a>傳回
@@ -89,7 +89,7 @@ filterObject.applyCellColorFilter(color);
 
 #### <a name="parameters"></a>參數
 | 參數	       | 類型    |描述|
-|:---------------|:--------|:----------|:---|
+|:---------------|:--------|:----------|
 |Color|string|顯示的儲存格背景色彩。|
 
 #### <a name="returns"></a>傳回
@@ -105,7 +105,7 @@ filterObject.applyCustomFilter(criteria1, criteria2, oper);
 
 #### <a name="parameters"></a>參數
 | 參數	       | 類型    |描述|
-|:---------------|:--------|:----------|:---|
+|:---------------|:--------|:----------|
 |criteria1|string|第一個準則字串。|
 |criteria2|string|選用。第二個準則字串。|
 |oper|string|選用。說明如何聯結兩個準則的運算子。可能的值為：And、Or|
@@ -123,7 +123,7 @@ filterObject.applyDynamicFilter(criteria);
 
 #### <a name="parameters"></a>參數
 | 參數	       | 類型    |描述|
-|:---------------|:--------|:----------|:---|
+|:---------------|:--------|:----------|
 |criteria|string|要套用的動態準則。可能的值為：未知、AboveAverage、AllDatesInPeriodApril、AllDatesInPeriodAugust、AllDatesInPeriodDecember、AllDatesInPeriodFebruray、AllDatesInPeriodJanuary、AllDatesInPeriodJuly、AllDatesInPeriodJune、AllDatesInPeriodMarch、AllDatesInPeriodMay、AllDatesInPeriodNovember、AllDatesInPeriodOctober、AllDatesInPeriodQuarter1、AllDatesInPeriodQuarter2、AllDatesInPeriodQuarter3、AllDatesInPeriodQuarter4、AllDatesInPeriodSeptember、BelowAverage、LastMonth、LastQuarter、LastWeek、LastYear、NextMonth、NextQuarter、NextWeek、NextYear、ThisMonth、ThisQuarter、ThisWeek、ThisYear、Today、Tomorrow、YearToDate、Yesterday|
 
 #### <a name="returns"></a>傳回
@@ -139,7 +139,7 @@ filterObject.applyFontColorFilter(color);
 
 #### <a name="parameters"></a>參數
 | 參數	       | 類型    |描述|
-|:---------------|:--------|:----------|:---|
+|:---------------|:--------|:----------|
 |Color|string|顯示的儲存格字型色彩。|
 
 #### <a name="returns"></a>傳回
@@ -155,7 +155,7 @@ filterObject.applyIconFilter(icon);
 
 #### <a name="parameters"></a>參數
 | 參數	       | 類型    |描述|
-|:---------------|:--------|:----------|:---|
+|:---------------|:--------|:----------|
 |圖示|圖示|顯示的儲存格圖示。|
 
 #### <a name="returns"></a>傳回
@@ -171,7 +171,7 @@ filterObject.applyTopItemsFilter(count);
 
 #### <a name="parameters"></a>參數
 | 參數	       | 類型    |描述|
-|:---------------|:--------|:----------|:---|
+|:---------------|:--------|:----------|
 |Count|number|從上至下顯示的元素數目。|
 
 #### <a name="returns"></a>傳回
@@ -187,7 +187,7 @@ filterObject.applyTopPercentFilter(percent);
 
 #### <a name="parameters"></a>參數
 | 參數	       | 類型    |描述|
-|:---------------|:--------|:----------|:---|
+|:---------------|:--------|:----------|
 |百分比|number|從上至下顯示的元素百分比。|
 
 #### <a name="returns"></a>傳回
@@ -203,7 +203,7 @@ filterObject.applyValuesFilter(values);
 
 #### <a name="parameters"></a>參數
 | 參數	       | 類型    |描述|
-|:---------------|:--------|:----------|:---|
+|:---------------|:--------|:----------|
 |values|()[]|顯示的值清單。|
 
 #### <a name="returns"></a>傳回

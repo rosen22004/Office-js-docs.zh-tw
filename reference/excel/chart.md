@@ -4,7 +4,7 @@
 
 ## <a name="properties"></a>屬性
 
-| 屬性	       | 類型	    |描述| 需求集合|
+| 屬性       | 類型	    |描述| 需求集合|
 |:---------------|:--------|:----------|:----|
 |Height|double|代表 chart 物件的高度，以點為單位。|[1.1](../requirement-sets/excel-api-requirement-sets.md)|
 |id|string|根據圖表在集合中的位置，取得圖表。唯讀。|[1.2](../requirement-sets/excel-api-requirement-sets.md)|
@@ -16,7 +16,7 @@
 _請參閱屬性存取[範例。](#property-access-examples)_
 
 ## <a name="relationships"></a>關聯性
-| 關聯性 | 類型	    |描述| 需求集合|
+| 關聯性 | 類型    |描述| 需求集合|
 |:---------------|:--------|:----------|:----|
 |axes|[ChartAxes](chartaxes.md)|代表圖表座標軸。唯讀。|[1.1](../requirement-sets/excel-api-requirement-sets.md)|
 |dataLabels|[ChartDataLabels](chartdatalabels.md)|代表圖表上的資料標籤。唯讀。|[1.1](../requirement-sets/excel-api-requirement-sets.md)|
@@ -76,7 +76,7 @@ chartObject.getImage(height, width, fittingMode);
 
 #### <a name="parameters"></a>參數
 | 參數	       | 類型    |描述|
-|:---------------|:--------|:----------|:---|
+|:---------------|:--------|:----------|
 |Height|數字|選用。(選擇性) 導出之影像的所要高度。|
 |寬度|數字|選用。(選擇性) 導出之影像的所要寬度。|
 |fittingMode|string|選用。(選擇性) 用來將圖表縮放為指定尺寸的方法 (如果設定高度及寬度)。可能的值為：Fit、FitAndCenter、Fill|
@@ -102,7 +102,7 @@ Excel.run(function (ctx) {
 
 
 
-### <a name="setdatasourcedata-range-seriesby-string"></a>setData(sourceData:Range, seriesBy: string)
+### <a name="setdatasourcedata-range-seriesby-string"></a>setData(sourceData: Range, seriesBy: string)
 重設圖表的來源資料。
 
 #### <a name="syntax"></a>語法
@@ -112,7 +112,7 @@ chartObject.setData(sourceData, seriesBy);
 
 #### <a name="parameters"></a>參數
 | 參數	       | 類型    |描述|
-|:---------------|:--------|:----------|:---|
+|:---------------|:--------|:----------|
 |sourceData|Range|對應到來源資料的 Range 物件。|
 |seriesBy|string|選用。指定在圖表中使用欄或列作為資料數列的方法。可以是下列其中一項：Auto (預設)、Rows、Columns。可能的值為：Auto、Columns、Rows|
 
@@ -148,7 +148,7 @@ chartObject.setPosition(startCell, endCell);
 
 #### <a name="parameters"></a>參數
 | 參數	       | 類型    |描述|
-|:---------------|:--------|:----------|:---|
+|:---------------|:--------|:----------|
 |startCell|Range 或 string|起始儲存格。這是圖表的移動目標位置。開始儲存格是左上角或右上角儲存格，這取決於使用者的顯示設定是從右至左。|
 |endCell|Range 或 string|選用。(選用) 結束儲存格。如果指定，則圖表的寬度和高度將會設定為完全覆蓋這個儲存格/範圍。|
 

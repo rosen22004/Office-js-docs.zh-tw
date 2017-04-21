@@ -1,4 +1,4 @@
-# <a name="chartfill-object-javascript-api-for-excel"></a>ChartFill 物件 (適用於 Excel 的 JavaScript API)
+﻿# <a name="chartfill-object-javascript-api-for-excel"></a>ChartFill 物件 (適用於 Excel 的 JavaScript API)
 
 代表圖表項目的填滿格式。
 
@@ -63,7 +63,7 @@ chartFillObject.setSolidColor(color);
 
 #### <a name="parameters"></a>參數
 | 參數	       | 類型    |描述|
-|:---------------|:--------|:----------|:---|
+|:---------------|:--------|:----------|
 |Color|string|代表框線色彩的 HTML 色彩代碼，顯示為 #RRGGBB 格式 (例如 "FFA500") 或具名 HTML 色彩 (例如 "orange")。|
 
 #### <a name="returns"></a>傳回

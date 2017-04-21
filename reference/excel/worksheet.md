@@ -4,7 +4,7 @@ Excel 工作表是一組儲存格方格。它可以包含資料、表格、圖�
 
 ## <a name="properties"></a>屬性
 
-| 屬性	       | 類型	    |描述| 需求集合|
+| 屬性       | 類型	    |描述| 需求集合|
 |:---------------|:--------|:----------|:----|
 |id|string|傳回可在特定活頁簿中唯一識別工作表的值。即使重新命名或移動工作表，識別碼的值仍保持不變。唯讀。|[1.1](../requirement-sets/excel-api-requirement-sets.md)|
 |name|string|工作表的顯示名稱。|[1.1](../requirement-sets/excel-api-requirement-sets.md)|
@@ -14,7 +14,7 @@ Excel 工作表是一組儲存格方格。它可以包含資料、表格、圖�
 _請參閱屬性存取[範例。](#property-access-examples)_
 
 ## <a name="relationships"></a>關聯性
-| 關聯性 | 類型	    |描述| 需求集合|
+| 關聯性 | 類型    |描述| 需求集合|
 |:---------------|:--------|:----------|:----|
 |charts|[ChartCollection](chartcollection.md)|代表屬於活頁簿一部份的圖表集合。唯讀。|[1.1](../requirement-sets/excel-api-requirement-sets.md)|
 |名稱|[NamedItemCollection](nameditemcollection.md)|只限於目前工作表的名稱集合。唯讀。|[1.4](../requirement-sets/excel-api-requirement-sets.md)|
@@ -108,7 +108,7 @@ worksheetObject.getCell(row, column);
 
 #### <a name="parameters"></a>參數
 | 參數	       | 類型    |描述|
-|:---------------|:--------|:----------|:---|
+|:---------------|:--------|:----------|
 |列|number|要擷取之儲存格的列號。以 0 開始編製索引。|
 |column|數字|要擷取之儲存格的欄數。以 0 開始編製索引。|
 
@@ -145,7 +145,7 @@ worksheetObject.getRange(address);
 
 #### <a name="parameters"></a>參數
 | 參數	       | 類型    |描述|
-|:---------------|:--------|:----------|:---|
+|:---------------|:--------|:----------|
 |地址|string|選用。範圍的位址或名稱。如果未指定，則會傳回整個工作表範圍。|
 
 #### <a name="returns"></a>傳回
@@ -202,7 +202,7 @@ worksheetObject.getUsedRange(valuesOnly);
 
 #### <a name="parameters"></a>參數
 | 參數	       | 類型    |描述|
-|:---------------|:--------|:----------|:---|
+|:---------------|:--------|:----------|
 |valuesOnly|[ApiSet(Version|僅將包含值的儲存格考慮為使用的儲存格 (忽略格式設定)。|
 
 #### <a name="returns"></a>傳回
@@ -238,7 +238,7 @@ worksheetObject.getUsedRangeOrNullObject(valuesOnly);
 
 #### <a name="parameters"></a>參數
 | 參數	       | 類型    |描述|
-|:---------------|:--------|:----------|:---|
+|:---------------|:--------|:----------|
 |valuesOnly|bool|選用。僅將包含值的儲存格考慮為使用的儲存格。|
 
 #### <a name="returns"></a>傳回
