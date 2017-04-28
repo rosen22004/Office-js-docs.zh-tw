@@ -57,6 +57,9 @@ yo office
 - 新增 [TypeScript](https://www.typescriptlang.org/) -- 使用 _N_
 - 選擇架構 -- 使用 _Jquery_
 
+>**附註：**如果您想要建立使用 Office UI Fabric React 的 Office 增益集，請輸入下列各項︰
+>- 新增 [TypeScript](https://www.typescriptlang.org/) -- 使用 _Y_
+>- 選擇架構 -- 使用 _React_
 
 ![專案輸入的 yeoman 產生器所提示的 Gif](../../images/gettingstarted-fast.gif)
 

@@ -31,20 +31,21 @@ The admin center also includes a pre-deployment validation checking service.
 
 目前支援下列 Office 用戶端的增益集。 
 
-|**Office 應用程式**|**Office 2016 for Windows**|**Office Online**|**Office 2016 for Mac**|
-|:---------------------|:--------------------------|:--------------|:------------------|
-|Word|X|X|X|
-|Excel|X|X|X|
-|PowerPoint|X|X|X|
-|Outlook|即將推出|即將推出|即將推出|
+| Office 應用程式    | Office 2016 for Windows   | Office Online | Office 2016 for Mac   |
+|:----------------------|:-------------------------:|:-------------:|:---------------------:|
+| Word                  | X                         | X             | X                     |
+| Excel                 | X                         | X             | X                     |
+| PowerPoint            | X                         | X             | X                     |
+| Outlook               | 即將推出               | 即將推出   | 即將推出           |
 
 系統管理中心不支援下列項目：
 
-- Office 2013 中以 Word、Excel、PowerPoint 或 Outlook 為目標的增益集。
+- Office 2013 (Word、Excel、PowerPoint 或 Outlook)。
+- Office for iPad
+- SharePoint 增益集。
+- 以 COM/VSTO 為基礎的增益集。
+- Office Online Server。
 - 內部部署目錄服務。
-- SharePoint 增益集部署。
-- 增益集部署至 Office Online Server。
-- COM/VSTO 增益集的部署。
 
 若要部署 SharePoint 增益集或以 Office 2013 為目標的增益集，使用 [SharePoint 增益集目錄](publish-task-pane-and-content-add-ins-to-an-add-in-catalog.md)。
 
