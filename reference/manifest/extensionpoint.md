@@ -74,6 +74,7 @@
 - [AppointmentAttendeeCommandSurface](#appointmentattendeecommandsurface)
 - [Module](#module) (只能在 [DesktopFormFactor](./desktopformfactor.md) 中使用。)
 - [MobileMessageReadCommandSurface](#mobilemessagereadcommandsurface)
+- [事件](#events)
 
 ### <a name="messagereadcommandsurface"></a>MessageReadCommandSurface
 這個擴充點會將按鈕放在郵件讀取檢視的命令介面中。在 Outlook 桌面中，這將會出現在功能區。
@@ -232,4 +233,20 @@
     <!-- Control definition -->
   </Control>
 </ExtensionPoint>
+```
+
+### <a name="events"></a>事件
+此擴充點會新增特定事件的事件處理常式。
+
+> **附註：**僅 Office 365 中的 Outlook 網頁版支援此元素類型。
+
+|  元素 |  描述  |
+|:-----|:-----|
+|  [事件](./event.md) |  指定事件與事件處理常式的函數。  |
+
+#### <a name="itemsend-event-example"></a>ItemSend 事件範例
+```xml
+<ExtensionPoint xsi:type="Events"> 
+  <Event Type="ItemSend" FunctionExecution="synchronous" FunctionName="itemSendHandler" /> 
+</ExtensionPoint> 
 ```

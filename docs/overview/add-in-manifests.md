@@ -26,7 +26,7 @@ Office 增益集的 XML 資訊清單檔案，描述了當使用者安裝並將�
 
 
  >**重要提示**： 
- 
+ >- 請確定增益集 ID 是有效且是唯一的 GUID。各種 GUID 產生器工具在 web 上可供使用，讓您可建立唯一的 GUID。 
  >- 所有 URL，例如 [SourceLocation](../../reference/manifest/sourcelocation.md) 元素中指定的來源檔案位置，都必須是 **SSL 安全 (HTTPS)**。
  >- 所有圖示 URL，例如用於命令介面的 URL，都必須**允許快取**。Web 伺服器不應傳回像無快取/無儲存的 HTTP 標頭。 
  >- 提交至 Office 市集的增益集也必須包含 [SupportUrl](../../reference/manifest/supporturl.md) 元素。如需詳細資訊，請參閱[應避免哪些常見的提交錯誤？](http://msdn.microsoft.com/library/0ceb385c-a608-40cc-8314-78e39d6c75d0%28Office.15%29.aspx#bk_q2)
@@ -137,7 +137,7 @@ Office 增益集的 XML 資訊清單檔案，描述了當使用者安裝並將�
       <!-- Workbook=Excel Document=Word Presentation=PowerPoint -->
       <!-- Make sure the hosts you override match the hosts declared in the top section of the manifest -->
       <Host xsi:type="Document">
-        <!-- Form factor. Currenly only DesktopFormFactor is supported. We will add TabletFormFactor and PhoneFormFactor in the future-->
+          <!-- Form factor. Currenly only DesktopFormFactor is supported. We will add TabletFormFactor and PhoneFormFactor in the future-->
         <DesktopFormFactor>
             <!--Function file is an html page that includes the javascript where functions for ExecuteAction will be called. 
             Think of the FunctionFile as the "code behind" ExecuteFunction-->
@@ -145,12 +145,12 @@ Office 增益集的 XML 資訊清單檔案，描述了當使用者安裝並將�
 
           <!--PrimaryCommandSurface==Main Office Ribbon-->
           <ExtensionPoint xsi:type="PrimaryCommandSurface">
-            <!--Use OfficeTab to extend an existing Tab. Use CustomTab to create a new tab -->
+              <!--Use OfficeTab to extend an existing Tab. Use CustomTab to create a new tab -->
             <!-- Documentation includes all the IDs currently tested to work -->
             <CustomTab id="Contoso.Tab1">
                 <!--Group. Ensure you provide a unique id. Recommendation for any IDs is to namespace using your company name-->
               <Group id="Contoso.Tab1.Group1">
-                 <!--Label for your group. resid must point to a ShortString resource -->
+                   <!--Label for your group. resid must point to a ShortString resource -->
                 <Label resid="Contoso.Tab1.GroupLabel" />
                 <Icon>
                 <!-- Sample Todo: Each size needs its own icon resource or it will look distorted when resized -->
@@ -166,7 +166,7 @@ Office 增益集的 XML 資訊清單檔案，描述了當使用者安裝並將�
                 <!--Label for your button. resid must point to a ShortString resource -->
                   <Label resid="Contoso.FunctionButton.Label" />
                   <Supertip>
-                     <!--ToolTip title. resid must point to a ShortString resource -->
+                       <!--ToolTip title. resid must point to a ShortString resource -->
                     <Title resid="Contoso.FunctionButton.Label" />
                      <!--ToolTip description. resid must point to a LongString resource -->
                     <Description resid="Contoso.FunctionButton.Tooltip" />

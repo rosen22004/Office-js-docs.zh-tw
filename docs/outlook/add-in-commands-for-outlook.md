@@ -4,7 +4,7 @@
 
 藉由加入按鈕或下拉式功能表，Outlook 增益集命令提供從功能區初始化特定增益集動作的方式。這可讓使用者以簡單、直覺化又不礙眼的方式存取增益集。因為是以順暢的方式提供增強的功能，您可以使用增益集命令來建立更吸引人的解決方案。
 
-> **附註**：增益集命令只適用於 Windows 的 Outlook 2016 和 Outlook 2013，以及 Office 365 和 Outlook.com 的 Outlook 網頁版。若要在 Outlook 2013 中支援增益集命令，需要 [2016 年 3 月 8 日安全性更新](https://support.microsoft.com/en-us/kb/3114829)。
+> **附註**：增益集命令只適用於 Windows 的 Outlook 2016 和 Outlook 2013，以及 Office 365 和 Outlook.com 的 Outlook 網頁版。若要在 Outlook 2013 中支援增益集命令，需要三個更新： [2016 年 3 月 8 日 Outlook 的安全性更新](https://support.microsoft.com/en-us/kb/3114829)，[2016 年 3 月 8 日 Office 的安全性更新 (KB3114816)](https://support.microsoft.com/en-us/help/3114816/march-8,-2016,-update-for-office-2013-kb3114816)，和[2016 年 3 月 8 日 Office 的安全性更新 (KB3114828)](https://support.microsoft.com/en-us/help/3114828/march-8,-2016,-update-for-office-2013-kb3114828)。
 
 增益集命令只適用於未使用 [ItemHasAttachment、ItemHasKnownEntity 或 ItemHasRegularExpressionMatch 規則](manifests/activation-rules.md)來限制他們啟動的項目類型的內容相關式增益集。不過，內容相關式增益集可以根據目前選取的項目是郵件或約會來呈現不同的命令，而且可以選擇顯現在讀取或撰寫案例中。如果可能的話，使用增益集命令是[最佳作法](../../docs/overview/add-in-development-best-practices.md)。
 
@@ -17,7 +17,7 @@
 
 當增益集需要提供狀態更新，例如：進度指示器或錯誤訊息時，必須透過[通知 API](../../reference/outlook/NotificationMessages.md) 執行此動作。通知的處理也必須在資訊清單的 **FunctionFile** 節點中所指定的不同 HTML 檔案中定義。
 
-開發人員應該定義所有所需大小的圖示，使得增益集命令將順暢地隨著功能區調整。所需的圖示大小為適用於桌上型電腦的 80 x 80 像素、32 x 32 像素和 16 x 16 像素，以及適用於行動裝置的 48x48 像素、32 x 32 像素和 25 x 25 像素。
+開發人員應該定義所有所需大小的圖示，使得增益集命令將順暢地隨著功能區調整。所需的圖示大小為適用於桌上型電腦的 80 x 80 像素、32 x 32 像素和 16 x 16 像素，以及適用於行動裝置的 48 x 48 像素、32 x 32 像素和 25 x 25 像素。
 
 ## <a name="how-do-add-in-commands-appear"></a>增益集命令的顯示方式？
 

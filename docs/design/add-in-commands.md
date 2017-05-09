@@ -36,10 +36,9 @@
 ## <a name="supported-platforms"></a>支援的平台
 目前在下列平台上支援增益集命令︰
 
-- Office for Windows Desktop 2016 (組建 16.0.6769.0000 或更新版本)
-- 使用個人帳戶的 Office Online
-- 使用工作/學校帳戶 (預覽) 的 Office Online
-- Office for Mac ([概觀](https://github.com/OfficeDev/Office-Add-in-Commands-Samples/blob/master/Tools/MacDevPreview.md))
+- Office for Windows Desktop 2016 (組建 16.0.6769+)
+- Office for Mac (組建 15.33+)
+- Office Online 
 
 將支援更多平台。
 

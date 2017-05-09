@@ -107,7 +107,8 @@
     </Item>
     <Item text="呼叫 Outlook REST API" url="outlook/use-rest-api" SEODescription="了解如何從 Outlook 增益集驗證並呼叫 REST API。" Scope="outlook" />
     <Item text="取得並設定讀取或撰寫格式的項目資料" url="outlook/item-data" SEODescription="深入了解取得或設定在 Outlook 增益集中的約會或郵件上資料的方法" Scope="outlook" />
-    <Item text="取得和設定增益集的中繼資料" url="outlook/metadata-for-an-outlook-add-in" SEODescription="學習如何載入和儲存僅 Outlook 增益集可以存取 (透過漫遊設定和自訂屬性) 的自訂資料。" Scope="outlook" />
+    <Item text="Outlook 增益集的傳送中功能" url="outlook/outlook-on-send-addins" Scope="outlook" />
+	<Item text="取得和設定增益集的中繼資料" url="outlook/metadata-for-an-outlook-add-in" SEODescription="學習如何載入和儲存僅 Outlook 增益集可以存取 (透過漫遊設定和自訂屬性) 的自訂資料。" Scope="outlook" />
     <Item text="隱私權和安全性" url="outlook/privacy-and-security" SEODescription="使用者" Scope="outlook">
       <Item text="了解 Outlook 增益集的權限" url="outlook/understanding-outlook-add-in-permissions" SEODescription="在 Outlook 增益集資訊清單中指定權限等級。" />
     </Item>

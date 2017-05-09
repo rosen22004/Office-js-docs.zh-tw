@@ -45,7 +45,8 @@ if (item.somePropertyOrFunction !== undefined) {
 | Outlook 2016 for Windows | 1.1, 1.2, 1.3, 1.4 |
 | Outlook 2016 for Mac | 1.1, 1.2, 1.3, 1.4 |
 | Outlook 2013 for Windows | 1.1, 1.2, 1.3 |
-| Outlook 網頁版 (Office 365 和 Outlook.com) | 1.1, 1.2, 1.3, 1.4 |
+| Outlook 網頁版 (Office 365 和 Outlook.com) | 1.1, 1.2, 1.3, 1.4, 1.5 |
 | Outlook Web App (Exchange 2013 On-Premise) | 1.1 |
 | Outlook Web App (Exchange 2016 On-Premise) | 1.1, 1.2. 1.3 |
->**附註** Outlook 2013 中的 1.3 支援已隨著 [2015 年 12 月 8 日的 Outlook 2013 更新 (KB3114349)](https://support.microsoft.com/en-us/kb/3114349) 一同新增    
+
+>**附註** Outlook 2013 中的 1.3 支援已隨著 [2015 年 12 月 8 日的 Outlook 2013 更新 (KB3114349)](https://support.microsoft.com/en-us/kb/3114349) 一同新增
