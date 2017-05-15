@@ -58,6 +58,8 @@
 
 在撰寫模式中，您必須先呼叫 [`saveAsync`](Office.context.mailbox.item#saveAsync) 方法，才可以使用 `restUrl` 成員。您的應用程式必須具有 **ReadWriteItem** 權限以呼叫 `saveAsync` 方法。
 
+> **附註：**連線至 Exchange 2016 (已設定自訂 REST URL) 內部部署安裝的 Outlook 用戶端會針對 `restUrl` 傳回無效值。
+
 ##### <a name="type"></a>類型：
 
 *   字串

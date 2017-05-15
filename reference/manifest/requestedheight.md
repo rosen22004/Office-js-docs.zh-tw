@@ -5,7 +5,7 @@
  **增益集類型︰**內容
 
 
-## <a name="syntax:"></a>語法：
+## <a name="syntax"></a>語法：
 
 
 ```XML
@@ -13,9 +13,8 @@
 ```
 
 
-## <a name="contained-in:"></a>內含於：
+## <a name="contained-in"></a>內含於：
 
-[DefaultSettings](../../reference/manifest/defaultsettings.md) (內容增益集)
-
-[DesktopSettings](../../reference/manifest/desktopsettings.md) 和 [TabletSettings](../../reference/manifest/tabletsettings.md) (郵件增益集)
-
+- [DefaultSettings](defaultsettings.md) (內容增益集)
+- [DesktopSettings](desktopsettings.md) 和 [TabletSettings](../../reference/manifest/tabletsettings.md) (郵件增益集)
+- [ExtensionPoint](extensionpoint.md) (關聯式郵件增益集)

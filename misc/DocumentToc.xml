@@ -34,6 +34,11 @@
 	<Item text="開發適用於 iPad 的增益集" url="develop/develop-office-add-ins-for-the-ipad" SEODescription="讓您的 Office 增益集可供 iPad 版 Office 使用。" />
 	<Item text="使用 Angular 2 建立增益集的祕訣" url="develop/add-ins-with-angular2" SEODescription="使用 Angular 2 來開發 Office 增益集。" />
 	<Item text="使用對話方塊 API" url="develop/dialog-api-in-office-add-ins" SEODescription="使用 [對話方塊 API] 在 Office 增益集中開啟對話方塊。" />
+	<Item text="授權外部服務" url="develop/auth-external-add-ins" SEODescription="在您的 Office 增益集中使用 OAuth 2.0 的授權架構。" />
+	<Item text="在增益集中啟用 SSO" url="develop/sso-in-office-add-ins">
+		<Item text="使用 ASP.NET 建立 SSO 增益集" url="develop/create-sso-office-add-ins-aspnet" />
+		<Item text="使用 Node.js 建立 SSO 增益集" url="develop/create-sso-office-add-ins-nodejs" />
+	</Item>
 	<Item text="資訊清單" url="overview/add-in-manifests">	
 		<Item text="定義增益集命令" url="outlook/manifests/define-add-in-commands" SEODescription="使用增益集資訊清單中的 VersionOverrides 元素來定義增益集命令。" />
 		<Item text="指定 Office 主機" url="overview/specify-office-hosts-and-api-requirements" SEODescription="了解如何指定資訊清單中的 Office 主機和 API 需求。" /> 	
@@ -48,7 +53,6 @@
 		<Item text="Office 增益集中的非同步程式設計" url="develop/asynchronous-programming-in-office-add-ins" SEODescription="使用巢狀的回呼和適用於 Office 的 JavaScript API 所支援的承諾模式非同步程式設計模式來開發 Office 增益集。" />
 		<Item text="保存狀態和設定" url="develop/persisting-add-in-state-and-settings" SEODescription="了解保存增益集狀態的選項以及內容資料、工作窗格及 Outlook 增益集的設定。" />
 	</Item>
-	<Item text="授權外部服務" url="develop/auth-external-add-ins" SEODescription="在您的 Office 增益集中使用 OAuth 2.0 的授權架構。" />
 	<Item text="隱私權和安全性" url="develop/privacy-and-security" SEODescription="Office 增益集會受到執行階段架構、多層的權限模型，以及控制使用 CPU、記憶體和網路資源等能力的保護。" />
 	<Item text="處理相同來源的原則限制" url="develop/addressing-same-origin-policy-limitations" SEODescription="提供解決相同來源的原則限制方法的簡要概觀，以避免從一個網域載入的指令碼取得或操作來自 Office 增益集的另一個網域中的文件內容。" />
 	<Item text="當地語系化" url="develop/localization" SEODescription="提供 Office 增益集的地區特定內容，包括 UI 字串、增益集名稱、描述、圖示、來源檔案和日期/時間格式。" />

@@ -6,6 +6,9 @@
 
 如需使用 Angular 2 架構建置的 Office 增益集範例，請參閱[在 Angular 2 上建置的 Word 樣式檢查增益集](https://github.com/OfficeDev/Word-Add-in-Angular2-StyleChecker)。
 
+## <a name="install-the-typescript-type-definitions"></a>安裝 TypeScript 類型定義
+開啟 nodejs 視窗，然後在命令列輸入下列命令︰`npm install --save-dev @types/office-js`。
+
 ## <a name="bootstrapping-must-be-inside-officeinitialize"></a>啟動載入必須在 Office.initialize 內
 
 在任何呼叫 Office、Word 或 Excel JavaScript API 的頁面上，您的程式碼必須先指派方法給 `Office.initialize` 屬性。(如果您沒有初始化程式碼，方法主體可能只是空的 "`{}`" 符號，但您必須未定義 `Office.initialize` 屬性。如需詳細資訊，請參閱[初始化增益集](http://dev.office.com/docs/add-ins/develop/understanding-the-javascript-api-for-office#initializing-your-add-in))。Office 會在初始化 Office JavaScript 程式庫之後，立即呼叫這個方法。

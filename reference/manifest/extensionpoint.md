@@ -75,6 +75,7 @@
 - [Module](#module) (只能在 [DesktopFormFactor](./desktopformfactor.md) 中使用。)
 - [MobileMessageReadCommandSurface](#mobilemessagereadcommandsurface)
 - [事件](#events)
+- [DetectedEntity](#detectedentity)
 
 ### <a name="messagereadcommandsurface"></a>MessageReadCommandSurface
 這個擴充點會將按鈕放在郵件讀取檢視的命令介面中。在 Outlook 桌面中，這將會出現在功能區。
@@ -248,5 +249,46 @@
 ```xml
 <ExtensionPoint xsi:type="Events"> 
   <Event Type="ItemSend" FunctionExecution="synchronous" FunctionName="itemSendHandler" /> 
+</ExtensionPoint> 
+```
+
+### <a name="detectedentity"></a>DetectedEntity
+這個擴充點會在指定實體類型上新增關聯式增益集啟動。
+
+抑制 [VersionOverrides](./versionoverrides.md) 元素必須具備 `VersionOverridesV1_1` 的 `xsi:type` 屬性值。
+
+> **附註：**僅 Office 365 中的 Outlook 網頁版支援此元素類型。
+
+|  元素 |  描述  |
+|:-----|:-----|
+|  [Label](#label) |  在關聯式視窗中指定增益集的標籤。  |
+|  [SourceLocation](./sourcelocation.md) |  指定關聯式視窗的 URL。  |
+|  [Rule](./rule.md) |  指定規則，該規則決定增益集啟動的時機。  |
+
+#### <a name="label"></a>標籤
+
+必要。群組的標籤。**resid** 屬性必須設定為  **Resources** 元素的 **ShortStrings** 元素中，[String](./resources.md#shortstrings) 元素的 [id](./resources.md) 屬性值。
+
+#### <a name="highlight-requirements"></a>反白顯示需求
+
+使用者啟動關聯式增益集的唯一方式是與反白顯示的實體互動。開發人員可以控制要反白顯示哪些實體，方法是使用 `ItemHasKnownEntity` 和 `ItemHasRegularExpressionMatch` 規則類型之 `Rule` 元素的 `Highlight`屬性。
+
+但是，要注意有某些限制。這些限制是為了確保適用的訊息或約會中永遠都有反白顯示的實體，讓使用者能夠啟動增益集。
+
+- `EmailAddress` 和 `Url` 實體類型無法反白顯示，因此無法用來啟動增益集。
+- 如果使用單一規則，`Highlight` 必須設定為 `all` 或 `first`。
+- 如果使用 `RuleCollection` 規則類型與 `Mode="AND"` 以結合多個規則類型，至少其中一個規則「必須」將 `Highlight` 設定為 `all` 或 `first`。
+- 如果使用 `RuleCollection` 規則類型與 `Mode="OR"` 以結合多個規則類型，所有規則「必須」將 `Highlight` 設定為 `all` 或 `first`。
+
+#### <a name="detectedentity-event-example"></a>DetectedEntity 事件範例
+```xml
+<ExtensionPoint xsi:type="DetectedEntity">
+  <Label resid="residLabelName"/>
+  <SourceLocation resid="residDetectedEntityURL" />
+  <Rule xsi:type="RuleCollection" Mode="And">
+    <Rule xsi:type="ItemIs" ItemType="Message" />
+    <Rule xsi:type="ItemHasKnownEntity" EntityType="MeetingSuggestion" Highlight="all" />
+    <Rule xsi:type="ItemHasKnownEntity" EntityType="Address" Highlight="none" />
+  </Rule>
 </ExtensionPoint> 
 ```

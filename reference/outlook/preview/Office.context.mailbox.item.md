@@ -437,7 +437,7 @@ function callback(asyncResult) {
 
 取得移除所有前置詞 (包括 `RE:` 和 `FWD:`) 的項目主旨。僅限閱讀模式。
 
-NormalizedSubject 屬性取得項目主旨，內含由電子郵件程式新增的任一標準前置詞 (例如 `RE:` 和 `FW:`)。若要取得項目主旨，而前置詞維持不變，請使用 [`subject`](Office.context.mailbox.item.md#subject-stringsubject) 屬性。
+normalizedSubject 屬性取得項目主旨，內含由電子郵件程式新增的任一標準前置詞 (例如 `RE:` 和 `FW:`)。若要取得項目主旨，而前置詞維持不變，請使用 [`subject`](Office.context.mailbox.item.md#subject-stringsubject) 屬性。
 
 ##### <a name="type"></a>類型：
 
@@ -891,7 +891,7 @@ function addAttachment() {
 | `formData.attachments` | 陣列。&lt;物件&gt; | &lt;選用&gt; | JSON 物件的陣列，該物件是檔案或項目附件。 |
 | `formData.attachments[].type` | 字串 | 指出附件的類型。對於檔案附件必須是 `file`，或者對於項目附件必須是 `item`。 |
 | `formData.attachments[].name` | 字串 | 包含附件名稱的字串，最多 255 個字元長度。| 
-| `formData.attachments[].url` | 字串 | 只有在 `type` 設為 `file` 時使用。檔案位置的 URI。 |
+| `formData.attachments[].url` | String | 只有在 `type` 設為 `file` 時使用。檔案位置的 URI。 |
 | `formData.attachments[].url` | 字串 | 只有在 `type` 設為 `file` 時使用。如果為 `true`，則表示將會在郵件內文中內嵌顯示附件，且不應顯示在附件清單。 |
 | `formData.attachments[].itemId` | 字串 | 只有在 `type` 設為 `item` 時使用。附件的 EWS 項目識別碼。這是最多 100 個字元的字串。 |
 | `callback` | 函數 | &lt;選用&gt; | 當方法完成時，在 `callback` 參數中傳遞的函數會以單一參數 `asyncResult`，也就是 [AsyncResult](simple-types.md#asyncresult) 物件進行呼叫。 |
@@ -1005,12 +1005,12 @@ Office.context.mailbox.item.displayReplyAllForm(
 | 名稱 | 類型	 | 屬性 | 描述 |
 |---|---|---|---|
 |`formData`| 字串 &#124; 物件|包含文字和 HTML，且代表回覆表單本文的字串。字串限制為 32 KB。<br/>**OR**<br/>包含內文或附件資料和回呼函數的物件。物件定義如下： |
-| `formData.htmlBody` | 字串 | &lt;選用&gt; | 包含文字和 HTML，且代表回覆表單本文的字串。字串限制為 32 KB。
+| `formData.htmlBody` | String | &lt;選用&gt; | 包含文字和 HTML，且代表回覆表單本文的字串。字串限制為 32 KB。
 | `formData.attachments` | 陣列。&lt;物件&gt; | &lt;選用&gt; | JSON 物件的陣列，該物件是檔案或項目附件。 |
 | `formData.attachments[].type` | 字串 | 指出附件的類型。對於檔案附件必須是 `file`，或者對於項目附件必須是 `item`。 |
 | `formData.attachments[].name` | 字串 | 包含附件名稱的字串，最多 255 個字元長度。| 
 | `formData.attachments[].url` | 字串 | 只有在 `type` 設為 `file` 時使用。檔案位置的 URI。 |
-| `formData.attachments[].url` | 字串 | 只有在 `type` 設為 `file` 時使用。如果為 `true`，則表示將會在郵件內文中內嵌顯示附件，且不應顯示在附件清單。 |
+| `formData.attachments[].url` | String | 只有在 `type` 設為 `file` 時使用。如果為 `true`，則表示將會在郵件內文中內嵌顯示附件，且不應顯示在附件清單。 |
 | `formData.attachments[].itemId` | 字串 | 只有在 `type` 設為 `item` 時使用。附件的 EWS 項目識別碼。這是最多 100 個字元的字串。 |
 | `callback` | 函數 | &lt;選用&gt; | 當方法完成時，在 `callback` 參數中傳遞的函數會以單一參數 `asyncResult`，也就是 [AsyncResult](simple-types.md#asyncresult) 物件進行呼叫。 |
 
@@ -1271,7 +1271,7 @@ Office.initialize = function () {
 
 ##### <a name="example"></a>範例
 
-下列範例示範如何存取規則運算式相符的陣列 <rule>元素 `fruits` 和 `veggies`，其是在資訊清單中指定。</rule>
+下列範例示範如何存取與規則運算式規則元素 `fruits` 和 `veggies` 相符的陣列，這些元素是在資訊清單中指定。
 
 ```
 var allMatches = Office.context.mailbox.item.getRegExMatches();
@@ -1380,6 +1380,83 @@ function getCallback(asyncResult) {
 function setCallback(asyncResult) {
     // check for errors
 }
+```
+
+#### <a name="getselectedentities--entitiessimple-typesmdentities"></a>getSelectedEntities() → {[實體](simple-types.md#entities)}
+
+取得在反白顯示項目中找到，符合使用者已選取的實體。反白顯示的相符項目套用至[關聯式增益集](..\..\..\docs\outlook\contextual-outlook-add-ins.md)。
+
+##### <a name="requirements"></a>需求
+
+|需求| 值|
+|---|---|
+|[最低信箱需求集合版本](./tutorial-api-requirement-sets.md)| 預覽 |
+|[最低權限等級](../../../docs/outlook/understanding-outlook-add-in-permissions.md)| ReadItem|
+|適用的 Outlook 模式| 讀取|
+
+##### <a name="returns"></a>傳回：
+
+類型：[實體](simple-types.md#entities)
+
+##### <a name="example"></a>範例
+
+下列範例會存取使用者所選取反白顯示相符項目的地址實體。
+
+```
+var contacts = Office.context.mailbox.item.getSelectedEntities().addresses;
+```
+
+#### <a name="getselectedregexmatches--object"></a>getSelectedRegExMatches() → {物件}
+
+在反白顯示相符項目中傳回符合規則運算式的字串值，該值是在資訊清單 XML 檔中所定義。反白顯示的相符項目套用至[關聯式增益集](..\..\..\docs\outlook\contextual-outlook-add-ins.md)。
+
+> **附註：**iOS 版 Outlook 或 Android 版 Outlook 不支援這個方法。
+
+`getSelectedRegExMatches` 方法傳回符合規則運算式的字串，該運算式是在資訊清單 XML 檔案的每個 `ItemHasRegularExpressionMatch` 或 `ItemHasKnownEntity` 規則項目中所定義。對於 `ItemHasRegularExpressionMatch` 規則，相符的字串必須出現在由該規則所指定之項目的屬性中。`PropertyName` 簡單類型定義所支援的屬性。
+
+例如，假設增益集資訊清單有下列 `Rule` 項目︰
+
+```
+<Rule xsi:type="RuleCollection" Mode="And">
+  <Rule xsi:type="ItemIs" FormType="Read" ItemType="Message" />
+  <Rule xsi:type="RuleCollection" Mode="Or">
+    <Rule xsi:type="ItemHasRegularExpressionMatch" RegExName="fruits" RegExValue="apple|banana|coconut" PropertyName="BodyAsPlaintext" IgnoreCase="true" />
+    <Rule xsi:type="ItemHasRegularExpressionMatch" RegExName="veggies" RegExValue="tomato|onion|spinach|broccoli" PropertyName="BodyAsPlaintext" IgnoreCase="true" />
+  </Rule>
+</Rule>
+```
+
+從 `getRegExMatches` 傳回的物件會有兩個屬性︰`fruits` 和 `veggies`。
+
+```
+{
+  'fruits': ['apple','banana','Banana','coconut'],
+  'veggies': ['tomato','onion','spinach','broccoli']
+}
+```
+
+如果您在項目的本文屬性上指定 `ItemHasRegularExpressionMatch` 規則，規則運算式應該進一步篩選本文，且不應該嘗試傳回項目的整個本文。使用規則運算式，例如 `.*` 來取得項目的整個本文，不會永遠都傳回預期的結果。相反地，請使用 [`Body.getAsync`](Body.md#getasynccoerciontype-options-callback) 方法，以擷取整個本文。
+
+##### <a name="requirements"></a>需求
+
+|需求| 值|
+|---|---|
+|[最低信箱需求集合版本](./tutorial-api-requirement-sets.md)| 預覽 |
+|[最低權限等級](../../../docs/outlook/understanding-outlook-add-in-permissions.md)| ReadItem|
+|適用的 Outlook 模式| 讀取|
+
+##### <a name="returns"></a>傳回：
+
+物件包含符合規則運算式的字串陣列，該運算式是在資訊清單 XML 檔案中所定義。每個陣列名稱等於相符 `ItemHasRegularExpressionMatch` 規則 `RegExName` 屬性或相符 `ItemHasKnownEntity` 規則 `FilterName` 屬性的相對應值。
+
+##### <a name="example"></a>範例
+
+下列範例示範如何存取與規則運算式規則元素 `fruits` 和 `veggies` 相符的陣列，這些元素是在資訊清單中指定。
+
+```
+var selectedMatches = Office.context.mailbox.item.getSelectedRegExMatches();
+var fruits = selectedMatches.fruits;
+var veggies = selectedMatches.veggies;
 ```
 
 ####  <a name="loadcustompropertiesasynccallback-usercontext"></a>loadCustomPropertiesAsync(callback, [userContext])
